@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Speak&Smile · Сегодня</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#6C3FC5">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<style>
+:root{
+  --p:#6C3FC5; --p2:#4A2E85; --y:#F5C842; --bg:#F6F2FC; --white:#fff;
+  --text:#1A1A2E; --muted:#7A7A9A; --line:#ECE6F6; --ok:#2E9E5B;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+header{background:var(--p);color:#fff;padding:16px 18px;position:sticky;top:0;z-index:10;box-shadow:0 2px 16px rgba(74,46,133,.25)}
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.logo{width:34px;height:34px;background:var(--y);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:19px}
+.brand h1{font-size:17px;font-weight:800;letter-spacing:-.2px}
+.brand .sub{font-size:11px;color:rgba(255,255,255,.7)}
+.nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.nav button,.nav input{font-family:inherit;font-size:13px;border:none;border-radius:8px;padding:8px 12px;cursor:pointer}
+.nav .arrowbtn{background:rgba(255,255,255,.16);color:#fff;font-weight:700;min-width:38px}
+.nav .today{background:var(--y);color:#4A2E85;font-weight:700}
+.nav input[type=date]{background:#fff;color:var(--text)}
+.dayhead{flex:1;min-width:160px;font-weight:800;font-size:14px;text-align:center}
+.dayhead .wl{display:block;font-size:11px;font-weight:500;color:rgba(255,255,255,.7)}
+main{padding:14px 12px 50px;max-width:760px;margin:0 auto}
+.banner{background:#fff7df;border:1px solid #f0dd9a;color:#7a5b00;padding:10px 12px;border-radius:10px;font-size:13px;margin-bottom:12px}
+.empty{color:var(--muted);text-align:center;padding:40px 0}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(108,63,197,.08);margin-bottom:10px;overflow:hidden;border-left:4px solid var(--p)}
+.card.noktp,.card.nolesson,.card.holiday{border-left-color:#d6cfe6;opacity:.85}
+.card.done{border-left-color:var(--ok)}
+/* мягкая подсветка по кабинетам */
+.card[data-room="Discovery"]{background:#F4F7FC}
+.card[data-room="Adventure"]{background:#FBF7EF}
+.card[data-room="Innovation"]{background:#F2F9F4}
+.roomdot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.cardhead{display:grid;grid-template-columns:58px 1fr auto;gap:10px;align-items:center;padding:12px 14px;cursor:pointer}
+.time{font-weight:800;font-size:15px;color:var(--p2)}
+.gname{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:2px}
+.gname .prog{color:var(--p);background:#f2ecfb;border-radius:5px;padding:1px 6px;margin-left:4px;font-size:11px}
+.title{font-weight:800;font-size:14px}
+.title.muted{color:var(--muted);font-weight:700}
+.ltitle{font-size:13px;color:var(--text);margin-top:1px}
+.unit{font-size:11px;color:var(--muted);margin-top:2px}
+.meta{font-size:11px;color:var(--muted);text-align:right;white-space:nowrap}
+.arrow{display:inline-block;margin-left:6px;color:var(--p);font-size:18px;font-weight:700;transition:transform .15s}
+.card.open .arrow{transform:rotate(90deg)}
+.detail{display:none;padding:0 14px 14px;border-top:1px solid var(--line)}
+.card.open .detail{display:block}
+.field{margin-top:12px}
+.flabel{font-size:11px;font-weight:700;color:var(--p);text-transform:uppercase;letter-spacing:.3px;margin-bottom:4px}
+.frow{display:flex;gap:8px;align-items:flex-start}
+.fval{flex:1;background:#faf8fe;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:13px;line-height:1.45;white-space:pre-wrap}
+.copy{flex-shrink:0;background:var(--p);color:#fff;border:none;border-radius:8px;padding:8px 10px;font-size:14px;cursor:pointer}
+.copy.ok{background:var(--ok)}
+.donebox{display:flex;align-items:center;gap:8px;margin-top:14px;font-size:13px;font-weight:600;color:var(--text);cursor:pointer;user-select:none}
+.donebox input{width:18px;height:18px;accent-color:var(--ok)}
+footer{text-align:center;color:var(--muted);font-size:11px;padding:0 12px 30px}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">🙂</div>
+    <div><h1>Speak&amp;Smile · Сегодня</h1><div class="sub">Группы на день · план урока · копирование в BigBen</div></div>
+  </div>
+  <div class="nav">
+    <button class="arrowbtn" id="prev">‹</button>
+    <div class="dayhead"><span id="dayhead">—</span><span class="wl" id="weeklabel"></span></div>
+    <button class="arrowbtn" id="next">›</button>
+    <button class="today" id="todaybtn">Сегодня</button>
+    <input type="date" id="datepick">
+  </div>
+</header>
+<main><div id="day"></div></main>
+<footer>Прототип · данные: расписание + КТП GMF1 / Prepare 3 / Genki из Google Drive · отметки «внесено» хранятся локально</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+// Регистрируем service worker только при работе через сервер (http/https), не через file://
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  navigator.serviceWorker.register("sw.js").catch(()=>{});
+}
+</script>
+</body>
+</html>
