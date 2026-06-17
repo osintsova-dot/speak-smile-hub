@@ -1,7 +1,9 @@
 // ── Speak&Smile Teaching Hub · прототип «сегодня» ──
 // Расписание (нормализовано из «!расписание 226-27.xlsx»): одна группа = одна программа.
 // Дни недели: 1=Пн 2=Вт 3=Ср 4=Чт 5=Пт 6=Сб 0=Вс
-const GROUPS = [
+// Живой источник расписания (Google-таблица, gviz CSV). Если недоступен — берётся встроенное GROUPS_FALLBACK.
+const SCHEDULE_URL = "https://docs.google.com/spreadsheets/d/1_WRow7pefA4iF7SOQkkWIxjGU69TcpMjQv_wMS0Rb3A/gviz/tq?tqx=out:csv";
+const GROUPS_FALLBACK = [
   // Пн/Пт
   {name:"GMF 4A",  program:"GMF4",    room:"Discovery", teacher:"Ксения",    days:[{d:1,t:"15:00"},{d:5,t:"15:00"}]},
   {name:"GMF 2B",  program:"GMF2",    room:"Discovery", teacher:"Ксения",    days:[{d:1,t:"16:05"},{d:5,t:"16:05"}]},
@@ -31,6 +33,7 @@ const GROUPS = [
   {name:"Get Involved 2B", program:"GIA2", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"17:10"},{d:6,t:"14:30"}]},
   {name:"GMF 1C",  program:"GMF1zero",room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"18:50"},{d:6,t:"11:00"}]},
 ];
+let GROUPS = GROUPS_FALLBACK;
 
 // Программы, для которых КТП ещё не готов (показываем «в работе»)
 const PROGRAM_LABELS = {
@@ -185,5 +188,33 @@ document.getElementById("next").onclick = ()=>shift(1);
 document.getElementById("todaybtn").onclick = ()=>{ current=startDate(); render(); };
 document.getElementById("datepick").onchange = e=>{ const [y,m,d]=e.target.value.split("-").map(Number); current=new Date(y,m-1,d); render(); };
 
+// ── живое расписание из Google-таблицы ──
+const DAYNUM = {"Пн":1,"Вт":2,"Ср":3,"Чт":4,"Пт":5,"Сб":6,"Вс":0};
+function normTime(t){ const m=(t||"").match(/\d{1,2}:\d{2}/); return m?m[0]:""; }
+function parseSchedule(csv){
+  const lines=csv.replace(/\r/g,"").split("\n").filter(x=>x.trim());
+  lines.shift(); // заголовок
+  const gs=[];
+  for(const ln of lines){
+    const c=ln.split(",").map(s=>s.trim().replace(/^"|"$/g,""));
+    if(c.length<6 || !c[0]) continue;
+    const [name,program,room,teacher,d1,t1,d2,t2]=c;
+    const days=[];
+    if(DAYNUM[d1]!==undefined && normTime(t1)) days.push({d:DAYNUM[d1], t:normTime(t1)});
+    if(DAYNUM[d2]!==undefined && normTime(t2)) days.push({d:DAYNUM[d2], t:normTime(t2)});
+    if(name && days.length) gs.push({name,program,room:room||"",teacher:teacher||"",days});
+  }
+  return gs;
+}
+async function loadSchedule(){
+  try{
+    const r=await fetch(SCHEDULE_URL,{cache:"no-store"});
+    if(!r.ok) throw 0;
+    const gs=parseSchedule(await r.text());
+    if(gs.length){ GROUPS=gs; render(); const n=document.getElementById("srcnote"); if(n) n.textContent="🟢 живое из Google Таблицы"; }
+  }catch(e){ /* нет связи / таблица закрыта → остаёмся на встроенном расписании */ }
+}
+
 render();
 document.getElementById("datepick").value = iso(current);
+loadSchedule();
