@@ -1,0 +1,277 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 2 · Lesson 5 — Phonics · Culture · Literacy: A Birthday Card (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 2 “Happy birthday!” · Lesson 5 — Phonics · Culture · Literacy: A Birthday Card</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · Phonics + CLIL culture + guided writing · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 19.10 · Lesson 15</span><span class="chip">L5 Phon+Cult+Lit</span><span class="chip">~12 pupils · 3 teams of 4</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>say the /s/ sound</b> (Toby's tongue twister “Six snakes on a slow scooter”), <b>understand British birthday-party traditions</b> (fancy dress, cards, party games, cake) and <b>read &amp; make their own birthday card</b> (To… / Happy Birthday! / From…).</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning inside the topic</b> — Unit 2 toys + “It's a…” / “Is it a…?” (L1–L2), adjectives big/small/old/new/fast/slow (L4), Starter colours &amp; numbers (candles!); Jolly track — <b>short vowels a·e·i·o·u, discrimination</b> (JP Book 2, p. 5); tricky words <i>said, here</i>.</li>
+      <li><span class="lb">Personal.</span> Keep the craft stage tight (timer + simple template); model writing letter-by-letter on the board; <b>every child responds in every task</b> (own card / show-me / stand-hiss) — never “2 play, 10 watch”.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>say the tongue twister with a clear /s/ and spot /s/ words;</li>
+        <li>name 2–3 things British children do at a birthday party;</li>
+        <li>read a simple birthday card and make their own (copy To… / Happy Birthday! / From…);</li>
+        <li>hear which short vowel (a·e·i·o·u) is inside a CVC word.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">birthday</span><span class="w">party</span><span class="w">card</span><span class="w">cake</span><span class="w">candles</span><span class="w">present</span><span class="w">balloons</span><span class="w">fancy dress</span><span class="w">pirates</span> <span style="color:var(--muted);font-size:.82rem">(recycled: 10 toys · big/small/old/new/fast/slow · colours · numbers 1–10)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Happy Birthday! &nbsp;·&nbsp; It's a (robot). / Is it a (kite)? &nbsp;·&nbsp; card frame: To (Beth), Happy Birthday! Lots of love, From (Mum and Dad).</div></div>
+      <div class="r"><div class="k">Form</div><div>Card layout: <b>To + name</b> (top) → greeting → <b>From + name</b> (bottom). Fixed chunks, copied not built.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>/s/ is a long hiss (snake!), not /z/ or Russian “сь”; keep it unvoiced in <i>six, snakes, slow, scooter</i>.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Coursebook sound: <b>/s/</b> (PB p. 23, CD1 38–39). Jolly track: <b>short vowels a·e·i·o·u — discrimination</b> (JP Book 2, p. 5: bag·net·bin·box·mug). Tricky words: <i>said, here</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Hold the model card: <span class="en">Who is the card for?</span> → point to “To Beth” → <b>Beth!</b> <span class="en">Who is it from?</span> → “From Mum and Dad”.</div>
+      <div class="ccq" style="margin-bottom:12px"><span class="en">Snake sound — voice on or off?</span> → hand on throat → off, just a hiss: <b>sss</b>.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> toys + “Is it a…?” known from L1–L2, adjectives from L4; children can copy letters but not write freely → all writing is <b>trace/copy from a board frame</b>. Pass-the-circle games are new — model first. Emergent readers: card text is read together, finger-following.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>/s/ voiced into “z” (six → “zix”)</td><td>Snake gesture + hand on throat: “no motor!”; long hiss before the word: <i>sss-six</i>.</td></tr>
+        <tr><td>Short vowels e/i confused (net/bin)</td><td>Anchor pictures on board (bag·net·bin·box·mug); exaggerate mouth shape, mirror check.</td></tr>
+        <tr><td>Craft overruns / early finishers</td><td>Timer on board + countdown; fast finishers add balloons &amp; candles, colour the toy.</td></tr>
+        <tr><td>Copying is slow or letters unknown</td><td>Board frame written LARGE, line by line; dotted-name strips for weakest writers; teacher scribes “To ___”.</td></tr>
+        <tr><td>Parcel grabbed / unwrapped too far</td><td>Rule first + ICQ: <span class="en">One paper only!</span> Pass on the beat, hands on knees when music plays.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> <span class="sp">🦝 Speaky</span> waves a big envelope: <span class="en">Look! An invitation! A birthday PARTY today!</span> Class: <span class="en">Hooray!</span></p>
+          <p>Ritual charge: <span class="en">Stand up! Let's get genki!</span> → <b>Genki Disco Warm Up</b> — whole class dances the routine, end seated on the carpet.</p>
+        </td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · Speaky + invitation envelope</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Review → into today</div><div class="zone">carpet, 2 lines</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle toys + adjectives (everyone holds a card, everyone listens).</span> <span class="game">▶ Lightning Jump</span> (picture version, Mido №109): two teams sit in lines; <b>each child gets one toy picture</b> (both teams have the same set, shuffled). Call a toy — <span class="en">Kite!</span> — the two “kite” children JUMP up: <span class="en">It's a kite!</span> First up = team point.</p>
+          <p><span class="ph">Round 2 — weave in L4 adjectives:</span> call a riddle instead: <span class="en">My favourite toy is old and brown!</span> → teddy-holders jump: <span class="en">It's a teddy!</span> · <span class="en">It's fast and red!</span> → car. Every word can be YOURS — nobody switches off.</p>
+          <p>Bridge: <span class="sp">🦝 Speaky</span>: <span class="en">At a birthday party we sing, we play games, we make CARDS! But first — our sounds!</span></p>
+        </td>
+        <td class="mat">toy picture cards ×2 sets (one per pupil) · <span class="game">▶ Lightning Jump</span> (Mido №109, picture rescin)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come closer to the board — let's sing the ABC song!</span> Sing the alphabet with actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics — /s/ + short vowels</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise /s/.</span> Toby's tongue twister (PB p. 23, CD1 38): <span class="en">s – s – s. Six snakes on a slow scooter!</span> Snake-arm gesture, hand on throat — no voice, just a hiss. Choral ×3: slow → normal → fast. 2–3 brave solos with the “microphone”.</p>
+          <p><span class="ph">“s or not s?” — whole-class show-me (all react).</span> Say words one by one — <i>sun · socks · cat · seven · scooter · crayon · snail · sing · ball · small</i>. Starts with /s/ → <b>everyone stands up and hisses sss</b>; not /s/ → sit, hands on knees. <span class="en">Show me!</span> Fast, nobody just watches.</p>
+          <p><span class="ph">Short vowels a·e·i·o·u — discrimination (JP p. 5).</span> Five vowel cards on the board with anchor pictures: <i>bag · net · bin · box · mug</i>. Say a CVC word — <span class="en">Box! Which vowel?</span> — <b>all point</b> to the letter and chant: <span class="en">o! b-o-x, box!</span> 6–8 words (bus, hat, six, net, jam, sun…).</p>
+          <p><span class="ph">Segment — everyone writes.</span> Mini-whiteboards: <span class="en">Write ONLY the vowel you hear… net!</span> → all write <i>e</i> → <span class="en">Show me!</span> 4–5 rounds.</p>
+          <p><span class="ph">Tricky words.</span> Flower cards <i>said · here</i>: <span class="en">We can't sound these out — tricky words! Look, say: said… here.</span> Choral ×2 + air-write.</p>
+        </td>
+        <td class="mat">PB p. 23 / CD1 38 · toy microphone · 5 vowel cards + anchor pictures · mini-whiteboards + pens · tricky-word flowers <i>said, here</i></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — pirates! Dance!</span> Sing <span class="game">Genki «Pirates With The Coloured Beards»</span> — act the pirate, call the beard colours (recycles colours) → <span class="sp">🦝 Speaky</span>: <span class="en">Look — a PIRATE party! A birthday party in Britain!</span></p></td>
+        <td class="mat"><b>Genki «Pirates With The Coloured Beards»</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–34′</td>
+        <td class="stage"><div class="nm">Culture — British birthdays</div><div class="zone">carpet → circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Listen &amp; look (PB p. 24, CD1 41).</span> Photo by photo: <span class="en">It's my birthday today. I'm seven!</span> — fingers up: seven! → fancy dress: <span class="en">Look! Pirates!</span> → cards: <span class="en">Birthday CARDS — fantastic!</span> → party games in the garden → cake: <span class="en">How many candles? Count!… Seven!</span></p>
+          <p><span class="ph">Think about your culture.</span> <span class="en">And YOU? A party — yes or no? A cake? Presents? Fancy dress?</span> — thumbs up/down, all vote each question.</p>
+          <p><span class="ph">▶ Pass the Parcel — real British party game (like in the photo!).</span> Circle; a parcel wrapped in 6–8 layers, a toy card inside each. Music plays → pass on the beat; music stops → that child unwraps ONE layer: <span class="en">What is it? — It's a robot!</span> — class echoes. ICQ: <span class="en">How many papers? — One!</span> Last layer = stickers for everyone. Everybody passes, everybody speaks.</p>
+        </td>
+        <td class="mat">PB p. 24 / CD1 41 · wrapped parcel (6–8 layers + toy cards + stickers) · party mp3 · <span class="game">▶ Pass the Parcel</span> (British party game; mechanics ≈ Mido №113)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">34–35′</td>
+        <td class="stage"><div class="nm">⚡ Candle stir → settle</div><div class="zone">stand → desks</div></td>
+        <td class="flow"><p><span class="en">Stand up! Seven candles — count and blow!</span> Count 1–7 on fingers, big breath, blow them out — whooo… (movement + calming breath). <span class="en">Now — to your tables, tiptoe like mice!</span></p></td>
+        <td class="mat">— (movement only)</td>
+      </tr>
+
+      <tr>
+        <td class="min">35–47′</td>
+        <td class="stage"><div class="nm">Literacy — a birthday card</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Before you read (PB p. 25).</span> Show the dinosaur card: <span class="en">What can you see? … A dinosaur! Balloons! A cake! Number seven!</span></p>
+          <p><span class="ph">Listen &amp; read (CD1 43) — fingers follow.</span> Read the card together: <span class="en">To Beth… Happy Birthday… Lots of love, From Mum and Dad.</span> CCQs: <span class="en">Who is it FOR? — Beth! Who is it FROM? — Mum and Dad!</span></p>
+          <p><span class="ph">Make YOUR card (literacy product).</span> Fold A5 card; front — draw a toy (like the dino!); inside — copy the frame from the board: <b>To ___ / Happy Birthday! / From ___</b>. Board model written LARGE, line by line; name strips help spelling friends' names. Secret: <span class="en">Write a FRIEND's name — you'll give the card away!</span> Timer 8 min, countdown finish: <span class="en">5…4…3…2…1… pencils down!</span></p>
+        </td>
+        <td class="mat">PB p. 25 / CD1 43 · folded A5 cards · crayons · board frame + name strips · timer</td>
+      </tr>
+
+      <tr>
+        <td class="min">47–52′</td>
+        <td class="stage"><div class="nm">Give the card! · share</div><div class="zone">teams of 4</div></td>
+        <td class="flow">
+          <p><span class="ph">RoundRobin in teams (Kagan — everyone speaks, everyone gets a card).</span> In turn, each child stands, gives their card to the friend named inside: <span class="en">Happy Birthday, [Misha]! It's a [car]!</span> Receiver: <span class="en">Thank you!</span> Round the team till all four have given AND received.</p>
+          <p>Background: PB song <span class="game">«Sharing is a good thing to do»</span> (CD1 40) — sing along on the chorus.</p>
+        </td>
+        <td class="mat">finished cards · CD1 40 · <span class="game">▶ RoundRobin</span> (Kagan)</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p>Quick pairs: <span class="en">Show your card. What is it? — It's a [robot]!</span> (both partners speak, 20 sec each).</p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can say s-s-s! I can make a birthday card!</span></p>
+        </td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show each child a picture: <span class="en">s or not s?</span> (hiss or hands on knees) + <span class="en">What do we say at a party?</span> — <span class="en">Happy Birthday!</span> → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">s / not-s picture cards · folder reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 20, exercises 1–2</b> (① <i>Write and say</i> — fill the s letters in the tongue twister; ② <i>Colour the words that begin with ‘s’</i>: seven, socks, scooter, swim, sing, snail) <b>+ p. 21, exercise 2</b> (<i>Read and tick ✓. Draw and say</i> — your birthday: presents / cake / party games / fancy dress).</p>
+        <p>💻 <b>Online unit trainer: <a href="https://speakandsmile.ru/gmf1/u2.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u2.html</a></b> — Practice + Booster for Unit 2 (lesson vocabulary &amp; grammar), 5–7 min. Teacher sends the link to parents via BigBen.</p></td>
+        <td class="mat">Activity Book p. 20–21 · unit trainer u2.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 2 · Lesson 5 (Phonics · Culture · Literacy) — lesson plan &amp; staging</span>
+    <span>Homework verified against Give Me Five! 1 Activity Book, pp. 20–21.</span>
+  </div>
+</div>

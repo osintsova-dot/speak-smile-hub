@@ -1,0 +1,289 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 2 · Lesson 2 — Grammar: Is it a…? (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 2 “Happy birthday!” · Lesson 2 — Grammar: Is it a…? Yes, it is. / No, it isn't.</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · Dialogue → controlled drill → freer → production · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 12.10 · Lesson 12</span><span class="chip new">✨ GRAMMAR</span><span class="chip">~12 pupils · pairs + 2 teams</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>ask about a mystery present</b> and <b>answer with short forms</b>: “What is it? Is it a (bike)? — Yes, it is. / No, it isn't.” (Pupil's Book p. 19 dialogue), and act out the birthday-present dialogue.</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning</b> — L1 toys + “What is it? — It's a…”, Starter colours — <b>woven into today's question game</b> (“Is it a red car? — No, it isn't!”); phonics — unvoiced <b>th</b> /θ/ (<i>three, think, moth, bath</i>), contrasted with last lesson's /ð/; listen for detail (PB p. 19 ex. 2 “Listen and circle”); preview “What's your favourite toy?” for Lesson 4.</li>
+      <li><span class="lb">Personal.</span> Insist on the FULL question (“Is it a car?”, not “Car?”); model both Yes- and No-answers equally; <b>every task keeps ALL children responding</b> (own cards / thumbs / all pairs at once) — never “2 play, 10 watch”.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>ask “What is it? Is it a (scooter)?” about a hidden toy;</li>
+        <li>answer “Yes, it is. / No, it isn't.” honestly and act out the present dialogue;</li>
+        <li>hear, blend &amp; segment words with unvoiced <b>th</b> /θ/ and tell it from /ð/.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">present</span><span class="w">fantastic</span><span class="w">robot</span><span class="w">scooter</span><span class="w">teddy</span><span class="w">dinosaur</span><span class="w">computer game</span> <span style="color:var(--muted);font-size:.82rem">(recycled: all 10 toys from L1 · colours)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What is it? Is it a (bike)? — Yes, it is. / No, it isn't. &nbsp;·&nbsp; It's a fantastic present. Thank you! &nbsp;·&nbsp; preview: What's your favourite toy?</div></div>
+      <div class="r"><div class="k">Form</div><div>Is + it + a + noun? → short answers Yes, it <b>is</b>. / No, it <b>isn't</b> (= is not). Rising tone on the question ↗, falling on the answer ↘.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>keep <b>-n't</b> in <i>isn't</i>; linking “Is it a” /ˈɪzɪtə/; don't let the question shrink to one word.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly focus: unvoiced <b>th</b> /θ/ — <i>three, think, moth, bath</i> (recognise → blend → segment) · contrast /ð/ vs /θ/ · tricky words: <i>why, where</i> (JP Book 2 p. 12).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Hold a wrapped box: “Do we <i>see</i> the toy?” → no → “So we ask: <b>Is it a…?</b>”</div>
+      <div class="ccq">Speaky opens the box — it's a doll. “Is it a robot?” → <b>“No, it isn't!”</b> (head-shake) “Is it a doll?” → <b>“Yes, it is!”</b> (nod)</div>
+      <div class="ccq" style="margin-bottom:12px">/θ/ or /ð/? “<i>three</i> — does your throat buzz?” → no, it's a whisper sound.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> the 10 toys, “What is it? — It's a…” and both short answers were met in L1; voiced th /ð/ done last lesson. Pupils are non-/emergent readers → picture grids and audio, not printed text. Carpet routines &amp; pair-work signals known.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>One-word guesses: “Car?” instead of “Is it a car?”</td><td>Hands-behind-back rule: no answer from Speaky until the FULL question; back-chain <i>…a car? → it a car? → Is it a car?</i></td></tr>
+        <tr><td>Yes-bias: “Yes, it is” for everything</td><td>Drill No-answers with a big head-shake first; Speaky deliberately answers <i>No</i> twice before any <i>Yes</i>.</td></tr>
+        <tr><td>/θ/ said as /f/, /s/ or voiced /ð/</td><td>Tongue-between-teeth + “whisper, no buzz” — hand on throat to check; minimal pair <i>this</i> (buzz) vs <i>three</i> (whisper).</td></tr>
+        <tr><td>Drop <i>-n't</i>: “No, it is”</td><td>Exaggerated choral drill <i>No, it isn't</i> with the head-shake gesture every time.</td></tr>
+        <tr><td>Tic-tac-toe pairs squabble over squares</td><td>Model with Speaky first; rule “ask → partner answers → THEN mark”; RallyCoach roles — partner is the checker.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> On the carpet <span class="sp">🦝 Speaky</span> sits on a BIG wrapped box: <span class="en">Hello, friends! Look at my box… What is it? Hmm — it's a secret!</span></p>
+          <p><span class="en">Stand up! Warm-up time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the usual opening ritual, everyone dances the commands, finish seated.</p>
+        </td>
+        <td class="mat"><b>Genki «Disco Warm Up»</b> mp3 · Speaky + wrapped box · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Review → into the question</div><div class="zone">carpet, circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle L1 toys — everyone answers.</span> Flash the toy cards fast: <span class="en">What is it?</span> → whole class: <span class="en">It's a kite!</span> (6–8 cards, snappy). Colours woven in: hold a red car — <span class="en">It's a…?</span> → <span class="en">It's a red car!</span></p>
+          <p><span class="ph">Jump-up cards (all react).</span> Deal <b>one toy mini-card per child</b>. Ask the class: <span class="en">Is it a ball?</span> → ball-holders <b>jump up</b>: <span class="en">Yes, it is!</span>; everyone else shakes heads: <span class="en">No, it isn't!</span> 5–6 fast rounds — every child answers every round.</p>
+          <p><span class="ph">Bridge.</span> <span class="sp">🦝 Speaky</span> pats his box: <span class="en">You can't see my present… so ASK me! Today we learn the magic question: Is it a…?</span> Signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">toy flashcards · 1 toy mini-card per pupil · Speaky + box</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">8–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come to the board — ABC time!</span> Sing the ABC song with actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics — th /θ/</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise — meet the “whisper th”.</span> Remind last lesson's buzzing /ð/ (<i>this, that</i> — hand on throat, feel the buzz). Today: same tongue-between-teeth, but a <b>whisper</b>: <span class="en">th… three, think.</span> Children copy with a hand on the throat — no buzz!</p>
+          <p><span class="ph">Buzz or whisper? — whole-class show-me (all react).</span> Every child gets <b>two cards: 🐝 (buzz /ð/) and 🤫 (whisper /θ/)</b>. Say words one by one — <i>three · this · think · that · moth · them · bath · with…</i> → <span class="en">Show me!</span> — all hold up 🐝 or 🤫. 8–10 words, fast; nobody just watches.</p>
+          <p><span class="ph">Blend (all together).</span> <span class="en">Push the sounds together: /th/ /r/ /ee/… three!</span> Then <i>think, moth, bath</i> — picture for each (3 fingers · thinking face · moth · bath).</p>
+          <p><span class="ph">Segment · dictation (everyone writes).</span> <span class="en">Now YOU write. Listen…</span> word once → all write on mini-whiteboards → <span class="en">Show me!</span> → reveal &amp; check together. Focus: <i>three, think, moth, bath</i>. Finish with tricky words by sight: <span class="en">why · where</span> — flash, chorus, air-write.</p>
+        </td>
+        <td class="mat">JP Book 2 p. 12 · th word/picture cards · 🐝/🤫 card pair per pupil · mini-whiteboards + pens</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Back to Speaky's present! Let's sing our birthday song!</span> Sing the Unit 2 song <i>Happy birthday!</i> (known from L1) pointing at the toy cards on the board: <span class="en">Is it a doll? Is it a train?…</span> — the song IS today's grammar; sing the questions with a big rising tone ↗.</p></td>
+        <td class="mat"><b>PB Unit 2 song «Happy birthday!»</b> (CD1 28 / Navio) · toy cards on board</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–33′</td>
+        <td class="stage"><div class="nm">Presentation · Dialogue</div><div class="zone">carpet → pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Model with Speaky.</span> <span class="sp">🦝 Speaky</span> shakes his box. Teacher: <span class="en">What is it? Is it a bike?</span> — Speaky: <span class="en">No, it isn't.</span> — <span class="en">Is it a scooter?</span> — <span class="en">Yes, it is!</span> Open the box (toy scooter card): <span class="en">It's a fantastic present. Thank you!</span></p>
+          <p><span class="ph">Listen &amp; repeat — PB p. 19 ex. 1 (CD1 31).</span> Books open / picture on screen: birthday scene. Play the dialogue; children repeat line by line. Drill: rising tone on <span class="en">Is it a bike? ↗</span>, head-shake on <span class="en">No, it isn't ↘</span>, nod on <span class="en">Yes, it is! ↘</span> Back-chain the question. Point at the Grammar box: this is our question of the day.</p>
+          <p><span class="ph">Act out (ALL pairs at once).</span> Pairs on the carpet; each pair gets a “present” (envelope with a secret toy card). A shakes it, B asks: <span class="en">What is it? Is it a […]?</span> A: <span class="en">No, it isn't. / Yes, it is!</span> → open → both: <span class="en">It's a fantastic present. Thank you!</span> Swap envelopes with another pair, change roles. <span class="ph">ICQ:</span> <span class="en">Do you say “car” or “Is it a car”?</span> (→ the full question!)</p>
+        </td>
+        <td class="mat">PB p. 19 ex. 1 · CD1 31 (Navio) · Speaky + box · secret-toy envelopes (1 per pair)</td>
+      </tr>
+
+      <tr>
+        <td class="min">33–40′</td>
+        <td class="stage"><div class="nm">▶ Guess the secret toy</div><div class="zone">carpet, 2 teams</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Speaky's Secret Toy</span> (Mido №16 “Hungman”, idea 2 — guessing rescue version). 8 toy pictures in a row on the board; <span class="sp">🦝 Speaky</span> secretly picks ONE (card in his pocket). On the board: a balloon ladder — 5 balloons 🎈 next to a little Speaky climbing to the cake 🎂.</p>
+          <p>Two teams take turns. <span class="ph">Kagan — Numbered Heads:</span> team huddles 10 sec, agrees on a guess, then the called number asks for the team: <span class="en">Is it a robot?</span> Before Speaky answers, <b>the WHOLE class votes thumbs up/down</b> — what will he say? Speaky: <span class="en">No, it isn't!</span> → cross that toy out + pop one balloon 🎈✂️ — <b>the whole class jumps up with a “POP!”</b> and sits back (keeps everyone moving between guesses). <span class="en">Yes, it is!</span> → Speaky reaches the cake, the guessing team scores.</p>
+          <p>3 quick rounds, new secret each time; wrong guesses shrink the choice, so the logic is visible. Reset if loud: <span class="en">Freeze!</span></p>
+        </td>
+        <td class="mat">8 toy cards on board · balloon ladder drawing · Speaky + pocket card · <span class="game">▶ Numbered Heads</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">40–44′</td>
+        <td class="stage"><div class="nm">Listen &amp; circle + stickers</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">To your tables — listening detectives!</span> <span class="ph">PB p. 19 ex. 2 (CD1 32).</span> Two wrapped presents in each row — listen to the mini-dialogues and circle the right present. Model item 1 together; then <b>everyone circles</b>; check with a neighbour, then chorally: <span class="en">Number 1 — is it a ball? — Yes, it is!</span></p>
+          <p>Stick the Lesson 2 stickers (robot · scooter · teddy · dinosaur · computer game), saying each: <span class="en">It's a robot!</span> <span class="ph">Countdown:</span> <span class="en">5… 4… 3… 2… 1… pencils down.</span></p>
+        </td>
+        <td class="mat">PB p. 19 ex. 2 + stickers · CD1 32 (Navio)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">44–45′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at desks</div></td>
+        <td class="flow"><p><span class="en">Everybody up! Speaky says…</span> 45-sec TPR: <span class="en">Speaky says fly like a kite! · Speaky says march like a robot! · Drive a car!</span> (no “Speaky says” → freeze!). All move, all name: <span class="en">It's a kite!</span> Sit down ready for the game grids.</p></td>
+        <td class="mat">— (movement only)</td>
+      </tr>
+
+      <tr>
+        <td class="min">45–53′</td>
+        <td class="stage"><div class="nm">▶ Toy tic-tac-toe</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Toy Tic-Tac-Toe</span> (Mido №118, pre-A1 pairs re-skin — <b>every pair plays at once</b>, nobody waits). Each pair: one 3×3 grid of toy pictures + pencils (X / O).</p>
+          <p><span class="ph">Model on the board first.</span> To take a square you must PLAY it, not just point: A covers the picture with a hand, B asks: <span class="en">Is it a train?</span> A peeks: <span class="en">Yes, it is!</span> → B marks O and they swap. Wrong toy named → <span class="en">No, it isn't!</span> → no mark, turn passes. Three in a row wins; then flip the sheet — grid 2, change who starts.</p>
+          <p><span class="ph">Kagan — RallyCoach:</span> partner = checker; praise the full question: <span class="en">Good question!</span> Teacher monitors, feeds the fast finishers grid 2 with <span class="en">What is it? — It's a […].</span></p>
+        </td>
+        <td class="mat">tic-tac-toe toy grids ×2 per pair (print) · pencils · <span class="game">▶ RallyCoach</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">53–55′</td>
+        <td class="stage"><div class="nm">🎵 Favourite preview</div><div class="zone">carpet</div></td>
+        <td class="flow"><p>Back to the carpet. <span class="game">Genki song: «What's Your Favorite…?»</span> — sing one verse together, then Speaky asks 3–4 children: <span class="en">What's your favourite toy?</span> → <span class="en">My favourite toy is a […]!</span> (a taste of Lesson 4 — keep it light, no drilling).</p></td>
+        <td class="mat"><b>Genki «What's Your Favorite…?»</b> mp3 · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Reflection + Closing</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p>“I can…” badge: <span class="en">Colour your badge — I can ask “Is it a…?” and answer “Yes, it is / No, it isn't”!</span></p>
+          <p><span class="en">Well done today, superstars! Let's sing Goodbye. Your homework is in your Activity Book and on the app!</span> Sing Goodbye.</p>
+        </td>
+        <td class="mat">“I can…” badges · <b>Goodbye song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Hold a toy card face-down: each child asks YOU — <span class="en">Is it a doll?</span> — you answer honestly; a correct full question opens the door: <span class="en">Fantastic question! Take care! Goodbye!</span></p></td>
+        <td class="mat">toy cards · folder reward stickers 🦝</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow">
+          <p><b>Activity Book — p. 17, exercises 1–2 (Lesson 2 Grammar):</b> ① <i>Read, follow and circle</i> — follow the maze from “Is it a doll?” to the toy and circle <i>Yes, it is / No, it isn't</i> · ② <i>Talk Partners: choose and write a conversation, act out</i> — fill the two gaps in the present dialogue and act it out at home. + app: self-checking micro-set on Is it a…? (5–7 min).</p>
+          <p>💻 Онлайн-тренажёр юнита: <a href="https://speakandsmile.ru/gmf1/u2.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u2.html</a> — Practice + Booster по Unit 2 (лексика/грамматика урока).</p>
+        </td>
+        <td class="mat">Activity Book p. 17 · app (homework link) · тренажёр u2.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 2 · Lesson 2 (Grammar: Is it a…?) — lesson plan &amp; staging</span>
+    <span>Language verified against Pupil's Book p. 19; homework against Activity Book p. 17.</span>
+  </div>
+</div>

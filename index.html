@@ -59,6 +59,15 @@ main{padding:14px 12px 50px;max-width:760px;margin:0 auto}
 .copy.ok{background:var(--ok)}
 .donebox{display:flex;align-items:center;gap:8px;margin-top:14px;font-size:13px;font-weight:600;color:var(--text);cursor:pointer;user-select:none}
 .donebox input{width:18px;height:18px;accent-color:var(--ok)}
+.planbtn{display:block;width:100%;margin-top:12px;background:linear-gradient(180deg,#7d54d6,#6C3FC5);color:#fff;border:none;border-radius:10px;padding:12px;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 3px 10px rgba(108,63,197,.28)}
+.planbtn:active{transform:translateY(1px)}
+/* оверлей плана урока */
+#planview{position:fixed;inset:0;z-index:50;background:rgba(26,16,38,.55);backdrop-filter:blur(2px);display:none}
+#planview.show{display:flex;flex-direction:column}
+.planbar{background:var(--p);color:#fff;display:flex;align-items:center;gap:10px;padding:10px 14px;flex-shrink:0}
+.planbar b{font-size:14px;font-weight:800;flex:1}
+.planbar button{background:rgba(255,255,255,.18);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:14px;font-weight:700;cursor:pointer}
+#planframe{flex:1;width:100%;border:none;background:#fff}
 footer{text-align:center;color:var(--muted);font-size:11px;padding:0 12px 30px}
 </style>
 </head>
@@ -78,8 +87,27 @@ footer{text-align:center;color:var(--muted);font-size:11px;padding:0 12px 30px}
 </header>
 <main><div id="day"></div></main>
 <footer>Speak&amp;Smile · Teaching Hub · 14 программ · расписание: <span id="srcnote">встроенное</span> · отметки «внесено» хранятся локально</footer>
+
+<div id="planview">
+  <div class="planbar">
+    <b>📋 План урока</b>
+    <button id="planopen">Открыть в новой вкладке ↗</button>
+    <button id="planclose">Закрыть ✕</button>
+  </div>
+  <iframe id="planframe" src="about:blank" title="План урока"></iframe>
+</div>
+
 <script src="data.js"></script>
+<script src="plans.js"></script>
 <script src="app.js"></script>
+<script>
+document.getElementById("planclose").addEventListener("click", closePlan);
+document.getElementById("planopen").addEventListener("click", ()=>{
+  const src=document.getElementById("planframe").getAttribute("src");
+  if(src && src!=="about:blank") window.open(src,"_blank");
+});
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") closePlan(); });
+</script>
 <script>
 // Регистрируем service worker только при работе через сервер (http/https), не через file://
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {

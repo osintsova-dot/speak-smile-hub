@@ -1,0 +1,281 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 1 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 1 “Ready for school!” · Lesson 1 — Vocabulary</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · PPP + TPR + Phonics · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 14.09–20.09</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · 3 teams of 4</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 10 classroom objects</b> and <b>ask &amp; answer where a thing is</b> using “Where's my (pencil)? — It's here!”</li>
+      <li><span class="lb">Subsidiary.</span> Review greetings / colours / shapes (fluency mingle); phonics (recognise → blend → segment); listen for detail (sequence pictures to the song); pre-literacy &amp; fine motor (word–picture, stickers).</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; give an ICQ before every task; run a stirrer→settler rhythm with songs and signals.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>name the 10 classroom objects;</li>
+        <li>ask &amp; answer “Where's my…? — It's here!”;</li>
+        <li>blend &amp; segment target CVC words.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">pencil</span><span class="w">book</span><span class="w">bag</span><span class="w">ruler</span><span class="w">rubber</span><span class="w">crayon</span><span class="w">pencil case</span><span class="w">sharpener</span><span class="w">glue</span><span class="w">scissors</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Where's my (object)? — It's here! &nbsp;·&nbsp; What's this? — It's a (…)</div></div>
+      <div class="r"><div class="k">Form</div><div>Where + <b>'s</b> (is) + my + noun? → It + <b>'s</b> + here. Connected “Where's” /weəz/.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>final /g/ in <i>bag</i>; /ʃ/ in <i>sharpener</i>; stress on <b>where</b> + object.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly focus: <b>j v w x y z</b> (recognise → blend → segment).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“Is the pencil near or far?” → near → <b>“It's here.”</b></div>
+      <div class="ccq" style="margin-bottom:12px">“Do I want to know where it is?” → yes.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> numbers, colours, shapes &amp; greetings are known from last year (Starter = revision). Pupils are non-/emergent readers → rely on pictures &amp; audio, not printed text. Carpet routines are known.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Confuse <i>rubber</i> / <i>ruler</i></td><td>Present as a contrasting pair with one clear gesture each.</td></tr>
+        <tr><td>“Where's my…” said too fast</td><td>Back-chain: <i>…pencil → …my pencil → Where's my pencil?</i></td></tr>
+        <tr><td>Final /g/ in <i>bag</i> dropped</td><td>Short exaggerated choral drill.</td></tr>
+        <tr><td>Over-excitement on the carpet</td><td>Use a settle signal + follow every stirrer with a settler.</td></tr>
+        <tr><td>Teams argue over cards</td><td>Assign the 4 roles inside each team; rotate.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="sp">🦝 Speaky</span> waves: <span class="en">Hello, friends! I'm Speaky!</span> Class: <span class="en">Hello!</span></p>
+          <p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call actions with the moves (jump · spin · clap · sit down · stand up); trick them by saying <span class="en">Sit down!</span> when they're already sitting.</p>
+          <p>Bring the energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p>
+        </td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · Speaky · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Review mingle</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p>Revise known language (greetings, colours, shapes). <span class="game">▶ Mix–Pair–Share:</span> play music, then <span class="en">Stand up, hand up, pair up!</span></p>
+          <p>In pairs: <span class="en">A: Hello! How are you? — B: I'm fine, thank you! A: What's your name? — B: I'm [Masha].</span> Swap partners.</p>
+          <p>Round 2 <span class="ph">RallyRobin</span> (take turns): <span class="en">Tell your partner three colours.</span> Round 3: <span class="en">Now three shapes!</span> Attention signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">music · Speaky · <span class="game">▶ Mix-Pair-Share</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come closer to the board — let's sing the ABC song!</span> Sing the alphabet with actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise.</span> Open Phonics Studio: <span class="en">Do you remember these sounds?</span> Point to a sound + Jolly action — children say it (children voice the sound, not the app).</p>
+          <p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if you hear /s/… snake!</span> (a few words).</p>
+          <p><span class="ph">Blend.</span> <span class="en">Let's push them together: /s/ /a/ /t/… sat!</span> + picture for meaning.</p>
+          <p><span class="ph">Segment · dictation.</span> <span class="en">Now YOU write. Listen…</span> say the word once → children write on mini-whiteboards → <span class="en">Show me!</span> → reveal on screen &amp; check. Today's sounds: <b>j v w x y z</b>.</p>
+        </td>
+        <td class="mat"><b>Phonics Studio</b> (board) · mini-whiteboards + pens</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — a new song! May I borrow your…?</span> Sing <span class="game">Genki «May I borrow your…?»</span>; hold up real objects (glue, sharpener) → into the school-things topic.</p></td>
+        <td class="mat"><b>Genki «May I borrow your…?»</b> mp3 · objects</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–32′</td>
+        <td class="stage"><div class="nm">Presentation · Vocabulary</div><div class="zone">carpet → teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Presentation — school things.</span> Hold up each A4 card: <span class="en">What's this?</span> If unknown, model: <span class="en">It's a pencil. Pencil.</span> Choral drill ×3, then 2–3 children individually.</p>
+          <p>Contrast the tricky pair (hold both): <span class="en">This is a rubber. This is a ruler.</span></p>
+          <p><span class="game">▶ Fan-N-Pick</span> (teams of 4, mini-cards): ① fans the cards · ② picks &amp; asks <span class="en">What's this?</span> · ③ answers <span class="en">It's a […].</span> · ④ praises <span class="en">Well done!</span> Rotate roles each turn.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do you say “What's this?” or “Where's my…?”</span> (→ What's this?)</p>
+        </td>
+        <td class="mat">A4 flashcards · 3 mini-sets · <span class="game">▶ Fan-N-Pick</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">32–40′</td>
+        <td class="stage"><div class="nm">Song · order it</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">Well done! Now — to your tables, come with me!</span> Hand out object pictures (GMF1 don't read → order <b>pictures</b>, not text).</p>
+          <p><span class="ph">Listen &amp; order.</span> Play the coursebook song: <span class="en">What do you hear first? Put the pictures in order.</span> Again: <span class="en">Now let's sing!</span></p>
+          <p><span class="game">▶ Order-by-ear</span> (board) — whole class, then in their notebooks.</p>
+        </td>
+        <td class="mat">object pictures · coursebook song (Navio) · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">40–44′</td>
+        <td class="stage"><div class="nm">Stickers</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">Open your books. Find the stickers. Listen and stick!</span> Model one; check with a neighbour.</p>
+          <p><span class="ph">Countdown.</span> <span class="en">Finishing in 5… 4… 3… 2… 1… pencils down.</span></p>
+        </td>
+        <td class="mat">GMF1 Pupil's Book + stickers (Navio)</td>
+      </tr>
+
+      <tr>
+        <td class="min">44–53′</td>
+        <td class="stage"><div class="nm">Ask &amp; Find</div><div class="zone">carpet, in pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Model (board).</span> <span class="game">▶ Find it!</span> tap Speaky — <span class="sp">🦝</span> asks <span class="en">Where's my [crayon]?</span> the class finds it on screen → <span class="en">It's here!</span> (2–3 times, to model the phrase).</p>
+          <p><span class="ph">▶ Memory · Where's my…? — in pairs, on the carpet.</span> Each pair has 4–5 object cards. Child 1 shows a card, names it — <span class="en">It's a pen.</span> — and places it <b>face-down</b>. Repeat for all 4–5 (show → name → place).</p>
+          <p>When all are down, Child 1 asks: <span class="en">Where's my pen?</span> Child 2 tries — <b>from memory, first try</b> — to turn over the right card. Correct → <span class="en">It's here!</span> and keeps it. Then <b>swap roles</b>. (Most cards wins.)</p>
+          <p>Reset if it gets loud: <span class="en">Freeze!</span></p>
+        </td>
+        <td class="mat">4–5 flashcards per pair · <b>Find it!</b> (board, model) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">53–56′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">What did you learn today? Tell your partner one new word.</span> (20 sec each)</p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can say the words! I can ask and answer!</span></p>
+        </td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">56–58′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Each child gets an object/card: <span class="en">What's this?</span> or <span class="en">Where's my pencil?</span> Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">object cards · folder reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 6 (Vocabulary)</b> + app: a self-checking micro-set on today's words (picture–word match + <span class="en">What's this?</span>), with a “listen” button.</p></td>
+        <td class="mat">Activity Book · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 1 · Lesson 1 (Vocabulary) — lesson plan &amp; staging</span>
+    <span>Template for L2–L7 and every unit.</span>
+  </div>
+</div>

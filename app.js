@@ -84,6 +84,32 @@ function roomColor(r){ return ROOM_DOT[r] || "#9aa"; }
 function esc(s){ return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 function doneKey(g,date){ return "done:"+g.name+":"+iso(date); }
 
+// Ключ готового плана: программа + номер юнита (из L.unit) + номер типа урока (L1..L7 из L.type).
+// Возвращает ключ (напр. "GMF1-U2-L1"), только если такой план реально есть в window.PLANS.
+function planKeyFor(program, L){
+  if (!window.PLANS) return null;
+  const um = /unit\s*(\d+)/i.exec(L.unit||L.sec||"");
+  const lm = /\bL(\d+)\b/i.exec(L.type||"");
+  if (!um || !lm) return null;
+  const key = `${program}-U${um[1]}-L${lm[1]}`;
+  return window.PLANS[key] ? key : null;
+}
+
+// Оверлей с планом урока (iframe — у плана свой CSS/тёмная тема, изолируем).
+function openPlan(key){
+  const ov = document.getElementById("planview");
+  const fr = document.getElementById("planframe");
+  fr.src = `plans/${key}.html`;
+  ov.classList.add("show");
+  document.body.style.overflow = "hidden";
+}
+function closePlan(){
+  const ov = document.getElementById("planview");
+  ov.classList.remove("show");
+  document.getElementById("planframe").src = "about:blank";
+  document.body.style.overflow = "";
+}
+
 function render(){
   const root = document.getElementById("day");
   const wd = current.getDay();
@@ -123,7 +149,9 @@ function render(){
               <div class="ltitle">${esc(L.title)}</div>
               <div class="unit">${esc(L.sec)}</div>`;
       const fields = L.fields || [];
-      body = `<div class="detail">` + fields.map(([lab,val])=>`
+      const planKey = planKeyFor(g.program, L);
+      const planBtn = planKey ? `<button class="planbtn" data-plan="${esc(planKey)}">📋 Открыть план урока</button>` : "";
+      body = `<div class="detail">` + planBtn + fields.map(([lab,val])=>`
         <div class="field">
           <div class="flabel">${esc(lab)}</div>
           <div class="frow"><div class="fval">${esc(val)}</div>
@@ -156,6 +184,10 @@ function render(){
       if (e.target.closest(".copy")||e.target.closest(".chk")) return;
       h.parentElement.classList.toggle("open");
     });
+  });
+  // открыть план урока
+  root.querySelectorAll(".planbtn").forEach(b=>{
+    b.addEventListener("click", e=>{ e.stopPropagation(); openPlan(b.dataset.plan); });
   });
   // копирование
   root.querySelectorAll(".copy").forEach(b=>{

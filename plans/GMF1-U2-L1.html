@@ -1,0 +1,287 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 2 · Lesson 1 — Vocabulary: Toys (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 2 “Happy birthday!” · Lesson 1 — Vocabulary: Toys</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · PPP + TPR + Phonics · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 05.10 · Lesson 11</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · 3 teams of 4</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 10 toys</b> and <b>identify &amp; check them</b> using “What is it? — It's a (robot).” and “Is it a (kite)? — Yes, it is. / No, it isn't.”</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning</b> — Unit 1 school things &amp; “Where's my…? — It's here!”, Starter colours &amp; numbers — and <b>fold it into the new toys topic</b> (“Where's my ball? — It's here!”, “It's a red car”, “How many kites?”); phonics — voiced <b>th</b> /ð/ (recognise → blend → segment); listen for detail (order the toys chant); pre-literacy &amp; fine motor (word–picture, stickers).</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; give an ICQ before every task; run a stirrer→settler rhythm; <b>every task keeps ALL children responding</b> (own card / show-me / stand-sit) — never “2 play, 10 watch”.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>name the 10 toys;</li>
+        <li>ask &amp; answer “What is it? — It's a…” and “Is it a…? — Yes, it is / No, it isn't”;</li>
+        <li>hear, blend &amp; segment words with voiced <b>th</b> /ð/.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">bike</span><span class="w">ball</span><span class="w">kite</span><span class="w">doll</span><span class="w">train</span><span class="w">car</span><span class="w">robot</span><span class="w">teddy bear</span><span class="w">game</span><span class="w">skateboard</span> <span style="color:var(--muted);font-size:.82rem">(recycled: scooter · computer game · dinosaur)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What is it? — It's a (robot). &nbsp;·&nbsp; Is it a (kite)? — Yes, it is. / No, it isn't.</div></div>
+      <div class="r"><div class="k">Form</div><div>Is + it + a + noun? → Short answers: Yes, it <b>is</b>. / No, it <b>isn't</b>. Linking “It's a” /ˈɪtsə/.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>voiced /ð/ in <i>this/that</i> (not “z”/“d”); keep <b>-n't</b> in <i>isn't</i>; falling tone on the answer.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly focus: voiced <b>th</b> /ð/ — <i>this, that, with, them</i> (recognise → blend → segment).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Show a doll, ask “Is it a robot?” → No → <b>“No, it isn't.”</b></div>
+      <div class="ccq" style="margin-bottom:12px">“Do I <i>know</i> the toy, or am I <i>guessing</i>?” → guessing → <b>“Is it a…?”</b></div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> numbers, age (How old are you?), colours &amp; school things known from Starter + Unit 1. Pupils are non-/emergent readers → rely on pictures &amp; audio, not printed text. Carpet routines &amp; team roles are known.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Confuse rhyming <i>ball</i> / <i>doll</i></td><td>Present as a contrasting pair, one clear gesture each; drill slowly.</td></tr>
+        <tr><td>Voiced <i>th</i> /ð/ said as “z” or “d”</td><td>Tongue-between-teeth gesture + soft buzzing feel; short choral drill on <i>this / that</i>.</td></tr>
+        <tr><td>“Is it a…” said too fast</td><td>Back-chain: <i>…a kite → it a kite → Is it a kite?</i></td></tr>
+        <tr><td>Drop <i>-n't</i>: “No, it is”</td><td>Exaggerated choral drill of <i>No, it isn't</i> with a head-shake.</td></tr>
+        <tr><td>Teams grab the mystery bag / cards</td><td>Assign the 4 roles inside each team; hands on knees until it's your turn.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="sp">🦝 Speaky</span> waves a wrapped present: <span class="en">Hello, friends! Look — a present! Happy birthday!</span> Class: <span class="en">Hello, Speaky!</span></p>
+          <p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Freeze Dance</span> — play music, children dance; stop the music → <span class="en">Freeze!</span> Everyone is a statue. Repeat 3–4 rounds, ending seated.</p>
+        </td>
+        <td class="mat"><b>upbeat mp3</b> · Speaky + present · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Review → into toys</div><div class="zone">carpet, circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle Unit 1 + Starter (everyone has a card).</span> Deal <b>one picture card per child</b> — mostly Unit 1 school things (pencil, book, ruler, bag…) with a few toys mixed in. <span class="ph">RallyRobin in pairs:</span> A hides the card behind their back — <span class="en">Where's my pencil?</span> · B: <span class="en">It's here!</span> — then swap. <b>All pairs talk at once</b>, no one waits.</p>
+          <p><span class="ph">Colours &amp; numbers — whole-class show-me.</span> Hold up a colour card: <span class="en">It's a red…?</span> everyone points to a red thing / calls the colour. Numbers on fingers: <span class="en">How many? — Five!</span> — <b>every child shows the fingers</b>.</p>
+          <p><span class="ph">Bridge into toys.</span> <span class="sp">🦝 Speaky</span>: <span class="en">On your birthday you get… TOYS!</span> Preview the same frames: <span class="en">Where's my ball? — It's here! It's a red car! How many kites?</span> Signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">1 picture card per pupil (Unit 1 things + a few toys) · colour cards · Speaky · <span class="game">▶ RallyRobin</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">8–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come closer to the board — let's sing the ABC song!</span> Sing the alphabet with actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics — th /ð/</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise.</span> Model the Jolly <b>th</b> action (tongue between teeth, soft buzz): <span class="en">th… this, that.</span> Children copy the sound &amp; gesture (children voice the sound, not the app).</p>
+          <p><span class="ph">“th or not th?” — whole-class show-me (all react).</span> Give <b>every child a th-card</b> (tongue-between-teeth picture). Say words one by one — <i>this · sun · that · dog · them · with · red…</i> If it has voiced <b>th</b> /ð/ → <b>everyone stands up &amp; holds up the th-card + buzzes</b>; if not → sit, hands on knees. <span class="en">Show me!</span> Fast, 8–10 words — nobody is just watching.</p>
+          <p><span class="game">▶ Fly Swatters — team relay (rotates fast).</span> Cards on the board (<i>this, that, them, with</i> + distractors). Teams line up; each round <b>one runner per team</b> swats the word you call — <span class="en">Swat “this”!</span> — while <b>the whole seated class holds up their matching th-card &amp; says the word chorally</b>. New runners every round so all get a turn in ~2 min.</p>
+          <p><span class="ph">Blend (all together).</span> <span class="en">Let's push them together: /th/ /i/ /s/… this!</span> Then <i>that, them</i> + a picture for meaning.</p>
+          <p><span class="ph">Segment · dictation (everyone writes).</span> <span class="en">Now YOU write. Listen…</span> say a word once → all children write on mini-whiteboards → <span class="en">Show me!</span> → reveal &amp; check. Today's focus: voiced <b>th</b> — <i>this, that, with, them</i>.</p>
+        </td>
+        <td class="mat"><b>th</b> word/picture cards · 1 th-card per pupil · 2 fly swatters · mini-whiteboards + pens</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — a birthday song! How old are you?</span> Sing <span class="game">Genki «How old are you?»</span> with fingers for the numbers → into the birthday &amp; toys topic (on your birthday you get… toys!).</p></td>
+        <td class="mat"><b>Genki «How old are you?»</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–33′</td>
+        <td class="stage"><div class="nm">Presentation · Vocabulary</div><div class="zone">carpet → mingle</div></td>
+        <td class="flow">
+          <p><span class="ph">Presentation — toys.</span> <span class="game">▶ Peek-a-boo cards</span> — slowly slide each toy flashcard out of the “present” bag: <span class="en">What is it?</span> Reveal fully → model <span class="en">It's a robot. Robot.</span> Choral drill ×3, then 2–3 children individually.</p>
+          <p>Contrast the tricky rhyming pair (hold both): <span class="en">It's a ball. It's a doll.</span></p>
+          <p><span class="game">▶ Quiz-Quiz-Trade</span> (Kagan — stand up, one card each): pupil A holds a card to their chest, asks <span class="en">What is it?</span> · B answers <span class="en">It's a [kite].</span> · praise <span class="en">Well done!</span> · <b>swap cards</b>, find a new partner. Music stops = freeze.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do you show your card or hide it?</span> (→ hide it — hold it to your chest.)</p>
+        </td>
+        <td class="mat">toy flashcards + present bag · 1 mini-card per pupil · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">33–39′</td>
+        <td class="stage"><div class="nm">Song · order it</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">Well done! Now — to your tables, come with me!</span> Hand out toy pictures (GMF1 don't read → order <b>pictures</b>, not text).</p>
+          <p><span class="ph">Listen &amp; order (all hands busy).</span> Play the GMF1 Vocabulary song / Toys chant: <span class="en">What do you hear first? Put the toys in order.</span> <b>Every child lays out their own set</b>; then <span class="en">Now let's sing!</span> <span class="game">▶ Order-by-ear</span> — check together on the board.</p>
+        </td>
+        <td class="mat">toy pictures (a set per pupil) · GMF1 Vocabulary song (Navio) · board</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">39–40′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at desks</div></td>
+        <td class="flow"><p><span class="en">Everybody up! Let's play with our toys!</span> 45-sec TPR mime — call a toy, <b>all mime &amp; name it</b>: <span class="en">Ride your bike! · Fly your kite! · Drive your car! · Bounce your ball!</span> <span class="en">Freeze!</span> → sit for stickers. (Breaks two sit-down stages in a row.)</p></td>
+        <td class="mat">— (movement only)</td>
+      </tr>
+
+      <tr>
+        <td class="min">40–44′</td>
+        <td class="stage"><div class="nm">Stickers</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">Open your books. Find the toy stickers. Listen and stick!</span> Model one; <b>everyone</b> sticks, then check with a neighbour (RallyRobin): <span class="en">What is it? — It's a train.</span></p>
+          <p><span class="ph">Countdown.</span> <span class="en">Finishing in 5… 4… 3… 2… 1… pencils down.</span></p>
+        </td>
+        <td class="mat">GMF1 Pupil's Book + stickers (Navio)</td>
+      </tr>
+
+      <tr>
+        <td class="min">44–53′</td>
+        <td class="stage"><div class="nm">Guess &amp; check</div><div class="zone">carpet → teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Model (board).</span> tap <span class="sp">🦝</span> — a toy is hidden behind a box. Class guesses: <span class="en">Is it a robot?</span> Speaky: <span class="en">No, it isn't!</span> … <span class="en">Is it a kite? — Yes, it is!</span> (2–3 times, to model the question &amp; both answers).</p>
+          <p><span class="ph">▶ Mystery Bag — Is it a…? — in teams of 4 (all guess).</span> A feely bag holds toy cards / small toys. Child 1 secretly holds one; <b>all three others guess</b> — quick fire round the group, each with a toy in front of them to point at: <span class="en">Is it a car?</span> Holder answers honestly — <span class="en">No, it isn't.</span> / <span class="en">Yes, it is!</span> The correct guesser takes the next turn, so the bag keeps moving and no one sits idle. Rotate the holder each round.</p>
+          <p>Reset if it gets loud: <span class="en">Freeze!</span></p>
+        </td>
+        <td class="mat">feely bag + toy cards/small toys per team · hide-box (board, model) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">53–56′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">What did you learn today? Tell your partner your favourite toy.</span> (20 sec each) — <span class="en">My favourite toy is a…</span></p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can name the toys! I can ask “Is it a…?”</span></p>
+        </td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">56–58′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show each child a toy card: <span class="en">What is it?</span> or hide it and ask <span class="en">Is it a robot?</span> Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">toy cards · folder reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 16, exercises 1–2 (Lesson 1 Vocabulary):</b> ① <i>Read, find and colour</i> (a blue ball · a red train · a brown teddy · a green kite · a yellow car · an orange scooter) · ② <i>Circle and write</i> (toy word-snake). + app: a self-checking micro-set on today's toys (picture–word match + <span class="en">What is it?</span>), 5–7 min.</p>
+          <p>💻 Онлайн-тренажёр юнита: <a href="https://speakandsmile.ru/gmf1/u2.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u2.html</a> — Practice + Booster по Unit 2 (лексика/грамматика урока).</p></td>
+        <td class="mat">Activity Book p. 16 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 2 · Lesson 1 (Vocabulary: Toys) — lesson plan &amp; staging</span>
+    <span>Homework verified against Give Me Five! 1 Activity Book, p. 16.</span>
+  </div>
+</div>
