@@ -54,12 +54,20 @@
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
+  /* interactive on the projector */
+  .iact{ background:var(--p-soft); border:1px solid var(--p); border-left:4px solid var(--honey); border-radius:9px; padding:8px 10px; margin:7px 0 0; font-size:.85rem; }
+  .iact .ia-h{ font-weight:800; color:var(--p-ink); display:block; margin-bottom:4px; }
+  .iact .ia-r{ display:block; margin:2px 0; } .iact .ia-k{ font-weight:800; color:var(--p-ink); }
+  .iact .ready{ font-weight:800; color:var(--good); } .iact .build{ font-weight:800; color:var(--honey-ink); }
+  /* differentiation line */
+  .diff{ display:block; background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:6px; padding:5px 9px; font-size:.85rem; margin-top:6px; } .diff b{ color:var(--zone); }
+
   @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.iact,.diff{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
@@ -154,12 +162,13 @@
         <td class="flow">
           <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Come in!</span> On the carpet <span class="sp">🦝 Speaky</span> has a messy pile of things: <span class="en">Oh no! Look at my things! Book, crayon, paper — everywhere! Messy! Help me tidy up!</span></p>
           <p><span class="en">Stand up! Wake-up time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the opening ritual (jump · spin · clap · sit down), finish seated.</p>
+          <p><span class="ph">Option — furniture primer (energiser).</span> <span class="game">▶ Touch it!</span> Fast TPR on the <b>6 core furniture words only</b> (PB p. 12), pointing to the REAL items in the room: <span class="en">Touch a chair! · Touch a desk! · Touch the board! · Point to the bin! · Point to the shelf! · Point to the cupboard!</span> — primes today's words before they are taught, then sit.</p>
         </td>
         <td class="mat"><b>Genki «Disco Warm Up»</b> mp3 · Speaky + a messy pile (book, crayon, paper ball) · carpet</td>
       </tr>
 
       <tr>
-        <td class="min">3–8′</td>
+        <td class="min">3–7′</td>
         <td class="stage"><div class="nm">Review → into tidying up</div><div class="zone">carpet, circle</div></td>
         <td class="flow">
           <p><span class="ph">Recycle L1–L3 woven into today.</span> Object flash, all answer: <span class="en">What's this? — It's a book! It's a crayon!</span> Quick L2 echo (all with gesture): <span class="en">Where's my pencil? — It's here!</span> Story echo from <i>Toby goes to school</i> (all point): <span class="en">Where was the book in the story? — In the bin! 🗑 Where was the pencil case? — On the shelf!</span></p>
@@ -169,100 +178,130 @@
       </tr>
 
       <tr class="bridge">
-        <td class="min">8–10′</td>
+        <td class="min">7–9′</td>
         <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
         <td class="flow"><p><span class="en">To the board — ABC time!</span> Sing the ABC song with actions → settle into phonics.</p></td>
         <td class="mat"><b>ABC phonics song</b> mp3</td>
       </tr>
 
       <tr>
-        <td class="min">10–22′</td>
+        <td class="min">9–19′</td>
         <td class="stage"><div class="nm">Phonics — blends CCVC · CVCC (read)</div><div class="zone">at the board</div></td>
         <td class="flow">
           <p><span class="ph">Recognise — warm up the sounds.</span> Flash single sounds fast with Jolly actions: <b>s · t · o · p · f · i · l · m · h · a · n · d</b> — children voice each sound (not the app).</p>
-          <p><span class="ph">Blend to READ (all together).</span> Build a word letter-card by letter-card on the board, push the sounds: <span class="en">/s/ /t/ /o/ /p/… stop!</span> Then <i>film · hand · milk · jump · desk</i> — picture appears for meaning each time. <span class="ph">Kagan — Take Off–Touch Down:</span> <span class="en">Stand up if the word has /n/… hand!</span> (a few words — all react).</p>
-          <p><span class="ph">Segment · mini-dictation (everyone writes).</span> <span class="en">Now YOU are readers AND writers.</span> Say a word once → children write on mini-whiteboards → <span class="ph">Showdown:</span> <span class="en">Show me!</span> all reveal at once, check on screen: <i>stop · hand · milk · desk</i>. Tricky words to finish (whole-word flash, not sounded): <span class="en">by · one.</span></p>
+          <p><span class="ph">Blend to READ (all together).</span> Build a word letter-card by letter-card on the board, push the sounds: <span class="en">/s/ /t/ /o/ /p/… stop!</span> Then <i>hand · milk · desk</i> (3 words — keep it tight) — picture appears for meaning each time. <span class="ph">Kagan — Take Off–Touch Down:</span> <span class="en">Stand up if the word has /n/… hand!</span> (a few words — all react).</p>
+          <p><span class="ph">Segment · quick Showdown (protect the clock).</span> Say ONE word → children write on mini-whiteboards → <span class="ph">Showdown:</span> <span class="en">Show me!</span> all reveal at once, check on screen: <i>desk · milk</i> (2 words only — today's MAIN aim is furniture + <i>Put the…</i>). Tricky words to finish (whole-word flash, not sounded): <span class="en">by · one.</span></p>
+          <span class="diff"><b>💪 Support:</b> give the first sound aloud + show the picture before they blend. <b>⭐ Extension:</b> add <i>stop / jump</i>, or write the whole word with no letter-cards on show.</span>
+          <div class="iact"><span class="ia-h">🎮 Интерактив (проектор): Blend Flashcards</span>
+            <span class="ia-r"><span class="ia-k">Screen:</span> letter-cards drop in one at a time to build the word left→right, then the picture flips in for meaning.</span>
+            <span class="ia-r"><span class="ia-k">Mechanics:</span> tap = reveal next sound → class pushes it → final tap = whole word + picture; hide the word, keep the picture for the "Show me!" check.</span>
+            <span class="ia-r"><span class="ia-k">Language:</span> <span class="en">/s/ /t/ /o/ /p/… stop!</span> · <span class="en">What's the word? — desk!</span></span>
+            <span class="ia-r"><span class="ia-k">Teacher:</span> point to each sound as it lands; deck = stop · hand · milk · desk (drop jump/film only if time allows).</span>
+            <span class="ia-r"><span class="ready">✅ ГОТОВ</span> — U1 <i>Flashcards</i> engine (blend deck + picture reveal).</span></div>
         </td>
         <td class="mat">JP Book 2 (blends CCVC/CVCC) · letter cards · picture cards · mini-whiteboards + pens</td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">22–24′</td>
+        <td class="min">19–21′</td>
         <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
         <td class="flow"><p><span class="en">Great reading! Now — where is Mr Monkey?</span> Sing <span class="game">Genki «Where Is Mr Monkey?»</span> (КТП pick — teaches <i>in · on · under</i>, feeds straight into today's grammar) → point on the screen: <span class="en">On the box! In the box! Under the box!</span> with the 3 gestures.</p></td>
         <td class="mat"><b>Genki «Where Is Mr Monkey?»</b> mp3 (in/on/under)</td>
       </tr>
 
       <tr>
-        <td class="min">24–31′</td>
+        <td class="min">21–28′</td>
         <td class="stage"><div class="nm">Presentation · furniture + Put the…</div><div class="zone">carpet</div></td>
         <td class="flow">
           <p><span class="ph">Present furniture (PB p. 12 ex. 1, CD1 16).</span> Real / pictured, listen–point–say: <span class="en">shelf · cupboard · bin · desk · board · chair.</span> Choral drill ×3, then 2–3 children. Contrast the tricky word: <span class="en">cupboard</span> = /ˈkʌbəd/ (back-chain).</p>
           <p><span class="ph">Present the grammar — one gesture per preposition.</span> Take a real book: <span class="en">Watch! Put the book ON the shelf.</span> (flat hand ✋) · <span class="en">Put the paper IN the bin.</span> (drop 👇) · <span class="en">Put the chair UNDER the desk.</span> (hand low ⬇️). Say → do → children copy the gesture.</p>
           <p><span class="game">▶ Opposite-place call-response (all react).</span> You place an object + name it; class shouts where: <span class="en">The book is… ? — ON the shelf!</span> Speed up. CCQ (see box): <span class="en">Put the book — do I do it, or YOU?</span> (→ YOU do it!)</p>
+          <div class="iact"><span class="ia-h">🎮 Интерактив (проектор): What's this? spinner</span>
+            <span class="ia-r"><span class="ia-k">Screen:</span> a wheel of the 6 furniture pictures; the arrow spins and lands on one.</span>
+            <span class="ia-r"><span class="ia-k">Mechanics:</span> tap <i>Spin</i> → arrow stops on shelf / cupboard / bin / desk / board / chair → whole class answers, then a named child.</span>
+            <span class="ia-r"><span class="ia-k">Language:</span> <span class="en">What's this? — It's a shelf!</span></span>
+            <span class="ia-r"><span class="ia-k">Teacher:</span> spin 6–8×, speed up; land on <i>cupboard</i> to re-run the /ˈkʌbəd/ back-chain.</span>
+            <span class="ia-r"><span class="ready">✅ ГОТОВ</span> — U1 <i>"What's this?" spinner</i> (swap deck to furniture).</span></div>
         </td>
         <td class="mat">PB p. 12 ex. 1 · CD1 16 (Navio) · real book / paper ball / mini-shelf · furniture picture cards</td>
       </tr>
 
       <tr>
-        <td class="min">31–38′</td>
+        <td class="min">28–35′</td>
         <td class="stage"><div class="nm">▶ Speaky says: Put it!</div><div class="zone">at desks, standing</div></td>
         <td class="flow">
           <p><span class="game">▶ Speaky says — Put it!</span> (TPR command game; <b>every child has their own kit</b> → all move at once, nobody watches). Each child: a mini-book + crayon + paper ball + a furniture mat (shelf · bin · desk · chair drawn).</p>
           <p><span class="sp">🦝 Speaky</span> commands, all place: <span class="en">Speaky says put the book on the shelf! · Speaky says put the crayon in the bin! · Speaky says put the paper under the desk!</span> Trick them (no “Speaky says” → freeze): <span class="en">Put the book on the chair!</span> — anyone who moves does a funny wiggle. <span class="ph">ICQ:</span> <span class="en">Do you move if I DON'T say “Speaky says”?</span> (→ No — freeze!)</p>
           <p><span class="ph">Kagan — RallyRobin (pairs, take turns):</span> Partner A gives ONE command, Partner B does it &amp; says <span class="en">Done!</span> — swap, swap, swap. Everyone is the boss.</p>
+          <span class="diff"><b>💪 Support:</b> teacher's gesture stays visible with each command (on ✋ / in 👇 / under ⬇️). <b>⭐ Extension:</b> the "boss" gives a 2-step command — <span class="en">Put the book on the shelf AND the crayon in the bin.</span></span>
+          <div class="iact"><span class="ia-h">🎮 Интерактив (проектор): Put it!</span>
+            <span class="ia-r"><span class="ia-k">Screen:</span> a room scene — shelf · bin · desk · chair — and a tray of draggable objects (book · crayon · paper · pencil).</span>
+            <span class="ia-r"><span class="ia-k">Mechanics:</span> drag an object; a drop only "sticks" ON / IN / UNDER a piece of furniture. On a valid drop the sentence prints &amp; Speaky reads it; a "no-Speaky-says" trap makes the object bounce back.</span>
+            <span class="ia-r"><span class="ia-k">Language:</span> <span class="en">Put the book on the shelf.</span> · <span class="en">Put the crayon in the bin.</span> · <span class="en">Put the paper under the desk.</span></span>
+            <span class="ia-r"><span class="ia-k">Teacher:</span> mirror the pupils' own kit; let a child drag while the class commands out loud.</span>
+            <span class="ia-r"><span class="build">🔨 СОБРАТЬ</span> — new drag-&amp;-drop: reuse U1 art; each furniture item needs 3 drop-zones (on / in / under) + sentence-print + Speaky voice.</span></div>
         </td>
         <td class="mat">per pupil: mini-book · crayon · paper ball · furniture mat · Speaky · <span class="game">▶ Speaky says</span></td>
       </tr>
 
       <tr>
-        <td class="min">38–43′</td>
+        <td class="min">35–40′</td>
         <td class="stage"><div class="nm">Song · Let's tidy up</div><div class="zone">carpet → desks</div></td>
         <td class="flow">
           <p><span class="ph">PB p. 12 ex. 2 (CD1 17).</span> <span class="en">Listen and point: what goes on the shelf? What goes in the bin?</span> Play <i>Let's tidy up</i>; children point in the picture, then sing along with the 3 gestures. Key lines to own: <span class="en">Put the book on the shelf… Let's tidy up!</span> · <span class="en">Put the paper in the bin… Let's tidy up!</span> · <span class="en">Put the chair under the desk… Let's tidy up!</span></p>
           <p>Value moment: <span class="sp">🦝 Speaky</span> — <span class="en">A tidy classroom is a happy classroom! Well done, superstars!</span></p>
+          <div class="iact"><span class="ia-h">🎮 Интерактив (проектор): Find it! — tidy the picture</span>
+            <span class="ia-r"><span class="ia-k">Screen:</span> the PB p. 12 messy-classroom picture; each item the song names lights up.</span>
+            <span class="ia-r"><span class="ia-k">Mechanics:</span> pause after a line → children point/predict → tap the item → it flies to its right place (on shelf / in bin / under desk); the room ends up tidy.</span>
+            <span class="ia-r"><span class="ia-k">Language:</span> <span class="en">Where does it go? — On the shelf!</span> · <span class="en">Put the book on the shelf… Let's tidy up!</span></span>
+            <span class="ia-r"><span class="ia-k">Teacher:</span> ask "Where does it go?" BEFORE tapping so every child commits an answer.</span>
+            <span class="ia-r"><span class="ready">✅ ГОТОВ</span> — U1 <i>Find it!</i> engine (mess → tidy deck).</span></div>
         </td>
         <td class="mat">PB p. 12 ex. 2 · CD1 17 (Navio) · furniture pictures</td>
       </tr>
 
       <tr>
-        <td class="min">43–49′</td>
+        <td class="min">40–46′</td>
         <td class="stage"><div class="nm">▶ Tidy Speaky's desk — barrier game</div><div class="zone">desks, in pairs</div></td>
         <td class="flow">
           <p><span class="game">▶ Barrier / Talk-Partners game</span> (PB p. 12 ex. 3, CD1 18 model first; Kagan — RallyCoach; <b>both children speak &amp; do every round</b>). Model on the board with <span class="sp">🦝</span>: <span class="en">Put the pencil under the chair. — Good!</span></p>
           <p>Each pair: a stand-up book as a screen, identical sets of object mini-cards + a furniture mat. Pupil A hides &amp; commands: <span class="en">Put the book on the shelf. Put the crayon in the bin.</span> (2–3 commands) Pupil B follows on their side. Lift the screen → <span class="en">Same? — Yes!</span> cheer &amp; high-five → <b>swap roles</b>. <span class="ph">ICQ:</span> <span class="en">Do you SHOW your card, or SAY the words?</span> (→ Say the words!)</p>
+          <span class="diff"><b>💪 Support:</b> pair the child with the teacher/strong peer; keep the gesture cards on the desk as a prompt. <b>⭐ Extension:</b> 4 commands + a coach line — <span class="en">Try again — under, not on!</span></span>
         </td>
         <td class="mat">per pair: book-screen · 2× object mini-cards · furniture mat · <b>CD1 18</b> (model) · <span class="game">▶ RallyCoach</span></td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">49–50′</td>
+        <td class="min">46–47′</td>
         <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at desks</div></td>
         <td class="flow"><p><span class="en">Everybody up! Be the furniture!</span> 45-sec TPR: <span class="en">Be a tall shelf! · Be a round bin! · Hide UNDER the desk! · Sit ON your chair — freeze!</span> Then back to the carpet.</p></td>
         <td class="mat">— (movement only)</td>
       </tr>
 
       <tr>
-        <td class="min">50–53′</td>
-        <td class="stage"><div class="nm">Production · tidy OUR class</div><div class="zone">real classroom</div></td>
+        <td class="min">47–51′</td>
+        <td class="stage"><div class="nm">Production · invent YOUR command</div><div class="zone">real classroom</div></td>
         <td class="flow">
-          <p><span class="ph">You are the boss!</span> <span class="sp">🦝 Speaky</span> makes a small real mess (a book on the floor, a bag on a chair). 3–4 volunteers in turn give the class a REAL command: <span class="en">Put the book on the shelf! · Put the bag under the desk!</span> — the class (or the named child) actually does it. Applause for a tidy room.</p>
+          <p><span class="ph">Create — you are the boss!</span> <span class="sp">🦝 Speaky</span> makes a small real mess (a book on the floor, a bag on a chair). <span class="en">Now make YOUR OWN tidy-up command for a friend! Choose: a thing + on / in / under + furniture.</span> <span class="ph">Kagan — RallyRobin (pairs):</span> each child invents a NEW command and gives it to their partner, who does it &amp; says <span class="en">Done!</span> — swap. <b>Every child creates &amp; speaks</b>, no one just watches.</p>
+          <p>Then <span class="ph">quick share:</span> 2–3 "star bosses" give their own command to the whole class → the class actually tidies the real mess. Applause for a tidy room.</p>
+          <span class="diff"><b>💪 Support:</b> offer a sentence frame on the board — <span class="en">Put the ___ ___ the ___.</span> + a picture menu. <b>⭐ Extension:</b> invent a command with a NEW object from the room (window ledge, teacher's desk).</span>
         </td>
         <td class="mat">a few real classroom objects · Speaky</td>
       </tr>
 
       <tr>
-        <td class="min">53–56′</td>
+        <td class="min">51–55′</td>
         <td class="stage"><div class="nm">Reflection + Closing</div><div class="zone">carpet</div></td>
         <td class="flow">
           <p>“I can…” badge: <span class="en">Colour your badge — I can say the furniture and I can tidy up: on, in, under!</span> Gesture check-out: teacher says a preposition, all show the gesture — <span class="en">on! · in! · under!</span></p>
+          <p><span class="ph">Option — rotate the reflection:</span> <span class="ph">Kagan Timed Pair Share</span> (30 sec each): <span class="en">Tell your partner ONE thing you can tidy: "I can put the ___ ___ the ___."</span> → or <span class="ph">Team Pair Share</span> — each team of 4 shares one command aloud.</p>
           <p><span class="en">Well done, superstars! Let's sing Goodbye. Your homework is in your Activity Book!</span> Sing Goodbye.</p>
         </td>
         <td class="mat">“I can…” badges · <b>Goodbye song</b> mp3</td>
       </tr>
 
       <tr>
-        <td class="min">56–60′</td>
+        <td class="min">55–60′</td>
         <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
         <td class="flow"><p>Line up. Give each child one object + name a place: <span class="en">Put the crayon in the bin!</span> — child does it → out: <span class="en">Fantastic! Take care! Goodbye!</span> (or point-name a furniture card: <span class="en">What's this? — A shelf!</span>)</p></td>
         <td class="mat">object cards · furniture cards · folder reward stickers 🦝</td>
@@ -273,6 +312,7 @@
         <td class="stage"><div class="nm">Homework</div></td>
         <td class="flow">
           <p><b>Activity Book — p. 9, exercises 1–2 (Lesson 4 Vocabulary and Grammar):</b> ① <i>Listen and tick ✓</i> (CD1 19 — audio in the Navio app): tick the right picture (school bag under the chair, on the board, on/in the desk, in the cupboard) · ② <i>Read and draw</i> — draw each thing where it belongs: “Put the book on the shelf · Put the computer on the desk · Put the paper in the bin · Put the school bag under the chair · Put the crayon in the cupboard.” + app: furniture &amp; prepositions micro-set (5–7 min).</p>
+          <p><span class="diff"><b>💪 Support (core):</b> do ex. 1 (Listen &amp; tick) + draw just 3 of the 5 items in ex. 2. <b>⭐ Extension:</b> after ex. 2, draw ONE more thing and write where it goes — <span class="en">Put the ___ ___ the ___.</span></span></p>
           <p>💻 Онлайн-тренажёр юнита: <a href="https://speakandsmile.ru/gmf1/u1.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u1.html</a> — Practice + Booster по Unit 1 (лексика/грамматика урока).</p>
         </td>
         <td class="mat">Activity Book p. 9 · CD1 19 (Navio) · app (homework link) · тренажёр u1.html</td>

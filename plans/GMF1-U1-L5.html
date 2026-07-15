@@ -54,12 +54,25 @@
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
+  /* projector interactive box */
+  .fx{ background:linear-gradient(180deg,var(--p-soft),var(--card)); border:1.5px solid var(--p); border-radius:10px; padding:8px 11px; margin:7px 0; font-size:.89rem; }
+  .fx .fxh{ font-weight:800; color:var(--p-ink); display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:5px; }
+  .fx .tag{ font-size:.63rem; font-weight:800; text-transform:uppercase; letter-spacing:.04em; border-radius:5px; padding:1px 7px; white-space:nowrap; }
+  .fx .ready{ background:var(--good); color:#fff; } .fx .build{ background:var(--honey); color:var(--honey-ink); }
+  .fx .rk{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.72em; letter-spacing:.03em; }
+  .fx ul{ list-style:none; margin:4px 0 0; padding:0; display:flex; flex-direction:column; gap:3px; }
+  .fx ul li{ padding-left:14px; position:relative; } .fx ul li::before{ content:""; position:absolute; left:1px; top:.55em; width:6px; height:6px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .fx .modes{ border-top:1px dashed var(--line); margin-top:6px; padding-top:5px; }
+  .fx .mode{ margin:3px 0; } .fx .mode b{ color:var(--p-ink); }
+  .opt{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:6px; padding:5px 9px; font-size:.86rem; }
+  .opt b{ color:var(--honey-ink); }
+
   @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.fx,.opt{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
@@ -76,7 +89,7 @@
   <div class="grid2">
     <div class="cardb"><ul class="a">
       <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>say the /r/ sound</b> (Toby's tongue twister “A red rabbit on a red ruler”), <b>understand what British children do at school</b> (assembly — sit on the floor, listen to the head teacher, sing songs, play music, clap) and <b>read &amp; make their own classroom-rules poster</b> (Listen to others / Put your hand up to speak / Work quietly…).</li>
-      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning inside the topic</b> — Unit 1 classroom objects + “Where's my…? / It's in/on/under the…” (L1–L4) applied to /r/ objects (ruler · rubber · crayon); Jolly track — <b>revision dictation of the 26 letter-sounds + capital letters</b> (JP Book 2, p. 34); tricky words <i>me·be·my / you·your</i> + sight word <i>red</i>.</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning inside the topic</b> — Unit 1 classroom objects + “Where's my…? / It's in/on/under the…” (L1–L4) applied to /r/ objects (ruler · rubber · crayon); Jolly track — <b>quick recognition review of the known letter-sounds</b> in class (full 26-letter + capitals <i>written</i> dictation, JP Book 2 p. 34, → differentiated homework, to protect pace); tricky words <i>me·be·my / you·your</i> + sight word <i>red</i>.</li>
       <li><span class="lb">Personal.</span> Keep the craft stage tight (timer + ONE rule per poster); model writing letter-by-letter on the board; <b>every child responds in every task</b> (own poster / show-me roar / thumbs vote) — never “2 play, 10 watch”.</li>
     </ul></div>
     <div class="cardb">
@@ -98,7 +111,7 @@
       <div class="r"><div class="k">Structure</div><div>A red rabbit on a red ruler. &nbsp;·&nbsp; Where's my (ruler)? — It's (in/on/under) the (bag). &nbsp;·&nbsp; At school we (sit on the floor / listen to the head teacher). &nbsp;·&nbsp; Class rules: Listen to others. / Put your hand up to speak.</div></div>
       <div class="r"><div class="k">Form</div><div>Initial <b>/r/ + word</b>. Poster = imperative rules (<b>Verb + …!</b>). Fixed chunks, copied not built.</div></div>
       <div class="r"><div class="k">Pron. watch</div><div>English <b>/r/</b> — round lips, tongue does NOT tap: a soft “rrr”, <i>not</i> the Russian rolled «р». Keep it smooth in <i>red, rabbit, run, ruler</i>.</div></div>
-      <div class="r"><div class="k">Phonics</div><div>Coursebook sound: <b>/r/</b> (PB p. 13, CD1 20–21). Jolly track: <b>revision dictation of all 26 letter-sounds + capital letters</b> (JP Book 2, p. 34). Tricky words: revise <i>me·be·my / you·your</i>; sight word <i>red</i>.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Coursebook sound: <b>/r/</b> (PB p. 13, CD1 20–21). Jolly track: <b>in-class recognition review of known letter-sounds</b> (full 26 + capitals written dictation → HW, JP Book 2 p. 34). Tricky words: revise <i>me·be·my / you·your</i>; sight word <i>red</i>.</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
@@ -139,6 +152,7 @@
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
     <span><span class="sp">🦝</span> = Speaky lines</span>
     <span><span class="game">▶</span> = game</span>
+    <span><b style="color:var(--p)">🎮 projector</b> = board interactive (<span style="color:var(--good);font-weight:800">READY</span> / <span style="color:var(--honey-ink);font-weight:800">TO BUILD</span>)</span>
     <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
@@ -179,13 +193,55 @@
         <td class="min">10–22′</td>
         <td class="stage"><div class="nm">Phonics — /r/ + sound review</div><div class="zone">at the board</div></td>
         <td class="flow">
-          <p><span class="ph">Recognise /r/.</span> Toby's tongue twister (PB p. 13, CD1 20): <span class="en">r – r – r. A red rabbit on a red ruler!</span> Rabbit-paws gesture; round lips, soft growl, tongue still — <b>no rolled «р»</b>. Choral ×3: slow → normal → fast. 2–3 brave solos with the “microphone”.</p>
-          <p><span class="ph">“r or not r?” — whole-class show-me (all react).</span> Show picture cards one by one — <i>rug · ring · pen · rabbit · rat · hat · read · run</i> (AB p. 10 set). Begins with /r/ → <b>everyone stands and growls r-r-r</b>; not /r/ → sit, hands on knees. <span class="en">Show me!</span> Fast, nobody just watches.</p>
-          <p><span class="ph">Blend for meaning.</span> Push sounds together with picture support: <span class="en">/r/ /a/ /t/… rat! /r/ /u/ /n/… run! /r/ /e/ /d/… red!</span> Children echo + do the action.</p>
-          <p><span class="ph">Segment — everyone writes (JP dictation review, p. 34).</span> Mini-whiteboards: <span class="en">Write the FIRST letter you hear… red!</span> → all write <b>R / r</b> → <span class="en">Show me!</span> Mix in earlier sounds (sun→s, top→t, mug→m, big→b) + a capital or two. 5 rounds.</p>
-          <p><span class="ph">Tricky words.</span> Flash cards <i>me · my · you · your</i> + colour word <i>red</i>: <span class="en">We just KNOW these — look, say: me… my… you… your… red.</span> Choral ×2 + air-write.</p>
+          <p><span class="ph">Recognise /r/ (~2½′).</span> Toby's tongue twister (PB p. 13, CD1 20): <span class="en">r – r – r. A red rabbit on a red ruler!</span> Rabbit-paws gesture; round lips, soft growl, tongue still — <b>no rolled «р»</b>. Choral ×3: slow → normal → fast. 2–3 brave solos with the “microphone”. <b>Support:</b> hold up the <b>/r/ picture-anchor card (a rabbit)</b> as the sound cue — weak pupils watch it, not the letter.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Phonics Studio — Mode 1 · Sound recognition</span> <span class="tag build">🔨 to build</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> known letter-sounds scattered on the board; ONE lights up at a time.</li>
+              <li><span class="rk">Kids:</span> say the highlighted sound + its Jolly action. <b>Children voice the sound — the app does NOT.</b></li>
+              <li><span class="rk">Teacher:</span> tap to highlight the next; 6–8 sounds only, <b>recognition, not writing</b> (~1½′). Keep it a quick warm-review — the full 26-letter written dictation moves to differentiated homework.</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">“r or not r?” — whole-class show-me (~2′, all react).</span> Pictures one by one — <i>rug · ring · pen · rabbit · rat · hat · read · run</i> (AB p. 10 set). Begins with /r/ → <b>everyone stands and growls r-r-r</b>; not /r/ → sit, hands on knees. <span class="en">Show me!</span> Fast, nobody just watches.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Flashcards — “r or not r?”</span> <span class="tag ready">✅ ready</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> big picture flashcards, one tap = next card.</li>
+              <li><span class="rk">Kids:</span> whole class stands+growls for /r/ words, sits for the rest — <b>every child reacts at once</b>.</li>
+              <li><span class="rk">Teacher:</span> use the existing <b>Flashcards</b> tool; exaggerate the first sound.</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">Blend for meaning (~2′).</span> Push sounds together with picture support: <span class="en">/r/ /a/ /t/… rat! /r/ /u/ /n/… run! /r/ /e/ /d/… red!</span> Children echo + do the action.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Phonics Studio — Mode 2 · Blending</span> <span class="tag build">🔨 to build</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> letters <b>s · a · t</b> slide together → <b>sat</b>, then a picture pops up for meaning.</li>
+              <li><span class="rk">Kids:</span> say each sound as it moves, then the whole word + action.</li>
+              <li><span class="rk">Teacher:</span> control the slide speed. <b>Single sounds stay silent (teacher voices them); the whole word MAY be spoken by the app</b> (browser speech).</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">Segment — CHILDREN break the word (~2½′, analyse + write).</span> No teacher spelling: <span class="en">YOU break it! red → say it slowly, tap it on your fingers.</span> Class taps <span class="en">/r/ /e/ /d/</span> → then write the FIRST letter on mini-whiteboards → <span class="en">Show me!</span> 3 rounds: <b>red</b> + 2 earlier words (sun→s, mug→m). <b>Support:</b> write just the first letter. <b>Extension:</b> write the WHOLE word (r-e-d / s-u-n), or a capital <b>R</b>.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Phonics Studio — Mode 3 · Segmenting dictation</span> <span class="tag build">🔨 to build</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> a picture + a “say it” button; after kids write, the <b>word appears letter-by-letter for self-check</b>.</li>
+              <li><span class="rk">Kids:</span> hear the whole word → segment it themselves → write → check their own board against the screen.</li>
+              <li><span class="rk">Teacher:</span> press “say it” (whole word). <b>The app never voices separate sounds — segmenting is the children's thinking job.</b></li>
+            </ul>
+          </div>
+
+          <p><span class="ph">Tricky words (~1½′).</span> Flash cards <i>me · my · you · your</i> + colour word <i>red</i>: <span class="en">We just KNOW these — look, say: me… my… you… your… red.</span> Choral ×2 + air-write. Then straight to the school song — keep the pace up.</p>
+
+          <div class="opt"><b>Optional / fast finishers:</b> the bonus chant <span class="en">Red rabbit, red rabbit, jump and run… school is fun!</span> (with jump + run actions) — an extra <b>on top of</b> Toby's book tongue twister, never a replacement. · <b>Kinaesthetic swap for “r or not r?”:</b> a <b>Fly-swatters</b> reskin where <i>everyone</i> has a paper swatter and all “swat the air” on hearing an /r/ word (not two racers at the board). · A floor <b>Hopscotch</b> of picture squares — kids hop only on /r/ pictures — works as an alt playground stir if space allows.</div>
         </td>
-        <td class="mat">PB p. 13 / CD1 20 · toy microphone · r-picture cards (rug·ring·rabbit·rat·read·run + pen·hat) · mini-whiteboards + pens · tricky-word cards <i>me·my·you·your·red</i></td>
+        <td class="mat">PB p. 13 / CD1 20 · toy microphone · <b>/r/ picture-anchor (rabbit)</b> · r-picture cards (rug·ring·rabbit·rat·read·run + pen·hat) · <b>Phonics Studio</b> (board, Modes 1–3) · <b>Flashcards</b> (board) · mini-whiteboards + pens · tricky-word cards <i>me·my·you·your·red</i></td>
       </tr>
 
       <tr class="bridge">
@@ -219,7 +275,8 @@
         <td class="flow">
           <p><span class="ph">Before you read (PB p. 15).</span> <span class="en">Who are the GOOD children? Look and point!</span> — good children vs naughty ones on the page.</p>
           <p><span class="ph">Listen &amp; read the poster (CD1 24) — fingers follow.</span> Read the <b>Class rules</b> together (funny monkeys!): <span class="en">Listen to others. Put your hand up to speak. Work quietly. Sit down on your chair. Walk in the classroom. Tidy up your things.</span> CCQ: <span class="en">Rule 2 — shout or hand up? — Hand up!</span></p>
-          <p><span class="ph">Make YOUR rule poster (literacy product).</span> Fold an A5 card; each child copies <b>ONE class rule</b> from the board frame (written LARGE, line by line) and draws a monkey doing it — like the book. Dotted-line strips help the weakest writers. Timer 8 min, countdown finish: <span class="en">5…4…3…2…1… pencils down!</span></p>
+          <p><span class="ph">Make YOUR rule poster (literacy product).</span> Fold an A5 card; each child copies <b>ONE class rule</b> from the board frame (written LARGE, line by line) and draws a monkey doing it — like the book. <b>Support:</b> dotted-line strips to trace + teacher scribes for the weakest. <b>Extension:</b> copy a second rule, or add the capital letter at the start. Timer 8 min, countdown finish: <span class="en">5…4…3…2…1… pencils down!</span></p>
+          <p><span class="ph">Create — your own /r/ thing (fast finishers, links to phonics).</span> On the back of the card: <span class="en">Draw something that starts with r-r-r — and tell me its name!</span> (rabbit · ruler · rug · ring…). They show &amp; say it at the door — a mini creative check of the sound.</p>
         </td>
         <td class="mat">PB p. 15 / CD1 24 · folded A5 cards · crayons · board frame (6 rules) + dotted-line strips · timer</td>
       </tr>
@@ -261,9 +318,10 @@
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 10 (Lesson 5 Phonics), exercises 1–2</b> (① <i>Write and say</i> — fill in the missing <b>r</b> letters in Toby's tongue twister; ② <i>Colour the words that begin with ‘r’. Say</i> — rug, ring, rabbit, rat, read, run) <b>+ p. 11 (Lesson 6 British culture), exercises 1–2</b> (① <i>Listen and number. Say</i> — sing songs / listen to the head teacher / clap our hands / play music; ② <i>Read and tick ✓. Draw and say</i> — I listen to the head teacher / I play music / I sit on the floor / I sing songs).</p>
+        <td class="flow"><p><b>Core (everyone) — Activity Book p. 10 (Lesson 5 Phonics), exercises 1–2</b> (① <i>Write and say</i> — fill in the missing <b>r</b> letters in Toby's tongue twister; ② <i>Colour the words that begin with ‘r’. Say</i> — rug, ring, rabbit, rat, read, run) <b>+ p. 11 (Lesson 6 British culture), exercises 1–2</b> (① <i>Listen and number. Say</i> — sing songs / listen to the head teacher / clap our hands / play music; ② <i>Read and tick ✓. Draw and say</i> — I listen to the head teacher / I play music / I sit on the floor / I sing songs).</p>
+        <p><b>Differentiated:</b> <i>Support</i> — just ex. 2 on p. 10 (colour &amp; say the r-words), grown-up may read the rule words aloud. <i>Extension</i> — the <b>26 letter-sounds + capitals dictation</b> we didn't finish in class (JP Book 2, p. 34) as a home write-and-say.</p>
         <p>💻 <b>Online unit trainer: <a href="https://speakandsmile.ru/gmf1/u1.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u1.html</a></b> — Practice + Booster for Unit 1 (lesson vocabulary &amp; grammar), 5–7 min. Teacher sends the link to parents via BigBen.</p></td>
-        <td class="mat">Activity Book p. 10–11 · unit trainer u1.html</td>
+        <td class="mat">Activity Book p. 10–11 · JP Book 2 p. 34 (extension) · unit trainer u1.html</td>
       </tr>
 
     </tbody>
