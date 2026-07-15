@@ -1,0 +1,323 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 5 · Lesson 2 — Grammar: Can you see a…? Yes, I can. / No, I can't. (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 5 “Fun on the farm” · Lesson 2 — Grammar: Can you see a…? Yes, I can. / No, I can't.</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · Dialogue → controlled drill → freer → production · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 11.01 · Lesson 35</span><span class="chip new">✨ GRAMMAR</span><span class="chip">~12 pupils · pairs + 2 teams</span><span class="chip">Продолжающая line</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>ask if someone can see a farm animal</b> and <b>answer yes / no</b>: “Can you see a (cow)? — Yes, I can. / No, I can't.” (Pupil's Book p. 51 dialogue &amp; Grammar box), and act out the “find Toby the dog” dialogue.</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning</b> — the 10 U5-L1 farm animals + “What is it? — It's a…” and Starter colours — <b>woven straight into today's question</b> (“Can you see a <i>brown</i> cow? — Yes, I can!”); phonics — the split digraph <b>e–e</b> /iː/ “magic-e” (<i>Pete, eve, these, Steve, theme</i>), contrasting L1's <i>ea</i> /iː/; listen for detail (PB p. 51 ex. 2 “Listen and colour the animals they can see”, CD2 41); gently preview <i>can / can't</i> for ability (“Cows can't fly!”) for Lessons 3–4.</li>
+      <li><span class="lb">Personal.</span> Insist on the FULL question (“Can you see a cow?”, not “Cow?”); keep the short answer complete (“Yes, I can.” / “No, I can't.”, not bare “Yes”); <b>every task keeps ALL children responding</b> (own cards / point &amp; say / all pairs at once) — never “2 play, 10 watch”.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>ask “Can you see a (duck)?” about a farm animal;</li>
+        <li>answer “Yes, I can.” / “No, I can't.” and act out the lost-dog dialogue;</li>
+        <li>hear, blend &amp; segment <b>e–e</b> /iː/ magic-e words and tell them from short-vowel words.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">cat</span><span class="w">cow</span><span class="w">bird</span><span class="w">frog</span><span class="w">goat</span><span class="w">horse</span><span class="w">sheep</span><span class="w">duck</span><span class="w">mouse</span><span class="w">chicken</span> <span style="color:var(--muted);font-size:.82rem">(recycled: the 10 farm animals from L1 · colours)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Can you see a (cow)? — Yes, I can. / No, I can't. &nbsp;·&nbsp; Can you see Toby? — No, I can't. &nbsp;·&nbsp; The cat is here. But where's Toby? &nbsp;·&nbsp; preview: Cows can't fly. / Ducks can swim.</div></div>
+      <div class="r"><div class="k">Form</div><div>Can you see + a + noun? → short answer <b>Yes, I can</b> / <b>No, I can't</b> (can't = cannot). Keep the pronoun+verb: not bare “Yes”. Rising tone on the question ↗, falling on the answer ↘.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>weak <b>can</b> /kən/ in the question vs strong <b>can</b> /kæn/ &amp; <b>can't</b> /kɑːnt/ in the answer; linking “Can you” /kænjuː/; make the /t/ in <i>can't</i> clear so it isn't heard as “can”.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly focus: split digraph <b>e–e</b> /iː/ (magic-e) — <i>Pete, eve, these, Steve, theme</i> (recognise → blend → segment) · contrast short-e words (pet, hen, red) · tricky words review: <b>Red list</b> — I · the · he · she · we · me · be · you · your (JP Book 2 p. 35).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Cover the farm picture with your hands: “Can you <i>see</i> the cow?” → no → uncover a bit: “Now? <b>Can you see a cow?</b> → <b>Yes, I can!</b>”</div>
+      <div class="ccq">Point where there is NO pig on the farm: “Can you see a pig?” → <b>“No, I can't!”</b> (shake head) — the answer must have <i>can't</i>, not just “No”.</div>
+      <div class="ccq">e–e: “There's a magic <b>e</b> at the end — it jumps over and makes <b>e</b> say its name: /iː/ — <i>Pete!</i>” (contrast <i>pet → Pete</i>).</div>
+      <div class="ccq" style="margin-bottom:12px"><b style="color:var(--honey-ink)">⭐ Option — ability CCQ:</b> flap arms: “Can a bird fly?” → yes → <span class="en">Birds can fly!</span>; “Can a cow fly?” → no → <span class="en">Cows can't fly!</span> (Primes <i>can/can't</i> for ability, L3–4 — use only if the class is quick today.)</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> the 10 farm animals and “What is it? — It's a…” were met in L1; “Can you see a…? Yes, I can!” was heard in the L1 song <i>On the farm</i>; the single sounds &amp; magic-e from Unit 4 (a-e, i-e, o-e) are known. Pupils are non-/emergent readers → picture grids and audio, not printed text. Carpet routines &amp; pair-work signals known.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>One-word question: “Cow?” instead of “Can you see a cow?”</td><td>Hands-over-eyes rule: no answer from Speaky until the FULL question; back-chain <i>…a cow? → see a cow? → Can you see a cow?</i></td></tr>
+        <tr><td>Bare answer: just “Yes” / “No”</td><td>Two-thumbs drill: 👍 = <span class="en">Yes, I can!</span>, 👎 = <span class="en">No, I can't!</span> — the answer always keeps <i>I can / I can't</i>; model with a big gesture.</td></tr>
+        <tr><td><i>can't</i> heard as <i>can</i> (drops the /t/)</td><td>Over-articulate the /t/: <i>can — can-T!</i>; pair it with a firm head-shake so meaning is never lost; contrast pairs <i>can ↔ can't</i>.</td></tr>
+        <tr><td>e–e read as short e (says /e/ not /iː/)</td><td>“Magic-e makes the vowel say its NAME” — sweep a finger from <i>e</i> to <i>e</i>: <i>P-e-t → Pete</i>; contrast <i>pet ↔ Pete</i> on the board.</td></tr>
+        <tr><td>Guess game: child spots the animal but stays silent / just points</td><td>Rule: “See it → SAY it.” No card counts until <span class="en">Yes, I can!</span> is said; teacher gestures “speak” before giving the point.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+    <span>🎮 = on-screen (projector) interactive</span>
+  </div>
+
+  <div style="background:var(--honey-soft);border-left:3px solid var(--honey);border-radius:7px;padding:8px 11px;font-size:.86rem;margin:0 0 10px">
+    <b style="color:var(--honey-ink)">⏱ Pacing — honest 60 min.</b> This is a full plate, so <b>pick, don't cram</b>. The <b>core</b> = dialogue model (24–33′) + <b>one</b> production game + Listen &amp; colour. <b>Buffers to drop first if you're short:</b> the 2nd guessing round, the can/can't ability preview (53–55′), Timed Pair Share. Better one phrase said well by <b>every</b> child than three stages half-done — never rush the model and the pair practice. <b>Every 🎮 has an offline twin</b> (real cards / a paper fence) — no projector, no problem.
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> On the carpet <span class="sp">🦝 Speaky</span> is peering everywhere, worried: <span class="en">Oh no! I'm at the farm and I've lost my dog, Toby! Can you see him? Can you see Toby?!</span></p>
+          <p><span class="en">Stand up! Warm-up time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the usual opening ritual, everyone dances the commands, finish seated.</p>
+        </td>
+        <td class="mat"><b>Genki «Disco Warm Up»</b> mp3 · Speaky · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Review → into the question</div><div class="zone">carpet, circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle L1 animals — everyone answers.</span> Flash the animal cards fast: <span class="en">What is it?</span> → whole class: <span class="en">It's a cow!</span> (8–10 cards, snappy). Add the animal sound for energy: <span class="en">A cow says…?</span> → <span class="en">Mooo!</span> (<i>oink · baa · quack · cluck · neigh · ribbit</i>). Colours woven in: hold the brown cow — <span class="en">It's a…?</span> → <span class="en">It's a brown cow!</span></p>
+          <p><span class="ph">Point-and-say cards (all react).</span> Deal <b>one animal mini-card per child</b>. You ask: <span class="en">Can you see a duck?</span> → duck-holders <b>hold it up high</b>: <span class="en">Yes, I can!</span>; everyone else shakes heads: <span class="en">No, I can't!</span> 5–6 fast rounds — every child answers every round with 👍/👎.</p>
+          <p><span class="ph">Bridge.</span> <span class="sp">🦝 Speaky</span> is still searching: <span class="en">I still can't find Toby! Help me — teach me the magic question!</span> Today's question: <span class="en">Can you see a…?</span> Signal: <span class="en">Class? — Yes!</span></p>
+          <p style="font-size:.84rem;color:var(--muted);margin:6px 0 0"><b style="color:var(--honey-ink)">⭐ Option — Beat the teacher:</b> flick the animal cards <b>fast</b>; class names each <span class="en">It's a horse!</span> — if they beat you, they win a point vs. Speaky. Quick, then move on.</p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--zone)">◆ Support:</b> for shy namers, keep a picture up while they answer. <b style="color:var(--zone)">▲ Extension:</b> add the colour — <span class="en">It's a white sheep!</span></p>
+        </td>
+        <td class="mat">10 farm-animal flashcards · 1 animal mini-card per pupil · Speaky</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">8–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come to the board — ABC time!</span> Sing the ABC song with actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics — e–e /iː/ (magic-e)</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise — the magic-e jump.</span> Write <b>pet</b>: <span class="en">p-e-t… pet!</span> Now add a magic <b>e</b> at the end → <b>Pete</b>: <span class="en">Watch! Magic-e jumps over the t and touches the middle e — now e says its NAME: /iː/ — Pete!</span> Sweep your finger e→e. More: <i>eve, these, Steve, theme</i>. Children copy, stretching /iː/.</p>
+          <p><span class="ph">Magic-e or short-e? — whole-class show-me (all react).</span> Every child gets <b>two cards: 🪄 (e–e /iː/) and short-e 🔤</b>. Say/show words one by one — <i>Pete · pet · these · hen · eve · red · Steve · net…</i> → <span class="en">Show me!</span> — all hold up 🪄 or 🔤. 8–10 words, fast; nobody just watches.</p>
+          <p><span class="ph">Blend (all together).</span> <span class="en">Push the sounds together: /P/ /iː/ /t/… Pete!</span> Then <i>eve, these, theme</i> — a picture/name card for each. Contrast pairs on the board: <i>pet ↔ Pete</i>.</p>
+          <p><span class="ph">Segment · dictation (everyone writes).</span> <span class="en">Now YOU write. Listen…</span> word once → all write on mini-whiteboards → <span class="en">Show me!</span> → reveal &amp; check together. Focus: <i>Pete, eve, these</i>. Finish with tricky words review by sight — flash, chorus, air-write: <span class="en">I · the · he · she · we · me · be · you · your</span> (Red list).</p>
+          <div style="border:2px solid var(--p);border-radius:10px;background:var(--honey-soft);padding:8px 10px;margin:8px 0">
+            <div style="font-weight:800;color:var(--p);font-size:.9rem">🎮 Интерактив (проектор): Magic-e Sorter <span style="color:var(--good)">✅ ГОТОВ</span> <span style="color:var(--muted);font-weight:600;font-size:.82rem">(reskin of the Unit 1 “Flashcards” engine)</span></div>
+            <div style="font-size:.85rem;margin-top:3px"><b>Screen:</b> a word flips up one at a time (<i>Pete · pet · these · hen · eve · red · Steve · net</i>). <b>Mechanic:</b> tap the word to hear it, then tap 🪄 (magic-e /iː/) or 🔤 (short-e) to sort it; a green tick / red shake shows if right; on 🪄 words the final <b>e</b> lights up and “jumps”. <b>Pupils:</b> hold up their own 🪄/🔤 first, then a helper taps to check. <b>Teacher:</b> read the word, wait for hands, then reveal. <b>Reuse:</b> same engine as L1 Flashcards — just swap the card set. <b style="color:var(--zone)">Offline:</b> two paper cards 🪄/🔤 per child + a word list.</div>
+          </div>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--zone)">◆ Support:</b> in dictation, give the sound-buttons (<i>P-e-t-e</i>) — they only fill letters. <b style="color:var(--zone)">▲ Extension:</b> fast writers add the magic-e themselves: <i>pet → Pete</i>.</p>
+        </td>
+        <td class="mat">JP Book 2 p. 35 · e–e word/picture cards · 🪄/🔤 card pair per pupil · mini-whiteboards + pens · <b>🎮 Magic-e Sorter</b> (board)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Back to Speaky's farm! Let's sing!</span> Sing <span class="game">Genki-style song: «On the farm»</span> (GMF1 U5 song, CD2 37) pointing at animals on the farm poster: <span class="en">Can you see a duck? Can you see a cat? Yes, I can! Yes, I can!</span> — the song IS today's grammar; sing the questions with a big rising tone ↗. (By ear + pictures — we don't read the text.)</p></td>
+        <td class="mat"><b>«On the farm»</b> CD2 37 · farm poster · animal cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–33′</td>
+        <td class="stage"><div class="nm">Presentation · Dialogue</div><div class="zone">carpet → pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Model with Speaky.</span> <span class="sp">🦝 Speaky</span> hides a toy dog behind the farm poster. Teacher peers around: <span class="en">Can you see Toby?</span> — look, no dog — <span class="en">No, I can't!</span> — spot the cat — <span class="en">Can you see the black cat?</span> — <span class="en">Yes, I can! The cat is here. But where's Toby?</span></p>
+          <p><span class="ph">Listen &amp; repeat — PB p. 51 ex. 1 (CD2 40).</span> Books open / picture on screen: the farm-gate scene, the children looking for Toby. Play the dialogue; children repeat line by line. Drill: rising tone on <span class="en">Can you see a cow? ↗</span>, thumbs on <span class="en">Yes, I can! ↘</span> / <span class="en">No, I can't! ↘</span>. Back-chain the question. Point at the Grammar box: <span class="en">Can you see Toby? Yes, I can. No, I can't.</span> — this is our question of the day.</p>
+          <div style="border:2px solid var(--p);border-radius:10px;background:var(--honey-soft);padding:8px 10px;margin:8px 0">
+            <div style="font-weight:800;color:var(--p);font-size:.9rem">🎮 Интерактив (проектор): Can you see a…? Spinner <span style="color:var(--good)">✅ ГОТОВ</span> <span style="color:var(--muted);font-weight:600;font-size:.82rem">(reskin of the “What's this? spinner” engine)</span></div>
+            <div style="font-size:.85rem;margin-top:3px"><b>Screen:</b> a wheel of the 10 farm animals sits next to a foggy farm. <b>Mechanic:</b> tap to spin → it lands on one animal; tap the farm → the fog clears and the animal either <b>appears</b> (“ta-da!”) or is <b>NOT there</b> (empty spot). <b>Pupils:</b> BEFORE the reveal the whole class asks together <span class="en">Can you see a (goat)?</span> ↗ → on reveal <span class="en">Yes, I can!</span> ↘ or <span class="en">No, I can't!</span> ↘. <b>Teacher:</b> spin, hold the reveal until you hear the FULL question, then tap. <b style="color:var(--honey-ink)">🧠 Predict:</b> <span class="en">Will it be there? Thumbs up or down first!</span> — children vote before the fog clears. <b style="color:var(--zone)">Offline:</b> spin a paper arrow on an animal circle; a helper hides/shows the matching card behind a paper fence.</div>
+          </div>
+          <p><span class="ph">Act out (ALL pairs at once).</span> Pairs on the carpet; each pair gets a small farm picture with some animals on it. A points somewhere: <span class="en">Can you see a […]?</span> B checks the picture: <span class="en">Yes, I can!</span> / <span class="en">No, I can't!</span> Swap the picture, change roles, repeat. <span class="ph">ICQ:</span> <span class="en">Do you say “cow” or “Can you see a cow”?</span> (→ the full question!)</p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--zone)">◆ Support:</b> let the weaker child be B (yes/no with 👍/👎) first, then swap. <b style="color:var(--zone)">▲ Extension:</b> A adds a colour — <span class="en">Can you see a grey horse? — Yes, I can!</span></p>
+        </td>
+        <td class="mat">PB p. 51 ex. 1 · CD2 40 · Speaky + toy dog · 1 farm picture card per pair · <b>🎮 Can you see a…? Spinner</b> (board)</td>
+      </tr>
+
+      <tr>
+        <td class="min">33–41′</td>
+        <td class="stage"><div class="nm">▶ Peek-a-farm: Can you see a…?</div><div class="zone">carpet / board</div></td>
+        <td class="flow">
+          <div style="border:2px solid var(--p);border-radius:10px;background:var(--honey-soft);padding:8px 10px;margin:0 0 8px">
+            <div style="font-weight:800;color:var(--p);font-size:.9rem">🎮 Интерактив (проектор): Find it! — the farmyard <span style="color:var(--good)">✅ ГОТОВ</span> <span style="color:var(--muted);font-weight:600;font-size:.82rem">(reuse of the Unit 1 “Find it!” engine)</span></div>
+            <div style="font-size:.85rem;margin-top:3px"><b>Screen:</b> a busy farmyard with animals tucked around it (behind the barn, in the pond, on the hill). <b>Mechanic:</b> tap Speaky → he asks; children scan &amp; point on the picture; tap an animal → it glows + “Yes, I can!” pops up; tap an empty spot → “No, I can't!”. <b>Pupils:</b> <span class="en">Can you see a frog? — Yes, I can!</span> (2–3 rounds, to MODEL before the card game). <b>Teacher:</b> use this as the model, then move to real cards. <b style="color:var(--zone)">Offline:</b> a big farm poster + Blu-Tack animal cards.</div>
+          </div>
+          <p><span class="game">▶ Peek-a-farm — “Can you see a…?”</span> (Игротека “Угадай по кусочку”, farm reskin — <b>the whole class reacts every reveal</b>, nobody sits out). Hold an animal card behind a paper “fence”; slide it up <b>slowly</b>, showing just a bit — an ear, a tail. Class shouts the guess-question: <span class="en">Can you see a cow? — No, I can't! … Can you see a goat? — Yes, I can!</span> Rule — <b>see it → SAY it:</b> every child holds up 👍/👎 AND says the answer. Reveal fully to check.</p>
+          <p><span class="ph">Kagan — Numbered Heads energy:</span> before the full reveal, table teams whisper their guess; you call a number, that child says the whole question for the team. Keeps every table thinking, not just the fastest hand. Reset if loud: <span class="en">Freeze!</span></p>
+          <p>Run <b>6–8 cards</b>; a 2nd round <b>only if time allows</b> (buffer — don't rush the pair game for it).</p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--zone)">◆ Support:</b> reveal a bigger piece for a slower child so they get the win too. <b style="color:var(--zone)">▲ Extension:</b> guessers add a colour — <span class="en">Can you see a brown cow?</span></p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--honey-ink)">⭐ Swap (rotation):</b> if you ran a peek game last lesson, swap in <b>Fly-swatter listening</b> — 4 animal cards on the board; you say <span class="en">Can you see a duck?</span>, two racers swat the duck while everyone else holds up their own card &amp; shouts <span class="en">Yes, I can!</span> — fast ROTATION so all get a turn.</p>
+        </td>
+        <td class="mat">8 animal cards + a paper “fence” · Speaky · <span class="game">▶ Угадай по кусочку / Peek</span> · <b>🎮 Find it!</b> (board) · alt: 2 fly-swatters</td>
+      </tr>
+
+      <tr>
+        <td class="min">41–45′</td>
+        <td class="stage"><div class="nm">Listen &amp; colour</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">To your tables — listening detectives!</span> <span class="ph">PB p. 51 ex. 2 (CD2 41).</span> Six outline animals (bird, sheep, frog, cow, duck, horse). Listen to the mini-dialogues and <b>colour only the animals they CAN see</b>. Model item 1 together; then <b>everyone colours</b>; check with a neighbour, then chorally: <span class="en">Can you see a bird? — Yes, I can! Colour the bird!</span></p>
+          <p>Say each coloured animal once: <span class="en">It's a frog! It's a duck!</span> <span class="ph">Countdown:</span> <span class="en">5… 4… 3… 2… 1… pencils down.</span></p>
+        </td>
+        <td class="mat">PB p. 51 ex. 2 · CD2 41 · colouring pencils</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">45–46′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at desks</div></td>
+        <td class="flow"><p><span class="en">Everybody up! Speaky says…</span> 45-sec TPR animal moves: <span class="en">Speaky says fly like a bird! · Speaky says hop like a frog! · Gallop like a horse!</span> (no “Speaky says” → freeze!). All move, all name: <span class="en">It's a bird!</span> Sit down ready for the pair game.</p></td>
+        <td class="mat">— (movement only)</td>
+      </tr>
+
+      <tr>
+        <td class="min">46–53′</td>
+        <td class="stage"><div class="nm">▶ Pair “Farm detectives”</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Farm Detectives</span> (controlled pair drill — <b>every pair plays at once</b>, nobody waits). Each child has their OWN secret farm card (4–5 animals on it, held so the partner can't see).</p>
+          <p><span class="ph">Model on the board first.</span> A asks about their partner's hidden farm: <span class="en">Can you see a sheep?</span> B looks at their own card: if it's there — <span class="en">Yes, I can!</span>; if not — <span class="en">No, I can't!</span> Then swap roles. Keep the FULL question every time.</p>
+          <p><span class="ph">Kagan — Fan-N-Pick / RallyRobin:</span> partners take strict turns (ask ↔ answer ↔ swap), so both speak equally; partner = checker, praises the full question: <span class="en">Good question! Yes, I can!</span> Teacher monitors, feeds fast finishers colour: <span class="en">Can you see a grey horse? — Yes, I can!</span></p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--honey-ink)">🧠 Create — draw your own farm:</b> children <b>draw one animal</b> of their choice in a box (as in AB p. 49 ex. 2) and quiz their partner about it: <span class="en">Can you see a (rabbit)? — Yes, I can!</span> Their animal, their card.</p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--zone)">◆ Support:</b> give a picture-card menu on the desk so they always have an animal to ask about. <b style="color:var(--zone)">▲ Extension / fast finishers:</b> add the ability line — <span class="en">Can it fly? — Yes! Birds can fly!</span></p>
+        </td>
+        <td class="mat">1 secret farm card per pupil (or draw-your-own) · picture-card menu · <span class="game">▶ Fan-N-Pick / RallyRobin</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">53–55′</td>
+        <td class="stage"><div class="nm">🎵 can/can't ability preview <span style="font-size:.7rem;color:var(--muted)">(buffer)</span></div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span style="color:var(--muted);font-weight:700;font-size:.82rem">Optional buffer — do this only if you're on time.</span> Back to the carpet. Hold up animals and act out abilities: <span class="en">A bird — can it fly? Yes! Birds can fly! …A cow — can it fly? No! Cows can't fly!</span> Children flap 🕊 for <i>can</i>, cross arms ✗ for <i>can't</i>. (A taste of Lesson 3–4 — keep it light, no drilling.)</p>
+          <div style="border:2px solid var(--p);border-radius:10px;background:var(--honey-soft);padding:8px 10px;margin:8px 0 0">
+            <div style="font-weight:800;color:var(--p);font-size:.9rem">🎮 Интерактив (проектор): Can it fly? <span style="color:var(--honey-ink)">🔨 СОБРАТЬ</span> <span style="color:var(--muted);font-weight:600;font-size:.82rem">(new — small yes/no reveal engine)</span></div>
+            <div style="font-size:.85rem;margin-top:3px"><b>Screen:</b> an animal + an action icon (fly / swim / climb). <b>Mechanic:</b> tap → the animal tries it; ✔ “can!” or ✘ “can't!”. <b>Pupils:</b> <span class="en">Can it fly? — Cows can't fly!</span> <b style="color:var(--honey-ink)">🧠 Predict:</b> before the tap — <span class="en">Guess! Can it? Thumbs up or down!</span> — children vote, THEN reveal. <b>To build:</b> 1 animal sprite + 3 action icons, tap-to-try, ✔/✘ highlight; reuse the spinner's reveal animation. <b style="color:var(--zone)">Offline:</b> animal card + mime the action, class votes 👍/👎.</div>
+          </div>
+        </td>
+        <td class="mat">Speaky · animal cards · <b>🎮 Can it fly?</b> (board, to build)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Reflection + Closing</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p>“I can…” badge: <span class="en">Colour your badge — I can ask “Can you see a…?” and answer “Yes, I can / No, I can't”!</span></p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--honey-ink)">⭐ Option — Timed Pair Share:</b> if you have a spare minute, pairs take 15 sec each — <span class="en">Ask your partner: “Can you see a (…)?”</span> — everyone says the question once more before goodbye.</p>
+          <p><span class="en">Well done today, superstars! Let's sing Goodbye. Your homework is in your Activity Book and on the app!</span> Sing Goodbye.</p>
+        </td>
+        <td class="mat">“I can…” badges · <b>Goodbye song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. You hold an animal card half-hidden behind your back: each child asks YOU — <span class="en">Can you see a (cow)?</span> — you reveal / hide it: <span class="en">Yes, I can! / No, I can't!</span> A correct full question opens the door: <span class="en">Fantastic question! Take care! Goodbye!</span></p></td>
+        <td class="mat">animal card · folder reward stickers 🦝</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow">
+          <p><b>Activity Book — p. 49, exercises 1–2 (Lesson 2 Grammar):</b> ① <i>Read, follow and circle</i> — follow the tangled maze line from each question (“Can you see a goat? / duck? / sheep? / frog?”) to its animal and circle <b>Yes, I can.</b> or <b>No, I can't.</b> · ② <i>Talk Partners: write a conversation, draw an animal, act out</i> — fill the gaps (“Can you see a ___? — No, I can't. Can you ___? — Yes, I ___.”), draw an animal in the box, and act it out at home. + app: self-checking micro-set on Can you see a…? (5–7 min).</p>
+          <p style="font-size:.84rem;color:var(--muted);margin:2px 0 0"><b style="color:var(--zone)">◆/▲ Differentiable:</b> ex. 1 (follow &amp; circle) is for everyone; in ex. 2 emergent writers copy ONE animal word into the gap / just draw &amp; act it out, while stronger writers fill both gaps and add a colour — <span class="en">Can you see a brown cow?</span></p>
+          <p>💻 Онлайн-тренажёр юнита: <a href="https://speakandsmile.ru/gmf1/u5.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u5.html</a> — Practice + Booster по Unit 5 (лексика/грамматика урока).</p>
+        </td>
+        <td class="mat">Activity Book p. 49 · app (homework link) · тренажёр u5.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 5 · Lesson 2 (Grammar: Can you see a…? Yes, I can. / No, I can't.) — lesson plan &amp; staging</span>
+    <span>Language verified against Pupil's Book p. 51 (CD2 40/41); homework against Activity Book p. 49.</span>
+  </div>
+</div>

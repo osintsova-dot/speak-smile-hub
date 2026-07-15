@@ -1,0 +1,292 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 5 · Lesson 3 — Story: Animal magic (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 5 “Fun on the farm” · Lesson 3 — Story: Animal magic</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · Story: listen → follow → act out (drama) · carpet + desks · продолжающая линия</div>
+    <div class="meta"><span class="chip">Week 18–24.01 · Lesson 36</span><span class="chip new">✨ STORY</span><span class="chip">~12 pupils · small groups for drama</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>follow and understand the story “Animal magic”</b> (Pupil's Book pp. 52–53, CD2 42) and <b>act it out</b> using key story language: “Can you see the cat? — Yes, I can. / No, I can't.”, “Is it a cow? — Yes, it is. But cows can't fly!”, “This sheep can climb trees.”, “Bad luck, Toby!”.</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning</b> — farm animals + “Can you see a…?” (U5 L1–L2) and <b>“Is it a…? — Yes, it is.”</b> (U2 toys) and <b>“Do you like…?”</b> (U4 food) plus colours (Starter) — <b>woven straight into the story work</b> (a magic farm where animals do impossible things). Meet <i>can / can't</i> for ability (fly · swim · climb) receptively before the full focus in L4. Phonics — light <b>recognise &amp; blend the /ie/ sound</b> (JP Book 2 p. 19): <i>pie · tie · lie · die</i> + quick tricky-word review. Values: wash your hands after you touch animals.</li>
+      <li><span class="lb">Personal.</span> Keep story listening active (gesture responses, prediction); manage drama noise with Freeze; <b>every child acts in a small group at the same time</b> — no “2 on stage, 10 watching” until the final 30-sec showcase.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>show they understand the story (order the frames, True/False thumbs);</li>
+        <li>say the key lines in role: “Is it a cow? — Yes, it is. But cows can't fly!”, “Can you see the cat? — Yes, I can!”;</li>
+        <li>recognise &amp; blend the /ie/ sound (<i>pie · tie · lie</i>);</li>
+        <li>invent one magic animal — “My pig can fly!” (predict + create);</li>
+        <li>say why we wash our hands after touching animals (values).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">cow</span><span class="w">horse</span><span class="w">sheep</span><span class="w">goat</span><span class="w">duck</span><span class="w">cat</span><span class="w">dog</span><span class="w">frog</span><span class="w">mouse</span><span class="w">fly</span><span class="w">swim</span><span class="w">climb</span> <span style="color:var(--muted);font-size:.82rem">(recycled: farm animals U5 L1–L2 · colours · Toby the dog + the magic bike · story words <i>magic · Shoo! · Amazing!</i>)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Can you see the (cat)? — Yes, I can. / No, I can't. · Is it a (cow)? — Yes, it is. But cows can't fly! · This sheep can climb trees. · Dogs can't climb trees. Bad luck, Toby!</div></div>
+      <div class="r"><div class="k">Form</div><div><b>can / can't</b> + base verb (ability): (Cows) <b>can't</b> fly. · (This sheep) <b>can</b> climb. — receptive/echoed here, full focus in L4. Question echo: <b>Can</b> you see…? → Yes, I <b>can</b>. Recycled: Is it a…? — Yes, it <b>is</b>.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>weak <b>can</b> /kən/ in statements vs. strong <b>can't</b> /kɑːnt/ (stress the “t”); connected <b>Is it</b> /ɪzɪt/; sentence stress: <i>Cows CAN'T FLY.</i></div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly (JP Book 2 p. 19): <b>recognise &amp; blend the /ie/ sound</b> — <i>pie · tie · lie · die</i> (light, story lesson) · quick tricky-word sight review.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Frame 1: “Can Toby see the cat?” → <b>“Yes!”</b> “Is the cat happy?” → <b>“No — Shoo! Stop, Toby!”</b></div>
+      <div class="ccq">Frame 3: “Look — a cow in the sky! Can cows REALLY fly?” → <b>“No! Cows can't fly.”</b> “So why can it fly?” → <b>“It's MAGIC!”</b></div>
+      <div class="ccq" style="margin-bottom:12px">Frame 8: “The cat is up the tree. Can Toby climb the tree?” → <b>“No — dogs can't climb trees!”</b> “So the cat is…” → <b>“safe / happy!”</b></div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> farm animals + <i>Can you see a…?</i> known from U5 L1–L2; <i>Is it a…? — Yes, it is.</i> from U2; colours from the Starter; children know Toby the dog &amp; the magic bike from earlier units. Emergent readers → they FOLLOW the pictures while listening; the teacher points, children don't read the speech bubbles alone.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>New words block the story (<i>magic · Shoo! · Amazing!</i>)</td><td>Pre-teach 3 things before listening with gesture: magic = sparkle fingers + “ooooh”, Shoo! = shooing hands, Amazing! = jaw-drop + thumbs up.</td></tr>
+        <tr><td>Children call answers over the audio</td><td>“Listening hands” rule — hands cupped behind ears while the CD plays; talk only when it stops.</td></tr>
+        <tr><td><i>can</i> vs. <i>can't</i> sound the same to them</td><td>One gesture each: <b>can</b> = thumbs up “yes!”, <b>can't</b> = arms crossed “X, no!”; over-stress the <i>-t</i>. “Show me!” drill before the story.</td></tr>
+        <tr><td>Drama turns to chaos (running around)</td><td>Animal moves are ON THE SPOT (flying cow = flap arms in place); roles fixed by colour badges; <span class="call">“Freeze!”</span> resets.</td></tr>
+        <tr><td>Frame cards ordered by one child in the pair</td><td>Rule “one card each turn, take turns” (RallyRobin with cards); praise pairs where both hands work.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset (essential in drama).</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Come in!</span> On the carpet <span class="sp">🦝 Speaky</span> is peeking behind a farm fence, wide-eyed: <span class="en">Wow, friends… on THIS farm a cow can FLY! Is that magic?!</span> (children gasp — that's the hook).</p>
+          <p><span class="en">Stand up! Warm-up time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the opening ritual, finish seated on the carpet.</p>
+        </td>
+        <td class="mat"><b>Genki «Disco Warm Up»</b> mp3 · Speaky · carpet</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">3–5′</td>
+        <td class="stage"><div class="nm">🎵 Bridge — farm recall</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Retrieve U5 animals — energetic.</span> <span class="en">The animals are awake! Make the noise!</span> Sing <span class="game">Genki «Animal Voices» (18)</span> — cow → <span class="en">Moo!</span> · pig → <span class="en">Oink!</span> · sheep → <span class="en">Baa!</span> · duck → <span class="en">Quack!</span> with big animal actions. Fast retrieval of the farm animals + wakes everyone up.</p></td>
+        <td class="mat"><b>Genki «Animal Voices» (18)</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">5–13′</td>
+        <td class="stage"><div class="nm">📺 Phonics — the /ie/ sound (light)</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise.</span> New Jolly sound <b>/ie/</b> with its action (point a finger up as if to say “I know!”): <span class="en">ie — ie — ie!</span> <span class="en">Can you hear /ie/?</span> Say words, children do the action ONLY when they hear it: <i>pie · sit · tie · dog · lie</i>. Snappy, all react.</p>
+          <p><span class="ph">Blend — “Robot Speaky” (all respond).</span> <span class="sp">🦝 Speaky</span> robot-voice, one sound at a time: <span class="en">/p/ /ie/…</span> class blends &amp; shouts <span class="en">pie!</span> then points to the picture. Do <i>pie · tie · lie · die</i> — a picture appears each time for meaning.</p>
+          <p><span class="ph">Read — thumbs check (all react).</span> Flash the /ie/ word cards; class blends chorally, then <b>thumbs up = real word, thumbs down = silly word</b> (mix in <i>zie · lot</i>). Every child shows a thumb. Then flash 3–4 tricky sight words — chorus + air-write. <b>Keep it light — this is the fullest lesson of the unit, the story is the star.</b></p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> keep the picture beside the word; ask for just the first sound. <b style="color:var(--p)">Extension:</b> fast finishers sky-write <i>pie · tie</i> and add one more /ie/ word they know.</p>
+        </td>
+        <td class="mat">JP Book 2 p. 19 · /ie/ word/picture cards · tricky-word cards · Speaky (robot voice)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">13–15′</td>
+        <td class="stage"><div class="nm">🎵 Bridge — prime the structure</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — can YOU see the animals?</span> Sing the unit song <span class="game">«On the farm» (CD2 37)</span> — it rehearses the exact story line: <span class="en">Can you see a duck? — Yes, I can! The duck is yellow…</span> Point to animals on the big farm picture as you sing → <span class="en">And now — the story!</span></p></td>
+        <td class="mat"><b>«On the farm» (CD2 37)</b> mp3 · big farm picture</td>
+      </tr>
+
+      <tr>
+        <td class="min">15–26′</td>
+        <td class="stage"><div class="nm">📺 Story — listen &amp; follow</div><div class="zone">carpet, books/screen</div></td>
+        <td class="flow">
+          <p><span class="ph">Before you read (PB p. 52).</span> Big story picture on screen / books open. Title: <span class="en">“Animal magic”.</span> <span class="en">What animals can you see in the story?</span> — pairs point &amp; name 15 sec, then chorus a few. Pre-teach with gesture: <span class="en">magic</span> (sparkle fingers) · <span class="en">Shoo!</span> (shooing hands) · <span class="en">Amazing!</span> (jaw drop + thumbs up).</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Find it! — “What's on the magic farm?” <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U1 <b>“Find it!”</b> engine on the big story picture. <b>· How:</b> Speaky asks, a child taps the animal; it lights up. <b>· Pupils:</b> whole class points in their book / calls it — <span class="en">A cow! A goat! A sheep!</span> then answer <span class="en">Can you see the cat? — Yes, I can!</span> <b>· Teacher:</b> <span class="sp">🦝</span> <span class="en">Where's the goat? Point!</span> — 4–5 animals, quick.<br><span style="color:var(--muted)">Оффлайн-резерв: точечный поиск по большой картинке в PB p. 52 + пальцы всех детей.</span></div>
+          </div>
+          <p><span class="ph">Predict (thinking) — before we listen.</span> <span class="en">It's a MAGIC farm! Can a cow fly here? Can a goat swim?</span> Thumbs guess: <b>can (thumbs up)</b> vs. <b>can't (arms crossed)</b>. <span class="en">Let's listen and check your guess!</span></p>
+          <p><span class="ph">Listen 1 — global (CD2 42).</span> “Listening hands” behind ears. Teacher points frame by frame; children follow the pictures. Gist check: <span class="en">Is it a normal farm or a MAGIC farm? Show me!</span> (thumbs) <span class="en">Was your guess right — can the cow fly?</span></p>
+          <p><span class="ph">Detail check — True or False? (thumbs up / down, all react) — assessment.</span> Say a sentence, class shows a thumb: <span class="en">Toby is a cat.</span> (👎 — <span class="en">He's a dog!</span>) · <span class="en">The cow can fly.</span> (👍 — <span class="en">It's magic!</span>) · <span class="en">Goats can swim in the story.</span> (👍) · <span class="en">Dogs can climb trees.</span> (👎 — <span class="en">Dogs can't climb trees!</span>) · <span class="en">The cat is sad at the end.</span> (👎 — <span class="en">happy!</span>). Re-point the frame to fix any wrong thumb.</p>
+          <p><span class="ph">Listen 2 — active (all respond).</span> Play again; children do the story gestures at the right moments: <b>Shoo!</b> (frame 2) · <b>flying cow</b> flap arms (frame 3) · <b>swimming goat</b> (frame 4) · <b>climbing sheep</b> (frame 5) · <b>Ring! Ring!</b> the magic bell (frame 6) · point <b>in the tree</b> (frame 7) · <b>Bad luck, Toby!</b> pat-pat (frame 8). CCQs between frames (see box above). At frame 3 stop: <span class="en">Is it a cow? — Yes, it is. But cows can't…? — FLY!</span></p>
+        </td>
+        <td class="mat">PB pp. 52–53 · CD2 42 / animated story (Navio) · <b>“Find it!”</b> (board) · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">26–27′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at carpet</div></td>
+        <td class="flow"><p><span class="en">Everybody up — magic farm!</span> Call an animal + move, children do it ON THE SPOT: <span class="en">The cow can FLY!</span> (flap arms) · <span class="en">The goat can SWIM!</span> (swim arms) · <span class="en">The sheep can CLIMB!</span> (climb) · <span class="en">The dog can't climb — bad luck, Toby!</span> (arms crossed “X”). Two fast rounds → <span class="en">Freeze!</span> → sit at desks.</p></td>
+        <td class="mat">— (voice + gestures)</td>
+      </tr>
+
+      <tr>
+        <td class="min">27–35′</td>
+        <td class="stage"><div class="nm">▶ Build the story</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Story Builders</span> (Mido №54 “Reconstruction”, picture re-skin for non-readers — <b>all pairs work at once</b>). Each pair gets 8 mini frame-cards of “Animal magic”, shuffled.</p>
+          <p><span class="ph">Order it.</span> <span class="en">Put the story in order — one card each, take turns!</span> (RallyRobin with cards: A places one, B places the next.) Countdown 2 min. <span class="ph">ICQ:</span> <span class="en">Do we grab all the cards or take turns?</span> (→ take turns!)</p>
+          <p><span class="ph">Check with the audio.</span> Replay CD2 42: pairs touch each card as they hear it — self-check, fix the order. Then choral retell, teacher holds up big frames one by one, class says the line: <span class="en">Here's Toby! · The cat is on the magic bike. Shoo! · Is it a cow? Cows can't fly! · Is it a goat? Goats can't swim! · This sheep can climb trees! · Stop, magic, stop! · The cat is in the tree. · Dogs can't climb trees. Bad luck, Toby!</span></p>
+          <div style="background:var(--honey-soft);border:1px solid var(--line);border-left:4px solid var(--p);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Animal-Magic Story-Sequence 1–5 <span style="background:var(--p);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">🔨 СОБРАТЬ</span></div>
+            <div><b>Screen:</b> the 5 key story frames (Toby sees the cat → cat on the magic bike → flying cow → swimming goat → cat safe in the tree, “Bad luck, Toby!”) appear <b>shuffled</b> in a row, each with an empty number badge 1–5. <b>· How:</b> tap two frames to swap them (or drag); a “Check” button lights correct frames green + a cheer plays when the order is right. <b>· Pupils:</b> the class calls the order — <span class="en">Number one — here's Toby! Number two — the magic bike!</span> — and gesture each frame. <b>· Teacher:</b> take votes (<span class="en">Which is first? Hands up!</span>), tap as they decide, then replay CD2 42 to confirm. Mirrors the paired frame-cards on screen for a whole-class check.<br><span style="color:var(--muted)">Оффлайн-резерв: 5 больших кадров на доске магнитами — класс голосует и переставляет.</span></div>
+          </div>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> hand that pair only <b>5</b> clearest frames (not 8) and number the first one for them. <b style="color:var(--p)">Extension:</b> after ordering, ask them to say one whole line for each frame from memory before the audio check.</p>
+        </td>
+        <td class="mat">8 story frame mini-cards per pair (print from PB pp. 52–53) · 5-frame set for support pairs · CD2 42 · big frame cards for the board</td>
+      </tr>
+
+      <tr>
+        <td class="min">35–45′</td>
+        <td class="stage"><div class="nm">Act out — drama</div><div class="zone">carpet, groups</div></td>
+        <td class="flow">
+          <p><span class="ph">Roles.</span> Groups of 3–4: <b>Toby the dog</b> (blue badge, “Woof!”) · <b>the cat</b> (black badge, rings the magic bell “Ring! Ring!”) · <b>2 children</b> (red + green — Molly &amp; Jake, they spot the animals). Model once with a strong group.</p>
+          <p><span class="ph">All groups act at the same time.</span> Narrate the story slowly, frame by frame; every group plays it in their own spot (flying-cow flap ON THE SPOT!): <span class="en">Here's Toby! Oh no, he can see the cat! Shoo, Toby! … Suddenly — look! Is it a cow? Yes, it is. But cows can't fly! It's magic! And look — a goat! Goats can't swim! Amazing! Look at the sheep — this sheep can climb trees! Ring the bell, stop the magic! Can you see the cat now? Yes — it's in the tree! Dogs can't climb trees. Bad luck, Toby!</span></p>
+          <p><span class="ph">Create (thinking) — make it yours.</span> Before round 2: <span class="en">The magic farm makes ONE more animal do something silly — you choose! What animal? What can it do?</span> Each group adds a line with their own magic animal: <span class="en">Is it a pig? Yes, it is. But pigs can't fly! … This pig CAN fly!</span> (support: point to an animal card + do the action; extension: invent the whole exchange). This feeds tonight's homework (draw a magic animal).</p>
+          <p>Swap roles, run it again — <b>keep it to 2 rounds</b> (don't let the drama over-run; <span class="en">Freeze!</span> the moment energy tips). Volunteers: ONE group shows 30 sec for the class — big applause. <span class="ph">Values (PB p. 53 ex. 2):</span> <span class="en">We touched the animals — now what do we do?</span> → <span class="en">Wash your hands!</span></p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> quieter children get the animal role (mime + one sound); a line card in hand. <b style="color:var(--p)">Extension:</b> confident children play Molly / Jake and lead the “Is it a…? Cows can't…!” exchange.</p>
+        </td>
+        <td class="mat">role badges (dog/cat/×2 children) · animal cards · PB p. 53 (values)</td>
+      </tr>
+
+      <tr>
+        <td class="min">45–52′</td>
+        <td class="stage"><div class="nm">▶ Magic farm — can or can't?</div><div class="zone">desks, all at once</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Can or Can't? (targeted settler — <i>can/can't</i> + animals; <b>every child reacts every round</b>).</span> Each child has a small set of animal cards. <span class="sp">🦝 Speaky</span> says a sentence; class shows <b>thumbs up = can (true)</b> / <b>arms crossed = can't (silly)</b> AND holds up the matching animal card.</p>
+          <p><span class="en">Ducks can swim!</span> (👍 hold up duck) · <span class="en">Cows can fly!</span> (❌ arms crossed — <span class="en">No! Cows can't fly… only on the MAGIC farm!</span>) · <span class="en">Frogs can jump!</span> (👍) · <span class="en">Fish can climb trees!</span> (❌) · <span class="en">Horses can run!</span> (👍). 6–7 sentences, instant show-me check each time — every child answers with body + card, nobody hides.</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Flashcards — animals &amp; actions (model &amp; check) <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U1 <b>“Flashcards”</b> engine — an animal card + an action (fly / swim / climb / run). <b>· How:</b> tap to reveal, Speaky says the sentence, one child taps ✅/❌. <b>· Pupils:</b> first show thumbs + card at their desk, then one child mirrors it on screen — class checks: <span class="en">Yes! Ducks can swim!</span> <b>· Teacher:</b> use it to model round 1, then just for the show-me check so every child stays on their own cards.<br><span style="color:var(--muted)">Оффлайн-резерв: обычные флешкарты животных + учитель называет — все реагируют телом + карточкой.</span></div>
+          </div>
+        </td>
+        <td class="mat">animal card set per pupil · <b>“Flashcards”</b> (board, model/check) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–57′</td>
+        <td class="stage"><div class="nm">Reflection + Closing</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ RallyRobin retell (pairs, take turns).</span> Big frames stay on the board in order. <span class="en">Tell the story to your partner — one line each, take turns!</span> A: <span class="en">Here's Toby!</span> → B: <span class="en">Shoo, cat!</span> → A: <span class="en">Is it a cow? Cows can't fly!</span> … (support: just point &amp; say one word per frame; extension: full lines to the end).</p>
+          <p>Then: <span class="en">Which magic animal do you like — the flying cow or the swimming goat? Point and tell your partner!</span> (20 sec each). “I can…” badge: <span class="en">Colour your badge — I can act out the story!</span></p>
+          <p><span class="en">Well done, superstars! Let's sing Goodbye. Your homework is in your Activity Book and on the app!</span> Sing Goodbye.</p>
+        </td>
+        <td class="mat">“I can…” badges · <b>Goodbye song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Show each child one frame card: say any line from it (<span class="en">Cows can't fly!</span>) — or answer <span class="en">Can a cow fly on the magic farm — yes or no?</span> Said it → out: <span class="en">Well done! Take care! Goodbye!</span></p></td>
+        <td class="mat">story frame cards · folder reward stickers 🦝</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow">
+          <p><b>Activity Book — p. 50, exercises 1–2 (Lesson 3 Story · After you read):</b> ① <i>Remember the story. Read and match</i> — match the four story lines to the picture (<i>Dogs can't climb trees · But goats can't swim · Look at the sheep! · Look. Is it a cow?</i>) · ② <i>Draw a magic farm animal. Write and say</i> — draw your own magic animal &amp; complete <i>“My ___ can ___.”</i> (prompts: fly · swim · climb). + app: story words micro-set (<i>tractor · field · barn · muddy · collect · harvest</i>) 5–7 min.</p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:2px"><b style="color:var(--good)">Support (core):</b> ex. 1 (match the lines) + draw in ex. 2 — the writing is optional, trace/copy if hard. <b style="color:var(--p)">Extension (challenge):</b> after ex. 2, tell a grown-up the story with the pictures — one line per frame.</p>
+          <p>💻 Онлайн-тренажёр юнита: <a href="https://speakandsmile.ru/gmf1/u5.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u5.html</a> — Practice + Booster по Unit 5 (farm animals + can/can't).</p>
+        </td>
+        <td class="mat">Activity Book p. 50 · app (homework link) · тренажёр u5.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 5 · Lesson 3 (Story: Animal magic) — lesson plan &amp; staging</span>
+    <span>Story verified against Pupil's Book pp. 52–53 (CD2 42); homework against Activity Book p. 50.</span>
+  </div>
+</div>
