@@ -1,0 +1,306 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 6 · Lesson 6 — Review: Playground &amp; Where's/Where are? · Flagship Quiz (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  /* projector interactive box */
+  .ibox{ margin:9px 0 5px; border:1.5px solid var(--p); border-radius:10px; background:linear-gradient(180deg,var(--p-soft),var(--card)); padding:9px 11px; }
+  .ibox .ih{ font-weight:800; color:var(--p-ink); font-size:.9rem; margin-bottom:5px; } .ibox .ih .tag{ font-size:.66rem; letter-spacing:.06em; text-transform:uppercase; color:var(--p); font-weight:800; }
+  .ibox .irow{ font-size:.85rem; margin:3px 0; } .ibox .irow .k{ font-weight:800; color:var(--p-ink); }
+  .ready{ display:inline-block; font-size:.7rem; font-weight:800; border-radius:6px; padding:1px 7px; letter-spacing:.03em; } .ready.go{ background:var(--zone-soft); color:var(--good); } .ready.build{ background:var(--honey-soft); color:var(--honey-ink); }
+  .diff{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.85rem; margin:6px 0; } .diff b{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 6 “A day in the park” · Lesson 6 — Review: Playground &amp; Where's/Where are? · 🏆 Flagship Quiz</div>
+    <div class="s">Pre-A1 young learners (~7–8 y.o., emergent readers, continuing group) · 60 min · Consolidation + flagship team quiz with reward · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 22.02–28.02 · Lesson 46</span><span class="chip">L6 Review</span><span class="chip new">🏆 Quiz day</span><span class="chip">~12 pupils · 3 teams of 4</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will have <b>consolidated all Unit 6 language</b> — the playground objects (slide, swing, roundabout, seesaw, climbing frame) + nature/park words (grass, flower, tree, bush, rock, butterfly, bird), “Where's (Beth)? — He's / She's (on the swing)”, “Where are (Molly and Jake)? — They're (behind / in front of / next to / between / near) the (tree)” and the prepositions of place — and can use it confidently in the review tasks and the quiz.</li>
+      <li><span class="lb">Subsidiary.</span> Jolly track — <b>read the /or/ sound</b> (storm, fork, sort, corn, horn) and recap the unit's /oa/ vowel family (coat, grow, rose); tricky words <i>cover, love</i>; self-assessment (My progress traffic light, AB p. 65 ex. 3); listening for detail (PB p. 68 ex. 1, CD3 17).</li>
+      <li><span class="lb">Personal.</span> Run the flagship quiz by PIES: <b>every child writes/shows every answer</b> (Showdown on mini-boards), the responder is picked by Numbered Heads — no “captains answer everything”; keep the reward moment short so language time wins.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>name all the playground / park objects and answer “Where's…?” without support;</li>
+        <li>ask &amp; answer “Where's (Beth)? — He's/She's (on the swing)” and “Where are…? — They're (behind the tree)”;</li>
+        <li>use prepositions <i>in / on / under / behind / in front of / next to / between / near</i> correctly;</li>
+        <li>read words with the /or/ sound and blend simple CVC words;</li>
+        <li>self-assess with the traffic light — ready for the Unit 6 test.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">slide</span><span class="w">swing</span><span class="w">roundabout</span><span class="w">seesaw</span><span class="w">climbing frame</span><span class="w">grass</span><span class="w">flower</span><span class="w">tree</span><span class="w">bush</span><span class="w">rock</span> + <span class="w">butterfly</span><span class="w">bird</span><span class="w">bee</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Where's (Beth)? — He's / She's (on the swing). · Where are (Molly and Jake)? — They're (behind / in front of / next to / between / near) the (tree).</div></div>
+      <div class="r"><div class="k">Form</div><div>Where + <b>'s</b> (is) → one person → <b>He's / She's</b>; Where + <b>are</b> → two+ → <b>They're</b> + preposition + the + noun.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>linking <b>“He's on / She's in”</b>; <i>They're</i> /ðeə/ (not “they-er”); clear /r/ in the <b>/or/</b> words <i>fork, corn</i>.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly focus: <b>/or/ sound</b> (storm, fork, sort, corn, horn) + recap /oa/ family (coat · grow · rose). Tricky words: <i>cover, love</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Put a toy <b>behind</b> a book: <span class="en">Where's the toy? Is it in front of or BEHIND?</span> → behind → <b>“It's behind the book.”</b></div>
+      <div class="ccq">One child sits: <span class="en">One person — He's or They're?</span> → He's. Two children: <span class="en">Two people — They're!</span> (singular vs plural check).</div>
+      <div class="ccq" style="margin-bottom:12px">Quiz rule ICQ: <span class="en">Who writes the answer — one child or EVERYBODY?</span> → everybody, on their own board!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> all Unit 6 language met in L1–L5; the /oa/ vowel family and CVC blending are done — today we read the new <b>/or/</b> sound. Teams of 4 with numbered members (1–4) are routine. The flagship quiz with reward runs <b>only on Review day</b> — children know it's special.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Quiz over-excitement / shouting out</td><td>Rules first + ICQ; “WiFi” 🖐 between questions; points only when the team is quiet-ready.</td></tr>
+        <tr><td>Strong pupils dominate answers</td><td>Numbered Heads: YOU call the number (1–4) after boards are up — anyone can be the voice.</td></tr>
+        <tr><td>Confuse <i>He's/She's</i> with <i>They're</i></td><td>“One person → He's/She's; two or more → They're.” Point to real children to show number.</td></tr>
+        <tr><td>Mix up <i>behind / in front of / between</i></td><td>One clear gesture per preposition + demo with a real object before asking.</td></tr>
+        <tr><td>/or/ guessed from the picture, not read</td><td>Show the word FIRST, blend chorally, picture only to check.</td></tr>
+        <tr><td>Ex. 1 (PB p. 68) — no word box, weak spellers freeze</td><td>Spelling word-bank card stays visible on the side; copy from it, finish at home is OK; countdown.</td></tr>
+        <tr><td>Losing team deflates</td><td>Bonus “teamwork star” for best cooperation; everyone gets a shot at the reward at least once.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span>🎮 = projector interactive (<span class="ready go">✅ READY</span> / <span class="ready build">🔨 BUILD</span>)</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p>Greet at the door: <span class="en">Hello! Come in!</span> <span class="sp">🦝 Speaky</span> holds a golden envelope: <span class="en">Today is… QUIZ DAY! The big day-in-the-park quiz!</span> Class: <span class="en">Hooray!</span></p>
+          <p>Ritual charge: <span class="en">Stand up! Let's get genki!</span> → <b>Genki Disco Warm Up</b>, end seated.</p>
+        </td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · Speaky + golden envelope</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">3–5′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come to the board — ABC song first!</span> Sing the alphabet with actions → settle into phonics.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">5–15′</td>
+        <td class="stage"><div class="nm">Phonics — the /or/ sound + read</div><div class="zone">🎮 board → open space</div></td>
+        <td class="flow">
+          <p><span class="ph">Blend (all together, word first — picture after).</span> Write <i>f-or-k</i> with the two letters <b>or</b> joined: arm-blending gesture — <span class="en">/f/… /or/… /k/… push them together — fork!</span> Then <i>storm, sort, corn, horn</i>. Picture appears only AFTER the class reads — reading, not guessing.</p>
+          <div class="ibox">
+            <div class="ih">🎮 <span class="tag">Интерактив · projector ·</span> “Flashcards” (Genki/S&S engine) &nbsp;<span class="ready go">✅ READY</span></div>
+            <div class="irow"><span class="k">Screen:</span> the /or/ word fills the screen in big letters — <i>fork · storm · sort · corn · horn</i> — tap to flip and reveal the picture.</div>
+            <div class="irow"><span class="k">Mechanic:</span> word shows first (letters only) → class blends chorally → tap → picture confirms. Never picture-first.</div>
+            <div class="irow"><span class="k">Target language:</span> <span class="en">/or/… blend it… corn!</span></div>
+            <div class="irow"><span class="k">Teacher:</span> tap in rhythm, keep the arm-blend gesture; no projector → paper word cards work identically.</div>
+          </div>
+          <p><span class="game">▶ Take Off–Touch Down (all move):</span> <span class="en">Stand up if you hear /or/!</span> Say a mix: <i>fork · sun · storm · dog · corn · red · horn</i>. Everyone stands / sits every time — nobody watches.</p>
+          <p><span class="game">▶ Swat It! — мухобойки (fly-swatters, whole class reads).</span> 5–6 /or/ words on the board. Point to one → <b>the WHOLE class reads it chorally first</b> (<span class="en">f-or-k… fork!</span>) → THEN two children race to swat it. Quick rotation, new pair each word, so many get a turn while the class is always the reading “jury”.</p>
+          <p><span class="ph">Recap the /oa/ family.</span> Quick choral read of three unit words — <i>coat · grow · rose</i>: <span class="en">Same sound, three spellings — /oa/!</span> Spaced retrieval of the vowel we met all unit.</p>
+          <p><span class="ph">Tricky words.</span> Flowers <i>cover · love</i>: <span class="en">Tricky words — we just KNOW them! Cover… love.</span> Choral ×2 + air-write.</p>
+        </td>
+        <td class="mat">/or/ word cards + pictures (JP Book 2, p. 38) · /oa/ recap cards · 2 fly-swatters · tricky-word flowers <i>cover, love</i> · <span class="game">▶ Take Off–Touch Down · ▶ Swat It!</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">15–17′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — our where-is-it song!</span> Sing <span class="game">Genki «Where is Mr Monkey?»</span> (near · next to · in front of · behind · under · on) with a big gesture for each preposition → <span class="sp">🦝 Speaky</span>: <span class="en">Today we remember EVERYTHING about a day in the park!</span></p></td>
+        <td class="mat"><b>Genki «Where is Mr Monkey?»</b> mp3 · preposition gestures</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–24′</td>
+        <td class="stage"><div class="nm">Review in motion</div><div class="zone">🎮 open space · teams</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Where's Beth? — Park Spy Hunt (everyone answers, nobody waits).</span> Before the lesson <span class="sp">🦝 Speaky</span> “hid” park picture-figures (Beth, Jake, a butterfly, a bird) <b>on / behind / in front of / next to / between</b> the “tree”, “bush”, “rock” (chairs + card props). Ask: <span class="en">Where's Beth?</span> <span class="ph">Think–Pair first:</span> everyone whispers the answer to a neighbour. Then call a number → that child answers aloud: <span class="en">She's behind the tree!</span> Class confirms chorally: <span class="en">Yes! She's behind the tree!</span></p>
+          <p>Mix singular &amp; plural across 5–6 rounds to force the choice: <span class="en">Where's Jake? — He's on the rock! · Where are the birds? — They're in the tree! · Where are Beth and Jake? — They're next to the bush!</span> Attention reset: <span class="en">Class? — Yes!</span></p>
+          <div class="diff"><b>Support ▸</b> weaker pupils hold the picture card of the hidden figure + answer with a partner (echo the chunk). &nbsp; <b>Extension ▸</b> stronger pupils add a second clause — <span class="en">She's behind the tree, next to a flower.</span></div>
+          <div class="ibox">
+            <div class="ih">🎮 <span class="tag">Интерактив · projector ·</span> “What's this? Spinner” + “Find it!” (U6 review engines) &nbsp;<span class="ready go">✅ READY</span></div>
+            <div class="irow"><span class="k">Screen:</span> <b>Spinner</b> lands on a random park object (slide / seesaw / roundabout / bush …); or <b>Find it!</b> shows a busy park scene and highlights where a child or animal hides.</div>
+            <div class="irow"><span class="k">Mechanic:</span> Spinner → <span class="en">What's this? — It's a roundabout!</span> · Find it! → point &amp; say <span class="en">She's on the swing! / They're behind the tree!</span> (whole class points at the screen every round).</div>
+            <div class="irow"><span class="k">Target language:</span> <span class="en">What's this? / Where's…? / Where are…? — He's/She's/They're (prep) the…</span></div>
+            <div class="irow"><span class="k">Teacher:</span> use as a warm station or when the real-prop round runs dry; keep it to 60–90 sec so movement stays the star.</div>
+          </div>
+        </td>
+        <td class="mat">park figure/object cards + chair “props” (tree/bush/rock) · Speaky · <span class="game">▶ Park Spy Hunt</span> (Numbered Heads)</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–32′</td>
+        <td class="stage"><div class="nm">Book review</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">To your tables! Open your Pupil's Book, page 68.</span></p>
+          <p><span class="ph">Ex. 1 — Listen and number. Write and say (CD3 17, everyone writes).</span> Play the audio, all number the 10 park pictures (grass · swing · slide · flower · roundabout · seesaw · rock · bush · tree · climbing frame); then write each word (example <i>swing</i> is done). Weak spellers copy from the side word-bank card. Check chorally: <span class="en">Number 1? — Swing!</span></p>
+          <p><span class="ph">Ex. 2 — Look, read and write: in front of / next to / behind (RallyCoach pairs).</span> A reads — <span class="en">Where's Toby? He's … a rock</span> — B decides &amp; writes <i>next to</i>; swap roles each line. Coach, don't grab the pencil! Countdown: <span class="en">5…4…3…2…1… pencils down.</span></p>
+        </td>
+        <td class="mat">PB p. 68 / CD3 17 · pencils · spelling word-bank card · <span class="game">▶ RallyCoach</span> (Kagan)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">32–33′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at desks</div></td>
+        <td class="flow"><p><span class="en">Everybody up! Hands ON your head! … BEHIND your back! … IN FRONT OF you! … Point to the TREE (window)! … the DOOR! Freeze!</span> → sit in quiz teams. (Breaks two sitting stages, recycles prepositions on the body.)</p></td>
+        <td class="mat">— (movement only)</td>
+      </tr>
+
+      <tr>
+        <td class="min">33–51′</td>
+        <td class="stage"><div class="nm">🏆 FLAGSHIP QUIZ with reward</div><div class="zone">🎮 teams · projector</div></td>
+        <td class="flow">
+          <p><span class="ph">Set-up (2 min).</span> 3 teams of 4, numbered heads 1–4, one mini-whiteboard EACH. Quiz grid on screen — categories: <b>Park objects 🎢 · Where's / Where are? 📍 · Sounds &amp; spelling 🔤 · Class rules ✨</b>. Rules + ICQ: <span class="en">Who writes? — Everybody! When do you show? — On “Showdown!”</span></p>
+          <p><span class="ph">Round flow (Kagan Showdown + Numbered Heads — all answer every question).</span> Question up (e.g. picture half-hidden: <span class="en">What is it?</span> · position: <span class="en">Where's Beth? — behind / in front of / next to?</span> · number check: <span class="en">One girl or two — He's, She's or They're?</span> · sound: <span class="en">Write the word — c-or-n!</span> · read an /or/ word · class rule: <span class="en">We wait next to the… ?</span>). <b>Every child writes/draws</b> → <span class="en">Showdown!</span> → all boards up → call a number: <span class="en">Number 3!</span> — that child of the playing team answers aloud in a full sentence.</p>
+          <p><span class="ph">Predict (thinking).</span> On the half-hidden picture, before revealing: <span class="en">Look — just a corner! What do you THINK it is? Write your guess!</span> Then reveal — <span class="en">Were you right?</span> Turns each round into a little guess-and-check.</p>
+          <p><span class="ph">Reward shot.</span> Correct = the answering child takes the shot: animated <b>football penalty</b> on screen — a GOAL = team points, class counts them in English: <span class="en">One, two, three… GOAL!</span> (No projector → paper goal + soft ball, ≈ Mido №91 Bowling for Animal reskin.) Rotate teams; over ~10–12 questions <b>every child shoots at least once</b>.</p>
+          <div class="diff"><b>Support ▸</b> word-box / picture bank stays visible on a side card so weaker writers copy, not freeze; accept one correct word from them. &nbsp; <b>Extension ▸</b> when a strong pupil is “Number”, require the <b>full sentence</b> — <span class="en">It's a roundabout. She's on the roundabout.</span> — not just the noun.</div>
+          <div class="ibox">
+            <div class="ih">🔨 <span class="tag">Flagship interactive · projector · BUILD ·</span> “Unit 6 Team Quiz + Reward” &nbsp;<span class="ready build">🔨 BUILD</span></div>
+            <div class="irow"><span class="k">Screen 1 — Grid:</span> 4×3 board of numbered tiles under the 4 category headers (Park objects 🎢 / Where's–Where are? 📍 / Sounds &amp; spelling 🔤 / Class rules ✨). Tap a tile → it flips to the question (picture / half-hidden object / audio word / /or/ word / rule prompt). Used tiles grey out.</div>
+            <div class="irow"><span class="k">Screen 2 — Answer:</span> big “Show your boards!” + a 5-second timer bar; tap ✔ / ✗ to score; a full-sentence model appears for choral echo.</div>
+            <div class="irow"><span class="k">Screen 3 — Reward mini-game:</span> football penalty — child “kicks”, goalie dives, animated GOAL (or a bowling reskin). One shot = +points.</div>
+            <div class="irow"><span class="k">Screen 4 — Scoreboard:</span> 3 team bars, <b>huge numbers</b> readable from the back row, plus a “Teamwork ⭐” toggle for best cooperation.</div>
+            <div class="irow"><span class="k">Mechanic:</span> pick tile → question → everyone writes → Showdown → Numbered Head answers → score → reward shot → rotate team. ~10–12 tiles ≈ 15 min.</div>
+            <div class="irow"><span class="k">Target language:</span> all Unit 6 — <span class="en">What's this? / Where's…? — He's/She's… / Where are…? — They're (behind/in front of/next to/between/near) the…</span> + read an /or/ word.</div>
+            <div class="irow"><span class="k">Teacher:</span> host only — YOU tap tiles &amp; call the number so no captain dominates. Spec is a self-contained HTML slide (S&S purple #6C3FC5 / honey #F5C842). <b>Offline reserve:</b> printed grid + paper goal + soft ball works identically.</div>
+          </div>
+          <p>Finish with totals + teamwork star: <span class="en">Give me five, champions!</span></p>
+        </td>
+        <td class="mat"><b>flagship quiz</b> (🎮 projector: tile grid + football penalty reward + big scoreboard) · mini-whiteboards ×12 · offline reserve: paper grid + goal + soft ball · <span class="game">▶ Showdown + Numbered Heads</span> (Kagan)</td>
+      </tr>
+
+      <tr>
+        <td class="min">51–54′</td>
+        <td class="stage"><div class="nm">Reflection · self-check</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">My progress traffic light (AB p. 65, ex. 3).</span> Read each “I can…” line — <span class="en">I can say the objects in the park… I can say where people and things are… I can talk about a park in my town… I listen to others…</span> — children point green / yellow / red on their traffic light. Praise honesty, note reds for the test warm-up.</p>
+          <p><span class="ph">Evaluate (thinking).</span> Quick thumbs round: <span class="en">What was EASY today? … What was TRICKY? … Why?</span> Take 2–3 answers (<span class="en">He's and They're were tricky!</span>) — naming the hard bit is exactly what we practise before the test.</p>
+          <p><span class="sp">🦝 Speaky</span>: <span class="en">Next lesson — the Unit 6 test! You are READY. Practise at home tonight!</span></p>
+        </td>
+        <td class="mat">AB p. 65 ex. 3 · traffic-light cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">54–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p>Sing the unit song <span class="game">«Well done!»</span> (PB p. 68, ex. 3, CD3 18) — hands up on the chorus, then Goodbye: <span class="en">Well done today, superstars! Thank you for the lesson!</span></p></td>
+        <td class="mat">CD3 18 «Well done!» · <b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. One quiz question each: <span class="en">What's this?</span> / hidden figure: <span class="en">Where's Beth?</span> / plural check: <span class="en">Where are the birds?</span> Answered → out: <span class="en">Thank you! See you at the test! Goodbye!</span></p></td>
+        <td class="mat">park object cards · folder reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 65, exercises 1–2</b> (① <i>Read, match and write</i> — “Where's Molly? — She's on the roundabout”, plus He's / They're; ② <i>Read, look and write</i> — prepositions <i>in front of · near · behind · between · next to</i>) <b>+ p. 67 Spelling chart</b> (<i>Look — Copy — Cover and write</i>, the 10 park words: swing, slide, seesaw, roundabout, climbing frame, grass, flower, tree, bush, rock) — test preparation.</p>
+        <p>💻 <b>Online unit trainer: <a href="https://speakandsmile.ru/gmf1/u6.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u6.html</a> — Practice + Booster for Unit 6</b> (all unit vocabulary &amp; grammar). <b>This is the main test prep</b> — 10 minutes tonight = a confident test tomorrow. Teacher sends the link to parents via BigBen.</p></td>
+        <td class="mat">Activity Book p. 65 + p. 67 · unit trainer u6.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 6 · Lesson 6 (Review + Flagship Quiz) — lesson plan &amp; staging</span>
+    <span>Homework verified against Give Me Five! 1 Activity Book — the Review page is p. 65 (ex. 1–3), the Spelling chart is p. 67 (BigBen's “p. 66” points to the “Being careful” Skills page).</span>
+  </div>
+</div>
