@@ -1,0 +1,305 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 4 · Lesson 6 — Review: Food &amp; Do you like…? · Flagship Quiz (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  /* projector interactive box */
+  .ibox{ margin:9px 0 5px; border:1.5px solid var(--p); border-radius:10px; background:linear-gradient(180deg,var(--p-soft),var(--card)); padding:9px 11px; }
+  .ibox .ih{ font-weight:800; color:var(--p-ink); font-size:.9rem; margin-bottom:5px; } .ibox .ih .tag{ font-size:.66rem; letter-spacing:.06em; text-transform:uppercase; color:var(--p); font-weight:800; }
+  .ibox .irow{ font-size:.85rem; margin:3px 0; } .ibox .irow .k{ font-weight:800; color:var(--p-ink); }
+  .ready{ display:inline-block; font-size:.7rem; font-weight:800; border-radius:6px; padding:1px 7px; letter-spacing:.03em; } .ready.go{ background:var(--zone-soft); color:var(--good); } .ready.build{ background:var(--honey-soft); color:var(--honey-ink); }
+  .diff{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.85rem; margin:6px 0; } .diff b{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 4 “Fantastic food!” · Lesson 6 — Review: Food &amp; Do you like…? · 🏆 Flagship Quiz</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · Consolidation + flagship team quiz with reward · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 14.12–20.12 · Lesson 30</span><span class="chip">L6 Review</span><span class="chip new">🏆 Quiz day</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">Continuing group</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will have <b>consolidated all Unit 4 language</b> — the food words (meat, eggs, fish, chips, rice, cake, salad, chicken, fruit, ice cream + pizza, soup, sandwiches, pasta) and the fruit (mango, grape, peach, cherry, lemon, coconut, apple, banana, orange), plus “I like / I don't like / I love (chicken)” and “Do you like (grapes)? — Yes, I do. / No, I don't.” — and can use it confidently in the review tasks and the quiz.</li>
+      <li><span class="lb">Subsidiary.</span> Jolly track — recap the unit <b>“j” sound</b> (Jim juggles <i>jam, juice, jelly</i>) and <b>read the new digraph “ai”</b> (rain, tail, snail, paint); tricky words <i>right, goes</i>; self-assessment (My progress traffic light, AB p. 45 ex. 3); listening for detail (PB p. 48 ex. 1, CD2 34).</li>
+      <li><span class="lb">Personal.</span> Run the flagship quiz by PIES: <b>every child writes/shows every answer</b> (Showdown), the responder is picked by Numbered Heads — no “captains answer everything”; keep the reward moment short so language time wins.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>name all the Unit 4 food &amp; fruit words without support;</li>
+        <li>say “I like / I don't like / I love (salad)” about themselves;</li>
+        <li>ask &amp; answer “Do you like (grapes)? — Yes, I do. / No, I don't.”;</li>
+        <li>read words with the “ai” sound and recall the “j” sound;</li>
+        <li>self-assess with the traffic light — ready for the Unit 4 test.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">meat</span><span class="w">eggs</span><span class="w">fish</span><span class="w">chips</span><span class="w">rice</span><span class="w">cake</span><span class="w">salad</span><span class="w">chicken</span><span class="w">fruit</span><span class="w">ice cream</span><span class="w">pizza</span><span class="w">soup</span><span class="w">sandwiches</span><span class="w">pasta</span> + <span class="w">mango</span><span class="w">grape</span><span class="w">peach</span><span class="w">cherry</span><span class="w">lemon</span><span class="w">coconut</span><span class="w">banana</span><span class="w">orange</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I like / I don't like / I love (chicken). · Do you like (grapes)? — Yes, I do. / No, I don't.</div></div>
+      <div class="r"><div class="k">Form</div><div><b>like / love / don't like</b> + noun · <b>Do</b> + you + like + noun? → short answers <b>Yes, I do. / No, I don't.</b> (not “Yes, I like”).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>degree scale <b>like → love</b> (heavier stress on <i>love</i>); clear <b>/dʒ/</b> in <i>juice, jam, jelly</i>; contracted <b>don't</b> /dəʊnt/; long <b>/aɪ/</b> in <i>rain, tail</i>.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly focus: recap <b>“j”</b> (jam, juice, jelly) + read new digraph <b>“ai”</b> (rain, tail, snail, paint). Tricky words: <i>right, goes</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Show ice cream + a big happy face: <span class="en">Do I LIKE it or LOVE it? Which is bigger?</span> → love → <b>“I love ice cream.”</b></div>
+      <div class="ccq">Thumbs: <span class="en">Do you like fish? Thumb up = “Yes, I do.” Thumb down = “No, I don't.”</span> (never “Yes, I like”).</div>
+      <div class="ccq" style="margin-bottom:12px">Quiz rule ICQ: <span class="en">Who writes the answer — one child or EVERYBODY?</span> → everybody, on their own board!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> all Unit 4 food &amp; fruit language met in L1–L5; the “j” sound was taught in L5 and magic-e / CVC blending is done — today we blend the new <b>ai</b> digraph. Teams of 4 with numbered members (1–4) are routine. The flagship quiz with reward runs <b>only on Review day</b> — children know it's special.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Quiz over-excitement / shouting out</td><td>Rules first + ICQ; “WiFi” 🖐 between questions; points only when the team is quiet-ready.</td></tr>
+        <tr><td>Strong pupils dominate answers</td><td>Numbered Heads: YOU call the number (1–4) after boards are up — anyone can be the voice.</td></tr>
+        <tr><td>“Yes, I like” instead of “Yes, I do.”</td><td>Drill the short answer with a thumb gesture; echo the correct model chorally before moving on.</td></tr>
+        <tr><td>Mix up like / love (degree)</td><td>One gesture scale: smile = like · hands-on-heart = love · frown = don't like; demo before asking.</td></tr>
+        <tr><td>Ex. 1 (PB p. 48) writing too slow</td><td>Word bank is on the page — copy, don't invent; countdown + “finish at home is OK”.</td></tr>
+        <tr><td>Losing team deflates</td><td>Bonus “teamwork star” for best cooperation; everyone gets a shot at the reward at least once.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span>📺 = projector interactive (<span class="ready go">✅ READY</span> / <span class="ready build">🔨 BUILD</span>)</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p>Greet at the door: <span class="en">Hello! Come in!</span> <span class="sp">🦝 Speaky</span> holds a golden envelope: <span class="en">Today is… QUIZ DAY! The big FOOD quiz!</span> Class: <span class="en">Hooray!</span></p>
+          <p>Ritual charge: <span class="en">Stand up! Let's get genki!</span> → <b>Genki Disco Warm Up</b>, end seated.</p>
+        </td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · Speaky + golden envelope</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">3–5′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come to the board — ABC song first!</span> Sing the alphabet with actions → settle into phonics.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">5–15′</td>
+        <td class="stage"><div class="nm">Phonics — “j” recap + new “ai” + read</div><div class="zone">📺 board → open space</div></td>
+        <td class="flow">
+          <p><span class="ph">Recap the unit “j” (food link).</span> Toby's tongue twister — <span class="en">j – j – j. Jim juggles jam, juice and jelly!</span> Class says it ×2 with the juggling mime; point out the /dʒ/ mouth. Quick: three food-“j” cards (<i>jam · juice · jelly</i>) — read chorally.</p>
+          <p><span class="ph">Blend the NEW digraph “ai” (all together, word first — picture after).</span> Write <i>r-ai-n</i> with the two letters <b>ai</b> joined: arm-blending gesture — <span class="en">/r/… /ai/… /n/… push them together — rain!</span> Then <i>tail, snail, paint</i>. Picture appears only AFTER the class reads — reading, not guessing.</p>
+          <div class="ibox">
+            <div class="ih">📺 <span class="tag">Interactive · projector ·</span> “Flashcards” (Genki/S&amp;S engine) &nbsp;<span class="ready go">✅ READY</span></div>
+            <div class="irow"><span class="k">Screen:</span> the “ai” word fills the screen in big letters — <i>rain · tail · snail · paint</i> — tap to flip and reveal the picture.</div>
+            <div class="irow"><span class="k">Mechanic:</span> word shows first (letters only) → class blends chorally → tap → picture confirms. Never picture-first.</div>
+            <div class="irow"><span class="k">Target language:</span> <span class="en">/ai/… blend it… snail!</span></div>
+            <div class="irow"><span class="k">Teacher:</span> tap in rhythm, keep the arm-blend gesture; no projector → paper word cards work identically.</div>
+          </div>
+          <p><span class="game">▶ Take Off–Touch Down (all move):</span> <span class="en">Stand up if you hear /ai/!</span> Say a mix: <i>rain · dog · tail · jam · snail · sun · paint · fish</i>. Everyone stands / sits every time — nobody watches.</p>
+          <p><span class="game">▶ Swat It! — мухобойки (fly-swatters, whole class reads).</span> 5–6 “ai” words on the board. Point to one → <b>the WHOLE class reads it chorally first</b> (<span class="en">s-n-ai-l… snail!</span>) → THEN two children race to swat it. Quick rotation, new pair each word, so many get a turn while the class is always the reading “jury”.</p>
+          <p><span class="ph">Tricky words.</span> Flowers <i>right · goes</i>: <span class="en">Tricky words — we just KNOW them! Right… goes.</span> Choral ×2 + air-write.</p>
+        </td>
+        <td class="mat">“j” cards (jam/juice/jelly) · “ai” word cards + pictures (JP Book 2, p. 15) · 2 fly-swatters · tricky-word flowers <i>right, goes</i> · <span class="game">▶ Take Off–Touch Down · ▶ Swat It!</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">15–17′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — our food song!</span> Sing <span class="game">«Do you like fruit?»</span> (PB p. 44, CD2 25) with gestures; hold up real/picture food (grapes, chicken, ice cream) → <span class="sp">🦝 Speaky</span>: <span class="en">Today we remember EVERYTHING about food!</span> <span style="color:var(--muted)">(Ready Genki alternatives: «Do You Like Food?» 12 · «I Like Vegetables» 16 · «Fruit Market» 35 — all match “Do you like…?”.)</span></p></td>
+        <td class="mat"><b>«Do you like fruit?»</b> CD2 25 · food picture cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–24′</td>
+        <td class="stage"><div class="nm">Review in motion</div><div class="zone">📺 open space · pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Taste Survey — Mix–Pair–Share (everyone talks at once, nobody waits).</span> Music plays → children mix; <span class="en">Freeze! Pair up!</span> → each child asks the nearest partner about their food card: <span class="en">Do you like chicken? — Yes, I do! / No, I don't.</span> New music → new partner, new card. 4–5 rounds — the WHOLE class is speaking every round.</p>
+          <p><span class="game">▶ Like / Don't-like / Love Corners (all move).</span> Call a food — <span class="en">Ice cream!</span> — children run to a corner (💛 LOVE · 🙂 LIKE · 🙁 DON'T LIKE) and say the full sentence: <span class="en">I love ice cream!</span> Mix foods across 5–6 rounds; recycles like/don't like/love with movement. Reset: <span class="en">Class? — Yes!</span></p>
+          <div class="diff"><b>Support ▸</b> weaker pupils keep their food picture card in hand + answer with the thumb gesture and one word (echo the chunk). &nbsp; <b>Extension ▸</b> stronger pupils add a reason-ish extra — <span class="en">No, I don't. I like fruit!</span> — a two-part answer, not one word.</div>
+          <div class="ibox">
+            <div class="ih">📺 <span class="tag">Interactive · projector ·</span> “What's this? Spinner” + “Find it!” (U4 review engines) &nbsp;<span class="ready go">✅ READY</span></div>
+            <div class="irow"><span class="k">Screen:</span> <b>Spinner</b> lands on a random food/fruit picture; or <b>Find it!</b> shows a busy lunch-table scene and highlights a hidden food.</div>
+            <div class="irow"><span class="k">Mechanic:</span> Spinner → <span class="en">What's this? — It's cake! Do you like cake?</span> · Find it! → point &amp; say <span class="en">Fish! I don't like fish!</span> (whole class points at the screen every round).</div>
+            <div class="irow"><span class="k">Target language:</span> <span class="en">What's this? / Do you like…? — Yes, I do. / No, I don't. / I love…</span></div>
+            <div class="irow"><span class="k">Teacher:</span> use as a warm-up round or when a survey round runs dry; keep it to 60–90 sec so movement stays the star.</div>
+          </div>
+        </td>
+        <td class="mat">food/fruit picture cards (one per child) · Speaky · 3 corner signs (💛/🙂/🙁) · <span class="game">▶ Mix–Pair–Share / Corners</span> (Kagan)</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–32′</td>
+        <td class="stage"><div class="nm">Book review</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">To your tables! Open your Pupil's Book, page 48.</span></p>
+          <p><span class="ph">Ex. 1 — Listen and number. Write and say (CD2 34, everyone writes).</span> Play the audio, all number the 10 foods (meat is done); then copy the words under the pictures (copy, not invent). Check chorally: <span class="en">Number 1? — Meat! Number 2? — Fruit!</span></p>
+          <p><span class="ph">Ex. 2 — Write about you. Complete the sentences (personal, then RallyRobin).</span> Each child finishes <span class="en">I ___ salad. / I ___ eggs. / I ___ cake.</span> + two of their own with <i>like / don't like / love</i>. Then in pairs take turns reading a sentence to each other: <span class="en">I love salad! — I don't like eggs!</span> Coach, don't grab the pencil! Countdown: <span class="en">5…4…3…2…1… pencils down.</span></p>
+        </td>
+        <td class="mat">PB p. 48 / CD2 34 · pencils · <span class="game">▶ RallyRobin</span> (Kagan)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">32–33′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at desks</div></td>
+        <td class="flow"><p><span class="en">Everybody up! Munch, munch, munch — eat the pizza! Yum — I LIKE it! Now the lemon… Yuck — I DON'T like it! Rub your tummy — I LOVE ice cream! Freeze!</span> → sit in quiz teams. (Breaks two sitting stages, recycles like/don't like/love.)</p></td>
+        <td class="mat">— (movement only)</td>
+      </tr>
+
+      <tr>
+        <td class="min">33–51′</td>
+        <td class="stage"><div class="nm">🏆 FLAGSHIP QUIZ with reward</div><div class="zone">📺 teams · projector</div></td>
+        <td class="flow">
+          <p><span class="ph">Set-up (2 min).</span> 3 teams of 4, numbered heads 1–4, one mini-whiteboard EACH. Quiz grid on screen — categories: <b>Food &amp; fruit 🍕 · Like / don't like / love 💛 · Do you like…? 👍👎 · Sounds &amp; spelling 🔤</b>. Rules + ICQ: <span class="en">Who writes? — Everybody! When do you show? — On “Showdown!”</span></p>
+          <p><span class="ph">Round flow (Kagan Showdown + Numbered Heads — all answer every question).</span> Question up (e.g. picture half-hidden: <span class="en">What is it?</span> · degree: <span class="en">Big smile — do I LIKE or LOVE it?</span> · survey: <span class="en">Do you like grapes? Yes I do or No I don't?</span> · sound: <span class="en">Write the word — s-n-ai-l!</span> · read an “ai” / “j” word). <b>Every child writes/draws</b> → <span class="en">Showdown!</span> → all boards up → call a number: <span class="en">Number 3!</span> — that child of the playing team answers aloud in a full sentence.</p>
+          <p><span class="ph">Predict (thinking).</span> On the half-hidden food picture, before revealing: <span class="en">Look — just a corner! What do you THINK it is? Write your guess!</span> Then reveal — <span class="en">Were you right?</span> Turns each round into a little guess-and-check.</p>
+          <p><span class="ph">Reward shot.</span> Correct = the answering child takes the shot: animated <b>football penalty</b> on screen — a GOAL = team points, class counts them in English: <span class="en">One, two, three… GOAL!</span> (No projector → paper goal + soft ball, ≈ Mido №91 Bowling for Animal reskin.) Rotate teams; over ~10–12 questions <b>every child shoots at least once</b>.</p>
+          <div class="diff"><b>Support ▸</b> food word-box / picture bank stays visible on a side card so weaker writers copy, not freeze; accept one correct word from them. &nbsp; <b>Extension ▸</b> when a strong pupil is “Number”, require the <b>full sentence</b> — <span class="en">It's ice cream. I love ice cream!</span> — not just the noun.</div>
+          <div class="ibox">
+            <div class="ih">🔨 <span class="tag">Flagship interactive · projector · BUILD ·</span> “Unit 4 Team Quiz + Reward” &nbsp;<span class="ready build">🔨 BUILD</span></div>
+            <div class="irow"><span class="k">Screen 1 — Grid:</span> 4×3 board of numbered tiles under the 4 category headers (Food &amp; fruit 🍕 / Like·don't·love 💛 / Do you like…? 👍👎 / Sounds &amp; spelling 🔤). Tap a tile → it flips to the question (picture / half-hidden food / audio word / “ai”/“j” word / degree prompt). Used tiles grey out.</div>
+            <div class="irow"><span class="k">Screen 2 — Answer:</span> big “Show your boards!” + a 5-second timer bar; tap ✔ / ✗ to score; a full-sentence model appears for choral echo.</div>
+            <div class="irow"><span class="k">Screen 3 — Reward mini-game:</span> football penalty — child “kicks”, goalie dives, animated GOAL (or a bowling reskin). One shot = +points.</div>
+            <div class="irow"><span class="k">Screen 4 — Scoreboard:</span> 3 team bars, <b>huge numbers</b> readable from the back row, plus a “Teamwork ⭐” toggle for best cooperation.</div>
+            <div class="irow"><span class="k">Mechanic:</span> pick tile → question → everyone writes → Showdown → Numbered Head answers → score → reward shot → rotate team. ~10–12 tiles ≈ 15 min.</div>
+            <div class="irow"><span class="k">Target language:</span> all Unit 4 — <span class="en">What's this? / I like / don't like / love… / Do you like…? — Yes, I do. / No, I don't.</span> + read an “ai” / “j” word.</div>
+            <div class="irow"><span class="k">Teacher:</span> host only — YOU tap tiles &amp; call the number so no captain dominates. Spec is a self-contained HTML slide (S&amp;S purple #6C3FC5 / honey #F5C842). <b>Offline reserve:</b> printed grid + paper goal + soft ball works identically.</div>
+          </div>
+          <p>Finish with totals + teamwork star: <span class="en">Give me five, champions!</span></p>
+        </td>
+        <td class="mat"><b>flagship quiz</b> (📺 projector: tile grid + football penalty reward + big scoreboard) · mini-whiteboards ×12 · offline reserve: paper grid + goal + soft ball · <span class="game">▶ Showdown + Numbered Heads</span> (Kagan)</td>
+      </tr>
+
+      <tr>
+        <td class="min">51–54′</td>
+        <td class="stage"><div class="nm">Reflection · self-check</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">My progress traffic light (AB p. 45, ex. 3).</span> Read each “I can…” line — <span class="en">I can say the food words… I can talk about food I like and don't like… I work quietly in class…</span> — children point green / yellow / red on their traffic light. Praise honesty, note reds for the test warm-up.</p>
+          <p><span class="ph">Evaluate (thinking).</span> Quick thumbs round: <span class="en">What was EASY today? … What was TRICKY? … Why?</span> Take 2–3 answers (<span class="en">The “ai” words were tricky!</span>) — naming the hard bit is exactly what we practise before the test.</p>
+          <p><span class="sp">🦝 Speaky</span>: <span class="en">Next lesson — the Unit 4 test! You are READY. Practise at home tonight!</span></p>
+        </td>
+        <td class="mat">AB p. 45 ex. 3 · traffic-light cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">54–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p>Sing the unit song <span class="game">«Well done!»</span> (PB p. 48, ex. 3, CD2 35) — hands up on the chorus, then Goodbye: <span class="en">Well done today, superstars! Thank you for the lesson!</span></p></td>
+        <td class="mat">CD2 35 «Well done!» · <b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. One quiz question each: <span class="en">What's this?</span> (food card) / <span class="en">Do you like ice cream?</span> / mime it: <span class="en">Munch! What am I eating?</span> Answered → out: <span class="en">Thank you! See you at the test! Goodbye!</span></p></td>
+        <td class="mat">food cards · folder reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 45, exercises 1–2</b> (① <i>Look and write</i> — “I don't like / I like … and … / I love …”; ② <i>Write. Ask and answer. Tick / cross</i> — “Do you like …?” with a friend) <b>+ p. 47 Spelling chart</b> (<i>Look — Copy — Cover and write</i>, the 10 food words: meat, eggs, fish, chips, rice, cake, salad, chicken, fruit, ice cream) — test preparation.</p>
+        <p>💻 <b>Online unit trainer: <a href="https://speakandsmile.ru/gmf1/u4.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u4.html</a> — Practice + Booster for Unit 4</b> (all unit food/fruit vocabulary &amp; “Do you like…?”). <b>This is the main test prep</b> — 10 minutes tonight = a confident test tomorrow. Teacher sends the link to parents via BigBen.</p></td>
+        <td class="mat">Activity Book p. 45 + p. 47 · unit trainer u4.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 4 · Lesson 6 (Review + Flagship Quiz) — lesson plan &amp; staging</span>
+    <span>Homework verified against Give Me Five! 1 Activity Book — the Review page is p. 45 (ex. 1–3), the Spelling chart is p. 47 (BigBen's “p. 46” points to the Video / 21st-Century-Skills page — off by one).</span>
+  </div>
+</div>

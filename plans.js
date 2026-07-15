@@ -22,4 +22,11 @@ window.PLANS = {
   "GMF1-U3-L5": 1,
   "GMF1-U3-L6": 1,
   "GMF1-U3-L7": 1,
+  "GMF1-U4-L1": 1,
+  "GMF1-U4-L2": 1,
+  "GMF1-U4-L3": 1,
+  "GMF1-U4-L4": 1,
+  "GMF1-U4-L5": 1,
+  "GMF1-U4-L6": 1,
+  "GMF1-U4-L7": 1,
 };

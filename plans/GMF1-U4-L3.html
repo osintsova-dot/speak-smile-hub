@@ -1,0 +1,306 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 4 · Lesson 3 — Story: I'm hungry (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 4 “Fantastic food!” · Lesson 3 — Story: I'm hungry</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · Story: listen → follow → act out (drama) · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 30.11–06.12 · Lesson 27</span><span class="chip new">✨ STORY</span><span class="chip">continuing line · ~12 pupils · small groups for drama</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>follow and understand the story “I'm hungry”</b> (Pupil's Book pp. 42–43, CD2 23) and <b>act it out</b> using key story language: “I'm hungry.”, “Let's ring the bell.”, “I like ice cream.”, “I love chocolate cake — it's my favourite.”, “I don't like oranges / fruit.”, “Do you like peaches? — No, I don't.”, “Robot, you're amazing! Thank you.”</li>
+      <li><span class="lb">Subsidiary.</span> <b>Retrieve real prior learning</b> — food nouns + <i>I like / don't like / love…</i> and <i>Do you like…? — Yes, I do / No, I don't</i> (U4 L1–L2, immediate) plus <i>What's your favourite…?</i> → <b>“It's my favourite”</b> (U2) and <i>Here you are / please / thank you</i> (Starter) — <b>woven straight into the restaurant story</b> (the magic robot serves food the children like / don't like). Phonics — <b>Magic e (i–e): blend &amp; read</b> <i>kite · bike · smile</i> (recognise → blend → read); tricky words by sight <i>made · does</i>. Values: it's important to eat fruit every day.</li>
+      <li><span class="lb">Personal.</span> Keep story listening active (face gestures, prediction); manage drama noise with Freeze; <b>every child acts in a small group at the same time</b> — no “2 on stage, 10 watching” until the final 30-sec showcase.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>show they understand the story (order the frames, answer True/False with thumbs);</li>
+        <li>say the key lines in role: “I love chocolate cake — it's my favourite!”, “Do you like peaches? — No, I don't.”;</li>
+        <li>blend &amp; read Magic-e words <i>kite · bike · smile</i> and read <i>made · does</i> by sight;</li>
+        <li>say “Thank you!” and know it's important to eat fruit (values).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">restaurant</span><span class="w">hungry</span><span class="w">bell</span><span class="w">robot</span><span class="w">waiter</span><span class="w">ice cream</span><span class="w">chocolate cake</span><span class="w">orange</span><span class="w">peach</span><span class="w">grape</span><span class="w">fruit juice</span><span class="w">delicious</span><span class="w">amazing</span> <span style="color:var(--muted);font-size:.82rem">(recycled: food — chicken/pizza/rice/salad/fish… · Molly, Jake, Beth + the magic bell &amp; Toby the dog)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I'm hungry. · I like ice cream. · I love chocolate cake — it's my favourite. · I don't like oranges / fruit. · Do you like peaches? — No, I don't. · Here you are. · Robot, you're amazing! Thank you.</div></div>
+      <div class="r"><div class="k">Form</div><div>I <b>like / love / don't like</b> + noun (statement of taste). <b>Do</b> you like + noun? → Yes, I <b>do</b> / No, I <b>don't</b>. (met in L1–L2, consolidated here in story context.)</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>weak <b>Do you</b> /dʒə/; contraction <i>don't</i> /dəʊnt/; sentence stress: <i>I DON'T like ORANGES.</i> · exclaim <i>Mmm! Yuck! Amazing!</i> with feeling.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly (JP Book 2): <b>Magic e (i–e)</b> — the silent <i>e</i> makes the vowel say its name: <i>kite · bike · smile</i> (recognise → blend → read). Tricky words by sight: <i>made · does</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Frame 2: “Is the food real?” → <b>“No — it isn't real.”</b> “Are they hungry?” → <b>“Yes!”</b> “What do they do?” → <b>“Ring the bell!”</b></div>
+      <div class="ccq">Frame 4: “Does Beth like ice cream?” → <b>“Yes, she likes ice cream.”</b> “What's Molly's favourite?” → <b>“Chocolate cake!”</b></div>
+      <div class="ccq" style="margin-bottom:12px">Frames 5–6 &amp; 8: “Does Jake like fruit?” → <b>“No! He doesn't like fruit.”</b> “What does the robot make?” → <b>“Fruit juice!”</b> “Does Jake like it?” → <b>“Yes — he LOVES it!”</b></div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> food nouns + <i>I like / don't like / love</i> and <i>Do you like…? Yes I do / No I don't</i> known from U4 L1–L2; <i>What's your favourite…?</i> from U2; <i>Here you are / thank you</i> from the Starter. Emergent readers → they FOLLOW the pictures while listening; the teacher points, children don't read the speech bubbles alone.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Long lines block the story (<i>restaurant · it's my favourite · amazing</i>)</td><td>Pre-teach 3 things before listening with picture + gesture (restaurant = chef-hat mime, ring the bell = ding finger, robot = stiff robot arms).</td></tr>
+        <tr><td>Children call answers over the audio</td><td>“Listening hands” rule — hands cupped behind ears while the CD plays; talk only when it stops.</td></tr>
+        <tr><td><i>like / love / don't like</i> mixed up</td><td>Fix one face gesture each (love = hands to heart “Mmm!”, like = thumb up, don't like = push away “Yuck!”); “Show me!” drill before the story.</td></tr>
+        <tr><td>Drama turns to chaos (running around)</td><td>Movements are ON THE SPOT (robot walk on the spot, ring the bell in place); roles fixed by colour badges; <span class="call">“Freeze!”</span> resets.</td></tr>
+        <tr><td>Frame cards ordered by one child in the pair</td><td>Rule “one card each turn, take turns” (RallyRobin with cards); praise pairs where both hands work.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset (essential in drama).</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Come in!</span> On the carpet <span class="sp">🦝 Speaky</span> rubs his tummy: <span class="en">Oooh… I'm hungry! I want pizza… and ice cream… and cake!</span> (children giggle — that's the hook).</p>
+          <p><span class="en">Stand up! Warm-up time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the opening ritual, finish seated on the carpet.</p>
+        </td>
+        <td class="mat"><b>Genki «Disco Warm Up»</b> mp3 · Speaky · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Retrieval → into the story</div><div class="zone">carpet, circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieve U4 L1–L2 woven into today.</span> Flash food cards fast; class calls the food, then shows a <b>taste face</b>: <span class="en">Do you like ice cream?</span> → thumb-up <span class="en">Yes, I do!</span> · <span class="en">Do you like fish?</span> → <span class="en">No, I don't!</span> Do 5–6 foods, mixing <b>like / love / don't like</b>.</p>
+          <p><span class="ph">Show-me — everyone reacts.</span> Three face gestures: <b>love</b> (hands to heart “Mmm!”) · <b>like</b> (thumb up) · <b>don't like</b> (push away “Yuck!”). Call fast: <span class="en">Show me LOVE! Show me DON'T LIKE!</span> Then U2 recall: <span class="en">What's your favourite food?</span> — 3 children answer <span class="en">My favourite is…</span></p>
+          <p><span class="ph">Bridge.</span> <span class="en">Molly, Jake and Beth are very hungry… and a MAGIC robot is coming! Let's find out what happens!</span> Signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">food flashcards (U4) · Speaky</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">8–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">To the board — phonics time! Listen for the magic!</span> Sing the ABC phonics song with actions → settle into phonics.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–20′</td>
+        <td class="stage"><div class="nm">📺 Phonics — Magic e (i–e)</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise — “the magic e”.</span> <span class="en">There is a MAGIC letter in English — silent e! When e is at the end, it makes the vowel say its NAME.</span> Show the pair: <span class="en">kit → kite, bit → bite.</span> Silent-e gesture: finger to lips “sshh” for the e. Keep it snappy — this is the story lesson, phonics stays light.</p>
+          <p><span class="ph">Blend — “Robot Chef” (all respond).</span> Speaky robot-blends one sound at a time: <span class="en">/k/ /ai/ /t/…</span> class blends &amp; shouts <span class="en">kite!</span> then points to the picture. Do <i>kite · bike · smile</i> (a picture appears each time for meaning).</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Magic-e Blender (Robot Chef) <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U4 <b>“Flashcards”</b> engine — one word, letters split <i>k · i · t · e</i>, the final <i>e</i> shown greyed “silent”, then a picture reveal on tap. <b>· How:</b> tap to sound each letter → tap the magic <i>e</i> (it makes the vowel “say its name”) → tap to blend → tap to show the picture. <b>· Pupils:</b> voice each sound then blend chorally — <span class="en">kite!</span> — and touch their nose if the picture matches. <b>· Teacher:</b> drive the taps, keep the beat, praise blends. <b>Оффлайн-резерв:</b> the same on paper CVCe word/picture cards, cover the <i>e</i> with a finger then reveal.</div>
+          </div>
+          <p><span class="ph">Read — thumbs check (all react).</span> Flash Magic-e word cards; class blends chorally, then <b>thumbs up = real word, thumbs down = silly word</b> (mix in <i>zime · lote</i>). Every child shows a thumb. Then tricky words by sight: <span class="en">made · does</span> — flash, chorus, air-write.</p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> keep the picture beside the word; ask for just the vowel “name” (<i>i = /ai/</i>). <b style="color:var(--p)">Extension:</b> fast finishers read one extra Magic-e word from a card (<i>nine · five · time</i>) → <span class="en">Show me!</span></p>
+        </td>
+        <td class="mat">JP Book 2 (Magic e i–e) · CVCe word/picture cards · <b>“Flashcards”</b> (board) · Speaky (robot voice)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">20–22′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Do you like food? Let's sing and show your faces!</span> Sing <span class="game">Genki «Do You Like Food?»</span> (12) with the three taste gestures (love / like / don't like) → <i>Do you like…?</i> primed → <span class="en">And now — the story! Molly and Jake are hungry!</span></p></td>
+        <td class="mat"><b>Genki «Do You Like Food?»</b> (12) mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">22–33′</td>
+        <td class="stage"><div class="nm">📺 Story — listen &amp; follow</div><div class="zone">carpet, books/screen</div></td>
+        <td class="flow">
+          <p><span class="ph">Before you read (PB p. 42).</span> Big story picture on screen / books open. <span class="en">What food can you see in the restaurant?</span> — pairs point &amp; name 15 sec, then chorus a few. Pre-teach with gesture: <span class="en">restaurant</span> (chef-hat mime) · <span class="en">ring the bell</span> (ding finger) · <span class="en">robot waiter</span> (stiff robot arms).</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Find it! — “What's in Beth's restaurant?” <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U4 <b>“Find it!”</b> engine on the big story picture (pp. 42–43). <b>· How:</b> Speaky asks, a child taps the food; it lights up. <b>· Pupils:</b> whole class points to their book / calls it — <span class="en">Ice cream! Chocolate cake! An orange! Grapes!</span> <b>· Teacher:</b> <span class="sp">🦝</span> <span class="en">Where's the ice cream? Point!</span> — 4–5 foods, quick. <b>Оффлайн-резерв:</b> hold up paper food cards, children point in their books &amp; chorus.</div>
+          </div>
+          <p><span class="ph">Predict (thinking) — before we listen.</span> <span class="en">The food is not real… but a MAGIC bell rings! What will happen? Will the food be real?</span> Thumbs guess: <b>yes (magic!)</b> vs. <b>no</b>. <span class="en">Let's listen and check your guess!</span></p>
+          <p><span class="ph">Listen 1 — global (CD2 23).</span> “Listening hands” behind ears. Teacher points frame by frame; children follow the pictures. Gist check: <span class="en">Is the waiter a robot? Show me!</span> (thumbs) <span class="en">Was your guess right — is the food real now?</span></p>
+          <p><span class="ph">Detail check — True or False? (thumbs up / down, all react).</span> Say a sentence, class shows a thumb: <span class="en">Molly loves chocolate cake.</span> (👍) · <span class="en">Jake likes oranges.</span> (👎 — <span class="en">He doesn't like oranges!</span>) · <span class="en">The waiter is a cat.</span> (👎 — <span class="en">It's a robot!</span>) · <span class="en">Jake loves fruit juice.</span> (👍). Re-point the frame to fix any wrong thumb.</p>
+          <p><span class="ph">Listen 2 — active (all respond).</span> Play again; children do the story gestures at the right moments: <b>rub tummy</b> (<span class="en">I'm hungry!</span>) · <b>ring the bell</b> · <b>robot arms</b> (frame 3) · <b>hands to heart</b> (<span class="en">I love chocolate cake!</span>) · <b>push away “Yuck!”</b> (<span class="en">I don't like oranges!</span>) · <b>blend the juice</b> (whir!) · cheer <span class="en">Amazing!</span> CCQs between frames (see box above). At frames 5–6 stop: <span class="en">Do you like peaches? — No, I don't! Do you like grapes? — No, I don't!</span></p>
+        </td>
+        <td class="mat">PB pp. 42–43 · CD2 23 / animated story (Navio) · <b>“Find it!”</b> (board) · food cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">33–34′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at carpet</div></td>
+        <td class="flow"><p><span class="en">Everybody up — robot waiter time!</span> Robot-walk ON THE SPOT (<span class="en">Beep… boop… here you are!</span>) → teacher calls a food and a face: <span class="en">Ice cream! — Mmm, I love it! · Oranges! — Yuck, I don't like it! · Fruit juice! — Amazing!</span> (with the gestures). Two rounds → <span class="en">Freeze!</span> → sit at desks.</p></td>
+        <td class="mat">— (voice + gestures)</td>
+      </tr>
+
+      <tr>
+        <td class="min">34–42′</td>
+        <td class="stage"><div class="nm">▶ Build the story</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Story-Sequence</span> (picture re-skin for non-readers — <b>all pairs work at once</b>). Each pair gets 8 mini frame-cards of “I'm hungry”, shuffled.</p>
+          <p><span class="ph">Order it.</span> <span class="en">Put the story in order — one card each, take turns!</span> (RallyRobin with cards: A places one, B places the next.) Countdown 2 min. <span class="ph">ICQ:</span> <span class="en">Do we grab all the cards or take turns?</span> (→ take turns!)</p>
+          <p><span class="ph">Check with the audio.</span> Replay CD2 23: pairs touch each card as they hear it — self-check, fix the order. Then choral retell, teacher holds up big frames one by one, class says the line: <span class="en">Welcome to my restaurant! · I'm hungry! · Let's ring the bell! · The food is real now! · Here you are. I love chocolate cake! · I don't like oranges! · No problem — one minute! · Mmm, I love fruit juice! Thank you, robot!</span></p>
+          <div style="background:var(--honey-soft);border:1px solid var(--line);border-left:4px solid var(--p);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Story-Sequence 1–5 “I'm hungry” <span style="background:var(--p);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">🔨 СОБРАТЬ</span></div>
+            <div><b>Screen:</b> the 5 key story frames (hungry at the table → ring the magic bell → robot waiter serves → “I don't like oranges/fruit!” → magic fruit juice “Amazing! Thank you!”) appear <b>shuffled</b> in a row, each with an empty number badge 1–5. <b>· How:</b> tap two frames to swap them (or drag); when the order is right, a ✅ + a cheer plays. A “Check” button lights correct frames green. <b>· Pupils:</b> the class calls the order — <span class="en">Number one — I'm hungry! Number two — ring the bell!</span> — and gesture each frame. <b>· Teacher:</b> take votes (<span class="en">Which is first? Hands up!</span>), tap as they decide, then replay CD2 23 to confirm. Mirrors the paired frame-cards on screen for a whole-class check. <b>Оффлайн-резерв:</b> the paired mini frame-cards + big frames on the board — order by class vote, check with the audio.</div>
+          </div>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> hand that pair only <b>5</b> clearest frames (not 8) and number the first one for them. <b style="color:var(--p)">Extension:</b> after ordering, ask them to say one whole line for each frame from memory before the audio check.</p>
+        </td>
+        <td class="mat">8 story frame mini-cards per pair (print from PB pp. 42–43) · 5-frame set for support pairs · CD2 23 · big frame cards for the board</td>
+      </tr>
+
+      <tr>
+        <td class="min">42–50′</td>
+        <td class="stage"><div class="nm">Act out — drama</div><div class="zone">carpet, groups</div></td>
+        <td class="flow">
+          <p><span class="ph">Roles.</span> Groups of 3–4: <b>Beth the owner</b> (yellow badge, chef hat, “Welcome to my restaurant!”) · <b>Molly + Jake</b> (red + green, the hungry customers) · <b>the robot waiter</b> (blue, robot arms, “Here you are!”). Model once with a strong group.</p>
+          <p><span class="ph">All groups act at the same time.</span> Narrate the story slowly, frame by frame; every group plays it in their own spot (robot-walk on the spot!): <span class="en">Welcome to my restaurant! This food isn't real — I'm hungry! Let's ring the bell! Wow, the food is real! Here you are — I love chocolate cake! And here's an orange, Jake. But I don't like oranges! Do you like peaches? — No, I don't! No problem — one minute… Here's a fruit juice! Mmm, amazing! Thank you, robot!</span></p>
+          <p><span class="ph">Create (thinking) — make it yours.</span> Before round 2: <span class="en">The robot brings ONE more food — you choose! Do you like it?</span> Each group swaps in their own food: <span class="en">Here's a pizza! — Mmm, I love pizza! It's my favourite!</span> or <span class="en">Here's fish! — Yuck, I don't like fish!</span> (support: point to a food card; extension: invent the whole exchange with <i>Do you like…?</i>).</p>
+          <p>Swap roles, run it again — <b>keep it to 2 rounds</b> (don't let the drama over-run; <span class="en">Freeze!</span> the moment energy tips). Volunteers: ONE group shows 30 sec for the class — big applause. <span class="ph">Values (PB p. 43 ex. 2):</span> <span class="en">It's important to eat… ice cream, meat or FRUIT every day?</span> → <span class="en">Fruit!</span></p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> quieter children get the robot waiter role (short repeated line “Here you are!” + gesture); a line card in hand. <b style="color:var(--p)">Extension:</b> confident children play Jake / Beth and lead the <i>Do you like…?</i> exchange.</p>
+        </td>
+        <td class="mat">role badges ×4 colours · chef hat · food cards · PB p. 43 (values)</td>
+      </tr>
+
+      <tr>
+        <td class="min">50–55′</td>
+        <td class="stage"><div class="nm">▶ Robot waiter: Do you like…?</div><div class="zone">desks, all at once</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Robot waiter order</span> (targeted settler — <i>Do you like…?</i> + like/love/don't like + food; <b>every child answers every round</b>). Each child has a mini menu strip with food pictures + three face cards (love / like / don't like).</p>
+          <p><span class="sp">🦝 Speaky</span> is the robot waiter: <span class="en">Do you like ice cream?</span> → each child holds up their honest face card &amp; says <span class="en">Yes, I do! I love it!</span> or <span class="en">No, I don't!</span>; <span class="en">Do you like grapes? Do you like fish?</span> 6–7 orders, instant show-me check each time — pick 2–3 children to say a full line (<span class="en">I love ice cream — it's my favourite!</span>).</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Find it! — “Robot waiter menu” (model &amp; check) <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U4 <b>“Find it!”</b> board as a restaurant menu of foods. <b>· How:</b> Speaky asks <span class="en">Do you like…?</span>, taps a food; the class answers. <b>· Pupils:</b> first hold up their <b>own face card</b>, then one child mirrors the answer on screen. <b>· Teacher:</b> use it to model order 1, then just for the show-me check so every child stays on their own strip. <b>Оффлайн-резерв:</b> paper menu strip + 3 face cards per pupil, teacher voices the robot.</div>
+          </div>
+        </td>
+        <td class="mat">mini menu strip + 3 face cards (love/like/don't like) per pupil · <b>“Find it!”</b> (board, model/check) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Reflection + Closing</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ RallyRobin retell (pairs, take turns).</span> Big frames stay on the board in order. <span class="en">Tell the story to your partner — one line each, take turns!</span> A: <span class="en">I'm hungry!</span> → B: <span class="en">Let's ring the bell!</span> → A: <span class="en">The food is real!</span> … (support: just point &amp; say one word per frame; extension: full lines to the end).</p>
+          <p>Then: <span class="en">Which food do you like? Point and tell your partner!</span> (20 sec each). “I can…” badge: <span class="en">Colour your badge — I can act out the story!</span></p>
+          <p><span class="en">Well done, superstars! Let's sing Goodbye. Your homework is in your Activity Book and on the app!</span> Sing Goodbye.</p>
+        </td>
+        <td class="mat">“I can…” badges · <b>Goodbye song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Show each child one frame card: say any line from it (<span class="en">I love chocolate cake!</span>) — or answer <span class="en">Do you like oranges?</span> with a real answer (<span class="en">Yes, I do / No, I don't</span>). Said it → out: <span class="en">Well done! Take care! Goodbye!</span></p></td>
+        <td class="mat">story frame cards · folder reward stickers 🦝</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow">
+          <p><b>Activity Book — p. 40, exercises 1–2 (Lesson 3 Story · After you read):</b> ① <i>Remember the story. Read and write</i> — complete the story lines with the food words (<i>oranges · cake · ice cream · peaches</i>): “I don't like oranges. I don't like ___.”, “I like ___.” · ② <i>What about you? Draw and write the food</i> — draw &amp; label foods in three circles: <b>I like · I love · I don't like</b>. + app: story words micro-set (5–7 min).</p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:2px"><b style="color:var(--good)">Support (core):</b> ex. 1 (match the food words to the story lines) + draw in ex. 2 — the writing is optional, trace if hard. <b style="color:var(--p)">Extension (challenge):</b> after ex. 2, tell a grown-up about your food — “I love… I don't like…” — one line for each circle.</p>
+          <p>💻 Онлайн-тренажёр юнита: <a href="https://speakandsmile.ru/gmf1/u4.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u4.html</a> — Practice + Booster по Unit 4 (лексика/грамматика урока).</p>
+        </td>
+        <td class="mat">Activity Book p. 40 · app (homework link) · тренажёр u4.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 4 · Lesson 3 (Story: I'm hungry) — lesson plan &amp; staging</span>
+    <span>Story verified against Pupil's Book pp. 42–43 (CD2 23); homework against Activity Book p. 40.</span>
+  </div>
+</div>

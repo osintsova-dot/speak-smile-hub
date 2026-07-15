@@ -1,0 +1,318 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 4 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* interactive game boxes (projector) */
+  .games{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .gbox{ background:var(--card); border:1px solid var(--line); border-left:4px solid var(--p); border-radius:12px; padding:11px 14px; }
+  .gbox .gt{ font-weight:800; color:var(--p); font-size:.95rem; margin-bottom:6px; display:flex; justify-content:space-between; align-items:center; gap:8px; }
+  .gbox .gr{ font-size:.86rem; display:flex; gap:9px; padding:4px 0; border-bottom:1px dashed var(--line); }
+  .gbox .gr:last-child{ border-bottom:0; }
+  .gbox .gk{ flex:0 0 74px; font-weight:800; font-size:.68rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .status{ display:inline-block; font-size:.7rem; font-weight:800; border-radius:6px; padding:2px 8px; white-space:nowrap; }
+  .status.rdy{ background:var(--zone-soft); color:var(--zone); } .status.skin{ background:var(--honey-soft); color:var(--honey-ink); }
+  .backup{ font-size:.82rem; color:var(--muted); margin-top:8px; } .backup b{ color:var(--ink); }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig,.games{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.gbox{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*,.games>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 4 “Fantastic food!” · Lesson 1 — Vocabulary</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers · continuing line) · 60 min · PPP + TPR + Phonics · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 23.11–29.11</span><span class="chip new">✨ NEW</span><span class="chip">continuing line</span><span class="chip">~12 pupils · 3 teams of 4</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>identify &amp; name 10 food words</b> and <b>say what is on a plate</b> using “What's this? — It's (chicken).” and the song chunk “I've got (rice and eggs).”</li>
+      <li><span class="lb">Subsidiary.</span> Recycle <i>have got</i> (U3), <i>Is it a…? Yes/No</i> (U2), colours &amp; adjectives (U2/Starter) in the food topic; phonics <b>magic e (a–e)</b> recognise → blend → segment; seed preferences receptively (<i>I like / I love / delicious</i>) as a bridge to L2; pre-literacy &amp; fine motor (chant, stickers).</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; run a stirrer→settler rhythm with songs &amp; signals; name-check every child at least once.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>name the 10 food words &amp; sing “Delicious food”;</li>
+        <li>ask &amp; answer “What's this? — It's (fish).”;</li>
+        <li>read &amp; blend magic-e (a–e) words: cake, plate, grape;</li>
+        <li>say one food they like (emerging).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language <span style="font-weight:600;text-transform:none;letter-spacing:0;color:var(--muted)">· Pupil's Book p.40, Lesson 1 (verified against the book)</span></div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis (10)</div><div><span class="w">rice</span><span class="w">eggs</span><span class="w">chicken</span><span class="w">fish</span><span class="w">chips</span><span class="w">salad</span><span class="w">fruit</span><span class="w">cake</span><span class="w">ice cream</span><span class="w">meat</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What's this? — It's (chicken). &nbsp;·&nbsp; I've got (rice and eggs). &nbsp;·&nbsp; <span style="color:var(--muted)">seed (receptive):</span> I like / I love (ice cream). It's delicious!</div></div>
+      <div class="r"><div class="k">Form</div><div>It + <b>'s</b> (is) + a/-. &nbsp; I + <b>'ve</b> (have) + got + food (from U3). &nbsp; “ice cream” = <b>two</b> words (two claps).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>/tʃ/ in <i>chicken</i> &amp; <i>chips</i> (contrast pair); final /z/ in <i>eggs</i>; linked “I've got”.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly / JP Book 2 — <b>magic e: a–e</b> (cake · plate · grape · name · game · snake). Recognise → blend → segment.</div></div>
+      <div class="r"><div class="k">Tricky words</div><div><span class="w">after</span><span class="w">cover</span> — learn by heart (can't sound out).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“I <b>love</b> ice cream” — a lot or a little? → <b>a lot</b> (love &gt; like).</div>
+      <div class="ccq">“It's <b>delicious</b>” — yummy or yucky? → <b>yummy</b> 😋</div>
+      <div class="ccq" style="margin-bottom:12px">magic e “cake” — do we <b>say</b> the e? → no, it's silent; it makes <b>a</b> say its name /eɪ/.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> pupils know the 26 sounds + digraphs and can blend/segment CVC; the tricky-word routine is known; U1–U3 language is available — classroom objects &amp; <i>Where's my…?</i> (U1), toys &amp; <i>Is it a…? Yes/No</i> + adjectives (U2), body &amp; <i>have got</i> (U3); numbers &amp; colours from the Starter. Emergent readers → lean on pictures &amp; audio; single-word reading only.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Mix up <i>chicken</i> / <i>chips</i> (both /tʃ/)</td><td>Present as a contrasting pair; one gesture each (peck vs. dip a chip).</td></tr>
+        <tr><td>“ice cream” said as one word</td><td>Two claps = two words; drill slowly, then fast.</td></tr>
+        <tr><td>magic-e word read with short vowel (<i>cak</i>)</td><td>“Magic-e wand” gesture over the e: silent e → vowel says its name.</td></tr>
+        <tr><td>“I've got” contraction dropped</td><td>Back-chain: <i>…rice → got rice → I've got rice.</i></td></tr>
+        <tr><td>Over-excitement on the carpet</td><td>Settle signal + follow every stirrer with a settler.</td></tr>
+        <tr><td>Teams grab food cards at once</td><td>Assign 4 roles inside each team; rotate every turn.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE GAMES (PROJECTOR) -->
+  <div class="eyebrow">🎮 Interactive games (projector) — reused engines, food skin</div>
+  <div class="games">
+    <div class="gbox">
+      <div class="gt"><span>🎮 What's this? spinner — “Food wheel”</span><span class="status rdy">✅ ready · food skin</span></div>
+      <div class="gr"><div class="gk">Screen</div><div>Wheel of the 10 food pictures; tap to spin, it lands on one.</div></div>
+      <div class="gr"><div class="gk">Mechanics</div><div>Spin → whole class chants the answer; 6–8 spins for the drill.</div></div>
+      <div class="gr"><div class="gk">Language</div><div><span class="en">What's this? — It's chicken!</span></div></div>
+      <div class="gr"><div class="gk">Teacher</div><div>Point at the wheel, cup your ear for the choral answer; nominate 2–3 solos.</div></div>
+      <div class="backup">Offline: <b>flip A4 flashcards fast</b> — same call &amp; response.</div>
+    </div>
+    <div class="gbox">
+      <div class="gt"><span>🎮 Find it! — “Point to the food”</span><span class="status rdy">✅ ready · food skin</span></div>
+      <div class="gr"><div class="gk">Screen</div><div>Grid of all 10 foods; <span class="sp">🦝 Speaky</span> names one, it lights up on check.</div></div>
+      <div class="gr"><div class="gk">Mechanics</div><div>Speaky asks → <b>every child points / thumbs</b> → tap to reveal. Add “Is it…?” guesses.</div></div>
+      <div class="gr"><div class="gk">Language</div><div><span class="en">Where's the ice cream?</span> · <span class="en">Is it fish? — No, it isn't. It's chips!</span></div></div>
+      <div class="gr"><div class="gk">Teacher</div><div>Scan that all hands point; Numbered Heads to name the one who taps.</div></div>
+      <div class="backup">Offline: <b>food cards on the floor</b> → point / touch the one you hear.</div>
+    </div>
+  </div>
+  <p class="backup" style="margin:8px 2px 0"><b>Flashcards</b> engine (✅ food skin) backs the presentation &amp; drill throughout. Flagship reward-quiz is reserved for L6 — <b>not used here.</b></p>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Bond.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="sp">🦝 Speaky</span> rubs his tummy: <span class="en">Mmm, I'm hungry! Hello, friends!</span> Class: <span class="en">Hello, Speaky!</span></p>
+          <p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p>
+          <p>Bring the energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p>
+        </td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · Speaky · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval mingle</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieve U2–U3 into the topic.</span> Give a mix of known cards (a toy, a body-part card, and a first food card e.g. an apple/cake). <span class="game">▶ Mix–Pair–Share:</span> music, then <span class="en">Stand up, hand up, pair up!</span></p>
+          <p>Round 1 <span class="ph">Is it a…? (U2):</span> A holds a card — <span class="en">Is it a robot? — No, it isn't! It's a ball!</span> Swap partners.</p>
+          <p>Round 2 <span class="ph">I've got… (U3):</span> <span class="en">I've got a red car. I've got big eyes.</span> Now show your food card — <span class="en">I've got a cake!</span> (this is the doorway into today's topic). Signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">mixed review cards (toys · body · a food) · music</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come closer to the board — sound time!</span> Quick ABC/sounds song with Jolly actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC / phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–21′</td>
+        <td class="stage"><div class="nm">Phonics — magic e</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise.</span> Write <b>cap</b> then add a silent <b>e</b> → <b>cape</b>: <span class="en">Watch the magic e! It's silent, but it makes the a say its name — /eɪ/.</span> Wave a “magic-e wand” over the e. Show cards: <b>name · game · cake · plate · grape · snake</b> (cake/plate/grape link to food!).</p>
+          <p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if you hear the LONG a — caaake!… Sit if it's short — cat!</span> (mix a few: cake / cat / name / man / plate / plan). Everyone moves every time.</p>
+          <p><span class="ph">Blend.</span> <span class="en">Push them together: c–a–k–e… cake!</span> Children blend chorally + show the picture for meaning.</p>
+          <p><span class="ph">Segment · dictation.</span> <span class="en">Now YOU write. Listen…</span> say a word once → children write on mini-whiteboards → <span class="en">Show me!</span> → reveal &amp; check. Words: <b>cake · name · plate</b>. Finish with tricky words — flash <span class="w">after</span> <span class="w">cover</span>: <span class="en">We can't sound these out — we just KNOW them. After! Cover!</span></p>
+        </td>
+        <td class="mat">board · magic-e cards · mini-whiteboards + pens · tricky-word cards</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">21–23′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Yummy sounds… now — yummy FOOD!</span> Sing/TPR <span class="game">Genki «Do You Like Food?»</span>; pat tummy for “yummy”, push away for “yucky” → into the food topic (receptive, no pressure yet).</p></td>
+        <td class="mat"><b>Genki «Do You Like Food?»</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">23–32′</td>
+        <td class="stage"><div class="nm">Presentation · Vocabulary</div><div class="zone">carpet → teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Curiosity — mystery plate.</span> <span class="game">▶ Guess-by-a-slice</span> — reveal each food card edge by edge: <span class="en">What's this?</span> If unknown, model: <span class="en">It's chicken. Chicken.</span> Choral drill ×3, then 2–3 solos. Do all 10: rice · eggs · chicken · fish · chips · salad · fruit · cake · ice cream · meat.</p>
+          <p>Contrast the tricky pair (hold both): <span class="en">This is chicken. These are chips.</span> Gesture: peck vs. dip a chip. “ice cream” → <b>two claps</b>.</p>
+          <p><span class="game">▶ What's this? spinner</span> (projector, food wheel) — spin → class chants <span class="en">It's [salad]!</span> ×6–8 for fast recognition.</p>
+          <p><span class="game">▶ Fan-N-Pick</span> (teams of 4, mini food-cards): ① fans · ② picks &amp; asks <span class="en">What's this?</span> · ③ answers <span class="en">It's [fish].</span> · ④ praises <span class="en">Yummy! Well done!</span> Rotate roles each turn.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do you say “What's this?” or “Where's my…?”</span> (→ What's this?)</p>
+        </td>
+        <td class="mat">A4 food flashcards · 3 mini-sets · <span class="game">▶ What's this? spinner</span> · <span class="game">▶ Fan-N-Pick</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">32–39′</td>
+        <td class="stage"><div class="nm">Song · order it</div><div class="zone">desks → stand to sing</div></td>
+        <td class="flow">
+          <p><span class="en">To your tables — let's go to the Astro Café!</span> Hand out the 6 song-food pictures (GMF1 don't read → order <b>pictures</b>, not text).</p>
+          <p><span class="ph">Listen &amp; order.</span> Play “Delicious food” (CD2 18): <span class="en">What do you hear first? Put the pictures in order.</span> Verse cues: rice + eggs + chicken → fish + chips + salad → fruit + cake + ice cream. Check together.</p>
+          <p><span class="ph">Sing with actions.</span> <span class="en">Stand up — now let's sing!</span> Hold up each food as it's sung: <span class="en">I've got rice and eggs and chicken today. Delicious food!</span> 😋</p>
+        </td>
+        <td class="mat">song-food pictures · “Delicious food” CD2 18 (Navio) · desks</td>
+      </tr>
+
+      <tr>
+        <td class="min">39–45′</td>
+        <td class="stage"><div class="nm">Recognition game</div><div class="zone">carpet / teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Model (board).</span> <span class="game">▶ Find it!</span> — <span class="sp">🦝 Speaky</span> asks <span class="en">Where's the ice cream?</span> <b>Everyone points / thumbs</b> at the screen → tap to reveal <span class="en">It's here!</span> (2–3 items to set it up).</p>
+          <p><span class="ph">▶ Is it…? guessing (U2 retrieval, teams).</span> Hide one food card behind Speaky. Teams guess: <span class="en">Is it chicken? — No, it isn't.</span> … <span class="en">Is it cake? — Yes, it is!</span> ALL respond thumbs-up/down each guess; <span class="ph">Numbered Heads</span> names who asks for the team. Correct team keeps the card.</p>
+          <p>Reset if it gets loud: <span class="en">Freeze!</span></p>
+        </td>
+        <td class="mat"><b>Find it!</b> (board) · Speaky · food flashcards</td>
+      </tr>
+
+      <tr>
+        <td class="min">45–50′</td>
+        <td class="stage"><div class="nm">Stickers &amp; chant</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">Open your books at page 40. Find the ten food stickers. Listen and stick!</span> (Pupil's Book p.40, ex.2, CD2 20). Model one; check with a neighbour.</p>
+          <p><span class="ph">Say the chant.</span> Play CD2 20 again: point &amp; chant the 10 words in rhythm. <span class="ph">Countdown:</span> <span class="en">Finishing in 5… 4… 3… 2… 1… pencils down.</span></p>
+        </td>
+        <td class="mat">GMF1 Pupil's Book p.40 + 10 stickers · chant CD2 20</td>
+      </tr>
+
+      <tr>
+        <td class="min">50–54′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner one food you like. I like…</span> (20 sec each) — first taste of L2 preferences.</p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can name the food! I can sing Delicious food!</span></p>
+        </td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">54–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is on the app and in your Activity Book!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Each child gets a food card: <span class="en">What's this?</span> or <span class="en">What food do you like?</span> Answered → out: <span class="en">Yummy! Take care! Goodbye!</span> <i>(Assessment: quick note who still hesitates on the 10 words.)</i></p></td>
+        <td class="mat">food cards · folder reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 38, ex. 1–2</b> (ex.1 <i>Read and match</i>: eggs and rice / chicken and chips / salad and meat → pictures; ex.2 <i>Look and write</i>: I've got ___ and ___) <b>+ app trainer</b> — a self-checking food micro-set (<span class="en">What's this?</span> picture–word match, with a “listen” button) 5–7 min.</p></td>
+        <td class="mat">Activity Book p.38 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 4 · Lesson 1 (Vocabulary) — lesson plan &amp; staging · continuing line</span>
+    <span>Content verified vs. Pupil's Book p.40 &amp; Activity Book p.38.</span>
+  </div>
+</div>

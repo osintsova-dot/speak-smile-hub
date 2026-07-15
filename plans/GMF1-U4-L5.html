@@ -1,0 +1,335 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 4 · Lesson 5 — Phonics · Culture · Literacy: A Lunch Menu (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* projector interactive box */
+  .fx{ background:linear-gradient(180deg,var(--p-soft),var(--card)); border:1.5px solid var(--p); border-radius:10px; padding:8px 11px; margin:7px 0; font-size:.89rem; }
+  .fx .fxh{ font-weight:800; color:var(--p-ink); display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:5px; }
+  .fx .tag{ font-size:.63rem; font-weight:800; text-transform:uppercase; letter-spacing:.04em; border-radius:5px; padding:1px 7px; white-space:nowrap; }
+  .fx .ready{ background:var(--good); color:#fff; } .fx .build{ background:var(--honey); color:var(--honey-ink); }
+  .fx .rk{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.72em; letter-spacing:.03em; }
+  .fx ul{ list-style:none; margin:4px 0 0; padding:0; display:flex; flex-direction:column; gap:3px; }
+  .fx ul li{ padding-left:14px; position:relative; } .fx ul li::before{ content:""; position:absolute; left:1px; top:.55em; width:6px; height:6px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .fx .modes{ border-top:1px dashed var(--line); margin-top:6px; padding-top:5px; }
+  .fx .mode{ margin:3px 0; } .fx .mode b{ color:var(--p-ink); }
+  .opt{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:6px; padding:5px 9px; font-size:.86rem; }
+  .opt b{ color:var(--honey-ink); }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.fx,.opt{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 4 “Fantastic food!” · Lesson 5 — Phonics · Culture · Literacy: A Lunch Menu</div>
+    <div class="s">Pre-A1 young learners (~7–8 y.o., emergent readers · continuing line) · 60 min · Phonics + CLIL culture + guided literacy · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 07.12–13.12 · Lesson 29</span><span class="chip">L5 Phon+Cult+Lit</span><span class="chip">~12 pupils · 3 teams of 4</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>say the /dʒ/ sound</b> (Toby's tongue twister “j – j – j. Jim juggles jam, juice and jelly”, PB p. 45), <b>understand a traditional English breakfast</b> (mix the eggs · make the toast · cut the tomatoes · cook the food · take it to Mum) and <b>read a lunch menu and make their own mini lunch menu</b> (Day + salad · soup · chicken · fruit · ice cream…).</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning inside the topic</b> — Unit 4 food + fruit (L1–L4) with “<i>I like / don't like / love… · Do you like…? — Yes, I do. / No, I don't.</i>” applied to the /dʒ/ words &amp; the menu; Jolly track — <b>quick recognition review of the known letter-sounds</b> + <b>magic e u-e</b> (cube · tune · cute · mule · rule; full magic-e write-and-say dictation, JP Book 2 p. 11, → differentiated homework, to protect pace); tricky words <i>would · put</i>.</li>
+      <li><span class="lb">Personal.</span> Keep the menu stage tight (timer + ONE day per menu, copied from a board frame + drawing); model writing letter-by-letter on the board; <b>every child responds in every task</b> (own menu / juggle-gesture / thumbs vote) — never “2 play, 10 watch”.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>say the tongue twister with a clear English /dʒ/ and spot words that begin with /dʒ/;</li>
+        <li>name 2–3 things in a traditional English breakfast;</li>
+        <li>read a simple lunch menu and make their own mini lunch menu (Day + foods + draw);</li>
+        <li>write the first letter-sound they hear (incl. <b>J j</b>).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">Jim</span><span class="w">juggle</span><span class="w">jam</span><span class="w">juice</span><span class="w">jelly</span><span class="w">jeans</span><span class="w">jacket</span><span class="w">jug</span><span class="w">jump</span> <span class="w">cube</span><span class="w">tune</span><span class="w">cute</span><span class="w">mule</span><span class="w">rule</span> <span class="w">eggs</span><span class="w">toast</span><span class="w">tomatoes</span><span class="w">beans</span> <span style="color:var(--muted);font-size:.82rem">(recycled food/fruit: chicken·pizza·rice·soup·salad·pasta·fish · apples·bananas·oranges·grapes·mango·lemon · ice cream·cake·fruit)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>j – j – j. Jim juggles jam, juice and jelly. &nbsp;·&nbsp; Do you like (chicken)? — Yes, I do. / No, I don't. &nbsp;·&nbsp; I like / don't like / love (…). &nbsp;·&nbsp; Let's make a traditional English breakfast. I mix the eggs. Dad cuts the tomatoes. &nbsp;·&nbsp; We've got (soup) on (Monday).</div></div>
+      <div class="r"><div class="k">Form</div><div>Initial <b>/dʒ/ + word</b>. Magic e: <b>u-e</b> (silent e → long u: c<b>u</b>b<b>e</b>). Menu = day + food list. Fixed chunks, copied not built.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>English <b>/dʒ/</b> — a soft, voiced “j” in <i>Jim, jam, juice</i> (a “dzh”). NOT the Russian «ж» (жук), and don't devoice it to «ч». Keep it in <i>Jim, jam, juggle, juice, jelly</i>.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Coursebook sound: <b>/dʒ/</b> (PB p. 45, CD2 28–29). Jolly track: <b>recognition review of known letter-sounds + magic e u-e</b> (cube·tune·cute·mule·rule; full dictation → HW, JP Book 2 p. 11). Tricky words: <i>would · put</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Hold a picture: <span class="en">Is this jam or ham?</span> → <b>jam!</b> <span class="en">jam — does it start with «дж» or «ж»?</span> → soft <b>«дж»</b> (English /dʒ/), voiced.</div>
+      <div class="ccq" style="margin-bottom:12px">Hold the menu: <span class="en">Is this a story or a menu?</span> → <b>a menu!</b> <span class="en">What's for lunch on Monday?</span> → read &amp; point.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> food + fruit vocab and “Do you like…?” known from L1–L4; children can copy letters but not write freely → the menu is <b>copied from a board frame + drawn</b>. Emergent readers: menu &amp; breakfast texts are read together, finger-following. Magic e is new → <b>recognition only in class</b>, dictation to HW. The English-breakfast role-play is new — model first.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>English /dʒ/ said as Russian «ж»</td><td>Model the contrast <i>jam</i> (дж) not «жам»; hand on throat to feel the voice; “juggle it — dzh-dzh!”.</td></tr>
+        <tr><td>Can't tell j-words from others</td><td>Picture anchors (jam·jug·jump·juggle) + juggle-or-freeze show-me; exaggerate the initial sound.</td></tr>
+        <tr><td>Menu copying slow / letters unknown</td><td>Board frame written LARGE, ONE day only; dotted-line strips for weakest writers; teacher scribes.</td></tr>
+        <tr><td>Over-excited in breakfast role-play / mixer</td><td>Rule first + ICQ: <span class="en">In the kitchen — careful or crazy? — Careful!</span> Use the volume-control arm to settle.</td></tr>
+        <tr><td>Magic e confusing (a silent e?)</td><td>Recognition only: “the e is <b>magic and silent</b> — it makes u say its name, cube!” Full dictation → homework.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><b style="color:var(--p)">🎮 projector</b> = board interactive (<span style="color:var(--good);font-weight:800">READY</span> / <span style="color:var(--honey-ink);font-weight:800">TO BUILD</span>)</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> <span class="sp">🦝 Speaky</span> hops in juggling a toy jar of jam: <span class="en">Look — Jim juggles jam! j-j-j! And today we cook a REAL English breakfast!</span> Class: <span class="en">Yummy!</span></p>
+          <p>Ritual charge: <span class="en">Stand up! Let's get genki!</span> → <b>Genki Disco Warm Up</b> — whole class dances the routine, end seated on the carpet.</p>
+        </td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · Speaky + toy jar of jam / 3 soft balls to “juggle”</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Review → into today</div><div class="zone">carpet, food cards</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle food + like/love (everyone reacts, all at once).</span> Flash Unit 4 food/fruit cards one by one — <b>whole-class thumbs show-me</b>: <span class="en">I love it 👍👍 / I like it 👍 / I don't like it 👎</span>. Fast, silent, everyone votes on every card — nobody just watches.</p>
+          <p><span class="ph">Round 2 — weave in the question (Kagan RallyRobin, pairs take turns):</span> <span class="en">Do you like chicken? — Yes, I do! Do you like fish? — No, I don't!</span> Both partners ask &amp; answer, swapping each card.</p>
+          <p>Bridge: <span class="sp">🦝 Speaky</span>: <span class="en">Jam, juice, jelly — all say j-j-j! Let's learn our sound!</span></p>
+        </td>
+        <td class="mat">food/fruit flashcards (chicken·fish·salad·soup·fruit·ice cream·cake…) · <span class="game">▶ RallyRobin</span> (Kagan)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come closer to the board — let's sing the ABC song!</span> Sing the alphabet with actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics — /dʒ/ + sound review</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise /dʒ/ (~2½′).</span> Toby's tongue twister (PB p. 45, CD2 28): <span class="en">j – j – j. Jim juggles jam, juice and jelly!</span> Juggling-hands gesture; soft voiced “dzh”, hand on throat to feel the buzz — <b>not the Russian «ж»</b>. Choral ×3: slow → normal → fast. 2–3 brave solos with the “microphone”. <b>Support:</b> hold up the <b>/dʒ/ picture-anchor card (a jar of jam)</b> as the sound cue — weak pupils watch it, not the letter.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Phonics Studio — Mode 1 · Sound recognition</span> <span class="tag build">🔨 to build</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> known letter-sounds scattered on the board; ONE lights up at a time.</li>
+              <li><span class="rk">Kids:</span> say the highlighted sound + its Jolly action. <b>Children voice the sound — the app does NOT.</b></li>
+              <li><span class="rk">Teacher:</span> tap to highlight the next; 6–8 sounds only (slip in <b>j</b> + a magic-e word cube for fun), <b>recognition, not writing</b> (~1½′). The full magic-e dictation moves to differentiated homework.</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">“j or not j?” — whole-class show-me (~2′, all react).</span> Pictures one by one — <i>jeans · cherries · jacket · jug · jump · jam · girl · juggle</i> (AB p. 42 set). Begins with /dʒ/ → <b>everyone stands and juggles the air, dzh-dzh</b>; not /dʒ/ → sit, hands on knees. <span class="en">Show me!</span> Fast, nobody just watches.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Flashcards — “j or not j?”</span> <span class="tag ready">✅ ready</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> big picture flashcards, one tap = next card.</li>
+              <li><span class="rk">Kids:</span> whole class stands+juggles for /dʒ/ words, sits for the rest — <b>every child reacts at once</b>.</li>
+              <li><span class="rk">Teacher:</span> use the existing <b>Flashcards</b> tool; exaggerate the first sound.</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">Blend for meaning (~2′).</span> Push sounds together with picture support: <span class="en">/j/ /a/ /m/… jam! /j/ /u/ /g/… jug! /j/ /e/ /t/… jet!</span> Children echo + do the action. Then peek at magic e: <span class="en">c-u-b… cub. Add magic e → cube!</span></p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Phonics Studio — Mode 2 · Blending</span> <span class="tag build">🔨 to build</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> letters <b>j · a · m</b> slide together → <b>jam</b>, then a picture pops up for meaning; a bonus card slides a magic <b>e</b> onto <i>cub → cube</i>.</li>
+              <li><span class="rk">Kids:</span> say each sound as it moves, then the whole word + action.</li>
+              <li><span class="rk">Teacher:</span> control the slide speed. <b>Single sounds stay silent (teacher voices them); the whole word MAY be spoken by the app</b> (browser speech).</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">Segment — CHILDREN break the word (~2½′, analyse + write).</span> No teacher spelling: <span class="en">YOU break it! jam → say it slowly, tap it on your fingers.</span> Class taps <span class="en">/j/ /a/ /m/</span> → then write the FIRST letter on mini-whiteboards → <span class="en">Show me!</span> 3 rounds: <b>jam</b> + 2 more (jug→j, egg→e). <b>Support:</b> write just the first letter. <b>Extension:</b> write the WHOLE word (j-a-m / j-u-g), or a capital <b>J</b>.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Phonics Studio — Mode 3 · Segmenting dictation</span> <span class="tag build">🔨 to build</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> a picture + a “say it” button; after kids write, the <b>word appears letter-by-letter for self-check</b>.</li>
+              <li><span class="rk">Kids:</span> hear the whole word → segment it themselves → write → check their own board against the screen.</li>
+              <li><span class="rk">Teacher:</span> press “say it” (whole word). <b>The app never voices separate sounds — segmenting is the children's thinking job.</b></li>
+            </ul>
+          </div>
+
+          <p><span class="ph">Tricky words (~1½′).</span> Flash cards <i>would · put</i> (+ recycled <i>like · love</i>): <span class="en">We just KNOW these — look, say: would… put… like… love.</span> Choral ×2 + air-write. Then straight to the food song — keep the pace up.</p>
+
+          <div class="opt"><b>Optional / fast finishers:</b> the book's own <span class="en">What's my word?</span> pair guessing game (AB p. 42, ex 3) with the j-cards — <i>Is it jump? — No, it isn't. Is it jelly? — Yes, it is.</i> · <b>Kinaesthetic swap for “j or not j?”:</b> a <b>Fly-swatters</b> reskin where <i>everyone</i> has a paper swatter and all “swat the air” on hearing a /dʒ/ word (not two racers at the board). · Magic-e “build it” on the board: slide the silent <b>e</b> onto <i>cub · tub · cut</i> → <i>cube · tube · cute</i> — an extra recognition round, never the main task.</div>
+        </td>
+        <td class="mat">PB p. 45 / CD2 28 · toy microphone · <b>/dʒ/ picture-anchor (jar of jam)</b> · j-picture cards (jeans·jacket·jug·jump·jam·juggle + cherries·girl) · <b>Phonics Studio</b> (board, Modes 1–3) · <b>Flashcards</b> (board) · mini-whiteboards + pens · tricky-word cards <i>would·put·like·love</i></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — into the kitchen! Sing!</span> Sing <span class="game">Genki «Do You Like Food?»</span> — do the like 👍 / don't-like 👎 actions → <span class="sp">🦝 Speaky</span>: <span class="en">Meet Lucy and her family — they cook breakfast in England. What do they make?</span></p></td>
+        <td class="mat"><b>Genki «Do You Like Food?»</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–33′</td>
+        <td class="stage"><div class="nm">Culture — English breakfast</div><div class="zone">carpet → circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Listen &amp; look (PB p. 46, CD2 31).</span> Photo by photo: <span class="en">It's Sunday morning. Let's make a traditional English breakfast!</span> → point: <span class="en">Here are the ingredients: eggs, mushrooms, baked beans, tomatoes and bread. I mix the eggs. Lucy makes the toast. Dad cuts the tomatoes. Dad cooks the food. We take the breakfast to Mum. She's very happy!</span></p>
+          <p><span class="ph">▶ Let's make the breakfast! — everyone joins in (TPR role-play).</span> Stand in a circle = the kitchen; each action together: <span class="en">Mix the eggs… (whisk!) …make the toast… (pop!) …cut the tomatoes… (chop!) …cook the food… (sizzle!) …take it to Mum!</span> ICQ: <span class="en">In the kitchen — careful or crazy? — Careful!</span> Every child mimes every step.</p>
+          <p><span class="ph">Think about YOUR culture (all vote — thumbs).</span> <span class="en">And you — what do YOU have for breakfast? Eggs? Cereal? Toast? Juice?</span> — thumbs up / down each one, everyone answers.</p>
+        </td>
+        <td class="mat">PB p. 46 / CD2 31 · space to stand in a circle · <span class="game">▶ Breakfast TPR role-play</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">33–35′</td>
+        <td class="stage"><div class="nm">⚡ Food mixer → settle</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="en">Lunchtime mix-up!</span> <span class="game">▶ Fruit Salad mixer</span> — each child holds a food card (chicken · salad · soup · fruit · ice cream); call a food → those children swap places; call <span class="en">Lunch!</span> → EVERYONE swaps (movement + on-topic, all react). Then settle: sing <span class="game">Genki «Calm down»</span> (PB p. 45, CD2 30) and <span class="en">tiptoe to your tables like little mice.</span></p></td>
+        <td class="mat">food cards (1 per child) · <b>Genki «Calm down»</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">35–47′</td>
+        <td class="stage"><div class="nm">Literacy — a lunch menu</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Before you read (PB p. 47).</span> <span class="en">Look — Munch! Munch! I like a healthy lunch! How many days is the menu for? — Five days!</span> Point to Monday–Friday.</p>
+          <p><span class="ph">Listen &amp; read the lunch menu (CD2 33) — fingers follow.</span> Read across the days together: <span class="en">On Monday — salad, meat and vegetables, jelly. On Wednesday — soup, meat and rice, ice cream…</span> CCQ: <span class="en">What's for lunch on Friday? — Soup, fish and salad, carrot cake!</span></p>
+          <p><span class="ph">Make YOUR lunch menu (literacy product).</span> On an A5 card, each child writes <b>ONE day</b> at the top (copy from the board frame, written LARGE) and copies/draws <b>3 foods</b> for that day's lunch — like the book. <b>Support:</b> dotted-line strips to trace + teacher scribes for the weakest. <b>Extension:</b> add a second day, or start each food word with its capital letter. Timer 8 min, countdown finish: <span class="en">5…4…3…2…1… pencils down!</span></p>
+          <p><span class="ph">Create — hide a /dʒ/ food (fast finishers, links to phonics).</span> On the back of the card: <span class="en">Draw a j-food — jam or juice or jelly — and tell me its name!</span> They show &amp; say it at the door — a mini creative check of the sound.</p>
+        </td>
+        <td class="mat">PB p. 47 / CD2 33 · A5 menu cards · crayons · board frame (Day + 3 foods) + dotted-line strips · timer</td>
+      </tr>
+
+      <tr>
+        <td class="min">47–52′</td>
+        <td class="stage"><div class="nm">Wall of Menus · share</div><div class="zone">teams of 4</div></td>
+        <td class="flow">
+          <p><span class="ph">RoundRobin in teams (Kagan — everyone shows, everyone speaks).</span> In turn, each child stands, holds up their menu and reads it: <span class="en">On Monday — soup, chicken and rice, fruit!</span> — team echoes <span class="en">Yummy!</span> Round the team till all four have shared.</p>
+          <p>Then stick every menu onto the big class chart: <span class="en">This is OUR Wall of Menus!</span> Point &amp; chorus one day together.</p>
+        </td>
+        <td class="mat">finished menus · big class chart + tape · <span class="game">▶ RoundRobin</span> (Kagan)</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p>Quick pairs (Timed Pair Share): <span class="en">Tell your partner your favourite lunch. And say — j-j-j!</span> (both partners speak, 20 sec each).</p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can say j-j-j! I can make a lunch menu!</span></p>
+        </td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Well done. Thank you for the lesson!</span> Sing <b>Genki «Well done!»</b> / Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Genki «Well done!» / Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show each child a picture: <span class="en">j or not j?</span> (juggle the air, dzh-dzh, or hands on knees) + <span class="en">Tell me ONE food you like!</span> → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">j / not-j picture cards · folder reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Core (everyone) — Activity Book p. 42 (Lesson 5 Phonics), exercises 1–2</b> (① <i>Write and say</i> — fill in the missing <b>j</b> letters in Toby's tongue twister <i>Jim juggles jam, juice and jelly</i>; ② <i>Colour the words that begin with ‘j’. Say</i> — jeans · jacket · jug · jump · jam · juggle) <b>+ p. 43 (Lesson 6 British culture), exercises 1–2</b> (① <i>Listen and number. Circle the breakfast you like</i> — CD2 32; ② <i>Read and tick ✓. Draw and write</i> — I have eggs / cereal / orange juice / bread → <i>I have ___ for breakfast</i>) <b>+ p. 44 (Lesson 7 Literacy), exercises 1–2</b> (① <i>Read again and write the days</i> — We've got meat/fish/cake/salad/soup on ___; ② <i>Write a lunch menu. Say</i> — Day + foods).</p>
+        <p><b>Differentiated:</b> <i>Support</i> — just ex. 2 on p. 42 (colour &amp; say the j-words), a grown-up may read the menu words aloud. <i>Extension</i> — the <b>magic e u-e write-and-say</b> (cube · tune · cute · mule · rule) from JP Book 2, p. 11, as a home write-and-say.</p>
+        <p>💻 <b>Online unit trainer: <a href="https://speakandsmile.ru/gmf1/u4.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u4.html</a></b> — Practice + Booster for Unit 4 (food &amp; “Do you like…?”), 5–7 min. Teacher sends the link to parents via BigBen.</p></td>
+        <td class="mat">Activity Book p. 42–44 · JP Book 2 p. 11 (extension) · unit trainer u4.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 4 · Lesson 5 (Phonics · Culture · Literacy) — lesson plan &amp; staging</span>
+    <span>Homework verified against Give Me Five! 1 Activity Book, pp. 42–44.</span>
+  </div>
+</div>
