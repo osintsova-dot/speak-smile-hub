@@ -1,0 +1,298 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 3 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+  .igame{ border:2px solid var(--p); border-radius:10px; background:var(--honey-soft); padding:8px 10px; margin:8px 0; }
+  .igame .ig-h{ font-weight:800; color:var(--p); font-size:.9rem; } .igame .ig-b{ font-size:.85rem; margin-top:3px; }
+  .diff{ font-size:.84rem; color:var(--muted); margin:4px 0 0; } .diff b{ color:var(--zone); }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.igame{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 3 “At the circus” · Lesson 1 — Vocabulary</div>
+    <div class="s">Pre-A1 young learners (~7–8 y.o., emergent readers · продолжающие) · 60 min · PPP + TPR + Phonics · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 02.11–08.11</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">PB p. 28 · AB p. 26</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>identify &amp; name 10 parts of the body</b> and <b>count them in context</b> — “How many (arms)? — Two arms!” / “Ten fingers, one nose” — through the circus song <i>This is me</i>.</li>
+      <li><span class="lb">Subsidiary.</span> Retrieve numbers 1–10 (Starter) &amp; size adjectives big/small/long (Unit 2), woven onto the body; phonics <b>ck vs k</b> (recognise → blend → segment); listen for detail (point &amp; stick to the song); fine motor (stickers, draw-a-monster); sight words <i>live · give</i>.</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; give an ICQ before every task; run a stirrer→settler rhythm with songs and signals.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>point to &amp; name the 10 body parts;</li>
+        <li>count parts: “Two feet, ten toes, one nose”;</li>
+        <li>ask &amp; answer “What's this? — It's my (nose)”;</li>
+        <li>hear /k/ &amp; choose <b>ck vs k</b> in short words (back · duck · kick).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">head</span><span class="w">mouth</span><span class="w">nose</span><span class="w">eyes</span><span class="w">ears</span><span class="w">arms</span><span class="w">legs</span><span class="w">feet</span><span class="w">toes</span><span class="w">fingers</span> <span style="color:var(--muted);font-size:.82rem">(bonus: hands · body)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What's this? — It's my (nose). &nbsp;·&nbsp; How many (arms)? — Two (arms)! &nbsp;·&nbsp; This is my body. Count with me. <span style="color:var(--muted);font-size:.82rem">(preview → L2: I've got two arms.)</span></div></div>
+      <div class="r"><div class="k">Form</div><div>my + noun; number + plural noun (arm → arm<b>s</b>, toe → toe<b>s</b>). Count aloud: <i>one head, two arms, ten fingers</i>.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>voiced final /z/ on plurals (eye<b>s</b>, ear<b>s</b>, leg<b>s</b>, toe<b>s</b>); /θ/ at end of <i>mouth</i>; long /iː/ in <i>feet</i>; stress = <b>number + noun</b>.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>JP Book 2 — <b>ck vs k</b>: short sound + /k/ at the END → ck (<i>ba<b>ck</b>, du<b>ck</b>, so<b>ck</b>, ki<b>ck</b>, clo<b>ck</b></i>). Sight words: <i>live · give</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“How many noses have you got?” → <b>one</b>. “How many fingers?” → <b>ten</b>.</div>
+      <div class="ccq">“Point to your feet — up or down?” → <b>down</b> (contrast with head).</div>
+      <div class="ccq" style="margin-bottom:12px">“I hear /k/ at the END, after a short sound — do I write <b>k</b> or <b>ck</b>?” → <b>ck</b> (back, duck).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> numbers 1–10 &amp; colours (Starter) and size adjectives big/small/long/short (Unit 2) are known → recycled, not taught. Pupils are emergent readers → rely on pictures, TPR &amp; audio, not printed text. The 26 sounds + ch/sh/th/ng are known from earlier blocks. Carpet routines known.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Confuse <i>feet / fingers</i> or <i>eyes / ears</i></td><td>Present as contrasting pairs with one clear gesture each; point to your own body.</td></tr>
+        <tr><td>Plural <i>-s</i> dropped (“two arm”)</td><td>Exaggerate final /z/ in the choral count; hold up fingers as you say the number.</td></tr>
+        <tr><td>ck vs k confusion in writing</td><td>Mini-rule + picture: “short sound + /k/ at the end = <b>ck</b>” (back, duck, sock).</td></tr>
+        <tr><td>Over-excitement in Simon Says (touching bodies)</td><td>Use <span class="call">Freeze!</span> + follow the stirrer with a settler; sit for the next task.</td></tr>
+        <tr><td>Everyone shouts over the flashcards</td><td><span class="call">Class? — Yes!</span> + hands-up rule; nominate after the chorus.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span>🎮 = on-screen (projector) interactive</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="sp">🦝 Speaky</span> waves: <span class="en">Hello, friends! Today we're going to the circus!</span> Class: <span class="en">Hello, Speaky!</span></p>
+          <p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call actions with the moves (jump · spin · clap · stamp · sit down · stand up); trick them by saying <span class="en">Sit down!</span> when they're already sitting.</p>
+          <p>Bring the energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p>
+        </td>
+        <td class="mat"><b>Genki “Disco Warm Up”</b> mp3 · Speaky · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval — count &amp; describe</div><div class="zone">carpet, active</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle numbers + adjectives — ON your own body (everyone at once).</span> <span class="en">Show me your hands! How many? — Two! Now your fingers… count with me!</span> Count 1–10 on fingers together. <span class="en">Ten fingers!</span></p>
+          <p>Bring back Unit 2 size words: <span class="en">Point to something BIG… now something SMALL. Touch a LONG thing… a SHORT thing.</span> All point at once — no one waits.</p>
+          <p><span class="ph">Bridge into the topic.</span> <span class="sp">🦝</span> touches his nose: <span class="en">Look — this is my nose! One nose. And my eyes? Two eyes!</span> <b style="color:var(--honey-ink)">🧠 Curiosity:</b> <span class="en">How many parts have YOU got? Let's find out at the circus!</span></p>
+        </td>
+        <td class="mat">number cards 1–10 · Speaky · <span class="game">▶ Show-me (whole-class)</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come closer to the board — let's sing the ABC!</span> Sing the alphabet with actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–21′</td>
+        <td class="stage"><div class="nm">Phonics · ck vs k</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise.</span> <span class="en">Listen — /k/! I can hear it in… back, duck, sock, kick.</span> Jolly action for /k/ (raise hands, click). Children say the sound (not the app).</p>
+          <p><span class="game">▶ Take Off–Touch Down (all react):</span> <span class="en">Stand up if you hear /k/… sock! … sun! … clock! … dog! … duck!</span> Whole class stands/sits — nobody just watches.</p>
+          <p><span class="ph">The rule (with pictures).</span> <span class="en">A short sound, then /k/ at the END — we write c-k together!</span> Show <i>ba<b>ck</b> · du<b>ck</b> · so<b>ck</b> · clo<b>ck</b> · ki<b>ck</b></i>. Blend: <span class="en">Push them together: /b/ /a/ /ck/… back!</span></p>
+          <p><span class="ph">Segment · dictation (everyone writes).</span> <span class="en">Now YOU write. Listen…</span> word once → all write on mini-whiteboards → <span class="en">Show me!</span> → reveal &amp; check. Focus: <i>back · duck · sock</i>. Finish with sight words: <span class="en">live · give</span> — <span class="en">these are tricky — we just remember them!</span> flash → chorus → air-write.</p>
+          <p class="diff"><b>💪 Support:</b> give sound-buttons (<i>d-u-ck</i>) — child only fills letters. <b>⭐ Extension:</b> a 4th word by ear (<i>rock / neck</i>).</p>
+        </td>
+        <td class="mat">JP Book 2 “ck/k” p. 7 · ck/k word+picture cards · mini-whiteboards + pens</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">21–23′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the carpet</div></td>
+        <td class="flow"><p><span class="en">Welcome to the circus! Look — clowns, acrobats!</span> Show the big PB p. 28 circus scene on screen. Point to the clown's funny nose &amp; big feet: <span class="en">Wow — one big nose! Two big feet!</span> → into the body-parts topic.</p></td>
+        <td class="mat">PB p. 28 circus scene (board) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">23–33′</td>
+        <td class="stage"><div class="nm">Presentation · body parts</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Presentation — 10 parts of the body.</span> Hold up each A4 card AND touch your own body: <span class="en">What's this? — It's my head. Head.</span> Choral drill ×3, then 2–3 children individually. Cover all 10: <i>head · mouth · nose · eyes · ears · arms · legs · feet · toes · fingers</i>.</p>
+          <p>Contrast the tricky pairs (touch each): <span class="en">These are my eyes. These are my ears.</span> · <span class="en">These are my feet. These are my fingers.</span></p>
+          <p><span class="game">▶ Teacher Says (Simon Says) — all move at once.</span> <span class="en">Teacher says touch your nose!… Touch your ears!</span> (no “teacher says” = don't move). Everyone touches their OWN body; funny speed-ups. Reset with <span class="en">Freeze!</span></p>
+          <div class="igame">
+            <div class="ig-h">🎮 Интерактив (проектор): What's this? Spinner — body wheel <span style="color:var(--good)">✅ ГОТОВ</span> <span style="color:var(--muted);font-weight:600;font-size:.82rem">(reskin of the “What's this? spinner” engine — swap deck to body parts)</span></div>
+            <div class="ig-b"><b>Screen:</b> a wheel of the 10 body parts next to Speaky. <b>Mechanic:</b> tap to spin → it lands on one part → tap it to zoom + play the word. <b>Pupils:</b> BEFORE the reveal all point to that part on their OWN body and ask <span class="en">What's this?</span>; on reveal, chorus <span class="en">It's my (nose)!</span> <b>Teacher:</b> spin, hold the reveal until the whole class points, then tap. <b style="color:var(--honey-ink)">🧠 Predict:</b> <span class="en">Where will it stop? Point &amp; guess!</span> <b>Offline fallback:</b> flip the A4 flashcards face-down, pull one at random.</div>
+          </div>
+          <p><span class="ph">ICQ:</span> <span class="en">Do we point and say “It's my nose” or “Where's my nose?”</span> (→ It's my nose.)</p>
+          <p class="diff"><b>💪 Support:</b> stand next to a strong peer for Simon Says — copy the action. <b>⭐ Extension:</b> be the caller for one round of Teacher Says.</p>
+        </td>
+        <td class="mat">10 A4 body flashcards · <span class="game">▶ Teacher Says</span> · <b>🎮 What's this? Spinner</b> (board) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">33–39′</td>
+        <td class="stage"><div class="nm">Song &amp; stickers · “This is me”</div><div class="zone">carpet → desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Listen &amp; point — PB p. 28 ex. 1 (CD1 47).</span> Play <span class="game">“This is me”</span>: <span class="en">Two feet, ten toes, two eyes, one big nose… ten fingers, one head, two arms, two long legs.</span> Children point to each part on their body as they hear it. Again: <span class="en">Now let's sing and count!</span> — hold up fingers for the numbers.</p>
+          <p><span class="ph">Stickers — PB p. 28 ex. 2 (CD1 49).</span> <span class="en">To your tables! Open your books. Find the ten stickers. Listen and stick!</span> Model the first (head); <b>everyone</b> sticks their own. Then check with a neighbour <span class="ph">RallyRobin:</span> <span class="en">What's this? — It's a leg.</span> Swap.</p>
+          <div class="igame">
+            <div class="ig-h">🎮 Интерактив (проектор): Flashcards — body deck <span style="color:var(--good)">✅ ГОТОВ</span> <span style="color:var(--muted);font-weight:600;font-size:.82rem">(reuse of the Unit 1 “Flashcards” engine — new deck)</span></div>
+            <div class="ig-b"><b>Screen:</b> the 10 body flashcards flip up one at a time (picture → word). <b>Mechanic:</b> tap a card to hear the word; “flash mode” shows each for 2 s. <b>Pupils:</b> chorus the word the instant it flips — hands stay down, voices only. <b>Teacher:</b> run a fast flash round after stickers to lock the set. <b style="color:var(--honey-ink)">🧠 Retrieve:</b> flip to word-only → children say it before the picture appears. <b>Offline fallback:</b> the physical A4 flashcards, flashed by hand.</div>
+          </div>
+          <p><span class="ph">Countdown.</span> <span class="en">Finishing in 5… 4… 3… 2… 1… pencils down.</span></p>
+        </td>
+        <td class="mat">GMF1 PB p. 28 + stickers (Navio) · CD1 47 &amp; 49 · <b>🎮 Flashcards</b> (board)</td>
+      </tr>
+
+      <tr>
+        <td class="min">39–47′</td>
+        <td class="stage"><div class="nm">Production · Draw a monster</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Create — listen &amp; draw (everyone draws their own).</span> Play <span class="game">Genki “Let's make a monster!”</span> then dictate: <span class="en">Draw two arms! Ten fingers! One big nose! Three eyes! Two long legs!</span> Each child draws their OWN monster on a mini-whiteboard / paper — counting &amp; size words come straight back (numbers + big/long from Unit 2).</p>
+          <p><b style="color:var(--honey-ink)">🧠 Create:</b> <span class="en">Now add ONE crazy thing — how many ears? How many toes?</span> Children invent &amp; draw.</p>
+          <p><span class="ph">▶ RallyRobin — describe your monster (in pairs).</span> A shows, B counts: <span class="en">One head, four eyes, ten fingers!</span> then swap. Light preview of L2: <span class="en">My monster has got two arms!</span> All pairs talk at once.</p>
+          <p class="diff"><b>💪 Support:</b> a body outline to add parts onto (not from blank). <b>⭐ Extension:</b> say a full sentence — <span class="en">It's got three eyes and two big feet.</span></p>
+        </td>
+        <td class="mat"><b>Genki “Let's make a monster!”</b> mp3 · mini-whiteboards / paper + pens · <span class="game">▶ RallyRobin</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">47–52′</td>
+        <td class="stage"><div class="nm">Consolidation game</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Stand Up–Hand Up–Pair Up (Kagan — all mingle).</span> Music on → <span class="en">Stand up, hand up, pair up!</span> Music stops → each pair: A points to a body part (own or on a card) — <span class="en">What's this?</span> · B: <span class="en">It's my (mouth)!</span> — praise <span class="en">Well done!</span> — new partner. 3–4 rounds; everyone speaks every round.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">When the music stops, do you sit or find a partner?</span> (→ find a partner.) Reset with <span class="en">Freeze!</span> if it gets loud.</p>
+          <p class="diff"><b>💪 Support:</b> keep a body flashcard in hand to point to. <b>⭐ Extension:</b> add a number — <span class="en">How many? — Two ears!</span></p>
+        </td>
+        <td class="mat">music · 1 body card per pupil · <span class="game">▶ Stand Up–Hand Up–Pair Up</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">What did you learn today? Tell your partner two new body words.</span> (20 sec each) — <span class="en">head, nose…</span></p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can name the parts of the body! I can count them!</span></p>
+        </td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, circus stars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in the Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Point to a body part on Speaky / a card: <span class="en">What's this?</span> Child: <span class="en">It's my nose!</span> Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">body cards · Speaky · folder reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 26 (Lesson 1 Vocabulary): ex. 1 “Read and match. Say.”</b> (10 body words → pictures) <b>+ ex. 2 “Count and write.”</b> (four heads, ten…, six eyes…). <b>+ app practice</b> — self-checking micro-set on today's 10 words (picture–word match + <span class="en">What's this?</span>), “listen” button, 5–7 min.</p></td>
+        <td class="mat">Activity Book p. 26 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 3 “At the circus” · Lesson 1 (Vocabulary) — lesson plan &amp; staging (продолжающие)</span>
+    <span>Newson-checked · PB p. 28 · AB p. 26.</span>
+  </div>
+</div>

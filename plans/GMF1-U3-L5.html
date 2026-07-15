@@ -1,0 +1,334 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 3 · Lesson 5 — Phonics · Culture · Literacy: An Action Rhyme (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* projector interactive box */
+  .fx{ background:linear-gradient(180deg,var(--p-soft),var(--card)); border:1.5px solid var(--p); border-radius:10px; padding:8px 11px; margin:7px 0; font-size:.89rem; }
+  .fx .fxh{ font-weight:800; color:var(--p-ink); display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:5px; }
+  .fx .tag{ font-size:.63rem; font-weight:800; text-transform:uppercase; letter-spacing:.04em; border-radius:5px; padding:1px 7px; white-space:nowrap; }
+  .fx .ready{ background:var(--good); color:#fff; } .fx .build{ background:var(--honey); color:var(--honey-ink); }
+  .fx .rk{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.72em; letter-spacing:.03em; }
+  .fx ul{ list-style:none; margin:4px 0 0; padding:0; display:flex; flex-direction:column; gap:3px; }
+  .fx ul li{ padding-left:14px; position:relative; } .fx ul li::before{ content:""; position:absolute; left:1px; top:.55em; width:6px; height:6px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .fx .modes{ border-top:1px dashed var(--line); margin-top:6px; padding-top:5px; }
+  .fx .mode{ margin:3px 0; } .fx .mode b{ color:var(--p-ink); }
+  .opt{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:6px; padding:5px 9px; font-size:.86rem; }
+  .opt b{ color:var(--honey-ink); }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.fx,.opt{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 3 “At the circus” · Lesson 5 — Phonics · Culture · Literacy: An Action Rhyme</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · Phonics + CLIL culture + guided literacy · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 16.11–22.11 · Lesson 22</span><span class="chip">L5 Phon+Cult+Lit</span><span class="chip">continuing group</span><span class="chip">~12 pupils · 3 teams of 4</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>say the /h/ sound</b> (Toby's tongue twister “Helen the happy hippo hops and hops”), <b>understand what British children do on Circus Day at school</b> (paint faces, spin a plate, juggle scarves, ride a special bike, walk on stilts) and <b>read, act out &amp; complete their own “My feelings” action rhyme</b> (When I'm sad, I sit and cry… happy · sad · angry · tired).</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning inside the topic</b> — Unit 3 body parts + <i>have got</i> and <i>describing hair/eyes</i> (L1–L4) applied to /h/ words that are body words (<i>hair · hand · head</i>) and to Circus-Day faces (<i>He's got a big nose / long legs</i>); Jolly track — <b>cumulative recognition review of known letter-sounds</b> (retrieve /r/ from Unit 1 &amp; /s/ from Unit 2) + short-vowel &amp; ch/sh/th/ng <i>written</i> dictation (JP Book 2 p. 29) → <b>moved to differentiated homework</b> to protect pace; tricky words <i>more · before</i>.</li>
+      <li><span class="lb">Personal.</span> L5 packs three strands — <b>keep each tight, protect the pace</b>: heavy dictation → homework; ONE feeling line copied per child; model everything first. <b>Every child responds in every task</b> (own mini-whiteboard / pant-or-freeze show-me / thumbs vote / act the feeling) — never “2 play, 10 watch”.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>say the tongue twister with a clear soft English /h/ and spot words that begin with /h/;</li>
+        <li>name 2–3 things British children do on Circus Day;</li>
+        <li>read the “My feelings” action rhyme, do the actions and complete it (happy · sad · angry · tired);</li>
+        <li>write the first letter-sound they hear (incl. <b>H h</b>) and retrieve <b>/r/</b> and <b>/s/</b> from earlier units.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">Helen</span><span class="w">happy</span><span class="w">hippo</span><span class="w">hops</span><span class="w">hat</span><span class="w">hair</span><span class="w">hand</span><span class="w">head</span><span class="w">horse</span><span class="w">hen</span> <span class="w">paint faces</span><span class="w">spin a plate</span><span class="w">juggle scarves</span><span class="w">ride a bike</span><span class="w">walk on stilts</span> <span class="w">happy</span><span class="w">sad</span><span class="w">angry</span><span class="w">tired</span> <span style="color:var(--muted);font-size:.82rem">(recycled: head·hair·arms·hands·legs·feet·eyes·ears·nose·mouth · I've/He's/She's got · long/short hair · blue/brown/green eyes)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Helen the happy hippo hops and hops. &nbsp;·&nbsp; On Circus Day we (paint our faces / juggle scarves / walk on stilts). &nbsp;·&nbsp; When I'm (sad), I (sit and cry). &nbsp;·&nbsp; He's/She's got (a big nose / long legs). (recycled)</div></div>
+      <div class="r"><div class="k">Form</div><div>Initial <b>/h/ + word</b>. Rhyme = fixed frame <b>When I'm (feeling), I (action)</b> — copied, not built. Feelings = adjectives after <i>I'm</i>.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>English <b>/h/</b> — a soft breath out of the mouth (“fog up a little mirror”, pant like a tired hippo after hopping). <i>Not</i> the hard scrapy Russian «х». Keep it light in <i>Helen, happy, hippo, hops, hand, head</i>.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Coursebook sound: <b>/h/</b> (PB p. 33, CD2 5). Jolly action: <b>hand up to mouth, breathe out h-h-h</b> as if you've been running. Cumulative sound review incl. <b>/r/ (U1) &amp; /s/ (U2)</b>; short-vowel + ch/sh/th/ng written dictation → HW (JP Book 2 p. 29). Tricky words: <i>more · before</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Hold up the hippo: <span class="en">Helen sound — a hard scrapy «х», or a soft breath h-h-h?</span> → soft breath <b>h-h-h</b> (fog a mirror, pant like a hippo).</div>
+      <div class="ccq" style="margin-bottom:12px"><span class="en">On Circus Day — do British children paint their faces or do maths?</span> → <b>Paint faces!</b> &nbsp; <span class="en">Rhyme — When I'm angry, do I smile, or stamp my feet?</span> → <b>Stamp my feet!</b></div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> body parts + <i>have got</i> + hair/eyes known from L1–L4; children can copy letters but not write freely → all writing is <b>trace/copy from a board frame</b>. Emergent readers: rhyme is read together, finger-following. /r/ &amp; /s/ met in Units 1–2. Circus-Day activities are new → model each mime first.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>/h/ made hard/scrapy like Russian «х»</td><td>Mirror: soft breath only, “fog up your hand”, pant like a hippo after hopping — <i>h-h-happy</i>. No throat scrape.</td></tr>
+        <tr><td>Can't tell h-words from others</td><td>Picture anchors (hat·hair·hand·head·horse·happy) + pant-or-freeze show-me; exaggerate the first breath.</td></tr>
+        <tr><td>Rhyme copying slow / letters unknown</td><td>Board frame written LARGE, ONE feeling word per line; feeling words on the board to copy; teacher scribes for weakest.</td></tr>
+        <tr><td>Over-excited in the Circus-Day role-play</td><td>Mime seated/on the spot first, one action at a time; ICQ: <span class="en">Circus juggling — big arms or big feet? — Arms!</span> Volume-control arm to settle.</td></tr>
+        <tr><td>Three strands feel rushed (main L5 risk)</td><td>Timer each block; dictation → HW; fast finishers get the “draw your own feeling face” extension, not more teacher input.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><b style="color:var(--p)">🎮 projector</b> = board interactive (<span style="color:var(--good);font-weight:800">READY</span> / <span style="color:var(--honey-ink);font-weight:800">TO BUILD</span>)</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> <span class="sp">🦝 Speaky</span> hops in on tiptoe like a ballerina hippo: <span class="en">Look — I'm a happy hippo! h-h-h! Today we go to the CIRCUS at school!</span> Class: <span class="en">Hooray!</span></p>
+          <p>Ritual charge: <span class="en">Stand up! Let's get genki!</span> → <b>Genki Disco Warm Up</b> — whole class dances the routine, end seated on the carpet.</p>
+        </td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · Speaky + toy hippo</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Review → into today</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle body parts + have got (everyone moves, all at once).</span> <span class="game">▶ Teacher Says</span> (Mido №116) on their own bodies: <span class="en">Teacher says — touch your HEAD!… your HAIR!… your HANDS!… your feet!</span> No “Teacher says” = don't move (trick them). Fast TPR — nobody just watches.</p>
+          <p><span class="ph">Round 2 — weave in have got (Kagan RallyRobin, pairs take turns):</span> <span class="en">I've got two hands! I've got long/short hair! He's got brown eyes!</span> Notice the /h/ things: <span class="en">head… hair… hands… happy… h-h-h!</span></p>
+          <p>Bridge: <span class="sp">🦝 Speaky</span>: <span class="en">Head, hair, hands, happy hippo — all say h-h-h! Let's learn our sound!</span></p>
+        </td>
+        <td class="mat"><span class="game">▶ Teacher Says</span> (Mido №116) · <span class="game">▶ RallyRobin</span> (Kagan)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come closer to the board — let's sing the ABC song!</span> Sing the alphabet with actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–23′</td>
+        <td class="stage"><div class="nm">Phonics — /h/ + sound review</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise /h/ (~2½′).</span> Toby's tongue twister (PB p. 33, CD2 5): <span class="en">h – h – h. Helen the happy hippo hops and hops!</span> Jolly action — hand up to the mouth, breathe out <i>h-h-h</i> as if you've been running; soft breath, <b>no scrapy «х»</b>. Choral ×3: slow → normal → fast. 2–3 brave solos with the “microphone”. <b>💪 Support:</b> hold up the <b>/h/ picture-anchor card (the hippo)</b> as the sound cue — weak pupils watch it, not the letter.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Phonics Studio — Mode 1 · Sound recognition (cumulative)</span> <span class="tag build">🔨 to build</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> known letter-sounds scattered on the board — <b>include /r/ (Unit 1) &amp; /s/ (Unit 2)</b> among them; ONE lights up at a time.</li>
+              <li><span class="rk">Kids:</span> say the highlighted sound + its Jolly action. <b>Children voice the sound — the app does NOT.</b></li>
+              <li><span class="rk">Teacher:</span> tap to highlight the next; 6–8 sounds only, <b>retrieval not writing</b> (~1½′). The full written dictation moves to differentiated homework.</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">“h or not h?” — whole-class show-me (~2′, all react).</span> Pictures one by one — <i>hat · hair · arm · horse · hand · happy · eye · head</i> (AB p. 30 set). Begins with /h/ → <b>everyone pants h-h-h with a hand at the mouth</b>; not /h/ → freeze, hands on knees. <span class="en">Show me!</span> Fast, nobody just watches.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Flashcards — “h or not h?”</span> <span class="tag ready">✅ ready</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> big picture flashcards, one tap = next card.</li>
+              <li><span class="rk">Kids:</span> whole class pants for /h/ words, freezes for the rest — <b>every child reacts at once</b>.</li>
+              <li><span class="rk">Teacher:</span> use the existing <b>Flashcards</b> tool; exaggerate the first breath.</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">Blend for meaning (~2′).</span> Push sounds together with picture support: <span class="en">/h/ /a/ /t/… hat! /h/ /o/ /p/… hop! /h/ /e/ /n/… hen!</span> Children echo + do the action. <b>Retrieve earlier sounds too:</b> <span class="en">/s/ /u/ /n/… sun! /r/ /a/ /t/… rat!</span></p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Phonics Studio — Mode 2 · Blending</span> <span class="tag build">🔨 to build</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> letters <b>h · a · t</b> slide together → <b>hat</b>, then a picture pops up for meaning.</li>
+              <li><span class="rk">Kids:</span> say each sound as it moves, then the whole word + action.</li>
+              <li><span class="rk">Teacher:</span> control the slide speed. <b>Single sounds stay silent (teacher voices them); the whole word MAY be spoken by the app</b> (browser speech).</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">Segment — CHILDREN break the word (~2½′, analyse + write).</span> No teacher spelling: <span class="en">YOU break it! hat → say it slowly, tap it on your fingers.</span> Class taps <span class="en">/h/ /a/ /t/</span> → then write the FIRST letter on mini-whiteboards → <span class="en">Show me!</span> 3 rounds: <b>hat</b> + 2 retrieval words (sun→s, rat→r). <b>💪 Support:</b> write just the first letter. <b>⭐ Extension:</b> write the WHOLE word (h-a-t), or a capital <b>H</b>.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Phonics Studio — Mode 3 · Segmenting dictation</span> <span class="tag build">🔨 to build</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> a picture + a “say it” button; after kids write, the <b>word appears letter-by-letter for self-check</b>.</li>
+              <li><span class="rk">Kids:</span> hear the whole word → segment it themselves → write → check their own board against the screen.</li>
+              <li><span class="rk">Teacher:</span> press “say it” (whole word). <b>The app never voices separate sounds — segmenting is the children's thinking job.</b></li>
+            </ul>
+          </div>
+
+          <p><span class="ph">Tricky words (~1½′).</span> Flash cards <i>more · before</i>: <span class="en">We just KNOW these — look, say: more… before.</span> Choral ×2 + air-write. Then straight to the face song — keep the pace up.</p>
+
+          <div class="opt"><b>Optional / fast finishers:</b> <span class="game">▶ Fast finger!</span> (AB p. 30 ex. 3, in pairs) — Pupil A says an h-word, Pupil B points fast, then swap; <b>both children work at once</b>. · <b>Kinaesthetic swap for “h or not h?”:</b> a <b>Fly-swatters</b> reskin where <i>everyone</i> has a paper swatter and all “swat the air” on hearing an /h/ word (not two racers at the board).</div>
+        </td>
+        <td class="mat">PB p. 33 / CD2 5 · toy microphone · <b>/h/ picture-anchor (hippo)</b> · h-picture cards (hat·hair·hand·head·horse·happy + arm·eye) · <b>Phonics Studio</b> (board, Modes 1–3) · <b>Flashcards</b> (board) · mini-whiteboards + pens · tricky-word cards <i>more·before</i></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">23–25′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">On Circus Day British children PAINT their faces! Let's make a face!</span> Sing <span class="game">Genki «Make A Face!»</span> — mime painting a happy clown face (eyes, nose, mouth, ears, hair) → <span class="sp">🦝 Speaky</span>: <span class="en">Meet the children at a British school on Circus Day. What do they do?</span></p></td>
+        <td class="mat"><b>Genki «Make A Face!»</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">25–34′</td>
+        <td class="stage"><div class="nm">Culture — Circus Day at school</div><div class="zone">carpet → circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Listen &amp; look (PB p. 34, CD2 7).</span> Photo by photo: <span class="en">‘Circus Day’ is a special day at our school. We paint our faces. We do circus activities.</span> → point: <span class="en">I spin a plate. I juggle scarves. I ride a special bike. I walk on stilts — I've got long legs!</span></p>
+          <p><span class="ph">▶ Let's have a Circus Day! — everyone joins in (mime role-play).</span> One action at a time, all together on the spot: <span class="en">Spin a plate!… Juggle scarves!… Ride the bike!… Walk on stilts — tall, tall, tall!</span> ICQ: <span class="en">Juggling — big arms or big feet? — Arms!</span> Every child mimes each one.</p>
+          <p><span class="ph">Think about YOUR culture (all vote — thumbs).</span> <span class="en">And you? Do YOU go to the circus with your family? Do you paint your face?</span> — thumbs up / down each question, everyone answers.</p>
+        </td>
+        <td class="mat">PB p. 34 / CD2 7 · space to move · <span class="game">▶ Circus-Day mime role-play</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">34–35′</td>
+        <td class="stage"><div class="nm">⚡ Circus stir → settle</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="en">Circus balance! Freeze like an acrobat!</span> Call actions — <span class="en">spin!… juggle!… stilts!… FREEZE!</span> — children move then hold a statue on “Freeze”. Then: <span class="en">Now — tiptoe to your tables like little hippos.</span></p></td>
+        <td class="mat">—</td>
+      </tr>
+
+      <tr>
+        <td class="min">35–47′</td>
+        <td class="stage"><div class="nm">Literacy — “My feelings” action rhyme</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Before you read (PB p. 35).</span> <span class="en">How are you today? Look — happy, sad, angry, tired. Show me a happy face!… a sad face!… an angry face!… a tired face!</span> — everyone pulls each face.</p>
+          <p><span class="ph">Listen, read &amp; ACT the rhyme (CD2 9) — fingers follow.</span> Read <b>“My feelings”</b> together with the action for each line: <span class="en">When I'm sad, I sit and cry. When I'm happy, I laugh and smile. When I'm angry, I stamp my feet. When I'm tired, I go to sleep.</span> Do the actions ×2 — sit·cry, laugh·smile, stamp feet, sleep. CCQ: <span class="en">Angry — smile or stamp? — Stamp my feet!</span></p>
+          <p><span class="ph">Complete YOUR rhyme (literacy product — Activity Book p. 32).</span> AB p. 32 ex. 1 <i>Read and draw the faces</i> (angry·sad·tired·happy) + ex. 2 <i>Read the rhyme. Write.</i> — copy the missing feeling word into each “When I'm ___,” line from the board frame (written LARGE). <b>💪 Support:</b> feeling words listed on the board to copy; teacher scribes for the weakest. <b>⭐ Extension:</b> add a capital letter, or invent one more line (<span class="en">When I'm happy, I…</span>). Timer 8 min, countdown finish: <span class="en">5…4…3…2…1… pencils down!</span></p>
+        </td>
+        <td class="mat">PB p. 35 / CD2 9 · Activity Book p. 32 · pencils/crayons · board frame (4 feeling words) · timer</td>
+      </tr>
+
+      <tr>
+        <td class="min">47–52′</td>
+        <td class="stage"><div class="nm">Perform · Feelings Wall</div><div class="zone">teams of 4</div></td>
+        <td class="flow">
+          <p><span class="ph">RoundRobin in teams (Kagan — everyone performs, everyone speaks).</span> In turn, each child stands, reads ONE line and does its action: <span class="en">When I'm angry, I stamp my feet!</span> — team echoes and copies the action. Round the team till all four have performed. Cooperative song: <span class="game">«We can do it!»</span> (PB p. 35, CD2 10).</p>
+          <p>Then point &amp; chorus the whole rhyme once together — <span class="en">This is OUR feelings rhyme!</span></p>
+        </td>
+        <td class="mat">finished AB p. 32 · <b>«We can do it!»</b> mp3 (CD2 10) · <span class="game">▶ RoundRobin</span> (Kagan)</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p>Quick pairs (Timed Pair Share): <span class="en">Tell your partner — how are you today? And say — h-h-h!</span> (both partners speak + do the feeling action, 20 sec each).</p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can say h-h-h! I can do the feelings rhyme!</span></p>
+        </td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show each child a picture: <span class="en">h or not h?</span> (pant h-h-h or hands on knees) + <span class="en">Show me a feeling — how are you?</span> → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">h / not-h picture cards · folder reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Core (everyone) — Activity Book p. 30 (Lesson 5 Phonics), exercises 1–2</b> (① <i>Write and say</i> — fill in the missing <b>h</b> letters in Toby's tongue twister “_H_elen the __appy hippo __ops and __ops”; ② <i>Colour the words that begin with ‘h’. Say</i> — hat, hair, horse, hand, happy, head) <b>+ p. 31 (Lesson 6 British culture), exercises 1–2</b> (① <i>Listen and number. Say</i> — spin a plate / juggle scarves / ride a special bike / walk on stilts / clown; ② <i>Read and tick ✓. Draw and say</i> — where do you paint your face: birthday party / school / circus / home).</p>
+        <p><b>Differentiated:</b> <i>💪 Support</i> — just ex. 2 on p. 30 (colour &amp; say the h-words), a grown-up may read the words aloud. <i>⭐ Extension</i> — the <b>short-vowel + ch/sh/th/ng dictation</b> we didn't finish in class (JP Book 2, p. 29) as a home write-and-say.</p>
+        <p>💻 <b>Online unit trainer: <a href="https://speakandsmile.ru/gmf1/u3.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u3.html</a></b> — Practice + Booster for Unit 3 (body parts &amp; <i>have got</i>), 5–7 min. Teacher sends the link to parents via BigBen.</p></td>
+        <td class="mat">Activity Book p. 30–31 · JP Book 2 p. 29 (extension) · unit trainer u3.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 3 · Lesson 5 (Phonics · Culture · Literacy) — lesson plan &amp; staging</span>
+    <span>Homework verified against Give Me Five! 1 Activity Book, pp. 30–31 (BigBen L22).</span>
+  </div>
+</div>
