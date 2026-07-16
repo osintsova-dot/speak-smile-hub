@@ -88,10 +88,15 @@ function doneKey(g,date){ return "done:"+g.name+":"+iso(date); }
 // Возвращает ключ (напр. "GMF1-U2-L1"), только если такой план реально есть в window.PLANS.
 function planKeyFor(program, L){
   if (!window.PLANS) return null;
-  const um = /unit\s*(\d+)/i.exec(L.unit||L.sec||"");
-  const lm = /\bL(\d+)\b/i.exec(L.type||"");
-  if (!um || !lm) return null;
-  const key = `${program}-U${um[1]}-L${lm[1]}`;
+  const src = L.unit || L.sec || "";
+  const lm = /\bL(\d+)\b/i.exec(L.type || "");
+  if (!lm) return null;
+  const um = /unit\s*(\d+)/i.exec(src);
+  let unitPart;
+  if (um) unitPart = "U" + um[1];
+  else if (/starter/i.test(src)) unitPart = "Starter";   // Starter «Hello, friends!» (L1–L3)
+  else return null;
+  const key = `${program}-${unitPart}-L${lm[1]}`;
   return window.PLANS[key] ? key : null;
 }
 

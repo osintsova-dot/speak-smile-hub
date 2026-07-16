@@ -1,0 +1,303 @@
+<meta charset="utf-8">
+<title>GMF1 · Starter · Lesson 3 — Story: A big surprise (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Starter “Hello, friends!” · Lesson 3 — Story: A big surprise</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers · continuing group) · 60 min · Story: listen → read → act out (drama) · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 07–13.09 · Lesson 3</span><span class="chip new">✨ STORY</span><span class="chip">~12 pupils · small groups for drama</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>follow and understand the story “A big surprise”</b> (Pupil's Book p. 6, CD1 6) and <b>act it out</b> using key story language: “What's this, Dad? — It's a bike. It's for two children.”, “Let's clean the bike. Good idea!”, “Ring the bell again, Beth.”, “What colour is it? — It's green and red!”, “It's a magic bike! This magic bike is fantastic!”</li>
+      <li><span class="lb">Subsidiary.</span> <b>Retrieve real prior learning from the Starter</b> — <i>colours</i> (Starter L1) and <i>What's this? — It's a (bike)</i> / shapes (Starter L2) — <b>woven straight into the story</b> (the magic bike changes colour, children name each colour). Phonics — <b>recognise</b> the Jolly Book 2 sounds <i>g · o · u · l · f · b</i> (recognise only — light, story lesson) + tricky words by sight <i>he · she · we</i>. Values: look after / clean your things; say <i>thank you</i>.</li>
+      <li><span class="lb">Personal.</span> Keep story listening active (gesture + colour responses, prediction); manage drama noise with Freeze; <b>every child acts in a small group at the same time</b> — no “2 on stage, 10 watching” until the final 30-sec showcase.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>show they understand the story (number the frames, answer with thumbs);</li>
+        <li>ask &amp; answer in role: “What colour is it? — It's green and red!”, “What's this? — It's a bike.”;</li>
+        <li>recognise the sounds <i>g · o · u · l · f · b</i> and read <i>he · she · we</i> by sight;</li>
+        <li>name colours of an object and say “Thank you!” (values).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">bike</span><span class="w">bell</span><span class="w">magic</span><span class="w">clean</span><span class="w">ring</span><span class="w">green</span><span class="w">red</span><span class="w">orange</span><span class="w">blue</span><span class="w">brown</span><span class="w">yellow</span> <span style="color:var(--muted);font-size:.82rem">(recycled: colours · What's this? It's a (bike) · shapes · Toby the dog appears at the end)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What colour is it? — It's green (and red). · What's this, Dad? — It's a bike. It's for two children. · Let's clean the bike. Good idea! · Ring the bell (again). · It's a magic bike! This magic bike is fantastic! · Thank you.</div></div>
+      <div class="r"><div class="k">Form</div><div>What colour + <b>is</b> + it? → <b>It's</b> + colour (<i>and</i> colour). Recycled: What's this? → It's a + noun. Let's + verb (<i>clean / ring</i>) — receptive here.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>colour /ˈkʌlə/ (the <i>ou</i> = /ʌ/, weak <i>-our</i>); connected <b>What colour's it?</b>; linking <i>green and red</i> /griːn ən red/; sentence stress: <i>It's GREEN and RED.</i></div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly (JP Book 2): <b>recognise</b> the sounds <i>g · o · u · l · f · b</i> (recognise only — this is the story lesson, keep it light) · a quick robot-blend of <i>dog · log · bug · fun</i> for fun · tricky words by sight: <i>he · she · we</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Frame 1: “Whose bike is it? — <b>Dad gives it.</b> Who is it for?” → <b>“For two children!”</b> (point to the tandem bike)</div>
+      <div class="ccq">Frame 3: “They ring the bell — what happens?” → <b>“The bike changes colour! It's a MAGIC bike!”</b></div>
+      <div class="ccq" style="margin-bottom:12px">Frames 5–6: “Ring again! What colour is it now?” → <b>“Green, red, orange, blue…!”</b> “Is it a normal bike?” → <b>“No — it's magic! It's fantastic!”</b></div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> colours are known from Starter L1; <i>What's this? — It's a (bike)</i> and shapes from Starter L2; children can name a few colours already. Emergent readers → they FOLLOW the pictures while listening; the teacher points, children don't read the speech bubbles alone.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Long lines block the story (<i>magic bike · for two children</i>)</td><td>Pre-teach 3 things before listening with picture + gesture (magic = sparkle fingers, ring the bell = ring gesture + “ring-ring!”, clean = wipe hands).</td></tr>
+        <tr><td>Children shout colours over the audio</td><td>“Listening hands” rule — hands cupped behind ears while the CD plays; call the colours only when it stops.</td></tr>
+        <tr><td>Colours confused (e.g. brown / blue, orange)</td><td>Colour flashcards up first; fast <span class="call">“Show me RED! Show me GREEN!”</span> — everyone touches something that colour before the story.</td></tr>
+        <tr><td>Drama turns to chaos (riding around the room)</td><td>The bike ride is ON THE SPOT (pedal sitting/standing); roles fixed by colour badges; <span class="call">“Freeze!”</span> resets.</td></tr>
+        <tr><td>Frame cards ordered by one child in the pair</td><td>Rule “one card each turn, take turns” (RallyRobin with cards); praise pairs where both hands work.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset (essential in drama).</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Come in!</span> On the carpet <span class="sp">🦝 Speaky</span> holds a plain grey bike picture and sighs: <span class="en">Look at my bike… it's grey and boring! I want a MAGIC bike!</span> (children giggle — that's the hook).</p>
+          <p><span class="en">Stand up! Warm-up time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the opening ritual, finish seated on the carpet.</p>
+        </td>
+        <td class="mat"><b>Genki «Disco Warm Up»</b> mp3 · Speaky + grey bike picture · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Review → into the story</div><div class="zone">carpet, circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieve the Starter woven into today.</span> <span class="game">▶ Flashcards</span> — flash colour cards fast, class shouts each: <span class="en">Red! Green! Blue! Orange! Yellow! Brown!</span> Then hold up small objects/shapes (Starter L2): <span class="en">What's this? — It's a ball! It's a bike!</span> — 3–4 quick.</p>
+          <p><span class="ph">Show-me — everyone reacts.</span> <span class="en">Show me RED! Touch something GREEN! Point to BLUE!</span> — all move at once (touch clothes / carpet / pencils). Snappy, 30–40 sec.</p>
+          <p><span class="ph">Bridge.</span> <span class="en">Speaky wants a MAGIC bike… and in our story there IS one — it changes colour! Let's find out! What colours will it be?</span> Signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">colour flashcards · object/shape cards · Speaky</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">8–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">To the board — ABC time!</span> Sing the ABC song with actions → settle into phonics.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–18′</td>
+        <td class="stage"><div class="nm">📺 Phonics — recognise sounds</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise (light — this is the story lesson).</span> Flash the six Jolly Book 2 sounds with actions — <span class="en">Here are our new sounds!</span> Point, children make each sound + action: <b>g</b> (bug glug-glug) · <b>o</b> (light switch on-off “o o”) · <b>u</b> (umbrella up) · <b>l</b> (lick a lolly “l-l-l”) · <b>f</b> (fish “ffff”) · <b>b</b> (bat &amp; ball “b b b”). 2 quick rounds — the children make the sound, not the app.</p>
+          <p><span class="ph">Robot blend — “Robot Speaky” (all respond, just for fun).</span> <span class="sp">🦝</span> talks like a robot, one sound at a time: <span class="en">/d/ /o/ /g/…</span> class blends &amp; shouts <span class="en">dog!</span> Do a handful only — <i>dog · log · bug · fun</i> — a picture appears each time for meaning. <b>No writing / segmenting today</b> — keep the load light for the story.</p>
+          <p><span class="ph">Read — thumbs check (all react).</span> Flash 3–4 words; class blends chorally, then <b>thumbs up = real word, thumbs down = silly word</b> (mix in <i>gof · lub</i>). Every child shows a thumb.</p>
+          <p><span class="ph">Tricky words by sight.</span> Flash <span class="en">he · she · we</span> — chorus, point, air-write once. <span class="en">We can't sound these out — we just KNOW them!</span></p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> keep the picture beside the word; ask for just the first sound. <b style="color:var(--p)">Extension:</b> fast finishers think of one more word with <i>b</i> or <i>g</i> — <span class="en">Tell me a /b/ word!</span></p>
+        </td>
+        <td class="mat">JP Book 2 (g o u l f b) · sound/word/picture cards · tricky-word cards (he/she/we) · Speaky (robot voice)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">18–20′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Let's sing about colours!</span> Sing <span class="game">Genki «Colours» (52)</span> (reserve: «What's Your Favourite Colour?») — point to each colour → colours primed → <span class="en">And now — the story! A MAGIC bike!</span></p></td>
+        <td class="mat"><b>Genki «Colours»</b> (52) mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">20–32′</td>
+        <td class="stage"><div class="nm">📺 Story — listen &amp; follow</div><div class="zone">carpet, books/screen</div></td>
+        <td class="flow">
+          <p><span class="ph">Before you read (PB p. 6).</span> Big story picture on screen / books open. <span class="en">What's this? — A bike! What colour is it now?</span> — pairs point &amp; say 15 sec, then chorus. Pre-teach with gesture: <span class="en">magic</span> (sparkle fingers) · <span class="en">ring the bell</span> (ring + “ring-ring!”) · <span class="en">clean</span> (wipe hands).</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Find it! — “What colour is the bike?” <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the Starter <b>“Find it!”</b> engine on the story frames. <b>· How:</b> <span class="sp">🦝</span> asks, a child taps a colour on the bike; it lights up. <b>· Pupils:</b> whole class points to their book / calls it — <span class="en">Green! Red! Orange!</span> then the full line <span class="en">It's green and red.</span> <b>· Teacher:</b> <span class="sp">🦝</span> <span class="en">What colour is it here? Point!</span> — 4–5 frames, quick.</div>
+          </div>
+          <p><span class="ph">Predict (thinking) — before we listen.</span> <span class="en">It's a MAGIC bike. They ring the bell… what happens? Will it stay grey, or CHANGE?</span> Thumbs guess: <b>“change!”</b> (jazz hands) vs. <b>“stay the same”</b> (flat hands). <span class="en">Let's listen and check your guess!</span></p>
+          <p><span class="ph">Listen 1 — global (CD1 6).</span> “Listening hands” behind ears. Teacher points frame by frame; children follow the pictures. Gist check: <span class="en">Is it a magic bike? Show me!</span> (thumbs) <span class="en">Was your guess right — it changes colour?</span></p>
+          <p><span class="ph">Detail check — True or False? (thumbs up / down, all react).</span> Say a sentence, class shows a thumb: <span class="en">The bike is for two children.</span> (👍) · <span class="en">Dad rings the bell.</span> (👎 — <span class="en">Beth rings the bell!</span>) · <span class="en">The bike stays grey.</span> (👎 — <span class="en">It changes colour!</span>) · <span class="en">The magic bike is fantastic.</span> (👍). Re-point the frame to fix any wrong thumb.</p>
+          <p><span class="ph">Listen 2 — active (all respond).</span> Play again; children do the story gestures &amp; call the colours at the right moments: <b>clean</b> (wipe, frames 1–2) · <b>ring the bell</b> (ring gesture + <span class="en">ring-ring!</span>) · at each frame shout the new colour — <span class="en">Green and red! …orange! …blue! …brown and yellow!</span> · big cheer <span class="en">This magic bike is fantastic!</span> CCQs between frames (see box above). At frames 5–6 stop: <span class="en">What colour is it NOW? — Green, red, orange, blue, brown and yellow!</span></p>
+        </td>
+        <td class="mat">PB p. 6 · CD1 6 / animated story (Navio) · <b>“Find it!”</b> (board) · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">32–33′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at carpet</div></td>
+        <td class="flow"><p><span class="en">Everybody up — ride the magic bike!</span> Pedal ON THE SPOT (<span class="en">Wheee!</span>) → teacher rings an invisible bell <span class="en">Ring-ring! What colour is it now?</span> → everyone shouts a colour &amp; “paints” the air: <span class="en">RED! …GREEN! …BLUE!</span> Two rounds → <span class="en">Freeze!</span> → sit at desks.</p></td>
+        <td class="mat">— (voice + gestures)</td>
+      </tr>
+
+      <tr>
+        <td class="min">33–40′</td>
+        <td class="stage"><div class="nm">▶ Build the story</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Story-Sequence</span> (picture re-skin for non-readers — <b>all pairs work at once</b>). Each pair gets 6 mini frame-cards of “A big surprise”, shuffled.</p>
+          <p><span class="ph">Order it.</span> <span class="en">Put the story in order — one card each, take turns!</span> (RallyRobin with cards: A places one, B places the next.) Countdown 2 min. <span class="ph">ICQ:</span> <span class="en">Do we grab all the cards or take turns?</span> (→ take turns!)</p>
+          <p><span class="ph">Check with the audio.</span> Replay CD1 6: pairs touch each card as they hear it — self-check, fix the order. Then choral retell, teacher holds up big frames one by one, class says the line: <span class="en">What's this, Dad? · It's a bike. It's for two children. · Let's clean the bike. · Ring the bell! · Look! It's green and red! · This magic bike is fantastic!</span></p>
+          <div style="background:var(--honey-soft);border:1px solid var(--line);border-left:4px solid var(--p);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Magic-Bike Story-Sequence 1–6 <span style="background:var(--p);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">🔨 СОБРАТЬ</span></div>
+            <div><b>Screen:</b> the 6 story frames (get the bike → clean it → ring the bell / green &amp; red → orange → blue → all the colours “fantastic!”) appear <b>shuffled</b> in a row, each with an empty number badge 1–6. <b>· How:</b> tap two frames to swap them (or drag); a “Check” button lights the correct order green + plays a cheer. <b>· Pupils:</b> the class calls the order — <span class="en">Number one — What's this, Dad? Number two — Let's clean the bike!</span> — and gesture each frame. <b>· Teacher:</b> take votes (<span class="en">Which is first? Hands up!</span>), tap as they decide, then replay CD1 6 to confirm. Mirrors the paired frame-cards on screen for a whole-class check.</div>
+          </div>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> hand that pair only <b>4</b> clearest frames (get bike → clean → ring/colour → all colours) and number the first one for them. <b style="color:var(--p)">Extension:</b> after ordering, say one whole line for each frame from memory before the audio check.</p>
+        </td>
+        <td class="mat">6 story frame mini-cards per pair (print from PB p. 6) · 4-frame set for support pairs · CD1 6 · big frame cards for the board</td>
+      </tr>
+
+      <tr>
+        <td class="min">40–48′</td>
+        <td class="stage"><div class="nm">Act out — drama</div><div class="zone">carpet, groups</div></td>
+        <td class="flow">
+          <p><span class="ph">Roles.</span> Groups of 3–4: <b>Dad</b> (blue badge, gives the bike) · <b>Beth</b> (red, rings the bell) · <b>1–2 children</b> (green + yellow, clean the bike &amp; call the colours). Model once with a strong group.</p>
+          <p><span class="ph">All groups act at the same time.</span> Narrate the story slowly, frame by frame; every group plays it in their own spot (bike ride on the spot!): <span class="en">What's this, Dad? — It's a bike. It's for two children! — Wow, thank you, Dad! Let's clean the bike. Good idea! Ring the bell, Beth… ring-ring! Look — it's green and red now! It's a MAGIC bike! Ring again… green, red, orange! This magic bike is fantastic!</span></p>
+          <p><span class="ph">Create (thinking) — make it yours.</span> Before round 2: <span class="en">Ring the bell ONE more time — YOUR magic colour! What colour is your bike now?</span> Each group adds a line with their own colour: <span class="en">Ring-ring! What colour is it? — It's pink and purple!</span> (support: point to a colour card; extension: invent the whole exchange).</p>
+          <p>Swap roles, run it again — <b>keep it to 2 rounds</b> (don't let the drama over-run; <span class="en">Freeze!</span> the moment energy tips). Volunteers: ONE group shows 30 sec for the class — big applause. <span class="ph">Values:</span> <span class="en">They CLEAN the bike and say thank you — we look after our things too!</span></p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> quieter children get the “clean the bike / call one colour” role (short line + gesture); a colour card in hand. <b style="color:var(--p)">Extension:</b> confident children play Dad / Beth and lead the exchange.</p>
+        </td>
+        <td class="mat">role badges ×4 colours · colour cards · toy bell (optional)</td>
+      </tr>
+
+      <tr>
+        <td class="min">48–54′</td>
+        <td class="stage"><div class="nm">▶ What colour is it?</div><div class="zone">desks, all at once</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Colour the magic bike</span> (targeted settler — <i>What colour is it? — It's…</i> + primes the homework; <b>every child colours every round</b>). Each child has a small bike outline (or a strip of blank shapes) and crayons.</p>
+          <p><span class="sp">🦝 Speaky</span> rings the bell &amp; calls: <span class="en">Ring-ring! It's red and yellow!</span> → all colour that part red &amp; yellow. Do 4–5 rounds, instant show-me each time (<span class="en">Hold it up! What colour is your bike? — It's red and yellow!</span>). Last round free choice: <span class="en">Now YOUR magic colours — ready, go!</span></p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Find it! — “Colour the bike” (model &amp; check) <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the Starter <b>“Find it!”</b> bike with a colour palette. <b>· How:</b> Speaky says the colours, a child taps them onto the bike parts; it fills in. <b>· Pupils:</b> first colour on their <b>own paper bike</b>, then one child mirrors it on screen — <span class="en">It's blue and green!</span> class checks: <span class="en">Yes! It's blue and green!</span> <b>· Teacher:</b> use it to model round 1, then just for the show-me check so every child stays on their own bike.</div>
+          </div>
+        </td>
+        <td class="mat">blank bike outline + crayons per pupil · <b>“Find it!”</b> (board, model/check) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">54–57′</td>
+        <td class="stage"><div class="nm">Reflection + Closing</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ RallyRobin retell (pairs, take turns).</span> Big frames stay on the board in order. <span class="en">Tell the story to your partner — one line each, take turns!</span> A: <span class="en">What's this, Dad?</span> → B: <span class="en">It's a bike!</span> → A: <span class="en">Let's clean the bike!</span> … (support: just point &amp; say one colour per frame; extension: full lines to the end).</p>
+          <p>Then: <span class="en">Show your partner YOUR magic bike — what colour is it?</span> (20 sec each). “I can…” badge: <span class="en">Colour your badge — I can say the colours!</span></p>
+          <p><span class="en">Well done, superstars! Let's sing Goodbye. Your homework is in your Activity Book and on the app!</span> Sing Goodbye.</p>
+        </td>
+        <td class="mat">“I can…” badges · <b>Goodbye song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Hold up one colour card / one story frame: child answers <span class="en">What colour is it? — It's green!</span> or says any line from the frame (<span class="en">It's a magic bike!</span>). Said it → out: <span class="en">Well done! Take care! Goodbye!</span></p></td>
+        <td class="mat">colour cards · story frame cards · folder reward stickers 🦝</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow">
+          <p><b>Activity Book — p. 4, exercises 1–2 (Starter Lesson 3 Story · After you read):</b> ① <i>Read and colour the bike. Say</i> — colour the two bikes to match the lines (<i>It's green and orange! · It's blue and yellow!</i>) · ② <i>Colour and write. Ask and answer</i> — colour your OWN magic bike, then write <span class="en">It's [___] and [___].</span> and ask a grown-up <span class="en">What colour is it?</span> + app: colours / story micro-set (5–7 min).</p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:2px"><b style="color:var(--good)">Support (core):</b> ex. 1 (colour the two bikes) — the writing in ex. 2 is optional / trace if hard, just colour &amp; say. <b style="color:var(--p)">Extension (challenge):</b> after ex. 2, tell a grown-up the story with the pictures — one line per frame.</p>
+          <p>💻 Онлайн-тренажёр: <a href="https://speakandsmile.ru/gmf1/" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/</a> — Practice по цветам / словам урока (5–7 мин).</p>
+        </td>
+        <td class="mat">Activity Book p. 4 · app (homework link) · тренажёр gmf1</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Starter “Hello, friends!” · Lesson 3 (Story: A big surprise) — lesson plan &amp; staging</span>
+    <span>Story verified against Pupil's Book p. 6 (CD1 6); homework against Activity Book p. 4.</span>
+  </div>
+</div>

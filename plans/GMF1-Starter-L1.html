@@ -1,0 +1,302 @@
+<meta charset="utf-8">
+<title>GMF1 · Starter · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* added: interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Starter Unit “Hello, friends!” · Lesson 1 — Vocabulary</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers · <b>continuing line</b>) · 60 min · <b>FIRST LESSON OF THE YEAR</b> · Welcome + reactivation + Phonics · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 03.09–06.09</span><span class="chip new">✨ NEW · Hello / What's your name? — I'm… + class signals as year rituals</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">Pupil's Book p.4 · AB p.2</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>greet and introduce themselves</b> — “Hello! What's your name? — I'm (Jake). Goodbye.” — and <b>confidently retrieve numbers 1–10</b> (this lesson's anchor), reactivating them after the summer in the friendly market context.</li>
+      <li><span class="lb">Subsidiary.</span> Sing <i>What's your name?</i> &amp; say <i>The ten balloons</i> chant; <b>re-warm</b> colours, shapes (circle · square · triangle) &amp; days of the week woven into greetings; phonics — Jolly <b>Group 1: s · a · t · i · p · n</b> (recognise → blend; quick review for the continuing line + set up the year's phonics routine); tricky words <i>the · a · I · is</i>; <b>establish the Classroom Management Toolkit</b> (Class?–Yes!, WiFi, Give me five, Freeze) as rituals for the whole year.</li>
+      <li><span class="lb">Personal.</span> Front-load <b>Bond</b> on day one — learn/greet every name, keep teacher-talk low, ICQ before every task; run a stirrer→settler rhythm with songs &amp; signals; catch &amp; recast a run-together <i>Whatsyourname</i> and the /s/ vs /z/ in <i>snake · sun</i>.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>say “Hello / Goodbye”, ask &amp; answer “What's your name? — I'm (Jake)”;</li>
+        <li>count &amp; say numbers 1–10 and answer “How many? — Ten!”;</li>
+        <li>reactivate colours, shapes &amp; days; hear &amp; blend the Group-1 sounds s·a·t·i·p·n;</li>
+        <li>use this year's attention signals (Class?–Yes!, WiFi, Freeze).</li>
+      </ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">one…ten</span><span class="w">circle</span><span class="w">square</span><span class="w">triangle</span><span class="w">red</span><span class="w">blue</span><span class="w">green</span><span class="w">yellow</span><span class="w">Monday…Sunday</span></div></div>
+      <div class="r"><div class="k">Structure</div><div><b>Hello. / Goodbye.</b> &nbsp;·&nbsp; What's your name? — I'm (Jake). &nbsp;·&nbsp; <i>recycled:</i> What's this? — It's a (ball). · How many? — (Ten). · What colour is it? — It's (red). · What day is it today? — It's (Monday).</div></div>
+      <div class="r"><div class="k">Form</div><div>Fixed greeting chunks. <b>I'm</b> = I + am (contraction) — keep as one chunk, don't unpack. “It's a…” for shapes; count 1→10 as a rhythmic sequence.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div><i>What's your name?</i> — don't run together, chunk it: <i>What's · your · name</i>; <i>I'm</i> /aɪm/ (one beat); /θ/ in <i>three</i>; /s/ vs /z/ in <i>snake · sun</i>; stress-count rhythm 1–10.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly <b>Group 1: s · a · t · i · p · n</b> (recognise → blend; continuing = quick review + set the routine). Key words: <i>snake · sun · ant · apple · tennis · mouse · pig · net</i>. Tricky words: <b>the · a · I · is</b>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“When you <b>meet</b> a friend, do you say <b>Hello</b> or <b>Goodbye</b>?” → Hello. “When you <b>leave</b>?” → Goodbye. “Do I ask <b>What's your name?</b> or answer <b>I'm Jake</b>?” (point to who speaks).</div>
+      <div class="ccq" style="margin-bottom:10px">‘s’: “<b>snake</b> — is it /s/ (soft, like a snake) or /z/ (buzzy)?” → /s/. Numbers: hold up fingers — “How many? Show me!”</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> continuing pupils have <b>met numbers 1–10, basic colours, shapes &amp; days</b> before (recognition level) — today is <i>reactivation</i>, not first teaching. They are non-/emergent readers → rely on pictures, mime, rhythm &amp; audio, not printed text. It is <b>Day 1</b>: some names/routines are new to you and to them → build Bond first, set signals early, keep writing to a minimum.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Day-1 shyness — a new/quiet child won't say their name</td><td>Low pressure: choral first, then a friendly ball-pass; a wave or a whispered name is fine — <span class="en">Well done! Hello, ___!</span> Come back to them later.</td></tr>
+        <tr><td>Over-excitement on the first day (loud carpet)</td><td>Teach &amp; use the signals in the first 10 min: <span class="en">Class? — Yes! / Freeze!</span> + volume-control arm; follow every stirrer with a settler.</td></tr>
+        <tr><td>Numbers forgotten over summer / jumbled order</td><td>Count on fingers Jolly-style, chorally, with the <i>ten balloons</i> rhythm; touch each finger 1→10.</td></tr>
+        <tr><td><i>What's your name?</i> said as one blur</td><td>Chunk it with claps: <span class="en">What's · your · name?</span> — model slow → fast.</td></tr>
+        <tr><td>‘s’ read as /z/ (or split from blends)</td><td>Weave the snake hand: <span class="en">/s/ — like a snake, sssss.</span> Blend with a finger slide: <span class="en">/s/ /u/ /n/… sun!</span></td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals <span style="font-weight:600;color:var(--muted);text-transform:none;letter-spacing:0">(set up TODAY as year rituals)</span></div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Welcome / Bond</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Bond — first day.</span> Greet <b>every</b> child at the door, crouch to their level, smile: <span class="en">Hello! Welcome back! I'm Miss ___. What's your name?</span> Hand each a name badge/sticker. On the carpet, <span class="sp">🦝 Speaky</span> pops up waving: <span class="en">Hello, friends! I'm Speaky! I'm SO happy to see you — welcome back to English!</span> Class waves back: <span class="en">Hello, Speaky!</span></p>
+          <p><span class="ph">Curiosity hook.</span> <span class="sp">🦝</span> whispers: <span class="en">This year we have MAGIC signals. Watch…</span> → lead straight into the warm-up.</p>
+        </td>
+        <td class="mat"><b>Name badges/stickers</b> · Speaky · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">4–9′</td>
+        <td class="stage"><div class="nm">Warm-up + signals</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Stir.</span> <span class="en">Stand up! Let's wake up our English!</span> → <span class="game">▶ Genki Disco Warm Up</span> — call the moves (jump · spin · clap · stamp).</p>
+          <p><span class="ph">Teach the signals (set the year's rituals).</span> Freeze the disco to introduce each one as a game: <span class="en">When I say “Class!”, you say “Yes!” and freeze. Ready? — Class! — Yes!</span> Try <span class="en">WiFi 🖐</span> (silent, hands up, tune in) and <span class="en">Freeze!</span> Practise 2–3× — make it fun, praise fast responders.</p>
+          <p>Settle with the volume arm: <span class="en">And… down. Sit on the carpet.</span></p>
+        </td>
+        <td class="mat"><b>Genki «Disco Warm Up»</b> (01) mp3 · signals poster</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–15′</td>
+        <td class="stage"><div class="nm">Hello / What's your name?</div><div class="zone">carpet circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Present &amp; sing.</span> <span class="en">Now — let's learn each other's names!</span> Play <b>What's your name?</b> (Pupil's Book p.4, CD1 1). Listen &amp; do a wave/point action; 2nd play — join in. Model the exchange with Speaky: <span class="sp">🦝</span> <span class="en">Hello! What's your name?</span> → you: <span class="en">I'm Miss ___!</span> Chunk it with claps: <span class="en">What's · your · name?</span></p>
+          <div class="ig">🎮 <b>Interactive (projector): Greeting spinner (реролл ✅ “What's this?” spinner).</b> The wheel is faces/names; a rotating child taps to spin → it lands on a classmate. Whole class chants to them <span class="en">Hello! What's your name?</span> and that child answers <span class="en">I'm ___!</span> Everyone waves = all engaged each turn. <span class="ph">Offline reserve:</span> pass a soft ball round the circle instead of the wheel.</div>
+          <p><span class="game">▶ Name-ball circle (Kagan RallyRobin):</span> pass the ball round the circle — the one holding it says <span class="en">I'm ___!</span>, the next asks <span class="en">What's your name?</span> Everyone gets a turn, no waiting long.</p>
+          <span class="diff"><span class="sup">💪 Support:</span> a wave + whispered name is enough — recast warmly. <span class="ext">⭐ Extension:</span> add <span class="en">Hello, ___! Nice to meet you!</span></span>
+        </td>
+        <td class="mat"><b>«What's your name?»</b> (CD1 1) · PB p.4 · soft ball · <b>Greeting spinner</b> (board)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">15–17′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come closer to the board — let's sing our sounds!</span> Sing the phonics / ABC song with the Jolly actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>Phonics / ABC song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–28′</td>
+        <td class="stage"><div class="nm">Phonics · s a t i p n</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise (Group 1, quick review + set the routine).</span> Show each letter with its Jolly action &amp; sound — class copies: <b>s</b> weave a snake hand <span class="en">/s/… sssss (snake, sun)</span> · <b>a</b> wiggle fingers on your arm <span class="en">/a/ (ants, apple)</span> · <b>t</b> turn your head, tennis <span class="en">/t/ (tennis, top)</span> · <b>i</b> squeaky mouse fingers <span class="en">/i/ (ink, pig)</span> · <b>p</b> puff out a candle <span class="en">/p/ (pig, top)</span> · <b>n</b> aeroplane arms <span class="en">/n/… nnnn (net, sun)</span>.</p>
+          <div class="ig">🎮 <b>Interactive (projector): Flashcards — sound reveal (✅ Flashcards engine).</b> A picture uncovers slowly; class shouts the <b>first sound</b> before the reveal — <span class="en">/s/… snake!</span> Then all together blend <span class="en">/s/ /u/ /n/… sun!</span> Every child points a “slide finger” = all blend at once. <span class="ph">Offline reserve:</span> hold A5 picture cards, reveal by hand.</div>
+          <p><span class="game">▶ Take Off–Touch Down (Kagan):</span> <span class="en">Stand up if you hear /s/… sun!… cat!… snake!… net!</span> (mix in non-/s/ words — everyone reacts every time). Repeat quickly for /t/ and /p/.</p>
+          <p><span class="ph">Blend &amp; tricky words.</span> Finger-slide 2–3 CVC blends: <span class="en">/s/ /a/ /t/… sat! · /p/ /i/ /n/… pin! · /n/ /e/ /t/… net!</span> Then flash tricky words <b>the · a · I · is</b> — <span class="en">These are tricky — we just KNOW them, like magic words!</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> keep the Jolly action going — the body remembers the sound. <span class="ext">⭐ Extension:</span> “What's the FIRST sound in <i>pig</i>?” → /p/.</span>
+          <p><span class="asr">✔ <b>Assess:</b> Take Off–Touch Down is your live check — scan for who stands on the wrong sound; recast on the spot. Note who needs the actions re-taught next lesson.</span></p>
+        </td>
+        <td class="mat"><b>Jolly Phonics Group 1</b> cards (s a t i p n) · picture cards (snake·ant·tennis·pig·net) · board</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">28–30′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="en">Now — let's count!</span> Say <span class="game">The ten balloons chant</span> (PB p.4, CD1 3) with claps &amp; finger-counting 1→10 → energises &amp; leads straight into the numbers block. Settle: <span class="en">And… freeze!</span></p></td>
+        <td class="mat"><b>«The ten balloons» chant</b> (CD1 3) · PB p.4</td>
+      </tr>
+
+      <tr>
+        <td class="min">30–37′</td>
+        <td class="stage"><div class="nm">Numbers 1–10 (anchor)</div><div class="zone">carpet → book</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieve — the lesson's anchor.</span> Choral count 1→10 on fingers, then whisper-count, then shout-count (control the volume). CCQ with fingers: <span class="en">How many? Show me!</span> Hold up 3 fingers → class says <span class="en">Three!</span></p>
+          <div class="ig">🎮 <b>Interactive (projector): “Find it!” — the market scene (✅ Find it! engine).</b> Tap Speaky — <span class="sp">🦝</span> <span class="en">Can you find the balloons? How many? Count!</span> The class scans the PB p.4 market scene on screen, points &amp; answers <span class="en">Ten balloons!</span> Repeat for balls · books · dogs · hats · socks (2–3 rounds). Every child points &amp; counts on fingers = all engaged. <span class="ph">Offline reserve:</span> the big Pupil's Book p.4 scene — point &amp; count.</div>
+          <p><span class="ph">Book grounding (light, no long writing).</span> <span class="en">Open your book at page 4. Find, count — how many bananas? Point!</span> Count together; a quick number trace only if time. Save the writing for homework.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do we count or colour now?</span> (→ count!)</p>
+          <span class="diff"><span class="sup">💪 Support:</span> count aloud together, touch each item on the page. <span class="ext">⭐ Extension:</span> <span class="en">How many dogs AND balls?</span> (add them).</span>
+        </td>
+        <td class="mat"><b>Find it!</b> (board) · PB p.4 · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">37–43′</td>
+        <td class="stage"><div class="nm">Reactivation carousel</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Reactivate colours · shapes · days — woven into greetings.</span> <span class="game">▶ Mix–Pair–Share (Kagan):</span> play music → <span class="en">Mix! …Freeze! Hand up — pair up!</span> When paired, first they greet: <span class="en">Hello! What's your name?</span> then answer the flashed prompt:</p>
+          <p>Round 1 <span class="ph">colours:</span> hold up a colour card — <span class="en">What colour is it? — It's red!</span> · Round 2 <span class="ph">shapes:</span> <span class="en">What's this? — It's a circle / square / triangle!</span> · Round 3 <span class="ph">days:</span> <span class="en">What day is it today? — It's Monday!</span> (point to the days poster). Re-mix between rounds so pairs change.</p>
+          <p><span class="asr">✔ <b>Assess:</b> circulate — who still hesitates on a colour/shape/day word? Jot 1–2 names to support in the game &amp; next lesson.</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> give the pair the picture card to hold as a cue. <span class="ext">⭐ Extension:</span> add “It's a <b>big red</b> circle” or the next day — <span class="en">Today Monday, tomorrow… Tuesday!</span></span>
+        </td>
+        <td class="mat">music · colour cards · shape cards · days-of-the-week poster</td>
+      </tr>
+
+      <tr>
+        <td class="min">43–49′</td>
+        <td class="stage"><div class="nm">Game · consolidate</div><div class="zone">standing → pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Genki Rock, Paper, Scissors (bonding line game, first-day favourite).</span> Two lines of children. Each pair face off: greet <span class="en">Hello! What's your name? — I'm ___!</span>, then play Rock–Paper–Scissors. Winner stays &amp; steps up the line; loser cheers <span class="en">Well done!</span> and rejoins. Everyone is greeting or playing the whole time — no one waits.</p>
+          <div class="ig">🎮 <b>Interactive (projector): Quiz-Quiz-Trade cards (🔨 reskin — number/colour/shape reveal).</b> Between rounds, flash a card set on screen; the winner of each duel taps a card &amp; the pair answers together <span class="en">Three! · Red! · It's a triangle!</span> before trading. <span class="ph">Offline reserve:</span> each child holds a paper Q-card, quizzes their partner, then trades cards.</div>
+          <p>Reset if loud: <span class="en">Class? — Yes! Freeze!</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> keep a shy child near you, be their first partner. <span class="ext">⭐ Extension:</span> after the greeting, ask <span class="en">How old are you? — I'm seven!</span></span>
+        </td>
+        <td class="mat"><b>Genki «Rock Paper Scissors»</b> mp3 · number/colour/shape cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">49–53′</td>
+        <td class="stage"><div class="nm">Class promise · rules</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Settle — set the year.</span> <span class="sp">🦝</span> <span class="en">In our English class, we make a promise!</span> Show 3 simple picture rules &amp; mime each: <span class="en">We LISTEN 👂 · We are KIND 💛 · We TRY our best 💪.</span> Class repeats &amp; does a thumbs-up together. Recall the signals once more: <span class="en">Class? — Yes! WiFi! Freeze!</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> mime-only is fine. <span class="ext">⭐ Extension:</span> a child adds one more class rule.</span>
+        </td>
+        <td class="mat">3 picture rule cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">53–56′</td>
+        <td class="stage"><div class="nm">Reflection · Goodbye</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share (Kagan):</span> <span class="en">Tell your partner your name and ONE number — “I'm Anna! Number… five!”</span> (15 sec each).</p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can say Hello and my name!</span> Then: <span class="en">Well done today, superstars! Let's sing Goodbye.</span> Sing the Goodbye song with waves. <span class="en">Thank you for the lesson!</span></p>
+        </td>
+        <td class="mat">“I can…” badges · <b>Goodbye song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">56–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Greet each child one-to-one: <span class="en">Goodbye! What's your name?</span> → they answer <span class="en">I'm ___! Goodbye!</span> Out with a wave &amp; a reward sticker: <span class="en">See you next time!</span></p></td>
+        <td class="mat">reward stickers 🦝 · name badges to keep</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 2 (Starter Lesson 1, Vocabulary):</b> ex. 1 <i>Read and match. Say</i> — join the number words to the fingers (one → 1 … ten → 10) + ex. 2 <i>Think and write. Say</i> — complete the number sausages / sequences (1 _ 3 _ 5 · 3 _ 5 _ 7 · 5 _ 7 _ 9 · 6 _ 8 _ 10). <b>+ app trainer (Starter)</b> — today's words (numbers 1–10 · shapes · days) picture–word, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.2 · app (Starter homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Starter Unit · Lesson 1 (Vocabulary) “Hello, friends!” — FIRST LESSON of the year (continuing line)</span>
+    <span>Pupil's Book p.4 · Activity Book p.2 · Phonics Jolly Group 1 s·a·t·i·p·n.</span>
+  </div>
+</div>
