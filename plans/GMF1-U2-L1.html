@@ -54,12 +54,21 @@
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
+  /* added: interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
   @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
@@ -67,8 +76,8 @@
 <div class="wrap">
   <div class="hd">
     <div class="t">🦝 Give Me Five! 1 · Unit 2 “Happy birthday!” · Lesson 1 — Vocabulary: Toys</div>
-    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · PPP + TPR + Phonics · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 05.10 · Lesson 11</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · 3 teams of 4</span></div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers · <b>continuing line</b>) · 60 min · PPP + TPR + Phonics · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 05.10 · Lesson 11</span><span class="chip new">✨ NEW · 10 toys</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">Pupil's Book p.12 · AB p.16</span></div>
   </div>
 
   <!-- AIMS -->
@@ -86,6 +95,8 @@
         <li>ask &amp; answer “What is it? — It's a…” and “Is it a…? — Yes, it is / No, it isn't”;</li>
         <li>hear, blend &amp; segment words with voiced <b>th</b> /ð/.</li>
       </ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
     </div>
   </div>
 
@@ -138,6 +149,8 @@
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
     <span><span class="sp">🦝</span> = Speaky lines</span>
     <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
     <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
@@ -163,6 +176,8 @@
           <p><span class="ph">Recycle Unit 1 + Starter (everyone has a card).</span> Deal <b>one picture card per child</b> — mostly Unit 1 school things (pencil, book, ruler, bag…) with a few toys mixed in. <span class="ph">RallyRobin in pairs:</span> A hides the card behind their back — <span class="en">Where's my pencil?</span> · B: <span class="en">It's here!</span> — then swap. <b>All pairs talk at once</b>, no one waits.</p>
           <p><span class="ph">Colours &amp; numbers — whole-class show-me.</span> Hold up a colour card: <span class="en">It's a red…?</span> everyone points to a red thing / calls the colour. Numbers on fingers: <span class="en">How many? — Five!</span> — <b>every child shows the fingers</b>.</p>
           <p><span class="ph">Bridge into toys.</span> <span class="sp">🦝 Speaky</span>: <span class="en">On your birthday you get… TOYS!</span> Preview the same frames: <span class="en">Where's my ball? — It's here! It's a red car! How many kites?</span> Signal: <span class="en">Class? — Yes!</span></p>
+          <p><span class="asr">✔ <b>Assess:</b> listen as pairs swap — who still misses a colour/number word from Starter/U1? Note 1–2 names to seat near you at Presentation.</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> give the pair a card with a strong single object + colour cue. <span class="ext">⭐ Extension:</span> stretch to two words — <span class="en">It's a big red car!</span> (previews U2 L4 adjectives).</span>
         </td>
         <td class="mat">1 picture card per pupil (Unit 1 things + a few toys) · colour cards · Speaky · <span class="game">▶ RallyRobin</span></td>
       </tr>
@@ -179,10 +194,13 @@
         <td class="stage"><div class="nm">Phonics — th /ð/</div><div class="zone">at the board</div></td>
         <td class="flow">
           <p><span class="ph">Recognise.</span> Model the Jolly <b>th</b> action (tongue between teeth, soft buzz): <span class="en">th… this, that.</span> Children copy the sound &amp; gesture (children voice the sound, not the app).</p>
+          <div class="ig">🎮 <b>Interactive (projector): Flashcards — th reveal.</b> <span class="ph">Screen:</span> a th-word picture (<i>this · that · them</i>) uncovers slowly. <span class="ph">Mechanics:</span> class shouts the first sound before the reveal, then blends. <span class="ph">Language:</span> <span class="en">/th/… this!</span> then <span class="en">/th/ /i/ /s/… this!</span> <span class="ph">Teacher:</span> tap to uncover; every child points a “slide finger” = all blend at once. <span class="ph">Status ✅ ready</span> (reuse Flashcards-reveal engine, th deck). <span class="ph">Offline reserve:</span> A5 th picture cards, reveal by hand.</div>
           <p><span class="ph">“th or not th?” — whole-class show-me (all react).</span> Give <b>every child a th-card</b> (tongue-between-teeth picture). Say words one by one — <i>this · sun · that · dog · them · with · red…</i> If it has voiced <b>th</b> /ð/ → <b>everyone stands up &amp; holds up the th-card + buzzes</b>; if not → sit, hands on knees. <span class="en">Show me!</span> Fast, 8–10 words — nobody is just watching.</p>
           <p><span class="game">▶ Fly Swatters — team relay (rotates fast).</span> Cards on the board (<i>this, that, them, with</i> + distractors). Teams line up; each round <b>one runner per team</b> swats the word you call — <span class="en">Swat “this”!</span> — while <b>the whole seated class holds up their matching th-card &amp; says the word chorally</b>. New runners every round so all get a turn in ~2 min.</p>
           <p><span class="ph">Blend (all together).</span> <span class="en">Let's push them together: /th/ /i/ /s/… this!</span> Then <i>that, them</i> + a picture for meaning.</p>
-          <p><span class="ph">Segment · dictation (everyone writes).</span> <span class="en">Now YOU write. Listen…</span> say a word once → all children write on mini-whiteboards → <span class="en">Show me!</span> → reveal &amp; check. Today's focus: voiced <b>th</b> — <i>this, that, with, them</i>.</p>
+          <p><span class="ph">Segment · find the th (everyone shows).</span> Say a word once → children draw the <b>th</b> shape in the air OR trace <b>th</b> on a mini-whiteboard → <span class="en">Show me!</span> → reveal &amp; check. Today's focus: voiced <b>th</b> — <i>this, that, with, them</i>. <span style="color:var(--muted)">(October, emergent readers — trace the digraph, not the whole word.)</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> a picture beside each word; they only find &amp; trace the <b>th</b>. <span class="ext">⭐ Extension:</span> where is the /ð/ — at the <i>start</i> (this) or in the <i>middle</i> (mother)?</span>
+          <p><span class="asr">✔ <b>Assess:</b> the “Show me!” boards are your live check — scan for who says /ð/ as “z”/“d”; recast on the spot.</span></p>
         </td>
         <td class="mat"><b>th</b> word/picture cards · 1 th-card per pupil · 2 fly swatters · mini-whiteboards + pens</td>
       </tr>
@@ -200,10 +218,12 @@
         <td class="flow">
           <p><span class="ph">Presentation — toys.</span> <span class="game">▶ Peek-a-boo cards</span> — slowly slide each toy flashcard out of the “present” bag: <span class="en">What is it?</span> Reveal fully → model <span class="en">It's a robot. Robot.</span> Choral drill ×3, then 2–3 children individually.</p>
           <p>Contrast the tricky rhyming pair (hold both): <span class="en">It's a ball. It's a doll.</span></p>
+          <div class="ig">🎮 <b>Interactive (projector): What is it? — toy spinner (колесо toys).</b> <span class="ph">Screen:</span> a wheel of the 10 toys; a rotating child taps to spin. <span class="ph">Mechanics:</span> <b>Predict before the reveal</b> — <span class="en">Is it a kite? — Yes / No!</span> (recycles U2 <i>Is it a…?</i>); the wheel lands → whole class chants. <span class="ph">Language:</span> <span class="en">What is it? — It's a robot!</span> <span class="ph">Teacher:</span> every child shows 👍/👎 on the predict = all engaged; tap-to-spin rotates each round. <span class="ph">Status ✅ ready</span> (reuse What's this? spinner, toys deck). <span class="ph">Offline reserve:</span> shuffle the flashcard stack, flip the top card.</div>
           <p><span class="game">▶ Quiz-Quiz-Trade</span> (Kagan — stand up, one card each): pupil A holds a card to their chest, asks <span class="en">What is it?</span> · B answers <span class="en">It's a [kite].</span> · praise <span class="en">Well done!</span> · <b>swap cards</b>, find a new partner. Music stops = freeze.</p>
           <p><span class="ph">ICQ:</span> <span class="en">Do you show your card or hide it?</span> (→ hide it — hold it to your chest.)</p>
+          <span class="diff"><span class="sup">💪 Support:</span> pair a shy child with the “praiser” turn first; keep the card visible. <span class="ext">⭐ Extension:</span> add a colour — <span class="en">It's a red car!</span></span>
         </td>
-        <td class="mat">toy flashcards + present bag · 1 mini-card per pupil · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+        <td class="mat">toy flashcards + present bag · 1 mini-card per pupil · <b>Toy spinner</b> (board) · <span class="game">▶ Quiz-Quiz-Trade</span></td>
       </tr>
 
       <tr>
@@ -212,6 +232,7 @@
         <td class="flow">
           <p><span class="en">Well done! Now — to your tables, come with me!</span> Hand out toy pictures (GMF1 don't read → order <b>pictures</b>, not text).</p>
           <p><span class="ph">Listen &amp; order (all hands busy).</span> Play the GMF1 Vocabulary song / Toys chant: <span class="en">What do you hear first? Put the toys in order.</span> <b>Every child lays out their own set</b>; then <span class="en">Now let's sing!</span> <span class="game">▶ Order-by-ear</span> — check together on the board.</p>
+          <span class="diff"><span class="sup">💪 Support:</span> give a 4-card set, not all — order fewer. <span class="ext">⭐ Extension:</span> whisper the toy as you place it — <span class="en">It's a train!</span></span>
         </td>
         <td class="mat">toy pictures (a set per pupil) · GMF1 Vocabulary song (Navio) · board</td>
       </tr>
@@ -237,11 +258,13 @@
         <td class="min">44–53′</td>
         <td class="stage"><div class="nm">Guess &amp; check</div><div class="zone">carpet → teams</div></td>
         <td class="flow">
-          <p><span class="ph">Model (board).</span> tap <span class="sp">🦝</span> — a toy is hidden behind a box. Class guesses: <span class="en">Is it a robot?</span> Speaky: <span class="en">No, it isn't!</span> … <span class="en">Is it a kite? — Yes, it is!</span> (2–3 times, to model the question &amp; both answers).</p>
+          <div class="ig">🎮 <b>Interactive (projector): Find it! — the birthday scene.</b> <span class="ph">Screen:</span> a birthday-party scene full of toys. Tap Speaky — <span class="sp">🦝</span> hides one behind a box. <span class="ph">Mechanics:</span> whole class guesses, points on screen; reveal on correct. <span class="ph">Language:</span> <span class="en">Is it a robot? — No, it isn't! … Is it a kite? — Yes, it is!</span> (2–3 rounds — models the question + both answers for all). <span class="ph">Teacher:</span> every child points at their own toy card while guessing = no watchers. <span class="ph">Status ✅ ready</span> (reuse Find it! engine, toys scene). <span class="ph">Offline reserve:</span> real hide-box + toy card on the board.</div>
           <p><span class="ph">▶ Mystery Bag — Is it a…? — in teams of 4 (all guess).</span> A feely bag holds toy cards / small toys. Child 1 secretly holds one; <b>all three others guess</b> — quick fire round the group, each with a toy in front of them to point at: <span class="en">Is it a car?</span> Holder answers honestly — <span class="en">No, it isn't.</span> / <span class="en">Yes, it is!</span> The correct guesser takes the next turn, so the bag keeps moving and no one sits idle. Rotate the holder each round.</p>
           <p>Reset if it gets loud: <span class="en">Freeze!</span></p>
+          <p><span class="asr">✔ <b>Assess:</b> stand behind one team at a time — can each child produce <span class="en">Is it a…?</span> and the right short answer unprompted? That's the lesson's success check.</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> keep a picture strip of the toys visible to point to while guessing. <span class="ext">⭐ Extension:</span> <b>create a clue</b> — <span class="en">It's red. Is it a car?</span> (adds a colour before the guess).</span>
         </td>
-        <td class="mat">feely bag + toy cards/small toys per team · hide-box (board, model) · Speaky</td>
+        <td class="mat">feely bag + toy cards/small toys per team · <b>Find it!</b> (board, model) · Speaky</td>
       </tr>
 
       <tr>
@@ -271,7 +294,8 @@
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 16, exercises 1–2 (Lesson 1 Vocabulary):</b> ① <i>Read, find and colour</i> (a blue ball · a red train · a brown teddy · a green kite · a yellow car · an orange scooter) · ② <i>Circle and write</i> (toy word-snake). + app: a self-checking micro-set on today's toys (picture–word match + <span class="en">What is it?</span>), 5–7 min.</p>
+        <td class="flow"><p><b>Activity Book — p. 16, exercises 1–2 (Lesson 1 Vocabulary):</b> ① <i>Read, find and colour</i> (a blue ball · a red train · a brown teddy · a green kite · a yellow car · an orange scooter) · ② <i>Circle and write</i> (toy word-snake: computer game · robot · car · train · doll · dinosaur). + app: a self-checking micro-set on today's toys (picture–word match + <span class="en">What is it?</span>), 5–7 min.</p>
+          <p><span class="diff" style="padding-left:0"><span class="sup">💪 Support:</span> ex. 1 only (colour the toys) + say each toy aloud with a grown-up. <span class="ext">⭐ Extension:</span> after ex. 2, draw &amp; label your own favourite toy — <span class="en">It's a … .</span></span></p>
           <p>💻 Онлайн-тренажёр юнита: <a href="https://speakandsmile.ru/gmf1/u2.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u2.html</a> — Practice + Booster по Unit 2 (лексика/грамматика урока).</p></td>
         <td class="mat">Activity Book p. 16 · app (homework link)</td>
       </tr>
