@@ -1,0 +1,281 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 9 · Lesson 7 — Unit 9 Test (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 9 “Day and night” · Lesson 7 — Unit 9 Test</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · <b>Last unit test of the year</b>: calm, model-first, celebrate a whole year of English · desks + side table</div>
+    <div class="meta"><span class="chip">Week 10.05–16.05 · Lesson 68</span><span class="chip">L7 Test · продолжающие</span><span class="chip">~12 pupils · desks apart</span></div>
+  </div>
+
+  <!-- PRINT / AUDIO VERIFY -->
+  <div class="cardb" style="border-left:4px solid var(--honey);background:var(--honey-soft);margin-top:12px;padding:11px 14px">
+    <b style="color:var(--honey-ink)">⚠️ Before you print &amp; before class:</b> the <b>track numbers (21 / 22)</b> and <b>test page numbers (Unit 9 = pp. 25–27, labelled Page 1–3)</b> in this plan are from internal cross-checking of the PDF. <b>Verify them against the GMF1 Units 1–9 Standard Level Tests PDF (Unit 9)</b> and cue the audio before pupils arrive — no fumbling with the CD on the last test day of the year.
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> <b>Assess Unit 9 language</b> — daily routines (wake up · get up · wash my face · brush my teeth · get dressed · comb my hair · have a shower/bath · make my bed · have breakfast/lunch/dinner · go to school · do homework · go to bed), “I (wash my face) every day / every morning”, “I have (dinner) in the (evening)”, time expressions <i>in the morning / afternoon / evening</i> — with the GMF1 <b>Unit 9 Standard Level Test</b> (Listening ×2 · Reading true/false · Writing word box · Reading &amp; Writing order-and-write · Speaking), in a calm, confidence-first atmosphere.</li>
+      <li><span class="lb">Subsidiary.</span> Phonics track — <b>write words with the <i>th</i> sound</b> (dictation): <i>three, thin, bath, Thursday</i>; tricky words <i>they, there</i>; exam micro-skills: work alone, listen twice, check your page.</li>
+      <li><span class="lb">Personal.</span> <b>Model-first</b>: show every task type before the paper is out; no competitive games today; keep voice low and pace unhurried; <b>no child ever sits with nothing to do</b> (quiet poster task during Speaking turns). It's the <b>final test of the whole year</b> → protect confidence and end on a proud high.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>complete all written parts of the Unit 9 test independently;</li>
+        <li>answer the Speaking questions one-to-one (What do you do? · When? · in the morning / evening);</li>
+        <li>write short <i>th</i>-words from dictation (three, thin, bath, Thursday);</li>
+        <li>leave smiling — the last test is a “show what I know” day, and a proud end to the year.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">wake up</span><span class="w">get up</span><span class="w">wash my face</span><span class="w">brush my teeth</span><span class="w">get dressed</span><span class="w">comb my hair</span><span class="w">have a shower</span><span class="w">have a bath</span><span class="w">make my bed</span><span class="w">have breakfast</span><span class="w">have lunch</span><span class="w">have dinner</span><span class="w">go to school</span><span class="w">do homework</span><span class="w">go to bed</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I (wash my face) every day / every morning. · I have (dinner) in the (evening). · in the morning / afternoon / evening · at night · true / false.</div></div>
+      <div class="r"><div class="k">Form</div><div>Test answers: number (Listening) · circle <i>true / false</i> · copy from the word box · order the words into a sentence.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>Speaking part: accept clear meaning over perfect accent; gently remodel, don't correct mid-test.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Focus: <b>the <i>th</i> sound</b> — three, thin, bath, Thursday. Tricky words: <i>they, there</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (ICQs) · Assumptions</div>
+      <div class="ccq">Before the paper: <span class="en">Do we work alone or with a friend?</span> → alone! <span class="en">Is it OK to not know one? </span> → yes — skip it, come back!</div>
+      <div class="ccq" style="margin-bottom:12px">Listening: <span class="en">How many times do we listen?</span> → two times — first just listen, then number.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> all task types rehearsed in L6 (review + AB p. 98) and via the unit trainer at home; children write by copying from word boxes; by the ninth unit test anxiety is much lower than in October, but it is still the <b>last test of the year</b> → keep the breathing ritual + model-first + Speaky cheering, not judging.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Test nerves / “I can't!”</td><td>Breathing ritual (smell the flower — blow the candle), model-first demo, Speaky: “You do these things EVERY day — you KNOW them!”; call it the “show-what-you-know game”.</td></tr>
+        <tr><td>“Order and write” (ex 5) is hard for emergent readers</td><td>Model ONE on the board slowly — read the jumbled words, drag them into order, read the finished sentence. Leave the worked example on the board; let Support children copy the model shape and just swap the routine word.</td></tr>
+        <tr><td>True/false reading (ex 3) — can't read the sentence</td><td>Read each of the 5 sentences aloud to the whole class, mime it, then they circle <i>true</i> or <i>false</i>. Re-read privately beside children who need it.</td></tr>
+        <tr><td>Copying from a neighbour</td><td>Desks apart before the lesson; gentle private reminder — never shame publicly on test day.</td></tr>
+        <tr><td>Red pens / marking in sight = “I got it wrong!” panic</td><td><b>No red pens on show.</b> Mark later, out of the room; today only pencils and smiles. Collect papers face-down, no ticking in front of the child.</td></tr>
+        <tr><td>Listening pace too fast for some</td><td>Play each track (21 / 22) twice; pause between items; watch pencils — nobody left behind.</td></tr>
+        <tr><td>Speaking queue = waiting children</td><td>One-to-one at the side table while ALL others do the poster task; call children in a quiet rotation.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — arm low all lesson = whisper day.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>Breathing</b> — smell the flower 🌸 → blow the candle 🕯 ×3.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- DIFFERENTIATION + REFLECTION -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Differentiation</div>
+      <div class="cardb"><ul class="a">
+        <li><span class="lb">💪 Support (needs more).</span> Seat these children within arm's reach; <b>read every instruction aloud again right beside them</b>, point to the worked example, keep word boxes visible, and give <b>extra time</b> — hold the next listening item until their pencil moves. For “order and write” let them copy the board model and change one word. Praise effort, not speed.</li>
+        <li><span class="lb">⭐ Extension (fast finishers).</span> After the poster: a <b>bonus “My day” mini-poster</b> (draw + label 3 routines, add a “…every morning / evening” caption) or a page in the <b>class picture book</b>; still buzzing → the calm <b>Jenga ritual</b> below. Never “more test”, always create + apply.</li>
+      </ul></div>
+    </div>
+    <div>
+      <div class="eyebrow">Self-evaluation (thinking)</div>
+      <div class="cardb">
+        <p style="margin:0 0 8px;font-size:.9rem">At the very end each child evaluates their <b>own effort</b> with a traffic-light card — 🟢 easy · 🟡 okay · 🔴 tricky:</p>
+        <div class="ccq"><span class="en">Show me your light. What was EASY today? What was a bit TRICKY?</span> 2–3 children name one thing each. No right/wrong — a lovely last check-in on the whole year of routines.</div>
+        <p style="margin:0;font-size:.82rem;color:var(--muted)">Calm, non-competitive <b>Jenga ritual</b> (optional buffer): a fast finisher gently pulls one block → answers ONE Unit 9 question (<span class="en">What do you do? / When — morning, afternoon or evening?</span>) → done. No tower race, no losers.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE (projector, minimal — test day) -->
+  <div class="eyebrow">Interactive warm-up (projector) — calm, optional</div>
+  <div class="cardb" style="border-left:4px solid var(--p);background:var(--p-soft)">
+    <div style="font-weight:800;color:var(--p-ink);margin-bottom:6px">🎮 Interactive (projector): “What's this?” reveal spinner <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 8px;font-size:.72rem;font-weight:800;vertical-align:1px">✅ READY</span></div>
+    <div class="tl">
+      <div class="r"><div class="k">Screen</div><div>A slide/spinner cycles Unit 9 flashcards (wake up · brush my teeth · get dressed · have breakfast · go to school · do homework · have dinner · go to bed…); tap to flip picture → phrase.</div></div>
+      <div class="r"><div class="k">Mechanics</div><div>Quiet whole-class choral round — <b>no teams, no points, no timer.</b> A confidence warm-up: “we already know every one of these.”</div></div>
+      <div class="r"><div class="k">Language</div><div><span class="en">What do you do? — I brush my teeth! When? — Every morning!</span> One card up, everyone answers together, indoor voices, ~6–8 cards only.</div></div>
+      <div class="r"><div class="k">Teacher</div><div>Slow, smiling: <span class="en">See? You know EVERY one — a whole year of English! Easy-peasy — now let's show it on paper.</span> Then close the board and hand out the test.</div></div>
+    </div>
+    <div style="font-size:.82rem;color:var(--muted);margin-top:6px"><b>🔨 Low-tech option — “Flashcards” <span style="color:var(--good);font-weight:800">✅ READY</span>:</b> flash the paper unit flashcards by hand for the same quiet choral round — no projector needed (preferred on test day if the screen is a distraction). <b>No flagship quiz today.</b></div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = structure (no competitive games today)</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p>Greet warmly at the door: <span class="en">Hello! Come in! Big smile!</span> <span class="sp">🦝 Speaky</span> wears a tiny medal: <span class="en">Today you SHOW what you know! You do these things EVERY day — easy-peasy!</span></p>
+          <p>Gentle ritual: <b>Genki Disco Warm Up</b> at half-volume, then breathing: <span class="en">Smell the flower… blow the candle…</span> ×3 → calm and seated.</p>
+        </td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 (quiet) · Speaky with medal</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–12′</td>
+        <td class="stage"><div class="nm">Phonics — write <i>th</i>-words</div><div class="zone">carpet → boards</div></td>
+        <td class="flow">
+          <p><span class="ph">Confidence warm-up (words they CAN write).</span> Mini-whiteboard dictation: say the word once — <span class="en">three…</span> — all sound it out on fingers <span class="en">/th/ /r/ /ee/</span> → write → <span class="en">Show me!</span> → reveal on the board, self-check. Words: <i>three, thin, bath, Thursday</i>.</p>
+          <p><span class="ph">Tricky words.</span> Flowers <i>they · there</i>: <span class="en">Tricky words — we just know them! They… there.</span> Choral ×2 + air-write. Praise every board: <span class="en">Super writing! You are READY.</span></p>
+        </td>
+        <td class="mat">mini-whiteboards + pens · <i>th</i> picture cards · tricky-word flowers <i>they, there</i></td>
+      </tr>
+
+      <tr>
+        <td class="min">12–20′</td>
+        <td class="stage"><div class="nm">Model-first revision</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Demo every test task type — ONE example each, teacher first.</span> ① Listen &amp; number: mime a routine — <span class="en">Listen: I brush my teeth… write the number.</span> ② Read &amp; circle true/false: mime <span class="en">I have breakfast in the morning — true or false? TRUE! Circle true.</span> ③ Look &amp; write from the word box: <span class="en">This picture is “get up” — copy the word, letter by letter.</span> ④ Order &amp; write: put jumbled word-cards <span class="en">teeth · my · brush · I</span> on the board → slide them into order → read <span class="en">I brush my teeth.</span></p>
+          <p><span class="game">▶ RallyCoach warm pairs (no points, just practice):</span> A mimes a routine (brushing teeth), B guesses and asks <span class="en">You brush your teeth! When?</span>, A answers <span class="en">Every morning!</span> and coaches — <span class="en">Yes! / Try again!</span> — then swap. 2 minutes, quiet voices.</p>
+          <p><span class="ph">Test rules + ICQs.</span> <span class="en">Alone or with a friend? — Alone! Listen how many times? — Two! Don't know? — Skip and come back! Finished? — Poster on your desk, whisper-quiet.</span></p>
+        </td>
+        <td class="mat">board examples · jumbled word-cards · mime prompts · <span class="game">▶ RallyCoach</span> (Kagan)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">20–23′</td>
+        <td class="stage"><div class="nm">Set up</div><div class="zone">desks (apart)</div></td>
+        <td class="flow"><p>Desks already apart. Hand out papers face down. <span class="en">Pencil ready… Write your NAME. Point to “Listening”. Ready? Flowers and candles — breathe… Let's go!</span></p></td>
+        <td class="mat">Unit 9 Test papers (Standard level, 3 pages) · pencils · privacy folders (optional)</td>
+      </tr>
+
+      <tr>
+        <td class="min">23–43′</td>
+        <td class="stage"><div class="nm">UNIT 9 TEST — written parts</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Read every rubric aloud.</span> They are emergent readers — before EACH exercise, read the instruction to the whole class and point to the example: <span class="en">Exercise 1 — listen and number. Like this.</span> Re-read privately beside any child who needs it.</p>
+          <p><span class="ph">Listening (paced together).</span> Ex. 1 <i>Listen and number</i> (Track 21) · ex. 2 <i>Listen and number, then match</i> (Track 22) — play each track TWICE: first listen, pencils down; second time number/match. Watch the room, pause between items.</p>
+          <p><span class="ph">Reading → Writing → Reading &amp; Writing (own pace).</span> Ex. 3 <i>read &amp; circle true / false</i> — 5 sentences (I have lunch in the afternoon · I make my bed in the evening · I have breakfast in the afternoon · I have dinner in the morning · I go to school in the morning) · ex. 4 <i>look &amp; write</i> the routines from the word box (get up · brush my teeth · go to bed · wash my face · get dressed · make my bed) · ex. 5 <i>order &amp; write</i> the sentence (I have a shower every morning / I brush my teeth every evening / I comb my hair every morning / I go to school every day / I wash my face every morning / I go to bed every night). Circulate silently; encourage with a nod, never with answers: <span class="en">Take your time. You're doing great.</span></p>
+          <p>Countdown at the end: <span class="en">Finishing in 5…4…3…2…1… pencils down.</span> Collect written pages (keep the Speaking picture page).</p>
+        </td>
+        <td class="mat">Unit 9 Test (GMF1 Units 1–9 Standard Level Tests, pp. 25–27) · CD/test audio Tracks 21–22</td>
+      </tr>
+
+      <tr>
+        <td class="min">43–55′</td>
+        <td class="stage"><div class="nm">Speaking (1-to-1) + quiet task</div><div class="zone">side table + desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Whole class — quiet poster (no one waits empty).</span> On each desk: A5 sheet — <span class="en">Draw your day. Copy: “I brush my teeth every morning.”</span> (every morning / evening caption frame on the board). Finished → whisper-share with a neighbour. <b>Finisher ladder for the very fast:</b> bonus “My day” poster / a page in the class picture book → and, as a calm buffer, the non-competitive <b>Jenga ritual</b> (pull one block, answer ONE Unit 9 question, no winners).</p>
+          <p><span class="ph">Speaking test — one child at a time at the side table.</span> The 10-picture routines strip (test Speaking part, p. 27): <span class="en">What do you do? … When — in the morning, afternoon or evening? … Do you do this every day?</span> 60–90 sec each, smile, note the score, send back with a quiet high-five. Rotate through all pupils.</p>
+        </td>
+        <td class="mat">Speaking picture strip (test, p. 27) · score sheet · A5 poster sheets + crayons · class picture book · Jenga set (optional buffer)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–58′</td>
+        <td class="stage"><div class="nm">Cool-down · Closing</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p>Circle: <span class="en">The last test is finished — GIVE ME FIVE!</span> all high-five. <b>Self-evaluate with the traffic-light card:</b> <span class="en">Show me your light — green easy, yellow okay, red tricky. What was EASY? What was a bit TRICKY?</span> 2–3 children share one thing (no right/wrong). <span class="sp">🦝 Speaky</span> hugs everyone: <span class="en">A WHOLE year of English — I'm so proud of you, superstars!</span></p>
+          <p>Sing Goodbye: <span class="en">Thank you for the lesson! No book homework today — just play on the app!</span></p>
+        </td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝 · traffic-light cards 🟢🟡🔴</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up with posters. Each child shows theirs: <span class="en">I go to bed every night!</span> → medal sticker → out: <span class="en">Well done! Take care! Goodbye!</span></p></td>
+        <td class="mat">posters · medal stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p>No Activity Book today — rest after the test. 💻 <b>Online unit trainer: <a href="https://speakandsmile.ru/gmf1/u9.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u9.html</a> — Practice + Booster for Unit 9</b> (daily routines &amp; time expressions), 5–7 min — consolidation after the test: whatever felt tricky today gets one more friendly round. Teacher sends the link to parents via BigBen (matches BigBen: “потренировать слова юнита в приложении — закрепление после теста”).</p></td>
+        <td class="mat">unit trainer u9.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 9 · Lesson 7 (Unit 9 Test) — lesson plan &amp; staging</span>
+    <span>⚠️ Track numbers (21/22) &amp; test pages (25–27) from internal cross-check — <b>verify against the GMF1 Standard Level Tests PDF before printing.</b> Structure: Listening ×2 (number · number+match) · Reading true/false · Writing word box · Reading &amp; Writing order-and-write · Speaking.</span>
+  </div>
+</div>

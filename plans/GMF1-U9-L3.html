@@ -1,0 +1,308 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 9 · Lesson 3 — Story: The wobbly tooth (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 9 “Day and night” · Lesson 3 — Story: The wobbly tooth</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · Story: listen → read → act out (drama) · carpet + desks · ⭐ FINAL story of the course — the Magic Bike's last ride</div>
+    <div class="meta"><span class="chip">Week 26.04–02.05 · Lesson 64</span><span class="chip new">✨ STORY</span><span class="chip">~12 pupils · small groups for drama</span><span class="chip">Продолжающая линия</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>follow, understand and act out the story “The wobbly tooth”</b> (Pupil's Book pp. 94–95, CD4 13) using key story language: “Good morning. Are you ready for breakfast? — Yes, I am. I have breakfast every morning.”, “What's the matter? — I've got a wobbly tooth!”, “Let's play volleyball!”, “Can you see my tooth? — No, it isn't in the grass.”, “It's looking for your tooth. — Magic Bike, you're incredible!”.</li>
+      <li><span class="lb">Subsidiary.</span> <b>Retrieve real prior learning across the whole course</b>, woven straight into the story: prepositions <i>in / on / under</i> (U1 · U6 — searching for the lost tooth), body parts <i>tooth · teeth · hands · feet</i> (U3 — Values), food &amp; <i>I'm hungry</i> (U4 — breakfast/dinner), outdoor play <i>volleyball</i> (U8) + present-simple daily routines from this unit (<i>I have breakfast every morning · wash your hands · brush your teeth · go to bed</i>). Phonics — <b>light</b> recognise/blend of consonant <i>th</i> tied to the story: <i>tooth · teeth · three · thin · bath · Thursday · thumb</i> + sight words <i>you · your · are</i>. Values: look after your teeth — brush before bed.</li>
+      <li><span class="lb">Personal.</span> Keep story listening active (gestures, prediction); manage drama noise with Freeze; <b>every child acts in a small group at the same time</b> — no “2 on stage, 10 watching” until the final 30-sec showcase. Give this last story a warm, celebratory send-off.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>show they understand the story (number the frames 1–5, answer True/False with thumbs);</li>
+        <li>say the key lines in role: “I've got a wobbly tooth!”, “Can you see my tooth? — No, it isn't in the grass.”, “Magic Bike, you're incredible!”;</li>
+        <li>recognise &amp; blend <i>th</i> words (tooth · teeth · three) and read <i>you · your · are</i> by sight;</li>
+        <li>ask “Have you got a wobbly tooth?” and answer “Yes, I have / No, I haven't” (Values: brush your teeth before bed).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">wobbly tooth</span><span class="w">breakfast</span><span class="w">dinner</span><span class="w">volleyball</span><span class="w">garden</span><span class="w">grass</span><span class="w">flowers</span><span class="w">pillow</span><span class="w">magic bike</span> <span style="color:var(--muted);font-size:.82rem">(recycled: in/on/under · teeth/hands/feet · hungry · daily routines · Jake, Toby the dog + the Magic Bike)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Good morning. Are you ready for breakfast? — Yes, I am. <b>I have breakfast every morning.</b> · What's the matter? — I've got a wobbly tooth! · Let's play volleyball! · Can you see my tooth? — No, it isn't in the grass / in the flowers. · It's looking for your tooth. — Magic Bike, you're incredible!</div></div>
+      <div class="r"><div class="k">Form</div><div>Present simple routine: <b>I have</b> + meal + <i>every morning</i>. · Negative <b>It isn't</b> + <i>in / on / under</i> + the + place. · Have got: <b>I've got</b> a … / <b>Have you got</b> …? (receptive; recycled from U3).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>voiceless <b>th</b> /θ/ — <i>tooth · teeth · three · thin</i> (tongue between teeth, not /t/ or /f/); weak <i>in the</i> /ɪn ðə/; sentence stress: <i>It isn't in the GRASS.</i></div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly (JP Book 2): consonant <b>th</b>, <b>light</b> recognise → blend — <i>tooth · teeth · three · thin · bath · Thursday · thumb</i> (this unit's sound; full segment work is L5) · sight words: <i>you · your · are</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Frame 2: “What's the matter with Jake?” → <b>“He's got a wobbly tooth!”</b> (wobble a finger)</div>
+      <div class="ccq">Frame 4: “Oh no! They play volleyball… now where's the tooth?” → <b>“It's lost / gone!”</b> “Is it in the grass?” → <b>“No — it isn't in the grass!”</b></div>
+      <div class="ccq" style="margin-bottom:12px">Frames 7–8: “Who is looking for the tooth?” → <b>“The Magic Bike!”</b> “Where is the tooth in the end?” → <b>“Under his pillow!”</b></div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> daily routines + <i>I have breakfast every morning</i> known from U9 L1–L2; <i>in / on / under</i> from U1/U6; <i>tooth/teeth/hands/feet</i> &amp; <i>I've got</i> from U3; <i>hungry/breakfast/dinner</i> from U4; <i>volleyball</i> from U8; children know Jake, Toby the dog &amp; the recurring Magic Bike. Emergent readers → they FOLLOW the pictures &amp; the teacher's pointing while listening; they don't decode the speech bubbles alone.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>New long lines block the story (<i>wobbly tooth · magic bike · you're incredible</i>)</td><td>Pre-teach 3 things before listening with picture + gesture (wobbly tooth = wobble a finger + point to teeth, magic bike = sparkle fingers, incredible = thumbs-up + “Wow!”).</td></tr>
+        <tr><td>Children call answers over the audio</td><td>“Listening hands” rule — hands cupped behind ears while the CD plays; talk only when it stops.</td></tr>
+        <tr><td><i>th</i> said as /t/ or /f/ (“toof / toot”)</td><td>“Tongue peeps out” mirror trick — tongue between teeth, gentle blow: <i>th–th–three</i>; keep it light, don't drill to exhaustion (fullest lesson of the unit).</td></tr>
+        <tr><td>Drama turns to chaos (running / real volleyball)</td><td>Movements are ON THE SPOT (volleyball = mime a bounce sitting/standing in place); roles fixed by colour badges; <span class="call">“Freeze!”</span> resets.</td></tr>
+        <tr><td>Frame cards ordered by one child in the pair</td><td>Rule “one card each turn, take turns” (RallyRobin with cards); praise pairs where both hands work.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset (essential in drama).</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Good morning! Come in!</span> On the carpet <span class="sp">🦝 Speaky</span> holds his cheek, worried: <span class="en">Oooh… I've got a WOBBLY tooth! Look — wobble, wobble!</span> (children giggle &amp; touch their own teeth — that's the hook).</p>
+          <p><span class="en">Stand up! Warm-up time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the opening ritual, finish seated on the carpet.</p>
+        </td>
+        <td class="mat"><b>Genki «Disco Warm Up»</b> (01) mp3 · Speaky holding his cheek · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Review → into the story</div><div class="zone">carpet, circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieve the WHOLE course, woven into today.</span> Fast “My day” mime chain — you call, ALL do the routine action (from U9 L1–L2): <span class="en">Wake up! Wash your face! Brush your TEETH! Have breakfast! Go to school!</span> Snap the beat.</p>
+          <p><span class="ph">Show-me — everyone moves (U1 / U6 prepositions).</span> Speaky “loses” his tooth in a little box: <span class="en">Where's my tooth? Is it IN the box? ON the box? UNDER the box?</span> — three gestures: <b>in</b> (hand inside fist) · <b>on</b> (flat on top) · <b>under</b> (below). Call fast, all react.</p>
+          <p><span class="ph">Body + food quick-fire (U3 · U4).</span> <span class="en">Point to your teeth! Your hands! Your feet!</span> then <span class="en">Are you hungry? What do you have for breakfast?</span> — thumbs / one-word answers.</p>
+          <p><span class="ph">Bridge.</span> <span class="en">Jake has got a wobbly tooth too… and something MAGIC happens! Let's find out!</span> Signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">a small box · a “tooth” card · Speaky · body/food flashcards</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–11′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">To the board — sounds time!</span> Quick ABC / Jolly sound song with actions → settle into phonics.</p></td>
+        <td class="mat"><b>ABC / Jolly phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">11–21′</td>
+        <td class="stage"><div class="nm">📺 Phonics — the /th/ sound (light)</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise — “tongue peeps out”.</span> <span class="en">New sound today: th! Tongue peeps out — th, th, th.</span> Mirror it; children blow gently: <i>th–th–th</i>. Not /t/, not /f/. 4–5 tries, playful.</p>
+          <p><span class="ph">Blend — tooth-theme words (all respond).</span> Speaky robot-blends one sound at a time; a picture appears each time for meaning: <span class="en">/th/ /oo/ /th/…</span> class blends &amp; shouts <span class="en">tooth!</span> Do <i>tooth · teeth · three · thin · bath · Thursday · thumb</i>. Fun link: <span class="en">thumbs up = th!</span> — everyone shows a thumb.</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Robot Tooth Blender <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U9 <b>“Flashcards”</b> engine — one <i>th</i> word, letters split <i>th · oo · th</i>, then a picture reveal on tap. <b>· How:</b> tap to sound each part → tap to blend → tap to show the picture. <b>· Pupils:</b> voice each sound, blend chorally — <span class="en">tooth!</span> — and give a big <b>thumbs-up</b> if it's a th word. <b>· Teacher:</b> drive the taps, keep the beat, praise the tongue.</div>
+          </div>
+          <p><span class="game">▶ Alt phonics game (rotation, not every lesson): Fly-Swatters — “own swatter” re-skin.</span> <b>EVERY child holds a paper swatter</b> (or open hand). Two words on the board — one real th word, one silly (<i>tooth / foot</i>, <i>three / free</i>). Speaky robot-blends one → <span class="en">Swat the TH word!</span> → on your <span class="en">3-2-1-GO!</span> all swat their own mini-card / swat the air toward the correct side. No “two at the board, the class watching”.</p>
+          <p><span class="ph">Sight words — flash &amp; chorus (keep it light).</span> Air-write, don't dictate: <span class="en">you · your · are</span> (all appear in the story: “Are you ready?”, “Where's your tooth?”). Flash, chorus, sky-write — <b>no whole-class written dictation</b> (heaviest task for emergent readers, and this is the fullest lesson of the unit).</p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> keep the picture beside the word; ask for just the first sound (<i>th</i>). <b style="color:var(--p)">Extension:</b> fast finishers write <i>tooth · three · thin</i> on a mini-whiteboard → <span class="en">Show me!</span></p>
+        </td>
+        <td class="mat">JP Book 2 · <i>th</i> word/picture cards · paper fly-swatters (alt game) · a few mini-whiteboards (extension only) · Speaky (robot voice)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">21–23′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Every morning I get up, I wash my face, I brush my teeth… let's sing!</span> Sing the unit song <span class="game">«It's a beautiful day»</span> (CD4 8 — I get up · wash my face · brush my teeth · comb my hair) with actions → daily-routine language primed → <span class="en">And now — the story!</span></p></td>
+        <td class="mat"><b>GMF1 «It's a beautiful day»</b> (CD4 8) mp3 · <i>(alt: Genki «Good Morning» 11)</i></td>
+      </tr>
+
+      <tr>
+        <td class="min">23–34′</td>
+        <td class="stage"><div class="nm">📺 Story — listen, read &amp; follow</div><div class="zone">carpet, books/screen</div></td>
+        <td class="flow">
+          <p><span class="ph">Before you read (PB p. 94).</span> Big story picture on screen / books open. Pre-question from the book: <span class="en">Where is the magic bike in the story? Let's look for it!</span> Pairs point &amp; name what they see 15 sec, then chorus. Pre-teach with gesture: <span class="en">wobbly tooth</span> (wobble finger) · <span class="en">magic bike</span> (sparkle fingers) · <span class="en">volleyball</span> (mime a bounce) · <span class="en">incredible</span> (thumbs-up “Wow!”).</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Find it! — “What's in Jake's day?” <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U9 <b>“Find it!”</b> engine on the big story picture. <b>· How:</b> Speaky asks, a child taps the object; it lights up. <b>· Pupils:</b> whole class points to their book / calls it — <span class="en">Breakfast! The garden! The volleyball! The magic bike!</span> <b>· Teacher:</b> <span class="sp">🦝</span> <span class="en">Where's the magic bike? Point!</span> — 4–5 things, quick (find the hidden bike in an early frame — hook).</div>
+          </div>
+          <p><span class="ph">Predict (thinking) — before we listen.</span> <span class="en">Jake's tooth is wobbly… I think it will fall out! Who will find it? The dog? Mum? Or… the MAGIC BIKE?</span> Thumbs vote (dog / mum / bike). <span class="en">Let's listen and check your guess!</span></p>
+          <p><span class="ph">Listen 1 — global (CD4 13).</span> “Listening hands” behind ears. Teacher points frame by frame; children follow the pictures. Gist check: <span class="en">Does the tooth fall out? Show me!</span> (thumbs) <span class="en">Who finds it — was your guess right?</span></p>
+          <p><span class="ph">Detail check — True or False? (thumbs up / down, all react).</span> Say a sentence, class shows a thumb: <span class="en">Jake has got a wobbly tooth.</span> (👍) · <span class="en">They play football in the garden.</span> (👎 — <span class="en">volleyball!</span>) · <span class="en">The tooth is in the grass.</span> (👎 — <span class="en">It isn't in the grass!</span>) · <span class="en">The Magic Bike finds the tooth.</span> (👍) · <span class="en">The tooth is under the bed.</span> (👎 — <span class="en">under his pillow!</span>). Re-point the frame to fix any wrong thumb.</p>
+          <p><span class="ph">Listen 2 — active (all respond).</span> Play again; children do the story gestures at the right moments: <b>“Good morning!”</b> stretch (frame 1) · <b>wobble finger</b> (frame 2) · <b>bounce volleyball</b> (frames 3–4) · <b>hands searching</b> the grass/flowers (frame 5) · <b>wash hands / “I'm hungry”</b> (frame 6) · <b>sparkle fingers</b> magic bike (frames 7–8) · big <b>thumbs-up</b> <span class="en">You're incredible!</span> CCQs between frames (see box above). Stop at frame 5: <span class="en">Is the tooth in the grass? — No! In the flowers? — No!</span></p>
+        </td>
+        <td class="mat">PB pp. 94–95 · CD4 13 / animated story (Navio) · <b>“Find it!”</b> (board) · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">34–35′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at carpet</div></td>
+        <td class="flow"><p><span class="en">Everybody up — volleyball in the garden!</span> Bounce &amp; hit an imaginary ball ON THE SPOT (<span class="en">I win! I'm the champion!</span>) → teacher calls <span class="en">Oh no — where's the tooth?!</span> and everyone “searches” low &amp; high: <span class="en">In the grass? In the flowers? Under the pillow?</span> (with the in/on/under gestures). Two rounds → <span class="en">Freeze!</span> → sit at desks.</p></td>
+        <td class="mat">— (voice + gestures)</td>
+      </tr>
+
+      <tr>
+        <td class="min">35–42′</td>
+        <td class="stage"><div class="nm">▶ Build the story</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Story Builders</span> (Mido №54 “Reconstruction”, picture re-skin for non-readers — <b>all pairs work at once</b>). Each pair gets 8 mini frame-cards of “The wobbly tooth”, shuffled.</p>
+          <p><span class="ph">Order it.</span> <span class="en">Put the story in order — one card each, take turns!</span> (RallyRobin with cards: A places one, B places the next.) Countdown 2 min. <span class="ph">ICQ:</span> <span class="en">Do we grab all the cards or take turns?</span> (→ take turns!)</p>
+          <p><span class="ph">Check with the audio.</span> Replay CD4 13: pairs touch each card as they hear it — self-check, fix the order. Then choral retell, teacher holds up big frames one by one, class says a line: <span class="en">Are you ready for breakfast? · I've got a wobbly tooth! · Let's play volleyball! · Where's your tooth? · It isn't in the grass. · Come and wash your hands. · Look at the magic bike! · It's my tooth! You're incredible!</span></p>
+          <div style="background:var(--honey-soft);border:1px solid var(--line);border-left:4px solid var(--p);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Wobbly-Tooth Story-Sequence 1–5 <span style="background:var(--p);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">🔨 СОБРАТЬ</span></div>
+            <div><b>Screen:</b> the 5 key story frames (breakfast → wobbly tooth &amp; volleyball → lost in the garden → dinner “look tomorrow” → tooth under the pillow, magic bike) appear <b>shuffled</b> in a row, each with an empty number badge 1–5. <b>· How:</b> tap two frames to swap them (or drag); a “Check” button lights correct frames green with a cheer. <b>· Pupils:</b> the class calls the order — <span class="en">Number one — breakfast! Number two — the wobbly tooth!</span> — and gesture each frame. <b>· Teacher:</b> take votes (<span class="en">Which is first? Hands up!</span> — Numbered Heads), tap as they decide, then replay CD4 13 to confirm. Mirrors the paired frame-cards on screen for a whole-class check. <i>(Matches Activity Book p. 92 ex. 1 — number 1–5.)</i></div>
+          </div>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> hand that pair only the <b>5</b> clearest frames (not 8) and number the first one (breakfast) for them. <b style="color:var(--p)">Extension:</b> after ordering, say one whole line for each frame from memory before the audio check.</p>
+        </td>
+        <td class="mat">8 story frame mini-cards per pair (print from PB pp. 94–95) · 5-frame set for support pairs · CD4 13 · big frame cards for the board</td>
+      </tr>
+
+      <tr>
+        <td class="min">42–50′</td>
+        <td class="stage"><div class="nm">Act out — drama</div><div class="zone">carpet, groups</div></td>
+        <td class="flow">
+          <p><span class="ph">Roles.</span> Groups of 4–5: <b>Jake</b> (yellow badge, wobbly tooth) · <b>Dad/Mum</b> (blue, “Are you ready for breakfast?” / “Wash your hands!”) · <b>2 friends</b> (red + green, play volleyball &amp; search) · <b>the Magic Bike + dog</b> (purple, sparkle &amp; “Woof!”). Model once with a strong group.</p>
+          <p><span class="ph">All groups act at the same time.</span> Narrate the story slowly, frame by frame; every group plays it in their own spot (volleyball ON THE SPOT!): <span class="en">Good morning, Jake! Are you ready for breakfast? — Yes, I have breakfast every morning! · What's the matter? — I've got a wobbly tooth! · Let's play volleyball! — Wait for me! · I win! …Jake, where's your tooth? · Can you see it? — No, it isn't in the grass. · Come and wash your hands, we're hungry! · Look — the magic bike! It's looking for your tooth… · It's under your pillow! — Magic Bike, you're incredible!</span></p>
+          <p><span class="ph">Create (thinking) — make it yours.</span> Before round 2: <span class="en">Jake loses ONE more thing — you choose! Where is it? Where does the magic bike find it?</span> Each group adds a line: <span class="en">Where's my sock? — It isn't under the bed… it's under the pillow!</span> (support: point to a card; extension: invent the whole exchange).</p>
+          <p>Swap roles, run it again — <b>keep it to 2 rounds</b> (<span class="en">Freeze!</span> the moment energy tips). Volunteers: ONE group shows 30 sec for the class — big applause for the Magic Bike's <b>last ride of the course</b>. <span class="ph">Values (PB p. 95 ex. 2):</span> <span class="en">Look after your teeth! Brush your ___ before you go to bed.</span> → <span class="en">teeth!</span></p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> quieter children get the “friend / search” role (short lines + gesture); a line card in hand. <b style="color:var(--p)">Extension:</b> confident children play Jake / the Magic Bike and lead the exchange.</p>
+        </td>
+        <td class="mat">role badges ×5 colours · object cards · PB p. 95 (Values: teeth/feet/hands)</td>
+      </tr>
+
+      <tr>
+        <td class="min">50–55′</td>
+        <td class="stage"><div class="nm">▶ Have you got a wobbly tooth?</div><div class="zone">stand up, all at once</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Have you got a wobbly tooth?</span> (Kagan <b>StandUp–HandUp–PairUp</b> — <b>every child asks &amp; answers</b>, previews the HW). Music on → mingle → hand up → high-five a partner. Ask &amp; answer (recycles U3 <i>have got</i>): <span class="en">Have you got a wobbly tooth? — Yes, I have! / No, I haven't!</span> Then swap partners 3–4 times.</p>
+          <p><span class="sp">🦝 Speaky</span> counts at the end: <span class="en">How many pupils have got a wobbly tooth? Hands up! Let's count — one, two, three…</span> quick class tally on the board (this is exactly Activity Book p. 92 ex. 2 — <span class="en">In my class, … have got a wobbly tooth.</span>).</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Find it! — “Look after your teeth” (Values check) <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U9 <b>“Find it!”</b> board with routine pictures. <b>· How:</b> Speaky asks <span class="en">What do we do before bed?</span> a child taps <b>brush teeth</b>; it lights up. <b>· Pupils:</b> all show the brushing mime, chorus <span class="en">Brush your teeth!</span> <b>· Teacher:</b> quick Values wrap — <span class="en">teeth · hands · feet</span> — point to each on your own body.</div>
+          </div>
+        </td>
+        <td class="mat">music mp3 · board (tally) · <b>“Find it!”</b> (board, Values) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Reflection + Closing</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ RallyRobin retell (pairs, take turns).</span> Big frames stay on the board in order. <span class="en">Tell the story to your partner — one line each, take turns!</span> A: <span class="en">Jake has got a wobbly tooth!</span> → B: <span class="en">Let's play volleyball!</span> → A: <span class="en">Oh no, the tooth is lost!</span> … (support: point &amp; say one word per frame; extension: full lines to the end).</p>
+          <p>Then: <span class="en">Our LAST story — do you like the Magic Bike? Point to your favourite picture and tell your partner!</span> (20 sec each). “I can…” badge: <span class="en">Colour your badge — I can act out the story!</span></p>
+          <p><span class="en">Well done, superstars — that was our last story this year! Let's sing Goodbye. Your homework is in your Activity Book and on the app!</span> Sing Goodbye.</p>
+        </td>
+        <td class="mat">“I can…” badges · <b>Goodbye song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Show each child one frame card: say any line from it (<span class="en">I've got a wobbly tooth!</span>) — or answer <span class="en">Where's the tooth in the end — in the grass or under the pillow?</span> Said it → out: <span class="en">Well done! Take care! Goodbye!</span></p></td>
+        <td class="mat">story frame cards · folder reward stickers 🦝</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow">
+          <p><b>Activity Book — p. 92, exercises 1–2 (Lesson 3 Story · After you read):</b> ① <i>Remember the story. Read and number</i> — number the five story sentences 1–5 in order (breakfast → play in the garden → look for Jake's tooth → have dinner → tooth under his pillow; frame “have breakfast” = 1 is given) · ② <i>Talk Partners — Ask and answer. Write the names of your classmates</i> — “Have you got a wobbly tooth? — Yes, I have. / No, I haven't.” then complete <i>In my class, … have got a wobbly tooth.</i> + app: story words micro-set (5–7 min).</p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:2px"><b style="color:var(--good)">Support (core):</b> ex. 1 (number the frames) — read with a grown-up if needed; ex. 2 write just 1–2 names. <b style="color:var(--p)">Extension (challenge):</b> after ex. 2, tell a grown-up the whole story with the pictures — one line per frame.</p>
+          <p>💻 Онлайн-тренажёр юнита: <a href="https://speakandsmile.ru/gmf1/u9.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u9.html</a> — Practice + Booster по Unit 9 (daily routines · meal times · time expressions).</p>
+        </td>
+        <td class="mat">Activity Book p. 92 · app (homework link) · тренажёр u9.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 9 · Lesson 3 (Story: The wobbly tooth) — lesson plan &amp; staging</span>
+    <span>Story verified against Pupil's Book pp. 94–95 (CD4 13); homework against Activity Book p. 92.</span>
+  </div>
+</div>

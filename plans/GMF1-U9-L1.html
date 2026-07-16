@@ -1,0 +1,299 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 9 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* added: interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 9 “Day and night” · Lesson 1 — Vocabulary</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers · <b>continuing line</b>) · 60 min · PPP + TPR + Phonics · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 19.04–25.04</span><span class="chip new">✨ NEW · 10 daily routines</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">Pupil's Book p.92 · AB p.90</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 10 daily routines</b> and <b>say them in the first person</b> — “I (get up)”, “I (brush my teeth)” — and answer “What's this? — It's (get up)” in the <i>day-and-night</i> context.</li>
+      <li><span class="lb">Subsidiary.</span> Sing the coursebook song <i>It's a beautiful day</i>; <b>retrieve</b> colours (U1), numbers (U2), “Is it a…? — Yes/No” (U2), “can” (U3/U5), “What's this?” (U6) &amp; “There's a…” (U7) woven onto the bedroom / day scene; phonics <b>‘ph’ = /f/</b> (recognise → blend → segment); tricky words <i>water, who</i>; pre-literacy &amp; fine motor (sticker chant); <b>preview</b> “I (wash my face) every day.” for L2.</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; run a stirrer→settler rhythm with songs &amp; signals; catch &amp; recast the silent-b <i>comb</i> /kəʊm/ and the /θ/ in <i>brush my teeth</i>.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>name the 10 daily routines (get up · get dressed · wash my face · brush my teeth · comb my hair · make my bed · have a shower · go to school · go to bed · sleep);</li>
+        <li>say &amp; mime “I get up / I brush my teeth…” &amp; answer “What's this? — It's…”;</li>
+        <li>hear &amp; blend ‘ph’ = /f/ words.</li>
+      </ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">get up</span><span class="w">get dressed</span><span class="w">wash my face</span><span class="w">brush my teeth</span><span class="w">comb my hair</span><span class="w">make my bed</span><span class="w">have a shower</span><span class="w">go to school</span><span class="w">go to bed</span><span class="w">sleep</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What's this? — It's (get up). &nbsp;·&nbsp; I (get up). &nbsp;·&nbsp; <i>(song)</i> I open the window and I say “It's a beautiful day.” &nbsp;·&nbsp; <i>preview (L2):</i> I (wash my face) <b>every day</b>.</div></div>
+      <div class="r"><div class="k">Form</div><div>First-person routine chunks: <b>I</b> + verb phrase. “have a (shower)” / “go to (bed / school)” fixed patterns; possessive <i>my</i>. Weak <i>a</i> /ə/ in <i>have a shower</i>.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>silent-b <i>comb</i> /kəʊm/; <i>brush my teeth</i> /θ/; three-word chunks <i>wash-my-face</i> · <i>make-my-bed</i>; <i>get up</i> vs <i>get dressed</i> (stress the 2nd word); ‘ph’ /f/.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Digraph <b>‘ph’ = /f/</b>: phone · elephant · dolphin · photo (recognise → blend → segment). Tricky words: <b>water · who</b>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“When you <b>get up</b>, are you <b>in</b> bed or <b>out of</b> bed?” → out → <b>get up.</b> “Do we brush our <b>teeth</b> or our <b>hair</b>?” → teeth → <b>brush my teeth.</b> “Do we <b>sleep</b> in the day or at night?” → night → <b>sleep.</b></div>
+      <div class="ccq" style="margin-bottom:10px">‘ph’: “How many letters?” → two. “How many sounds?” → <b>one → /f/.</b></div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> colours (U1), numbers 1–10 (U2), “Is it a…? — Yes/No” (U2), “can” (U3/U5), “What's this?” (U6) &amp; “There's a…” (U7) and the 26 sounds + core digraphs are known (continuing line, late-year). Pupils are non-/emergent readers → rely on pictures, mime &amp; audio, not printed text. Carpet &amp; team routines are known.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td><i>comb</i> said with a hard /b/</td><td>Model the silent b: <span class="en">comb — /kəʊm/, no /b/</span>; touch lips, hold up the “b” card, cross it out.</td></tr>
+        <tr><td>Confuse <i>wash my face</i> ↔ <i>have a shower</i> ↔ <i>brush my teeth</i></td><td>One clear mime each (splash 💦 / rain-down 🚿 / scrub 🪥); say the first word loud.</td></tr>
+        <tr><td><i>get up</i> ↔ <i>get dressed</i> mixed up</td><td>Contrast the mimes: stretch “out of bed” vs pull-on-clothes; stress the 2nd word.</td></tr>
+        <tr><td>‘ph’ read as /p/+/h/</td><td>Slide two fingers together: <span class="en">two letters, ONE sound — /f/.</span></td></tr>
+        <tr><td>Over-excited “wake up!” energy on the carpet</td><td><span class="en">Freeze!</span> + volume-control arm; follow every stirrer with a settler.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Good morning! Come in!</span> Sit on the carpet. <span class="sp">🦝 Speaky</span> yawns &amp; stretches: <span class="en">Good morning, friends! Time to WAKE UP — it's a new day!</span> Class: <span class="en">Good morning, Speaky!</span></p>
+          <p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp), then a day-and-night twist: <span class="en">Wake up! Stretch! …and sleep! (heads on hands)</span>; trick them — say <span class="en">Sleep!</span> when they're already “asleep”.</p>
+          <p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p>
+        </td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · Speaky · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval mingle</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieve, on-topic.</span> <span class="en">Last unit — CAMPING! Today — our DAY, from morning to night!</span> Old language woven onto today's day-and-night theme. <span class="game">▶ Mix–Pair–Share:</span> play music → <span class="en">Stand up, hand up, pair up!</span></p>
+          <p>Show a bedroom-scene flashcard to each pair. R1 <span class="ph">colours (U1):</span> <span class="en">What colour is the bed? — Blue! The toothbrush is… red!</span> R2 <span class="ph">numbers (U2):</span> hold up the scene — <span class="en">How many toys? — Count! Four!</span> R3 <span class="ph">RallyRobin · U2/U5/U6:</span> partners take turns — <span class="en">Is it a bed? — Yes, it is! / No, it isn't. Can you jump? — Yes, I can!</span></p>
+          <p><span class="asr">✔ <b>Assess:</b> listen as you circulate — who still needs a colour/number word? Note 1–2 names to support at Presentation.</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> give the pair a card with a strong colour cue. <span class="ext">⭐ Extension:</span> add “There's a <b>big red</b> bed” (U7 <i>There's a…</i> + U3 adjective).</span>
+        </td>
+        <td class="mat">music · bedroom-scene flashcards · <span class="game">▶ Mix-Pair-Share + RallyRobin</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come closer to the board — sing the sounds!</span> Sing the phonics / ABC song with the Jolly actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>Phonics / ABC song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics · ‘ph’ = /f/</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise.</span> <span class="en">Two letters — p, h — but ONE sound: /f/!</span> Show <i>phone · elephant · dolphin · photo</i>. <span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if you hear /f/… phone!… cat!… elephant!</span> (mix in non-‘ph’ words — everyone reacts every time).</p>
+          <div class="ig">🎮 <b>Interactive (projector): Flashcards — ‘ph’ reveal.</b> A picture uncovers slowly; class shouts the first sound before the reveal — <span class="en">/f/… phone!</span> Then all together <span class="en">/f/ /əʊ/ /n/… phone!</span> Every child points a “slide finger” = all blend at once. <span class="ph">Offline reserve:</span> hold A5 ‘ph’ picture cards, reveal by hand.</div>
+          <p><span class="ph">Blend.</span> Push the sounds together with a finger slide + picture for meaning: <span class="en">/f/ /əʊ/ /n/… phone!</span> Repeat with <i>photo</i> (<span class="en">/f/ /əʊ/ /t/ /əʊ/</span>). Point to the ‘ph’: <span class="en">Here's our /f/!</span></p>
+          <p><span class="ph">Segment · sort.</span> <span class="en">Where's the /f/? Show me!</span> Say a word once → children draw the ‘ph’ shape in the air OR write <b>ph</b> on mini-whiteboards, then hold up: <span class="en">Show me!</span> Words: <b>phone · photo · dolphin · elephant</b>. Then flash tricky words <b>water · who</b> — <span class="en">These are tricky — we just know them!</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> a picture beside each word; they only find &amp; trace the ‘ph’. <span class="ext">⭐ Extension:</span> where is the /f/ — at the <i>start</i> or in the <i>middle</i>? (phone → start · dolphin → middle).</span>
+          <p><span class="asr">✔ <b>Assess:</b> the “Show me!” boards are your live check — scan for who split ‘ph’ into /p/+/h/; recast on the spot.</span></p>
+        </td>
+        <td class="mat"><b>Phonics Studio</b> (board) · ‘ph’ picture cards · mini-whiteboards + pens</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="en">Now — let's do our morning!</span> Sing <span class="game">Genki «Little Red Riding Hood — Routines»</span> with the actions (wake up · wash my face · brush my teeth · get dressed) → energises &amp; leads straight into today's daily-routines topic. Settle: <span class="en">And… freeze!</span></p></td>
+        <td class="mat"><b>Genki «Little Red Riding Hood — Routines»</b> (110) mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–33′</td>
+        <td class="stage"><div class="nm">Presentation · Vocabulary</div><div class="zone">carpet → teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Present — 10 daily routines.</span> Do the mime + hold up each A4 card: <span class="en">What's this?</span> If unknown, model with the action: <span class="en">Watch me… I get up! Get up.</span> Choral drill ×3 (say + do), then 2–3 children solo. Routines: get up · get dressed · wash my face · brush my teeth · comb my hair · make my bed · have a shower · go to school · go to bed · sleep. Contrast the tricky trio (mime them): <span class="en">I wash my face. I have a shower. I brush my teeth.</span></p>
+          <div class="ig">🎮 <b>Interactive (projector): Daily-routines spinner (колесо рутин).</b> Spin → a routine lands. A rotating child taps to spin; the whole class <b>does the action</b> and chants <span class="en">I brush my teeth!</span> <span class="ph">Predict:</span> before the reveal — <span class="en">Is it “sleep”? — Yes/No!</span> (recycles U2). Every child shows a thumb 👍/👎 = all engaged. <span class="ph">Offline reserve:</span> shuffle the flashcard stack, flip the top card.</div>
+          <p><span class="game">▶ Fan-N-Pick</span> (teams of 4, mini-cards): ① fans the cards · ② picks &amp; asks <span class="en">What's this?</span> · ③ answers with the mime <span class="en">It's “comb my hair”.</span> · ④ praises <span class="en">Well done!</span> Rotate roles every turn — everyone asks, answers, praises.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do you say “What's this?” or “How many?”</span> (→ What's this?)</p>
+          <span class="diff"><span class="sup">💪 Support:</span> pair a shy child with the “praiser” role first; keep the mime going. <span class="ext">⭐ Extension:</span> answer in the first person — <span class="en">I comb my hair!</span></span>
+        </td>
+        <td class="mat">A4 flashcards ×10 · 3 mini-sets · <b>Routines spinner</b> (board) · <span class="game">▶ Fan-N-Pick</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">33–39′</td>
+        <td class="stage"><div class="nm">Song · It's a beautiful day</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="en">Now — let's sing! Do the actions with me!</span> Play coursebook song <b>It's a beautiful day</b> (Pupil's Book p.92, CD4 8). Listen &amp; do the actions; 2nd play — sing with an action for each routine.</p>
+          <p>The song models the target chunks: <span class="en">I get up. I get dressed. I open the window and I say — It's a beautiful day!</span> then <span class="en">I wash my face. I brush my teeth… I comb my hair. I make my bed.</span> Freeze between verses to keep control.</p>
+          <span class="diff"><span class="sup">💪 Support:</span> gesture-only is fine — join the words when ready. <span class="ext">⭐ Extension:</span> be the “action leader” — start the next routine's mime for the class.</span>
+        </td>
+        <td class="mat"><b>«It's a beautiful day»</b> (Navio / CD4 8) · Pupil's Book p.92</td>
+      </tr>
+
+      <tr>
+        <td class="min">39–44′</td>
+        <td class="stage"><div class="nm">Sticker chant</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">To your tables, come with me! Open your book at page 92.</span> <span class="ph">Read &amp; stick (act. 2).</span> <span class="en">Find the ten stickers. Listen and say the chant — stick each one!</span> Model one (get up is done); check with a neighbour.</p>
+          <p><span class="ph">Countdown.</span> <span class="en">Finishing in 5… 4… 3… 2… 1… pencils down.</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> name &amp; mime the sticker aloud before they place it. <span class="ext">⭐ Extension:</span> whisper <i>when</i> too — <span class="en">get up… in the morning!</span> (previews L4).</span>
+        </td>
+        <td class="mat">GMF1 Pupil's Book p.92 + sticker sheet · chant (CD4 10)</td>
+      </tr>
+
+      <tr>
+        <td class="min">44–52′</td>
+        <td class="stage"><div class="nm">Mime &amp; Find</div><div class="zone">carpet → pairs</div></td>
+        <td class="flow">
+          <div class="ig">🎮 <b>Interactive (projector): “Find it!” — the morning scene.</b> Tap Speaky — <span class="sp">🦝</span> asks <span class="en">What's she doing? Can you find someone who is “brushing her teeth”?</span> the class scans the bedroom scene on screen, points &amp; answers <span class="en">It's “brush my teeth”!</span> (2–3 rounds, to model the phrase for all). <span class="ph">Offline reserve:</span> the big Pupil's Book p.92 scene — point.</div>
+          <p><span class="ph">▶ Mime &amp; Guess · What's this? — in pairs, on the carpet.</span> Each pair has 5 routine cards face-down. Child 1 turns one card so only <b>they</b> see it, then <b>mimes it silently</b>. Child 2 guesses: <span class="en">Is it “make my bed”? — Yes! / No, try again.</span></p>
+          <p>Correct → keep the card &amp; say it together <span class="en">Make my bed!</span> Then <b>swap roles</b>. (Most cards wins.) Everyone is miming or guessing the whole time — no one waits. Reset if loud: <span class="en">Freeze!</span></p>
+          <p><span class="asr">✔ <b>Assess:</b> stand behind one pair at a time — can both produce the routine name unprompted from the mime? That's the lesson's success check.</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> 3 cards, not 5; keep a small picture strip visible to point to. <span class="ext">⭐ Extension:</span> guess in the first person — <span class="en">You make your bed!</span> / answer <span class="en">I make my bed every day!</span> (previews L2).</span>
+        </td>
+        <td class="mat">5 routine cards per pair · <b>Find it!</b> (board, model) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner ONE thing you do every day — “I brush my teeth every day!”</span> (20 sec each).</p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can name my daily routines! I can say “I get up, I brush my teeth…”.</span></p>
+        </td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, morning superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show each child a routine card (or mime one): <span class="en">What's this?</span> Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">routine cards · folder reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 90 (Lesson 1 Vocabulary):</b> ex. 1 <i>Look, read and match</i> — join the verb to the phrase (comb → my hair · brush → my teeth · make → my bed · have → a shower · wash → my face) + ex. 2 <i>Look, read and write</i> — the daily-routines crossword (sleep · shower · get up · go to bed · get dressed · go to school · comb my hair). <b>+ app trainer u9</b> — today's routine words (picture–word + <span class="en">What's this?</span>), 5–7 min.</p></td>
+        <td class="mat">Activity Book p.90 · app (u9 homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 9 · Lesson 1 (Vocabulary) “Day and night” — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.92 · Activity Book p.90 · Phonics ‘ph’ /f/.</span>
+  </div>
+</div>

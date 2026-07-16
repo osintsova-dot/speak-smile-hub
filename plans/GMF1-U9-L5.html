@@ -1,0 +1,340 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 9 · Lesson 5 — Phonics · Culture · Literacy: A Day-and-Night Poem (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* projector interactive box */
+  .fx{ background:linear-gradient(180deg,var(--p-soft),var(--card)); border:1.5px solid var(--p); border-radius:10px; padding:8px 11px; margin:7px 0; font-size:.89rem; }
+  .fx .fxh{ font-weight:800; color:var(--p-ink); display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:5px; }
+  .fx .tag{ font-size:.63rem; font-weight:800; text-transform:uppercase; letter-spacing:.04em; border-radius:5px; padding:1px 7px; white-space:nowrap; }
+  .fx .ready{ background:var(--good); color:#fff; } .fx .build{ background:var(--honey); color:var(--honey-ink); }
+  .fx .rk{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.72em; letter-spacing:.03em; }
+  .fx ul{ list-style:none; margin:4px 0 0; padding:0; display:flex; flex-direction:column; gap:3px; }
+  .fx ul li{ padding-left:14px; position:relative; } .fx ul li::before{ content:""; position:absolute; left:1px; top:.55em; width:6px; height:6px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .fx .modes{ border-top:1px dashed var(--line); margin-top:6px; padding-top:5px; }
+  .fx .mode{ margin:3px 0; } .fx .mode b{ color:var(--p-ink); }
+  .opt{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:6px; padding:5px 9px; font-size:.86rem; }
+  .opt b{ color:var(--honey-ink); }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.fx,.opt{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 9 “Day and night” · Lesson 5 — Phonics · Culture · Literacy: A Day-and-Night Poem</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · Phonics + CLIL culture + guided literacy · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 03.05–09.05 · Lesson 66</span><span class="chip">L5 Phon+Cult+Lit</span><span class="chip">continuing group · ~12 pupils · 3 teams of 4</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>say the /θ/ sound</b> (Toby's tongue twister “Three thin tigers have a bath on Thursday”), <b>understand what British children do when a tooth falls out</b> (the Tooth Fairy — box under the pillow, comes at night, leaves a coin) and <b>read &amp; act out a day-and-night poem</b> (“Morning time”), then make their own day/night mini-poem card.</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning inside the topic</b> — Unit 9 daily routines + meal times + “I (brush my teeth) every day. — Me, too.” (L1–L4) pulled straight into the /θ/ words (<i>teeth · bath · Thursday · three</i>); Jolly track — <b>cumulative recognition review of the year's consonant sounds</b> (r · s · h · j · sh · w · z · v → now <b>th</b>), full written dictation (Jolly Student Book 2 p. 28 “The pond”) → differentiated homework to protect pace; tricky words that also hide a <b>th</b>: <i>the · they · this · that</i> + sight words <i>day · night</i>.</li>
+      <li><span class="lb">Personal.</span> Keep the craft stage tight (timer + ONE line per card); model writing letter-by-letter on the board; <b>every child responds in every task</b> (own card / show-me “th” tongue / thumbs vote) — never “2 play, 10 watch”.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>say the tongue twister with a clear English /θ/ and spot words with the ‘th' sound;</li>
+        <li>name 2–3 things about the Tooth Fairy in Britain (box · pillow · night · coin);</li>
+        <li>read a short day-and-night poem and make their own mini-poem card (copy one line + draw);</li>
+        <li>write the letters they hear in a ‘th' word (incl. <b>th</b>).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">three</span><span class="w">thin</span><span class="w">bath</span><span class="w">Thursday</span><span class="w">tooth</span><span class="w">teeth</span><span class="w">think</span><span class="w">mouth</span> <span class="w">Tooth Fairy</span><span class="w">pillow</span><span class="w">money box</span> <span class="w">morning</span><span class="w">night</span><span class="w">sun</span><span class="w">moon</span><span class="w">stars</span><span class="w">owl</span><span class="w">cockerel</span> <span style="color:var(--muted);font-size:.82rem">(recycled: get up·wash my face·brush my teeth·comb my hair·have a shower·get dressed·make my bed·go to school·go to bed·sleep · breakfast·lunch·dinner·snack · in the morning/afternoon/evening/at night)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>th – th – th. Three thin tigers have a bath on Thursday. &nbsp;·&nbsp; In Britain, the Tooth Fairy visits children at night. I put my tooth under my pillow. &nbsp;·&nbsp; Poem: It's morning time. The sun is in the sky. Get up, children — it's a new day! &nbsp;·&nbsp; I (brush my teeth) every day. — Me, too.</div></div>
+      <div class="r"><div class="k">Form</div><div><b>th + word</b> (initial &amp; final: <i>th</i>in · ba<i>th</i>). Poem = short rhyming lines. Fixed chunks, copied not built.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>English <b>/θ/</b> — tongue tip gently <b>between the teeth</b>, soft air out: <i>not</i> Russian «с/ф/т». Keep the tongue visible in <i>three, thin, bath, Thursday, teeth</i>. (Voiced pair /ð/ hides in <i>the · this · they</i>.)</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Coursebook sound: <b>th</b> (PB p. 97, CD4 18–19). Jolly track: <b>cumulative recognition review of the year's consonant sounds</b> (r·s·h·j·sh·w·z·v → th); written dictation Jolly Student Book 2 p. 28 (“The pond”) → HW. Tricky words: <i>the · they · this · that</i>; sight words <i>day · night</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq"><span class="en">English ‘th' — do we hide the tongue, or show it?</span> → <b>Show it — between the teeth!</b> <span class="en">Bath — /b/ /a/ … and the last sound? th!</span></div>
+      <div class="ccq"><span class="en">The Tooth Fairy — does she come in the day or at night?</span> → <b>At night!</b> <span class="en">Where do you put your tooth?</span> → <b>Under the pillow!</b></div>
+      <div class="ccq" style="margin-bottom:12px"><span class="en">In the poem — morning: the sun says hello or goodbye?</span> → <b>Hello!</b> (the moon and stars say goodbye).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> daily routines + meal times + “I … every day / Me, too” known from L1–L4; children can copy letters but not write freely → all writing is <b>trace/copy from a board frame</b>. Emergent readers: the poem is read together, finger-following. The Tooth Fairy may be new — model warmly; some children may have a different custom (a little mouse in Russia) → celebrate it.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>‘th' said as «с / ф / т» (tongue hidden)</td><td>Mirror: tongue tip <i>between the teeth</i>, blow soft air, “stick your tongue out a little”; model <i>th-th-thin</i>. Show-me the tongue.</td></tr>
+        <tr><td>Can't tell th-words from others</td><td>Picture anchors (three·tooth·teeth·think·mouth·bath) + tongue-out show-me; exaggerate the ‘th'; use the <b>tooth</b> anchor card.</td></tr>
+        <tr><td>Poem copying slow / words unknown</td><td>Board frame written LARGE, ONE line only; dotted-line strips for weakest writers; teacher scribes.</td></tr>
+        <tr><td>Over-excited in the Day/Night stir or tooth role-play</td><td>Rule first + ICQ: <span class="en">Night — quiet or loud? — Quiet!</span> Use the volume-control arm to settle.</td></tr>
+        <tr><td>A child is upset (“no Tooth Fairy at my home”)</td><td>Frame it as <span class="en">In Britain…</span> then <span class="en">And in Russia?</span> — warmly celebrate their own custom (мышка). No “right” answer.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><b style="color:var(--p)">🎮 projector</b> = board interactive (<span style="color:var(--good);font-weight:800">READY</span> / <span style="color:var(--honey-ink);font-weight:800">TO BUILD</span>)</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> <span class="sp">🦝 Speaky</span> hops in yawning, with a toy tiger and a little white “tooth”: <span class="en">th-th-th… I'm sleepy! Three thin tigers had a bath — and look, my tooth is wobbly!</span> Class: <span class="en">Wow!</span></p>
+          <p>Ritual charge: <span class="en">Stand up! Let's get genki!</span> → <b>Genki Disco Warm Up</b> — whole class dances the routine, end seated on the carpet.</p>
+        </td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · Speaky + toy tiger + toy tooth</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Review → into today</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle daily routines (everyone does it, all at once).</span> <span class="game">▶ Teacher Says</span> (Mido №116) with routine mimes: <span class="en">Teacher says — brush your teeth!… wash your face!… comb your hair!… get up!… go to bed!</span> No “Teacher says” = don't move (trick them). Fast TPR — nobody just watches.</p>
+          <p><span class="ph">Round 2 — weave in the grammar (Kagan RallyRobin, pairs take turns):</span> <span class="en">I brush my teeth every day. — Me, too! I have breakfast in the morning. — Me, too!</span> Notice the ‘th' things: <span class="en">tee-th… ba-th… Thursday… th-th-th!</span></p>
+          <p>Bridge: <span class="sp">🦝 Speaky</span>: <span class="en">Teeth, bath, Thursday — all say th-th-th! Let's learn our sound!</span></p>
+        </td>
+        <td class="mat"><span class="game">▶ Teacher Says</span> (Mido №116) · <span class="game">▶ RallyRobin</span> (Kagan) · routine flashcards (recycled)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come closer to the board — let's sing the ABC song!</span> Sing the alphabet with actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics — th + sound review</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise th (~2½′).</span> Toby's tongue twister (PB p. 97, CD4 18): <span class="en">th – th – th. Three thin tigers have a bath on Thursday!</span> Tongue-between-teeth gesture; soft air, tongue <b>visible</b> — <b>not «с/ф»</b>. Choral ×3: slow → normal → fast. 2–3 brave solos with the “microphone”. <b>Support:</b> hold up the <b>th picture-anchor card (a tooth)</b> as the sound cue — weak pupils watch it, not the letters.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Phonics Studio — Mode 1 · Sound recognition</span> <span class="tag build">🔨 to build</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> this year's consonant sounds scattered (r·s·h·j·sh·w·z·v·th); ONE lights up at a time.</li>
+              <li><span class="rk">Kids:</span> say the highlighted sound + its Jolly action. <b>Children voice the sound — the app does NOT.</b></li>
+              <li><span class="rk">Teacher:</span> tap to highlight the next; 6–8 sounds only, <b>recognition, not writing</b> (~1½′). Full written dictation moves to differentiated homework.</li>
+              <li><span class="rk">Offline:</span> hold up the year's Jolly sound cards in a quick flash-and-say instead.</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">“th or not th?” — whole-class show-me (~2′, all react).</span> Pictures one by one — <i>three · mouth · bed · think · tooth · door · teeth · thin</i> (AB p. 94 set). Has the ‘th' sound → <b>everyone stands and sticks the tongue out “th”</b>; no ‘th' → sit, hands on knees. <span class="en">Show me!</span> Fast, nobody just watches.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Flashcards — “th or not th?”</span> <span class="tag ready">✅ ready</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> big picture flashcards, one tap = next card.</li>
+              <li><span class="rk">Kids:</span> whole class stands+“th” for th-words, sits for the rest — <b>every child reacts at once</b>.</li>
+              <li><span class="rk">Teacher:</span> use the existing <b>Flashcards</b> tool; exaggerate the ‘th'.</li>
+              <li><span class="rk">Offline:</span> paper picture cards from the AB p. 94 set, held up one by one.</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">Blend for meaning (~2′).</span> Push sounds together with picture support: <span class="en">/th/ /i/ /n/… thin! /b/ /a/ /th/… bath! /t/ /ee/ /th/… teeth!</span> Children echo + do the action.</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Phonics Studio — Mode 2 · Blending</span> <span class="tag build">🔨 to build</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> letters <b>t · h · i · n</b> slide together → <b>thin</b>, then a picture pops up for meaning.</li>
+              <li><span class="rk">Kids:</span> say each sound as it moves, then the whole word + action.</li>
+              <li><span class="rk">Teacher:</span> control the slide speed. <b>Single sounds stay silent (teacher voices them); the whole word MAY be spoken by the app</b> (browser speech).</li>
+              <li><span class="rk">Offline:</span> big letter cards slid together on the board ledge by hand.</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">Segment — CHILDREN break the word (~2½′, analyse + write).</span> No teacher spelling: <span class="en">YOU break it! bath → say it slowly, tap it on your fingers.</span> Class taps <span class="en">/b/ /a/ /th/</span> → then write the letters on mini-whiteboards → <span class="en">Show me!</span> 3 rounds: <b>bath · teeth · thin</b>. <b>Support:</b> write just the first letter. <b>Extension:</b> write the WHOLE word (b-a-th / t-ee-th).</p>
+
+          <div class="fx">
+            <div class="fxh">🎮 Projector: <span>Phonics Studio — Mode 3 · Segmenting dictation</span> <span class="tag build">🔨 to build</span></div>
+            <ul>
+              <li><span class="rk">Screen:</span> a picture + a “say it” button; after kids write, the <b>word appears letter-by-letter for self-check</b>.</li>
+              <li><span class="rk">Kids:</span> hear the whole word → segment it themselves → write → check their own board against the screen.</li>
+              <li><span class="rk">Teacher:</span> press “say it” (whole word). <b>The app never voices separate sounds — segmenting is the children's thinking job.</b></li>
+              <li><span class="rk">Offline:</span> teacher says the whole word; kids write; teacher writes the answer on the board for self-check.</li>
+            </ul>
+          </div>
+
+          <p><span class="ph">Tricky words (~1½′).</span> Flash cards <i>the · they · this · that</i> + sight words <i>day · night</i>: <span class="en">Look — these have ‘th' too, but we just KNOW them: the… they… this… that.</span> Choral ×2 + air-write. Then straight to the song — keep the pace up.</p>
+
+          <div class="opt"><b>Optional / fast finishers:</b> the PB pair game <span class="en">Fast finger!</span> (AB p. 94 ex 3 / PB p. 97 ex 3) — <i>everyone</i> plays in pairs: A says a th-word, B points fastest, then swap (Kagan RallyRobin tempo). · <b>Thematic team alt:</b> a PIES-fixed <span class="game">▶ “Oh, Don't Pull Out My Teeth!”</span> (Mido №129) — two toothy heads on the board; on each th-word <i>everyone</i> writes the missing letters on their mini-whiteboard, fastest correct team rubs out one tooth (all write, not just two). · A floor <b>Hopscotch</b> of picture squares — kids hop only on th-pictures — works as an alt playground stir if space allows.</div>
+        </td>
+        <td class="mat">PB p. 97 / CD4 18–19 · toy microphone · <b>th picture-anchor (tooth)</b> · th-picture cards (three·mouth·think·tooth·door·teeth·thin·bed) · <b>Phonics Studio</b> (board, Modes 1–3) · <b>Flashcards</b> (board) · mini-whiteboards + pens · tricky-word cards <i>the·they·this·that·day·night</i></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Morning… afternoon… evening… night! Sing!</span> Sing <span class="game">Genki «Good Morning!»</span> — greet by the time of day (wave / stretch / yawn / sleep) → <span class="sp">🦝 Speaky</span>: <span class="en">This is Lucy. She lives in England. What happens at NIGHT when her tooth falls out?</span></p></td>
+        <td class="mat"><b>Genki «Good Morning!»</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–34′</td>
+        <td class="stage"><div class="nm">Culture — the Tooth Fairy in Britain</div><div class="zone">carpet → circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Listen &amp; look (PB p. 98, CD4 20).</span> Photo by photo: <span class="en">In Britain, the Tooth Fairy visits children's bedrooms at night. When my tooth falls out, I put it in a box. I put the box under my pillow. The Tooth Fairy comes at night — she takes my tooth when I'm sleeping. In the morning, I find a letter: “Thank you, Lucy!” — and money in my money box!</span></p>
+          <p><span class="ph">▶ Tooth-Fairy mime — everyone joins in (role-play).</span> ICQ: <span class="en">Night — quiet or loud? — Quiet!</span> All mime: put the tooth in the box → box under the pillow → curl up and “sleep” → (Speaky flutters the fairy over) → morning: stretch, find the coin! Every child mimes, all together.</p>
+          <p><span class="ph">Think about YOUR culture (all vote — thumbs).</span> <span class="en">Have you got a Tooth Fairy in YOUR country? What do you do with your tooth?</span> — thumbs up / down + one-word answers; celebrate the Russian custom (мышка) warmly. Everyone answers.</p>
+        </td>
+        <td class="mat">PB p. 98 / CD4 20 · toy tooth + small box · Speaky-as-fairy · <span class="game">▶ Tooth-Fairy mime</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">34–35′</td>
+        <td class="stage"><div class="nm">⚡ Day &amp; Night stir → settle</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="en">Night! …Day!</span> <span class="game">▶ Day &amp; Night</span> (Freeze reskin, Mido №100): on <span class="en">Night!</span> everyone curls up asleep + soft owl <span class="en">whoo whoo</span>; on <span class="en">Day!</span> stretch, get up + cockerel <span class="en">cock-a-doodle-doo!</span> — 4–5 fast rounds (feeds straight into the poem). Then: <span class="en">Freeze! Now — tiptoe to your tables like sleepy owls.</span></p></td>
+        <td class="mat">— (voice only)</td>
+      </tr>
+
+      <tr>
+        <td class="min">35–47′</td>
+        <td class="stage"><div class="nm">Literacy — “Morning time” poem</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Before you read (PB p. 99, CD4 21).</span> <span class="en">Listen and number — day or night?</span> Point: <i>sleep · owl · cockerel · children</i> → each time say <span class="en">day!</span> or <span class="en">night!</span> — everyone calls out.</p>
+          <p><span class="ph">Listen &amp; read the poem (CD4 22) — fingers follow.</span> Read <b>“Morning time”</b> together (emergent readers follow the picture + line): <span class="en">It's morning time. The sun is in the sky. The moon and the stars say goodbye. The owl goes to sleep… and the cockerel crows. Get up, children — it's a new day!</span> CCQ: <span class="en">Morning — sun: hello or goodbye? — Hello!</span></p>
+          <p><span class="ph">▶ Act out the poem (Ex 3, everyone).</span> Owl sleeps (<span class="en">whoo</span>), cockerel crows (<span class="en">cock-a-doodle-doo</span>), all stretch: <span class="en">Get up, children — it's time to play!</span></p>
+          <p><span class="ph">Make YOUR day/night card (literacy product).</span> Fold an A5 card: one side <b>NIGHT</b> (moon · stars · owl — cool colours), one side <b>DAY</b> (sun · cockerel · children — warm colours). Each child copies <b>ONE line</b> from the board frame (written LARGE) and draws it. <b>Support:</b> dotted-line strips to trace + teacher scribes. <b>Extension:</b> copy a second line, or add their own: <span class="en">It's night time…</span> Timer 8 min, countdown finish: <span class="en">5…4…3…2…1… pencils down!</span></p>
+        </td>
+        <td class="mat">PB p. 99 / CD4 21–22 · folded A5 cards · warm/cool crayons · board frame (poem lines) + dotted-line strips · timer</td>
+      </tr>
+
+      <tr>
+        <td class="min">47–52′</td>
+        <td class="stage"><div class="nm">Day &amp; Night wall · share</div><div class="zone">teams of 4</div></td>
+        <td class="flow">
+          <p><span class="ph">RoundRobin in teams (Kagan — everyone shows, everyone speaks).</span> In turn, each child stands, holds up their card and reads the line: <span class="en">Get up, children — it's a new day!</span> — team echoes and does the action (owl <span class="en">whoo</span> / cockerel <span class="en">cock-a-doodle-doo</span>). Round the team till all four have shared.</p>
+          <p>Then stick every card onto the big class chart: <span class="en">This is OUR Day and Night wall!</span> Point &amp; chorus one line together.</p>
+        </td>
+        <td class="mat">finished cards · big class chart + tape · <span class="game">▶ RoundRobin</span> (Kagan)</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p>Quick pairs (Timed Pair Share): <span class="en">Tell your partner ONE thing you do in the morning. And say — th-th-th!</span> (both partners speak, 20 sec each).</p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can say th-th-th! I can read a poem!</span></p>
+        </td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show each child a picture: <span class="en">th or not th?</span> (tongue-out “th” or hands on knees) + <span class="en">Tell me ONE thing you do in the morning!</span> → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">th / not-th picture cards · folder reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Core (everyone) — Activity Book p. 94 (Lesson 5 Phonics), exercises 1–2</b> (① <i>Write and say</i> — fill in the missing <b>th</b> letters in Toby's tongue twister: <i>Three thin tigers have a bath on Thursday</i>; ② <i>Colour the words that have ‘th'. Say</i> — three · mouth · think · tooth · teeth · thin) <b>+ p. 95 (Lesson 6 British culture), exercises 1–2</b> (① <i>Read and write</i> — complete the Tooth Fairy's letter: pillow · brush · tooth · Fairy · lunch; ② <i>Read and tick ✓. Draw, write and say</i> — I put my tooth under my pillow / in the bin / outside / in water).</p>
+        <p><b>Differentiated:</b> <i>Support</i> — just ex. 2 on p. 94 (colour &amp; say the th-words), grown-up may read the words aloud. <i>Extension</i> — <b>p. 96 (Lesson 7 Literacy) ex. 1</b> <i>Read and write</i> (day/night words — owl · cockerel · moon · sun · children · stars) <b>+ the Jolly write-and-say dictation</b> (Jolly Student Book 2, p. 28 “The pond”).</p>
+        <p>💻 <b>Online unit trainer: <a href="https://speakandsmile.ru/gmf1/u9.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u9.html</a></b> — Practice + Booster for Unit 9 (daily routines &amp; meal times), 5–7 min. Teacher sends the link to parents via BigBen.</p></td>
+        <td class="mat">Activity Book p. 94–95 (core) · p. 96 (extension) · Jolly Student Book 2 p. 28 · unit trainer u9.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 9 · Lesson 5 (Phonics · Culture · Literacy) — lesson plan &amp; staging</span>
+    <span>Verified against Give Me Five! 1 Pupil's Book pp. 97–99 &amp; Activity Book pp. 94–96.</span>
+  </div>
+</div>
