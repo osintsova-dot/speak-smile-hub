@@ -1,0 +1,307 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 8 · Lesson 3 — Story: Fun at the camp (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 8 “Camping fun!” · Lesson 3 — Story: Fun at the camp</div>
+    <div class="s">Pre-A1 young learners (~7–8 y.o., emergent readers) · 60 min · Story: listen → read → act out (drama) · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 29.03–04.04 · Lesson 57</span><span class="chip new">✨ STORY</span><span class="chip">~12 pupils · small groups for drama</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>follow and understand the story “Fun at the camp”</b> (Pupil's Book pp. 84–85, CD3 47) and <b>act it out</b> using key story language: “What's the weather like? — It's hot / cold / raining.”, “Let's swim / sail a boat.”, “You can't swim today — it's dangerous.”, “She's riding a horse. He's sailing a boat.”, “Oh no! What a pity! Bad luck!”, “But we can sail the magic bike!”.</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning</b> — <i>can / can't</i> for ability &amp; permission (Unit 5 Farm) is the <b>engine of the whole story</b> (the weather decides what the children <i>can't</i> do); <i>Where's my…?</i> (U1) → “Where's my swimsuit?”; colours <i>red / yellow / green</i> (Starter) → the safety flag; He's/She's + activity (U6 → U8 L2) — all <b>woven straight into the story</b>. Phonics — Jolly <b>/ue/ spelled <i>ue</i></b> (<i>blue · glue · true · rescue</i>, recognise → blend → read) + tricky words by sight <i>you · are · there</i>. Values (PB p. 85 ex. 2): stay safe near water — a <b>red</b> flag means <i>don't go in</i>.</li>
+      <li><span class="lb">Personal.</span> Keep story listening active (gesture responses, prediction over the repeating weather pattern); manage drama noise with Freeze; <b>every child acts in a small group at the same time</b> — no “2 on stage, 10 watching” until the final 30-sec showcase. Keep phonics short and light — this is a story lesson.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>show they understand the story (number the frames, True/False thumbs);</li>
+        <li>say the key lines in role: “It's hot! Let's swim.”, “You can't swim — it's dangerous!”, “She's riding a horse.”;</li>
+        <li>read the ending twist — “We can't sail a boat… but we can sail the magic bike!”;</li>
+        <li>blend &amp; read <i>ue</i> words (blue · glue · rescue) and read <i>you · are · there</i> by sight;</li>
+        <li>know a <b>red</b> flag means it's dangerous to swim (values).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">camp</span><span class="w">tent</span><span class="w">lake</span><span class="w">forest</span><span class="w">flag</span><span class="w">swimsuit</span><span class="w">swim</span><span class="w">ride a horse</span><span class="w">sail a boat</span><span class="w">hot</span><span class="w">cold</span><span class="w">sunny</span><span class="w">raining</span><span class="w">windy</span> <span style="color:var(--muted);font-size:.82rem">(recycled: clothes trousers/shirt/T-shirt · can/can't · Where's my…? · colours red/yellow/green · Toby the dog + the magic bike)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What's the weather like? — It's hot / cold / raining. · Let's swim / sail a boat. · You can / can't swim today. It's dangerous / raining. · She's riding a horse. He's sailing a boat. · I'm wearing trousers and a shirt. · Where's my swimsuit? · Oh no! What a pity! Bad luck! · We can sail the magic bike!</div></div>
+      <div class="r"><div class="k">Form</div><div><b>can / can't</b> + base verb — ability &amp; permission (recycled U5, the story's backbone). Present continuous <b>He's / She's + verb-ing</b> (riding, sailing, swimming — <i>receptive</i> here; full focus L4). <b>I'm wearing</b> + clothes (L2). <b>Let's</b> + verb (suggestion, receptive).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>weak <b>can</b> /kən/ vs strong <b>can't</b> /kɑːnt/ (make the /t/ clear); contractions <i>She's · He's · I'm · It's · Let's</i>; connected <i>What's the</i> /wɒts ðə/.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly: <b>/ue/ spelled <i>ue</i></b> — <i>blue · glue · true · rescue</i> (recognise → blend → read) · tricky words by sight: <i>you · are · there</i> (all appear in the story language).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Frames 2–3: “It's hot — Let's swim! <b>Can</b> they swim?” → <b>“No! The flag is RED — it's dangerous.”</b></div>
+      <div class="ccq">Frames 4–5: “The next day it's cold and raining. <b>Can</b> they ride a horse?” → <b>“No — it's raining!”</b></div>
+      <div class="ccq" style="margin-bottom:12px">Frames 6–8: “Now it's hot and sunny — Let's sail a boat! <b>Can</b> they sail?” → <b>“No — it isn't windy!… but the MAGIC BIKE helps!”</b> (the happy twist).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> <i>can / can't</i> known from U5 (Farm); <i>Where's my…?</i> from U1; colours from the Starter; clothes + <i>I'm wearing…</i> from U8 L1–L2; children know Toby the dog &amp; the magic bike from earlier units. Emergent readers → they FOLLOW the pictures while listening; the teacher points, children don't read the speech bubbles alone.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td><i>can</i> and <i>can't</i> sound the same to them</td><td>Fix two gestures: <b>can</b> = thumbs-up “yes, go!”; <b>can't</b> = arms crossed “X, no!”. Over-stress the /t/. “Show me!” drill with weather before the story.</td></tr>
+        <tr><td>Present continuous <i>-ing</i> is new</td><td>Keep it <b>receptive</b> — don't drill the form. Gesture each action (ride, sail, swim) and let the picture carry the meaning; the grammar is fully taught in L4.</td></tr>
+        <tr><td>Children call answers over the audio</td><td>“Listening hands” rule — hands cupped behind ears while the CD plays; talk only when it stops.</td></tr>
+        <tr><td>Drama turns to chaos (running around)</td><td>Movements are ON THE SPOT (magic-bike ride = pedal sitting; swim = arms on the spot); roles fixed by colour badges; <span class="call">“Freeze!”</span> resets.</td></tr>
+        <tr><td>Frame cards ordered by one child in the pair</td><td>Rule “one card each turn, take turns” (RallyRobin with cards); praise pairs where both hands work.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset (essential in drama).</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Come in!</span> On the carpet <span class="sp">🦝 Speaky</span> is dressed for a camping trip — a hat, a little tent, a toy boat: <span class="en">We're going camping! But… oh no, what's the weather like today?!</span> (children love his tiny tent — that's the hook).</p>
+          <p><span class="en">Stand up! Warm-up time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the opening ritual, finish seated on the carpet.</p>
+        </td>
+        <td class="mat"><b>Genki «Disco Warm Up»</b> mp3 · Speaky + camping props (hat, mini tent, toy boat) · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Review → into the story</div><div class="zone">carpet, circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle U5 <i>can/can't</i> — the story's engine.</span> Flash 4–5 activity/animal cards, class chants the rhythm (clap-clap-ask): <span class="en">Can you swim? — Yes, I can! · Can a dog sail a boat? — No, it can't!</span> Fix two gestures: <b>can</b> = thumbs-up, <b>can't</b> = arms crossed. Call fast: <span class="en">Show me CAN! Show me CAN'T!</span> — all react.</p>
+          <p><span class="ph">Recycle U1 + clothes (U8 L1).</span> <span class="sp">🦝</span> loses things: <span class="en">Where's my hat? Where's my swimsuit?</span> → hide &amp; find. Then flash clothes: <span class="en">What are you wearing? — I'm wearing a T-shirt!</span> (2–3 children).</p>
+          <p><span class="ph">Bridge.</span> <span class="en">Some children are camping… but every day the weather is a problem! Can they swim? Can they ride a horse? Let's find out!</span> Signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">activity/animal flashcards · clothes flashcards · Speaky + hidden props</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">8–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">To the board — sounds time!</span> Sing the ABC / sounds song with Jolly actions → settle into phonics.</p></td>
+        <td class="mat"><b>ABC / Jolly sounds song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–18′</td>
+        <td class="stage"><div class="nm">📺 Phonics — /ue/ (ue)</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise (snappy — keep it light, this is a story lesson).</span> <span class="en">New spelling today: <b>u–e</b> together says /ue/!</span> Show the digraph card; children make the sound with the Jolly action. 30 seconds, then straight to blending.</p>
+          <p><span class="ph">Blend (all respond).</span> <span class="sp">🦝</span> robot-voice, one sound at a time: <span class="en">/b/ /l/ /ue/…</span> class blends &amp; shouts <span class="en">blue!</span> → point to something blue. Do <i>blue · glue · true · rescue</i> — a picture each time for meaning (<i>rescue</i> = the magic bike rescues them at the end!).</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Flashcards Blender — “ue words” <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U8 <b>“Flashcards”</b> engine — one <i>ue</i> word, letters split <i>b · l · ue</i>, then a picture reveal on tap. <b>· How:</b> tap to sound each part → tap to blend → tap to show the picture. <b>· Pupils:</b> voice each sound then blend chorally — <span class="en">blue!</span> — and touch their nose if the picture matches. <b>· Teacher:</b> drive the taps, keep the beat, praise blends.</div>
+          </div>
+          <p><span class="ph">Read — thumbs check (all react).</span> Flash word cards; class blends chorally, then <b>thumbs up = real word, thumbs down = silly word</b> (mix in <i>bl-oo · gue</i>). Every child shows a thumb.</p>
+          <p><span class="ph">Tricky words by sight — you · are · there.</span> Flash, chorus, air-write. Meaning-link straight to the story: <span class="en">“There are lots of activities.” “Can you swim?”</span> — no writing dictation (heaviest task; save the pen for the story work). <span style="font-size:.85rem;color:var(--muted)"><b style="color:var(--good)">Support:</b> keep the picture beside the word; ask for the first sound only. <b style="color:var(--p)">Extension:</b> fast finishers write <i>blue · glue</i> on a mini-whiteboard → <span class="en">Show me!</span></span></p>
+        </td>
+        <td class="mat">JP <i>ue</i> digraph card · <i>blue/glue/true/rescue</i> word+picture cards · tricky-word cards (you/are/there) · a few mini-whiteboards (extension) · Speaky</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">18–20′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">In our story the weather keeps changing! Let's sing about the weather!</span> Sing <span class="game">Genki «What's The Weather Like?»</span> (10) with actions (hot = fan yourself · raining = fingers falling · windy = sway) → weather primed → <span class="en">And now — the story!</span></p></td>
+        <td class="mat"><b>Genki «What's The Weather Like?»</b> (10) mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">20–31′</td>
+        <td class="stage"><div class="nm">📺 Story — listen &amp; follow</div><div class="zone">carpet, books/screen</div></td>
+        <td class="flow">
+          <p><span class="ph">Before you read (PB p. 84).</span> Big story picture on screen / books open. The book's question: <span class="en">What's the weather like in the story?</span> — pairs point &amp; guess 15 sec, then chorus. Pre-teach with gesture: <span class="en">camp / tent</span> (roof hands) · <span class="en">lake</span> (wavy hands) · <span class="en">flag</span> (wave) · <span class="en">swimsuit</span> (mime).</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Find it! — “What's at the camp?” <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U8 <b>“Find it!”</b> engine on the big story picture. <b>· How:</b> Speaky asks, a child taps the thing; it lights up. <b>· Pupils:</b> whole class points to their book / calls it — <span class="en">A tent! A lake! A boat! A horse!</span> then <span class="en">She's riding a horse. He's sailing a boat.</span> <b>· Teacher:</b> <span class="sp">🦝</span> <span class="en">Where's the flag? Point!</span> — 4–5 things, quick.</div>
+          </div>
+          <p><span class="ph">Predict (thinking) — before we listen.</span> <span class="en">It's a hot day! What do the children want to do? Will they swim? Yes or no?</span> Thumbs guess. <span class="en">Let's listen and check!</span></p>
+          <p><span class="ph">Listen 1 — global (CD3 47).</span> “Listening hands” behind ears. Teacher points frame by frame; children follow the pictures. Gist check: <span class="en">Do the children have fun? Show me!</span> (thumbs) <span class="en">Was your guess right — did they swim?</span> (No — the flag is red!)</p>
+          <p><span class="ph">Detail check — True or False? (thumbs up / down, all react — mirrors the homework).</span> <span class="en">There are lots of activities at the camp.</span> (👍) · <span class="en">The children swim in the lake.</span> (👎 — <span class="en">The flag is red! It's dangerous.</span>) · <span class="en">The children ride a horse.</span> (👎 — <span class="en">It's raining!</span>) · <span class="en">There's a flag at the lake.</span> (👍) · <span class="en">The children sail the magic bike.</span> (👍). Re-point the frame to fix any wrong thumb.</p>
+          <p><span class="ph">Listen 2 — active (all respond).</span> Play again; children do the gestures at the right moments: <b>hot</b> (fan) · <b>swim</b> (arms on the spot) · <b>red flag → arms crossed “can't!”</b> · <b>Oh no! / What a pity!</b> hands on cheeks · <b>cold + raining</b> (shiver + fingers falling) · <b>ride a horse</b> (bounce) · <b>sunny</b> (round arms) · <b>magic bike Ring! Ring!</b> · cheer <span class="en">Wheeee!</span> CCQs between frames (see box above): stop at frames 3, 5, 7 — <span class="en">Can they swim? / ride? / sail? — No! Why?</span></p>
+        </td>
+        <td class="mat">PB pp. 84–85 · CD3 47 / animated story (Navio) · <b>“Find it!”</b> (board) · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">31–32′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at carpet</div></td>
+        <td class="flow"><p><span class="en">Everybody up — weather machine!</span> Call a weather word, all do the action ON THE SPOT: <span class="en">Hot! → Cold! → Raining! → Windy! → Sunny!</span> Then the punchline: <span class="en">Magic bike — go!</span> pedal on the spot (<span class="en">Wheee!</span>) → <span class="en">Freeze!</span> → sit at desks.</p></td>
+        <td class="mat">— (voice + gestures)</td>
+      </tr>
+
+      <tr>
+        <td class="min">32–39′</td>
+        <td class="stage"><div class="nm">▶ Build the story</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Story-Sequence</span> (Mido №54 “Reconstruction”, picture re-skin for non-readers — <b>all pairs work at once</b>). Each pair gets the story's frames as shuffled mini-cards.</p>
+          <p><span class="ph">Order it.</span> <span class="en">Put the story in order — one card each, take turns!</span> (RallyRobin with cards: A places one, B places the next.) Countdown 2 min. <span class="ph">ICQ:</span> <span class="en">Do we grab all the cards or take turns?</span> (→ take turns!)</p>
+          <p><span class="ph">Check with the audio.</span> Replay CD3 47: pairs touch each card as they hear it — self-check, fix the order. Then choral retell, teacher holds up big frames one by one, class says the line: <span class="en">Wow! Lots of fun activities! · It's hot! Let's swim. · You can't swim — it's dangerous! · The next day — it's cold and raining. · You can't ride a horse today. What a pity! · Hurray! It's hot and sunny! Let's sail a boat. · We can't sail — it isn't windy. Magic bike, help! · Wheee! We can sail the magic bike!</span></p>
+          <div style="background:var(--honey-soft);border:1px solid var(--line);border-left:4px solid var(--p);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Camp Story-Sequence 1–5 <span style="background:var(--p);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">🔨 СОБРАТЬ</span></div>
+            <div><b>Screen:</b> the 5 key story frames (hot “Let's swim!” → red flag “can't swim!” → rainy day “can't ride!” → sunny “can't sail” → magic bike “Wheee!”) appear <b>shuffled</b> in a row, each with an empty number badge 1–5. <b>· How:</b> tap two frames to swap them (or drag); when the order is right, a ✅ + a cheer plays. A “Check” button lights correct frames green. <b>· Pupils:</b> the class calls the order — <span class="en">Number one — it's hot, let's swim! Number two — the red flag!</span> — and gesture each frame. <b>· Teacher:</b> take votes (<span class="en">Which is first? Hands up!</span>), tap as they decide, then replay CD3 47 to confirm. Mirrors the paired frame-cards on screen for a whole-class check.</div>
+          </div>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> give that pair only <b>5</b> clearest frames and number the first one for them. <b style="color:var(--p)">Extension:</b> after ordering, ask them to say one whole line for each frame from memory before the audio check. <b>Offline reserve:</b> printed frame mini-cards from PB pp. 84–85 (no projector needed).</p>
+        </td>
+        <td class="mat">story frame mini-cards per pair (print from PB pp. 84–85) · 5-frame set for support pairs · CD3 47 · big frame cards for the board</td>
+      </tr>
+
+      <tr>
+        <td class="min">39–48′</td>
+        <td class="stage"><div class="nm">Act out — drama</div><div class="zone">carpet, groups</div></td>
+        <td class="flow">
+          <p><span class="ph">Roles.</span> Groups of 3–4: <b>2–3 children</b> (red/green/blue badges — want to swim, ride, sail) · <b>the man at the lake</b> (yellow badge — says “You can't… it's dangerous!”) · <b>the magic bike</b> (any child — “Ring! Ring! Wheee!”). Model once with a strong group.</p>
+          <p><span class="ph">All groups act at the same time.</span> Narrate the story slowly, frame by frame; every group plays it in their own spot (swim/ride/sail ON THE SPOT!): <span class="en">Wow, lots of activities! It's hot — let's swim! … Sorry, you can't swim, it's dangerous! Oh no, what a pity! … The next day — it's cold and raining. You can't ride a horse! Bad luck! … Hurray, it's sunny! Let's sail a boat! … But it isn't windy — you can't sail. Magic bike, can you help? … Wheee! We can sail the magic bike!</span></p>
+          <p><span class="ph">Create (thinking) — make it yours.</span> Before round 2: <span class="en">Add ONE more day! What's the weather? What do YOU want to do? Can you do it?</span> Each group invents a short exchange: <span class="en">It's cold and windy! Let's fly a kite! — No, it's too cold! What a pity!</span> (support: point to a weather + activity card; extension: invent the whole exchange).</p>
+          <p>Swap roles, run it again — <b>keep it to 2 rounds</b> (<span class="en">Freeze!</span> the moment energy tips). Volunteers: ONE group shows 30 sec for the class — big applause. <span class="ph">Values (PB p. 85 ex. 2):</span> <span class="en">The flag is RED. Can we swim?</span> → <span class="en">No! It's dangerous!</span> — red = stop, green = go.</p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> quieter children get the “magic bike” or short-line role (Ring! Ring! + gesture); a line card in hand. <b style="color:var(--p)">Extension:</b> confident children play the man at the lake and lead the “you can't…” exchange.</p>
+        </td>
+        <td class="mat">role badges ×4 colours · weather + activity cards · PB p. 85 (values)</td>
+      </tr>
+
+      <tr>
+        <td class="min">48–53′</td>
+        <td class="stage"><div class="nm">▶ Weather says!</div><div class="zone">desks, all at once</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Weather says — can or can't?</span> (targeted settler — <i>can/can't</i> + weather + activities + red/green flag; <b>every child answers every round</b>). Each child holds a <b>red card</b> and a <b>green card</b> (or thumbs).</p>
+          <p><span class="sp">🦝 Speaky</span> sets the scene: <span class="en">It's hot and sunny! Let's sail a boat!</span> → children hold up GREEN + say <span class="en">Yes, you can!</span>; <span class="en">It's raining! Let's ride a horse!</span> → RED + <span class="en">No, you can't!</span>. 6–7 rounds, instant show-me check each time. Slip in the flag values: <span class="en">The flag is red — can we swim?</span> → all RED.</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Find it! — “Weather &amp; activities” (model &amp; check) <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U8 <b>“Find it!”</b> board — weather icons + activity pictures. <b>· How:</b> Speaky says an activity, a child taps the weather that makes it can / can't; a red or green flag pops up. <b>· Pupils:</b> first show their OWN red/green card, then one child mirrors it on screen — <span class="en">It isn't windy — you can't sail!</span> class checks: <span class="en">No, you can't!</span> <b>· Teacher:</b> use it to model round 1, then just for the show-me check so every child stays on their own cards. <b>Offline reserve:</b> red/green paper cards only, no projector.</div>
+          </div>
+        </td>
+        <td class="mat">red + green card per pupil · <b>“Find it!”</b> (board, model/check) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">53–57′</td>
+        <td class="stage"><div class="nm">Reflection + Closing</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ RallyRobin retell (pairs, take turns).</span> Big frames stay on the board in order. <span class="en">Tell the story to your partner — one line each, take turns!</span> A: <span class="en">It's hot! Let's swim!</span> → B: <span class="en">No — the flag is red!</span> → A: <span class="en">The next day it's raining…</span> … (support: point &amp; say one word per frame; extension: full lines to the magic-bike end).</p>
+          <p>Then: <span class="en">Which picture do you like? Point and tell your partner!</span> (20 sec each). “I can…” badge: <span class="en">Colour your badge — I can act out the story!</span></p>
+          <p><span class="en">Well done, superstars! Let's sing Goodbye. Your homework is in your Activity Book and on the app!</span> Sing Goodbye.</p>
+        </td>
+        <td class="mat">“I can…” badges · <b>Goodbye song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Show each child one frame card: say any line from it (<span class="en">You can't swim — it's dangerous!</span>) — or answer <span class="en">The flag is red — can you swim, yes or no?</span> Said it → out: <span class="en">Well done! Take care! Goodbye!</span></p></td>
+        <td class="mat">story frame cards · folder reward stickers 🦝</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow">
+          <p><b>Activity Book — p. 82, exercises 1–2 (Lesson 3 Story · After you read):</b> ① <i>Remember the story. Read and circle</i> true <i>or</i> false — 5 statements (There are lots of activities at the camp = <b>true</b> · The children swim in the lake = <b>false</b> · The children ride a horse = <b>false</b> · There's a flag at the lake = <b>true</b> · The children sail the magic bike = <b>true</b>) · ② <i>Read and write</i> (can / can't) <i>. Colour the flags</i> — “You <u>can't</u> go in the water today. It's dangerous.” (red flag) / “You <u>can</u> go in the water today.” (green flag). + app: story words micro-set (5–7 min).</p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:2px"><b style="color:var(--good)">Support (core):</b> ex. 1 (circle true/false — look back at the pictures) + colour the two flags in ex. 2 — the can/can't writing is optional, copy from the picture clue. <b style="color:var(--p)">Extension (challenge):</b> after ex. 2, tell a grown-up the story with the pictures — one line per frame.</p>
+          <p>💻 Онлайн-тренажёр юнита: <a href="https://speakandsmile.ru/gmf1/u8.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u8.html</a> — Practice + Booster по Unit 8 (лексика/грамматика урока).</p>
+        </td>
+        <td class="mat">Activity Book p. 82 · app (homework link) · тренажёр u8.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 8 · Lesson 3 (Story: Fun at the camp) — lesson plan &amp; staging</span>
+    <span>Story verified against Pupil's Book pp. 84–85 (CD3 47); homework against Activity Book p. 82.</span>
+  </div>
+</div>

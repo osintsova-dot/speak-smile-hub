@@ -1,0 +1,299 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 8 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* added: interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 8 “Camping fun!” · Lesson 1 — Vocabulary</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers · <b>continuing line</b>) · 60 min · PPP + TPR + Phonics · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 22.03–28.03</span><span class="chip new">✨ NEW · 10 clothes items</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">Pupil's Book p.82 · AB p.80</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 10 items of clothing</b> and <b>ask &amp; answer</b> using “What's this? — It's a (sweater)” and “What are you wearing? — I'm wearing (shorts) and a (T-shirt)” in the camping context.</li>
+      <li><span class="lb">Subsidiary.</span> Sing the coursebook song <i>What are you wearing?</i>; <b>retrieve</b> colours (Starter/U1), numbers 1–10, “Is it a…? — Yes/No” (U2), “I've got…” (U3) &amp; “Where's my…? — It's here” (U1) woven onto today's clothes; phonics <b>‘oi’ = /ɔɪ/</b> (recognise → blend → segment); tricky words <i>put, saw</i>; pre-literacy &amp; fine motor (sticker chant); <b>preview</b> “What's he/she doing? — He's/She's (riding a horse)” for L2/L4.</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; run a stirrer→settler rhythm with songs &amp; signals; catch &amp; recast the always-plural items (<i>shorts · shoes · trousers · trainers</i> — no “a”) and the two-word <i>sun hat</i>.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>name the 10 clothes items (T-shirt · shorts · sun hat · shirt · trousers · trainers · skirt · sweater · shoes · swimsuit);</li>
+        <li>ask &amp; answer “What's this? — It's a…” &amp; say “I'm wearing (shorts) and a (T-shirt)”;</li>
+        <li>hear, blend &amp; segment ‘oi’ = /ɔɪ/ words.</li>
+      </ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">T-shirt</span><span class="w">shorts</span><span class="w">sun hat</span><span class="w">shirt</span><span class="w">trousers</span><span class="w">trainers</span><span class="w">skirt</span><span class="w">sweater</span><span class="w">shoes</span><span class="w">swimsuit</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What's this? — It's a (sweater). &nbsp;·&nbsp; What are you wearing? — I'm wearing (shorts) and a (T-shirt). &nbsp;·&nbsp; <i>preview (L2/L4):</i> What's he/she doing? — He's/She's (riding a horse).</div></div>
+      <div class="r"><div class="k">Form</div><div>I'm = I am; <i>wearing</i> = present-continuous chunk. <b>a + singular</b> (a T-shirt, a skirt) vs <b>plural, no “a”</b> (shorts · shoes · trousers · trainers — always two). Weak <i>a</i> /ə/.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>two-word <i>sun hat</i>; <i>swimsuit</i> /ˈswɪmsuːt/; <i>sweater</i> /ˈswetə/ (short e — <b>not</b> “sweeter”); plural /z/ on <i>shoes · trousers</i>; long ‘oi’ /ɔɪ/.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Digraph <b>‘oi’ = /ɔɪ/</b>: coin · join · point · boil (recognise → blend → segment). Tricky words: <b>put · saw</b>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“Do we wear it when it's <b>hot and sunny</b>?” → yes → <b>sun hat / shorts / T-shirt.</b> “Do we wear it to <b>swim</b>?” → yes → <b>swimsuit.</b> “Is it <b>one</b> thing or <b>two</b>?” (shoes/trousers) → two → <b>plural, no “a”.</b></div>
+      <div class="ccq" style="margin-bottom:10px">‘oi’: “How many letters?” → two. “How many sounds?” → <b>one → /ɔɪ/.</b></div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> colours, numbers 1–10, “Is it a…? — Yes/No” (U2), “I've got…” (U3), “Where's my…? — It's here” (U1), places in town (U7) and all phonic sounds so far (incl. ‘oa’ U6, ‘ir’ U7) are known (continuing line, spring term). Pupils are non-/emergent readers → rely on pictures &amp; audio, not printed text. Carpet &amp; team routines are known.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>“a short / a trouser” — plural item made singular</td><td>Hold up TWO: <span class="en">shoeS, trouserS — always two, no “a”.</span> Wiggle two fingers.</td></tr>
+        <tr><td><i>sweater</i> said “sweeter”</td><td>Short <i>e</i>: clap <span class="en">swe–ter</span>; back-chain <i>ter → swe-ter.</i></td></tr>
+        <tr><td>Confuse <i>shirt</i> ↔ <i>T-shirt</i> ↔ <i>skirt</i></td><td>Cue: T-shirt = the <b>T</b> shape 👕; skirt = a girl spins; say the first sound loud.</td></tr>
+        <tr><td>“I'm wearing” dropped to “I wearing”</td><td>Model &amp; stress: <span class="en">I'M wearing a T-shirt.</span> short choral drill.</td></tr>
+        <tr><td>‘oi’ read as two sounds /o/+/i/</td><td>Slide two fingers together: <span class="en">two letters, ONE sound — /ɔɪ/.</span></td></tr>
+        <tr><td>Over-excited “camping” energy on the carpet</td><td><span class="en">Freeze!</span> + volume-control arm; follow every stirrer with a settler.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="sp">🦝 Speaky</span> waves, wearing a big sun hat: <span class="en">Hello, friends! We're going camping today!</span> Class: <span class="en">Hello, Speaky!</span></p>
+          <p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p>
+          <p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p>
+        </td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · Speaky + sun hat · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval mingle</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieve, on-topic.</span> <span class="en">Last week — the TOWN. Today — a CAMPING trip! What do we pack? Clothes!</span> Old language woven onto today's clothes theme. <span class="game">▶ Mix–Pair–Share:</span> play music → <span class="en">Stand up, hand up, pair up!</span></p>
+          <p>Give each pair a clothes flashcard. R1 <span class="ph">colours (Starter/U1):</span> <span class="en">It's a RED T-shirt! It's BLUE trousers!</span> R2 <span class="ph">“Is it a…?” · U2 (RallyRobin):</span> partners take turns hiding &amp; guessing — <span class="en">Is it a hat? — Yes, it is! / No, it isn't.</span> R3 <span class="ph">numbers &amp; “I've got” · Starter/U3:</span> <span class="en">How many shoes? — Two! I've got shoes!</span></p>
+          <p><span class="asr">✔ <b>Assess:</b> circulate — who still needs a colour/number word? Note 1–2 names to support at Presentation.</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> give the pair a strong colour cue on the card. <span class="ext">⭐ Extension:</span> add “Where's my <b>sun hat</b>? — It's here!” (U1 <i>Where's my…?</i>).</span>
+        </td>
+        <td class="mat">music · clothes flashcards · <span class="game">▶ Mix-Pair-Share + RallyRobin</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come closer to the board — sing the sounds!</span> Sing the phonics song with the Jolly actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>Phonics / ABC song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics · ‘oi’ = /ɔɪ/</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise.</span> <span class="en">Two letters — o, i — one sound: /ɔɪ/!</span> Show <i>coin · join · point · boil · oil · soil</i>. <span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if you hear /ɔɪ/… coin!… cat!… join!</span> (mix in non-‘oi’ words — everyone reacts every time).</p>
+          <p><span class="ph">Blend.</span> Push the sounds together with a finger slide: <span class="en">/c/ /oi/ /n/… coin!</span> + picture for meaning. Repeat with <i>join, point, boil</i>.</p>
+          <p><span class="ph">Segment · dictation.</span> <span class="en">Now YOU write. Listen…</span> say a word once → children write on mini-whiteboards → <span class="en">Show me!</span> → reveal &amp; check. Words: <b>coin · join · point · boil</b>. Then flash tricky words <b>put · saw</b> — <span class="en">These are tricky — we just know them!</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> pre-write “oi” on their board; they add the first &amp; last sound. <span class="ext">⭐ Extension:</span> add one more — <i>soil · oil · spoil</i>.</span>
+          <p><span class="asr">✔ <b>Assess:</b> the “Show me!” boards are your live check — scan for who reversed or split ‘oi’; recast on the spot.</span></p>
+        </td>
+        <td class="mat"><b>Phonics Studio</b> (board) · ‘oi’ picture cards · mini-whiteboards + pens</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge · TPR</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="en">Time to pack for camping! Get dressed!</span> Lead a quick <span class="game">▶ “Put on…” TPR mime</span> — <span class="sp">🦝</span> calls <span class="en">Put on your sun hat! Put on your shoes! Put on your T-shirt!</span> children mime pulling each item on (previews the new clothes with the body — no reading needed). Speed up, then <span class="en">And… freeze!</span></p></td>
+        <td class="mat">Speaky · TPR (no materials)</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–33′</td>
+        <td class="stage"><div class="nm">Presentation · Vocabulary</div><div class="zone">carpet → teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Present — 10 clothes items.</span> Hold up each A4 card: <span class="en">What's this?</span> If unknown, model: <span class="en">It's a sweater. Sweater.</span> Choral drill ×3, then 2–3 children solo. Cards: T-shirt · shorts · sun hat · shirt · trousers · trainers · skirt · sweater · shoes · swimsuit. Contrast the tricky trio (hold them up): <span class="en">This is a shirt. This is a T-shirt. This is a skirt.</span> Flag the plurals: <span class="en">shoeS — two! trouserS — two!</span></p>
+          <div class="ig">🎮 <b>Interactive (projector): “What's this?” spinner — колесо одежды (clothes wheel).</b> Spin → a clothes item lands. A rotating child taps to spin; whole class answers chorally <span class="en">It's a (skirt)!</span> <span class="ph">Predict:</span> before the reveal — <span class="en">Is it a hat? — Yes/No!</span> (recycles U2). Every child shows a thumb 👍/👎 = all engaged. <i>Offline reserve: face-down flashcard pile — a child draws one, class names it.</i></div>
+          <p><span class="game">▶ Fan-N-Pick</span> (teams of 4, mini-cards): ① fans the cards · ② picks &amp; asks <span class="en">What's this?</span> · ③ answers <span class="en">It's a (swimsuit).</span> · ④ praises <span class="en">Well done!</span> Rotate roles every turn — everyone asks, answers, praises.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do you say “What's this?” or “How many?”</span> (→ What's this?)</p>
+          <span class="diff"><span class="sup">💪 Support:</span> pair a shy child with the “praiser” role first. <span class="ext">⭐ Extension:</span> answer with a colour — <span class="en">It's a blue swimsuit!</span></span>
+        </td>
+        <td class="mat">A4 flashcards ×10 · 3 mini-sets · <b>Clothes wheel spinner</b> (board) · <span class="game">▶ Fan-N-Pick</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">33–39′</td>
+        <td class="stage"><div class="nm">Song · What are you wearing?</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="en">Now — let's sing! Show me your clothes!</span> Play coursebook song <b>What are you wearing?</b> (Pupil's Book p.82, CD3 42). Listen &amp; point to the big campsite scene; 2nd play — sing with an action for each clothes word (pat the item on your body).</p>
+          <p>The song models the target chunk: <span class="en">What are you wearing? I'm wearing shorts and a T-shirt, too. What about you?</span> Freeze between verses to keep control.</p>
+          <span class="diff"><span class="sup">💪 Support:</span> gesture-only is fine — join the words when ready. <span class="ext">⭐ Extension:</span> be the “song leader” — point to the next clothes item for the class.</span>
+        </td>
+        <td class="mat"><b>«What are you wearing?»</b> (Navio / CD3 42) · Pupil's Book p.82 · big scene</td>
+      </tr>
+
+      <tr>
+        <td class="min">39–44′</td>
+        <td class="stage"><div class="nm">Sticker chant</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">To your tables, come with me! Open your book at page 82.</span> <span class="ph">Read &amp; stick (act. 2).</span> <span class="en">Find the ten stickers. Listen and say the chant — stick each one!</span> Model one (sweater is done); check with a neighbour.</p>
+          <p><span class="ph">Countdown.</span> <span class="en">Finishing in 5… 4… 3… 2… 1… pencils down.</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> name the sticker aloud before they place it. <span class="ext">⭐ Extension:</span> whisper the colour too — <span class="en">a red T-shirt</span>.</span>
+        </td>
+        <td class="mat">GMF1 Pupil's Book p.82 + sticker sheet · chant (CD3 44)</td>
+      </tr>
+
+      <tr>
+        <td class="min">44–52′</td>
+        <td class="stage"><div class="nm">Ask &amp; Find</div><div class="zone">carpet, mingle</div></td>
+        <td class="flow">
+          <div class="ig">🎮 <b>Interactive (projector): “Find it!” — campsite scene.</b> Tap Speaky — <span class="sp">🦝</span> asks <span class="en">What's this? Can you find the (swimsuit)?</span> the class scans the campsite on screen, points &amp; answers <span class="en">It's a swimsuit!</span> (2–3 rounds, to model the phrase for all). <i>Offline reserve: A3 campsite poster — point &amp; name.</i></div>
+          <p><span class="ph">▶ Quiz-Quiz-Trade · Kagan — everyone mingles &amp; talks.</span> Each child holds ONE clothes picture card. <span class="en">Stand up, hand up, pair up!</span> Child A shows the card — <span class="en">What's this?</span> — Child B answers <span class="en">It's a (sweater)!</span> A praises <span class="en">Well done!</span> <b>Swap roles</b>, then <b>trade cards</b> and find a new partner. Keep going — <span class="en">Now trade! New partner!</span></p>
+          <p>Reset if loud: <span class="en">Freeze!</span> Everyone is asking, answering &amp; praising the whole time — no one waits.</p>
+          <p><span class="asr">✔ <b>Assess:</b> stand near one pair at a time — can both produce the clothes name unprompted, no picture peeking? That's the lesson's success check.</span></p>
+          <span class="diff"><span class="sup">💪 Support:</span> give these children a card with the word-picture they know best; let them start as the “answerer”. <span class="ext">⭐ Extension:</span> answer with the chunk — <span class="en">I'm wearing a swimsuit!</span> (previews L2).</span>
+        </td>
+        <td class="mat">1 clothes card per child · <b>Find it!</b> (board, model) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet, in pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share:</span> look at your <b>real</b> clothes — <span class="en">Tell your partner: “I'm wearing a blue T-shirt and grey trousers!”</span> (colours woven in, 20 sec each).</p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can name my clothes! I can say “I'm wearing…”.</span></p>
+        </td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, camping superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show each child a clothes card: <span class="en">What's this?</span> Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">clothes cards · folder reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 80 (Lesson 1 Vocabulary):</b> ex. 1 <i>Read, match and colour</i> — match &amp; colour “a green shirt · grey shorts · red trainers · brown shoes · blue trousers · a pink T-shirt” to the campers + ex. 2 <i>Find and circle. Write</i> — word-search the six clothes words (sun hat · trousers · skirt · sweater · swimsuit · shoes) and write them. <b>+ app trainer u8</b> — today's clothes words (picture–word + <span class="en">What's this?</span>), 5–7 min.</p></td>
+        <td class="mat">Activity Book p.80 · app (u8 homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 8 · Lesson 1 (Vocabulary) “Camping fun!” — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.82 · Activity Book p.80 · Phonics ‘oi’ /ɔɪ/.</span>
+  </div>
+</div>
