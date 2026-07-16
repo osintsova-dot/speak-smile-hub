@@ -1,0 +1,304 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 7 · Lesson 3 — Story: The treasure hunt (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 7 “Let's explore my town!” · Lesson 3 — Story: The treasure hunt</div>
+    <div class="s">Pre-A1 young learners (~7–8 y.o., emergent readers · continuing line) · 60 min · Story: listen → read → act out (drama) · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 08.03 · Lesson 50</span><span class="chip new">✨ STORY</span><span class="chip">~12 pupils · small groups for drama</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>follow and understand the story “The treasure hunt”</b> (Pupil's Book pp. 74–75, CD3 29) and <b>act it out</b> using key story language: “Can we explore your town? — Yes, of course.”, “It's a treasure map. Let's look for the treasure!”, “There's a big, old tree <b>next to</b> the swimming pool.”, “There are two yellow rocks <b>in front of</b> the zoo.”, “How many steps are there? — There are 20.”</li>
+      <li><span class="lb">Subsidiary.</span> <b>Retrieve real prior learning</b> — places in town (zoo · swimming pool · sweet shop · library · park) + “There's a… / There are…” (U7 L1–L2), prepositions <i>in / on / under</i> and colours (U1 / Starter, <i>yellow</i> rocks), numbers 1–20 (<i>count 20 steps</i>), Toby the dog &amp; the Magic Bike (U1) — <b>all woven straight into the treasure hunt</b>. Phonics — the <b>/ar/</b> sound (recognise → blend → read: <i>car · star · farm · shark · park</i>) + sight/tricky words <i>there · are · here</i> (they run right through the story). Values: cross the road safely (red/yellow/green).</li>
+      <li><span class="lb">Personal.</span> Keep story listening active (gesture responses, prediction, True/False thumbs); manage drama noise with Freeze; <b>every child acts in a small group at the same time</b> — no “2 on stage, 10 watching” until the final 30-sec showcase.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>show they understand the story (order the frames, answer True/False with thumbs);</li>
+        <li>say key lines in role: “It's a treasure map!”, “There's a tree next to the swimming pool.”, “There are 20 steps!”;</li>
+        <li>recognise &amp; blend the <i>/ar/</i> sound (car · star · park) and read <i>there · are · here</i> by sight;</li>
+        <li>say why we cross the road when the man is green (values).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">treasure map</span><span class="w">treasure</span><span class="w">old tree</span><span class="w">yellow rocks</span><span class="w">steps</span><span class="w">cross the road</span><span class="w">bone</span> <span style="color:var(--muted);font-size:.82rem">(recycled: zoo · swimming pool · sweet shop · library · park · numbers 1–20 · colours · in/on/under · Toby the dog + the Magic Bike)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Can we explore your town? — Yes, of course. · It's a treasure map. Let's look for the treasure! · There's a (big, old tree) <b>next to</b> the (swimming pool). · There are (two yellow rocks) <b>in front of</b> the (zoo). · How many steps are there? — There are 20.</div></div>
+      <div class="r"><div class="k">Form</div><div>There <b>'s</b> (is) + a + noun · There <b>are</b> + number + noun-<b>s</b> · location: <i>next to / in front of</i> + the + place (receptive here, full focus in L4). <i>How many …s are there? — There are + number.</i></div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>connected <b>There's</b> /ðeəz/, <b>There are</b> /ðeərə/; sentence stress: <i>There are TWO yellow ROCKS.</i> · <i>How many STEPS are there?</i></div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly (JP Book 2): the <b>/ar/</b> sound — <i>car · star · farm · shark · park</i> (recognise → blend → read; keep it light) · sight/tricky words: <i>there · are · here</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Frame 2: “What has Toby got in his mouth?” → <b>“A treasure map!”</b> “A dog's map or a pirate's map?” → (predict, thumbs)</div>
+      <div class="ccq">Frames 3–4: “Where's the big, old tree?” → <b>“Next to the swimming pool.”</b> “Where are the two yellow rocks?” → <b>“In front of the zoo!”</b></div>
+      <div class="ccq" style="margin-bottom:12px">Frames 7–8: “How many steps are there?” → <b>“There are 20.”</b> “What's the treasure?” → <b>“A big bone — it's a dog's treasure map!”</b></div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> places in town + <i>There's a… / There are…</i> known from U7 L1–L2; <i>in / on / under</i>, colours and numbers 1–20 known from earlier units; children know Toby the dog &amp; the Magic Bike from U1. <i>next to / in front of</i> are the story's new locations (receptive today). Emergent readers → they FOLLOW the pictures while listening; the teacher points, children don't read the speech bubbles alone.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>New locations block the story (<i>next to · in front of</i>)</td><td>Pre-teach with a big gesture on the treasure map before listening: <b>next to</b> = hands side by side, <b>in front of</b> = one hand steps in front; “Show me!” drill.</td></tr>
+        <tr><td>Children call answers over the audio</td><td>“Listening hands” rule — hands cupped behind ears while the CD plays; talk only when it stops.</td></tr>
+        <tr><td><i>There's</i> vs <i>There are</i> mixed up</td><td>One = <span class="call">There's a…</span> (one finger); many = <span class="call">There are two…</span> (two fingers + “-s” hiss). Show fingers, all react.</td></tr>
+        <tr><td>Drama turns to chaos (running to find “treasure”)</td><td>The hunt happens ON THE SPOT (Magic-bike ride = pedal sitting; “20 steps” = march on the spot); roles fixed by colour badges; <span class="call">“Freeze!”</span> resets.</td></tr>
+        <tr><td>Frame cards ordered by one child in the pair</td><td>Rule “one card each turn, take turns” (RallyRobin with cards); praise pairs where both hands work.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset (essential in drama).</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Come in, explorers!</span> On the carpet <span class="sp">🦝 Speaky</span> waves a rolled-up paper: <span class="en">Look what Toby found in the park… What IS it? A map?! It's a secret… let's find out!</span> (curiosity hook — don't unroll it yet).</p>
+          <p><span class="en">Stand up! Warm-up time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the opening ritual, finish seated on the carpet.</p>
+        </td>
+        <td class="mat"><b>Genki «Disco Warm Up»</b> mp3 · Speaky + rolled-up “map” · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Retrieval → into the story</div><div class="zone">carpet, circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle U7 + earlier woven into today.</span> Flash 5 place cards (zoo · swimming pool · sweet shop · library · park). Rhythmic ask-answer (clap-clap): <span class="en">What's this? — A zoo! Is there a zoo in our town? — Yes! There's a zoo.</span> Two places → <span class="en">There are two sweet shops.</span> (one finger / two fingers).</p>
+          <p><span class="ph">Show-me — everyone moves.</span> Prepositions: <b>in</b> (hand in fist) · <b>on</b> (flat on top) · <b>under</b> (hand below) — call fast, all react. Then the story's new ones on a toy tree + box: <b>next to</b> (hands side by side) · <b>in front of</b> (hand steps in front). <span class="en">Show me NEXT TO! Show me IN FRONT OF!</span> Flash a colour: <span class="en">What colour are the rocks? — Yellow!</span></p>
+          <p><span class="ph">Bridge.</span> <span class="en">Toby's map shows a big tree, two yellow rocks and… TREASURE! Let's follow the map with Tim and Molly!</span> Signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">place-in-town flashcards · toy tree + box · colour card · Speaky</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">8–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">To the board — ABC time!</span> Sing the ABC song with actions → settle into phonics.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–20′</td>
+        <td class="stage"><div class="nm">📺 Phonics — the /ar/ sound</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise (keep it light).</span> <span class="en">Listen — /ar/, like a pirate! Arrr!</span> Jolly action for <i>ar</i>. Flash pictures, children hunt the sound: <span class="en">Can you hear /ar/? car… star… park… (yes!) … pen (no!)</span> — thumbs up when they hear it. Snappy, ~5 pictures.</p>
+          <p><span class="ph">Blend — “Pirate Speaky” (all respond).</span> <span class="sp">🦝 Speaky</span> says it in pirate chunks: <span class="en">/c/ /ar/…</span> class blends &amp; shouts <span class="en">car!</span> then a picture appears. Do <i>car · star · farm · shark · park</i> — <i>car</i> &amp; <i>park</i> tie straight back to our town theme.</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): /ar/ Blender <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U1 <b>“Flashcards”</b> engine — one word, split <i>c · ar</i>, then a picture reveal on tap. <b>· How:</b> tap to sound each part → tap to blend → tap to show the picture. <b>· Pupils:</b> voice each part then blend chorally — <span class="en">car!</span> — and pat their head if they heard <i>/ar/</i>. <b>· Teacher:</b> drive the taps, keep the beat, praise blends. <span style="color:var(--muted)"><b>Offline reserve:</b> paper word/picture cards + finger-blending on the board.</span></div>
+          </div>
+          <p><span class="ph">Read — thumbs check (all react).</span> Flash <i>/ar/</i> word cards; class blends chorally, then <b>thumbs up = real word, thumbs down = silly word</b> (mix in <i>zar · marp</i>). Every child shows a thumb.</p>
+          <p><span class="ph">Sight/tricky words — they're in our story.</span> Flash <span class="en">there · are · here</span> — <span class="en">these ones we don't sound out, we just KNOW them!</span> Chorus + air-write each. <span class="en">Tim says: There's a big zoo HERE. There ARE two sweet shops.</span> — the very lines coming up in the story.</p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> keep the picture beside the word; ask for just the <i>/ar/</i> part. <b style="color:var(--p)">Extension:</b> fast finishers say one more <i>/ar/</i> word (<i>arm · card · dark</i>).</p>
+        </td>
+        <td class="mat">JP Book 2 · <i>/ar/</i> word/picture cards · <i>there/are/here</i> cards · <b>“Flashcards”</b> (board) · Speaky (pirate voice)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">20–22′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Ready to hunt for treasure? Let's sing!</span> Sing <span class="game">Genki «Treasure Adventure»</span> (29) with digging / map-reading actions → adventure primed → <span class="en">And now — the story!</span></p></td>
+        <td class="mat"><b>Genki «Treasure Adventure»</b> (29) mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">22–33′</td>
+        <td class="stage"><div class="nm">📺 Story — listen &amp; follow</div><div class="zone">carpet, books/screen</div></td>
+        <td class="flow">
+          <p><span class="ph">Before you read (PB p. 74).</span> Big story picture on screen / books open. <span class="en">What places can you see in the story?</span> — pairs point &amp; name 15 sec, then chorus a few (zoo · swimming pool). Pre-teach with gesture: <span class="en">treasure map</span> (unroll hands) · <span class="en">yellow rocks</span> (two fists) · <span class="en">cross the road</span> (walk fingers) · <span class="en">steps</span> (march fingers, count).</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Find it! — “What's in the story?” <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span></div>
+            <div><b>Screen:</b> the U1 <b>“Find it!”</b> engine on the big story picture. <b>· How:</b> Speaky asks, a child taps the thing; it lights up. <b>· Pupils:</b> whole class points in their book / calls it — <span class="en">The zoo! The swimming pool! Toby! The treasure map!</span> <b>· Teacher:</b> <span class="sp">🦝</span> <span class="en">Where's the old tree? Point!</span> — 4–5 things, quick. <span style="color:var(--muted)"><b>Offline reserve:</b> “Point to it in your book!” + hold up the big picture.</span></div>
+          </div>
+          <p><span class="ph">Predict (thinking) — before we listen.</span> <span class="en">Toby has a map… whose treasure is it? A pirate's? A child's? A DOG'S?</span> Thumbs guess. <span class="en">Let's listen and find the treasure!</span></p>
+          <p><span class="ph">Listen 1 — global (CD3 29).</span> “Listening hands” behind ears. Teacher points frame by frame; children follow the pictures. Gist check: <span class="en">Did they find the treasure? Show me!</span> (thumbs) <span class="en">What was it?</span> → <span class="en">A big bone!</span></p>
+          <p><span class="ph">Detail check — True or False? (thumbs up / down, all react).</span> <span class="en">Toby has a treasure map.</span> (👍) · <span class="en">The old tree is next to the sweet shop.</span> (👎 — <span class="en">next to the swimming pool!</span>) · <span class="en">There are two yellow rocks.</span> (👍) · <span class="en">There are 20 steps.</span> (👍). Re-point the frame to fix any wrong thumb.</p>
+          <p><span class="ph">Listen 2 — active (all respond).</span> Play again; children do the story gestures at the right moments: <b>unroll the map</b> · <b>“Well done, Toby!”</b> pat a dog · point <b>next to</b> / <b>in front of</b> · <b>Magic-bike ride</b> (pedal) · <b>cross the road</b> (walk fingers, wait for green!) · <b>count 20 steps</b> · cheer <span class="en">It's a big bone!</span> CCQs between frames (see box above). At frames 3–4 stop: <span class="en">Where's the tree? — Next to the swimming pool! Where are the rocks? — In front of the zoo!</span></p>
+        </td>
+        <td class="mat">PB pp. 74–75 · CD3 29 / animated story (Navio) · <b>“Find it!”</b> (board) · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">33–34′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at carpet</div></td>
+        <td class="flow"><p><span class="en">Everybody up — Magic Bike ride!</span> Pedal ON THE SPOT (<span class="en">Wheee!</span>) → <span class="en">Red man — STOP! … Green man — cross the road!</span> (walk on the spot) → <span class="en">Now count the steps!</span> march &amp; count <span class="en">1, 2, 3 … 18, 19, 20!</span> → <span class="en">Freeze!</span> → sit at desks.</p></td>
+        <td class="mat">— (voice + gestures)</td>
+      </tr>
+
+      <tr>
+        <td class="min">34–41′</td>
+        <td class="stage"><div class="nm">▶ Build the story</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Story-Sequence</span> (Mido №54 “Reconstruction”, picture re-skin for non-readers — <b>all pairs work at once</b>). Each pair gets the story's frame-cards, shuffled.</p>
+          <p><span class="ph">Order it.</span> <span class="en">Put the treasure hunt in order — one card each, take turns!</span> (RallyRobin with cards: A places one, B places the next.) Countdown 2 min. <span class="ph">ICQ:</span> <span class="en">Do we grab all the cards or take turns?</span> (→ take turns!)</p>
+          <p><span class="ph">Check with the audio.</span> Replay CD3 29: pairs touch each card as they hear it — self-check, fix the order. Then choral retell, teacher holds up big frames one by one, class says the line: <span class="en">Can we explore your town? · It's a treasure map! · There's a tree next to the swimming pool. · There are two yellow rocks in front of the zoo. · Count 20 steps! · Magic Bike, can you help? · How many steps are there? — There are 20. · It's a big bone!</span></p>
+          <div style="background:var(--honey-soft);border:1px solid var(--line);border-left:4px solid var(--p);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Treasure Story-Sequence 1–8 <span style="background:var(--p);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">🔨 СОБРАТЬ</span></div>
+            <div><b>Screen:</b> the 8 story frames (map found → “It's a treasure map!” → tree next to the pool → rocks in front of the zoo → count 20 steps → Magic Bike helps → cross &amp; count → the big bone) appear <b>shuffled</b> in a row, each with an empty number badge 1–8. <b>· How:</b> tap two frames to swap them (or drag); a “Check” button lights correct frames green, then a cheer plays. <b>· Pupils:</b> the class calls the order — <span class="en">Number one — Toby finds a map! Number two — It's a treasure map!</span> — and gesture each frame. <b>· Teacher:</b> take votes (<span class="en">Which is first? Hands up!</span>), tap as they decide, then replay CD3 29 to confirm. <span style="color:var(--muted)"><b>Offline reserve:</b> the 8 big frame-cards on the board — the class number them together with sticky-tack.</span></div>
+          </div>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> hand that pair only <b>5</b> clearest frames (not 8) and number the first for them. <b style="color:var(--p)">Extension:</b> after ordering, say one whole line for each frame from memory before the audio check.</p>
+        </td>
+        <td class="mat">story frame mini-cards per pair (print from PB pp. 74–75) · 5-frame set for support pairs · CD3 29 · big frame cards for the board</td>
+      </tr>
+
+      <tr>
+        <td class="min">41–50′</td>
+        <td class="stage"><div class="nm">Act out — drama</div><div class="zone">carpet, groups</div></td>
+        <td class="flow">
+          <p><span class="ph">Roles.</span> Groups of 3–4: <b>Molly</b> (red badge, host — “Welcome!”) · <b>Tim</b> (green, reads the map) · <b>Toby the dog</b> (blue, “Woof! Ring, ring — Magic Bike!”) · <b>an explorer</b> (yellow, counts the steps). Model once with a strong group.</p>
+          <p><span class="ph">All groups act at the same time.</span> Narrate the story slowly, frame by frame; every group plays it in their own spot (Magic-bike ride &amp; 20 steps on the spot!): <span class="en">Can we explore your town? — Yes, of course! Look — Toby has a map! It's a treasure map! There's a tree next to the swimming pool. There are two yellow rocks in front of the zoo. We can't cross the road… Magic Bike, can you help? Green man — cross! Count 20 steps… It's a big bone!</span></p>
+          <p><span class="ph">Create (thinking) — make it yours.</span> Before round 2: <span class="en">Your map has ONE more clue — you choose! What's next to it?</span> Each group adds a line with their own place: <span class="en">There's treasure next to the library! There are three rocks in front of the park!</span> (support: point to a place card; extension: invent the whole clue + the number).</p>
+          <p>Swap roles, run it again — <b>keep it to 2 rounds</b> (<span class="en">Freeze!</span> the moment energy tips). Volunteers: ONE group shows 30 sec for the class — big applause.</p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> quieter children play the “counting explorer” (short line + march); a line card in hand. <b style="color:var(--p)">Extension:</b> confident children play Tim / Molly and lead the map-reading.</p>
+        </td>
+        <td class="mat">role badges ×4 colours · place cards · PB pp. 74–75</td>
+      </tr>
+
+      <tr>
+        <td class="min">50–55′</td>
+        <td class="stage"><div class="nm">▶ Follow the map! + Values</div><div class="zone">desks, all at once</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Follow the map!</span> (targeted settler — <i>next to / in front of</i> + <i>There's / There are</i>; <b>every child places a card every round</b>). Each child has a mini “town map” strip (tree · pool · zoo · library) and a few object cards (rocks · treasure · bone).</p>
+          <p><span class="sp">🦝 Speaky</span> gives map clues: <span class="en">There are two yellow rocks in front of the zoo!</span> → all move that card in front of the zoo; <span class="en">There's treasure next to the tree!</span> · <span class="en">There's a bone next to the pool!</span> 5–6 clues, instant show-me each time (<span class="en">Point! Where's the treasure? — Next to the tree!</span>).</p>
+          <p><span class="ph">Values (PB p. 75 ex. 2) — cross the road safely.</span> Hold up red / yellow / green. <span class="en">Red man — do we cross? — NO! Green man — cross the road!</span> <span class="en">Remember! Cross the road when the man is… — GREEN!</span> Quick “red-light / green-light” freeze on the spot to seal it.</p>
+        </td>
+        <td class="mat">town-map strip + object cards per pupil · red/yellow/green cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Reflection + Closing</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ RallyRobin retell (pairs, take turns).</span> Big frames stay on the board in order. <span class="en">Tell the treasure hunt to your partner — one line each, take turns!</span> A: <span class="en">Toby has a map!</span> → B: <span class="en">It's a treasure map!</span> → A: <span class="en">There's a tree next to the pool!</span> … (support: point &amp; say one word per frame; extension: full lines to the end).</p>
+          <p>Then: <span class="en">Which picture do you like? Point and tell your partner!</span> (20 sec each). “I can…” badge: <span class="en">Colour your badge — I can act out the story!</span></p>
+          <p><span class="en">Well done, explorers! Let's sing Goodbye. Your homework is in your Activity Book and on the app!</span> Sing Goodbye.</p>
+        </td>
+        <td class="mat">“I can…” badges · <b>Goodbye song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Show each child one frame card: say any line from it (<span class="en">It's a treasure map!</span>) — or answer <span class="en">Where's the tree — next to the pool or in front of the zoo?</span> Said it → out: <span class="en">Well done! Take care! Goodbye!</span></p></td>
+        <td class="mat">story frame cards · folder reward stickers 🦝</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow">
+          <p><b>Activity Book — p. 72, exercises 1–2 (Lesson 3 Story · After you read):</b> ① <i>Remember the story. Read and circle</i> true / false — 5 sentences about the treasure map (tree next to the pool, rocks near the zoo…) · ② <i>Draw a treasure map. Hide your treasure. Write</i> — draw the map &amp; complete <i>There's a… / There… / There… / The treasure is…</i>. + app: story words micro-set (5–7 min).</p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:2px"><b style="color:var(--good)">Support (core):</b> ex. 1 (circle true/false) + draw the map in ex. 2 — the writing is optional, trace/copy the model line (<i>There's a house.</i>). <b style="color:var(--p)">Extension (challenge):</b> after ex. 2, tell a grown-up the treasure hunt with the pictures — one line per frame.</p>
+          <p>💻 Онлайн-тренажёр юнита: <a href="https://speakandsmile.ru/gmf1/u7.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u7.html</a> — Practice + Booster по Unit 7 (places in town · There's / There are).</p>
+        </td>
+        <td class="mat">Activity Book p. 72 · app (homework link) · тренажёр u7.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 7 · Lesson 3 (Story: The treasure hunt) — lesson plan &amp; staging</span>
+    <span>Story verified against Pupil's Book pp. 74–75 (CD3 29); homework against Activity Book p. 72.</span>
+  </div>
+</div>

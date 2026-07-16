@@ -1,0 +1,323 @@
+<meta charset="utf-8">
+<title>GMF1 · Unit 7 · Lesson 2 — Grammar: There's a… / There are… (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 · Unit 7 “Let's explore my town!” · Lesson 2 — Grammar: There's a… / There are…</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · Dialogue → controlled drill → freer → production · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 01.03 · Lesson 49 · Continuing group</span><span class="chip new">✨ GRAMMAR</span><span class="chip">~12 pupils · pairs + 2 teams</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>say what is in a town</b> using <b>There's a…</b> for one place and <b>There are (two)…</b> for more than one: “There's a zoo. There are two sweet shops.” (Pupil's Book p. 73 dialogue + Grammar box), and act out Molly &amp; Tim's “Welcome to Newtown” dialogue.</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning</b> — L1 (yesterday's) 10 town places + “It's a…”, and Project 2's counting question “How many (lambs) can you see?” — <b>woven into today's grammar</b> (“How many cafés are there? — There are two.”); numbers 1–10 for counting places; colours review (<i>green</i>) — “There's a <i>green</i> park”; phonics — the <b>ur</b> /ɜː/ family (<i>purple, burn, purse, turn, nurse</i>), reviewing er/ir; listen for numbers (PB p. 73 ex. 2 “Listen and write the number”).</li>
+      <li><span class="lb">Personal.</span> Insist on the WHOLE sentence (“There are two cafés”, not “Two cafés”); keep the plural <b>-s</b> hiss (“two café<b>s</b>”); choose <i>There's a</i> vs <i>There are</i> by how many; <b>every task keeps ALL children responding</b> (own cards / point &amp; say / all pairs at once) — never “2 play, 10 watch”.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>say “There's a (zoo).” for one place and “There are (two) sweet shops.” for more;</li>
+        <li>ask &amp; answer “How many (cinemas) are there? — There are two.” and act out the Newtown dialogue;</li>
+        <li>hear, blend &amp; segment words with <b>ur</b> /ɜː/ and read the sight words <i>there · are</i>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">zoo</span><span class="w">sweet shop</span><span class="w">café</span><span class="w">toyshop</span><span class="w">bookshop</span><span class="w">cinema</span><span class="w">hospital</span><span class="w">restaurant</span><span class="w">swimming pool</span><span class="w">supermarket</span> <span style="color:var(--muted);font-size:.82rem">(all 10 places recycled from L1 · numbers 1–10 · colour <i>green</i>)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>There's a (zoo). &nbsp;·&nbsp; There are (two) sweet shops. &nbsp;·&nbsp; How many (cafés) are there? — There are two. &nbsp;·&nbsp; Welcome to (Newtown)! &nbsp;·&nbsp; Great! I love (animals). Fantastic!</div></div>
+      <div class="r"><div class="k">Form</div><div>There's = <b>There is</b> + a + ONE place. There are + <b>number</b> + place + <b>-s</b> (more than one). Question: How many + place<b>s</b> + are there? Choice driven by quantity (1 → There's a / 2+ → There are).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>There's /ðeəz/ — one word; There are /ðeərə/ linked; hiss the plural <b>-s</b> /s/ (café<b>s</b>, shop<b>s</b>); keep the number in “There are <b>two</b>”; don't shrink the question to “How many café?”.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Jolly focus: <b>ur</b> /ɜː/ — <i>purple, burn, purse, turn, nurse</i> (recognise → blend → segment) · review of er/ir /ɜː/ · sight words: <i>there · are</i> (today's Grammar-box words) · JP Book 2 ur set.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Hold up ONE zoo card: “One zoo — do I say <i>There's a zoo</i> or <i>There are zoos</i>?” → <b>There's a zoo.</b></div>
+      <div class="ccq">Hold up TWO café cards: “One or two?” → two → “So — <b>There ARE two cafés.</b>” (There are + number + -s)</div>
+      <div class="ccq">“How do we ask the number?” → <b>How many cafés are there?</b> (fingers = ?)</div>
+      <div class="ccq">ur: “<i>u</i> and <i>r</i> are friends — they growl <b>/ɜː/</b> like a purring cat: purr… <i>purple!</i>”</div>
+      <div class="ccq" style="margin-bottom:12px"><b style="color:var(--honey-ink)">⭐ Option — colour CCQ:</b> hold a green park card: “It's a park. What colour?” → green → “<b>There's a green park.</b>” (Weaves the <i>green</i> review — use if the class is quick.)</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> the 10 town places + “It's a…” were met in L1 (yesterday); “How many … can you see?” &amp; numbers 1–10 known from Project 2 / earlier units; er/ir /ɜː/ met before. Pupils are non-/emergent readers → picture grids, town scenes &amp; audio, not printed text. Carpet routines &amp; pair-work signals known.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Uses “There's” for many: “There's two cafés”</td><td>Two-hands CCQ: hold up 2 fingers → “Two? Then <b>There ARE</b>.” Split the choice on the board: 1 🖐→ <i>There's a</i>, 2+ ✌️→ <i>There are</i>.</td></tr>
+        <tr><td>Drops the plural <i>-s</i>: “There are two café”</td><td>Hiss it: “More than one → add <b>/s/</b>”; back-chain <i>…café<b>s</b> → two cafés → There are two cafés</i>; contrast one café / two café<b>s</b>.</td></tr>
+        <tr><td>Names a place with no frame: just “A zoo”</td><td>Sentence-frame card on the board <span class="en">There's a ___</span>; no answer counts until the FULL sentence; big pointing gesture along the frame.</td></tr>
+        <tr><td>Question shrinks: “How many café?”</td><td>Back-chain <i>…are there? → many cafés are there? → How many cafés are there?</i>; wiggle fingers for “how many?”.</td></tr>
+        <tr><td>ur said as /u/ + /r/ separately</td><td>“u and r are FRIENDS — one growl <b>/ɜː/</b>”; round &amp; hold the lips, purr: <i>ur… purple, turn</i>; contrast with the single sounds.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+    <span>🎮 = on-screen (projector) interactive</span>
+  </div>
+
+  <div style="background:var(--honey-soft);border-left:3px solid var(--honey);border-radius:7px;padding:8px 11px;font-size:.86rem;margin:0 0 10px">
+    <b style="color:var(--honey-ink)">⏱ Pacing — honest 60 min.</b> This is a full plate, so <b>pick, don't cram</b>. The <b>core</b> = dialogue model (24–33′) + <b>one</b> production game + Listen &amp; write (How many). <b>Buffers to drop first if you're short:</b> the 2nd Slow-reveal round, the “my town” personalisation (53–55′), Timed Pair Share. Better one sentence said well by <b>every</b> child than three stages half-done — never rush the model and the pair practice.
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> On the carpet <span class="sp">🦝 Speaky</span> holds a little town map, excited: <span class="en">Look! A new town — Newtown! There's a zoo… and there are two sweet shops! Let's explore!</span></p>
+          <p><span class="en">Stand up! Warm-up time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the usual opening ritual, everyone dances the commands, finish seated.</p>
+        </td>
+        <td class="mat"><b>Genki «Disco Warm Up»</b> mp3 · Speaky + town map · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Review → into There's a / There are</div><div class="zone">carpet, circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle L1 places — everyone answers.</span> Flash the town-place cards fast: <span class="en">What is it?</span> → whole class: <span class="en">It's a cinema!</span> (7–8 cards, snappy). Colour woven in: hold a green café — <span class="en">It's a…?</span> → <span class="en">It's a green café!</span></p>
+          <p><span class="ph">Count &amp; say (all react).</span> Now hold up ONE bookshop → <span class="en">There's a bookshop!</span> (whole class). Hold up TWO cafés → wiggle two fingers → <span class="en">There ARE two cafés!</span> 5–6 fast rounds, mixing one / two places — every child says the full sentence every round. Retrieval bridge: <span class="en">How many cafés? — There are two!</span> (recycles Project 2's “How many?”).</p>
+          <p><span class="ph">Bridge.</span> <span class="sp">🦝 Speaky</span>: <span class="en">So many places in Newtown! How do I tell my friends what's here?</span> Today's magic words: <span class="en">There's a… / There are…</span> Signal: <span class="en">Class? — Yes!</span></p>
+          <p style="font-size:.84rem;color:var(--muted);margin:6px 0 0"><b style="color:var(--honey-ink)">⭐ Option — Beat Speaky:</b> flick the cards <b>fast</b>; class names each <span class="en">It's a zoo!</span> — if they beat Speaky, they win a point. Quick, then move on.</p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--zone)">◆ Support:</b> keep the picture up while a shy child answers. <b style="color:var(--zone)">▲ Extension:</b> add a colour — <span class="en">There's a green park!</span></p>
+        </td>
+        <td class="mat">town-place flashcards (×10, some doubled) · Speaky</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">8–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come to the board — ABC time!</span> Sing the ABC song with actions → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics — ur /ɜː/</div><div class="zone">at the board</div></td>
+        <td class="flow">
+          <p><span class="ph">Recognise — the growling ur.</span> Show letters <i>ur</i>: <span class="en">u and r are FRIENDS. Together they growl /ɜː/ — like a purring cat!</span> Say &amp; act: <span class="en">ur… purple, burn, turn, nurse, purse!</span> (curl hands like paws for the “purr”). Children copy, holding the lips round for /ɜː/.</p>
+          <p><span class="ph">/ɜː/ or not? — whole-class show-me (all react).</span> Every child gets <b>two cards: 🐱 (ur /ɜː/) and 🔤 (single sound)</b>. Say words one by one — <i>purple · cat · turn · pen · nurse · sun · purse · dog · burn…</i> → <span class="en">Show me!</span> — all hold up 🐱 or 🔤. 8–10 words, fast; nobody just watches.</p>
+          <p><span class="ph">Blend (all together).</span> <span class="en">Push the sounds together: /t/ /ur/ /n/… turn!</span> Then <i>purple, burn, nurse</i> — picture for each (purple crayon · fire · nurse).</p>
+          <p><span class="ph">Segment · dictation (everyone writes).</span> <span class="en">Now YOU write. Listen…</span> word once → all write on mini-whiteboards → <span class="en">Show me!</span> → reveal &amp; check together. Focus: <i>turn, burn, nurse</i>. Finish with the sight words we'll read today: <span class="en">there · are</span> — flash, chorus, air-write (these are the words in our Grammar box!).</p>
+          <div style="border:2px solid var(--p);border-radius:10px;background:var(--honey-soft);padding:8px 10px;margin:8px 0">
+            <div style="font-weight:800;color:var(--p);font-size:.9rem">🎮 Интерактив (проектор): ur Sorter <span style="color:var(--good)">✅ ГОТОВ</span> <span style="color:var(--muted);font-weight:600;font-size:.82rem">(reskin of the Unit 1 “Flashcards” engine)</span></div>
+            <div style="font-size:.85rem;margin-top:3px"><b>Screen:</b> a word + picture flips up one at a time (<i>purple · cat · turn · pen · nurse · sun · purse · dog</i>). <b>Mechanic:</b> tap the card to hear the word, then tap 🐱 or 🔤 to sort it; a green tick / red shake shows if right. <b>Pupils:</b> hold up their own 🐱/🔤 first, then a helper taps to check. <b>Teacher:</b> read the word, wait for hands, then reveal. <b>Reuse:</b> same engine as L1 Flashcards — just swap the card set.</div>
+          </div>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--zone)">◆ Support:</b> in dictation, give sound-buttons (<i>t-ur-n</i>) — they only fill letters. <b style="color:var(--zone)">▲ Extension:</b> fast writers add a word by ear (<i>curl, hurt</i>).</p>
+        </td>
+        <td class="mat">JP Book 2 ur set · ur word/picture cards · 🐱/🔤 card pair per pupil · mini-whiteboards + pens · <b>🎮 ur Sorter</b> (board)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Back to Newtown! Let's sing!</span> Sing the unit song <span class="game">«Let's go to town» (PB p. 72, CD3 24)</span> pointing at the place cards on the board: <span class="en">There's a cinema. There's a bookshop, too. There's a hospital and there's a swimming pool!</span> — the song IS today's grammar (There's a…); sing it with big pointing. (By ear + pictures — we don't read the text.)</p></td>
+        <td class="mat"><b>«Let's go to town»</b> CD3 24 · place cards on board</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–33′</td>
+        <td class="stage"><div class="nm">Presentation · Dialogue</div><div class="zone">carpet → pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Model with Speaky.</span> Two puppets/roles: Molly welcomes Tim. Teacher: <span class="en">Welcome to Newtown, Tim! — Thanks, Molly. — There's a big zoo here! — Great! I love animals. — And there are two sweet shops. — Fantastic! I love sweets, too!</span> Big gestures: one finger for <i>a zoo</i>, two fingers for <i>two sweet shops</i>.</p>
+          <p><span class="ph">Listen &amp; repeat — PB p. 73 ex. 1 (CD3 27).</span> Books open / picture on screen: Molly &amp; Tim at the zoo. Play the dialogue; children repeat line by line. Drill the Grammar box: <span class="en">There's a zoo. ↗ There are two sweet shops.</span> Point at the box: <span class="en">One place → There's a. Two places → There are.</span> — this is our grammar of the day.</p>
+          <div style="border:2px solid var(--p);border-radius:10px;background:var(--honey-soft);padding:8px 10px;margin:8px 0">
+            <div style="font-weight:800;color:var(--p);font-size:.9rem">🎮 Интерактив (проектор): Newtown Spinner <span style="color:var(--good)">✅ ГОТОВ</span> <span style="color:var(--muted);font-weight:600;font-size:.82rem">(reskin of the “What's this? spinner” engine)</span></div>
+            <div style="font-size:.85rem;margin-top:3px"><b>Screen:</b> a wheel of the 10 town places; each slice shows the place with a small number badge (×1 or ×2). <b>Mechanic:</b> tap to spin → it lands on, e.g., “café ×2”; that building pops up in the town. <b>Pupils:</b> BEFORE the reveal the whole class reads the number and says together <span class="en">There's a café!</span> / <span class="en">There are two cafés!</span> (choose by the badge). <b>Teacher:</b> spin, hold the reveal until you hear the FULL sentence with the right there's/there are. <b style="color:var(--honey-ink)">🧠 Predict:</b> <span class="en">One or two? Guess before it stops!</span> — children show 1 or 2 fingers before the wheel lands.</div>
+          </div>
+          <p><span class="ph">Act out (ALL pairs at once).</span> Pairs on the carpet, each with a small set of place cards (some singles, some doubles). A is the guide: <span class="en">Welcome to my town! There's a zoo. There are two cafés.</span> B replies: <span class="en">Great! Fantastic!</span> Swap roles, new cards. <span class="ph">ICQ:</span> <span class="en">One café — do you say “There's a” or “There are”?</span> (→ There's a!)</p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--zone)">◆ Support:</b> give the sentence-frame cards <span class="en">There's a ___ / There are two ___</span> to point along. <b style="color:var(--zone)">▲ Extension:</b> add a colour or “big” — <span class="en">There's a big green park!</span></p>
+        </td>
+        <td class="mat">PB p. 73 ex. 1 · CD3 27 (Navio) · 2 puppets/roles · place cards per pair (singles + doubles) · <b>🎮 Newtown Spinner</b> (board)</td>
+      </tr>
+
+      <tr>
+        <td class="min">33–41′</td>
+        <td class="stage"><div class="nm">▶ Slow reveal: What's in Newtown?</div><div class="zone">carpet / board</div></td>
+        <td class="flow">
+          <div style="border:2px solid var(--p);border-radius:10px;background:var(--honey-soft);padding:8px 10px;margin:0 0 8px">
+            <div style="font-weight:800;color:var(--p);font-size:.9rem">🎮 Интерактив (проектор): Find it in Newtown! <span style="color:var(--good)">✅ ГОТОВ</span> <span style="color:var(--muted);font-weight:600;font-size:.82rem">(reuse of the Unit 1 “Find it!” engine)</span></div>
+            <div style="font-size:.85rem;margin-top:3px"><b>Screen:</b> a big drawn town scene with places dotted around (2 cafés, 1 zoo, 2 cinemas, 1 hospital…). <b>Mechanic:</b> tap Speaky → he asks <span class="en">How many cafés are there?</span>; children scan, count &amp; point; tap the places → they glow and a counter fills. <b>Pupils:</b> <span class="en">There are two cafés! There's one zoo!</span> (2–3 rounds, to MODEL counting before the physical game). <b>Teacher:</b> use this as the model, then run the Slow-reveal game.</div>
+          </div>
+          <p><span class="game">▶ Slow reveal — “What's in Newtown?”</span> (Игротека “Угадай по кусочку” — <b>whole class predicts, nobody sits out</b>). Cover a place card with a “?” cloud and reveal it bit by bit. Class guesses: <span class="en">Is there a zoo? Is there a café?</span> When revealed, everyone says the full sentence — and you flash a number card (1 or 2): <span class="en">There's a zoo! / There are two cinemas!</span></p>
+          <p><span class="ph">Kagan — Numbered Heads energy:</span> children whisper their guess to a partner first, then hands up together. Rule — <b>guess → SAY the full sentence.</b> Teacher feeds the language: <span class="en">One or two? Then — There ARE two!</span> Reset if loud: <span class="en">Freeze!</span> Run 5–6 cards; a 2nd round <b>only if time allows</b> (buffer — don't rush the pair game for it).</p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--zone)">◆ Support:</b> reveal more of the card faster for a slower child so they get the win too. <b style="color:var(--zone)">▲ Extension:</b> add “How many?” — <span class="en">How many cinemas are there? — There are two!</span></p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--honey-ink)">⭐ Swap (rotation):</b> if you ran Slow reveal recently, swap in <b>Fly-swatters (Мухобойки)</b> — place cards on the board with number badges; you call <span class="en">There are two cafés!</span> → two team runners swat the café card, the whole class chants the sentence.</p>
+        </td>
+        <td class="mat">place cards + “?” cloud · number cards 1–10 · Speaky · <span class="game">▶ Угадай по кусочку</span> · <b>🎮 Find it in Newtown!</b> (board) · alt: fly-swatters</td>
+      </tr>
+
+      <tr>
+        <td class="min">41–45′</td>
+        <td class="stage"><div class="nm">Listen &amp; write the number</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">To your tables — counting detectives!</span> <span class="ph">PB p. 73 ex. 2 (CD3 28).</span> Six town buildings (bookshop, hospital, sweet shop, zoo, swimming pool, café). Listen to <span class="en">How many are there?</span> and write the number in each circle. Model item 1 together (bookshop = 2); then <b>everyone writes</b>; check with a neighbour, then chorally: <span class="en">How many bookshops? — There are two!</span></p>
+          <p>Say each one once: <span class="en">There's one hospital! There are two cafés!</span> <span class="ph">Countdown:</span> <span class="en">5… 4… 3… 2… 1… pencils down.</span></p>
+        </td>
+        <td class="mat">PB p. 73 ex. 2 · CD3 28 (Navio) · pencils</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">45–46′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at desks</div></td>
+        <td class="flow"><p><span class="en">Everybody up! Speaky says…</span> 45-sec TPR: <span class="en">Speaky says swim in the swimming pool! · Speaky says drive to the zoo! · Buy sweets at the sweet shop!</span> (no “Speaky says” → freeze!). All move, all name the place. Sit down ready for the pair game.</p></td>
+        <td class="mat">— (movement only)</td>
+      </tr>
+
+      <tr>
+        <td class="min">46–53′</td>
+        <td class="stage"><div class="nm">▶ Pair “Build your town”</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Build Your Town</span> (controlled pair drill — <b>every pair plays at once</b>, nobody waits). Each pair: a blank “town street” mat + a set of small place cards (some doubles).</p>
+          <p><span class="ph">Model on the board first.</span> A places cards on the street and says the town: <span class="en">There's a zoo. There are two cafés. There's a cinema.</span> B is the checker — then B asks: <span class="en">How many cafés are there?</span> A: <span class="en">There are two!</span> Swap: B builds a NEW town, A asks. Keep the FULL sentence + the plural -s every time.</p>
+          <p><span class="ph">Kagan — RallyCoach:</span> partner = coach; praise the right choice: <span class="en">Good! One zoo — There's A zoo. Two cafés — There ARE two!</span> Teacher monitors, feeds fast finishers a colour: <span class="en">There's a green park!</span></p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--honey-ink)">🧠 Create — your own town:</b> children build the town THEY want and say it — their places, their numbers: <span class="en">In my town there's a toyshop and there are three swimming pools!</span></p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--zone)">◆ Support:</b> keep the sentence-frame cards on the desk (<span class="en">There's a ___ / There are ___</span>). <b style="color:var(--zone)">▲ Extension / fast finishers:</b> count higher and add the number word — <span class="en">There are five toyshops!</span></p>
+        </td>
+        <td class="mat">“town street” mat + place cards per pair · sentence-frame cards · <span class="game">▶ RallyCoach</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">53–55′</td>
+        <td class="stage"><div class="nm">🎵 “My town” personalisation <span style="font-size:.7rem;color:var(--muted)">(buffer)</span></div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span style="color:var(--muted);font-weight:700;font-size:.82rem">Optional buffer — do this only if you're on time.</span> Back to the carpet. Think about OUR town: <span class="en">Is there a zoo in our town? Are there two supermarkets?</span> A few children answer about the real town: <span class="en">There's a swimming pool! There are two schools!</span> (A taste of the Activity Book “Write about your town” homework — keep it light, spoken only.)</p>
+          <div style="border:2px solid var(--p);border-radius:10px;background:var(--honey-soft);padding:8px 10px;margin:8px 0 0">
+            <div style="font-weight:800;color:var(--p);font-size:.9rem">🎮 Интерактив (проектор): There's / There are Sorter <span style="color:var(--honey-ink)">🔨 СОБРАТЬ</span> <span style="color:var(--muted);font-weight:600;font-size:.82rem">(new — small two-box sort engine)</span></div>
+            <div style="font-size:.85rem;margin-top:3px"><b>Screen:</b> a place-with-number card drops in; two bins — <b>There's a</b> (1) and <b>There are</b> (2+). <b>Mechanic:</b> drag/tap the card into the right bin → green tick reads the full sentence aloud. <b>Pupils:</b> show 1 or 2 fingers, then say <span class="en">There's a zoo!</span> / <span class="en">There are two cinemas!</span> <b style="color:var(--honey-ink)">🧠 Decide:</b> before it drops — <span class="en">Which bin? One or many?</span> <b>To build:</b> reuse the ur-Sorter two-choice layout, swap 🐱/🔤 for the two “There's a / There are” bins + a number badge on each card.</div>
+          </div>
+        </td>
+        <td class="mat">Speaky · place + number cards · <b>🎮 There's / There are Sorter</b> (board, to build)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Reflection + Closing</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p>“I can…” badge: <span class="en">Colour your badge — I can say “There's a…” and “There are…”!</span></p>
+          <p style="font-size:.84rem;color:var(--muted);margin:4px 0 0"><b style="color:var(--honey-ink)">⭐ Option — Timed Pair Share:</b> if you have a spare minute, pairs take 15 sec each — <span class="en">Tell your partner ONE thing in Newtown!</span> — everyone says a There's/There are sentence once more before goodbye.</p>
+          <p><span class="en">Well done today, superstars! Let's sing Goodbye. Your homework is in your Activity Book and on the app!</span> Sing Goodbye.</p>
+        </td>
+        <td class="mat">“I can…” badges · <b>Goodbye song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Hold up a place card (sometimes one, sometimes two): each child says the matching sentence — <span class="en">There's a zoo!</span> / <span class="en">There are two cafés!</span> A correct full sentence (right there's/there are + plural -s) opens the door: <span class="en">Fantastic! See you in Newtown! Goodbye!</span></p></td>
+        <td class="mat">place cards (singles + doubles) · folder reward stickers 🦝</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow">
+          <p><b>Activity Book — p. 71, exercises 1–2 (Lesson 2 Grammar):</b> ① <i>Count and write</i> — look at the town picture, count and complete six sentences from the word bank (<i>cafés · cinema · supermarket · sweet shops · toyshops · hospital</i>): “There's a supermarket. There are two cafés…” · ② <i>Write about your town. Draw.</i> — complete four “There's a… / There are… / There…” sentences about the child's own town and draw it. + app: self-checking micro-set on There's a / There are + How many (5–7 min).</p>
+          <p style="font-size:.84rem;color:var(--muted);margin:2px 0 0"><b style="color:var(--zone)">◆/▲ Differentiable:</b> ex.1 (copy the counted words into the frame) is for everyone; in ex.2 emergent writers copy ONE place word into a gap / draw it, while stronger writers write all four and add a number or colour — <span class="en">There are three green trees!</span></p>
+          <p>💻 Онлайн-тренажёр юнита: <a href="https://speakandsmile.ru/gmf1/u7.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u7.html</a> — Practice + Booster по Unit 7 (лексика/грамматика урока).</p>
+        </td>
+        <td class="mat">Activity Book p. 71 · app (homework link) · тренажёр u7.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 7 · Lesson 2 (Grammar: There's a… / There are…) — lesson plan &amp; staging</span>
+    <span>Language verified against Pupil's Book p. 73 (CD3 27–28); homework against Activity Book p. 71.</span>
+  </div>
+</div>
