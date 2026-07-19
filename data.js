@@ -27,8 +27,8 @@ window.PROGRAMS = {
       "Genki «Genki Disco Warm Up» + «Rock Paper Scissors». Numbers/colours warm-up. Name game."
      ],
      [
-      "Фокус JP Book 2",
-      "Звуки s a t i p n → S A T I P N · стр. 2"
+      "Фокус Phonics Hero",
+      "Повтор звуков (PH ур.1–3): s·a·t·i·p·n·c·k·e — speed reading (тетрадь стр.3–9)"
      ],
      [
       "Tricky words",
@@ -61,8 +61,8 @@ window.PROGRAMS = {
       "Genki «What's your name?» + «I, you, we are happy». Hello/Goodbye dialogues. Act out."
      ],
      [
-      "Фокус JP Book 2",
-      "Звуки c k e h r m d → C K E H R M D · стр. 4"
+      "Фокус Phonics Hero",
+      "Повтор звуков (PH ур.4–6): h·r·m·d·g·o·u·l·f — speed reading (тетрадь стр.10–16)"
      ],
      [
       "Tricky words",
@@ -95,8 +95,8 @@ window.PROGRAMS = {
       "Genki «How old are you?» + «What's your favourite colour?» warm-up. Story «The storm»."
      ],
      [
-      "Фокус JP Book 2",
-      "Звуки g o u l f b → G O U L F B · стр. 6"
+      "Фокус Phonics Hero",
+      "Повтор звуков (PH ур.7–9): b·j·v·w·x·y·z·qu — speed reading (тетрадь стр.17–25)"
      ],
      [
       "Tricky words",
@@ -129,8 +129,8 @@ window.PROGRAMS = {
       "Genki «May I borrow your…?» (stapler, glue, eraser, brush, tape, pencil sharpener). GMF1 Vocabulary song. Stickers."
      ],
      [
-      "Фокус JP Book 2",
-      "Звуки j v w x y z → J V W X Y Z · стр. 8"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.10: заглавные A–Z (тетрадь стр.26–27)"
      ],
      [
       "Tricky words",
@@ -163,8 +163,8 @@ window.PROGRAMS = {
       "Dialogue: May I borrow your…? / Of course! → Where's my (pencil)? Grammar: in/on/under. Drill."
      ],
      [
-      "Фокус JP Book 2",
-      "qu + повторение 26 звуков · стр. 10"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.11: большое чтение (тетрадь стр.28–29) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -197,8 +197,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out. Classroom language in context."
      ],
      [
-      "Фокус JP Book 2",
-      "Чтение CVC слов (все 26 звуков) · стр. 2-6"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.11: большое чтение (тетрадь стр.28–29) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -231,8 +231,8 @@ window.PROGRAMS = {
       "More objects. Prepositions game. Put it in/on/under."
      ],
      [
-      "Фокус JP Book 2",
-      "Чтение CCVC и CVCC: stop, film, hand · стр. 14"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.12: итоговый + диплом Части 1 (тетрадь стр.30–31) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -265,8 +265,8 @@ window.PROGRAMS = {
       "Phonics r drill. Culture: first day of school. Literacy: poem."
      ],
      [
-      "Фокус JP Book 2",
-      "Диктант: 26 звуков + заглавные · стр. 34"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.12: итоговый + диплом Части 1 (тетрадь стр.30–31) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -299,8 +299,8 @@ window.PROGRAMS = {
       "Review exercises: vocabulary bank, grammar, listening."
      ],
      [
-      "Фокус JP Book 2",
-      "ch: chip, chop, much, lunch · стр. 12"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.13: диграфы ai·oa·ie (тетрадь стр.33–35) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -333,8 +333,8 @@ window.PROGRAMS = {
       "Unit 1 Test."
      ],
      [
-      "Фокус JP Book 2",
-      "sh: ship, shop, fish, dish · стр. 12"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.13: диграфы ai·oa·ie (тетрадь стр.33–35) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -367,8 +367,8 @@ window.PROGRAMS = {
       "Genki «How old are you?» (numbers 1–12). GMF1 Vocabulary song. Stickers. Toys chant."
      ],
      [
-      "Фокус JP Book 2",
-      "th мягкий: this, that, with, them · стр. 12"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.14: диграфы ee·or (тетрадь стр.36–38) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -401,8 +401,8 @@ window.PROGRAMS = {
       "Dialogue: What is it? Grammar: Is it a…? Yes/No."
      ],
      [
-      "Фокус JP Book 2",
-      "th твёрдый: three, think, moth, bath · стр. 12"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.14: диграфы ee·or (тетрадь стр.36–38) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -435,8 +435,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out. Birthday context."
      ],
      [
-      "Фокус JP Book 2",
-      "ng: ring, sing, long, strong · стр. 36"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.15: диграфы ng·oo (тетрадь стр.39–42) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -469,8 +469,8 @@ window.PROGRAMS = {
       "Genki «What's your favourite colour?» → It's a big red robot! Adjectives game. Describe and guess."
      ],
      [
-      "Фокус JP Book 2",
-      "Повт. ch sh th ng — диктант · стр. 36"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.15: диграфы ng·oo (тетрадь стр.39–42) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -503,8 +503,8 @@ window.PROGRAMS = {
       "Phonics s drill. Culture: birthdays. Literacy: card."
      ],
      [
-      "Фокус JP Book 2",
-      "Короткие гласные a e i o u — различение · стр. 5"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.16: диграфы ch·sh·th (тетрадь стр.43–45) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -537,8 +537,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP Book 2",
-      "Короткие гласные — чтение CVC слов · стр. 7"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.16: диграфы ch·sh·th (тетрадь стр.43–45) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -571,8 +571,8 @@ window.PROGRAMS = {
       "Unit 2 Test."
      ],
      [
-      "Фокус JP Book 2",
-      "Короткие гласные — письмо слов · стр. 7"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.17: диграфы ou·oi (тетрадь стр.46–48) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -605,8 +605,8 @@ window.PROGRAMS = {
       "Genki «Make a face!» (nose, ears, mouth, eyes, eyebrows, cheeks, hair) + «Let's make a monster!» (body + numbers). GMF1 Vocabulary song."
      ],
      [
-      "Фокус JP Book 2",
-      "ck vs k: правило (kick, clock, back) · стр. 7"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.17: диграфы ou·oi (тетрадь стр.46–48) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -639,8 +639,8 @@ window.PROGRAMS = {
       "Dialogue: I've got… Grammar: have got. Drill."
      ],
      [
-      "Фокус JP Book 2",
-      "Двойные согласные: ll ff ss zz · стр. 9"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.18: диграфы ue·er·ar (тетрадь стр.49–51) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -673,8 +673,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out. Circus context."
      ],
      [
-      "Фокус JP Book 2",
-      "Двойные — выбор написания · стр. 9"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.18: диграфы ue·er·ar (тетрадь стр.49–51) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -707,8 +707,8 @@ window.PROGRAMS = {
       "Describing hair and eyes. Guess who game."
      ],
      [
-      "Фокус JP Book 2",
-      "Чтение предложений (короткие гласные) · стр. 11"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.19: Magic E: краткий/долгий гласный (тетрадь стр.53–54) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -741,8 +741,8 @@ window.PROGRAMS = {
       "Phonics h drill. Culture: circus. Literacy: description."
      ],
      [
-      "Фокус JP Book 2",
-      "Диктант: короткие гласные + ch sh th ng · стр. 29"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.19: Magic E: краткий/долгий гласный (тетрадь стр.53–54) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -775,8 +775,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP Book 2",
-      "Короткие vs длинные гласные — сравнение · стр. 27"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.20: Magic E: a-e (тетрадь стр.55–57) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -809,8 +809,8 @@ window.PROGRAMS = {
       "Unit 3 Test."
      ],
      [
-      "Фокус JP Book 2",
-      "Повт. всех правил блоков 1-3 · стр. 34"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.20: Magic E: a-e (тетрадь стр.55–57) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -843,8 +843,8 @@ window.PROGRAMS = {
       "Genki «I like vegetables» (onions, peas, carrots, beans, mushrooms, potatoes, pumpkin, tomatoes). GMF1 Food song. Stickers."
      ],
      [
-      "Фокус JP Book 2",
-      "Magic e: a-e — game, name, cake · стр. 11"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.21: Magic E: i-e (тетрадь стр.58–60) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -877,8 +877,8 @@ window.PROGRAMS = {
       "Dialogue: Do you like…? Grammar drill."
      ],
      [
-      "Фокус JP Book 2",
-      "Magic e: e-e — Pete, theme, eve · стр. 35"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.21: Magic E: i-e (тетрадь стр.58–60) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -911,8 +911,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out. Food context."
      ],
      [
-      "Фокус JP Book 2",
-      "Magic e: i-e — kite, bike, smile · стр. 13"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.22: Magic E: o-e·u-e (тетрадь стр.61–63) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -945,8 +945,8 @@ window.PROGRAMS = {
       "Fruit. Like/don't like survey. Fruit salad activity."
      ],
      [
-      "Фокус JP Book 2",
-      "Magic e: o-e — bone, rope, home · стр. 13"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.22: Magic E: o-e·u-e (тетрадь стр.61–63) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -979,8 +979,8 @@ window.PROGRAMS = {
       "Phonics j drill. Culture: food. Literacy: recipe."
      ],
      [
-      "Фокус JP Book 2",
-      "Magic e: u-e — cube, tune, mule · стр. 11"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.23: Magic E: повторение (тетрадь стр.64–65) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -1013,8 +1013,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP Book 2",
-      "/ai/ ai: rain, tail, snail, paint · стр. 15"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.23: Magic E: повторение (тетрадь стр.64–65) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -1047,8 +1047,8 @@ window.PROGRAMS = {
       "Unit 4 Test."
      ],
      [
-      "Фокус JP Book 2",
-      "/ai/ ay: play, hay, tray, spray · стр. 15"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -1081,8 +1081,8 @@ window.PROGRAMS = {
       "Педагог выбирает темы для повторения перед каникулами"
      ],
      [
-      "Фокус JP Book 2",
-      "/ai/ a-e: cake, whale, name · стр. 33"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -1115,8 +1115,8 @@ window.PROGRAMS = {
       "Педагог выбирает темы для повторения перед каникулами"
      ],
      [
-      "Фокус JP Book 2",
-      "/ee/ ee: tree, teeth, three, sheep · стр. 17"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -1149,8 +1149,8 @@ window.PROGRAMS = {
       "Genki «Do you like animals?» + «Animal Noises» (cow/moo, pig/oink, sheep/baa, chicken/cluck). GMF1 Vocabulary song."
      ],
      [
-      "Фокус JP Book 2",
-      "/ee/ ea: leaf, seal, meat, seat · стр. 17"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -1183,8 +1183,8 @@ window.PROGRAMS = {
       "Dialogue: Can you see a…? Grammar: can/can't."
      ],
      [
-      "Фокус JP Book 2",
-      "/ee/ e-e: Pete, theme, eve · стр. 35"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -1217,8 +1217,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out. Farm context."
      ],
      [
-      "Фокус JP Book 2",
-      "/ie/ ie: pie, tie, lie, die · стр. 19"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -1251,8 +1251,8 @@ window.PROGRAMS = {
       "Actions. Can/can't game. Animals + abilities."
      ],
      [
-      "Фокус JP Book 2",
-      "/ie/ i-e: bike, slide, drive, kite · стр. 13"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.27: /оу/ oa·ow·o-e (тетрадь стр.75–76) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -1285,8 +1285,8 @@ window.PROGRAMS = {
       "Phonics sh drill. Culture: farm. Literacy: fact file."
      ],
      [
-      "Фокус JP Book 2",
-      "/ie/ y: my, sky, shy, flying · стр. 19"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.27: /оу/ oa·ow·o-e (тетрадь стр.75–76) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -1319,8 +1319,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP Book 2",
-      "/ie/ igh: night, light, thigh · стр. 37"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.28: /ю:/ ue·ew·u-e (тетрадь стр.77–78) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -1353,8 +1353,8 @@ window.PROGRAMS = {
       "Unit 5 Test."
      ],
      [
-      "Фокус JP Book 2",
-      "Диктант: /ai/ /ee/ /ie/ · стр. 35"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.28: /ю:/ ue·ew·u-e (тетрадь стр.77–78) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -1387,8 +1387,8 @@ window.PROGRAMS = {
       "Genki «Where is Mr Monkey?» (near, next to, in front of, behind, under, on) → prepositions intro. GMF1 Vocabulary song."
      ],
      [
-      "Фокус JP Book 2",
-      "/oa/ oa: coat, toad, soap, oak · стр. 21"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.29: /ау/ ou·ow + /ой/ oi·oy (тетрадь стр.79–82) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -1421,8 +1421,8 @@ window.PROGRAMS = {
       "Dialogue: Where's/Where are? Grammar: prepositions."
      ],
      [
-      "Фокус JP Book 2",
-      "/oa/ ow: grow, slow, yellow · стр. 21"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.29: /ау/ ou·ow + /ой/ oi·oy (тетрадь стр.79–82) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -1455,8 +1455,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out. Park context."
      ],
      [
-      "Фокус JP Book 2",
-      "/oa/ o-e: mole, rose, stone · стр. 39"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.30: /ё:/ er·ir·ur (тетрадь стр.83–85) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -1489,8 +1489,8 @@ window.PROGRAMS = {
       "Nature vocabulary. Prepositions game. Where are they?"
      ],
      [
-      "Фокус JP Book 2",
-      "/oo/ длинный: moon, spoon, food · стр. 38"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.30: /ё:/ er·ir·ur (тетрадь стр.83–85) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -1523,8 +1523,8 @@ window.PROGRAMS = {
       "Phonics w drill. Culture: parks. Literacy: poem."
      ],
      [
-      "Фокус JP Book 2",
-      "/oo/ короткий: book, foot, cook · стр. 38"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.31: хитрые c·g·ph + air·ear·are (тетрадь стр.86–90) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -1557,8 +1557,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP Book 2",
-      "/or/ or: storm, fork, sort · стр. 38"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.31: хитрые c·g·ph + air·ear·are (тетрадь стр.86–90) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -1591,8 +1591,8 @@ window.PROGRAMS = {
       "Unit 6 Test."
      ],
      [
-      "Фокус JP Book 2",
-      "/er/ er: sister, summer, ladder · стр. 23"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 2 — ур.13–14 (ai·oa·ie, ee·or), истории (тетрадь стр.33–38)"
      ],
      [
       "Tricky words",
@@ -1625,8 +1625,8 @@ window.PROGRAMS = {
       "Genki «Eat! Drink! Dance!» (stand up, sit down, eat, drink, read, stop, sleep, sing, cook, dance). GMF1 Town song. Stickers."
      ],
      [
-      "Фокус JP Book 2",
-      "/er/ ir: bird, girl, shirt · стр. 23"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 2 — ур.15–16 (ng·oo, ch·sh·th), истории (тетрадь стр.39–45)"
      ],
      [
       "Tricky words",
@@ -1659,8 +1659,8 @@ window.PROGRAMS = {
       "Dialogue: There's a… How many? Grammar drill."
      ],
      [
-      "Фокус JP Book 2",
-      "/er/ ur: purple, burn, purse · стр. 46"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 2 — ур.17–18 (ou·oi, ue·er·ar), истории (тетрадь стр.46–51)"
      ],
      [
       "Tricky words",
@@ -1693,8 +1693,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out. Town context."
      ],
      [
-      "Фокус JP Book 2",
-      "/ar/ ar: shark, farm, star · стр. 43"
+      "Фокус Phonics Hero",
+      "Phonics Hero: диктант диграфов (Часть 2, ур.13–18)"
      ],
      [
       "Tricky words",
@@ -1727,8 +1727,8 @@ window.PROGRAMS = {
       "Genki «How did you get here?» (aeroplane, car, train, helicopter, boat, bus, mountain bike). Numbers 11–20. How many?"
      ],
      [
-      "Фокус JP Book 2",
-      "/air/ air: chair, stairs, fair · стр. 47"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 3 — Magic E ур.19–20 (тетрадь стр.53–57)"
      ],
      [
       "Tricky words",
@@ -1761,8 +1761,8 @@ window.PROGRAMS = {
       "Phonics z drill. Culture: towns. Literacy: postcard."
      ],
      [
-      "Фокус JP Book 2",
-      "/air/ ear/are: bear, hare, pear · стр. 47"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 3 — Magic E ур.21–22 (тетрадь стр.58–63)"
      ]
     ],
     "sec": "Unit 7 Let's explore my town!"
@@ -1791,8 +1791,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP Book 2",
-      "/ou/ ou: found, count, mouse · стр. 42"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 3 — ур.23 + диктант Magic E (тетрадь стр.64–65)"
      ]
     ],
     "sec": "Unit 7 Let's explore my town!"
@@ -1821,8 +1821,8 @@ window.PROGRAMS = {
       "Unit 7 Test."
      ],
      [
-      "Фокус JP Book 2",
-      "/ou/ ow: brown, flower, down · стр. 42"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — повторение"
      ]
     ],
     "sec": "Unit 7 Let's explore my town!"
@@ -1851,8 +1851,8 @@ window.PROGRAMS = {
       "Genki «Winter Clothes» (hat, scarf, coat, boots — put on/take off). GMF1 Vocabulary song. Stickers. Clothes chant."
      ],
      [
-      "Фокус JP Book 2",
-      "/oi/ oi: coin, join, spoil · стр. 44"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — повторение"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -1881,8 +1881,8 @@ window.PROGRAMS = {
       "Dialogue: What are you wearing? Grammar: Present Continuous."
      ],
      [
-      "Фокус JP Book 2",
-      "/oi/ oy: boy, toy, enjoy · стр. 44"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — повторение"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -1911,8 +1911,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out. Camping context."
      ],
      [
-      "Фокус JP Book 2",
-      "/ue/ ue: blue, glue, rescue · стр. 25"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.27: /оу/ oa·ow·o-e (тетрадь стр.75–76) — повторение"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -1941,8 +1941,8 @@ window.PROGRAMS = {
       "Outdoor activities. He's/She's… game."
      ],
      [
-      "Фокус JP Book 2",
-      "/ue/ ew/u-e: few, blew, cute · стр. 41"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.28: /ю:/ ue·ew·u-e (тетрадь стр.77–78) — повторение"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -1971,8 +1971,8 @@ window.PROGRAMS = {
       "Phonics v drill. Culture: camping. Literacy: diary."
      ],
      [
-      "Фокус JP Book 2",
-      "y = /ee/: jolly, funny, muddy · стр. 3"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.29: /ау/ ou·ow + /ой/ oi·oy (тетрадь стр.79–82) — повторение"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -2001,8 +2001,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP Book 2",
-      "Soft c: face, cycle, circus · стр. 29"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.30: /ё:/ er·ir·ur (тетрадь стр.83–85) — повторение"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -2031,8 +2031,8 @@ window.PROGRAMS = {
       "Unit 8 Test."
      ],
      [
-      "Фокус JP Book 2",
-      "Soft g: giant, giraffe, orange · стр. 31"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.31: хитрые c·g·ph + air·ear·are (тетрадь стр.86–90) — повторение"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -2061,8 +2061,8 @@ window.PROGRAMS = {
       "Genki «Good Morning!» (good morning/afternoon/evening/night) + «Little Red Riding Hood» (wake up, wash my face, brush my teeth). GMF1 Vocabulary song."
      ],
      [
-      "Фокус JP Book 2",
-      "ph = /f/: elephant, dolphin, phone · стр. 27"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 1 (тетрадь стр.7–29)"
      ]
     ],
     "sec": "Unit 9 Day and night"
@@ -2091,8 +2091,8 @@ window.PROGRAMS = {
       "Dialogue: I (wash my face) every day. Grammar drill."
      ],
      [
-      "Фокус JP Book 2",
-      "Мини-текст «The fish» + диктант · стр. 32"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 2 (тетрадь стр.32–51)"
      ]
     ],
     "sec": "Unit 9 Day and night"
@@ -2121,8 +2121,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out. Day and night context."
      ],
      [
-      "Фокус JP Book 2",
-      "Мини-текст «The fox» + диктант · стр. 30"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 3 (тетрадь стр.53–65)"
      ]
     ],
     "sec": "Unit 9 Day and night"
@@ -2151,8 +2151,8 @@ window.PROGRAMS = {
       "Genki «Eat! Drink! Dance!» → meal times. In the morning/afternoon/evening. My day poster."
      ],
      [
-      "Фокус JP Book 2",
-      "Мини-текст «The hen» + диктант · стр. 26"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 4 (тетрадь стр.66–90)"
      ]
     ],
     "sec": "Unit 9 Day and night"
@@ -2181,8 +2181,8 @@ window.PROGRAMS = {
       "Phonics th drill. Culture: daily routines. Literacy: poem."
      ],
      [
-      "Фокус JP Book 2",
-      "Мини-текст «The pond» + диктант · стр. 28"
+      "Фокус Phonics Hero",
+      "Phonics Hero: итоговый диктант — звуки и диграфы (Части 1–2)"
      ]
     ],
     "sec": "Unit 9 Day and night"
@@ -2211,8 +2211,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP Book 2",
-      "Предложения под картинки (1) · стр. 25"
+      "Фокус Phonics Hero",
+      "Phonics Hero: итоговый диктант — Magic E и написания (Части 3–4)"
      ]
     ],
     "sec": "Unit 9 Day and night"
@@ -2241,8 +2241,8 @@ window.PROGRAMS = {
       "Unit 9 Test."
      ],
      [
-      "Фокус JP Book 2",
-      "Предложения под картинки (2) · стр. 37"
+      "Фокус Phonics Hero",
+      "Phonics Hero: марафон tricky words — чтение и письмо (все части)"
      ]
     ],
     "sec": "Unit 9 Day and night"
@@ -2271,8 +2271,8 @@ window.PROGRAMS = {
       "Итоговый контроль: лексика, грамматика, чтение, аудирование"
      ],
      [
-      "Фокус JP Book 2",
-      "Анаграммы животных · стр. 41"
+      "Фокус Phonics Hero",
+      "Phonics Hero: финальное чтение на скорость — все звуки и написания"
      ]
     ],
     "sec": "FINAL TEST"
@@ -2301,8 +2301,8 @@ window.PROGRAMS = {
       "Итоговый устный экзамен: диалог, описание, вопрос-ответ"
      ],
      [
-      "Фокус JP Book 2",
-      "Кроссворд: /er/ и /ar/ · стр. 46"
+      "Фокус Phonics Hero",
+      "Phonics Hero: Диплом Фоникс-героя (тетрадь стр.91)"
      ],
      [
       "Tricky words",
@@ -2335,8 +2335,8 @@ window.PROGRAMS = {
       "Педагог выбирает темы для повторения"
      ],
      [
-      "Фокус JP Book 2",
-      "Все tricky words — чтение и письмо · Все цвета"
+      "Фокус Phonics Hero",
+      "Phonics Hero: Карта прогресса — финиш! (тетрадь стр.92)"
      ],
      [
       "Tricky words",
@@ -2369,8 +2369,8 @@ window.PROGRAMS = {
       "Педагог выбирает темы для повторения"
      ],
      [
-      "Фокус JP Book 2",
-      "Итоговый урок: свободное чтение · Jolly Readers"
+      "Фокус Phonics Hero",
+      "Phonics Hero: праздник чтения — любимые истории тетради"
      ],
      [
       "Tricky words",
@@ -8039,8 +8039,8 @@ window.PROGRAMS = {
       "Разучиваем команды класса под музыку. TPR: дети выполняют действия. Рисуем warm-up routine. Песня «What's your name?»: знакомимся по кругу. Rock Paper Scissors с партнёрами."
      ],
      [
-      "Фокус JP",
-      "Группа 1: s, a, t, i, p, n — ввод · JP1 стр.1–6"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.1: s·a·t (тетрадь стр.3–4)"
      ],
      [
       "Tricky words",
@@ -8073,8 +8073,8 @@ window.PROGRAMS = {
       "Песня «Good Morning!»: приветствия по времени суток. Карточки: утро/день/вечер/ночь. How are you? — отвечаем с карточками эмоций."
      ],
      [
-      "Фокус JP",
-      "Группа 1: s a t i p n — чтение слов (sat, pin, nap, tip) · JP1 стр.7–10"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.2: i·p·n (тетрадь стр.5–7)"
      ],
      [
       "Tricky words",
@@ -8107,8 +8107,8 @@ window.PROGRAMS = {
       "Песня «I'm a superhero!»: 8 действий + can. Draw your own superhero! I can…"
      ],
      [
-      "Фокус JP",
-      "Группа 2: c/k, e, h, r, m, d — ввод · JP1 стр.11–16"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.3: c·k·e (тетрадь стр.8–9)"
      ],
      [
       "Tricky words",
@@ -8141,8 +8141,8 @@ window.PROGRAMS = {
       "Песня «I, you, we are happy!»: pronouns в контексте. Who is hungry? — рисуем и показываем."
      ],
      [
-      "Фокус JP",
-      "Группа 2: c k e h r m d — чтение слов (hen, red, can, mud) · JP1 стр.17–20"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.4: h·r·m (тетрадь стр.10–11)"
      ],
      [
       "Tricky words",
@@ -8175,8 +8175,8 @@ window.PROGRAMS = {
       "Числа 1–12 в песнях и играх. Counting games. Рисуем торт со свечами."
      ],
      [
-      "Фокус JP",
-      "Группа 3: g, o, u, l, f, b — ввод · JP1 стр.21–26"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.5: d·g·o (тетрадь стр.12–14)"
      ],
      [
       "Tricky words",
@@ -8209,8 +8209,8 @@ window.PROGRAMS = {
       "Песня «How old are you?»: числа в контексте возраста. Опрос класса: How old are you? Рисуем торт."
      ],
      [
-      "Фокус JP",
-      "Группа 3: g o u l f b — чтение слов (got, fun, lip, bed) · JP1 стр.27–30"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.6: u·l·f (тетрадь стр.15–16)"
      ],
      [
       "Tricky words",
@@ -8243,8 +8243,8 @@ window.PROGRAMS = {
       "Песня «Do you like food?» (CD3): 12 продуктов A–L. Do you like...? — Yes, I do! / No, I don't! Опрос класса. Karuta game."
      ],
      [
-      "Фокус JP",
-      "Группа 4: j, v, w, x — ввод + чтение слов · JP1 стр.31–34"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.7: b·j·v (тетрадь стр.17–19)"
      ],
      [
       "Tricky words",
@@ -8277,8 +8277,8 @@ window.PROGRAMS = {
       "Песня «What's your favourite colour?»: все цвета. Рисуем змею в любимом цвете. Do you like (blue)? — опрос."
      ],
      [
-      "Фокус JP",
-      "Группа 5: y, z, qu — ввод + чтение слов · JP1 стр.35–38"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.8: w·x·y (тетрадь стр.20–22)"
      ],
      [
       "Tricky words",
@@ -8311,8 +8311,8 @@ window.PROGRAMS = {
       "Песня «May I borrow your…?»: школьные предметы + вежливость. Ролевая игра в классе."
      ],
      [
-      "Фокус JP",
-      "Все 26 звуков: повторение + заглавные буквы A–M · JP1 стр.39–42"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.9: z·qu (тетрадь стр.23–25)"
      ],
      [
       "Tricky words",
@@ -8345,8 +8345,8 @@ window.PROGRAMS = {
       "Revision игры: числа + цвета + May I borrow. Rock Paper Scissors. Genki song medley — revision."
      ],
      [
-      "Фокус JP",
-      "Все 26 звуков: повторение + заглавные буквы N–Z · JP1 стр.43–46"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.10: заглавные A–Z (тетрадь стр.26–27)"
      ],
      [
       "Tricky words",
@@ -8379,8 +8379,8 @@ window.PROGRAMS = {
       "Песня «Do you like animals?»: 12 животных + Yes/No. Опрос класса: Do you like…?"
      ],
      [
-      "Фокус JP",
-      "Чтение CVC слов из всех 26 звуков — парные упражнения · JP1 стр.47–50"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.11: большое чтение (тетрадь стр.28–29)"
      ],
      [
       "Tricky words",
@@ -8413,8 +8413,8 @@ window.PROGRAMS = {
       "Days of the week chant. Игра «What day is it?». Genki song medley (3–4 любимые) + JP Book 1 финальный диктант."
      ],
      [
-      "Фокус JP",
-      "Диктант: все 26 звуков + заглавные буквы — итог блока · JP1 стр.51–54"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.12: итоговый + диплом Части 1 (тетрадь стр.30–31)"
      ],
      [
       "Tricky words",
@@ -8447,8 +8447,8 @@ window.PROGRAMS = {
       "Genki «Genki Disco Warm Up» (revision) + «Rock Paper Scissors». Classroom commands. Name game."
      ],
      [
-      "Фокус JP",
-      "ch: chip, chop, much, lunch · стр. 12"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.13: диграфы ai·oa·ie (тетрадь стр.33–35) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -8481,8 +8481,8 @@ window.PROGRAMS = {
       "Genki «What's your name?» + «I, you, we are happy» (revision). GMF1 dialogue: What's your name? / I'm Jake. Act out."
      ],
      [
-      "Фокус JP",
-      "sh: ship, shop, fish, dish · стр. 12"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.13: диграфы ai·oa·ie (тетрадь стр.33–35) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -8515,8 +8515,8 @@ window.PROGRAMS = {
       "Genki «How old are you?» + «What's your favourite colour?» warm-up. GMF1 Story «The storm»."
      ],
      [
-      "Фокус JP",
-      "th мягкий: this, that, with, them · стр. 12"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.14: диграфы ee·or (тетрадь стр.36–38) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -8549,8 +8549,8 @@ window.PROGRAMS = {
       "Genki «May I borrow your…?» (stapler, glue, eraser, brush — classroom objects). GMF1 Vocabulary song. Stickers."
      ],
      [
-      "Фокус JP",
-      "th твёрдый: three, think, moth, bath · стр. 12"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.14: диграфы ee·or (тетрадь стр.36–38) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -8583,8 +8583,8 @@ window.PROGRAMS = {
       "Dialogue: Where's my…? Grammar box: in/on/under. Drill."
      ],
      [
-      "Фокус JP",
-      "ng: ring, sing, long, strong · стр. 36"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.15: диграфы ng·oo (тетрадь стр.39–42) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -8617,8 +8617,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "Короткие гласные a e i o u — различение · стр. 5"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.15: диграфы ng·oo (тетрадь стр.39–42) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -8651,8 +8651,8 @@ window.PROGRAMS = {
       "More objects. Prepositions game."
      ],
      [
-      "Фокус JP",
-      "Короткие гласные — чтение CVC слов · стр. 7"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.16: диграфы ch·sh·th (тетрадь стр.43–45) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -8685,8 +8685,8 @@ window.PROGRAMS = {
       "Review exercises: vocabulary, grammar, listening."
      ],
      [
-      "Фокус JP",
-      "ck vs k: правило (kick, clock, back) · стр. 7"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.16: диграфы ch·sh·th (тетрадь стр.43–45) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -8719,8 +8719,8 @@ window.PROGRAMS = {
       "Unit 1 Test."
      ],
      [
-      "Фокус JP",
-      "Двойные согласные: ll ff ss zz · стр. 9"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.17: диграфы ou·oi (тетрадь стр.46–48) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -8753,8 +8753,8 @@ window.PROGRAMS = {
       "Genki «How old are you?» (numbers 1–12 + age). GMF1 Vocabulary song. Stickers. Toys chant."
      ],
      [
-      "Фокус JP",
-      "Двойные — выбор написания · стр. 9"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.17: диграфы ou·oi (тетрадь стр.46–48) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -8787,8 +8787,8 @@ window.PROGRAMS = {
       "What is it? / Is it a…? Grammar box. Drill."
      ],
      [
-      "Фокус JP",
-      "Чтение предложений (короткие гласные) · стр. 11"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.18: диграфы ue·er·ar (тетрадь стр.49–51) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -8821,8 +8821,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "Диктант: короткие гласные + ch sh th ng · стр. 29"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.18: диграфы ue·er·ar (тетрадь стр.49–51) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -8855,8 +8855,8 @@ window.PROGRAMS = {
       "Adjectives game. Genki «What's your favourite colour?» → описываем игрушки: It's a big red ball!"
      ],
      [
-      "Фокус JP",
-      "Magic e: a-e — game, name, cake · стр. 11"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.19: Magic E: краткий/долгий гласный (тетрадь стр.53–54) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -8889,8 +8889,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP",
-      "Magic e: e-e — Pete, theme, eve · стр. 35"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.19: Magic E: краткий/долгий гласный (тетрадь стр.53–54) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -8923,8 +8923,8 @@ window.PROGRAMS = {
       "Unit 2 Test."
      ],
      [
-      "Фокус JP",
-      "Magic e: i-e — kite, bike, smile · стр. 13"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.20: Magic E: a-e (тетрадь стр.55–57) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -8957,8 +8957,8 @@ window.PROGRAMS = {
       "Genki «Make a face!» (nose, ears, mouth, eyes, cheeks, hair) + «Let's make a monster!» (body parts). GMF1 Vocabulary song."
      ],
      [
-      "Фокус JP",
-      "Magic e: o-e — bone, rope, home · стр. 13"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.20: Magic E: a-e (тетрадь стр.55–57) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -8991,8 +8991,8 @@ window.PROGRAMS = {
       "Dialogue: I've got… Grammar: have got. Drill."
      ],
      [
-      "Фокус JP",
-      "Magic e: u-e — cube, tune, mule · стр. 11"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.21: Magic E: i-e (тетрадь стр.58–60) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -9025,8 +9025,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "/ai/ ai: rain, tail, snail, paint · стр. 15"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.21: Magic E: i-e (тетрадь стр.58–60) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -9059,8 +9059,8 @@ window.PROGRAMS = {
       "Genki «Let's make a monster!» → числа + части тела. She has / He has. Guess who? game."
      ],
      [
-      "Фокус JP",
-      "/ai/ ay: play, hay, tray, spray · стр. 15"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.22: Magic E: o-e·u-e (тетрадь стр.61–63) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -9093,8 +9093,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP",
-      "/ai/ a-e: cake, whale, name · стр. 33"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.22: Magic E: o-e·u-e (тетрадь стр.61–63) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -9127,8 +9127,8 @@ window.PROGRAMS = {
       "Unit 3 Test."
      ],
      [
-      "Фокус JP",
-      "/ee/ ee: tree, teeth, three, sheep · стр. 17"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.23: Magic E: повторение (тетрадь стр.64–65) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -9161,8 +9161,8 @@ window.PROGRAMS = {
       "Genki «I like vegetables» (onions, peas, carrots, beans, mushrooms, potatoes, pumpkin, tomatoes). GMF1 Food song."
      ],
      [
-      "Фокус JP",
-      "/ee/ ea: leaf, seal, meat, seat · стр. 17"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.23: Magic E: повторение (тетрадь стр.64–65) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -9195,8 +9195,8 @@ window.PROGRAMS = {
       "Like/don't like. Grammar box. Drill."
      ],
      [
-      "Фокус JP",
-      "/ee/ e-e: Pete, theme, eve · стр. 35"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -9229,8 +9229,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "/ie/ ie: pie, tie, lie, die · стр. 19"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -9263,8 +9263,8 @@ window.PROGRAMS = {
       "Genki «Fruit Market» (apple, orange, pineapple, banana, lemon, cherry, strawberry, watermelon). Do you like…? Survey."
      ],
      [
-      "Фокус JP",
-      "/ie/ i-e: bike, slide, drive, kite · стр. 13"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -9297,8 +9297,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP",
-      "/ie/ y: my, sky, shy, flying · стр. 19"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -9331,8 +9331,8 @@ window.PROGRAMS = {
       "Unit 4 Test."
      ],
      [
-      "Фокус JP",
-      "/ie/ igh: night, light, thigh · стр. 37"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -9365,8 +9365,8 @@ window.PROGRAMS = {
       "Genki «Do you like animals?» (chickens, sheep, bears, elephants, monkeys) + «Animal Noises» (cow/moo, pig/oink, sheep/baa). GMF1 Vocabulary song."
      ],
      [
-      "Фокус JP",
-      "/oa/ oa: coat, toad, soap, oak · стр. 21"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -9399,8 +9399,8 @@ window.PROGRAMS = {
       "Can/can't. Grammar box. Genki «I'm a superhero!» (jump, run, hide, cook, stretch, climb, swim, fly) as model → Animals can/can't."
      ],
      [
-      "Фокус JP",
-      "/oa/ ow: grow, slow, yellow · стр. 21"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.27: /оу/ oa·ow·o-e (тетрадь стр.75–76) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -9433,8 +9433,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "/oa/ o-e: mole, rose, stone · стр. 39"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.27: /оу/ oa·ow·o-e (тетрадь стр.75–76) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -9467,8 +9467,8 @@ window.PROGRAMS = {
       "Genki «I'm a superhero!» revision → (Horses) can run. / (Pigs) can't fly. / (Birds) can fly. Action game."
      ],
      [
-      "Фокус JP",
-      "/oo/ длинный: moon, spoon, food · стр. 38"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.28: /ю:/ ue·ew·u-e (тетрадь стр.77–78) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -9501,8 +9501,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP",
-      "/oo/ короткий: book, foot, cook · стр. 38"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.28: /ю:/ ue·ew·u-e (тетрадь стр.77–78) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -9535,8 +9535,8 @@ window.PROGRAMS = {
       "Unit 5 Test."
      ],
      [
-      "Фокус JP",
-      "/or/ or: storm, fork, sort · стр. 38"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.29: /ау/ ou·ow + /ой/ oi·oy (тетрадь стр.79–82) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -9569,8 +9569,8 @@ window.PROGRAMS = {
       "Genki «Where is Mr Monkey?» (near, next to, in front of, behind, under, on) → prepositions intro. GMF1 Vocabulary song."
      ],
      [
-      "Фокус JP",
-      "/er/ er: sister, summer, ladder · стр. 23"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.29: /ау/ ou·ow + /ой/ oi·oy (тетрадь стр.79–82) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -9603,8 +9603,8 @@ window.PROGRAMS = {
       "Prepositions. Where's/Where are? Grammar box."
      ],
      [
-      "Фокус JP",
-      "/er/ ir: bird, girl, shirt · стр. 23"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.30: /ё:/ er·ir·ur (тетрадь стр.83–85) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -9637,8 +9637,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "/er/ ur: purple, burn, purse · стр. 46"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.30: /ё:/ er·ir·ur (тетрадь стр.83–85) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -9671,8 +9671,8 @@ window.PROGRAMS = {
       "Genki «Where is the spider?» (under, on, behind, in front of, in, near, next to) → prepositions game. They're (behind) the tree."
      ],
      [
-      "Фокус JP",
-      "/ar/ ar: shark, farm, star · стр. 43"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.31: хитрые c·g·ph + air·ear·are (тетрадь стр.86–90) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -9705,8 +9705,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP",
-      "/air/ air: chair, stairs, fair · стр. 47"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.31: хитрые c·g·ph + air·ear·are (тетрадь стр.86–90) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -9739,8 +9739,8 @@ window.PROGRAMS = {
       "Unit 6 Test."
      ],
      [
-      "Фокус JP",
-      "/air/ ear/are: bear, hare, pear · стр. 47"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 2 — диграфы ур.13–15, перечитываем истории (тетрадь стр.33–42)"
      ],
      [
       "Tricky words",
@@ -9773,8 +9773,8 @@ window.PROGRAMS = {
       "Genki «Eat! Drink! Dance!» (eat, drink, read, stop, sleep, sing, cook, dance) + «Where are you going?» intro. GMF1 Town song."
      ],
      [
-      "Фокус JP",
-      "/ou/ ou: found, count, mouse · стр. 42"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 2 — диграфы ур.16–18, истории + диктант (тетрадь стр.43–51)"
      ]
     ],
     "sec": "Unit 7 Let's explore my town!"
@@ -9803,8 +9803,8 @@ window.PROGRAMS = {
       "There is/are. Grammar box. Town survey."
      ],
      [
-      "Фокус JP",
-      "/ou/ ow: brown, flower, down · стр. 42"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 3 — Magic E ур.19–21 (тетрадь стр.53–60)"
      ]
     ],
     "sec": "Unit 7 Let's explore my town!"
@@ -9833,8 +9833,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "/oi/ oi: coin, join, spoil · стр. 44"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 3 — Magic E ур.22–23 + диктант (тетрадь стр.61–65)"
      ]
     ],
     "sec": "Unit 7 Let's explore my town!"
@@ -9863,8 +9863,8 @@ window.PROGRAMS = {
       "Genki «How did you get here?» (aeroplane, car, train, rocket, helicopter, boat, bus, mountain bike). Numbers 11–20. How many? game."
      ],
      [
-      "Фокус JP",
-      "/oi/ oy: boy, toy, enjoy · стр. 44"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — повторение"
      ]
     ],
     "sec": "Unit 7 Let's explore my town!"
@@ -9893,8 +9893,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP",
-      "/ue/ ue: blue, glue, rescue · стр. 25"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — повторение"
      ]
     ],
     "sec": "Unit 7 Let's explore my town!"
@@ -9923,8 +9923,8 @@ window.PROGRAMS = {
       "Unit 7 Test."
      ],
      [
-      "Фокус JP",
-      "/ue/ ew/u-e: few, blew, cute · стр. 41"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — повторение"
      ]
     ],
     "sec": "Unit 7 Let's explore my town!"
@@ -9953,8 +9953,8 @@ window.PROGRAMS = {
       "Genki «What do you want to do?» (I want to eat/drink/read/sleep/sing/cook/dance/stop). GMF1 Vocabulary song. Clothes chant."
      ],
      [
-      "Фокус JP",
-      "y = /ee/: jolly, funny, muddy · стр. 3"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.27: /оу/ oa·ow·o-e (тетрадь стр.75–76) — повторение"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -9983,8 +9983,8 @@ window.PROGRAMS = {
       "Present continuous. Grammar box. What's he doing?"
      ],
      [
-      "Фокус JP",
-      "Soft c: face, cycle, circus · стр. 29"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.28: /ю:/ ue·ew·u-e (тетрадь стр.77–78) — повторение"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -10013,8 +10013,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "Soft g: giant, giraffe, orange · стр. 31"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.29: /ау/ ou·ow + /ой/ oi·oy (тетрадь стр.79–82) — повторение"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -10043,8 +10043,8 @@ window.PROGRAMS = {
       "Genki «Winter Sports» (snowboarding, skiing, ice skating, ice hockey, sledging) + «What sports do you play?» → outdoor activities. He's/She's… Mime game."
      ],
      [
-      "Фокус JP",
-      "ph = /f/: elephant, dolphin, phone · стр. 27"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.30: /ё:/ er·ir·ur (тетрадь стр.83–85) — повторение"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -10073,8 +10073,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP",
-      "Мини-текст «The fish» + диктант · стр. 32"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.31: хитрые c·g·ph + air·ear·are (тетрадь стр.86–90) — повторение"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -10103,8 +10103,8 @@ window.PROGRAMS = {
       "Unit 8 Test."
      ],
      [
-      "Фокус JP",
-      "Мини-текст «The fox» + диктант · стр. 30"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 1 (тетрадь стр.7–29)"
      ]
     ],
     "sec": "Unit 8 Camping fun!"
@@ -10133,8 +10133,8 @@ window.PROGRAMS = {
       "Genki «Good Morning!» (good morning/afternoon/evening/night) + «Little Red Riding Hood» (wake up, wash my face, brush my teeth) → daily routines. GMF1 Vocabulary song."
      ],
      [
-      "Фокус JP",
-      "Мини-текст «The hen» + диктант · стр. 26"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 2 (тетрадь стр.32–51)"
      ]
     ],
     "sec": "Unit 9 Day and night"
@@ -10163,8 +10163,8 @@ window.PROGRAMS = {
       "Present simple. Grammar box. Routines survey."
      ],
      [
-      "Фокус JP",
-      "Мини-текст «The pond» + диктант · стр. 28"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 3 (тетрадь стр.53–65)"
      ]
     ],
     "sec": "Unit 9 Day and night"
@@ -10193,8 +10193,8 @@ window.PROGRAMS = {
       "Story: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "Предложения под картинки · стр. 25"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 4 (тетрадь стр.66–90)"
      ]
     ],
     "sec": "Unit 9 Day and night"
@@ -10223,8 +10223,8 @@ window.PROGRAMS = {
       "Genki «Eat! Drink! Dance!» (eat, drink, read, stop, sleep, sing, cook) → meal times. In the morning/afternoon/evening activity."
      ],
      [
-      "Фокус JP",
-      "Анаграммы + повторение · стр. 41"
+      "Фокус Phonics Hero",
+      "Phonics Hero: итоговый диктант — звуки и диграфы (Части 1–2)"
      ],
      [
       "Tricky words",
@@ -10257,8 +10257,8 @@ window.PROGRAMS = {
       "Review exercises."
      ],
      [
-      "Фокус JP",
-      "Все tricky words — чтение · Все цвета"
+      "Фокус Phonics Hero",
+      "Phonics Hero: итоговый диктант — Magic E и написания (Части 3–4)"
      ],
      [
       "Tricky words",
@@ -10291,8 +10291,8 @@ window.PROGRAMS = {
       "Unit 9 Test."
      ],
      [
-      "Фокус JP",
-      "Кроссворд: /er/ и /ar/ · стр. 46"
+      "Фокус Phonics Hero",
+      "Phonics Hero: финальное чтение на скорость — все звуки и написания"
      ]
     ],
     "sec": "Unit 9 Day and night"
@@ -10321,8 +10321,8 @@ window.PROGRAMS = {
       "Итоговый контроль: лексика, грамматика, чтение, аудирование"
      ],
      [
-      "Фокус JP",
-      "Повторение всего курса JP · —"
+      "Фокус Phonics Hero",
+      "Phonics Hero: Диплом Фоникс-героя (тетрадь стр.91)"
      ],
      [
       "Tricky words",
@@ -10355,8 +10355,8 @@ window.PROGRAMS = {
       "Итоговый устный экзамен"
      ],
      [
-      "Фокус JP",
-      "Повторение всего курса JP · —"
+      "Фокус Phonics Hero",
+      "Phonics Hero: Карта прогресса — финиш! (тетрадь стр.92)"
      ],
      [
       "Tricky words",
@@ -10389,8 +10389,8 @@ window.PROGRAMS = {
       "Педагог выбирает темы"
      ],
      [
-      "Фокус JP",
-      "Повторение всего курса JP · —"
+      "Фокус Phonics Hero",
+      "Phonics Hero: праздник чтения — любимые истории тетради"
      ],
      [
       "Tricky words",
@@ -10428,8 +10428,8 @@ window.PROGRAMS = {
       "TPR под музыку. Разучиваем команды класса. Рисуем warm-up routine."
      ],
      [
-      "Фокус JP",
-      "s, a, t, i, p, n — ввод · JP1 стр.1–6 · Tricky: the, a"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.1: s·a·t (тетрадь стр.3–4) · Tricky: the, a"
      ]
     ],
     "sec": "GENKI ENGLISH + JP Book 1 · Вводный блок · уроки 1–12 · Сентябрь–Октябрь"
@@ -10458,8 +10458,8 @@ window.PROGRAMS = {
       "Песня «What's your name?»: поём, знакомимся по кругу. Играем Rock Paper Scissors."
      ],
      [
-      "Фокус JP",
-      "s a t i p n — чтение: sat, pin · JP1 стр.7–10 · Tricky: I, is"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.2: i·p·n (тетрадь стр.5–7) · Tricky: I, is"
      ]
     ],
     "sec": "GENKI ENGLISH + JP Book 1 · Вводный блок · уроки 1–12 · Сентябрь–Октябрь"
@@ -10488,8 +10488,8 @@ window.PROGRAMS = {
       "Песня с местоимениями. Who is hungry? — рисуем и показываем."
      ],
      [
-      "Фокус JP",
-      "c/k, e, h, r, m, d — ввод · JP1 стр.11–16 · Tricky: go, no"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.3: c·k·e (тетрадь стр.8–9) · Tricky: go, no"
      ]
     ],
     "sec": "GENKI ENGLISH + JP Book 1 · Вводный блок · уроки 1–12 · Сентябрь–Октябрь"
@@ -10518,8 +10518,8 @@ window.PROGRAMS = {
       "Числа 1–12 в контексте возраста. Рисуем торт со свечами."
      ],
      [
-      "Фокус JP",
-      "c k e h r m d — чтение: hen, red · JP1 стр.17–20 · Tricky: so, he"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.4: h·r·m (тетрадь стр.10–11) · Tricky: so, he"
      ]
     ],
     "sec": "GENKI ENGLISH + JP Book 1 · Вводный блок · уроки 1–12 · Сентябрь–Октябрь"
@@ -10548,8 +10548,8 @@ window.PROGRAMS = {
       "Все цвета. Рисуем змею в любимом цвете."
      ],
      [
-      "Фокус JP",
-      "g, o, u, l, f, b — ввод · JP1 стр.21–26 · Tricky: she, we"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.5: d·g·o (тетрадь стр.12–14) · Tricky: she, we"
      ]
     ],
     "sec": "GENKI ENGLISH + JP Book 1 · Вводный блок · уроки 1–12 · Сентябрь–Октябрь"
@@ -10578,8 +10578,8 @@ window.PROGRAMS = {
       "Приветствия по времени суток. Карточки: утро / день / вечер / ночь."
      ],
      [
-      "Фокус JP",
-      "g o u l f b — чтение: got, fun · JP1 стр.27–30 · Tricky: me, be"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.6: u·l·f (тетрадь стр.15–16) · Tricky: me, be"
      ]
     ],
     "sec": "GENKI ENGLISH + JP Book 1 · Вводный блок · уроки 1–12 · Сентябрь–Октябрь"
@@ -10608,8 +10608,8 @@ window.PROGRAMS = {
       "12 животных + Yes/No. Опрос класса."
      ],
      [
-      "Фокус JP",
-      "j, v, w, x — ввод + чтение · JP1 стр.31–34 · Tricky: my, you"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.7: b·j·v (тетрадь стр.17–19) · Tricky: my, you"
      ]
     ],
     "sec": "GENKI ENGLISH + JP Book 1 · Вводный блок · уроки 1–12 · Сентябрь–Октябрь"
@@ -10638,8 +10638,8 @@ window.PROGRAMS = {
       "8 овощей. I like / I don't like. Рисуем vegetable basket."
      ],
      [
-      "Фокус JP",
-      "y, z, qu — ввод + чтение · JP1 стр.35–38 · Tricky: your, his"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.8: w·x·y (тетрадь стр.20–22) · Tricky: your, his"
      ]
     ],
     "sec": "GENKI ENGLISH + JP Book 1 · Вводный блок · уроки 1–12 · Сентябрь–Октябрь"
@@ -10668,8 +10668,8 @@ window.PROGRAMS = {
       "Животные + звуки. I have a… Три контекста: дом / ферма / зоопарк."
      ],
      [
-      "Фокус JP",
-      "26 звуков: повторение + A–M · JP1 стр.39–42 · Tricky: has, into"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.9: z·qu (тетрадь стр.23–25) · Tricky: has, into"
      ]
     ],
     "sec": "GENKI ENGLISH + JP Book 1 · Вводный блок · уроки 1–12 · Сентябрь–Октябрь"
@@ -10698,8 +10698,8 @@ window.PROGRAMS = {
       "8 действий + can. Draw your own superhero! I can…"
      ],
      [
-      "Фокус JP",
-      "26 звуков: повторение + N–Z · JP1 стр.43–46 · Tricky: by, one"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.10: заглавные A–Z (тетрадь стр.26–27) · Tricky: by, one"
      ]
     ],
     "sec": "GENKI ENGLISH + JP Book 1 · Вводный блок · уроки 1–12 · Сентябрь–Октябрь"
@@ -10728,8 +10728,8 @@ window.PROGRAMS = {
       "Части лица + тело с числами 2–9. Рисуем монстра."
      ],
      [
-      "Фокус JP",
-      "CVC слова — парные упражнения · JP1 стр.47–50 · Tricky: come, some"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.11: большое чтение (тетрадь стр.28–29) · Tricky: come, some"
      ]
     ],
     "sec": "GENKI ENGLISH + JP Book 1 · Вводный блок · уроки 1–12 · Сентябрь–Октябрь"
@@ -10758,8 +10758,8 @@ window.PROGRAMS = {
       "Разыгрываем диалоги. Финальный диктант JP Book 1 — все 26 звуков."
      ],
      [
-      "Фокус JP",
-      "Финальный диктант JP Book 1 · JP1 стр.51–54 · Tricky: said, here"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.12: итоговый + диплом Части 1 (тетрадь стр.30–31) · Tricky: said, here"
      ]
     ],
     "sec": "GENKI ENGLISH + JP Book 1 · Вводный блок · уроки 1–12 · Сентябрь–Октябрь"
@@ -10788,8 +10788,8 @@ window.PROGRAMS = {
       "Find and say vocabulary from Level 1. Sing «We've got our school bags». Act out dialogue."
      ],
      [
-      "Фокус JP",
-      "ch: chip, chop, much, lunch · JP2 стр.12 · Tricky: come, some"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.13: диграфы ai·oa·ie (тетрадь стр.33–35) — (a) первое знакомство · Tricky: come, some"
      ]
     ],
     "sec": "STARTER — Let's go back to school! · уроки 13–15 · Октябрь"
@@ -10818,8 +10818,8 @@ window.PROGRAMS = {
       "School subjects chant. Listen and repeat. Say your favourite subject."
      ],
      [
-      "Фокус JP",
-      "sh: ship, shop, fish, dish · JP2 стр.12 · Tricky: little, down"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.13: диграфы ai·oa·ie (тетрадь стр.33–35) — (b) закрепление · Tricky: little, down"
      ]
     ],
     "sec": "STARTER — Let's go back to school! · уроки 13–15 · Октябрь"
@@ -10848,8 +10848,8 @@ window.PROGRAMS = {
       "Story «The storm»: listen, read, act out. Weather language in context."
      ],
      [
-      "Фокус JP",
-      "th мягкий/твёрдый: this, three · JP2 стр.12 · Tricky: what, when"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.14: диграфы ee·or (тетрадь стр.36–38) — (a) первое знакомство · Tricky: what, when"
      ]
     ],
     "sec": "STARTER — Let's go back to school! · уроки 13–15 · Октябрь"
@@ -10878,8 +10878,8 @@ window.PROGRAMS = {
       "Vocabulary song. Stickers. Chant. Spelling activity."
      ],
      [
-      "Фокус JP",
-      "ng: ring, long, song · JP2 стр.14 · Tricky: why, where"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.14: диграфы ee·or (тетрадь стр.36–38) — (b) закрепление · Tricky: why, where"
      ]
     ],
     "sec": "UNIT 1 — Move your body · уроки 16–21 · Октябрь–Ноябрь"
@@ -10908,8 +10908,8 @@ window.PROGRAMS = {
       "Dialogue. Grammar box: I go / Do you…?"
      ],
      [
-      "Фокус JP",
-      "Короткие гласные a/e — различение · JP2 стр.16 · Tricky: who, which"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.15: диграфы ng·oo (тетрадь стр.39–42) — (a) первое знакомство · Tricky: who, which"
      ]
     ],
     "sec": "UNIT 1 — Move your body · уроки 16–21 · Октябрь–Ноябрь"
@@ -10938,8 +10938,8 @@ window.PROGRAMS = {
       "Story «The very busy week»: read, listen, act out."
      ],
      [
-      "Фокус JP",
-      "Короткие гласные i/o/u · JP2 стр.18 · Tricky: their, there"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.15: диграфы ng·oo (тетрадь стр.39–42) — (b) закрепление · Tricky: their, there"
      ]
     ],
     "sec": "UNIT 1 — Move your body · уроки 16–21 · Октябрь–Ноябрь"
@@ -10968,8 +10968,8 @@ window.PROGRAMS = {
       "Vocabulary: actions. He/She throws/catches. Listen and match."
      ],
      [
-      "Фокус JP",
-      "ck: kick, back, clock · JP2 стр.20 · Tricky: people, called"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.16: диграфы ch·sh·th (тетрадь стр.43–45) — (a) первое знакомство · Tricky: people, called"
      ]
     ],
     "sec": "UNIT 1 — Move your body · уроки 16–21 · Октябрь–Ноябрь"
@@ -10998,8 +10998,8 @@ window.PROGRAMS = {
       "Review exercises: vocabulary bank, grammar, listening."
      ],
      [
-      "Фокус JP",
-      "Двойные: ll, ff, ss, zz · JP2 стр.22 · Tricky: looked, asked"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.16: диграфы ch·sh·th (тетрадь стр.43–45) — (b) закрепление · Tricky: looked, asked"
      ]
     ],
     "sec": "UNIT 1 — Move your body · уроки 16–21 · Октябрь–Ноябрь"
@@ -11028,8 +11028,8 @@ window.PROGRAMS = {
       "Unit 1 Test."
      ],
      [
-      "Фокус JP",
-      "Magic e: a-e (cake, name, late) · JP2 стр.24 · Tricky: water, away"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.17: диграфы ou·oi (тетрадь стр.46–48) — (a) первое знакомство · Tricky: water, away"
      ]
     ],
     "sec": "UNIT 1 — Move your body · уроки 16–21 · Октябрь–Ноябрь"
@@ -11058,8 +11058,8 @@ window.PROGRAMS = {
       "Vocabulary song. Stickers. Food chant. Supermarket role-play intro."
      ],
      [
-      "Фокус JP",
-      "Magic e: e-e (Pete, these) · JP2 стр.26 · Tricky: again, play"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.17: диграфы ou·oi (тетрадь стр.46–48) — (b) закрепление · Tricky: again, play"
      ]
     ],
     "sec": "UNIT 2 — Let's go shopping! · уроки 22–27 · Ноябрь"
@@ -11088,8 +11088,8 @@ window.PROGRAMS = {
       "Dialogue: shopping. Grammar box: Can I have…? Drill."
      ],
      [
-      "Фокус JP",
-      "Magic e: i-e (kite, bike, smile) · JP2 стр.28 · Tricky: found, still"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.18: диграфы ue·er·ar (тетрадь стр.49–51) — (a) первое знакомство · Tricky: found, still"
      ]
     ],
     "sec": "UNIT 2 — Let's go shopping! · уроки 22–27 · Ноябрь"
@@ -11118,8 +11118,8 @@ window.PROGRAMS = {
       "Story «The magic supermarket»: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "Magic e: o-e (bone, rope, home) · JP2 стр.30 · Tricky: should, around"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.18: диграфы ue·er·ar (тетрадь стр.49–51) — (b) закрепление · Tricky: should, around"
      ]
     ],
     "sec": "UNIT 2 — Let's go shopping! · уроки 22–27 · Ноябрь"
@@ -11148,8 +11148,8 @@ window.PROGRAMS = {
       "Numbers 10–50. Prices: How much is/are…? Market role-play."
      ],
      [
-      "Фокус JP",
-      "Magic e: u-e (cube, tune, cute) · JP2 стр.32 · Tricky: thought, never"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.19: Magic E: краткий/долгий гласный (тетрадь стр.53–54) — (a) первое знакомство · Tricky: thought, never"
      ]
     ],
     "sec": "UNIT 2 — Let's go shopping! · уроки 22–27 · Ноябрь"
@@ -11178,8 +11178,8 @@ window.PROGRAMS = {
       "Review exercises: vocabulary bank, grammar, listening."
      ],
      [
-      "Фокус JP",
-      "/ai/: ai (rain, tail, snail) · JP2 стр.34 · Tricky: place, house"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.19: Magic E: краткий/долгий гласный (тетрадь стр.53–54) — (b) закрепление · Tricky: place, house"
      ]
     ],
     "sec": "UNIT 2 — Let's go shopping! · уроки 22–27 · Ноябрь"
@@ -11208,8 +11208,8 @@ window.PROGRAMS = {
       "Unit 2 Test."
      ],
      [
-      "Фокус JP",
-      "/ai/: ay (play, day, stay) · JP2 стр.36 · Tricky: found, still"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.20: Magic E: a-e (тетрадь стр.55–57) — (a) первое знакомство · Tricky: found, still"
      ]
     ],
     "sec": "UNIT 2 — Let's go shopping! · уроки 22–27 · Ноябрь"
@@ -11238,8 +11238,8 @@ window.PROGRAMS = {
       "Vocabulary song. Stickers. Zoo chant."
      ],
      [
-      "Фокус JP",
-      "/ee/: ee (tree, teeth, green) · JP2 стр.38 · Tricky: different, between"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.20: Magic E: a-e (тетрадь стр.55–57) — (b) закрепление · Tricky: different, between"
      ]
     ],
     "sec": "UNIT 3 — At the zoo · уроки 28–33 · Ноябрь–Декабрь"
@@ -11268,8 +11268,8 @@ window.PROGRAMS = {
       "Dialogue at the zoo. Grammar box: Has it got…? Drill."
      ],
      [
-      "Фокус JP",
-      "/ee/: ea (leaf, meat, beach) · JP2 стр.40 · Tricky: children, every"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.21: Magic E: i-e (тетрадь стр.58–60) — (a) первое знакомство · Tricky: children, every"
      ]
     ],
     "sec": "UNIT 3 — At the zoo · уроки 28–33 · Ноябрь–Декабрь"
@@ -11298,8 +11298,8 @@ window.PROGRAMS = {
       "Story «A visit to the zoo»: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "/ie/: ie/i-e (pie, kite, sky) · JP2 стр.42 · Tricky: began, almost"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.21: Magic E: i-e (тетрадь стр.58–60) — (b) закрепление · Tricky: began, almost"
      ]
     ],
     "sec": "UNIT 3 — At the zoo · уроки 28–33 · Ноябрь–Декабрь"
@@ -11328,8 +11328,8 @@ window.PROGRAMS = {
       "Animal body parts. Sorting activity."
      ],
      [
-      "Фокус JP",
-      "/ie/: igh (night, light, right) · JP2 стр.44 · Tricky: above, along"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.22: Magic E: o-e·u-e (тетрадь стр.61–63) — (a) первое знакомство · Tricky: above, along"
      ]
     ],
     "sec": "UNIT 3 — At the zoo · уроки 28–33 · Ноябрь–Декабрь"
@@ -11358,8 +11358,8 @@ window.PROGRAMS = {
       "Review exercises: vocabulary bank, grammar, listening."
      ],
      [
-      "Фокус JP",
-      "/oa/: oa (coat, toad, road) · JP2 стр.46 · Tricky: below, eyes"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.22: Magic E: o-e·u-e (тетрадь стр.61–63) — (b) закрепление · Tricky: below, eyes"
      ]
     ],
     "sec": "UNIT 3 — At the zoo · уроки 28–33 · Ноябрь–Декабрь"
@@ -11388,8 +11388,8 @@ window.PROGRAMS = {
       "Unit 3 Test."
      ],
      [
-      "Фокус JP",
-      "/oa/: ow/o-e (grow, bone, home) · JP2 стр.48 · Tricky: never, under"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.23: Magic E: повторение (тетрадь стр.64–65) — (a) первое знакомство · Tricky: never, under"
      ]
     ],
     "sec": "UNIT 3 — At the zoo · уроки 28–33 · Ноябрь–Декабрь"
@@ -11418,8 +11418,8 @@ window.PROGRAMS = {
       "Vocabulary song. Stickers. Nature trail chant."
      ],
      [
-      "Фокус JP",
-      "/oo/ длинный: oo (moon, food) · JP2 стр.50 · Tricky: might, across"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.23: Magic E: повторение (тетрадь стр.64–65) — (b) закрепление · Tricky: might, across"
      ]
     ],
     "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
@@ -11448,8 +11448,8 @@ window.PROGRAMS = {
       "Dialogue on trail. Grammar box."
      ],
      [
-      "Фокус JP",
-      "/oo/ короткий: oo (book, cook) · JP2 стр.52 · Tricky: second, hard"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — (a) первое знакомство · Tricky: second, hard"
      ]
     ],
     "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
@@ -11478,8 +11478,8 @@ window.PROGRAMS = {
       "Story «The adventure»: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "/or/: or (storm, fork, sort) · JP2 стр.54 · Tricky: open, seem"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — (b) закрепление · Tricky: open, seem"
      ]
     ],
     "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
@@ -11508,8 +11508,8 @@ window.PROGRAMS = {
       "Prepositions of movement. Mime game."
      ],
      [
-      "Фокус JP",
-      "/er/: er (sister, fern, her) · JP2 стр.56 · Tricky: together, until"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — (a) первое знакомство · Tricky: together, until"
      ]
     ],
     "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
@@ -11538,8 +11538,8 @@ window.PROGRAMS = {
       "Review exercises: vocabulary bank, grammar, listening."
      ],
      [
-      "Фокус JP",
-      "/er/: ir (bird, girl, first) · JP2 стр.58 · Tricky: something, often"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — (b) закрепление · Tricky: something, often"
      ]
     ],
     "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
@@ -11568,8 +11568,8 @@ window.PROGRAMS = {
       "Unit 4 Test."
      ],
      [
-      "Фокус JP",
-      "/er/: ur (purple, turtle, curl) · JP2 стр.60 · Tricky: young, side"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — (a) первое знакомство · Tricky: young, side"
      ]
     ],
     "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
@@ -11598,8 +11598,8 @@ window.PROGRAMS = {
       "Vocabulary song. Stickers. Winter actions chant."
      ],
      [
-      "Фокус JP",
-      "/ar/: ar (shark, farm, star) · JP2 стр.62 · Tricky: walk, plant"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — (b) закрепление · Tricky: walk, plant"
      ]
     ],
     "sec": "UNIT 5 — The frozen lake · уроки 40–45 · Февраль"
@@ -11628,8 +11628,8 @@ window.PROGRAMS = {
       "Dialogue at frozen lake. Grammar: We're… / Are you…?"
      ],
      [
-      "Фокус JP",
-      "/air/: air (chair, stairs, fair) · JP2 стр.64 · Tricky: small, high"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.27: /оу/ oa·ow·o-e (тетрадь стр.75–76) — (a) первое знакомство · Tricky: small, high"
      ]
     ],
     "sec": "UNIT 5 — The frozen lake · уроки 40–45 · Февраль"
@@ -11658,8 +11658,8 @@ window.PROGRAMS = {
       "Story «The ice show»: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "/air/: ear/are (bear, care, stare) · JP2 стр.66 · Tricky: every, near"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.27: /оу/ oa·ow·o-e (тетрадь стр.75–76) — (b) закрепление · Tricky: every, near"
      ]
     ],
     "sec": "UNIT 5 — The frozen lake · уроки 40–45 · Февраль"
@@ -11688,8 +11688,8 @@ window.PROGRAMS = {
       "Adjectives. Description game."
      ],
      [
-      "Фокус JP",
-      "/ou/: ou (found, loud, cloud) · JP2 стр.68 · Tricky: light, country"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.28: /ю:/ ue·ew·u-e (тетрадь стр.77–78) — (a) первое знакомство · Tricky: light, country"
      ]
     ],
     "sec": "UNIT 5 — The frozen lake · уроки 40–45 · Февраль"
@@ -11718,8 +11718,8 @@ window.PROGRAMS = {
       "Review exercises: vocabulary bank, grammar, listening."
      ],
      [
-      "Фокус JP",
-      "/ou/: ow (brown, cow, down) · JP2 стр.70 · Tricky: earth, eyes"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.28: /ю:/ ue·ew·u-e (тетрадь стр.77–78) — (b) закрепление · Tricky: earth, eyes"
      ]
     ],
     "sec": "UNIT 5 — The frozen lake · уроки 40–45 · Февраль"
@@ -11748,8 +11748,8 @@ window.PROGRAMS = {
       "Unit 5 Test."
      ],
      [
-      "Фокус JP",
-      "/oi/: oi/oy (coin, boy, toy) · JP2 стр.72 · Tricky: white, head"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.29: /ау/ ou·ow + /ой/ oi·oy (тетрадь стр.79–82) — (a) первое знакомство · Tricky: white, head"
      ]
     ],
     "sec": "UNIT 5 — The frozen lake · уроки 40–45 · Февраль"
@@ -11778,8 +11778,8 @@ window.PROGRAMS = {
       "Vocabulary song. Stickers. Seasons chant."
      ],
      [
-      "Фокус JP",
-      "/ue/: ue/ew (blue, few, stew) · JP2 стр.74 · Tricky: tree, magic"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.29: /ау/ ou·ow + /ой/ oi·oy (тетрадь стр.79–82) — (b) закрепление · Tricky: tree, magic"
      ]
     ],
     "sec": "UNIT 6 — All year round · уроки 46–51 · Февраль–Март"
@@ -11808,8 +11808,8 @@ window.PROGRAMS = {
       "Dialogue about seasons. Grammar box."
      ],
      [
-      "Фокус JP",
-      "y=/ee/ (baby, happy, funny) · JP2 стр.76 · Tricky: don't, old"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.30: /ё:/ er·ir·ur (тетрадь стр.83–85) — (a) первое знакомство · Tricky: don't, old"
      ]
     ],
     "sec": "UNIT 6 — All year round · уроки 46–51 · Февраль–Март"
@@ -11838,8 +11838,8 @@ window.PROGRAMS = {
       "Story «The four seasons»: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "Soft c: face, cycle, pencil · JP2 стр.78 · Tricky: place, large"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.30: /ё:/ er·ir·ur (тетрадь стр.83–85) — (b) закрепление · Tricky: place, large"
      ]
     ],
     "sec": "UNIT 6 — All year round · уроки 46–51 · Февраль–Март"
@@ -11868,8 +11868,8 @@ window.PROGRAMS = {
       "Ordinal numbers 1st–31st. Birthdays survey."
      ],
      [
-      "Фокус JP",
-      "Soft g: giant, giraffe, page · JP2 стр.80 · Tricky: plant, below"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.31: хитрые c·g·ph + air·ear·are (тетрадь стр.86–90) — (a) первое знакомство · Tricky: plant, below"
      ]
     ],
     "sec": "UNIT 6 — All year round · уроки 46–51 · Февраль–Март"
@@ -11898,8 +11898,8 @@ window.PROGRAMS = {
       "Review exercises: vocabulary bank, grammar, listening."
      ],
      [
-      "Фокус JP",
-      "ph=/f/: phone, photo, dolphin · JP2 стр.82 · Tricky: round, food"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.31: хитрые c·g·ph + air·ear·are (тетрадь стр.86–90) — (b) закрепление · Tricky: round, food"
      ]
     ],
     "sec": "UNIT 6 — All year round · уроки 46–51 · Февраль–Март"
@@ -11928,8 +11928,8 @@ window.PROGRAMS = {
       "Unit 6 Test."
      ],
      [
-      "Фокус JP",
-      "Мини-тексты: чтение предложений · JP2 стр.84 · Tricky: friend, until"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 2 — диграфы ур.13–15, перечитываем истории (тетрадь стр.33–42) · Tricky: friend, until"
      ]
     ],
     "sec": "UNIT 6 — All year round · уроки 46–51 · Февраль–Март"
@@ -11958,8 +11958,8 @@ window.PROGRAMS = {
       "Vocabulary song. Stickers. House chant."
      ],
      [
-      "Фокус JP",
-      "Анаграммы и словообразование · JP2 стр.86 · Tricky: only, earth"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 2 — диграфы ур.16–18, истории + диктант (тетрадь стр.43–51) · Tricky: only, earth"
      ]
     ],
     "sec": "UNIT 7 — My house · уроки 52–57 · Март"
@@ -11988,8 +11988,8 @@ window.PROGRAMS = {
       "Dialogue about house. Grammar box."
      ],
      [
-      "Фокус JP",
-      "Чтение: The fish (мини-текст) · JP2 стр.88 · Tricky: young, eyes"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 3 — Magic E ур.19–21 (тетрадь стр.53–60) · Tricky: young, eyes"
      ]
     ],
     "sec": "UNIT 7 — My house · уроки 52–57 · Март"
@@ -12018,8 +12018,8 @@ window.PROGRAMS = {
       "Story «The haunted house»: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "Чтение: The fox (мини-текст) · JP2 стр.90 · Tricky: grow, above"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 3 — Magic E ур.22–23 + диктант (тетрадь стр.61–65) · Tricky: grow, above"
      ]
     ],
     "sec": "UNIT 7 — My house · уроки 52–57 · Март"
@@ -12048,8 +12048,8 @@ window.PROGRAMS = {
       "Possessive pronouns. Whose is this? Guessing game."
      ],
      [
-      "Фокус JP",
-      "Чтение: The cat (мини-текст) · JP2 стр.92 · Tricky: often, right"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — повторение · Tricky: often, right"
      ]
     ],
     "sec": "UNIT 7 — My house · уроки 52–57 · Март"
@@ -12078,8 +12078,8 @@ window.PROGRAMS = {
       "Review exercises: vocabulary bank, grammar, listening."
      ],
      [
-      "Фокус JP",
-      "Повторение JP Book 2 гр.1–4 · JP2 стр.94 · Tricky: world, never"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — повторение · Tricky: world, never"
      ]
     ],
     "sec": "UNIT 7 — My house · уроки 52–57 · Март"
@@ -12108,8 +12108,8 @@ window.PROGRAMS = {
       "Unit 7 Test."
      ],
      [
-      "Фокус JP",
-      "Повторение JP Book 2 гр.5–8 · JP2 стр.96 · Tricky: those, always"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — повторение · Tricky: those, always"
      ]
     ],
     "sec": "UNIT 7 — My house · уроки 52–57 · Март"
@@ -12138,8 +12138,8 @@ window.PROGRAMS = {
       "Vocabulary song. Stickers. Town chant."
      ],
      [
-      "Фокус JP",
-      "Чтение рассказов — уровень 1 · JP2 стр.98 · Tricky: which, where"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.27: /оу/ oa·ow·o-e (тетрадь стр.75–76) — повторение · Tricky: which, where"
      ]
     ],
     "sec": "UNIT 8 — All around the town · уроки 58–63 · Апрель"
@@ -12168,8 +12168,8 @@ window.PROGRAMS = {
       "Dialogue in town. Grammar box."
      ],
      [
-      "Фокус JP",
-      "Чтение рассказов — уровень 1 · JP2 стр.100 · Tricky: still, small"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.28: /ю:/ ue·ew·u-e (тетрадь стр.77–78) — повторение · Tricky: still, small"
      ]
     ],
     "sec": "UNIT 8 — All around the town · уроки 58–63 · Апрель"
@@ -12198,8 +12198,8 @@ window.PROGRAMS = {
       "Story «The emergency»: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "Чтение рассказов — уровень 2 · JP2 стр.102 · Tricky: might, light"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.29: /ау/ ou·ow + /ой/ oi·oy (тетрадь стр.79–82) — повторение · Tricky: might, light"
      ]
     ],
     "sec": "UNIT 8 — All around the town · уроки 58–63 · Апрель"
@@ -12228,8 +12228,8 @@ window.PROGRAMS = {
       "Directions. How do I get to…? Map activity."
      ],
      [
-      "Фокус JP",
-      "Чтение рассказов — уровень 2 · JP2 стр.104 · Tricky: found, place"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.30: /ё:/ er·ir·ur (тетрадь стр.83–85) — повторение · Tricky: found, place"
      ]
     ],
     "sec": "UNIT 8 — All around the town · уроки 58–63 · Апрель"
@@ -12258,8 +12258,8 @@ window.PROGRAMS = {
       "Review exercises: vocabulary bank, grammar, listening."
      ],
      [
-      "Фокус JP",
-      "Чтение рассказов — уровень 3 · JP2 стр.106 · Tricky: every, again"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.31: хитрые c·g·ph + air·ear·are (тетрадь стр.86–90) — повторение · Tricky: every, again"
      ]
     ],
     "sec": "UNIT 8 — All around the town · уроки 58–63 · Апрель"
@@ -12288,8 +12288,8 @@ window.PROGRAMS = {
       "Unit 8 Test."
      ],
      [
-      "Фокус JP",
-      "Финальное повторение JP Book 2 · JP2 стр.108 · Tricky: people, water"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 1 (тетрадь стр.7–29) · Tricky: people, water"
      ]
     ],
     "sec": "UNIT 8 — All around the town · уроки 58–63 · Апрель"
@@ -12318,8 +12318,8 @@ window.PROGRAMS = {
       "Vocabulary song. Stickers. Holidays chant."
      ],
      [
-      "Фокус JP",
-      "Свободное чтение — короткий текст · JP2 стр.110 · Tricky: thought, second"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 2 (тетрадь стр.32–51) · Tricky: thought, second"
      ]
     ],
     "sec": "UNIT 9 — Holiday fun · уроки 64–69 · Апрель–Май"
@@ -12348,8 +12348,8 @@ window.PROGRAMS = {
       "Dialogue about holidays. Grammar box."
      ],
      [
-      "Фокус JP",
-      "Свободное чтение — короткий текст · JP2 стр.112 · Tricky: together, young"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 3 (тетрадь стр.53–65) · Tricky: together, young"
      ]
     ],
     "sec": "UNIT 9 — Holiday fun · уроки 64–69 · Апрель–Май"
@@ -12378,8 +12378,8 @@ window.PROGRAMS = {
       "Story «The chocolate factory»: listen, read, act out."
      ],
      [
-      "Фокус JP",
-      "Диктант: слова JP Book 2 · JP2 стр.114 · Tricky: above, below"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 4 (тетрадь стр.66–90) · Tricky: above, below"
      ]
     ],
     "sec": "UNIT 9 — Holiday fun · уроки 64–69 · Апрель–Май"
@@ -12408,8 +12408,8 @@ window.PROGRAMS = {
       "Irregular plural nouns. Sorting game."
      ],
      [
-      "Фокус JP",
-      "Диктант: предложения · JP2 стр.116 · Tricky: something, never"
+      "Фокус Phonics Hero",
+      "Phonics Hero: итоговый диктант — звуки и диграфы (Части 1–2) · Tricky: something, never"
      ]
     ],
     "sec": "UNIT 9 — Holiday fun · уроки 64–69 · Апрель–Май"
@@ -12438,8 +12438,8 @@ window.PROGRAMS = {
       "Review exercises: vocabulary bank, grammar, listening."
      ],
      [
-      "Фокус JP",
-      "Итоговое чтение + Speaking · JP2 стр.118 · Tricky: always, often"
+      "Фокус Phonics Hero",
+      "Phonics Hero: итоговый диктант — Magic E и написания (Части 3–4) · Tricky: always, often"
      ]
     ],
     "sec": "UNIT 9 — Holiday fun · уроки 64–69 · Апрель–Май"
@@ -12468,8 +12468,8 @@ window.PROGRAMS = {
       "Unit 9 Test."
      ],
      [
-      "Фокус JP",
-      "JP Book 2 — финальный диктант · JP2 стр.120 · Tricky: world, earth"
+      "Фокус Phonics Hero",
+      "Phonics Hero: финальное чтение на скорость — все звуки и написания · Tricky: world, earth"
      ]
     ],
     "sec": "UNIT 9 — Holiday fun · уроки 64–69 · Апрель–Май"
@@ -12496,6 +12496,10 @@ window.PROGRAMS = {
      [
       "Виды деятельности",
       "Итоговый контроль: лексика, грамматика, чтение, аудирование."
+     ],
+     [
+      "Фокус Phonics Hero",
+      "Phonics Hero: Диплом Фоникс-героя (тетрадь стр.91)"
      ]
     ],
     "sec": "FINAL TEST · SPEAKING EXAM · РЕЗЕРВ · уроки 70–72 · Май"
@@ -12522,6 +12526,10 @@ window.PROGRAMS = {
      [
       "Виды деятельности",
       "Итоговый устный экзамен: диалог, описание, вопрос-ответ."
+     ],
+     [
+      "Фокус Phonics Hero",
+      "Phonics Hero: Карта прогресса — финиш! (тетрадь стр.92)"
      ]
     ],
     "sec": "FINAL TEST · SPEAKING EXAM · РЕЗЕРВ · уроки 70–72 · Май"
@@ -12544,6 +12552,10 @@ window.PROGRAMS = {
      [
       "Виды деятельности",
       "Резерв: повторение, проекты или дополнительная практика."
+     ],
+     [
+      "Фокус Phonics Hero",
+      "Phonics Hero: праздник чтения — любимые истории тетради"
      ]
     ],
     "sec": "FINAL TEST · SPEAKING EXAM · РЕЗЕРВ · уроки 70–72 · Май"
@@ -26148,8 +26160,8 @@ window.PROGRAMS = {
       "Listen, point and repeat. Big Wheel stickers. Memory game. Ввод лексики юнита."
      ],
      [
-      "Фокус JP Book 2",
-      "Звуки s a t i p n → S A T I P N · стр. 2"
+      "Фокус Phonics Hero",
+      "Повтор звуков (PH ур.1–3): s·a·t·i·p·n·c·k·e — speed reading (тетрадь стр.3–9)"
      ],
      [
       "Tricky words",
@@ -26182,8 +26194,8 @@ window.PROGRAMS = {
       "Listen and find. Song. Ask and say. Речевые структуры в контексте."
      ],
      [
-      "Фокус JP Book 2",
-      "Звуки c k e h r m d → C K E H R M D · стр. 4"
+      "Фокус Phonics Hero",
+      "Повтор звуков (PH ур.4–6): h·r·m·d·g·o·u·l·f — speed reading (тетрадь стр.10–16)"
      ],
      [
       "Tricky words",
@@ -26216,8 +26228,8 @@ window.PROGRAMS = {
       "Story: Big Wheel — знакомство с семьёй Mimi и персонажами"
      ],
      [
-      "Фокус JP Book 2",
-      "Звуки g o u l f b → G O U L F B · стр. 6"
+      "Фокус Phonics Hero",
+      "Повтор звуков (PH ур.7–9): b·j·v·w·x·y·z·qu — speed reading (тетрадь стр.17–25)"
      ],
      [
       "Tricky words",
@@ -26250,8 +26262,8 @@ window.PROGRAMS = {
       "Story Song: Big Wheel song — числа и цвета на колесе"
      ],
      [
-      "Фокус JP Book 2",
-      "Звуки j v w x y z → J V W X Y Z · стр. 8"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.10: заглавные A–Z (тетрадь стр.26–27)"
      ],
      [
       "Tricky words",
@@ -26284,8 +26296,8 @@ window.PROGRAMS = {
       "Speaking: Hello, how are you? / Life skills: вежливые приветствия"
      ],
      [
-      "Фокус JP Book 2",
-      "qu + повторение 26 звуков · стр. 10"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.11: большое чтение (тетрадь стр.28–29) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -26318,8 +26330,8 @@ window.PROGRAMS = {
       "Values: being friendly · Content: colours in the world · Culture: greetings around the world"
      ],
      [
-      "Фокус JP Book 2",
-      "Чтение CVC слов (все 26 звуков) · стр. 2-6"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.11: большое чтение (тетрадь стр.28–29) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -26352,8 +26364,8 @@ window.PROGRAMS = {
       "Review: numbers 1–6, colours, greetings, family — I can… самооценка"
      ],
      [
-      "Фокус JP Book 2",
-      "Чтение CCVC и CVCC: stop, film, hand · стр. 14"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.12: итоговый + диплом Части 1 (тетрадь стр.30–31) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -26386,8 +26398,8 @@ window.PROGRAMS = {
       "Project: My favourite number — рисунок и презентация"
      ],
      [
-      "Фокус JP Book 2",
-      "Диктант: 26 звуков + заглавные буквы · стр. 34"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.12: итоговый + диплом Части 1 (тетрадь стр.30–31) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -26420,8 +26432,8 @@ window.PROGRAMS = {
       "Listen, point and repeat. Big Wheel stickers. Memory game. Ввод лексики юнита."
      ],
      [
-      "Фокус JP Book 2",
-      "ch: chip, chop, much, lunch · стр. 12"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.13: диграфы ai·oa·ie (тетрадь стр.33–35) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -26454,8 +26466,8 @@ window.PROGRAMS = {
       "Listen and find. Song. Ask and say. Речевые структуры в контексте."
      ],
      [
-      "Фокус JP Book 2",
-      "sh: ship, shop, fish, dish · стр. 12"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.13: диграфы ai·oa·ie (тетрадь стр.33–35) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -26488,8 +26500,8 @@ window.PROGRAMS = {
       "Story «A new friend» — Mimi знакомится с новым другом в школе"
      ],
      [
-      "Фокус JP Book 2",
-      "th мягкий: this, that, with, them · стр. 12"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.14: диграфы ee·or (тетрадь стр.36–38) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -26522,8 +26534,8 @@ window.PROGRAMS = {
       "Story Song «Katy Kangaroo» — действия в школе через песню"
      ],
      [
-      "Фокус JP Book 2",
-      "th твёрдый: three, think, moth, bath · стр. 12"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.14: диграфы ee·or (тетрадь стр.36–38) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -26556,8 +26568,8 @@ window.PROGRAMS = {
       "Speaking: Do you want to (paint)? / Life skills: просить разрешения"
      ],
      [
-      "Фокус JP Book 2",
-      "ng: ring, sing, long, strong · стр. 36"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.15: диграфы ng·oo (тетрадь стр.39–42) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -26590,8 +26602,8 @@ window.PROGRAMS = {
       "Values: being kind · Content: exercise at school · Culture: Go in and out the window"
      ],
      [
-      "Фокус JP Book 2",
-      "Повт. ch sh th ng — диктант · стр. 36"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.15: диграфы ng·oo (тетрадь стр.39–42) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -26624,8 +26636,8 @@ window.PROGRAMS = {
       "Review: school activities, Do you want to…? — I can… самооценка"
      ],
      [
-      "Фокус JP Book 2",
-      "Короткие гласные a e i o u — различение · стр. 5"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.16: диграфы ch·sh·th (тетрадь стр.43–45) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -26658,8 +26670,8 @@ window.PROGRAMS = {
       "Project: Our favourite school activities — класс-чарт"
      ],
      [
-      "Фокус JP Book 2",
-      "Короткие гласные — чтение CVC слов · стр. 7"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.16: диграфы ch·sh·th (тетрадь стр.43–45) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -26692,8 +26704,8 @@ window.PROGRAMS = {
       "Listen, point and repeat. Big Wheel stickers. Memory game. Ввод лексики юнита."
      ],
      [
-      "Фокус JP Book 2",
-      "Короткие гласные — письмо слов · стр. 7"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.17: диграфы ou·oi (тетрадь стр.46–48) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -26726,8 +26738,8 @@ window.PROGRAMS = {
       "Listen and find. Song. Ask and say. Речевые структуры в контексте."
      ],
      [
-      "Фокус JP Book 2",
-      "ck vs k: правило (kick, clock, back) · стр. 7"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.17: диграфы ou·oi (тетрадь стр.46–48) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -26760,8 +26772,8 @@ window.PROGRAMS = {
       "Story «Mimi's kite» — Mimi идёт в парк с воздушным змеем"
      ],
      [
-      "Фокус JP Book 2",
-      "Двойные согласные: ll ff ss zz · стр. 9"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.18: диграфы ue·er·ar (тетрадь стр.49–51) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -26794,8 +26806,8 @@ window.PROGRAMS = {
       "Story Song — парк и природа через песню"
      ],
      [
-      "Фокус JP Book 2",
-      "Двойные — выбор написания · стр. 9"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.18: диграфы ue·er·ar (тетрадь стр.49–51) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -26828,8 +26840,8 @@ window.PROGRAMS = {
       "Speaking: What's in the park? / Life skills: описывать место"
      ],
      [
-      "Фокус JP Book 2",
-      "Чтение предложений (короткие гласные) · стр. 11"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.19: Magic E: краткий/долгий гласный (тетрадь стр.53–54) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -26862,8 +26874,8 @@ window.PROGRAMS = {
       "Values: looking after nature · Content: plants (roots, seed, stem) · Culture: parks around the world"
      ],
      [
-      "Фокус JP Book 2",
-      "Диктант: короткие гласные + ch sh th ng · стр. 29"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.19: Magic E: краткий/долгий гласный (тетрадь стр.53–54) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -26896,8 +26908,8 @@ window.PROGRAMS = {
       "Review: park vocabulary, There's a… / There are… — I can… самооценка"
      ],
      [
-      "Фокус JP Book 2",
-      "Короткие vs длинные гласные — сравнение · стр. 27"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.20: Magic E: a-e (тетрадь стр.55–57) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -26930,8 +26942,8 @@ window.PROGRAMS = {
       "Project: My dream park — рисунок и описание"
      ],
      [
-      "Фокус JP Book 2",
-      "Повт. всех правил блоков 1-3 · стр. 34"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.20: Magic E: a-e (тетрадь стр.55–57) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -26964,8 +26976,8 @@ window.PROGRAMS = {
       "Listen, point and repeat. Big Wheel stickers. Memory game. Ввод лексики юнита."
      ],
      [
-      "Фокус JP Book 2",
-      "Magic e: a-e — game, name, cake · стр. 11"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.21: Magic E: i-e (тетрадь стр.58–60) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -26998,8 +27010,8 @@ window.PROGRAMS = {
       "Listen and find. Song. Ask and say. Речевые структуры в контексте."
      ],
      [
-      "Фокус JP Book 2",
-      "Magic e: e-e — Pete, theme, eve · стр. 35"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.21: Magic E: i-e (тетрадь стр.58–60) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -27032,8 +27044,8 @@ window.PROGRAMS = {
       "Story «The surprise» — Mimi встречает диких животных"
      ],
      [
-      "Фокус JP Book 2",
-      "Magic e: i-e — kite, bike, smile · стр. 13"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.22: Magic E: o-e·u-e (тетрадь стр.61–63) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -27066,8 +27078,8 @@ window.PROGRAMS = {
       "Story Song — животные и их описание через песню"
      ],
      [
-      "Фокус JP Book 2",
-      "Magic e: o-e — bone, rope, home · стр. 13"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.22: Magic E: o-e·u-e (тетрадь стр.61–63) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -27100,8 +27112,8 @@ window.PROGRAMS = {
       "Speaking: It's a… / It's got… / Life skills: описывать животных"
      ],
      [
-      "Фокус JP Book 2",
-      "Magic e: u-e — cube, tune, mule · стр. 11"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.23: Magic E: повторение (тетрадь стр.64–65) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -27134,8 +27146,8 @@ window.PROGRAMS = {
       "Values: looking after animals · Content: meerkats · Culture: animals in different countries"
      ],
      [
-      "Фокус JP Book 2",
-      "/ai/ ai: rain, tail, snail, paint · стр. 15"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.23: Magic E: повторение (тетрадь стр.64–65) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -27168,8 +27180,8 @@ window.PROGRAMS = {
       "Review: wild animals, What's that? / It's… / It's got… — I can… самооценка"
      ],
      [
-      "Фокус JP Book 2",
-      "/ai/ ay: play, hay, tray, spray · стр. 15"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -27202,8 +27214,8 @@ window.PROGRAMS = {
       "Project: My favourite animal — постер и презентация"
      ],
      [
-      "Фокус JP Book 2",
-      "/ai/ a-e: cake, whale, name · стр. 33"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -27236,8 +27248,8 @@ window.PROGRAMS = {
       "Listen, point and repeat. Big Wheel stickers. Memory game. Ввод лексики юнита."
      ],
      [
-      "Фокус JP Book 2",
-      "/ee/ ee: tree, teeth, three, sheep · стр. 17"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -27270,8 +27282,8 @@ window.PROGRAMS = {
       "Listen and find. Song. Ask and say. Речевые структуры в контексте."
      ],
      [
-      "Фокус JP Book 2",
-      "/ee/ ea: leaf, seal, meat, seat · стр. 17"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -27304,8 +27316,8 @@ window.PROGRAMS = {
       "Story «Giant Joe» — распорядок дня Mimi"
      ],
      [
-      "Фокус JP Book 2",
-      "/ee/ e-e: Pete, theme, eve · стр. 35"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -27338,8 +27350,8 @@ window.PROGRAMS = {
       "Story Song — daily routines через песню"
      ],
      [
-      "Фокус JP Book 2",
-      "/ie/ ie: pie, tie, lie, die · стр. 19"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -27372,8 +27384,8 @@ window.PROGRAMS = {
       "Speaking: What do you do every day? / Life skills: рассказывать о распорядке дня"
      ],
      [
-      "Фокус JP Book 2",
-      "/ie/ i-e: bike, slide, drive, kite · стр. 13"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.27: /оу/ oa·ow·o-e (тетрадь стр.75–76) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -27406,8 +27418,8 @@ window.PROGRAMS = {
       "Values: being healthy · Content: washing hands · Culture: daily routines around the world"
      ],
      [
-      "Фокус JP Book 2",
-      "/ie/ y: my, sky, shy, flying · стр. 19"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.27: /оу/ oa·ow·o-e (тетрадь стр.75–76) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -27440,8 +27452,8 @@ window.PROGRAMS = {
       "Review: daily routines, What do you do every day? — I can… самооценка"
      ],
      [
-      "Фокус JP Book 2",
-      "/ie/ igh: night, light, thigh · стр. 37"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.28: /ю:/ ue·ew·u-e (тетрадь стр.77–78) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -27474,8 +27486,8 @@ window.PROGRAMS = {
       "Project: My daily routines — книжка-раскладушка"
      ],
      [
-      "Фокус JP Book 2",
-      "Диктант: /ai/ /ee/ /ie/ · стр. 35"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.28: /ю:/ ue·ew·u-e (тетрадь стр.77–78) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -27508,8 +27520,8 @@ window.PROGRAMS = {
       "Listen, point and repeat. Big Wheel stickers. Memory game. Ввод лексики юнита."
      ],
      [
-      "Фокус JP Book 2",
-      "/oa/ oa: coat, toad, soap, oak · стр. 21"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.29: /ау/ ou·ow + /ой/ oi·oy (тетрадь стр.79–82) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -27542,8 +27554,8 @@ window.PROGRAMS = {
       "Listen and find. Song. Ask and say. Речевые структуры в контексте."
      ],
      [
-      "Фокус JP Book 2",
-      "/oa/ ow: grow, slow, yellow · стр. 21"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.29: /ау/ ou·ow + /ой/ oi·oy (тетрадь стр.79–82) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -27576,8 +27588,8 @@ window.PROGRAMS = {
       "Story «Toast, toast, toast» — обед у Mimi дома"
      ],
      [
-      "Фокус JP Book 2",
-      "/oa/ o-e: mole, rose, stone · стр. 39"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.30: /ё:/ er·ir·ur (тетрадь стр.83–85) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -27610,8 +27622,8 @@ window.PROGRAMS = {
       "Story Song — еда и приёмы пищи через песню"
      ],
      [
-      "Фокус JP Book 2",
-      "/oo/ длинный: moon, spoon, food · стр. 38"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.30: /ё:/ er·ir·ur (тетрадь стр.83–85) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -27644,8 +27656,8 @@ window.PROGRAMS = {
       "Speaking: Do you want…? / I have… for… / Life skills: вежливо предлагать"
      ],
      [
-      "Фокус JP Book 2",
-      "/oo/ короткий: book, foot, cook · стр. 38"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.31: хитрые c·g·ph + air·ear·are (тетрадь стр.86–90) — (a) первое знакомство"
      ],
      [
       "Tricky words",
@@ -27674,8 +27686,8 @@ window.PROGRAMS = {
       "What do you have for (lunch)? / I have (rice). / Do you want (soup)? / Yes. / No."
      ],
      [
-      "Фокус JP Book 2",
-      "/or/ or: storm, fork, sort · стр. 38"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.31: хитрые c·g·ph + air·ear·are (тетрадь стр.86–90) — (b) закрепление"
      ],
      [
       "Tricky words",
@@ -27708,8 +27720,8 @@ window.PROGRAMS = {
       "Review: food vocabulary, meals, Do you want…? — I can… самооценка"
      ],
      [
-      "Фокус JP Book 2",
-      "/er/ er: sister, summer, ladder · стр. 23"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 2 — ур.13–14 (ai·oa·ie, ee·or), истории (тетрадь стр.33–38)"
      ],
      [
       "Tricky words",
@@ -27742,8 +27754,8 @@ window.PROGRAMS = {
       "Project: My favourite meal — меню и рисунок"
      ],
      [
-      "Фокус JP Book 2",
-      "/er/ ir: bird, girl, shirt · стр. 23"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 2 — ур.15–16 (ng·oo, ch·sh·th), истории (тетрадь стр.39–45)"
      ],
      [
       "Tricky words",
@@ -27776,8 +27788,8 @@ window.PROGRAMS = {
       "Listen, point and repeat. Big Wheel stickers. Memory game. Ввод лексики юнита."
      ],
      [
-      "Фокус JP Book 2",
-      "/er/ ur: purple, burn, purse · стр. 46"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 2 — ур.17–18 (ou·oi, ue·er·ar), истории (тетрадь стр.46–51)"
      ],
      [
       "Tricky words",
@@ -27810,8 +27822,8 @@ window.PROGRAMS = {
       "Listen and find. Song. Ask and say. Речевые структуры в контексте."
      ],
      [
-      "Фокус JP Book 2",
-      "/ar/ ar: shark, farm, star · стр. 43"
+      "Фокус Phonics Hero",
+      "Phonics Hero: диктант диграфов (Часть 2, ур.13–18)"
      ],
      [
       "Tricky words",
@@ -27844,8 +27856,8 @@ window.PROGRAMS = {
       "Story «A day out» — Mimi в городе"
      ],
      [
-      "Фокус JP Book 2",
-      "/air/ air: chair, stairs, fair · стр. 47"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 3 — Magic E ур.19–20 (тетрадь стр.53–57)"
      ],
      [
       "Tricky words",
@@ -27878,8 +27890,8 @@ window.PROGRAMS = {
       "Story Song — места в городе через песню"
      ],
      [
-      "Фокус JP Book 2",
-      "/air/ ear/are: bear, hare, pear · стр. 47"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 3 — Magic E ур.21–22 (тетрадь стр.58–63)"
      ]
     ],
     "sec": "Юнит 7 Town"
@@ -27908,8 +27920,8 @@ window.PROGRAMS = {
       "Speaking: Do you want to go to…? / Life skills: предлагать куда пойти"
      ],
      [
-      "Фокус JP Book 2",
-      "/ou/ ou: found, count, mouse · стр. 42"
+      "Фокус Phonics Hero",
+      "Phonics Hero: повторение Части 3 — ур.23 + диктант Magic E (тетрадь стр.64–65)"
      ]
     ],
     "sec": "Юнит 7 Town"
@@ -27938,8 +27950,8 @@ window.PROGRAMS = {
       "Values: road safety · Content: traffic lights · Culture: cities around the world"
      ],
      [
-      "Фокус JP Book 2",
-      "/ou/ ow: brown, flower, down · стр. 42"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — повторение"
      ]
     ],
     "sec": "Юнит 7 Town"
@@ -27968,8 +27980,8 @@ window.PROGRAMS = {
       "Review: town places, Do you want to go to…? — I can… самооценка"
      ],
      [
-      "Фокус JP Book 2",
-      "/oi/ oi: coin, join, spoil · стр. 44"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — повторение"
      ]
     ],
     "sec": "Юнит 7 Town"
@@ -27998,8 +28010,8 @@ window.PROGRAMS = {
       "Project: My town map — карта с местами"
      ],
      [
-      "Фокус JP Book 2",
-      "/oi/ oy: boy, toy, enjoy · стр. 44"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — повторение"
      ]
     ],
     "sec": "Юнит 7 Town"
@@ -28028,8 +28040,8 @@ window.PROGRAMS = {
       "Listen, point and repeat. Big Wheel stickers. Memory game. Ввод лексики юнита."
      ],
      [
-      "Фокус JP Book 2",
-      "/ue/ ue: blue, glue, rescue · стр. 25"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.27: /оу/ oa·ow·o-e (тетрадь стр.75–76) — повторение"
      ]
     ],
     "sec": "Юнит 8 Music"
@@ -28058,8 +28070,8 @@ window.PROGRAMS = {
       "Listen and find. Song. Ask and say. Речевые структуры в контексте."
      ],
      [
-      "Фокус JP Book 2",
-      "/ue/ ew/u-e: few, blew, cute · стр. 41"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.28: /ю:/ ue·ew·u-e (тетрадь стр.77–78) — повторение"
      ]
     ],
     "sec": "Юнит 8 Music"
@@ -28088,8 +28100,8 @@ window.PROGRAMS = {
       "Story «Mimi's band» — Mimi готовится к концерту"
      ],
      [
-      "Фокус JP Book 2",
-      "y = /ee/: jolly, funny, muddy · стр. 3"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.29: /ау/ ou·ow + /ой/ oi·oy (тетрадь стр.79–82) — повторение"
      ]
     ],
     "sec": "Юнит 8 Music"
@@ -28118,8 +28130,8 @@ window.PROGRAMS = {
       "Story Song — инструменты и действия через песню"
      ],
      [
-      "Фокус JP Book 2",
-      "Soft c: face, cycle, circus · стр. 29"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.30: /ё:/ er·ir·ur (тетрадь стр.83–85) — повторение"
      ]
     ],
     "sec": "Юнит 8 Music"
@@ -28148,8 +28160,8 @@ window.PROGRAMS = {
       "Speaking: What are you doing? / I'm playing… / Life skills: описывать действия"
      ],
      [
-      "Фокус JP Book 2",
-      "Soft g: giant, giraffe, orange · стр. 31"
+      "Фокус Phonics Hero",
+      "Phonics Hero ур.31: хитрые c·g·ph + air·ear·are (тетрадь стр.86–90) — повторение"
      ]
     ],
     "sec": "Юнит 8 Music"
@@ -28174,8 +28186,8 @@ window.PROGRAMS = {
       "What are you doing? / I'm (playing the piano). / Do you like (playing the drum)? / Yes. / No."
      ],
      [
-      "Фокус JP Book 2",
-      "ph = /f/: elephant, dolphin, phone · стр. 27"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 1 (тетрадь стр.7–29)"
      ]
     ],
     "sec": "Юнит 8 Music"
@@ -28204,8 +28216,8 @@ window.PROGRAMS = {
       "Review: instruments, What are you doing? / I'm playing… — I can… самооценка"
      ],
      [
-      "Фокус JP Book 2",
-      "Мини-текст «The fish» + диктант · стр. 32"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 2 (тетрадь стр.32–51)"
      ]
     ],
     "sec": "Юнит 8 Music"
@@ -28234,8 +28246,8 @@ window.PROGRAMS = {
       "Project: Our class band — постер группы"
      ],
      [
-      "Фокус JP Book 2",
-      "Мини-текст «The fox» + диктант · стр. 30"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 3 (тетрадь стр.53–65)"
      ]
     ],
     "sec": "Юнит 8 Music"
@@ -28264,8 +28276,8 @@ window.PROGRAMS = {
       "Listen, point and repeat. Big Wheel stickers. Memory game. Ввод лексики юнита."
      ],
      [
-      "Фокус JP Book 2",
-      "Мини-текст «The hen» + диктант · стр. 26"
+      "Фокус Phonics Hero",
+      "Phonics Hero: свободное чтение — истории Части 4 (тетрадь стр.66–90)"
      ]
     ],
     "sec": "Юнит 9 Bugs"
@@ -28294,8 +28306,8 @@ window.PROGRAMS = {
       "Listen and find. Song. Ask and say. Речевые структуры в контексте."
      ],
      [
-      "Фокус JP Book 2",
-      "Мини-текст «The pond» + диктант · стр. 28"
+      "Фокус Phonics Hero",
+      "Phonics Hero: итоговый диктант — звуки и диграфы (Части 1–2)"
      ]
     ],
     "sec": "Юнит 9 Bugs"
@@ -28324,8 +28336,8 @@ window.PROGRAMS = {
       "Story «Honey for tea» — Mimi ищет насекомых в саду"
      ],
      [
-      "Фокус JP Book 2",
-      "Предложения под картинки (1) · стр. 25"
+      "Фокус Phonics Hero",
+      "Phonics Hero: итоговый диктант — Magic E и написания (Части 3–4)"
      ]
     ],
     "sec": "Юнит 9 Bugs"
@@ -28354,8 +28366,8 @@ window.PROGRAMS = {
       "Story Song — насекомые и их признаки через песню"
      ],
      [
-      "Фокус JP Book 2",
-      "Предложения под картинки (2) · стр. 37"
+      "Фокус Phonics Hero",
+      "Phonics Hero: марафон tricky words — чтение и письмо (все части)"
      ]
     ],
     "sec": "Юнит 9 Bugs"
@@ -28384,8 +28396,8 @@ window.PROGRAMS = {
       "Speaking: Has it got…? / Yes/No, it has/hasn't / Life skills: описывать по признакам"
      ],
      [
-      "Фокус JP Book 2",
-      "Анаграммы животных · стр. 41"
+      "Фокус Phonics Hero",
+      "Phonics Hero: финальное чтение на скорость — все звуки и написания"
      ]
     ],
     "sec": "Юнит 9 Bugs"
@@ -28414,8 +28426,8 @@ window.PROGRAMS = {
       "Values: being curious · Content: life cycle of a butterfly · Culture: bugs around the world"
      ],
      [
-      "Фокус JP Book 2",
-      "Кроссворд: /er/ и /ar/ · стр. 46"
+      "Фокус Phonics Hero",
+      "Phonics Hero: Диплом Фоникс-героя (тетрадь стр.91)"
      ],
      [
       "Tricky words",
@@ -28448,8 +28460,8 @@ window.PROGRAMS = {
       "Review: bugs vocabulary, Has it got…? / It's got… — I can… самооценка"
      ],
      [
-      "Фокус JP Book 2",
-      "Все tricky words — чтение и письмо · Все цвета"
+      "Фокус Phonics Hero",
+      "Phonics Hero: Карта прогресса — финиш! (тетрадь стр.92)"
      ],
      [
       "Tricky words",
@@ -28482,8 +28494,8 @@ window.PROGRAMS = {
       "Project: My bug book — книжка о насекомом"
      ],
      [
-      "Фокус JP Book 2",
-      "Итоговый урок: свободное чтение · Jolly Readers"
+      "Фокус Phonics Hero",
+      "Phonics Hero: праздник чтения — любимые истории тетради"
      ],
      [
       "Tricky words",
