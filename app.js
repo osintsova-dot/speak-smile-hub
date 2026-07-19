@@ -90,7 +90,15 @@ function planKeyFor(program, L){
   if (!window.PLANS) return null;
   const src = L.unit || L.sec || "";
   const lm = /\bL(\d+)\b/i.exec(L.type || "");
-  if (!lm) return null;
+  if (!lm){
+    // Вводный Genki-блок линии «с нуля»: тип урока «Genki N» → план Intro-LN (занятия 1–12)
+    const gm = /genki\s*(\d+)/i.exec(L.type || "");
+    if (gm){
+      const gkey = `${program}-Intro-L${gm[1]}`;
+      return window.PLANS[gkey] ? gkey : null;
+    }
+    return null;
+  }
   const um = /unit\s*(\d+)/i.exec(src);
   let unitPart;
   if (um) unitPart = "U" + um[1];

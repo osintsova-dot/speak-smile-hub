@@ -1,5 +1,5 @@
 // Service worker: офлайн-кэш оболочки приложения
-const CACHE = "ss-hub-v15";
+const CACHE = "ss-hub-v16";
 const ASSETS = ["./", "./index.html", "./app.js", "./data.js", "./plans.js", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", e => {
