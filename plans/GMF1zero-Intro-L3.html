@@ -1,0 +1,244 @@
+<meta charset="utf-8">
+<title>GMF1 (с нуля) · Intro · Занятие 3 — Superhero: I can… (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 (с нуля) · Вводный блок Genki · Занятие 3 / Intro L3 — Superhero: I can…</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., first-year beginners · линия с нуля) · 60 min · Genki English + Phonics Hero · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 07.09–13.09 · Занятие 3</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · pairs &amp; teams</span><span class="chip">🦸 Phonics Hero ур.3 · c·k·e</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 8 action verbs</b> and say what they can do: “I'm a superhero! I can (fly)!”</li>
+      <li><span class="lb">Subsidiary.</span> Phonics ур.3: sounds <b>c·k·e</b> + the “ck” secret; blend <i>cat, pen, ten…</i>; recycle feelings + greetings from занятие 2 (a superhero is happy / tired after flying!).</li>
+      <li><span class="lb">Personal.</span> TPR-heavy lesson — plan the space; use Freeze! early and often, follow every stirrer with a settler.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>mime and name jump · run · hide · cook · stretch · climb · swim · fly;</li>
+        <li>say “I can (swim)!” about themselves;</li>
+        <li>read and write <i>cat, pen, ten</i>; explain the c·k·ck secret.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">jump</span><span class="w">run</span><span class="w">hide</span><span class="w">cook</span><span class="w">stretch</span><span class="w">climb</span><span class="w">swim</span><span class="w">fly</span><span class="w">superhero</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I'm a superhero! · I can (jump / fly / swim)!</div></div>
+      <div class="r"><div class="k">Form</div><div>I + can + verb (no “to”, no ending!). can = умею/могу.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>silent b in <i>climb</i> /klaɪm/; <i>stretch</i> final /tʃ/; sentence stress: I can <b>FLY</b>!</div></div>
+      <div class="r"><div class="k">Phonics</div><div><b>Phonics Hero ур.3 (тетрадь стр.8–9)</b>: <b>c</b> · <b>k</b> · <b>e</b> — звук /к/ пишется c и k, а вместе <b>ck</b>! · blending <i>cat, pen, ten, neck, pet, tick</i> · «обведи слово» · диктант <i>cat, pen, ten, kit</i> · tricky <i>said, he</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“I can swim — do I do it now, or am I ABLE to?” → able to (умею).</div>
+      <div class="ccq" style="margin-bottom:12px">“c and k — two letters… how many sounds?” → ONE: /к/!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> From занятия 1–2: commands, Freeze!, names, greetings, feelings, sounds s·a·t·i·p·n + blending CVC. Non-readers apart from phonics work; all meaning through mime and pictures.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>climb said with /b/</td><td>Exaggerate /klaɪm/ with a climbing mime; quick choral drill of the pair climb–time.</td></tr><tr><td>can + «to» or Russian mix («I can прыгать»)</td><td>Recast instantly with the mime: “I can JUMP!” — child echoes.</td></tr><tr><td>TPR chaos: children crash into each other</td><td>Fix personal “superhero spots”; actions on the spot; Freeze! resets.</td></tr><tr><td>c/k/ck — when to write which</td><td>Today just the secret + chorus; the sort will recur in ур.10–12 — don't over-explain.</td></tr><tr><td>Shy children won't mime alone</td><td>All mimes are whole-class or pairs; nobody performs solo unless they volunteer.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Door: <span class="en">Good morning! How are you?</span> — accept any feeling word + gesture. <span class="game">▶ Genki Disco Warm Up</span> ritual. <span class="en">Freeze! Sit down.</span></p></td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · Speaky</td>
+      </tr>
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Review — woven in</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Feelings + greetings → superhero hook.</span> <span class="sp">🦝 Speaky</span> in a little cape: <span class="en">Good morning! I'm a SUPERHERO! How are you, Speaky? — I'm happy!</span></p>
+      <p><span class="game">▶ Mix-Pair-Share</span> ×2 rounds: <span class="en">Hello! How are you? — I'm […]. What's your name? — My name is […].</span> New partner each round. Signal back: <span class="en">Class? — Yes!</span></p></td>
+        <td class="mat">Speaky + cape · music</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">8–9′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">ABC time!</span> ABC song with actions → settle into phonics.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+      <tr>
+        <td class="min">9–24′</td>
+        <td class="stage"><div class="nm">Phonics Hero ур.3 — c·k·e</div><div class="zone">board → desks</div></td>
+        <td class="flow"><p><span class="ph">Speed reading — стр.8 №1.</span> Strip <b>s·a·t·i·p·n</b>: there and back, beat your time; whisper → LOUD.</p>
+      <p><span class="ph">Meet c · k · e.</span> <b>c</b> — кастаньеты-крабик пальцами: <span class="en">k-k-k!</span> · <b>k</b> — same sound, каратэ-рука: <span class="en">k-k!</span> · <b>e</b> — разбиваем яйцо о край: <span class="en">e-e-e!</span> The secret (Spiky line): звук /к/ пишется <b>c</b> и <b>k</b> — а вместе <b>ck</b> (<i>neck, tick</i>)! Copy sounds + gestures ×3.</p>
+      <p><span class="ph">Blend — стр.9 №1.</span> Sound windows: <span class="en">/c/ /a/ /t/ — cat! /p/ /e/ /n/ — pen!</span> … <i>ten, neck, pet, tick</i> — air-blend fingers, picture for meaning.</p>
+      <p><span class="ph">Trace — стр.8 (desks).</span> Прописи <i>c · k · e · cat · pen</i>, start at the yellow dot, whisper the sounds.</p>
+      <p><span class="ph">Circle the word — стр.9 №2 (all vote).</span> Picture up (cat) + three words (<i>cat/cap/can</i>) → read all three together → every child points/circles the right one; partner check. Same for <i>pen, ten, neck</i>.</p>
+      <p><span class="ph">Dictation — стр.9 №3.</span> Segment on fingers → write → <span class="en">Show me!</span> Words: <i>cat, pen, ten, kit</i>. Tricky strip <b>said · he</b> — flash, chorus ×3, air-write. Medal ⭐.</p>
+      <p style="font-size:.84rem;color:var(--muted)">🎮 <b>Phonics Hub</b> (speakandsmile.ru/gmf1/phonics/, дорожка «Начинающие») — набор «c k e h r m d»: Stations «Звуки» + «Блендинг» on the projector; offline = тетрадь + cards. <b style="color:var(--zone)">◆ Support:</b> dictation with first letter given. <b style="color:var(--zone)">▲ Extension:</b> write <i>neck</i> — remember ck! ✔ <b>Assess:</b> Show-me boards; who blends /к/ twice in <i>neck</i> — recast.</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> тетрадь стр.8–9 · c/k/e cards · pencils · Phonics Hub (board)</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">24–26′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Superhero time!</span> First listen of <span class="game">Genki «I'm A Superhero! I Can…»</span> — arms out, fly on the spot on every <span class="en">I can fly!</span></p></td>
+        <td class="mat"><b>Genki «I'm A Superhero!»</b> mp3 (05)</td>
+      </tr>
+      <tr>
+        <td class="min">26–34′</td>
+        <td class="stage"><div class="nm">Presentation · 8 actions + can</div><div class="zone">carpet, standing on spots</div></td>
+        <td class="flow"><p><span class="ph">TPR presentation.</span> One action at a time, big mime, chorus ×3: <span class="en">jump! run! (on the spot) hide! (hands over face) cook! stretch! climb! swim! fly!</span> Layer: 2 → 4 → 8, faster.</p>
+      <p><span class="ph">Add “can”.</span> Cape on Speaky: <span class="en">I'm a superhero! I can JUMP!</span> (jump) — class echoes phrase + move. Drill all 8 as <span class="en">I can […]!</span> ICQ: <span class="en">can — сейчас делаю или умею?</span> → умею.</p></td>
+        <td class="mat">action flashcards · Speaky + cape</td>
+      </tr>
+      <tr>
+        <td class="min">34–41′</td>
+        <td class="stage"><div class="nm">Song &amp; action game</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p>Sing <span class="game">«I'm A Superhero!»</span> — full mimes, second run louder and faster.</p>
+      <p><span class="game">▶ Speaky says — superhero edition:</span> act only when <span class="sp">🦝</span> says <span class="en">Speaky says: I can swim!</span> Plain <span class="en">Swim!</span> = statue! No elimination — a wrong move is a group giggle + reset. Speed up.</p></td>
+        <td class="mat"><b>«I'm A Superhero!»</b> mp3 (05)</td>
+      </tr>
+      <tr>
+        <td class="min">41–45′</td>
+        <td class="stage"><div class="nm">Draw your superhero</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Settler.</span> Draw YOUR superhero (cape, mask, colours). Teacher circulates: <span class="en">Can you fly? — I can fly! Can you cook? — I can cook!</span></p>
+      <p><span class="en">Finishing in 5…4…3…2…1… pencils down.</span></p></td>
+        <td class="mat">paper · crayons</td>
+      </tr>
+      <tr>
+        <td class="min">45–53′</td>
+        <td class="stage"><div class="nm">▶ Pair charades · I can…</div><div class="zone">carpet, pairs</div></td>
+        <td class="flow"><p><span class="ph">Model first</span> with a volunteer: mime <i>swim</i> → partner guesses <span class="en">You can swim!</span> → miming child confirms <span class="en">Yes! I can swim!</span></p>
+      <p><span class="game">▶ RallyRobin charades:</span> ALL pairs at once — A mimes, B guesses, swap. Each child mimes 3–4 actions. Extension pair: two actions in a row (<span class="en">I can jump and fly!</span>).</p>
+      <p><span class="ph">Finale — superhero parade:</span> everybody flies one lap of the carpet: <span class="en">I'm a superhero! I can fly!</span> → <span class="en">Freeze!</span></p></td>
+        <td class="mat">action cards (optional prompts) · <span class="game">▶ RallyRobin</span></td>
+      </tr>
+      <tr>
+        <td class="min">53–56′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner three things you can do. I can…!</span> (20 sec each.)</p>
+      <p>Speaky stamp: <span class="en">I can say what I can do!</span></p></td>
+        <td class="mat">Speaky stamp</td>
+      </tr>
+      <tr>
+        <td class="min">56–58′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, superheroes! Let's sing Goodbye.</span> Goodbye song + cape wave.</p></td>
+        <td class="mat"><b>Goodbye song</b> mp3</td>
+      </tr>
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>At the door each child mimes one action and says: <span class="en">I can […]!</span> → <span class="en">Goodbye, superhero!</span></p></td>
+        <td class="mat">—</td>
+      </tr>
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>🦸 Phonics Hero:</b> finish <b>стр.8–9</b> (tracing + circle task) — whisper the sounds. <b>App (Practice):</b> actions mini-set (listen &amp; point), 5–7 мин. <b>Family task:</b> show your superhero drawing and say <span class="en">I can…</span> about 3 pictures.</p></td>
+        <td class="mat">Phonics Hero стр.8–9 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · GMF1 с нуля · Вводный блок Genki · Занятие 3 — lesson plan &amp; staging</span>
+    <span>Phonics verified against Phonics Hero 2.0 стр.8–9 · КТП-с-нуля занятие 3 · song: Genki 05.</span>
+  </div>
+</div>

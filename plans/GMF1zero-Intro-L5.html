@@ -1,0 +1,244 @@
+<meta charset="utf-8">
+<title>GMF1 (с нуля) · Intro · Занятие 5 — Numbers 1–12 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 (с нуля) · Вводный блок Genki · Занятие 5 / Intro L5 — Numbers 1–12</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., first-year beginners · линия с нуля) · 60 min · Genki English + Phonics Hero · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 14.09–20.09 · Занятие 5</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · pairs &amp; teams</span><span class="chip">🦸 Phonics Hero ур.5 · d·g·o + история про кота</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>count and name numbers 1–12</b> and answer “How many? — (Five)!” in context.</li>
+      <li><span class="lb">Subsidiary.</span> Phonics ур.5: sounds <b>d·g·o</b>, dictation + story «История про кота» (все слова уроков 1–5!); recycle can-actions (jump FOUR times!) and feelings inside counting.</li>
+      <li><span class="lb">Personal.</span> Numbers only in context (How many? Jump three times!) — never as a bare recited list.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>count objects and claps to 12;</li>
+        <li>answer “How many? — Seven!” about real things;</li>
+        <li>read and write <i>dog, dig, hot, top</i>; read the story «История про кота» — слова уроков 1–5.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">one</span><span class="w">two</span><span class="w">three</span><span class="w">four</span><span class="w">five</span><span class="w">six</span><span class="w">seven</span><span class="w">eight</span><span class="w">nine</span><span class="w">ten</span><span class="w">eleven</span><span class="w">twelve</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>How many? — (Five)! · Jump (three) times! · How many candles on your cake?</div></div>
+      <div class="r"><div class="k">Form</div><div>How many + (noun)? Short answer = the number. Plural -s just modelled, not taught.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div><i>three</i> /θ/ — tongue between teeth (not «фри»/«три»); <i>eleven</i> stress e-LE-ven; <i>twelve</i> final /lv/.</div></div>
+      <div class="r"><div class="k">Phonics</div><div><b>Phonics Hero ур.5 (тетрадь стр.12–14)</b>: <b>d</b> /д/ · <b>g</b> /г/ · <b>o</b> /о — губы бубликом!/ · blending <i>dog, red, dig, hot, top, dot</i> · «обведи слово» · диктант <i>dog, dig, hot, top</i> · tricky <i>to, you</i> · история «История про кота» (стр.14).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“How many fingers?” (show 4) → do I want a colour or a NUMBER? → a number: four!</div>
+      <div class="ccq" style="margin-bottom:12px">“b and d — где у d животик?” → слева (bed-мнемоника придёт в ур.7; пока просто следим).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> From занятия 1–4: commands, greetings, feelings, can-actions, pronouns, sounds s→m, CVC blending + dictation routine. Russian numbers are automatic — the job is to attach English words to known quantities.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>three → «фри» / «три»</td><td>Tongue-between-teeth mirror check; drill three–tree contrast with gestures (fingers vs arms-tree).</td></tr><tr><td>eleven / twelve — heavy words</td><td>Extra reps in chants and the candle count; accept seven→twelve emerging slowly.</td></tr><tr><td>Counting = mechanical chant without meaning</td><td>Always count SOMETHING: fingers, claps, jumps, candles, cards; ask How many? after.</td></tr><tr><td>Story frame 4 has two sentences</td><td>Read it as echo-reading: teacher line → class line, finger under words.</td></tr><tr><td>Number cards grabbed in the pair game</td><td>Karuta rule: hands on head till the call; gentle flat hand.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Door: <span class="en">Good morning! How are you?</span> <span class="game">▶ Genki Disco Warm Up</span> → <span class="en">Freeze! Sit down.</span></p></td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · Speaky</td>
+      </tr>
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Review — woven in</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Can-actions × counting hook.</span> <span class="en">I can jump! Jump-jump-jump — how many? THREE!</span> (в русский не уходим — показываем пальцами). Rounds: <span class="en">Clap four times! Stretch two times! Fly six times!</span> — class counts aloud in English while doing.</p>
+      <p><span class="game">▶ RallyRobin:</span> in pairs — A commands <span class="en">Jump [3] times!</span>, B does &amp; counts; swap. Everybody moving, everybody counting.</p></td>
+        <td class="mat">Speaky · space</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">8–9′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">ABC time!</span> ABC song → settle into phonics.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+      <tr>
+        <td class="min">9–24′</td>
+        <td class="stage"><div class="nm">Phonics Hero ур.5 — d·g·o</div><div class="zone">board → desks</div></td>
+        <td class="flow"><p><span class="ph">Speed reading — стр.12 №1.</span> Strip <b>s·a·t·i·p·n·c·k·e·h·r·m</b> — twelve sounds! There and back; boys/girls/whisper/LOUD.</p>
+      <p><span class="ph">Meet d · g · o.</span> <b>d</b> — барабаним: <span class="en">d-d-d!</span> · <b>g</b> — глоток воды: <span class="en">g-g-g!</span> · <b>o</b> — губы бубликом, щёлк выключателем: <span class="en">o-o!</span> Copy ×3, mixed flash.</p>
+      <p><span class="ph">Blend — стр.13 №1.</span> Windows: <span class="en">/d/ /o/ /g/ — dog!</span> … <i>red, dig, hot, top, dot</i> — air-blend, pictures for meaning.</p>
+      <p><span class="ph">Trace — стр.12 (desks).</span> Прописи <i>d · g · o · dog · got</i>; whisper the sounds. Then «обведи слово» — стр.13 №2 (<i>dog/dot/dig, map/mop/man, cot/cat/can, ten/tan/tin</i>): read all three together, every child circles, partner check.</p>
+      <p><span class="ph">Dictation — стр.13 №3.</span> Segment on fingers → write → <span class="en">Show me!</span> Words: <i>dog, dig, hot, top</i>. Tricky strip <b>to · you</b>. Medal ⭐.</p>
+      <p><span class="ph">Story — стр.14 «История про кота» (settler).</span> Echo-read the 5 frames, finger under the words: <span class="en">Sam has a cat. The cat sat in a hat…</span> ⭐ считаем: how many times is <i>cat</i> in the story? — <b>count in English!</b> (5) — today's numbers, straight into reading.</p>
+      <p style="font-size:.84rem;color:var(--muted)">🎮 <b>Phonics Hub</b> (speakandsmile.ru/gmf1/phonics/, дорожка «Начинающие») — набор «c k e h r m d» + история on screen. <b style="color:var(--zone)">◆ Support:</b> blend only <i>dog, hot</i>. <b style="color:var(--zone)">▲ Extension:</b> word 5 by ear (<i>dot</i>). ✔ <b>Assess:</b> Show-me dictation; story star-count = number check too.</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> тетрадь стр.12–14 · d/g/o cards · pencils · Phonics Hub (board)</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">24–26′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p>First listen of <span class="game">Genki «Numbers 1 To 12»</span> — show each number on fingers (11 = 10 fingers + 1 nose-tap, 12 = + 2 shoulder-taps 😄).</p></td>
+        <td class="mat"><b>Genki «Numbers 1 To 12»</b> mp3 (08)</td>
+      </tr>
+      <tr>
+        <td class="min">26–34′</td>
+        <td class="stage"><div class="nm">Presentation · numbers in context</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Build 1–6.</span> Count real things: fingers, eyes, boys, girls, windows: <span class="en">How many windows? One, two, three — THREE!</span> Chorus each number with its finger-shape.</p>
+      <p><span class="ph">Build 7–12.</span> Number cards on the board in a clock circle; count claps, count Speaky's jumps. Back-chain <span class="en">How many?</span> ICQ: <span class="en">How many? — колечко или число?</span> → число!</p>
+      <p><span class="game">▶ Show me!</span> — call a number, every child shows it on fingers instantly; speed up; then reverse — show fingers, class calls the word.</p></td>
+        <td class="mat">number cards 1–12 · Speaky</td>
+      </tr>
+      <tr>
+        <td class="min">34–41′</td>
+        <td class="stage"><div class="nm">Song &amp; counting games</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p>Sing <span class="game">«Numbers 1 To 12»</span> with finger-shapes, then a verse of <span class="game">«How Many?»</span> (30) — answer with fingers + word.</p>
+      <p><span class="game">▶ Groups of…!</span> Music plays, children walk; call <span class="en">Groups of THREE!</span> → children cluster in threes and count themselves aloud <span class="en">one-two-three!</span> Odd ones join teacher — nobody is “out”. 4 rounds: 2 → 4 → 3 → 12 (= everyone, big circle!).</p></td>
+        <td class="mat"><b>«Numbers 1 To 12»</b> (08) · <b>«How Many?»</b> (30) mp3</td>
+      </tr>
+      <tr>
+        <td class="min">41–45′</td>
+        <td class="stage"><div class="nm">Birthday cake — draw &amp; count</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Settler (из КТП).</span> Draw a cake and put candles on it — as many as YOU want (up to 12!). Teacher circulates: <span class="en">How many candles? — Seven!</span> Partner counts your candles too (RallyCoach). Keep the cakes — next lesson they become “How old are you?”.</p>
+      <p><span class="en">Finishing in 5…4…3…2…1… pencils down.</span></p></td>
+        <td class="mat">paper · crayons · (сохранить рисунки к зан.6!)</td>
+      </tr>
+      <tr>
+        <td class="min">45–53′</td>
+        <td class="stage"><div class="nm">▶ Karuta · numbers</div><div class="zone">carpet, pairs</div></td>
+        <td class="flow"><p>Each pair: number cards 1–12 spread face-up. Hands on heads. Caller claps N times or says the word: <span class="en">Seven!</span> → slap the card. <b>All pairs at once</b>; children take turns calling (RallyRobin). Round 3: call by claps only — partner slaps AND says the word.</p>
+      <p>🎮 <b>Digital option (projector):</b> <a href="https://speakandsmile.ru/gmf1/games/starter-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">starter-memo</a> — S&amp;S memory pairs, набор Starter (numbers): a rotating child flips two cards, <b>the whole class counts / names every number aloud</b>. Swap in for one round when the screen is free.</p></td>
+        <td class="mat">number cards per pair · <span class="game">▶ Karuta</span> · 🎮 <a href="https://speakandsmile.ru/gmf1/games/starter-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">starter-memo</a></td>
+      </tr>
+      <tr>
+        <td class="min">53–56′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Count your partner's fingers… buttons… How many?</span> (20 sec each.)</p>
+      <p>Speaky stamp: <span class="en">I can count to twelve!</span></p></td>
+        <td class="mat">Speaky stamp</td>
+      </tr>
+      <tr>
+        <td class="min">56–58′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done! Let's count goodbye claps — three! One, two, three… Goodbye!</span> Goodbye song.</p></td>
+        <td class="mat"><b>Goodbye song</b> mp3</td>
+      </tr>
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>At the door: teacher shows fingers / a number card — <span class="en">How many? — [Nine]!</span> → <span class="en">Goodbye!</span></p></td>
+        <td class="mat">number cards</td>
+      </tr>
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>🦸 Phonics Hero:</b> re-read <b>«История про кота» (стр.14)</b> — to mum, dad or the cat 🐱. <b>App (Practice):</b> numbers 1–12 mini-set (listen &amp; tap), 5–7 мин. 🎮 <b>Дома:</b> <a href="https://speakandsmile.ru/gmf1/games/starter-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">starter-memo</a> — «Мемо» Starter: найди пары и называй числа вслух (5 мин).</p></td>
+        <td class="mat">Phonics Hero стр.12–14 · app · 🎮 <a href="https://speakandsmile.ru/gmf1/games/starter-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">starter-memo</a></td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · GMF1 с нуля · Вводный блок Genki · Занятие 5 — lesson plan &amp; staging</span>
+    <span>Phonics verified against Phonics Hero 2.0 стр.12–14 · КТП-с-нуля занятие 5 · songs: Genki 08·30.</span>
+  </div>
+</div>
