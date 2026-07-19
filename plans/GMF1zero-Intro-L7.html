@@ -1,0 +1,243 @@
+<meta charset="utf-8">
+<title>GMF1 (с нуля) · Intro · Занятие 7 — Do you like food? (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 (с нуля) · Вводный блок Genki · Занятие 7 / Intro L7 — Do you like food? (vegetables)</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., first-year beginners · линия с нуля) · 60 min · Genki English + Phonics Hero · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 21.09–27.09 · Занятие 7</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · pairs &amp; teams</span><span class="chip">🦸 Phonics Hero ур.7 · b·j·v + история про пса</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 8 vegetables</b> and <b>ask &amp; answer</b> “Do you like (carrots)? — Yes, I do! / No, I don't!”</li>
+      <li><span class="lb">Subsidiary.</span> Phonics ур.7: sounds <b>b·j·v</b> + the b/d tummy trick, story «История про пса»; recycle numbers (How many carrots?) and feelings (I'm hungry!) inside the food topic.</li>
+      <li><span class="lb">Personal.</span> Honour real dislikes — “No, I don't!” is a WIN, not rudeness; model both answers with equal joy.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>name onions · peas · carrots · beans · mushrooms · potatoes · pumpkin · tomatoes;</li>
+        <li>answer “Do you like…?” truthfully with Yes, I do! / No, I don't!;</li>
+        <li>read and write <i>bug, bed, jam, van</i>; tell b from d by the tummy trick.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">onions</span><span class="w">peas</span><span class="w">carrots</span><span class="w">beans</span><span class="w">mushrooms</span><span class="w">potatoes</span><span class="w">pumpkin</span><span class="w">tomatoes</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I like (peas). · Do you like (carrots)? — Yes, I do! / No, I don't! · I'm hungry!</div></div>
+      <div class="r"><div class="k">Form</div><div>Do + you + like + noun? Short answers as fixed chunks (Yes-I-do / No-I-don't).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div><i>vegetables</i> /ˈvedʒtəblz/ — 3 beats only; <i>mushrooms</i> /ʃ/; don't = /dəʊnt/ one beat.</div></div>
+      <div class="r"><div class="k">Phonics</div><div><b>Phonics Hero ур.7 (тетрадь стр.17–19)</b>: <b>b</b> /б/ · <b>j</b> /дж/ · <b>v</b> /в/ · «b и d не путай — у b животик справа!» · blending <i>bus, bug, bed, jam, jet, van</i> · «обведи слово» · диктант <i>bug, bed, jam, van</i> · tricky <i>are, was</i> · история «История про пса» (стр.19).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“No, I don't — is it rude?” → No! It's honest. Both answers get a thumbs-up.</div>
+      <div class="ccq" style="margin-bottom:12px">“Do you like peas? — can I answer «potato»?” → no — Yes, I do! or No, I don't!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> From занятия 1–6: greetings, feelings (hungry!), numbers, How many?, age; sounds s→f + CVC routine. Vegetables partly known from home in Russian — pictures carry the meaning.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Chunk order breaks («I yes do»)</td><td>Chant the two answers with claps: YES-I-do! / NO-I-don't!; recast + echo.</td></tr><tr><td>b / d reversals in writing</td><td>Spiky trick: у b животик СПРАВА (bed-hands mnemonic); check with fists-and-thumbs “bed”.</td></tr><tr><td>«I don't like» → sad faces / teasing</td><td>Frame dislikes as funny (Speaky hates onions — dramatic “Nooo!”); no comments on others' answers.</td></tr><tr><td>8 vegetables is a lot</td><td>Teach 4 + 4 (two rounds); the song recycles all 8; mastery ≠ today, exposure is fine.</td></tr><tr><td>Survey mingle → children just wander</td><td>Give a concrete goal: find ONE person who likes mushrooms — hands up when done.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Door: <span class="en">Good morning! How are you?</span> <span class="game">▶ Genki Disco Warm Up</span> → <span class="en">Freeze! Sit down.</span></p></td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · Speaky</td>
+      </tr>
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Review — woven in</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Hungry hook.</span> <span class="sp">🦝 Speaky</span> rubs his tummy: <span class="en">I'm HUNGRY! How are you?</span> — children answer truthfully. <span class="en">Speaky is hungry… let's cook! I can cook!</span> (зан.3 action!) — stir a huge pot together, counting ingredients: <span class="en">How many potatoes? Three!</span> (numbers зан.5). Today — FOOD!</p></td>
+        <td class="mat">Speaky · big pretend pot</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">8–9′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">ABC time!</span> ABC song → settle into phonics.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+      <tr>
+        <td class="min">9–24′</td>
+        <td class="stage"><div class="nm">Phonics Hero ур.7 — b·j·v</div><div class="zone">board → desks</div></td>
+        <td class="flow"><p><span class="ph">Speed reading — стр.17 №1.</span> Strip s→f (18 sounds!). There and back; whisper → LOUD.</p>
+      <p><span class="ph">Meet b · j · v.</span> <b>b</b> — отбиваем мяч: <span class="en">b-b!</span> · <b>j</b> — трясём желе: <span class="en">j-j-j!</span> · <b>v</b> — мотор фургона: <span class="en">vvv!</span> Spiky trick: <b>b и d — не путай! У b животик справа</b> (кулачки-«bed»). Copy ×3, mixed flash.</p>
+      <p><span class="ph">Blend — стр.18 №1.</span> Windows: <span class="en">/b/ /u/ /s/ — bus! /j/ /a/ /m/ — jam!</span> … <i>bug, bed, jet, van</i>.</p>
+      <p><span class="ph">Trace — стр.17 (desks).</span> Прописи <i>b · j · v · bus · jam</i>; whisper the sounds. Then «обведи слово» — стр.18 №2 (<i>bug/bus/bun, bad/bed/bud, jet/jam/jab, van/vet/vat</i>) — all read, all circle, partner check.</p>
+      <p><span class="ph">Dictation — стр.18 №3.</span> Segment → write → <span class="en">Show me!</span> Words: <i>bug, bed, jam, van</i> — watch the b-тummies! Tricky strip <b>are · was</b> (are — из «How old ARE you?»!). Medal ⭐.</p>
+      <p><span class="ph">Story — стр.19 «История про пса» (settler).</span> Echo-read 5 frames, finger under words: <span class="en">Sam has a big dog…</span> ⭐ draw-task goes home. Cheer!</p>
+      <p style="font-size:.84rem;color:var(--muted)">🎮 <b>Phonics Hub</b> (speakandsmile.ru/gmf1/phonics/, дорожка «Начинающие») — набор «g o u l f b» + «j v w x»: «Звуки»/«Блендинг». <b style="color:var(--zone)">◆ Support:</b> dictation first letters given. <b style="color:var(--zone)">▲ Extension:</b> word 5 <i>jet</i> by ear. ✔ <b>Assess:</b> Show-me boards — b/d reversals → bed-hands recast.</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> тетрадь стр.17–19 · b/j/v cards · pencils · Phonics Hub (board)</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">24–26′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p>First listen of <span class="game">Genki «I Like Vegetables»</span> — rub tummy on <span class="en">I like…</span>, wiggle a finger on <span class="en">Do you like…?</span></p></td>
+        <td class="mat"><b>Genki «I Like Vegetables»</b> mp3 (16)</td>
+      </tr>
+      <tr>
+        <td class="min">26–34′</td>
+        <td class="stage"><div class="nm">Presentation · 8 vegetables</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Round 1 (4 cards).</span> <span class="en">What's this? — Carrots!</span> Chorus ×3 each: onions (cry!), peas (tiny fingers), carrots (crunch!), beans. Quick flash-check out of order.</p>
+      <p><span class="ph">Round 2 (4 more).</span> mushrooms (umbrella hands), potatoes, pumpkin (big belly), tomatoes. Flash-check all 8.</p>
+      <p><span class="ph">Structure.</span> Model with Speaky: <span class="en">Do you like onions, Speaky? — Nooo! No, I don't!</span> (dramatic) <span class="en">Do you like jam? — YES, I DO!</span> Chant both answers with claps. ICQ: <span class="en">«Нравится» — can I say just «yes»?</span> → Yes, I do!</p></td>
+        <td class="mat">8 vegetable flashcards · Speaky</td>
+      </tr>
+      <tr>
+        <td class="min">34–41′</td>
+        <td class="stage"><div class="nm">Song &amp; taste survey</div><div class="zone">carpet → mingle</div></td>
+        <td class="flow"><p>Sing <span class="game">«I Like Vegetables»</span> with mimes; verse of <span class="game">«Do You Like Food?»</span> (12) — answer truthfully with thumbs up/down + chunk.</p>
+      <p><span class="game">▶ Find someone who…:</span> each child gets ONE vegetable card. Mingle: <span class="en">Do you like [mushrooms]? — Yes, I do! / No, I don't!</span> Goal: find one YES for your card, then swap cards and go again. Everybody asking at once.</p></td>
+        <td class="mat"><b>«I Like Vegetables»</b> (16) · <b>«Do You Like Food?»</b> (12) mp3 · veg cards</td>
+      </tr>
+      <tr>
+        <td class="min">41–45′</td>
+        <td class="stage"><div class="nm">Vegetable basket — draw</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Settler (из КТП).</span> Draw YOUR vegetable basket — only the ones you like! Teacher circulates: <span class="en">What's in your basket? — Carrots! Do you like onions? — No, I don't!</span> Partner peeks &amp; asks too (RallyRobin).</p>
+      <p><span class="en">Finishing in 5…4…3…2…1… pencils down.</span></p></td>
+        <td class="mat">paper · crayons</td>
+      </tr>
+      <tr>
+        <td class="min">45–53′</td>
+        <td class="stage"><div class="nm">▶ Karuta + shop game</div><div class="zone">carpet, pairs</div></td>
+        <td class="flow"><p><span class="game">▶ Karuta · vegetables</span> (pairs, all at once): 8 mini-cards spread; caller (teacher, then children in turns): <span class="en">Peas!</span> → slap. Round 2: caller says <span class="en">I like […]!</span> — full sentence.</p>
+      <p><span class="ph">▶ Speaky's shop (finale, teams of 4):</span> each team sends a “shopper” in rotation to the carpet-shop: team chants <span class="en">Do you like tomatoes?</span> — shopper grabs the card and answers <span class="en">Yes, I do!</span> → brings it back. Team with the fullest basket cheers everyone.</p></td>
+        <td class="mat">vegetable mini-cards per pair · <span class="game">▶ Karuta</span></td>
+      </tr>
+      <tr>
+        <td class="min">53–56′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner: I like… (2 things) and ask: Do you like…?</span> (20 sec each.)</p>
+      <p>Speaky stamp: <span class="en">I can say what I like!</span></p></td>
+        <td class="mat">Speaky stamp</td>
+      </tr>
+      <tr>
+        <td class="min">56–58′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Mmm, what a feast! Let's sing Goodbye.</span> Goodbye song.</p></td>
+        <td class="mat"><b>Goodbye song</b> mp3</td>
+      </tr>
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Vegetable card at the door: <span class="en">Do you like […]? — Yes, I do! / No, I don't!</span> → <span class="en">Goodbye!</span></p></td>
+        <td class="mat">vegetable cards</td>
+      </tr>
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>🦸 Phonics Hero:</b> re-read <b>«История про пса» (стр.19)</b> to the family + draw the bottom sentence (<span class="en">The dog naps on the log.</span>). <b>App (Practice):</b> vegetables mini-set (listen &amp; tap), 5–7 мин. <b>Family task:</b> at dinner ask <span class="en">Do you like…?</span> about что на столе.</p></td>
+        <td class="mat">Phonics Hero стр.17–19 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · GMF1 с нуля · Вводный блок Genki · Занятие 7 — lesson plan &amp; staging</span>
+    <span>Phonics verified against Phonics Hero 2.0 стр.17–19 · КТП-с-нуля занятие 7 · songs: Genki 16·12.</span>
+  </div>
+</div>

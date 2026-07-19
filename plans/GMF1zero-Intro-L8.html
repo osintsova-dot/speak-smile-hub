@@ -1,0 +1,244 @@
+<meta charset="utf-8">
+<title>GMF1 (с нуля) · Intro · Занятие 8 — Do you like colours? (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 (с нуля) · Вводный блок Genki · Занятие 8 / Intro L8 — Colours + What's your favourite colour?</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., first-year beginners · линия с нуля) · 60 min · Genki English + Phonics Hero · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 28.09–04.10 · Занятие 8</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · pairs &amp; teams</span><span class="chip">🦸 Phonics Hero ур.8 · w·x·y + история про лиса</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 10+ colours</b> and answer “What's your favourite colour? — It's (red)! / I like (blue)!”</li>
+      <li><span class="lb">Subsidiary.</span> Phonics ур.8: sounds <b>w·x·y</b>, yes/no reading task, story «Лис и фургон»; recycle Do you like…? (зан.7) and numbers (six blue spots!) with the new colour words.</li>
+      <li><span class="lb">Personal.</span> Colours live on REAL things — clothes, crayons, the room; never drill colour cards alone.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>name red · orange · yellow · green · blue · pink · purple · black · white · brown (+ gold, silver, bronze for fun);</li>
+        <li>answer “What's your favourite colour?” and ask a friend;</li>
+        <li>read and write <i>web, box, six, yes</i>; answer yes/no to short written sentences.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">red</span><span class="w">orange</span><span class="w">yellow</span><span class="w">green</span><span class="w">blue</span><span class="w">pink</span><span class="w">purple</span><span class="w">black</span><span class="w">white</span><span class="w">brown</span><span class="w">gold</span><span class="w">silver</span><span class="w">bronze</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What's your favourite colour? — It's (red)! · I like (blue)! · Do you like (green)? — Yes, I do!</div></div>
+      <div class="r"><div class="k">Form</div><div>favourite = самый любимый (ONE!). It's + colour as the short answer chunk.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div><i>purple</i> /ˈpɜːpl/ two beats; <i>yellow</i> /ˈjeləʊ/ (not «еллоу» with hard л); <i>favourite</i> — 2 beats: FAV-rit.</div></div>
+      <div class="r"><div class="k">Phonics</div><div><b>Phonics Hero ур.8 (тетрадь стр.20–22)</b>: <b>w</b> /у-волны/ · <b>x</b> /кс/ · <b>y</b> /й/ · blending <i>web, fox, box, six, wig, yes</i> · «да/нет» по прочитанному · диктант <i>web, box, six, yes</i> · tricky <i>go, my</i> · история «Лис и фургон» (стр.22).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“Favourite — many colours or ONE best?” → one best (hug gesture).</div>
+      <div class="ccq" style="margin-bottom:12px">“x — one letter… how many sounds?” → TWO: /к//с/ — fo-x!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> From занятия 1–7: Do you like…? + Yes/No chunks (fresh from зан.7 — recycle hard), numbers, feelings. Sounds s→v; CVC routine solid; several colour words may be half-known from cartoons.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>purple / pink mixed</td><td>Contrast pair with real crayons in hand; slow-motion drill pur-ple with a purple wave.</td></tr><tr><td>favourite → child lists 5 colours</td><td>CCQ «one best!»; model choosing painfully: “Mmm… blue? red? … PURPLE! It's purple!”</td></tr><tr><td>x in reading: child says /икс/</td><td>Recast with the karate chop: /кс/! fo-x, bo-x, si-x.</td></tr><tr><td>Touch-the-colour game → running chaos</td><td>Walk-only rule + Freeze!; call colours while children are mid-search to reset pace.</td></tr><tr><td>Yes/no reading task guessed, not read</td><td>Read each sentence chorally first, THEN vote thumbs up/down — voting forces listening to print.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Door: <span class="en">Good morning! How are you?</span> <span class="game">▶ Genki Disco Warm Up</span> → <span class="en">Freeze! Sit down.</span></p></td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · Speaky</td>
+      </tr>
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Review — woven in</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Do you like…? → colours hook.</span> <span class="sp">🦝 Speaky</span> shows crayons: <span class="en">Do you like carrots? Yes! Carrots are ORANGE! Do you like tomatoes? Tomatoes are RED!</span> — vegetables from зан.7 introduce their colours.</p>
+      <p><span class="game">▶ RallyRobin:</span> pairs — <span class="en">Do you like…? — Yes, I do! / No, I don't!</span> with veg cards, 2 turns each.</p></td>
+        <td class="mat">Speaky · crayons · veg cards from зан.7</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">8–9′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">ABC time!</span> ABC song → settle into phonics.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+      <tr>
+        <td class="min">9–24′</td>
+        <td class="stage"><div class="nm">Phonics Hero ур.8 — w·x·y</div><div class="zone">board → desks</div></td>
+        <td class="flow"><p><span class="ph">Speed reading — стр.20 №1.</span> Strip s→v (21 sound!). Beat your time; silly voices.</p>
+      <p><span class="ph">Meet w · x · y.</span> <b>w</b> — волны руками: <span class="en">w-w!</span> · <b>x</b> — рентген-каратэ: <span class="en">кс-кс!</span> (одна буква — ДВА звука!) · <b>y</b> — йо-йо: <span class="en">й-й!</span> Copy ×3, mixed flash.</p>
+      <p><span class="ph">Blend — стр.21 №1.</span> Windows: <span class="en">/w/ /e/ /b/ — web! /f/ /o/ /x/ — fox!</span> … <i>box, six, wig, yes</i>.</p>
+      <p><span class="ph">Trace — стр.20 (desks).</span> Прописи <i>w · x · y · web · fox</i>; whisper.</p>
+      <p><span class="ph">Yes/no — стр.21 №2 (all vote).</span> Picture + sentence <span class="en">It is a fox.</span> — choral read, every child votes thumbs up/down, then circles yes/no. 4 sentences; partner check.</p>
+      <p><span class="ph">Dictation — стр.21 №3.</span> Segment → write → <span class="en">Show me!</span> Words: <i>web, box, six, yes</i>. Tricky strip <b>go · my</b> (<b>my</b> — из «MY name is»!). Medal ⭐.</p>
+      <p><span class="ph">Story — стр.22 «Лис и фургон» (settler).</span> Echo-read 5 frames: <span class="en">A red van. A fox jumps in the van…</span> ⭐ count the foxes — and say the VAN's colour: <span class="en">It's RED!</span> — сегодняшняя тема уже в истории.</p>
+      <p style="font-size:.84rem;color:var(--muted)">🎮 <b>Phonics Hub</b> (speakandsmile.ru/gmf1/phonics/, дорожка «Начинающие») — набор «j v w x»: «Звуки»/«Блендинг» + история. <b style="color:var(--zone)">◆ Support:</b> yes/no — read just 2 sentences. <b style="color:var(--zone)">▲ Extension:</b> extra word <i>wig</i>. ✔ <b>Assess:</b> thumb-votes + Show-me boards.</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> тетрадь стр.20–22 · w/x/y cards · pencils · Phonics Hub (board)</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">24–26′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p>First listen of <span class="game">Genki «Colours»</span> — point at anything of that colour as it's named.</p></td>
+        <td class="mat"><b>Genki «Colours»</b> mp3 (52)</td>
+      </tr>
+      <tr>
+        <td class="min">26–34′</td>
+        <td class="stage"><div class="nm">Presentation · colours + favourite</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Colours on real things.</span> Crayon up: <span class="en">What colour is it? — It's red!</span> Chorus ×2, then instantly anchor: <span class="en">Point at something red!… blue!… green!</span> Cover 10 colours + the fun three (gold · silver · bronze — medals!).</p>
+      <p><span class="ph">Favourite.</span> <span class="sp">🦝 Speaky</span> agonises: <span class="en">Blue? Red? … PURPLE! My favourite colour is purple! What's YOUR favourite colour?</span> Back-chain the question; model answer chunk: <span class="en">It's […]!</span> Ask 3–4 children, class echoes each answer.</p></td>
+        <td class="mat">crayons/colour cards · Speaky</td>
+      </tr>
+      <tr>
+        <td class="min">34–41′</td>
+        <td class="stage"><div class="nm">Song &amp; colour touch</div><div class="zone">room, moving</div></td>
+        <td class="flow"><p>Sing <span class="game">«Colours»</span>; then a verse of <span class="game">«What's Your Favorite…?»</span> (55) — each child answers with their colour word.</p>
+      <p><span class="game">▶ Touch it! (walking):</span> <span class="en">Touch something… GREEN!</span> — all walk-fast and touch; while touching, everyone chants <span class="en">Green! Green!</span> 6–7 rounds, include clothes: <span class="en">Touch something white on YOU!</span> Reset: <span class="en">Freeze! Carpet.</span></p></td>
+        <td class="mat"><b>«Colours»</b> (52) · <b>«What's Your Favorite…?»</b> (55) mp3</td>
+      </tr>
+      <tr>
+        <td class="min">41–45′</td>
+        <td class="stage"><div class="nm">Rainbow snake</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Settler (из КТП).</span> Draw a long snake and colour it in your FAVOURITE colours. Teacher circulates: <span class="en">What's your favourite colour? — It's pink! How many colours on your snake? — Six!</span> (numbers woven in).</p>
+      <p><span class="en">Finishing in 5…4…3…2…1… pencils down.</span></p></td>
+        <td class="mat">paper · crayons</td>
+      </tr>
+      <tr>
+        <td class="min">45–53′</td>
+        <td class="stage"><div class="nm">▶ Fan-N-Pick · colour talk</div><div class="zone">carpet, teams of 4</div></td>
+        <td class="flow"><p><span class="game">▶ Fan-N-Pick</span> (colour cards): ① fans the cards <span class="en">Pick a card!</span> · ② picks &amp; asks <span class="en">Do you like [blue]?</span> · ③ answers truthfully <span class="en">Yes, I do! My favourite colour is…!</span> · ④ praises <span class="en">Well done!</span> Rotate roles each turn — every child speaks every round.</p>
+      <p>🎮 <b>Digital option (projector):</b> <a href="https://speakandsmile.ru/gmf1/games/starter-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">starter-board</a> — S&amp;S board game, набор Starter (colours): teams roll, but <b>the whole class names every colour cell aloud</b>. One lap if the screen is free.</p></td>
+        <td class="mat">colour cards · <span class="game">▶ Fan-N-Pick</span> · 🎮 <a href="https://speakandsmile.ru/gmf1/games/starter-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">starter-board</a></td>
+      </tr>
+      <tr>
+        <td class="min">53–56′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Show your snake. Say: My favourite colour is…! Ask your partner.</span> (20 sec each.)</p>
+      <p>Speaky stamp: <span class="en">I can say my favourite colour!</span></p></td>
+        <td class="mat">Speaky stamp</td>
+      </tr>
+      <tr>
+        <td class="min">56–58′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">What a rainbow class! Let's sing Goodbye.</span> Goodbye song.</p></td>
+        <td class="mat"><b>Goodbye song</b> mp3</td>
+      </tr>
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>At the door: <span class="en">What's your favourite colour? — It's […]!</span> → <span class="en">Goodbye!</span></p></td>
+        <td class="mat">—</td>
+      </tr>
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>🦸 Phonics Hero:</b> re-read <b>«Лис и фургон» (стр.22)</b> to the family. <b>App (Practice):</b> colours mini-set, 5–7 мин. 🎮 <b>Дома:</b> <a href="https://speakandsmile.ru/gmf1/games/starter-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">starter-board</a> — Starter colours, называй клетки вслух (5 мин). <b>Family task:</b> ask everyone <span class="en">What's your favourite colour?</span></p></td>
+        <td class="mat">Phonics Hero стр.20–22 · app · 🎮 <a href="https://speakandsmile.ru/gmf1/games/starter-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">starter-board</a></td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · GMF1 с нуля · Вводный блок Genki · Занятие 8 — lesson plan &amp; staging</span>
+    <span>Phonics verified against Phonics Hero 2.0 стр.20–22 · КТП-с-нуля занятие 8 · songs: Genki 52·55 (в КТП «What's your favourite colour?» — в каталоге это Colours + What's Your Favorite…?).</span>
+  </div>
+</div>
