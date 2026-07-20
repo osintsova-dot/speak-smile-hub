@@ -11422,7 +11422,7 @@ window.PROGRAMS = {
       "Phonics Hero ур.23: Magic E: повторение (тетрадь стр.64–65) — (b) закрепление · Tricky: might, across"
      ]
     ],
-    "sec": "UNIT 4 — The nature trail · уроки 34–39 · Январь"
+    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
    },
    {
     "n": 35,
@@ -11452,7 +11452,7 @@ window.PROGRAMS = {
       "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — (a) первое знакомство · Tricky: second, hard"
      ]
     ],
-    "sec": "UNIT 4 — The nature trail · уроки 34–39 · Январь"
+    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
    },
    {
     "n": 36,
@@ -11482,7 +11482,7 @@ window.PROGRAMS = {
       "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — (b) закрепление · Tricky: open, seem"
      ]
     ],
-    "sec": "UNIT 4 — The nature trail · уроки 34–39 · Январь"
+    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
    },
    {
     "n": 37,
@@ -11512,7 +11512,7 @@ window.PROGRAMS = {
       "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — (a) первое знакомство · Tricky: together, until"
      ]
     ],
-    "sec": "UNIT 4 — The nature trail · уроки 34–39 · Январь"
+    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
    },
    {
     "n": 38,
@@ -11542,7 +11542,7 @@ window.PROGRAMS = {
       "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — (b) закрепление · Tricky: something, often"
      ]
     ],
-    "sec": "UNIT 4 — The nature trail · уроки 34–39 · Январь"
+    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
    },
    {
     "n": 39,
@@ -11572,7 +11572,7 @@ window.PROGRAMS = {
       "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — (a) первое знакомство · Tricky: young, side"
      ]
     ],
-    "sec": "UNIT 4 — The nature trail · уроки 34–39 · Январь"
+    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
    },
    {
     "n": 40,
@@ -18188,684 +18188,762 @@ window.PROGRAMS = {
     "n": 1,
     "week": "03.09–06.09",
     "type": "",
-    "title": "Genki Disco Warm Up + Rock Paper Scissors",
-    "unit": "Юнит 1 Урок 1",
+    "title": "Genki Disco Warm Up",
+    "unit": "Adventure Урок 1",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Genki Disco Warm Up + Rock Paper Scissors"
+      "Genki Disco Warm Up"
      ],
      [
       "Лексика",
-      "stand up, sit down, hands up, bow, clap, cheer, rock, paper, scissors"
+      "stand up, sit down, hands up, hands down, bow, clap, jump, cheer"
      ],
      [
       "Речевые структуры",
-      "Stand up! Sit down! Hands up! Rock, paper, scissors! I win!"
+      "Stand up! Sit down! Hands up! Hands down! Bow! Clap! Jump! Cheer!"
      ],
      [
       "Виды деятельности",
-      "Genki Disco TPR song, Rock-Paper-Scissors song & tournament, команды под музыку"
+      "Презентация Genki Disco Warm Up (TPR-песня): команды под музыку, разминка-игра, зеркало за учителем. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 1 Урок 1"
+    "sec": "Adventure Урок 1"
    },
    {
     "n": 2,
     "week": "07.09–13.09",
     "type": "",
-    "title": "What's your name? + How are you?",
-    "unit": "Юнит 1 Урок 2",
+    "title": "Rock, Paper, Scissors",
+    "unit": "Adventure Урок 2",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "What's your name? + How are you?"
+      "Rock, Paper, Scissors"
      ],
      [
       "Лексика",
-      "name, hello, goodbye, happy, sad, tired, hungry, cold, great, good, OK"
+      "rock, paper, scissors, I win, try again"
      ],
      [
       "Речевые структуры",
-      "What's your name? / My name is… / How are you? / I'm happy! / I'm sad."
+      "Rock, paper, scissors! I win! / Try again!"
      ],
      [
       "Виды деятельности",
-      "Name song, circle introductions, feelings song, emotion cards, mingle"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Rock-Paper-Scissors song, турнир по цепочке, движение под музыку (Disco Warm Up повтор). Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 1 Урок 2"
+    "sec": "Adventure Урок 2"
    },
    {
     "n": 3,
     "week": "07.09–13.09",
     "type": "",
-    "title": "I'm a superhero! + Left & Right",
-    "unit": "Юнит 1 Урок 3",
+    "title": "What's your name?",
+    "unit": "Adventure Урок 3",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "I'm a superhero! + Left & Right"
+      "What's your name?"
      ],
      [
       "Лексика",
-      "jump, run, hide, cook, stretch, climb, swim, fly, left, right, forward, back"
+      "name, my name is, hello, goodbye"
      ],
      [
       "Речевые структуры",
-      "I can jump! / I can fly! / I'm a superhero! / Left! Right! Forward! Back!"
+      "What's your name? / My name is… / Hello! / Goodbye!"
      ],
      [
       "Виды деятельности",
-      "Superhero song, action miming, Left & Right song, direction game, Simon says"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Name song, знакомство в кругу, мяч по кругу «What's your name?», mingle. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 1 Урок 3"
+    "sec": "Adventure Урок 3"
    },
    {
     "n": 4,
     "week": "14.09–20.09",
     "type": "",
-    "title": "Revision 1 · Юнит 1 (уроки 1–3)",
-    "unit": "Юнит 1 Урок 4",
+    "title": "How are you?",
+    "unit": "Adventure Урок 4",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 1 · Юнит 1 (уроки 1–3)"
+      "How are you?"
      ],
      [
       "Лексика",
-      "Warm-up commands, greetings, feelings, actions, directions (revision)"
+      "happy, sad, tired, hungry, cold, great, good, OK"
      ],
      [
       "Речевые структуры",
-      "What's your name? / How are you? / I can… / Left! Right! / Stand up!"
+      "How are you? / I'm happy. / I'm sad. / I'm tired. / I'm great!"
      ],
      [
       "Виды деятельности",
-      "Revision: flashcard quiz, song medley, speaking games, team challenge"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация How are you? song, карточки настроений, мимика-игра, эмоция-цепочка, mingle. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 1 Урок 4"
+    "sec": "Adventure Урок 4"
    },
    {
     "n": 5,
     "week": "14.09–20.09",
     "type": "",
-    "title": "I, you, we are happy!",
-    "unit": "Юнит 1 Урок 5",
+    "title": "I'm a superhero! I can…",
+    "unit": "Adventure Урок 5",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "I, you, we are happy!"
+      "I'm a superhero! I can…"
      ],
      [
       "Лексика",
-      "I, you, we, he, she, they, everybody, nobody, happy, sad, great"
+      "jump, run, hide, cook, stretch, climb, swim, fly, I can, superhero"
      ],
      [
       "Речевые структуры",
-      "I am happy. / You are happy. / We are happy! / Everybody is happy!"
+      "I'm a superhero! / I can jump! / I can fly! / I can swim!"
      ],
      [
       "Виды деятельности",
-      "Pronouns song, substitution drill, group chant, mime game"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Superhero song, мим действий (I can…), Simon says, эстафета «I can…». Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 1 Урок 5"
+    "sec": "Adventure Урок 5"
    },
    {
     "n": 6,
     "week": "21.09–27.09",
     "type": "",
-    "title": "Thank you! + Polite phrases",
-    "unit": "Юнит 1 Урок 6",
+    "title": "Left and Right",
+    "unit": "Adventure Урок 6",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Thank you! + Polite phrases"
+      "Left and Right"
      ],
      [
       "Лексика",
-      "thank you, please, sorry, excuse me, you're welcome, goodbye"
+      "left, right, forward, back, stop, spin, stand up, sit down, jump"
      ],
      [
       "Речевые структуры",
-      "Thank you! / Please! / You're welcome! / I'm sorry! / Excuse me!"
+      "Left! Right! Forward! Back! Stop! / Turn left! Turn right!"
      ],
      [
       "Виды деятельности",
-      "Polite phrases song, role-play dialogues, puppet activity"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Left & Right song, игра-навигация, Simon says «left/right», танец-команды. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 1 Урок 6"
+    "sec": "Adventure Урок 6"
    },
    {
     "n": 7,
     "week": "21.09–27.09",
     "type": "",
-    "title": "Seasons + Revision of Unit 1",
-    "unit": "Юнит 1 Урок 7",
+    "title": "Pronouns: I, you, he, she, we are happy",
+    "unit": "Adventure Урок 7",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Seasons + Revision of Unit 1"
+      "Pronouns: I, you, he, she, we are happy"
      ],
      [
       "Лексика",
-      "summer, autumn, winter, spring, I, you, he, she, we, they"
+      "I, you, he, she, we, they, everybody, am, is, are, happy"
      ],
      [
       "Речевые структуры",
-      "It's summer! / It's winter! / What season is it? / I love autumn!"
+      "I am happy. / You are happy. / He is happy. / We are happy! / Everybody is happy!"
      ],
      [
       "Виды деятельности",
-      "Seasons song, season cards, pronouns review, speaking mingle"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Pronouns song, подстановка he/she/we, групповой чант, показать на друга. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 1 Урок 7"
+    "sec": "Adventure Урок 7"
    },
    {
     "n": 8,
     "week": "28.09–04.10",
     "type": "",
-    "title": "Revision 2 · Юнит 1 полный",
-    "unit": "Юнит 1 Урок 8",
+    "title": "Thank you!",
+    "unit": "Adventure Урок 8",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 2 · Юнит 1 полный"
+      "Thank you!"
      ],
      [
       "Лексика",
-      "All Unit 1 vocabulary & phrases (revision)"
+      "thank you, please, you're welcome"
      ],
      [
       "Речевые структуры",
-      "Full Unit 1 revision: name, feelings, actions, directions, pronouns, polite phrases"
+      "Thank you! / Please! / You're welcome!"
      ],
      [
       "Виды деятельности",
-      "Team speaking games, Unit 1 song medley, Bingo, achievement check"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Thank you song как тема, ролевые диалоги «please/thank you», кукольная сценка (эта песня — ритуал конца каждого урока). Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 1 Урок 8"
+    "sec": "Adventure Урок 8"
    },
    {
     "n": 9,
     "week": "28.09–04.10",
     "type": "",
-    "title": "Numbers 1–12 + How old are you?",
-    "unit": "Юнит 2 Урок 1",
+    "title": "Adventure Review · уровень пройден",
+    "unit": "Adventure Review",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Numbers 1–12 + How old are you?"
+      "Adventure Review · уровень пройден"
      ],
      [
       "Лексика",
-      "one–twelve, years old, birthday, candles, how many"
+      "warm-up commands, greetings, feelings, actions, directions, pronouns, polite"
      ],
      [
       "Речевые структуры",
-      "One, two, three… / How old are you? / I'm five years old. / Happy Birthday!"
+      "What's your name? / How are you? / I can…? / Left! Right! / Thank you!"
      ],
      [
       "Виды деятельности",
-      "Numbers song, birthday song, counting games, number cards, age mingle"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); РЕВЬЮ УРОВНЯ Adventure: медли всех песен, флешкард-квиз, командные speaking-игры, проверка достижений. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 2 Урок 1"
+    "sec": "Adventure Review"
    },
    {
     "n": 10,
     "week": "05.10–11.10",
     "type": "",
-    "title": "What's the weather like? + Good Morning!",
-    "unit": "Юнит 2 Урок 2",
+    "title": "Numbers 1–12",
+    "unit": "Brainy Урок 1",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "What's the weather like? + Good Morning!"
+      "Numbers 1–12"
      ],
      [
       "Лексика",
-      "sunny, rainy, cloudy, windy, snowy, hot, good morning, afternoon, evening, night"
+      "one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, how many"
      ],
      [
       "Речевые структуры",
-      "What's the weather like? / It's sunny. / Good morning! / Good night!"
+      "One, two, three… twelve! / How many? / Count with me!"
      ],
      [
       "Виды деятельности",
-      "Weather song, weather wheel, greetings song, time-of-day cards, role-play"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Numbers song, счётные игры, карточки-цифры, счёт-эстафета, ритм-счёт. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 2 Урок 2"
+    "sec": "Brainy Урок 1"
    },
    {
     "n": 11,
     "week": "05.10–11.10",
     "type": "",
-    "title": "Do you like food? + Do you like animals?",
-    "unit": "Юнит 2 Урок 3",
+    "title": "How old are you?",
+    "unit": "Brainy Урок 2",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Do you like food? + Do you like animals?"
+      "How old are you?"
      ],
      [
       "Лексика",
-      "apples, bananas, cheese, eggs, fish, ice cream, dogs, cats, elephants, monkeys, tigers"
+      "how old, years old, birthday, one–twelve"
      ],
      [
       "Речевые структуры",
-      "Do you like apples? / Yes, I do! / No, I don't! / I love elephants!"
+      "How old are you? / I'm five years old. / Happy Birthday!"
      ],
      [
       "Виды деятельности",
-      "Food song, animals song, like/dislike survey, flashcards, speaking drill"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация How old are you? song, Birthday song, возраст-mingle, построиться по возрасту. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 2 Урок 3"
+    "sec": "Brainy Урок 2"
    },
    {
     "n": 12,
     "week": "12.10–18.10",
     "type": "",
-    "title": "Revision 1 · Юнит 2 (уроки 1–3)",
-    "unit": "Юнит 2 Урок 4",
+    "title": "What's the weather?",
+    "unit": "Brainy Урок 3",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 1 · Юнит 2 (уроки 1–3)"
+      "What's the weather?"
      ],
      [
       "Лексика",
-      "Numbers 1–12, weather, greetings, food, animals (revision)"
+      "weather, sunny, rainy, cloudy, windy, snowy, hot, cold"
      ],
      [
       "Речевые структуры",
-      "How old are you? / What's the weather? / Do you like…? / Yes/No, I do/don't."
+      "What's the weather? / It's sunny. / It's rainy. / It's windy. / It's cold."
      ],
      [
       "Виды деятельности",
-      "Revision games: number relay, weather quiz, food/animals Bingo"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Weather song, колесо погоды, погода-карточки, TPR по погоде, «какая сегодня погода?». Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 2 Урок 4"
+    "sec": "Brainy Урок 3"
    },
    {
     "n": 13,
     "week": "12.10–18.10",
     "type": "",
-    "title": "I'm sorry! + Feelings review",
-    "unit": "Юнит 2 Урок 5",
+    "title": "Good Morning!",
+    "unit": "Brainy Урок 4",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "I'm sorry! + Feelings review"
+      "Good Morning!"
      ],
      [
       "Лексика",
-      "sorry, excuse me, it's OK, no problem, happy, sad, tired, hungry, cold"
+      "good morning, good afternoon, good evening, good night"
      ],
      [
       "Речевые структуры",
-      "I'm sorry! / Excuse me! / It's OK! / No problem! / How are you feeling?"
+      "Good morning! / Good afternoon! / Good evening! / Good night!"
      ],
      [
       "Виды деятельности",
-      "Polite phrases song, feelings revision, role-play scenarios, emotion game"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Good Morning song, карточки времени суток, ролевой круг приветствий. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 2 Урок 5"
+    "sec": "Brainy Урок 4"
    },
    {
     "n": 14,
     "week": "19.10–25.10",
     "type": "",
-    "title": "Review games · Numbers, weather, likes",
-    "unit": "Юнит 2 Урок 6",
+    "title": "Do you like food?",
+    "unit": "Brainy Урок 5",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Review games · Numbers, weather, likes"
+      "Do you like food?"
      ],
      [
       "Лексика",
-      "All Unit 2 vocabulary in context"
+      "apples, bananas, cheese, eggs, fish, ice cream, do you like, yes I do, no I don't"
      ],
      [
       "Речевые структуры",
-      "Revision of all Unit 2 key phrases in communicative games"
+      "Do you like apples? / Yes, I do! / No, I don't!"
      ],
      [
       "Виды деятельности",
-      "Genki team review games, song medley, speaking mingle, quiz"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Do you like food? song, опрос вкусов, флешкарды-еда, like/dislike сортировка. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 2 Урок 6"
+    "sec": "Brainy Урок 5"
    },
    {
     "n": 15,
     "week": "19.10–25.10",
     "type": "",
-    "title": "Cross-unit revision · Units 1–2",
-    "unit": "Юнит 2 Урок 7",
+    "title": "Do you like animals?",
+    "unit": "Brainy Урок 6",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Cross-unit revision · Units 1–2"
+      "Do you like animals?"
      ],
      [
       "Лексика",
-      "All Units 1–2 vocabulary & structures"
+      "dogs, cats, elephants, monkeys, tigers, do you like, yes I do, no I don't"
      ],
      [
       "Речевые структуры",
-      "What's your name? / How are you? / Do you like…? / What's the weather?"
+      "Do you like elephants? / Yes, I do! / No, I don't!"
      ],
      [
       "Виды деятельности",
-      "Cross-unit speaking games, flashcard review, team challenge"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Do you like animals? song, зоо-опрос, флешкарды-животные, speaking-drill. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 2 Урок 7"
+    "sec": "Brainy Урок 6"
    },
    {
     "n": 16,
     "week": "26.10–01.11",
     "type": "",
-    "title": "Revision 2 · Юнит 2 полный + Units 1–2",
-    "unit": "Юнит 2 Урок 8",
+    "title": "I'm sorry!",
+    "unit": "Brainy Урок 7",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 2 · Юнит 2 полный + Units 1–2"
+      "I'm sorry!"
      ],
      [
       "Лексика",
-      "All Units 1–2 vocabulary & phrases (revision)"
+      "I'm sorry, excuse me, it's OK, no problem"
      ],
      [
       "Речевые структуры",
-      "Full revision Units 1–2: greetings, feelings, numbers, weather, food, animals"
+      "I'm sorry! / Excuse me! / It's OK! / No problem!"
      ],
      [
       "Виды деятельности",
-      "Team Bingo, song medley, speaking mingle, achievement check"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация I'm sorry! song, ролевые ситуации-извинения, кукольная сценка. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 2 Урок 8"
+    "sec": "Brainy Урок 7"
    },
    {
     "n": 17,
     "week": "26.10–01.11",
     "type": "",
-    "title": "I like animals + I like vegetables",
-    "unit": "Юнит 3 Урок 1",
+    "title": "Brainy Review · уровень пройден",
+    "unit": "Brainy Review",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "I like animals + I like vegetables"
+      "Brainy Review · уровень пройден"
      ],
      [
       "Лексика",
-      "kangaroos, bears, giraffes, penguins, onions, carrots, peas, potatoes, tomatoes"
+      "numbers 1–12, age, weather, greetings, food, animals, sorry"
      ],
      [
       "Речевые структуры",
-      "I like kangaroos! / I don't like onions. / Do you like vegetables? / Yes, I do!"
+      "How old are you? / What's the weather? / Do you like…? / Good morning!"
      ],
      [
       "Виды деятельности",
-      "Animals song, vegetables song, like/don't like sort, flashcards, survey"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); РЕВЬЮ УРОВНЯ Brainy: медли песен, число-эстафета, погода-квиз, Bingo еда/животные, проверка достижений. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 3 Урок 1"
+    "sec": "Brainy Review"
    },
    {
     "n": 18,
     "week": "02.11–08.11",
     "type": "",
-    "title": "Do you have any pets? + Animal noises",
-    "unit": "Юнит 3 Урок 2",
+    "title": "I like animals",
+    "unit": "Challenge Урок 1",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Do you have any pets? + Animal noises"
+      "I like animals"
      ],
      [
       "Лексика",
-      "hamster, rabbit, turtle, goldfish, lizard, dog→woof, cat→meow, cow→moo"
+      "kangaroos, bears, giraffes, penguins, I like, I don't like"
      ],
      [
       "Речевые структуры",
-      "Do you have any pets? / I have a rabbit. / What noise does a dog make? / Woof!"
+      "I like kangaroos! / I don't like bears. / Do you like giraffes?"
      ],
      [
       "Виды деятельности",
-      "Pets song, animal noises song, sound game, show & tell, call & response"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация I like animals song, like/don't-like сортировка, зоо-опрос, флешкарды. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 3 Урок 2"
+    "sec": "Challenge Урок 1"
    },
    {
     "n": 19,
     "week": "02.11–08.11",
     "type": "",
-    "title": "Baby Rabbit Family + Brothers or Sisters",
-    "unit": "Юнит 3 Урок 3",
+    "title": "Vegetables",
+    "unit": "Challenge Урок 2",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Baby Rabbit Family + Brothers or Sisters"
+      "Vegetables"
      ],
      [
       "Лексика",
-      "dad, mum, sister, brother, grandma, grandpa, baby, older, younger, only child"
+      "onions, carrots, peas, potatoes, tomatoes, I like, I don't like"
      ],
      [
       "Речевые структуры",
-      "This is my dad. / I have one brother. / Do you have any brothers or sisters?"
+      "Do you like carrots? / Yes, I do! / I don't like onions."
      ],
      [
       "Виды деятельности",
-      "Family song, family tree activity, survey game, introduce-your-family"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Vegetables song, овощная корзина-игра, вкус-опрос, аппликация-огород. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 3 Урок 3"
+    "sec": "Challenge Урок 2"
    },
    {
     "n": 20,
     "week": "09.11–15.11",
     "type": "",
-    "title": "Revision 1 · Юнит 3 (уроки 1–3)",
-    "unit": "Юнит 3 Урок 4",
+    "title": "Do you have any pets?",
+    "unit": "Challenge Урок 3",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 1 · Юнит 3 (уроки 1–3)"
+      "Do you have any pets?"
      ],
      [
       "Лексика",
-      "Animals, vegetables, pets, animal noises, family (revision)"
+      "hamster, rabbit, turtle, goldfish, lizard, do you have, I have"
      ],
      [
       "Речевые структуры",
-      "I like… / I have a… / What noise does a … make? / This is my…"
+      "Do you have any pets? / Yes, I have a rabbit. / No, I don't."
      ],
      [
       "Виды деятельности",
-      "Revision games: animal noises relay, family quiz, pets survey revision"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Pets song, опрос «есть ли питомец?», show & tell, флешкарды. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 3 Урок 4"
+    "sec": "Challenge Урок 3"
    },
    {
     "n": 21,
     "week": "09.11–15.11",
     "type": "",
-    "title": "Under the sea + Head & Shoulders",
-    "unit": "Юнит 3 Урок 5",
+    "title": "Animal Voices",
+    "unit": "Challenge Урок 4",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Under the sea + Head & Shoulders"
+      "Animal Voices"
      ],
      [
       "Лексика",
-      "whale, dolphin, shark, crab, jellyfish, head, shoulders, knees, toes, eyes, ears"
+      "dog woof, cat meow, cow moo, duck quack, sheep baa"
      ],
      [
       "Речевые структуры",
-      "I can see a whale! / What can you see? / Touch your head! / Knees and toes!"
+      "What noise does a dog make? / Woof! / A cat says meow!"
      ],
      [
       "Виды деятельности",
-      "Under the sea song, sea creatures cards, Head & Shoulders song (fast/slow)"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Animal Voices song, звук-угадайка, call & response, звериный оркестр. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 3 Урок 5"
+    "sec": "Challenge Урок 4"
    },
    {
     "n": 22,
     "week": "16.11–22.11",
     "type": "",
-    "title": "Body parts + Animals review",
-    "unit": "Юнит 3 Урок 6",
+    "title": "Baby Rabbit Family",
+    "unit": "Challenge Урок 5",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Body parts + Animals review"
+      "Baby Rabbit Family"
      ],
      [
       "Лексика",
-      "nose, mouth, eyes, ears, hair, tongue, neck + animals (revision)"
+      "dad, mum, sister, brother, grandma, grandpa, baby, this is my"
      ],
      [
       "Речевые структуры",
-      "Touch your nose! / What colour are your eyes? / I like… / Do you have…?"
+      "This is my dad. / This is my baby sister. / Who is this?"
      ],
      [
       "Виды деятельности",
-      "Body parts game, animal/body mash-up activity, TPR drill, drawing"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Baby Rabbit Family song, семейное дерево-аппликация, «представь свою семью». Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 3 Урок 6"
+    "sec": "Challenge Урок 5"
    },
    {
     "n": 23,
     "week": "16.11–22.11",
     "type": "",
-    "title": "Cross-unit revision · Units 1–3",
-    "unit": "Юнит 3 Урок 7",
+    "title": "Baby Monkey Family",
+    "unit": "Challenge Урок 6",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Cross-unit revision · Units 1–3"
+      "Baby Monkey Family"
      ],
      [
       "Лексика",
-      "All Units 1–3 vocabulary & structures"
+      "dad, mum, sister, brother, grandma, grandpa, baby"
      ],
      [
       "Речевые структуры",
-      "Full revision: name, feelings, likes, family, animals, body"
+      "This is my grandma. / This is my brother. / My family."
      ],
      [
       "Виды деятельности",
-      "Cross-unit speaking games, team quiz, song medley Units 1–3"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); отработка семьи через Baby Monkey Family song, пальчиковый театр семьи, показ фото-семьи. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 3 Урок 7"
+    "sec": "Challenge Урок 6"
    },
    {
     "n": 24,
     "week": "23.11–29.11",
     "type": "",
-    "title": "Revision 2 · Юнит 3 полный + Units 1–3",
-    "unit": "Юнит 3 Урок 8",
+    "title": "Do you have any brothers or sisters?",
+    "unit": "Challenge Урок 7",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 2 · Юнит 3 полный + Units 1–3"
+      "Do you have any brothers or sisters?"
      ],
      [
       "Лексика",
-      "All Units 1–3 vocabulary & phrases (revision)"
+      "older brother, younger sister, only child, one, two"
      ],
      [
       "Речевые структуры",
-      "Full revision Units 1–3: animals, family, body, all previous"
+      "Do you have any brothers or sisters? / I have one older brother. / I'm an only child."
      ],
      [
       "Виды деятельности",
-      "Team games, Bingo, speaking mingle, achievement check"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Brothers or Sisters song, семейный опрос, построиться по числу братьев/сестёр (последняя тема перед декабрьским Christmas-блоком). Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 3 Урок 8"
+    "sec": "Challenge Урок 7"
    },
    {
     "n": 25,
     "week": "23.11–29.11",
     "type": "",
-    "title": "Christmas Shapes + What colour is Christmas?",
-    "unit": "Юнит 4 Урок 1",
+    "title": "Genki Christmas",
+    "unit": "Christmas Урок 1",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Christmas Shapes + What colour is Christmas?"
+      "Genki Christmas"
      ],
      [
       "Лексика",
-      "triangle, circle, star, heart, square, oval, red, green, white, silver, gold"
+      "snowman, Santa Claus, reindeer, Christmas tree, Christmas stocking, candy cane, presents, Christmas card"
      ],
      [
       "Речевые структуры",
-      "What shape is it? / It's a triangle. / What colour is Christmas? / It's red!"
+      "Merry Christmas! / What's this? / It's a snowman! / Santa Claus! / Let's sing!"
      ],
      [
       "Виды деятельности",
-      "Shapes song, colours song, Christmas shape hunt, colouring activity"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Genki Christmas song (главная рождественская песня), рождественские флешкарды, хоровод, TPR. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 4 Урок 1"
+    "sec": "Christmas Урок 1"
    },
    {
     "n": 26,
     "week": "30.11–06.12",
     "type": "",
-    "title": "Let's build a snowman! + Winter vocabulary",
-    "unit": "Юнит 4 Урок 2",
+    "title": "Decorate the Christmas tree",
+    "unit": "Christmas Урок 2",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Let's build a snowman! + Winter vocabulary"
+      "Decorate the Christmas tree"
      ],
      [
       "Лексика",
-      "snowman, hat, scarf, buttons, carrot, snow, cold, coat, gloves, boots"
+      "angels, candles, elves, turkey, holly, bells, snow, mistletoe, how about some"
      ],
      [
       "Речевые структуры",
-      "Let's build a snowman! / Put on the hat! / Add the carrot nose! / It's cold!"
+      "How about some bells? / Yes, please! / Let's decorate the tree!"
      ],
      [
       "Виды деятельности",
-      "Snowman song, build-a-snowman craft, winter clothes link, TPR"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); Decorate the tree song, укрась ёлку (аппликация/на доске), «How about some…?»-ролевая. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 4 Урок 2"
+    "sec": "Christmas Урок 2"
    },
    {
     "n": 27,
     "week": "30.11–06.12",
     "type": "",
+    "title": "What colour is Christmas?",
+    "unit": "Christmas Урок 3",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "What colour is Christmas?"
+     ],
+     [
+      "Лексика",
+      "red, white, green, gold, blue, purple, silver"
+     ],
+     [
+      "Речевые структуры",
+      "What colour is Christmas? / It's red! / It's gold! / It's green!"
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); What colour is Christmas? song (повтор цветов), раскрась украшение, colour-охота на ёлке. Финал: Thank you song."
+     ]
+    ],
+    "sec": "Christmas Урок 3"
+   },
+   {
+    "n": 28,
+    "week": "07.12–13.12",
+    "type": "",
+    "title": "Christmas shapes",
+    "unit": "Christmas Урок 4",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "Christmas shapes"
+     ],
+     [
+      "Лексика",
+      "triangle, circle, diamond, oval, rectangle, heart, square, star"
+     ],
+     [
+      "Речевые структуры",
+      "I can see a triangle! / I can see a star! / What shape is it?"
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); Christmas Shapes song (фигуры, рождественская подача), поиск фигур в украшениях, аппликация-игрушка из фигур. Финал: Thank you song."
+     ]
+    ],
+    "sec": "Christmas Урок 4"
+   },
+   {
+    "n": 29,
+    "week": "07.12–13.12",
+    "type": "",
+    "title": "Let's build a snowman",
+    "unit": "Christmas Урок 5",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "Let's build a snowman"
+     ],
+     [
+      "Лексика",
+      "body, head, nose, neck, eyes, arms, buttons, mouth, snowman"
+     ],
+     [
+      "Речевые структуры",
+      "Let's build a snowman! / This is the head. / Add the nose! / Add the buttons!"
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); Snowman song (повтор частей тела), собери-снеговика крафт, «add the…»-команды, TPR. Финал: Thank you song."
+     ]
+    ],
+    "sec": "Christmas Урок 5"
+   },
+   {
+    "n": 30,
+    "week": "14.12–20.12",
+    "type": "",
     "title": "What would you like for Christmas?",
-    "unit": "Юнит 4 Урок 3",
+    "unit": "Christmas Урок 6",
     "fields": [
      [
       "Тема урока (Genki song)",
@@ -18873,7 +18951,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "toys, robot, bike, doll, book, game, present, Santa, gift, I'd like"
+      "robot, doll, bag, bear, phone, present, Santa, I'd like"
      ],
      [
       "Речевые структуры",
@@ -18881,51 +18959,25 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Christmas wishes song, letter to Santa, role-play, speaking game"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); Christmas Wishes song, письмо/рисунок Санте, ролевая «I'd like a…», опрос желаний. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 4 Урок 3"
+    "sec": "Christmas Урок 6"
    },
    {
-    "n": 28,
-    "week": "07.12–13.12",
+    "n": 31,
+    "week": "14.12–20.12",
     "type": "",
-    "title": "Revision 1 · Юнит 4 (уроки 1–3)",
-    "unit": "Юнит 4 Урок 4",
+    "title": "Christmas crafts & songs",
+    "unit": "Christmas Урок 7",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 1 · Юнит 4 (уроки 1–3)"
+      "Christmas crafts & songs"
      ],
      [
       "Лексика",
-      "Shapes, colours, snowman, winter clothes, Christmas wishes (revision)"
-     ],
-     [
-      "Речевые структуры",
-      "What shape? / What colour? / I'd like… / Let's build a snowman!"
-     ],
-     [
-      "Виды деятельности",
-      "Christmas revision games: shape Bingo, colour quiz, Christmas role-play"
-     ]
-    ],
-    "sec": "Юнит 4 Урок 4"
-   },
-   {
-    "n": 29,
-    "week": "07.12–13.12",
-    "type": "",
-    "title": "Christmas crafts",
-    "unit": "Юнит 4 Урок 5",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "Christmas crafts"
-     ],
-     [
-      "Лексика",
-      "Christmas tree, star, snowflake, card, scissors, glue, draw, colour"
+      "card, star, snowflake, glue, colour, draw, cut"
      ],
      [
       "Речевые структуры",
@@ -18933,233 +18985,311 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Christmas craft lesson, English instructions throughout, finished product sharing"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); крафт-урок: рождественская открытка/украшение, инструкции на английском, повтор всех декабрьских тем в песнях. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 4 Урок 5"
-   },
-   {
-    "n": 30,
-    "week": "14.12–20.12",
-    "type": "",
-    "title": "Christmas speaking games",
-    "unit": "Юнит 4 Урок 6",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "Christmas speaking games"
-     ],
-     [
-      "Лексика",
-      "All December vocabulary in context"
-     ],
-     [
-      "Речевые структуры",
-      "Revision of all Unit 4 phrases in communicative games"
-     ],
-     [
-      "Виды деятельности",
-      "Team speaking games, Christmas Bingo, charades, mingle"
-     ]
-    ],
-    "sec": "Юнит 4 Урок 6"
-   },
-   {
-    "n": 31,
-    "week": "14.12–20.12",
-    "type": "",
-    "title": "Cross-unit revision · Units 1–4",
-    "unit": "Юнит 4 Урок 7",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "Cross-unit revision · Units 1–4"
-     ],
-     [
-      "Лексика",
-      "All Units 1–4 vocabulary & structures"
-     ],
-     [
-      "Речевые структуры",
-      "Full revision: name, feelings, numbers, weather, food, animals, Christmas"
-     ],
-     [
-      "Виды деятельности",
-      "Cross-unit games, song medley Units 1–4, team quiz"
-     ]
-    ],
-    "sec": "Юнит 4 Урок 7"
+    "sec": "Christmas Урок 7"
    },
    {
     "n": 32,
     "week": "21.12–27.12",
     "type": "",
-    "title": "Christmas party lesson",
-    "unit": "Юнит 4 Урок 8",
+    "title": "Christmas party",
+    "unit": "Christmas Урок 8",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Christmas party lesson"
+      "Christmas party"
      ],
      [
       "Лексика",
-      "party, celebrate, sing, dance, happy, Merry Christmas, Happy New Year"
+      "party, celebrate, present, sing, dance, well done"
      ],
      [
       "Речевые структуры",
-      "Merry Christmas! / Happy New Year! / Let's sing! / Let's dance! / Well done!"
+      "Let's have a party! / Merry Christmas! / Let's sing and dance! / Well done!"
      ],
      [
       "Виды деятельности",
-      "Christmas party: favourite songs, gift exchange role-play, games, celebration"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); праздник-урок: обмен «подарками» в ролевой, любимые игры и песни, весёлое кумулятивное ревью. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 4 Урок 8"
+    "sec": "Christmas Урок 8"
    },
    {
     "n": 33,
     "week": "21.12–27.12",
     "type": "",
-    "title": "Revision 2 · Юнит 4 полный + Units 1–4",
-    "unit": "Юнит 4 Урок 9",
+    "title": "Happy New Year!",
+    "unit": "Christmas Урок 9",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 2 · Юнит 4 полный + Units 1–4"
+      "Happy New Year!"
      ],
      [
       "Лексика",
-      "All Unit 4 vocabulary & all previous units (revision)"
+      "Happy New Year, fireworks, count down, goodbye"
      ],
      [
       "Речевые структуры",
-      "Merry Christmas! / Happy New Year! / Full revision of Units 1–4"
+      "Happy New Year! / Ten, nine… Happy New Year! / See you next year! / Goodbye!"
      ],
      [
       "Виды деятельности",
-      "Final December revision: speaking games, song medley, achievement check → каникулы"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); последний урок перед каникулами: Happy New Year song, обратный отсчёт, пожелания, прощание → зимние каникулы. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 4 Урок 9"
+    "sec": "Christmas Урок 9"
    },
    {
     "n": 34,
     "week": "11.01–17.01",
     "type": "",
-    "title": "Make a face + Let's make a monster!",
-    "unit": "Юнит 5 Урок 1",
+    "title": "Challenge Review · уровень пройден (после каникул)",
+    "unit": "Challenge Review",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Make a face + Let's make a monster!"
+      "Challenge Review · уровень пройден (после каникул)"
      ],
      [
       "Лексика",
-      "nose, ears, mouth, eyes, eyebrows, cheeks, hair, tongue, horns, tail, wings, claws"
+      "animals, vegetables, pets, animal voices, family, siblings"
      ],
      [
       "Речевые структуры",
-      "Make a face! / Put on the eyes. / Let's make a monster! / Give him big teeth!"
+      "I like…? / Do you have any pets? / This is my…? / Brothers or sisters?"
      ],
      [
       "Виды деятельности",
-      "Make-a-face song, monster song, face/monster building game, drawing"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); РЕВЬЮ УРОВНЯ Challenge (реактивация после каникул): медли песен, семейный квиз, звук-игры, проверка достижений. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 5 Урок 1"
+    "sec": "Challenge Review"
    },
    {
     "n": 35,
     "week": "11.01–17.01",
     "type": "",
-    "title": "Doctor! Doctor! + Get well soon!",
-    "unit": "Юнит 5 Урок 2",
+    "title": "Under the Sea",
+    "unit": "Danger Урок 1",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Doctor! Doctor! + Get well soon!"
+      "Under the Sea"
      ],
      [
       "Лексика",
-      "doctor, hurts, hand, foot, tooth, stomach, head, leg, arm, sick, better, rest"
+      "whale, dolphin, shark, crab, jellyfish, I can see"
      ],
      [
       "Речевые структуры",
-      "Doctor! My hand hurts. / Get well soon! / Are you feeling better? / Yes, I am!"
+      "I can see a whale! / What can you see? / I can see a shark!"
      ],
      [
       "Виды деятельности",
-      "Doctor song, role-play (patient & doctor), body parts drill, get-well card"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Under the Sea song, морские карточки, «что ты видишь?», подводный крафт. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 5 Урок 2"
+    "sec": "Danger Урок 1"
    },
    {
     "n": 36,
     "week": "18.01–24.01",
     "type": "",
-    "title": "Winter Clothes + Summer Clothes",
-    "unit": "Юнит 5 Урок 3",
+    "title": "Head & Shoulders",
+    "unit": "Danger Урок 2",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Winter Clothes + Summer Clothes"
+      "Head & Shoulders"
      ],
      [
       "Лексика",
-      "hat, scarf, gloves, coat, boots, jumper, t-shirt, shorts, sandals, dress, cap"
+      "head, shoulders, knees, toes, eyes, ears"
      ],
      [
       "Речевые структуры",
-      "Put on your hat! / I'm wearing a scarf. / It's hot! / Take off your coat!"
+      "Head, shoulders, knees and toes! / Touch your head!"
      ],
      [
       "Виды деятельности",
-      "Clothes songs, seasons contrast, dress-up game, put on/take off drill"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Head & Shoulders song (fast/slow), TPR-игра на части тела, зеркало. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 5 Урок 3"
+    "sec": "Danger Урок 2"
    },
    {
     "n": 37,
     "week": "18.01–24.01",
     "type": "",
-    "title": "Revision 1 · Юнит 5 (уроки 1–3)",
-    "unit": "Юнит 5 Урок 4",
+    "title": "Make a Face",
+    "unit": "Danger Урок 3",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 1 · Юнит 5 (уроки 1–3)"
+      "Make a Face"
      ],
      [
       "Лексика",
-      "Face, monsters, body parts, health, clothes (revision)"
+      "nose, mouth, eyes, ears, hair"
      ],
      [
       "Речевые структуры",
-      "Make a face! / My… hurts. / Get well soon! / Put on your…! / I'm wearing…"
+      "Make a face! / This is the nose. / Put on the eyes. / Touch your mouth!"
      ],
      [
       "Виды деятельности",
-      "Revision: body & clothes Bingo, doctor role-play, monster drawing review"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Make a Face song, собери лицо-игра, рисование лица, TPR. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 5 Урок 4"
+    "sec": "Danger Урок 3"
    },
    {
     "n": 38,
     "week": "25.01–31.01",
     "type": "",
-    "title": "Treasure Adventure! + Directions review",
-    "unit": "Юнит 5 Урок 5",
+    "title": "Let's make a monster!",
+    "unit": "Danger Урок 4",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Treasure Adventure! + Directions review"
+      "Let's make a monster!"
      ],
      [
       "Лексика",
-      "treasure, map, island, left, right, forward, back, find, chest, gold"
+      "horns, tail, wings, claws, big, small, give him"
+     ],
+     [
+      "Речевые структуры",
+      "Let's make a monster! / Give him horns! / Give him big wings! / This is my monster!"
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Monster song, собираем монстра, «give him…»-команды, крафт-монстр (аппликация). Финал: Thank you song."
+     ]
+    ],
+    "sec": "Danger Урок 4"
+   },
+   {
+    "n": 39,
+    "week": "25.01–31.01",
+    "type": "",
+    "title": "Doctor, Doctor! Body parts",
+    "unit": "Danger Урок 5",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "Doctor, Doctor! Body parts"
+     ],
+     [
+      "Лексика",
+      "head, arm, leg, hand, foot, tummy, my … hurts, get well soon"
+     ],
+     [
+      "Речевые структуры",
+      "Doctor, doctor! / My arm hurts. / Where does it hurt? / Get well soon!"
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Doctor song, части тела-drill, ролевая доктор-пациент, открытка выздоровления. Финал: Thank you song."
+     ]
+    ],
+    "sec": "Danger Урок 5"
+   },
+   {
+    "n": 40,
+    "week": "01.02–07.02",
+    "type": "",
+    "title": "Winter clothes",
+    "unit": "Danger Урок 6",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "Winter clothes"
+     ],
+     [
+      "Лексика",
+      "hat, scarf, gloves, coat, boots, put on"
+     ],
+     [
+      "Речевые структуры",
+      "Put on your hat! / Put on your coat! / I'm wearing gloves. / It's cold!"
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Winter Clothes song, одевание-игра «put on…», dress-up, зимняя аппликация. Финал: Thank you song."
+     ]
+    ],
+    "sec": "Danger Урок 6"
+   },
+   {
+    "n": 41,
+    "week": "01.02–07.02",
+    "type": "",
+    "title": "Summer clothes",
+    "unit": "Danger Урок 7",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "Summer clothes"
+     ],
+     [
+      "Лексика",
+      "t-shirt, shorts, sandals, dress, cap, take off"
+     ],
+     [
+      "Речевые структуры",
+      "Put on your cap! / Take off your coat! / I'm wearing shorts. / It's hot!"
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Summer Clothes song, контраст зима/лето, dress-up, put on/take off drill. Финал: Thank you song."
+     ]
+    ],
+    "sec": "Danger Урок 7"
+   },
+   {
+    "n": 42,
+    "week": "08.02–14.02",
+    "type": "",
+    "title": "Danger Review · уровень пройден",
+    "unit": "Danger Review",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "Danger Review · уровень пройден"
+     ],
+     [
+      "Лексика",
+      "under the sea, body parts, face, monster, health, winter/summer clothes"
+     ],
+     [
+      "Речевые структуры",
+      "I can see…? / Touch your…! / My … hurts. / Put on your…!"
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); РЕВЬЮ УРОВНЯ Danger: медли песен, body-Bingo, доктор-ролевая, монстр-квиз, проверка достижений. Финал: Thank you song."
+     ]
+    ],
+    "sec": "Danger Review"
+   },
+   {
+    "n": 43,
+    "week": "08.02–14.02",
+    "type": "",
+    "title": "Treasure Adventure",
+    "unit": "Experts Урок 1",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "Treasure Adventure"
+     ],
+     [
+      "Лексика",
+      "map, treasure, left, right, forward, find"
      ],
      [
       "Речевые структуры",
@@ -19167,894 +19297,764 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Treasure song, classroom treasure hunt, directions review, team game"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Treasure Adventure song, поиск клада в классе, direction-команды, командная игра. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 5 Урок 5"
-   },
-   {
-    "n": 39,
-    "week": "25.01–31.01",
-    "type": "",
-    "title": "How many? + Numbers review",
-    "unit": "Юнит 5 Урок 6",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "How many? + Numbers review"
-     ],
-     [
-      "Лексика",
-      "numbers 1–20, count, how many, lots of, a few, many, none"
-     ],
-     [
-      "Речевые структуры",
-      "How many? / There are five. / Count to twenty! / How many monsters?"
-     ],
-     [
-      "Виды деятельности",
-      "How many song, counting games, number flashcards, team counting challenge"
-     ]
-    ],
-    "sec": "Юнит 5 Урок 6"
-   },
-   {
-    "n": 40,
-    "week": "01.02–07.02",
-    "type": "",
-    "title": "Cross-unit revision · Units 1–5",
-    "unit": "Юнит 5 Урок 7",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "Cross-unit revision · Units 1–5"
-     ],
-     [
-      "Лексика",
-      "All Units 1–5 vocabulary & structures"
-     ],
-     [
-      "Речевые структуры",
-      "Full revision: all previous + face, health, clothes, treasure, numbers"
-     ],
-     [
-      "Виды деятельности",
-      "Cross-unit speaking games, song medley, team challenge"
-     ]
-    ],
-    "sec": "Юнит 5 Урок 7"
-   },
-   {
-    "n": 41,
-    "week": "01.02–07.02",
-    "type": "",
-    "title": "Revision 2 · Юнит 5 полный + Units 1–5",
-    "unit": "Юнит 5 Урок 8",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "Revision 2 · Юнит 5 полный + Units 1–5"
-     ],
-     [
-      "Лексика",
-      "All Units 1–5 vocabulary & phrases (revision)"
-     ],
-     [
-      "Речевые структуры",
-      "Full revision Units 1–5"
-     ],
-     [
-      "Виды деятельности",
-      "Team Bingo, song medley, speaking mingle, achievement check"
-     ]
-    ],
-    "sec": "Юнит 5 Урок 8"
-   },
-   {
-    "n": 42,
-    "week": "08.02–14.02",
-    "type": "",
-    "title": "How much? + Numbers 13–20",
-    "unit": "Юнит 6 Урок 1",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "How much? + Numbers 13–20"
-     ],
-     [
-      "Лексика",
-      "penny, pound, dollar, price, cheap, expensive, thirteen–twenty, count"
-     ],
-     [
-      "Речевые структуры",
-      "How much is it? / It's one pound. / Thirteen, fourteen… / Count to twenty!"
-     ],
-     [
-      "Виды деятельности",
-      "Money song, teen numbers song, shop role-play, number line game"
-     ]
-    ],
-    "sec": "Юнит 6 Урок 1"
-   },
-   {
-    "n": 43,
-    "week": "08.02–14.02",
-    "type": "",
-    "title": "Rocket Launch + Shapes!",
-    "unit": "Юнит 6 Урок 2",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "Rocket Launch + Shapes!"
-     ],
-     [
-      "Лексика",
-      "countdown 10–1, blast off, rocket, space, circle, triangle, square, diamond, star"
-     ],
-     [
-      "Речевые структуры",
-      "Ten, nine… blast off! / What shape is it? / It's a circle! / Draw a square!"
-     ],
-     [
-      "Виды деятельности",
-      "Rocket countdown song, shapes song, shape Bingo, space craft activity"
-     ]
-    ],
-    "sec": "Юнит 6 Урок 2"
+    "sec": "Experts Урок 1"
    },
    {
     "n": 44,
     "week": "15.02–21.02",
     "type": "",
-    "title": "Fruit Market + Come on, come on!",
-    "unit": "Юнит 6 Урок 3",
+    "title": "How many?",
+    "unit": "Experts Урок 2",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Fruit Market + Come on, come on!"
+      "How many?"
      ],
      [
       "Лексика",
-      "apple, banana, mango, orange, grapes, strawberry, lemon, come on, hurry up, go"
+      "how many, count, one–twelve, lots of"
      ],
      [
       "Речевые структуры",
-      "What fruit would you like? / I'd like an apple. / Come on! / Hurry up! / Let's go!"
+      "How many? / There are five. / Count them! / How many stars?"
      ],
      [
       "Виды деятельности",
-      "Fruit market song, market role-play, action phrases song, race game"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация How many? song, счётные станции, «сколько предметов?», команда-счёт. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 6 Урок 3"
+    "sec": "Experts Урок 2"
    },
    {
     "n": 45,
     "week": "15.02–21.02",
     "type": "",
-    "title": "Revision 1 · Юнит 6 (уроки 1–3)",
-    "unit": "Юнит 6 Урок 4",
+    "title": "Numbers 13–20",
+    "unit": "Experts Урок 3",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 1 · Юнит 6 (уроки 1–3)"
+      "Numbers 13–20"
      ],
      [
       "Лексика",
-      "Money, numbers 13–20, shapes, fruit, action phrases (revision)"
+      "thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty"
      ],
      [
       "Речевые структуры",
-      "How much? / What shape? / I'd like… / Ten, nine… blast off! / Come on!"
+      "Thirteen, fourteen… twenty! / How many? / Count to twenty!"
      ],
      [
       "Виды деятельности",
-      "Revision: shop game, shape hunt, fruit market role-play, countdown race"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Teen Numbers song, число-линия, карточки, счёт-эстафета, число-Bingo. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 6 Урок 4"
+    "sec": "Experts Урок 3"
    },
    {
     "n": 46,
     "week": "22.02–28.02",
     "type": "",
-    "title": "Can you kick? + I can do it!",
-    "unit": "Юнит 6 Урок 5",
+    "title": "How much? Money",
+    "unit": "Experts Урок 4",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Can you kick? + I can do it!"
+      "How much? Money"
      ],
      [
       "Лексика",
-      "kick, catch, throw, bounce, spin, roll, hop, skip, ride a bike, swim, sing, dance"
+      "pounds, pence, price, cheap, expensive, how much"
      ],
      [
       "Речевые структуры",
-      "Can you kick? / Yes, I can! / No, I can't. / I can do it! / I can swim!"
+      "How much is it? / It's two pounds. / It's cheap! / It's expensive!"
      ],
      [
       "Виды деятельности",
-      "Sports actions song, I can do it song, can/can't survey, PE activity"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация How much? song, магазин-ролевая, ценники, «cheap/expensive», счёт денег. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 6 Урок 5"
+    "sec": "Experts Урок 4"
    },
    {
     "n": 47,
     "week": "22.02–28.02",
     "type": "",
-    "title": "Abilities review + Cross-unit",
-    "unit": "Юнит 6 Урок 6",
+    "title": "Rocket Launch! Numbers 10–100",
+    "unit": "Experts Урок 5",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Abilities review + Cross-unit"
+      "Rocket Launch! Numbers 10–100"
      ],
      [
       "Лексика",
-      "All can/can't vocabulary + Units 1–5 key phrases"
+      "ten, twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety, one hundred, countdown, blast off"
      ],
      [
       "Речевые структуры",
-      "Can you…? / Yes, I can! / I can… / I can't… / I love…"
+      "Ten, twenty, thirty… one hundred! / Ten, nine… blast off!"
      ],
      [
       "Виды деятельности",
-      "Can/can't speaking games, cross-unit revision activities, ability poster"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Rocket Launch song, счёт десятками, обратный отсчёт «blast off!», ракета-крафт. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 6 Урок 6"
+    "sec": "Experts Урок 5"
    },
    {
     "n": 48,
     "week": "01.03–07.03",
     "type": "",
-    "title": "Cross-unit revision · Units 1–6",
-    "unit": "Юнит 6 Урок 7",
+    "title": "Shapes",
+    "unit": "Experts Урок 6",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Cross-unit revision · Units 1–6"
+      "Shapes"
      ],
      [
       "Лексика",
-      "All Units 1–6 vocabulary & structures"
+      "circle, triangle, square, star, heart"
      ],
      [
       "Речевые структуры",
-      "Full revision: all previous + money, numbers, shapes, fruit, abilities"
+      "What shape is it? / It's a circle. / It's a star!"
      ],
      [
       "Виды деятельности",
-      "Cross-unit speaking games, team quiz, song medley Units 1–6"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Shapes song, форма-охота в классе, shape-Bingo, аппликация из фигур. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 6 Урок 7"
+    "sec": "Experts Урок 6"
    },
    {
     "n": 49,
     "week": "01.03–07.03",
     "type": "",
-    "title": "Revision 2 · Юнит 6 полный + Units 1–6",
-    "unit": "Юнит 6 Урок 8",
+    "title": "Experts Review · уровень пройден",
+    "unit": "Experts Review",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 2 · Юнит 6 полный + Units 1–6"
+      "Experts Review · уровень пройден"
      ],
      [
       "Лексика",
-      "All Units 1–6 vocabulary & phrases (revision)"
+      "treasure/directions, how many, numbers 13–20, money, 10–100, shapes"
      ],
      [
       "Речевые структуры",
-      "Full revision Units 1–6"
+      "Go left/right! / How many? / How much? / What shape is it?"
      ],
      [
       "Виды деятельности",
-      "Team Bingo, song medley, speaking mingle, achievement check"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); РЕВЬЮ УРОВНЯ Experts: медли песен, магазин-игра, счёт-эстафета, shape-hunt, проверка достижений. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 6 Урок 8"
+    "sec": "Experts Review"
    },
    {
     "n": 50,
     "week": "08.03–14.03",
     "type": "",
-    "title": "Where are you from? + How do you say…?",
-    "unit": "Юнит 7 Урок 1",
+    "title": "Fruit Market",
+    "unit": "Fantastic Урок 1",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Where are you from? + How do you say…?"
+      "Fruit Market"
      ],
      [
       "Лексика",
-      "England, Japan, Brazil, Russia, France, China, America, Australia, country"
+      "apple, orange, pineapple, banana, lemon, cherry, strawberry, watermelon, peach, grape, pear, kiwi"
      ],
      [
       "Речевые структуры",
-      "Where are you from? / I'm from Russia. / How do you say cat in English?"
+      "What's this? / What's that? / It's an apple. / It's a pineapple."
      ],
      [
       "Виды деятельности",
-      "Countries song, world map, flag cards, multilingual hello activity"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Fruit Market song, рынок-ролевая «What's this/that?», фрукт-угадайка, флешкарды. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 7 Урок 1"
+    "sec": "Fantastic Урок 1"
    },
    {
     "n": 51,
     "week": "08.03–14.03",
     "type": "",
-    "title": "I am a robot + Mr Octopus",
-    "unit": "Юнит 7 Урок 2",
+    "title": "Can you speak…?",
+    "unit": "Fantastic Урок 2",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "I am a robot + Mr Octopus"
+      "Can you speak…?"
      ],
      [
       "Лексика",
-      "robot, beep, turn, move, stop, fast, slow, octopus, eight, arms, sea"
+      "English, French, Chinese, Russian, Japanese, language"
      ],
      [
       "Речевые структуры",
-      "I am a robot! / Turn left! / Beep beep! / Mr Octopus has eight arms!"
+      "Can you speak English? / Yes, I can! / No, I can't. / Can you speak French?"
      ],
      [
       "Виды деятельности",
-      "Robot song, program-a-friend game, Mr Octopus song, counting & colours"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Can you speak…? song, языки-мультихелло, опрос «can you speak…?». Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 7 Урок 2"
+    "sec": "Fantastic Урок 2"
    },
    {
     "n": 52,
     "week": "15.03–21.03",
     "type": "",
-    "title": "What time is it? (1 + 2)",
-    "unit": "Юнит 7 Урок 3",
+    "title": "Come on, Come on! / Can you kick?",
+    "unit": "Fantastic Урок 3",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "What time is it? (1 + 2)"
+      "Come on, Come on! / Can you kick?"
      ],
      [
       "Лексика",
-      "o'clock, half past, one–twelve, morning, afternoon, evening, time, clock"
+      "kick, pass, shoot, save, catch, throw, head, score"
      ],
      [
       "Речевые структуры",
-      "What time is it? / It's one o'clock. / It's half past two. / Time for bed!"
+      "Can you kick? / Yes, I can! / Pass! Shoot! Score! / Come on, come on!"
      ],
      [
       "Виды деятельности",
-      "Time songs (two lessons: o'clock + half past), clock craft, daily routine link"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Can you kick? song, футбол-мим, эстафета «kick/pass/shoot», PE-активность. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 7 Урок 3"
+    "sec": "Fantastic Урок 3"
    },
    {
     "n": 53,
     "week": "15.03–21.03",
     "type": "",
-    "title": "Revision 1 · Юнит 7 (уроки 1–3)",
-    "unit": "Юнит 7 Урок 4",
+    "title": "I can do it!",
+    "unit": "Fantastic Урок 4",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 1 · Юнит 7 (уроки 1–3)"
+      "I can do it!"
      ],
      [
       "Лексика",
-      "Countries, robot commands, time, octopus/numbers (revision)"
+      "piano, guitar, drums, violin, recorder, can you do it, I can do it"
      ],
      [
       "Речевые структуры",
-      "Where are you from? / What time is it? / I am a robot! / Turn left!"
+      "Can you do it? / I can do it! / Can you play the piano? / Yes, I can!"
      ],
      [
       "Виды деятельности",
-      "Revision: countries quiz, robot game, time-telling drill, song medley"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация I can do it! song, «can you play the…?»-опрос, музыкальный мим, инструменты-карточки. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 7 Урок 4"
+    "sec": "Fantastic Урок 4"
    },
    {
     "n": 54,
     "week": "22.03–28.03",
     "type": "",
-    "title": "Summer Sports + Winter Sports",
-    "unit": "Юнит 7 Урок 5",
+    "title": "Where are you from?",
+    "unit": "Fantastic Урок 5",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Summer Sports + Winter Sports"
+      "Where are you from?"
      ],
      [
       "Лексика",
-      "swimming, tennis, football, cycling, skiing, ice skating, snowboarding, surfing"
+      "England, Japan, Russia, Brazil, France, America, country, flag"
      ],
      [
       "Речевые структуры",
-      "I like swimming! / Do you like tennis? / Can you ice skate? / Yes, I can!"
+      "Where are you from? / I'm from Russia. / He's from Japan. / I'm from Brazil."
      ],
      [
       "Виды деятельности",
-      "Sports songs (summer + winter), seasons contrast, like/can survey, miming"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Where are you from? song, карта мира, флаги-карточки, mingle-опрос по странам. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 7 Урок 5"
+    "sec": "Fantastic Урок 5"
    },
    {
     "n": 55,
     "week": "22.03–28.03",
     "type": "",
-    "title": "Sports + Time + Countries review",
-    "unit": "Юнит 7 Урок 6",
+    "title": "Fantastic Review · уровень пройден",
+    "unit": "Fantastic Review",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Sports + Time + Countries review"
+      "Fantastic Review · уровень пройден"
      ],
      [
       "Лексика",
-      "All Unit 7 vocabulary in context"
+      "fruit market, languages, ball skills, instruments, countries/flags"
      ],
      [
       "Речевые структуры",
-      "What time is it? / Where are you from? / I like… / Can you…?"
+      "What's this? / Can you speak…? / Can you kick? / Where are you from?"
      ],
      [
       "Виды деятельности",
-      "Unit 7 speaking games, sports flashcards, integrated review activity"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); РЕВЬЮ УРОВНЯ Fantastic: медли песен, рынок-игра, «can you…?»-опрос, флаги-квиз, проверка достижений. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 7 Урок 6"
+    "sec": "Fantastic Review"
    },
    {
     "n": 56,
     "week": "29.03–04.04",
     "type": "",
-    "title": "Cross-unit revision · Units 1–7",
-    "unit": "Юнит 7 Урок 7",
+    "title": "Where do you live?",
+    "unit": "Giant Урок 1",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Cross-unit revision · Units 1–7"
+      "Where do you live?"
      ],
      [
       "Лексика",
-      "All Units 1–7 vocabulary & structures"
+      "forest, river, bridge, farm, hospital, station, castle, supermarket, I live near the"
      ],
      [
       "Речевые структуры",
-      "Full revision: all previous + countries, robots, time, sports"
+      "Where do you live? / I live near the forest. / I live near the station."
      ],
      [
       "Виды деятельности",
-      "Cross-unit games, song medley Units 1–7, team challenge"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Where do you live? song, карта-«где я живу», рассказ о своём месте, флешкарды-места. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 7 Урок 7"
+    "sec": "Giant Урок 1"
    },
    {
     "n": 57,
     "week": "29.03–04.04",
     "type": "",
-    "title": "Revision 2 · Юнит 7 полный + Units 1–7",
-    "unit": "Юнит 7 Урок 8",
+    "title": "How do you say…?",
+    "unit": "Giant Урок 2",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 2 · Юнит 7 полный + Units 1–7"
+      "How do you say…?"
      ],
      [
       "Лексика",
-      "All Units 1–7 vocabulary & phrases (revision)"
+      "how do you say, in English, word"
      ],
      [
       "Речевые структуры",
-      "Full revision Units 1–7"
+      "How do you say cat in English? / How do you say… in English?"
      ],
      [
       "Виды деятельности",
-      "Team Bingo, song medley, speaking mingle, achievement check"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация How do you say…? song (review-тема), слово-мост RU→EN, угадай перевод-игра. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 7 Урок 8"
+    "sec": "Giant Урок 2"
    },
    {
     "n": 58,
     "week": "05.04–11.04",
     "type": "",
-    "title": "What sports do you play? + When is your birthday?",
-    "unit": "Юнит 8 Урок 1",
+    "title": "I am a robot",
+    "unit": "Giant Урок 3",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "What sports do you play? + When is your birthday?"
+      "I am a robot"
      ],
      [
       "Лексика",
-      "play football, go swimming, do gymnastics, January–December, birthday"
+      "on, off, turn, move, stop, robot, fast, slow"
      ],
      [
       "Речевые структуры",
-      "What sports do you play? / I play football. / When is your birthday? / In May!"
+      "I am a robot! / Turn on! / Turn off! / Turn left! / Move! Stop!"
      ],
      [
       "Виды деятельности",
-      "Sports survey song, birthday months song, calendar activity, mingle"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Robot song (фоника «o»: on/off), «запрограммируй друга»-игра, робот-команды, TPR. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 8 Урок 1"
+    "sec": "Giant Урок 3"
    },
    {
     "n": 59,
     "week": "05.04–11.04",
     "type": "",
-    "title": "How did you get here? + We are the pirates!",
-    "unit": "Юнит 8 Урок 2",
+    "title": "Mr Octopus",
+    "unit": "Giant Урок 4",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "How did you get here? + We are the pirates!"
+      "Mr Octopus"
      ],
      [
       "Лексика",
-      "bus, train, car, bike, walk, plane, boat, pirate, ship, treasure, sail"
+      "octopus, eight arms, numbers, body parts, my name is"
      ],
      [
       "Речевые структуры",
-      "How did you get here? / I came by bus. / We are the pirates! / Arrr!"
+      "Mr Octopus has eight arms! / Count the arms! / My name is Mr Octopus."
      ],
      [
       "Виды деятельности",
-      "Transport song, pirates song, treasure hunt, directions + transport link"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Mr Octopus song (review чисел/тела), счёт рук осьминога, крафт-осьминог. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 8 Урок 2"
+    "sec": "Giant Урок 4"
    },
    {
     "n": 60,
     "week": "12.04–18.04",
     "type": "",
-    "title": "What's your favourite colour? + Favourite flavours",
-    "unit": "Юнит 8 Урок 3",
+    "title": "What time is it, Mr Wolf?",
+    "unit": "Giant Урок 5",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "What's your favourite colour? + Favourite flavours"
+      "What time is it, Mr Wolf?"
      ],
      [
       "Лексика",
-      "red, orange, yellow, green, blue, purple, pink, chocolate, vanilla, strawberry, lemon"
+      "o'clock, one–twelve, time, clock, Mr Wolf"
      ],
      [
       "Речевые структуры",
-      "What's your favourite colour? / My favourite is blue. / I love chocolate!"
+      "What time is it, Mr Wolf? / It's one o'clock. / It's twelve o'clock!"
      ],
      [
       "Виды деятельности",
-      "Colours song, flavours song, favourite things survey, ice cream role-play"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация «What time is it, Mr Wolf?» song + игра-салки, часы-крафт, «который час?». Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 8 Урок 3"
+    "sec": "Giant Урок 5"
    },
    {
     "n": 61,
     "week": "12.04–18.04",
     "type": "",
-    "title": "Revision 1 · Юнит 8 (уроки 1–3)",
-    "unit": "Юнит 8 Урок 4",
+    "title": "What time is it? (часть 2/3)",
+    "unit": "Giant Урок 6",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 1 · Юнит 8 (уроки 1–3)"
+      "What time is it? (часть 2/3)"
      ],
      [
       "Лексика",
-      "Sports, birthday months, transport, pirates, colours, flavours (revision)"
+      "half past, quarter to, quarter past, five past, ten past"
      ],
      [
       "Речевые структуры",
-      "What sports? / When is your birthday? / How did you get here? / Favourite…?"
+      "What time is it? / It's half past two. / It's quarter to three. / It's 2:10."
      ],
      [
       "Виды деятельности",
-      "Revision: sports mingle, birthday line-up, transport quiz, favourites game"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); отработка времени (half past / quarter to), режим дня-цепочка, ролевые часы. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 8 Урок 4"
+    "sec": "Giant Урок 6"
    },
    {
     "n": 62,
     "week": "19.04–25.04",
     "type": "",
-    "title": "School subjects + What's your favourite…?",
-    "unit": "Юнит 8 Урок 5",
+    "title": "Summer sports",
+    "unit": "Giant Урок 7",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "School subjects + What's your favourite…?"
+      "Summer sports"
      ],
      [
       "Лексика",
-      "English, maths, science, art, music, PE, history, favourite food/animal/colour/sport"
+      "swimming, horse riding, sailing, windsurfing, skateboarding, cycling, scuba diving"
      ],
      [
       "Речевые структуры",
-      "What's your favourite subject? / I love art! / What's your favourite…? / I prefer…"
+      "I went swimming. / I went cycling. / Did you go sailing? / Yes, I did!"
      ],
      [
       "Виды деятельности",
-      "School subjects song, favourites song, big survey, favourite things poster"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Summer Sports song (past: I went…), спорт-мим, «did you go…?»-опрос, флешкарды. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 8 Урок 5"
+    "sec": "Giant Урок 7"
    },
    {
     "n": 63,
     "week": "19.04–25.04",
     "type": "",
-    "title": "Big revision · Favourites + All topics",
-    "unit": "Юнит 8 Урок 6",
+    "title": "Winter Sports",
+    "unit": "Giant Урок 8",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Big revision · Favourites + All topics"
+      "Winter Sports"
      ],
      [
       "Лексика",
-      "All Unit 8 vocabulary + favourite things in context"
+      "snowboarding, skiing, ice skating, making snowmen, ice hockey, ski jumping, sledging, snowball fighting"
      ],
      [
       "Речевые структуры",
-      "Full Unit 8 revision in communicative speaking games"
+      "I went skiing. / I went ice skating. / Did you go snowboarding? / Yes, I did!"
      ],
      [
       "Виды деятельности",
-      "Speaking games, favourites interview, poster sharing, team quiz"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Winter Sports song, зимний спорт-мим, контраст лето/зима, командная игра. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 8 Урок 6"
+    "sec": "Giant Урок 8"
    },
    {
     "n": 64,
     "week": "26.04–02.05",
     "type": "",
-    "title": "Cross-unit revision · Units 1–8",
-    "unit": "Юнит 8 Урок 7",
+    "title": "Giant Review · уровень пройден",
+    "unit": "Giant Review",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Cross-unit revision · Units 1–8"
+      "Giant Review · уровень пройден"
      ],
      [
       "Лексика",
-      "All Units 1–8 vocabulary & structures"
+      "places, translation, robot, octopus, time, summer/winter sports"
      ],
      [
       "Речевые структуры",
-      "Full revision: all previous + sports, birthday, transport, favourites"
+      "Where do you live? / What time is it? / Did you go…? / I am a robot!"
      ],
      [
       "Виды деятельности",
-      "Cross-unit games, song medley Units 1–8, team challenge"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); РЕВЬЮ УРОВНЯ Giant: медли песен, time-игра «Mr Wolf», спорт-опрос, проверка достижений. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 8 Урок 7"
+    "sec": "Giant Review"
    },
    {
     "n": 65,
     "week": "26.04–02.05",
     "type": "",
-    "title": "Revision 2 · Юнит 8 полный + Units 1–8",
-    "unit": "Юнит 8 Урок 8",
+    "title": "What sports do you play?",
+    "unit": "High Урок 1",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision 2 · Юнит 8 полный + Units 1–8"
+      "What sports do you play?"
      ],
      [
       "Лексика",
-      "All Units 1–8 vocabulary & phrases (revision)"
+      "tennis, soccer, basketball, volleyball, table tennis, badminton, rugby, baseball, I play"
      ],
      [
       "Речевые структуры",
-      "Full revision Units 1–8"
+      "What sports do you play? / I play tennis. / I play basketball. / Do you play soccer?"
      ],
      [
       "Виды деятельности",
-      "Team Bingo, song medley, speaking mingle, achievement check"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация What sports do you play? song, спорт-опрос, мим-угадайка, командная эстафета. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 8 Урок 8"
+    "sec": "High Урок 1"
    },
    {
     "n": 66,
     "week": "03.05–09.05",
     "type": "",
-    "title": "Where are you going? + Eat! Drink! Dance!",
-    "unit": "Юнит 9 Урок 1",
+    "title": "When is your birthday? + Months",
+    "unit": "High Урок 2",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Where are you going? + Eat! Drink! Dance!"
+      "When is your birthday? + Months"
      ],
      [
       "Лексика",
-      "park, school, shop, home, hospital, cinema, eat, drink, dance, sing, sleep, laugh"
+      "January, February, March, April, May, June, July, August, September, October, November, December"
      ],
      [
       "Речевые структуры",
-      "Where are you going? / I'm going to the park. / Eat! Drink! Dance! / Let's go!"
+      "When is your birthday? / My birthday is in May. / In September. / In December."
      ],
      [
       "Виды деятельности",
-      "Directions song, action verbs song, going-to drill, town map activity"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Months song (все 12) + «When is your birthday?», календарь-игра, построиться по месяцу, Birthday song. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 9 Урок 1"
+    "sec": "High Урок 2"
    },
    {
     "n": 67,
     "week": "03.05–09.05",
     "type": "",
-    "title": "What are you doing? (Present Continuous)",
-    "unit": "Юнит 9 Урок 2",
+    "title": "How did you get here?",
+    "unit": "High Урок 3",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "What are you doing? (Present Continuous)"
+      "How did you get here?"
      ],
      [
       "Лексика",
-      "reading, writing, drawing, jumping, running, sleeping, playing, eating"
+      "aeroplane, car, train, rocket, helicopter, boat, bus, mountain bike, I came here by"
      ],
      [
       "Речевые структуры",
-      "What are you doing? / I'm reading. / I'm drawing. / I'm playing football."
+      "How did you get here? / I came here by car. / By train. / By rocket!"
      ],
      [
       "Виды деятельности",
-      "Present continuous song, mime & guess game, speaking drill, role-play"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация How did you get here? song, «how did you get here?»-опрос, транспорт-мим, дорожная игра. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 9 Урок 2"
+    "sec": "High Урок 3"
    },
    {
     "n": 68,
     "week": "10.05–16.05",
     "type": "",
-    "title": "Final review · Games",
-    "unit": "Юнит 9 Урок 3",
+    "title": "Colours & Pirates",
+    "unit": "High Урок 4",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Final review · Games"
+      "Colours & Pirates"
      ],
      [
       "Лексика",
-      "All Units 1–9 vocabulary (revision)"
+      "red, blue, black, white, grey, brown, pink, green, pirate, treasure"
      ],
      [
       "Речевые структуры",
-      "Full year revision in communicative games"
+      "What colour is it? / It's red. / It's black. / We are the pirates!"
      ],
      [
       "Виды деятельности",
-      "Genki review games, vocabulary relay, team quiz, song medley"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Colours & Pirates song, пиратский поиск клада по цветам, colour-охота, флешкарды. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 9 Урок 3"
+    "sec": "High Урок 4"
    },
    {
     "n": 69,
     "week": "10.05–16.05",
     "type": "",
-    "title": "Final review · Speaking",
-    "unit": "Юнит 9 Урок 4",
+    "title": "What's your favourite colour?",
+    "unit": "High Урок 5",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Final review · Speaking"
+      "What's your favourite colour?"
      ],
      [
       "Лексика",
-      "All Units 1–9 speech patterns (revision)"
+      "red, blue, green, yellow, black, white, pink, orange, purple, gold, silver, bronze, favourite"
      ],
      [
       "Речевые структуры",
-      "Full year revision: all key speech patterns"
+      "What's your favourite colour? / My favourite colour is blue. / I like purple."
      ],
      [
       "Виды деятельности",
-      "Speaking mingle, interview games, question & answer, pair speaking"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Favourite Colour song, опрос любимых цветов, colour-mingle, постер любимого цвета. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 9 Урок 4"
+    "sec": "High Урок 5"
    },
    {
     "n": 70,
     "week": "17.05–23.05",
     "type": "",
-    "title": "Final review · Year showcase",
-    "unit": "Юнит 9 Урок 5",
+    "title": "What's your favourite flavour?",
+    "unit": "High Урок 6",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Final review · Year showcase"
+      "What's your favourite flavour?"
      ],
      [
       "Лексика",
-      "Full year vocabulary & structures"
+      "vanilla, chocolate, strawberry, lemon, mint, ice cream, favourite flavour"
      ],
      [
       "Речевые структуры",
-      "Showcase: What's your name? / I can… / I like… / What's the weather?"
+      "What's your favourite flavour? / I like chocolate. / My favourite flavour is vanilla."
      ],
      [
       "Виды деятельности",
-      "Speaking showcase prep, favourite activities, achievement display"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Favourite Flavour song, ice-cream ролевая, опрос вкусов, флешкарды. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 9 Урок 5"
+    "sec": "High Урок 6"
    },
    {
     "n": 71,
     "week": "17.05–23.05",
     "type": "",
-    "title": "Speaking review · Best of the year",
-    "unit": "Юнит 9 Урок 6",
+    "title": "What's your favourite subject?",
+    "unit": "High Урок 7",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Speaking review · Best of the year"
+      "What's your favourite subject?"
      ],
      [
       "Лексика",
-      "Top vocabulary & phrases from all 9 units"
+      "maths, art, science, P.E., music, English, history, favourite subject"
      ],
      [
       "Речевые структуры",
-      "Best phrases of the year: What's your name? / I can… / I like… / I'm going to…"
+      "What's your favourite subject? / I like art. / My favourite subject is music."
      ],
      [
       "Виды деятельности",
-      "Favourite songs, best games of the year, speaking showcase warm-up"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Favourite Subject song, опрос любимых предметов, интервью, постер школы. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 9 Урок 6"
+    "sec": "High Урок 7"
    },
    {
     "n": 72,
     "week": "24.05–26.05",
     "type": "",
-    "title": "Revision · Final party",
-    "unit": "Юнит 9 Урок 7",
+    "title": "High Review · финал года + праздник",
+    "unit": "High Review",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Revision · Final party"
+      "High Review · финал года + праздник"
      ],
      [
       "Лексика",
-      "Full year vocabulary & structures (celebration)"
+      "sports, birthday months, transport, colours, flavours, subjects"
      ],
      [
       "Речевые структуры",
-      "Well done! / Congratulations! / We can speak English! / Goodbye!"
+      "What sports do you play? / When is your birthday? / How did you get here? / What's your favourite…?"
      ],
      [
       "Виды деятельности",
-      "End-of-year party: songs, speaking games, certificates, celebration"
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); РЕВЬЮ УРОВНЯ High + финал года: медли любимых песен, showcase речевых образцов, праздник, сертификаты. Финал: Thank you song."
      ]
     ],
-    "sec": "Юнит 9 Урок 7"
+    "sec": "High Review"
    }
   ]
  },
