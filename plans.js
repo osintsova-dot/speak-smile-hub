@@ -229,4 +229,12 @@ window.PLANS = {
   "GMF2-U9-L5": 1,
   "GMF2-U9-L6": 1,
   "GMF2-U9-L7": 1,
+  "Genki-U1-L1": 1,
+  "Genki-U1-L2": 1,
+  "Genki-U1-L3": 1,
+  "Genki-U1-L4": 1,
+  "Genki-U1-L5": 1,
+  "Genki-U1-L6": 1,
+  "Genki-U1-L7": 1,
+  "Genki-U1-L8": 1,
 };

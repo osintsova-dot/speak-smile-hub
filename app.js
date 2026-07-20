@@ -89,6 +89,9 @@ function doneKey(g,date){ return "done:"+g.name+":"+iso(date); }
 function planKeyFor(program, L){
   if (!window.PLANS) return null;
   const src = L.unit || L.sec || "";
+  // Genki (и др. с русскими юнитами): тип пустой, урок закодирован в «Юнит N Урок M»
+  const rm = /Юнит\s*(\d+)\s*Урок\s*(\d+)/i.exec(src);
+  if (rm){ const rkey = `${program}-U${rm[1]}-L${rm[2]}`; return window.PLANS[rkey] ? rkey : null; }
   const lm = /\bL(\d+)\b/i.exec(L.type || "");
   if (!lm){
     // Вводный Genki-блок линии «с нуля»: тип урока «Genki N» → план Intro-LN (занятия 1–12)
