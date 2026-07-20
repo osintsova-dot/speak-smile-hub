@@ -1,0 +1,231 @@
+<meta charset="utf-8">
+<title>GMF2 (с нуля) · Unit 2 · Занятие 22 · L1 — Vocabulary · Food (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🛒 Give Me Five! 2 (с нуля) · Unit 2 “Let's go shopping!” · Занятие 22 / L1 — Vocabulary · Food</div>
+    <div class="s">Pre-A1 → A1 young learners (~8–9 y.o., zero beginners · линия с нуля) · 60 min · PPP + TPR + Phonics + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 16.11–22.11 · Занятие 22</span><span class="chip new">✨ NEW · 10 food words + Can I have…?</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">🦸 Phonics Hero ур.17b · ou·oi</span><span class="chip">Pupil's Book p.18 · AB p.16</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 10 food words</b> and ask politely in a shop: “Can I have (a peach / some bread), please? — Here you are. — Thank you!”</li><li><span class="lb">Subsidiary.</span> Phonics ур.17b · ou·oi — полноценная презентация по тетради; повтор прошлого материала, вплетённый в новую тему (см. Retrieval).</li><li><span class="lb">Personal.</span> Лексика ТОЛЬКО в контексте структуры; чередуем стиры и сеттлеры; каждый ребёнок отвечает каждый раунд (хор, пары, show-me).</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name the 10 foods;</li><li>ask the shop chunk <span class="en">Can I have…, please?</span> and answer politely;</li><li>gap-fill ou/oi words and write the dictation.</li></ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">bread</span><span class="w">pineapple</span><span class="w">tomatoes</span><span class="w">potatoes</span><span class="w">green beans</span><span class="w">carrots</span><span class="w">sweets</span><span class="w">lemons</span><span class="w">peaches</span><span class="w">yoghurt</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Can I have (a peach / some bread), please? — Here you are. — Thank you! · recycle: I like (peaches). Do you like…? (з.7–8!)</div></div>
+      <div class="r"><div class="k">Form</div><div>Полное правило a/an/some — в L2; сегодня чанк-эхо. Замечаем мн.число: tomato<b>es</b>, peach<b>es</b>; bread — без множественного.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>yoghurt /ˈjɒɡət/; peaches /ˈpiːtʃɪz/ два бита; green beans — длинное /iː/ дважды.</div></div>
+      <div class="r"><div class="k">Phonics</div><div><b>Phonics Hero ур.17b · ou·oi</b> (тетрадь стр.47) — этап «Phonics Hero — ou·oi (b)»: полный ход в Procedure ниже.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“Can I have… — я беру сам или вежливо прошу?” → прошу.</div>
+      <div class="ccq" style="margin-bottom:12px">“Bread — можно сказать two breads?” → нет (не считаем).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> U1 пройден. Овощи из з.8 (carrots, tomatoes, potatoes!) — уже знакомы: повтор вплетается сам. May I borrow (з.12) — родственная вежливая просьба.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Gimme! вместо просьбы</td><td>«Волшебная фраза» — без неё прилавок не работает (игрово); recast.</td></tr><tr><td>peaches/pineapple новые и длинные</td><td>Клэп-дрилл; порциями фрукты/овощи.</td></tr><tr><td>Слипание с May I borrow</td><td>CCQ: borrow — вернуть, have — съесть! 😄</td></tr><tr><td>Роль продавца молчит</td><td>Скрипт продавца на прилавке: Here you are! — обязательная реплика.</td></tr><tr><td>Стикеры/поиск затянут</td><td>Таймер + модель первого.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Disco</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet at the door: <span class="en">Hello! Come in!</span> <span class="sp">🦝 Speaky</span> waves. Quick <span class="game">▶ Disco Warm Up</span> — full routine once, fast; trick calls. <span class="en">And… freeze. Sit down.</span></p></td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · Speaky</td>
+      </tr>
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval · woven review</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Повтор → тема.</span> <span class="game">▶ Mix-Pair-Share:</span> ① <span class="en">Do you like tomatoes? — Yes, I do!</span> (з.8 овощи — половина сегодняшних слов!) ② вежливость з.12: <span class="en">May I borrow your pencil? — Of course!</span> — сегодня научимся просить ЕДУ.</p></td>
+        <td class="mat">cards · music</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">transition</div></td>
+        <td class="flow"><p><span class="en">To the board — ABC song!</span> Sing with actions → settle into phonics.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+<tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics Hero — ou·oi (b)</div><div class="zone">board → desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Speed reading — the big strip.</span> Board / Hub: <b>ai · oa · ie · ee · or · ng · oo · ch · sh · th</b> + yesterday's <b>ou · oi</b>. <span class="en">There and back — beat your time!</span> Recall the calls: hands round the mouth <span class="en">ou! (ау!)</span> · surprised sailor <span class="en">oi! (ой!)</span> — all ×3.</p>
+          <p><span class="ph">Gap-fill — тетрадь стр.47 №2 «Допиши слово» (all vote first).</span> Picture up (<i>cloud · coin · mouth · soil</i>) — say the word together, then <b>every child calls the sound</b>: «ау» or «ой»? → all write <b>ou</b> or <b>oi</b> into the gap: <i>cl__d · c__n · m__th · s__l</i>. <span class="ph">RallyCoach:</span> partner checks before the next word.</p>
+          <p><span class="ph">Dictation — стр.47 №3 (everyone writes).</span> <span class="en">Now YOU write. Listen: out…</span> word once → segment on fingers (<i>/ou/ /t/</i>) → write → <span class="en">Show me!</span> → reveal on the board, self-check. Words: <i>out, loud, coin, oil</i>.</p>
+          <p><span class="ph">Tricky strip — стр.47 №4.</span> <b>your · she</b> — read the strip for speed, there and back. + today's sight pair <b>want · because</b> — flash, chorus, air-write: <span class="sp">🦝 Speaky</span>: <span class="en">I WANT some sweets… because they are yummy!</span> (today's shop words, now in print).</p>
+          <p><span class="ph">Story — стр.48 «Королева и туча» (settler).</span> Chorus the 5 frames, finger under the words: <span class="en">A queen. The queen looks out. A big cloud is loud! The queen is quick. Shh! The queen is proud.</span> ⭐ Star task: find &amp; circle every <i>queen</i>, circle how many. Colour the star «Я молодец!» (стр.47).</p>
+          <p>🎮 <b>Reading-game option:</b> <a href="https://speakandsmile.ru/gmf1/phonics/read-race.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">read-race</a> — ⚔ battle mode, level «Диграфы»: a word pops up, <b>everyone reads it aloud</b>, the fastest correct team races ahead. Swap it in for the speed-reading strip when the screen is free.</p>
+          <span class="diff"><span class="sup">💪 Support:</span> in the gap-fill give the digraph card to copy; in dictation write <i>_ut</i>. <span class="ext">⭐ Extension:</span> a 5th dictation word by ear (<i>cloud</i>); in the story find <i>out</i> too.</span>
+          <p><span class="asr">✔ <b>Assess:</b> the dictation lines are your live check of ур.17 — note who writes <i>ou/oi</i> as one letter; re-drill at the next speed reading.</span></p>
+        </td>
+        <td class="mat"><b>Phonics Hero 2.0</b> тетрадь стр.47–48 (1 per pupil) · <b>Phonics Hub</b> (board) · ou/oi anchor cards · pencils · 🎮 <a href="https://speakandsmile.ru/gmf1/phonics/read-race.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">read-race</a></td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">transition</div></td>
+        <td class="flow"><p><span class="en">New song!</span> First listen of <span class="game">Genki «I'd like some food!» (#68–69)</span> — тереть животик на каждое вкусное слово.</p></td>
+        <td class="mat"><b>Genki #68–69</b> mp3</td>
+      </tr>
+      <tr>
+        <td class="min">24–32′</td>
+        <td class="stage"><div class="nm">Presentation · Food</div><div class="zone">carpet → teams</div></td>
+        <td class="flow"><p><span class="ph">Flashcards.</span> Hold up each card: <span class="en">What's this?</span> — model, choral drill ×3, then 2–3 individually; out of order, faster. Порции: фрукты (pineapple, lemons, peaches) → овощи-знакомцы (tomatoes, potatoes, carrots, green beans) → прочее (bread, sweets, yoghurt). Чанк сразу в контексте: <span class="en">Can I have some sweets, please?</span></p><p><span class="game">▶ Fan-N-Pick</span> (teams of 4, mini-cards): ① fans ② picks &amp; asks ③ answers with the full chunk ④ praises <span class="en">Well done!</span> Rotate roles.</p><p><span class="ph">ICQ:</span> <span class="en">Мы называем слово или ПРОСИМ вежливо?</span> (→ просим, с please!)</p></td>
+        <td class="mat">A4 flashcards · mini-sets per team</td>
+      </tr>
+      <tr>
+        <td class="min">32–40′</td>
+        <td class="stage"><div class="nm">Song &amp; stickers · PB p.18</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="en">Books — page 18!</span> Vocabulary song (Navio audio): first listen — point to each picture you hear; second — sing along + actions.</p><p><span class="ph">Stickers.</span> <span class="en">Find the stickers. Listen and stick!</span> Model one; neighbour check (RallyCoach).</p></td>
+        <td class="mat">Pupil's Book p.18 + stickers · audio (Navio)</td>
+      </tr>
+      <tr>
+        <td class="min">40–48′</td>
+        <td class="stage"><div class="nm">▶ Memory · word ↔ picture</div><div class="zone">carpet, pairs</div></td>
+        <td class="flow"><p><span class="ph">Pairs memory.</span> 5–6 mini-cards per pair face-down. Flip → SAY the full chunk aloud: <span class="en">Can I have a lemon, please? — Here you are!</span> — keep the card only if said correctly (partner judges). Swap roles. Most cards wins; loud <span class="en">Good game!</span></p><p>🎮 <b>Digital option (projector):</b> <a href="https://speakandsmile.ru/gmf2/games/shopping-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">shopping-memo</a> — memory pairs on screen, teams; a rotating child flips, <b>the whole class names every picture aloud</b>. Swap in for one round when the screen is free.</p></td>
+        <td class="mat">mini-cards per pair · 🎮 <a href="https://speakandsmile.ru/gmf2/games/shopping-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">shopping-memo</a></td>
+      </tr>
+      <tr>
+        <td class="min">48–53′</td>
+        <td class="stage"><div class="nm">Write &amp; say</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Settler.</span> AB p.16 — начать в классе: ex. 1 Read and match — первые 3 продукта вместе (читаем — линия — чанк вслух). Word bank на доске; RallyCoach check. <span class="ph">Countdown.</span> <span class="en">5…4…3…2…1 — pencils down!</span></p></td>
+        <td class="mat">Activity Book p.16 · pencils</td>
+      </tr>
+      <tr>
+        <td class="min">53–56′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner your dream-покупку: Can I have…, please? — partner: Here you are!</span> (20 sec each — all pairs at once.)</p><p>“I can…” badge: colour it. Speaky high-five round.</p></td>
+        <td class="mat">badges · Speaky</td>
+      </tr>
+      <tr>
+        <td class="min">56–58′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Each child: <span class="en">Can I have…, please?</span> — учитель-продавец «выдаёт» выход 😄 + high five: <span class="en">Goodbye! See you!</span></p></td>
+        <td class="mat">cards · high fives 🖐</td>
+      </tr>
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 16: ex. 1 Read and match + ex. 2 What's in the bag? Draw and write.</b> <b>🦸 Phonics Hero:</b> стр.47–48 — перечитать «Королева и туча» семье (найди все queen). <b>App (Practice):</b> набор слов урока, 5–7 мин. 🎮 <b>Дома:</b> <a href="https://speakandsmile.ru/gmf2/games/shopping-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">shopping-memo</a> — пары вслух, 5 мин.</p></td>
+        <td class="mat">Activity Book · Phonics Hero · app (homework link)</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · GMF2 с нуля · Unit 2 · Занятие 22 — L1 Vocabulary</span>
+    <span>Лексика/страницы по учебнику GMF2 (PB p.18 / AB p.16) · фоника по Phonics Hero 2.0 · КТП-GMF2-с-нуля занятие 22.</span>
+  </div>
+</div>
