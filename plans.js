@@ -247,4 +247,12 @@ window.PLANS = {
   "Genki-Brainy-L9": 1,
   "Genki-Brainy-L10": 1,
   "Genki-Brainy-Review": 1,
+  "Genki-Challenge-L1": 1,
+  "Genki-Challenge-L2": 1,
+  "Genki-Challenge-L3": 1,
+  "Genki-Challenge-L4": 1,
+  "Genki-Challenge-L5": 1,
+  "Genki-Challenge-L6": 1,
+  "Genki-Challenge-L7": 1,
+  "Genki-Challenge-Review": 1,
 };
