@@ -11422,7 +11422,7 @@ window.PROGRAMS = {
       "Phonics Hero ур.23: Magic E: повторение (тетрадь стр.64–65) — (b) закрепление · Tricky: might, across"
      ]
     ],
-    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
+    "sec": "UNIT 4 — The nature trail · уроки 34–39 · Январь"
    },
    {
     "n": 35,
@@ -11452,7 +11452,7 @@ window.PROGRAMS = {
       "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — (a) первое знакомство · Tricky: second, hard"
      ]
     ],
-    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
+    "sec": "UNIT 4 — The nature trail · уроки 34–39 · Январь"
    },
    {
     "n": 36,
@@ -11482,7 +11482,7 @@ window.PROGRAMS = {
       "Phonics Hero ур.24: /эй/ ai·ay·a-e (тетрадь стр.67–68) — (b) закрепление · Tricky: open, seem"
      ]
     ],
-    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
+    "sec": "UNIT 4 — The nature trail · уроки 34–39 · Январь"
    },
    {
     "n": 37,
@@ -11512,7 +11512,7 @@ window.PROGRAMS = {
       "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — (a) первое знакомство · Tricky: together, until"
      ]
     ],
-    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
+    "sec": "UNIT 4 — The nature trail · уроки 34–39 · Январь"
    },
    {
     "n": 38,
@@ -11542,7 +11542,7 @@ window.PROGRAMS = {
       "Phonics Hero ур.25: /и:/ ee·ea·e-e·y (тетрадь стр.69–71) — (b) закрепление · Tricky: something, often"
      ]
     ],
-    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
+    "sec": "UNIT 4 — The nature trail · уроки 34–39 · Январь"
    },
    {
     "n": 39,
@@ -11572,7 +11572,7 @@ window.PROGRAMS = {
       "Phonics Hero ур.26: /ай/ ie·igh·y·i-e (тетрадь стр.72–74) — (a) первое знакомство · Tricky: young, side"
      ]
     ],
-    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)"
+    "sec": "UNIT 4 — The nature trail · уроки 34–39 · Январь"
    },
    {
     "n": 40,
