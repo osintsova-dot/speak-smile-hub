@@ -263,4 +263,13 @@ window.PLANS = {
   "Genki-Danger-L6": 1,
   "Genki-Danger-L7": 1,
   "Genki-Danger-Review": 1,
+  "Genki-Giant-L1": 1,
+  "Genki-Giant-L2": 1,
+  "Genki-Giant-L3": 1,
+  "Genki-Giant-L4": 1,
+  "Genki-Giant-L5": 1,
+  "Genki-Giant-L6": 1,
+  "Genki-Giant-L7": 1,
+  "Genki-Giant-L8": 1,
+  "Genki-Giant-Review": 1,
 };

@@ -1,0 +1,235 @@
+<meta charset="utf-8">
+<title>Genki Preschool · Giant · Lesson 57 — I am a robot! — on, off, turn, move, stop, fast, slow (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+  .rhythm{ display:inline-block; font-size:.72rem; font-weight:800; border-radius:6px; padding:1px 6px; margin-top:5px; }
+  .rhythm.move{ background:var(--honey-soft); color:var(--honey-ink); } .rhythm.calm{ background:var(--zone-soft); color:var(--zone); }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 GenkiEnglish Preschool · Giant · Lesson 57 — I am a robot! — on · off · turn · move · stop · fast · slow</div>
+    <div class="s">Genki preschoolers (~6 y.o., non-readers) · 60 min · songs + TPR + games (no reading / writing / phonics) · chairs · carpet · tables · board (Genki app)</div>
+    <div class="meta"><span class="chip">Giant level · L57 · Lesson 3 of 8</span><span class="chip new">🤖 robot commands · I am a robot!</span><span class="chip">12 pupils · whole-group + shoulder-partner</span><span class="chip">🎧 Bilingual L2/L1 · by ear</span></div>
+  </div>
+
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, pupils will be better able to <b>follow &amp; give robot commands</b> — <span class="en">I am a robot! Turn on! Move! Stop! Go fast! Go slow!</span> — controlling a friend-robot.</li>
+      <li><span class="lb">Subsidiary.</span> <b>Cumulative Remember-time</b> recycle of Disco commands, places &amp; translation — woven into robot moves; the S&amp;S big-book; a colour-by-command build-a-robot sheet.</li>
+      <li><span class="lb">Personal.</span> Bilingual L2/L1; a command always <b>with the action</b> (do it as you say it); every child robots &amp; commands every round; ICQ before each game; alternate ⚡/🧘.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name on, off, turn, move, stop, fast, slow;</li><li>follow <span class="en">Turn on! Move! Stop!</span>;</li><li>move like a robot on command;</li><li>go fast / slow when told;</li><li>command a friend-robot &amp; build one.</li></ul>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">on</span><span class="w">off</span><span class="w">turn</span><span class="w">move</span><span class="w">stop</span><span class="w">fast</span><span class="w">slow</span><span class="w">robot</span><span class="w">I am a robot!</span></div></div>
+      <div class="r"><div class="k">Chunks</div><div>I am a robot! · Turn on! Turn off! · Move! Stop! · Go fast! Go slow! &nbsp;·&nbsp; (recycle) Stand up! Come with me!</div></div>
+      <div class="r"><div class="k">TPR gesture</div><div>stiff robot arms &amp; voice · <b>on</b> power-up · <b>off</b> slump · <b>move</b> march · <b>stop</b> freeze · <b>fast</b> quick march · <b>slow</b> slow-mo.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>enjoy the robot voice · the fun round "o" in <i>on · off · stop · slow</i> (playful, by ear — not a phonics stage) · <i>move</i> /muːv/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Instruction checks (kept tiny) · Assumptions</div>
+      <div class="ccq"><b>ICQ:</b> "Do we move like a robot or a cat?" → a robot.</div>
+      <div class="ccq" style="margin-bottom:12px"><b>ICQ:</b> "Do we STOP when Speaky says stop?" → yes, freeze!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> children love commands from earlier levels → robot moves are a fun new frame for known imperatives. Meaning from the robot mime, the toy robot &amp; the L1 prompt. <b>Non-readers/non-writers</b>. Attention 5–7 min → ⚡/🧘. <b>Group = 12</b>.</p>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Over-excitement — robots everywhere</td><td>🧘 settler between rounds; <span class="call">Freeze!</span> = power OFF; volume-control arm.</td></tr><tr><td>Crashing into each other</td><td>"Robots stay in their own square"; slow-mo first, then fast.</td></tr><tr><td>on / off mixed up</td><td>Big body actions: on = stand tall, off = slump; the song repeats both.</td></tr><tr><td>A child won't be the robot</td><td>Let them be the "programmer" first; swap when ready.</td></tr><tr><td>Transitions get chaotic</td><td>Train: <span class="en">Come with me!</span> — one signal, one destination.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>"Class? — Yes!"</b> — you: <span class="call">"Class!"</span> → children stop &amp; echo <span class="call">"Yes!"</span></div>
+        <div class="sigc"><b>Volume control</b> 🖐 — raise arm = louder, lower = quieter → instant settler.</div>
+        <div class="sigc"><b>"Speaky says…"</b> — do the action only when Speaky the raccoon says it.</div>
+        <div class="sigc"><b>"Freeze!" / statue</b> — everyone becomes a statue, mid-movement reset.</div>
+        <div class="sigc"><b>Countdown</b> — "5… 4… 3… 2… 1…" with fingers shown.</div>
+        <div class="sigc"><b>"Come with me!"</b> 🚌 — line up as a train (паровозик) to change zone.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Lesson framework — Oksana's real Genki preschool stages</div>
+  <div class="cardb">
+    <p style="margin:0 0 8px;font-size:.9rem"><b>Practice-proven skeleton — reuse in every plan.</b> Bilingual teacher talk (<span class="ph">L2</span> English / <span class="ph">L1</span> русская подсказка). Zones: chairs 🪑 / carpet 🟢 / tables 🪑 / board 📺 (Genki app). Finale = cumulative Q&amp;A chain + the <span class="game">Thank You! song</span> ritual.</p>
+    <ul class="a" style="gap:6px">
+      <li><b>Opening time</b> 🚪 — door greeting (train), <span class="game">Hello / Good Morning song</span>, "choose the greeting → jump/run/swim/fly to your chair".</li>
+      <li><b>Warm up</b> ⚡ — <span class="game">Disco Warm Up</span> song; Speaky arrives on the bus-box &amp; shakes hands with each child.</li>
+      <li><b>Remember time</b> — <b>cumulative</b> Q&amp;A of everything so far (thumb-up/down like a game), growing lesson by lesson, woven into today's topic.</li>
+      <li><b>Focus time</b> — presentation from the <b>magic bus-box</b>, Genki topic song, board app, active games.</li>
+      <li><b>Table time</b> 🪑 — own folder worksheets, a <b>different type each lesson</b> (map-build / match соедини / colour-by-command / count &amp; stick craft / make-a-clock / draw the hands / draw &amp; tell / sort &amp; stick), always language-linked (listen → do → say).</li>
+      <li><b>Reading time</b> 🟢 — our S&amp;S big-book (Speaky), read actively with gestures &amp; choral refrain.</li>
+      <li><b>Remember time 2 + Closing</b> — run the growing Q&amp;A chain, <span class="game">Thank You! + Goodbye song</span>, exit ticket + reward sticker on the folder.</li>
+    </ul>
+  </div>
+
+  <div class="eyebrow">Procedure — staging (Oksana's real stages)</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact English to say</b></span>
+    <span><span class="ph">L2</span>/<span class="ph">L1</span> = English / рус. подсказка</span>
+    <span><span class="sp">🦝</span> = Speaky</span>
+    <span><span class="game">▶</span> = game / song</span>
+    <span><span class="rhythm move">⚡ move</span> / <span class="rhythm calm">🧘 calm</span></span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–5′</td>
+        <td class="stage"><div class="nm">Opening time</div><div class="zone">door → red chairs 🪑</div><span class="rhythm move">⚡ move</span></td>
+        <td class="flow"><p><span class="ph">L2</span> <span class="en">Hello! Come in! How are you? What's your name?</span></p><p style="margin-top:-4px"><span class="ph">L1</span> <span style="color:var(--muted)">Встречаем детей у двери (паровозиком), спрашиваем и здороваемся.</span></p><p><span class="game">▶ Genki Hello song</span> (chorus, mp3). Then <span class="ph">choose the greeting</span> — each child <span class="en">marches / jumps / runs</span> to their red chair. <span class="en">Choose the greeting, come in, sit on the red chair!</span></p></td>
+        <td class="mat"><b>Genki Hello song</b> mp3 · red chairs</td>
+      </tr>
+
+      <tr>
+        <td class="min">5–10′</td>
+        <td class="stage"><div class="nm">Warm up</div><div class="zone">standing at chairs</div><span class="rhythm move">⚡ move</span></td>
+        <td class="flow"><p><span class="game">▶ Genki Disco Warm Up</span> — sing &amp; do the actions (Stand up! Sit down! Hands up! Bow! Clap! Jump! Cheer!).</p><p><span class="sp">🦝 Hello, superstars!</span> Speaky arrives on the bus-box &amp; shakes hands.</p><p><span class="ph">Speaky handshake round.</span> Speaky shakes hands with <b>each</b> child so everyone answers: <span class="en">Hello! How are you?</span></p></td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · <b>Speaky</b> · bus-box</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–17′</td>
+        <td class="stage"><div class="nm">Remember time</div><div class="zone">semi-circle · board 📺</div><span class="rhythm move">⚡ move</span></td>
+        <td class="flow"><p><span class="ph">L2</span> <span class="en">Stand up! Make a semi-circle. Look at my thumb — up or down — and answer!</span></p><p style="margin-top:-4px"><span class="ph">L1</span> <span style="color:var(--muted)">Быстро вспоминаем всё пройденное (как игра), потом привязываем к сегодняшней теме.</span></p><p><span class="ph">Cumulative Q&amp;A — fast, like a game</span> (thumb up/down, all 12 answer chorally, then RallyRobin round the circle):</p><ul class="a" style="gap:5px;margin:2px 0 6px"><li><b>Disco commands:</b> <span class="en">Stand up! Sit down! Jump! Clap!</span></li><li><b>Places (L55):</b> <span class="en">Where do you live? — I live near the bridge!</span></li><li><b>Translation (L56):</b> <span class="en">How do you say … in English? — Ball!</span></li></ul><p>Wrap into today: <span class="en">You can follow commands! Now… you are a ROBOT! Turn on! Move!</span></p></td>
+        <td class="mat">A4 flashcards (all past topics) · Genki app (board) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–27′</td>
+        <td class="stage"><div class="nm">Focus · I am a robot</div><div class="zone">carpet → board 📺</div><span class="rhythm move">⚡ move</span></td>
+        <td class="flow"><p><span class="ph">L2</span> <span class="en">Look — a robot in the bus-box! I am a robot! Turn on! Turn off! Move! Stop! Go fast! Go slow!</span></p><p style="margin-top:-4px"><span class="ph">L1</span> <span style="color:var(--muted)">on — включить, off — выключить, turn — повернуть/включить, move — двигаться, stop — стоп, fast — быстро, slow — медленно. «I am a robot!» = «Я робот!».</span></p><p>Pull a <b>toy robot</b> from the bus-box; demo each command as a stiff robot, naming it 3×; children copy. Then <span class="game">▶ Genki song: I Am A Robot (42)</span> — sing &amp; do every command + a round on the <span class="game">▶ board app</span>.</p></td>
+        <td class="mat"><b>Genki song: I Am A Robot (42)</b> · toy robot · command cards · Genki app · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">27–37′</td>
+        <td class="stage"><div class="nm">Focus · games</div><div class="zone">whole room</div><span class="rhythm move">⚡ move</span></td>
+        <td class="flow"><p><span class="game">▶ Robot Speaky-Says.</span> <span class="en">Turn on! Move! Go fast! Stop!</span> — all 12 do it. No "Speaky says" → freeze / power off. Trick them gently.</p><p><span class="game">▶ Program your friend.</span> Shoulder-partners: one is the robot, one the programmer — <span class="en">Turn on! Move! Turn left! Stop!</span> Then swap. Everyone commands &amp; moves.</p><p><span class="game">▶ Red-light robot (Stop! / Move!).</span> Speaky calls <span class="en">Move! … Stop!</span> — robots march &amp; freeze; go fast / slow on command.</p></td>
+        <td class="mat">toy robot · command cards · Speaky<br><a href="https://speakandsmile.ru/genki/games/" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">🎲 Игры Genki</a> <i>(тематические игры)</i></td>
+      </tr>
+
+      <tr>
+        <td class="min">37–46′</td>
+        <td class="stage"><div class="nm">Table time · build-a-robot (colour by command)</div><div class="zone">tables 🪑</div><span class="rhythm calm">🧘 calm</span></td>
+        <td class="flow"><p><span class="ph">L2</span> <span class="en">Now it's table time, come with me!</span></p><p style="margin-top:-4px"><span class="ph">L1</span> <span style="color:var(--muted)">Садимся за парты — раскрашиваем и собираем робота по команде.</span></p><p><span class="ph">Colour by command.</span> Folder robot sheet — Speaky calls <span class="en">Colour the arms red! Colour the legs blue!</span> children colour that part (listen → colour → say).</p><p><span class="ph">Build &amp; command.</span> Cut &amp; join the robot with a split-pin so the arms move; then command it: <span class="en">Turn on! Move!</span></p></td>
+        <td class="mat">robot folder sheet · crayons · split-pins · scissors (teacher helps)</td>
+      </tr>
+
+      <tr>
+        <td class="min">46–51′</td>
+        <td class="stage"><div class="nm">Reading time</div><div class="zone">carpet 🟢</div><span class="rhythm calm">🧘 calm</span></td>
+        <td class="flow"><p><span class="ph">L2</span> <span class="en">Make a circle on the carpet. Let's read!</span></p><p style="margin-top:-4px"><span class="ph">L1</span> <span style="color:var(--muted)">Садимся кружком — читаем книжку по теме.</span></p><p>📖 <a href="https://speakandsmile.ru/genki/books/" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">📚 Speaky the Robot</a> — read actively; on each page children do the robot command &amp; echo <span class="en">I am a robot!</span> Pure listening — no child reads. <i>(брендовая big-book по теме — в разработке; пока берём книжку из меню.)</i></p></td>
+        <td class="mat"><a href="https://speakandsmile.ru/genki/books/" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">📚 Genki books</a> <i>(книжка по теме в разработке)</i> · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">51–55′</td>
+        <td class="stage"><div class="nm">Remember time 2</div><div class="zone">carpet 🟢</div><span class="rhythm calm">🧘 calm</span></td>
+        <td class="flow"><p><span class="ph">L2</span> <span class="en">Now it's time to remember what we learnt in English! Well done, you are so clever!</span></p><p style="margin-top:-4px"><span class="ph">L1</span> <span style="color:var(--muted)">Вспоминаем всё, чему научились — цепочка растёт.</span></p><p><span class="ph">Cumulative Q&amp;A chain — everything so far</span> (Speaky asks, all 12 answer chorally, RallyRobin round the circle):</p><ul class="a" style="gap:5px;margin:2px 0 6px"><li><b>Places / translation:</b> <span class="en">Where do you live? — I live near the farm! How do you say … in English?</span></li><li><b>Robot (NEW):</b> <span class="en">I am a robot! Turn on! Turn off! Move! Stop! Go fast! Go slow!</span></li></ul></td>
+        <td class="mat">A4 flashcards (all topics) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–58′</td>
+        <td class="stage"><div class="nm">Closing time</div><div class="zone">carpet 🟢</div><span class="rhythm calm">🧘 calm</span></td>
+        <td class="flow"><p><span class="ph">L2</span> <span class="en">It's time to say goodbye! Thank you, everybody. Take care!</span></p><p style="margin-top:-4px"><span class="ph">L1</span> <span style="color:var(--muted)">Поблагодарим друг друга и Спики — «thank you, take care» и прощаемся.</span></p><p><span class="game">▶ Thank You! song + Goodbye song</span> with waves &amp; bows.</p></td>
+        <td class="mat"><b>Thank You!</b> + <b>Goodbye</b> song mp3 · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door 🚪</div><span class="rhythm calm">🧘 calm</span></td>
+        <td class="flow"><p><span class="en">That's all! The lesson is over! Come with me!</span> 🚌 Line the children up at the door.</p><p>Each child does ONE robot command to leave: <span class="en">Move! Stop! Turn off!</span></p><p>Stick the raccoon reward sticker on the folder award grid: <span class="en">Thank you for the lesson! Take care! Goodbye!</span></p></td>
+        <td class="mat">command cards · 🦝 reward stickers · folder award grid</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Home (oral)</div></td>
+        <td class="flow"><b>No written homework</b> (preschool). Ask families: <span class="en">Be a robot for Mum &amp; Dad — Turn on! Move! Go fast! Stop!</span> Song links in the parents' chat.</td>
+        <td class="mat">parents' chat: song links · folder</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · GenkiEnglish Preschool · Giant · Lesson 57 — lesson plan &amp; staging</span>
+    <span>Built on Oksana's real Genki 1 plans: Opening → Warm up (Speaky) → Remember time → Focus time (bus-box) → Table time → Reading → Remember 2 + Closing. Group = 12 · bilingual L2/L1 · no reading/writing/phonics.<br>Uses licensed Genki materials by name (songs · A4 flashcards · app · folder worksheets); S&amp;S big-books &amp; craft sheets are our own.</span>
+  </div>
+</div>
