@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF2 · Starter · Lesson 2 — Grammar (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 2 · Starter “Let's go back to school!” · Lesson 2 — Grammar · School subjects</div>
+    <div class="s">A1 young learners (~8–9 y.o., early readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 07.09–13.09 · Lesson 2</span><span class="chip new">✨ NEW · 8 school subjects</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.5 · AB p.3</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 8 school subjects</b> and <b>ask &amp; answer</b> “What's your favourite subject? — My favourite subject is (English).”</li><li><span class="lb">Subsidiary.</span> Chant the subjects with rhythm (CD1 4); run a real class survey (data → mini-bar-chart); recycle “What's his/her name?” from L1; genuine communication — pupils report a partner's answer.</li><li><span class="lb">Personal.</span> Model the full answer sentence, but accept one-word answers from slower pupils and recast; keep the survey moving — max 30 sec per partner.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name the 8 school subjects;</li><li>ask &amp; answer “What's your favourite subject?”;</li><li>report a friend's answer: “Her favourite subject is Music.”</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">Maths</span><span class="w">English</span><span class="w">Music</span><span class="w">PE</span><span class="w">ICT</span><span class="w">Arts and Crafts</span><span class="w">Science</span><span class="w">Spanish</span></div></div><div class="r"><div class="k">Structure</div><div>What's your favourite subject? — My favourite subject is (English). &nbsp;·&nbsp; <i>report:</i> His/Her favourite subject is (PE).</div></div><div class="r"><div class="k">Form</div><div>What + 's + your + favourite + subject? Possessives switch: <b>your → my</b> in the answer (watch pupils echoing “your” back).</div></div><div class="r"><div class="k">Pron. watch</div><div>stress <b>fa</b>-vourite (2 syllables — /ˈfeɪv.rət/); PE &amp; ICT as letter names /piː iː/, /aɪ siː tiː/; Maths with /s/ at the end.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“Favourite — the one I like MOST or a little?” → most.</div><div class="ccq" style="margin-bottom:10px">“In the answer do I say YOUR or MY?” → my.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> L1 review words are warming up; pupils know school things from GMF1 U1 — subjects are NEW as a category. They can copy &amp; write familiar words. Survey format is new this year — model it fully first.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Pupils echo “your favourite” in the answer</td><td>Chest-tap gesture on <b>my</b>; back-chain: <i>…subject is Music → My favourite subject is Music.</i></td></tr><tr><td>“Favourite” pronounced /favoˈrit/</td><td>Clap the 2 syllables: FA-vrit; choral drill ×3.</td></tr><tr><td>Abbreviations PE/ICT confuse</td><td>Teach as letter-names with actions (PE = run on the spot, ICT = typing).</td></tr><tr><td>Survey chaos — everyone runs at once</td><td>Music on = mingle, music off = freeze &amp; pair; max 30 sec per partner (countdown).</td></tr><tr><td>Some can't read subject words yet</td><td>Subject cards have icon + word; point to the icon when stuck.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! How are you today?</span> Quick round: happy / great / so-so with thumbs.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Recycle L1, woven into school.</span> <span class="game">▶ RallyRobin</span> in pairs: <span class="en">Take turns — name school things in your bag! Pen… book…</span></p><p>Round 2: hold up character cards — <span class="en">What's his name? What's her name?</span> chorus, then 2–3 solo.</p><p><span class="game">▶ Stand up if…</span> — <span class="en">Stand up if you've got a ruler! … a rubber! … a sharpener!</span> — all move.</p></td>
+        <td class="mat">character cards · <span class="game">▶ RallyRobin</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen to the rhythm — our subjects chant!</span> Play the school-subjects chant (CD1 4) once; pupils clap the beat → into the topic.</p></td>
+        <td class="mat">subjects chant (CD1 4)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–19′</td>
+        <td class="stage"><div class="nm">Presentation · 8 subjects</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Present with icon cards.</span> Hold up each card: <span class="en">What's this? It's… Maths!</span> Choral ×3, then 2–3 solo. One action per subject (Maths = count fingers, Music = air-guitar, PE = run, Art = paint, Science = “boom!”, ICT = typing, English = open book, Spanish = “¡Hola!”).</p><p><span class="ph">Chant (act. 1, CD1 4).</span> Chant through twice with the actions — first listen &amp; point at the board cards, then chant along.</p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if you hear… Music!</span> — flash cards in random order, everyone reacts every time.</p><p><span class="diff"><span class="sup">💪 Support:</span> icon carries the meaning — word optional at this stage. <span class="ext">⭐ Extension:</span> read the word cards without icons.</span></p></td>
+        <td class="mat">8 subject cards (icon + word) · CD1 4</td>
+      </tr>
+
+      <tr>
+        <td class="min">19–27′</td>
+        <td class="stage"><div class="nm">Dialogue · model</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Listen &amp; repeat (act. 2, CD1 5–6).</span> PB p.5: <span class="en">What's your favourite subject? — My favourite subject is Maths.</span> Choral, rows, pairs.</p><p><span class="ph">Form focus (board).</span> Write the Q&amp;A; circle <b>your</b> / <b>my</b>: <span class="en">I ask about YOU — you answer about… ME? No — about MY!</span> Chest-tap on <i>my</i>. Back-chain the long answer.</p><p><span class="ph">ICQ:</span> <span class="en">Do you answer with one word or the full sentence?</span> (→ full sentence — but recast, don't force)</p></td>
+        <td class="mat">Pupil's Book p.5 · CD1 5–6 · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">27–38′</td>
+        <td class="stage"><div class="nm">Class survey</div><div class="zone">mingle → desks</div></td>
+        <td class="flow"><p><span class="ph">Model first.</span> Ask 2 pupils publicly, tally on the board: <span class="en">What's your favourite subject? — Music! One point for Music!</span></p><p><span class="game">▶ Survey mingle (AB-style grid).</span> Each child has a mini-grid (8 subjects). Music on — walk; music off — pair up: <span class="en">What's your favourite subject?</span> Tick the answer. 4–5 partners.</p><p><span class="ph">Harvest (desks).</span> Count ticks together: <span class="en">How many for PE? Count! One, two, three…</span> Build the class bar-chart on the board — <span class="en">PE is the champion!</span></p><p><p><span class="asr">✔ <b>Assess:</b> circulate — is the <b>my/your</b> switch happening? Recast on the spot, note 1–2 names.</span></p></p></td>
+        <td class="mat">survey mini-grids · music · board chart</td>
+      </tr>
+
+      <tr>
+        <td class="min">38–47′</td>
+        <td class="stage"><div class="nm">Report &amp; guess</div><div class="zone">carpet, pairs → circle</div></td>
+        <td class="flow"><p><span class="ph">Report a partner.</span> Model: <span class="en">This is Masha. Her favourite subject is Art.</span> Pairs prepare (30 sec), then popcorn round the circle — each child reports their partner in one sentence (recycles his/her from L1!).</p><p><span class="game">▶ Guess who!</span> — you read from the survey: <span class="en">His favourite subject is Science… who is it?</span> Class guesses the classmate. 4–5 rounds, everyone scans their grids — all involved.</p><p><span class="diff"><span class="sup">💪 Support:</span> sentence frame on the board: <i>His/Her favourite subject is ___.</i> <span class="ext">⭐ Extension:</span> add a reason — <i>because it's fun!</i></span></p></td>
+        <td class="mat">survey grids · sentence frame on board</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner: “My favourite subject is…” — and now in Russian, why you like it.</span> (20 sec each).</p><p>“I can…” badge: <span class="en">Colour your badge — I can name the subjects! I can ask and answer!</span></p></td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show a subject card at the door: <span class="en">What's this?</span> or ask <span class="en">What's your favourite subject?</span> Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">subject cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 3:</b> ex. 1 <i>Follow and colour</i> (subjects maze) + ex. 2 <i>Ask your classmates. Write</i> — finish the survey with 2 family members at home (in Russian OK, write the English subject). <b>+ app trainer</b> — subject words, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.3 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 2 · Starter “Let's go back to school!” · Lesson 2 (Grammar · school subjects) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.5 (CD1 4–6) · Activity Book p.3 · КТП урок 2. Genki option: «What's Your Favourite Subject?» (54).</span>
+  </div>
+</div>
