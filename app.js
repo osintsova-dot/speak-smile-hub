@@ -89,7 +89,10 @@ function doneKey(g,date){ return "done:"+g.name+":"+iso(date); }
 function planKeyFor(program, L){
   if (!window.PLANS) return null;
   const src = L.unit || L.sec || "";
-  // Genki (и др. с русскими юнитами): тип пустой, урок закодирован в «Юнит N Урок M»
+  // Genki (новый КТП): юнит = уровень + «Урок N» ИЛИ «Review» → ключ Genki-<Level>-L<N> / -Review
+  const gl = /^(Adventure|Brainy|Christmas|Challenge|Danger|Experts|Fantastic|Giant|High)\s+(?:Урок\s*(\d+)|(Review))/i.exec(src);
+  if (gl){ const suf = gl[2] ? ("L"+gl[2]) : "Review"; const glkey = `${program}-${gl[1]}-${suf}`; return window.PLANS[glkey] ? glkey : null; }
+  // (старый выдуманный Genki-КТП: «Юнит N Урок M» — оставлено на всякий случай)
   const rm = /Юнит\s*(\d+)\s*Урок\s*(\d+)/i.exec(src);
   if (rm){ const rkey = `${program}-U${rm[1]}-L${rm[2]}`; return window.PLANS[rkey] ? rkey : null; }
   const lm = /\bL(\d+)\b/i.exec(L.type || "");
