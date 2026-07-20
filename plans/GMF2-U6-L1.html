@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF2 · Unit 6 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 2 · Unit 6 “All year round” · Lesson 1 — Vocabulary · Seasonal activities</div>
+    <div class="s">A1 young learners (~8–9 y.o., early readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 01.02–07.02 · Lesson 41</span><span class="chip new">✨ NEW · 8 seasonal activities + 4 seasons</span><span class="chip">~10 pupils · pairs + 4 season corners</span><span class="chip">Pupil's Book p.60 · AB p.58</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 8 seasonal activities</b> and <b>link them to the 4 seasons</b>: “We (plant seeds) in (spring). / We (open presents) in (winter).”</li><li><span class="lb">Subsidiary.</span> Sing the seasons song (CD3 1) + stickers chant; <b>retrieve</b> weather (Starter), winter actions (U5) and clothes (GMF1), woven onto seasons; Present Simple <i>we</i> for habits — first gentle contrast with the -ing “now” of U4–5.</li><li><span class="lb">Personal.</span> Simple-vs-continuous is a landmine — don't lecture; anchor with gestures: -ing = NOW-circle, seasons = calendar-flip “every year”.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name the 8 activities and 4 seasons;</li><li>say “We go to the beach in summer” about their family;</li><li>sort activities into seasons and defend the choice.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">plant seeds</span><span class="w">smell flowers</span><span class="w">finish school</span><span class="w">go to the beach</span><span class="w">eat chestnuts</span><span class="w">celebrate Halloween</span><span class="w">wear warm clothes</span><span class="w">open presents</span><span class="w">spring</span><span class="w">summer</span><span class="w">autumn</span><span class="w">winter</span></div></div><div class="r"><div class="k">Structure</div><div>We (plant seeds) in (spring). / We (celebrate Halloween) in (autumn). &nbsp;·&nbsp; <i>recycle:</i> It's (cold). We're (skating) — right NOW (U5).</div></div><div class="r"><div class="k">Form</div><div>we + verb (no -s, no -ing!) + in + season — habits, every year. Contrast flag only: NOW → -ing; EVERY YEAR → plain verb.</div></div><div class="r"><div class="k">Pron. watch</div><div>autumn — silent n /ˈɔːtəm/; chestnuts /ˈtʃesnʌts/ (t прячется); clothes /kləʊðz/ one beat.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“We plant seeds in spring — this minute or every year?” → every year (calendar-flip!).</div><div class="ccq" style="margin-bottom:10px">“Halloween — which season?” → autumn!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Seasons known receptively (GMF1/weather talk); activities are new chunks. In Norilsk seasons are vivid (polar night!) — real-life anchors help. Chunk-length phrases need clap-chunking.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>-ing leaks in (“We planting…”)</td><td>Calendar-flip gesture vs NOW-circle; recast, no lecture; contrast lands fully in L2.</td></tr><tr><td>autumn/often silent letters</td><td>Ghost-letter joke; chorus /ˈɔːtəm/ ×3.</td></tr><tr><td>Season sorting debates (beach in winter?!)</td><td>Debate is GOOD — English defence: “No! It's cold!”; accept funny answers with a reason.</td></tr><tr><td>Long chunks swallowed</td><td>Clap-chunk each: ce-le-brate Ha-llo-ween; chunk cards show whole phrases.</td></tr><tr><td>Corner game stampede</td><td>Walk-to-corner rule; Freeze; repeat offenders sit one round.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Spring, summer, autumn, winter — which do YOU love?</span> Quick hands vote.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval mingle</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Retrieve, on-topic.</span> <span class="game">▶ Mix–Pair–Share:</span> music → pair.</p><p>R1 <span class="ph">weather (Starter):</span> <span class="en">What's the weather like today?</span> R2 <span class="ph">U5 re-aimed:</span> <span class="en">What do we do in winter? — We're skating! We make snowmen!</span> R3 <span class="ph">clothes (GMF1):</span> <span class="en">What do you wear in winter? — A hat! A scarf!</span></p><p><p><span class="asr">✔ <b>Assess:</b> who links season↔activity already? They'll anchor the corner game.</span></p></p></td>
+        <td class="mat">music · <span class="game">▶ Mix-Pair-Share</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen — the whole year in one song!</span> Seasons song hook (CD3 1); four-season gesture wheel → topic.</p></td>
+        <td class="mat">seasons song (CD3 1)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–20′</td>
+        <td class="stage"><div class="nm">Presentation · 8 activities + 4 seasons</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Season wheel on the board.</span> Four sectors; present each activity chunk with mime, class places it: <span class="en">We plant seeds… which season? SPRING!</span> Choral ×3 per chunk with clap-chunking.</p><p><span class="ph">Calendar-flip anchor.</span> <span class="en">Every year! Not now — every year!</span> — flip-flip gesture whenever the structure sounds.</p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if it's a WINTER thing… open presents! …go to the beach!</span> — funny wrongs get the big NO.</p><p><span class="diff"><span class="sup">💪 Support:</span> mime + chunk. <span class="ext">⭐ Extension:</span> full season sentence: <span class="en">We eat chestnuts in autumn.</span></span></p></td>
+        <td class="mat">season wheel · 8 chunk cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">20–28′</td>
+        <td class="stage"><div class="nm">Song &amp; stickers · PB p.60</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="en">Books open — page 60!</span> <span class="ph">Sing (act. 1, CD3 1).</span> Listen &amp; point around the year; 2nd run sing + mimes.</p><p><span class="ph">Stickers (act. 2, CD3 3).</span> <span class="en">Find the stickers — listen and stick!</span> Model one; neighbour check; countdown.</p></td>
+        <td class="mat">Pupil's Book p.60 · stickers · CD3 1+3</td>
+      </tr>
+
+      <tr>
+        <td class="min">28–37′</td>
+        <td class="stage"><div class="nm">Four corners · seasons</div><div class="zone">4 corners</div></td>
+        <td class="flow"><p><span class="game">▶ Four Corners.</span> Corners = seasons (picture + word). You call an activity chunk — everyone WALKS to its season corner and chorus-justifies: <span class="en">We go to the beach in summer!</span> Debatable ones (play football?) — corners defend in English. 6 rounds — everyone moves every round.</p><p><span class="ph">ICQ:</span> <span class="en">Run or walk?</span> (→ walk!)</p></td>
+        <td class="mat">4 corner posters · chunk cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">37–45′</td>
+        <td class="stage"><div class="nm">Memory · chunk ↔ season</div><div class="zone">carpet, pairs</div></td>
+        <td class="flow"><p><span class="game">▶ Memory — in pairs.</span> 4 activity-picture + 4 season-word cards; a pair is “activity + its season”, claimed with the sentence: <span class="en">We celebrate Halloween in autumn!</span></p><p><div class="ig">🎮 <b>Interactive (projector): S&amp;S memory pairs — seasons.</b> Demo round; class speaks every flip. · 🎮 <a href="https://speakandsmile.ru/gmf2/games/seasons-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">seasons-memo</a></div></p></td>
+        <td class="mat">cards per pair · 🎮 <a href="https://speakandsmile.ru/gmf2/games/seasons-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">seasons-memo</a></td>
+      </tr>
+
+      <tr>
+        <td class="min">45–52′</td>
+        <td class="stage"><div class="nm">My year · write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Notebooks.</span> Mini year-wheel: draw 1 activity per season, write 2 sentences: <i>We ___ in ___.</i> Bank on the board.</p><p><span class="game">▶ RallyRobin:</span> read your year to your partner.</p></td>
+        <td class="mat">notebooks · board bank</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner your favourite season and why (one activity).</span> (20 sec each).</p><p>“I can…” badge: <span class="en">Colour your badge — I know the seasons and what we do!</span></p></td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, all-year stars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Chunk card at the door: say the season sentence to leave. Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">chunk cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 58:</b> ex. 1 <i>Read and circle</i> + ex. 2 <i>Look and write</i>. <b>+ app trainer</b> — 5–7 min.</p><p>🎮 <b>Дома:</b> <a href="https://speakandsmile.ru/gmf2/games/seasons-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">seasons-memo</a> — «Мемо» вслух (5 мин).</p></td>
+        <td class="mat">Activity Book p.58 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 2 · Unit 6 “All year round” · Lesson 1 (Vocabulary · seasonal activities) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.60 (CD3 1–3) · Activity Book p.58 · КТП урок 41.</span>
+  </div>
+</div>

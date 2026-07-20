@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF2 · Unit 7 · Lesson 4 — Vocabulary &amp; Grammar (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 2 · Unit 7 “My house” · Lesson 4 — Vocab &amp; Grammar · Whose is this? It's mine!</div>
+    <div class="s">A1 young learners (~8–9 y.o., early readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 08.03–14.03 · Lesson 51</span><span class="chip new">✨ NEW · 5 objects + mine/yours/his/hers</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.76 · AB p.73</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 5 home objects</b> (radio · camera · box · clock · phone) and <b>ask &amp; answer about ownership</b>: “Whose is this (phone)? — It's mine / yours / his / hers.”</li><li><span class="lb">Subsidiary.</span> Real-objects magic bag; his/hers gender split (echo of his/her from Starter!); lost-property role-play; listen &amp; check (CD3 33).</li><li><span class="lb">Personal.</span> Possessives click through REAL ownership — use the kids' actual pencils/toys (with permission ritual); his/hers pointing must be kind, not grabby.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name the 5 objects;</li><li>ask “Whose is this?” and answer with all four pronouns;</li><li>run a lost-property exchange.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">radio</span><span class="w">camera</span><span class="w">box</span><span class="w">clock</span><span class="w">phone</span><span class="w">watch</span></div></div><div class="r"><div class="k">Structure</div><div>Whose is this (watch)? — It's mine. / It's yours. / It's his. / It's hers.</div></div><div class="r"><div class="k">Form</div><div>Whose = чей; mine/yours stand alone (no noun after!); his/hers split by gender — hers with -s.</div></div><div class="r"><div class="k">Pron. watch</div><div>Whose /huːz/ = who's twin (flag the joke); mine long /aɪ/; hers with /z/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“It's mine — do I add the thing? ‘mine phone’?” → no — mine stands alone!</div><div class="ccq" style="margin-bottom:10px">“The watch is Masha's — his or hers?” → hers!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> his/her known from Starter (names) — mine/yours/hers extend the family. Objects partly known (phone, clock). Ownership games need the kindness frame.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>“mine phone” type errors</td><td>Stand-alone rule gesture: mine = fist to chest, nothing after; drill contrasts my phone / mine.</td></tr><tr><td>his/hers mixed</td><td>Gender anchors from Starter revived (👦/👧 cards); hers = her+s song-line.</td></tr><tr><td>Grabbing during object games</td><td>Permission ritual: object lent to the “museum table” by owner's hand only; touching = asking first.</td></tr><tr><td>Whose/Who's confusion (readers)</td><td>Twin joke on the board; meaning check: чей vs кто.</td></tr><tr><td>Magic bag chaos</td><td>One reach, eyes closed, you hold the bag high between turns.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Look what I found under my sofa…</span> Pull objects from the magic bag one by one.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Haunted chunks back.</span> <span class="en">What's in the haunted living room?</span> chorus round.</p><p><span class="ph">his/her revival (Starter).</span> Point at kids' items kindly: <span class="en">His pencil! Her book!</span> chorus — the gender rails are back.</p></td>
+        <td class="mat">magic bag · objects</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Five things — but WHOSE are they? Let's find out!</span></p></td>
+        <td class="mat">Pupil's Book p.76</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–19′</td>
+        <td class="stage"><div class="nm">Presentation · objects + possessives</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Objects.</span> radio · camera · box · clock · phone (+watch): choral ×3 + mime (turn the dial! click! tick-tock!).</p><p><span class="ph">The possessive four.</span> Board faces: я→<b>mine</b> · ты→<b>yours</b> · 👦→<b>his</b> · 👧→<b>hers</b>. Model with a real pencil: <span class="en">Whose is this pencil? It's… mine!</span> (chest-fist). Hand it to a child: <span class="en">Now it's yours!</span> Boy's pen: <span class="en">his!</span> Girl's: <span class="en">hers!</span> Choral each.</p><p><span class="ph">Chain.</span> Museum table: each child lends ONE item; you lift items: <span class="en">Whose is this?</span> — class answers with the right pronoun (owner confirms: <span class="en">It's mine!</span>).</p><p><span class="ph">ICQ:</span> <span class="en">“It's mine pencil” — OK?</span> (→ no — just “It's mine”!)</p></td>
+        <td class="mat">object cards · real items table · face cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">19–26′</td>
+        <td class="stage"><div class="nm">Listen &amp; check</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Act. 1 (PB p.76, CD3 33).</span> Look, read &amp; write, then listen to check; two plays; pair-check.</p><p><p><span class="asr">✔ <b>Assess:</b> who wrote the right pronoun BEFORE the audio? Tick list.</span></p></p></td>
+        <td class="mat">Pupil's Book p.76 · CD3 33</td>
+      </tr>
+
+      <tr>
+        <td class="min">26–35′</td>
+        <td class="stage"><div class="nm">Lost property office</div><div class="zone">two counters</div></td>
+        <td class="flow"><p><span class="ph">Role-play.</span> Museum items “lost” at two counters; owners queue at the OTHER counter: clerk asks <span class="en">Whose is this camera?</span> — queue answers <span class="en">It's his! / It's hers!</span> pointing kindly; owner claims: <span class="en">It's mine! Thank you!</span> Rotate clerks every 2 min.</p><p><span class="diff"><span class="sup">💪 Support:</span> pronoun faces card at the counter. <span class="ext">⭐ Extension:</span> clerk adds a check question: <span class="en">Is it YOURS?</span></span></p></td>
+        <td class="mat">2 counters · lent items</td>
+      </tr>
+
+      <tr>
+        <td class="min">35–44′</td>
+        <td class="stage"><div class="nm">Board game · whose path</div><div class="zone">desks, groups</div></td>
+        <td class="flow"><p><span class="game">▶ Board game.</span> Dice + counters; object cells show an owner face (я/ты/boy/girl) → full Q&amp;A within the group: <span class="en">Whose is this clock? — It's hers!</span> First home wins.</p><p><div class="ig">🎮 <b>Interactive (projector): «Ходилка» — Whose is this?</b> Shared run; class speaks every cell. · 🎮 <a href="https://speakandsmile.ru/gmf2/games/house-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">house-board</a></div></p></td>
+        <td class="mat">printed boards · dice · counters · 🎮 <a href="https://speakandsmile.ru/gmf2/games/house-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">house-board</a></td>
+      </tr>
+
+      <tr>
+        <td class="min">44–52′</td>
+        <td class="stage"><div class="nm">Write it</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Notebooks (AB p.73 format).</span> 3 mini-dialogues: <i>— Whose is this ___? — It's ___.</i> with different pronouns; draw one object.</p><p><span class="diff"><span class="sup">💪 Support:</span> copy-frame with faces. <span class="ext">⭐ Extension:</span> add a plural teaser: <span class="en">Whose are these?</span> — just as a taste.</span></p></td>
+        <td class="mat">notebooks · board frame</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Hold up your pencil: “It's mine!” — partner points: “It's yours!”</span> (20 sec each).</p><p>“I can…” badge: <span class="en">Colour your badge — I know mine, yours, his, hers!</span></p></td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done — everything found its owner! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. At the door with a museum item: <span class="en">Whose is this?</span> — right pronoun frees it home. Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">items · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 73:</b> ex. 1 <i>Look, read and write. Listen and check</i> (CD3 33 — можно без аудио, потом свериться в классе) + ex. 2 <i>Find and colour. Write</i>. <b>+ app trainer</b> — 5–7 min.</p><p>🎮 <b>Дома:</b> <a href="https://speakandsmile.ru/gmf2/games/house-ttt.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">house-ttt</a> — 🤖 отвечай местоимением вслух (5 мин).</p></td>
+        <td class="mat">Activity Book p.73 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 2 · Unit 7 “My house” · Lesson 4 (Vocab &amp; Grammar · possessive pronouns) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.76 (CD3 30–33) · Activity Book p.73 · КТП урок 51. Genki option: «Whose Is It?» (85).</span>
+  </div>
+</div>
