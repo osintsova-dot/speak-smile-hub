@@ -255,4 +255,12 @@ window.PLANS = {
   "Genki-Challenge-L6": 1,
   "Genki-Challenge-L7": 1,
   "Genki-Challenge-Review": 1,
+  "Genki-Danger-L1": 1,
+  "Genki-Danger-L2": 1,
+  "Genki-Danger-L3": 1,
+  "Genki-Danger-L4": 1,
+  "Genki-Danger-L5": 1,
+  "Genki-Danger-L6": 1,
+  "Genki-Danger-L7": 1,
+  "Genki-Danger-Review": 1,
 };
