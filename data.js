@@ -18422,24 +18422,24 @@ window.PROGRAMS = {
     "n": 10,
     "week": "05.10–11.10",
     "type": "",
-    "title": "Numbers 1–12",
+    "title": "Numbers 1–12 (часть 1)",
     "unit": "Brainy Урок 1",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Numbers 1–12"
+      "Numbers 1–12 (часть 1)"
      ],
      [
       "Лексика",
-      "one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, how many"
+      "one, two, three, four, five, six, count, how many"
      ],
      [
       "Речевые структуры",
-      "One, two, three… twelve! / How many? / Count with me!"
+      "One, two, three, four, five, six! / How many? / Count with me!"
      ],
      [
       "Виды деятельности",
-      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Numbers song, счётные игры, карточки-цифры, счёт-эстафета, ритм-счёт. Финал: Thank you song."
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Numbers song (1–6), счётные игры, карточки-цифры, пальчиковый счёт. Финал: Thank you song."
      ]
     ],
     "sec": "Brainy Урок 1"
@@ -18448,24 +18448,24 @@ window.PROGRAMS = {
     "n": 11,
     "week": "05.10–11.10",
     "type": "",
-    "title": "How old are you?",
+    "title": "Numbers 1–12 (часть 2)",
     "unit": "Brainy Урок 2",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "How old are you?"
+      "Numbers 1–12 (часть 2)"
      ],
      [
       "Лексика",
-      "how old, years old, birthday, one–twelve"
+      "seven, eight, nine, ten, eleven, twelve, how many"
      ],
      [
       "Речевые структуры",
-      "How old are you? / I'm five years old. / Happy Birthday!"
+      "…seven, eight, nine, ten, eleven, twelve! / How many? / Count to twelve!"
      ],
      [
       "Виды деятельности",
-      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация How old are you? song, Birthday song, возраст-mingle, построиться по возрасту. Финал: Thank you song."
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); отработка Numbers 1–12 (все числа), счёт-эстафета, «сколько предметов?», ритм-счёт под музыку. Финал: Thank you song."
      ]
     ],
     "sec": "Brainy Урок 2"
@@ -18474,24 +18474,24 @@ window.PROGRAMS = {
     "n": 12,
     "week": "12.10–18.10",
     "type": "",
-    "title": "What's the weather?",
+    "title": "How old are you? (часть 1)",
     "unit": "Brainy Урок 3",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "What's the weather?"
+      "How old are you? (часть 1)"
      ],
      [
       "Лексика",
-      "weather, sunny, rainy, cloudy, windy, snowy, hot, cold"
+      "how old, years old, birthday, one–six"
      ],
      [
       "Речевые структуры",
-      "What's the weather? / It's sunny. / It's rainy. / It's windy. / It's cold."
+      "How old are you? / I'm five years old. / I'm six years old."
      ],
      [
       "Виды деятельности",
-      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Weather song, колесо погоды, погода-карточки, TPR по погоде, «какая сегодня погода?». Финал: Thank you song."
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация How old are you? song, возраст-карточки, «сколько тебе лет?», mingle. Финал: Thank you song."
      ]
     ],
     "sec": "Brainy Урок 3"
@@ -18500,8 +18500,86 @@ window.PROGRAMS = {
     "n": 13,
     "week": "12.10–18.10",
     "type": "",
-    "title": "Good Morning!",
+    "title": "How old are you? (часть 2)",
     "unit": "Brainy Урок 4",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "How old are you? (часть 2)"
+     ],
+     [
+      "Лексика",
+      "how old, years old, birthday, seven–twelve, Happy Birthday"
+     ],
+     [
+      "Речевые структуры",
+      "How old are you? / I'm seven years old. / Happy Birthday!"
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); отработка How old are you?, Birthday song, построиться по возрасту, ролевой круг. Финал: Thank you song."
+     ]
+    ],
+    "sec": "Brainy Урок 4"
+   },
+   {
+    "n": 14,
+    "week": "19.10–25.10",
+    "type": "",
+    "title": "What's the weather? (часть 1)",
+    "unit": "Brainy Урок 5",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "What's the weather? (часть 1)"
+     ],
+     [
+      "Лексика",
+      "weather, sunny, rainy, cloudy, windy"
+     ],
+     [
+      "Речевые структуры",
+      "What's the weather? / It's sunny. / It's rainy. / It's windy."
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Weather song (1), колесо погоды, погода-карточки, TPR по погоде. Финал: Thank you song."
+     ]
+    ],
+    "sec": "Brainy Урок 5"
+   },
+   {
+    "n": 15,
+    "week": "19.10–25.10",
+    "type": "",
+    "title": "What's the weather? (часть 2)",
+    "unit": "Brainy Урок 6",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "What's the weather? (часть 2)"
+     ],
+     [
+      "Лексика",
+      "snowy, hot, cold, sunny, rainy, cloudy, windy"
+     ],
+     [
+      "Речевые структуры",
+      "What's the weather? / It's snowy. / It's hot. / It's cold. / Какая сегодня погода?"
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); отработка Weather (вся погода), «какая сегодня погода?», игра-угадайка, песня fast/slow. Финал: Thank you song."
+     ]
+    ],
+    "sec": "Brainy Урок 6"
+   },
+   {
+    "n": 16,
+    "week": "26.10–01.11",
+    "type": "",
+    "title": "Good Morning!",
+    "unit": "Brainy Урок 7",
     "fields": [
      [
       "Тема урока (Genki song)",
@@ -18520,14 +18598,14 @@ window.PROGRAMS = {
       "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Good Morning song, карточки времени суток, ролевой круг приветствий. Финал: Thank you song."
      ]
     ],
-    "sec": "Brainy Урок 4"
+    "sec": "Brainy Урок 7"
    },
    {
-    "n": 14,
-    "week": "19.10–25.10",
+    "n": 17,
+    "week": "26.10–01.11",
     "type": "",
     "title": "Do you like food?",
-    "unit": "Brainy Урок 5",
+    "unit": "Brainy Урок 8",
     "fields": [
      [
       "Тема урока (Genki song)",
@@ -18546,14 +18624,14 @@ window.PROGRAMS = {
       "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Do you like food? song, опрос вкусов, флешкарды-еда, like/dislike сортировка. Финал: Thank you song."
      ]
     ],
-    "sec": "Brainy Урок 5"
+    "sec": "Brainy Урок 8"
    },
    {
-    "n": 15,
-    "week": "19.10–25.10",
+    "n": 18,
+    "week": "02.11–08.11",
     "type": "",
     "title": "Do you like animals?",
-    "unit": "Brainy Урок 6",
+    "unit": "Brainy Урок 9",
     "fields": [
      [
       "Тема урока (Genki song)",
@@ -18572,14 +18650,14 @@ window.PROGRAMS = {
       "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Do you like animals? song, зоо-опрос, флешкарды-животные, speaking-drill. Финал: Thank you song."
      ]
     ],
-    "sec": "Brainy Урок 6"
+    "sec": "Brainy Урок 9"
    },
    {
-    "n": 16,
-    "week": "26.10–01.11",
+    "n": 19,
+    "week": "02.11–08.11",
     "type": "",
     "title": "I'm sorry!",
-    "unit": "Brainy Урок 7",
+    "unit": "Brainy Урок 10",
     "fields": [
      [
       "Тема урока (Genki song)",
@@ -18598,11 +18676,11 @@ window.PROGRAMS = {
       "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация I'm sorry! song, ролевые ситуации-извинения, кукольная сценка. Финал: Thank you song."
      ]
     ],
-    "sec": "Brainy Урок 7"
+    "sec": "Brainy Урок 10"
    },
    {
-    "n": 17,
-    "week": "26.10–01.11",
+    "n": 20,
+    "week": "09.11–15.11",
     "type": "",
     "title": "Brainy Review · уровень пройден",
     "unit": "Brainy Review",
@@ -18627,8 +18705,8 @@ window.PROGRAMS = {
     "sec": "Brainy Review"
    },
    {
-    "n": 18,
-    "week": "02.11–08.11",
+    "n": 21,
+    "week": "09.11–15.11",
     "type": "",
     "title": "I like animals",
     "unit": "Challenge Урок 1",
@@ -18653,8 +18731,8 @@ window.PROGRAMS = {
     "sec": "Challenge Урок 1"
    },
    {
-    "n": 19,
-    "week": "02.11–08.11",
+    "n": 22,
+    "week": "16.11–22.11",
     "type": "",
     "title": "Vegetables",
     "unit": "Challenge Урок 2",
@@ -18679,8 +18757,8 @@ window.PROGRAMS = {
     "sec": "Challenge Урок 2"
    },
    {
-    "n": 20,
-    "week": "09.11–15.11",
+    "n": 23,
+    "week": "16.11–22.11",
     "type": "",
     "title": "Do you have any pets?",
     "unit": "Challenge Урок 3",
@@ -18705,8 +18783,8 @@ window.PROGRAMS = {
     "sec": "Challenge Урок 3"
    },
    {
-    "n": 21,
-    "week": "09.11–15.11",
+    "n": 24,
+    "week": "23.11–29.11",
     "type": "",
     "title": "Animal Voices",
     "unit": "Challenge Урок 4",
@@ -18731,8 +18809,8 @@ window.PROGRAMS = {
     "sec": "Challenge Урок 4"
    },
    {
-    "n": 22,
-    "week": "16.11–22.11",
+    "n": 25,
+    "week": "23.11–29.11",
     "type": "",
     "title": "Baby Rabbit Family",
     "unit": "Challenge Урок 5",
@@ -18757,8 +18835,8 @@ window.PROGRAMS = {
     "sec": "Challenge Урок 5"
    },
    {
-    "n": 23,
-    "week": "16.11–22.11",
+    "n": 26,
+    "week": "30.11–06.12",
     "type": "",
     "title": "Baby Monkey Family",
     "unit": "Challenge Урок 6",
@@ -18777,40 +18855,14 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); отработка семьи через Baby Monkey Family song, пальчиковый театр семьи, показ фото-семьи. Финал: Thank you song."
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); отработка семьи через Baby Monkey Family song, пальчиковый театр семьи (последний урок перед Christmas-блоком). Финал: Thank you song."
      ]
     ],
     "sec": "Challenge Урок 6"
    },
    {
-    "n": 24,
-    "week": "23.11–29.11",
-    "type": "",
-    "title": "Do you have any brothers or sisters?",
-    "unit": "Challenge Урок 7",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "Do you have any brothers or sisters?"
-     ],
-     [
-      "Лексика",
-      "older brother, younger sister, only child, one, two"
-     ],
-     [
-      "Речевые структуры",
-      "Do you have any brothers or sisters? / I have one older brother. / I'm an only child."
-     ],
-     [
-      "Виды деятельности",
-      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Brothers or Sisters song, семейный опрос, построиться по числу братьев/сестёр (последняя тема перед декабрьским Christmas-блоком). Финал: Thank you song."
-     ]
-    ],
-    "sec": "Challenge Урок 7"
-   },
-   {
-    "n": 25,
-    "week": "23.11–29.11",
+    "n": 27,
+    "week": "30.11–06.12",
     "type": "",
     "title": "Genki Christmas",
     "unit": "Christmas Урок 1",
@@ -18835,8 +18887,8 @@ window.PROGRAMS = {
     "sec": "Christmas Урок 1"
    },
    {
-    "n": 26,
-    "week": "30.11–06.12",
+    "n": 28,
+    "week": "07.12–13.12",
     "type": "",
     "title": "Decorate the Christmas tree",
     "unit": "Christmas Урок 2",
@@ -18861,8 +18913,8 @@ window.PROGRAMS = {
     "sec": "Christmas Урок 2"
    },
    {
-    "n": 27,
-    "week": "30.11–06.12",
+    "n": 29,
+    "week": "07.12–13.12",
     "type": "",
     "title": "What colour is Christmas?",
     "unit": "Christmas Урок 3",
@@ -18887,8 +18939,8 @@ window.PROGRAMS = {
     "sec": "Christmas Урок 3"
    },
    {
-    "n": 28,
-    "week": "07.12–13.12",
+    "n": 30,
+    "week": "14.12–20.12",
     "type": "",
     "title": "Christmas shapes",
     "unit": "Christmas Урок 4",
@@ -18913,8 +18965,8 @@ window.PROGRAMS = {
     "sec": "Christmas Урок 4"
    },
    {
-    "n": 29,
-    "week": "07.12–13.12",
+    "n": 31,
+    "week": "14.12–20.12",
     "type": "",
     "title": "Let's build a snowman",
     "unit": "Christmas Урок 5",
@@ -18939,8 +18991,8 @@ window.PROGRAMS = {
     "sec": "Christmas Урок 5"
    },
    {
-    "n": 30,
-    "week": "14.12–20.12",
+    "n": 32,
+    "week": "21.12–27.12",
     "type": "",
     "title": "What would you like for Christmas?",
     "unit": "Christmas Урок 6",
@@ -18965,63 +19017,11 @@ window.PROGRAMS = {
     "sec": "Christmas Урок 6"
    },
    {
-    "n": 31,
-    "week": "14.12–20.12",
-    "type": "",
-    "title": "Christmas crafts & songs",
-    "unit": "Christmas Урок 7",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "Christmas crafts & songs"
-     ],
-     [
-      "Лексика",
-      "card, star, snowflake, glue, colour, draw, cut"
-     ],
-     [
-      "Речевые структуры",
-      "Let's make a Christmas card! / Colour it red! / Draw a star! / Cut here!"
-     ],
-     [
-      "Виды деятельности",
-      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); крафт-урок: рождественская открытка/украшение, инструкции на английском, повтор всех декабрьских тем в песнях. Финал: Thank you song."
-     ]
-    ],
-    "sec": "Christmas Урок 7"
-   },
-   {
-    "n": 32,
-    "week": "21.12–27.12",
-    "type": "",
-    "title": "Christmas party",
-    "unit": "Christmas Урок 8",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "Christmas party"
-     ],
-     [
-      "Лексика",
-      "party, celebrate, present, sing, dance, well done"
-     ],
-     [
-      "Речевые структуры",
-      "Let's have a party! / Merry Christmas! / Let's sing and dance! / Well done!"
-     ],
-     [
-      "Виды деятельности",
-      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); праздник-урок: обмен «подарками» в ролевой, любимые игры и песни, весёлое кумулятивное ревью. Финал: Thank you song."
-     ]
-    ],
-    "sec": "Christmas Урок 8"
-   },
-   {
     "n": 33,
     "week": "21.12–27.12",
     "type": "",
     "title": "Happy New Year!",
-    "unit": "Christmas Урок 9",
+    "unit": "Christmas Урок 7",
     "fields": [
      [
       "Тема урока (Genki song)",
@@ -19040,18 +19040,44 @@ window.PROGRAMS = {
       "Повтор всех пройденных Q&A по кругу (вопрос–ответ); последний урок перед каникулами: Happy New Year song, обратный отсчёт, пожелания, прощание → зимние каникулы. Финал: Thank you song."
      ]
     ],
-    "sec": "Christmas Урок 9"
+    "sec": "Christmas Урок 7"
    },
    {
     "n": 34,
     "week": "11.01–17.01",
     "type": "",
-    "title": "Challenge Review · уровень пройден (после каникул)",
+    "title": "Do you have any brothers or sisters?",
+    "unit": "Challenge Урок 7",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "Do you have any brothers or sisters?"
+     ],
+     [
+      "Лексика",
+      "older brother, younger sister, only child, one, two"
+     ],
+     [
+      "Речевые структуры",
+      "Do you have any brothers or sisters? / I have one older brother. / I'm an only child."
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); после каникул: презентация Brothers or Sisters song, семейный опрос, построиться по числу братьев/сестёр. Финал: Thank you song."
+     ]
+    ],
+    "sec": "Challenge Урок 7"
+   },
+   {
+    "n": 35,
+    "week": "11.01–17.01",
+    "type": "",
+    "title": "Challenge Review · уровень пройден",
     "unit": "Challenge Review",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "Challenge Review · уровень пройден (после каникул)"
+      "Challenge Review · уровень пройден"
      ],
      [
       "Лексика",
@@ -19069,8 +19095,8 @@ window.PROGRAMS = {
     "sec": "Challenge Review"
    },
    {
-    "n": 35,
-    "week": "11.01–17.01",
+    "n": 36,
+    "week": "18.01–24.01",
     "type": "",
     "title": "Under the Sea",
     "unit": "Danger Урок 1",
@@ -19095,7 +19121,7 @@ window.PROGRAMS = {
     "sec": "Danger Урок 1"
    },
    {
-    "n": 36,
+    "n": 37,
     "week": "18.01–24.01",
     "type": "",
     "title": "Head & Shoulders",
@@ -19121,8 +19147,8 @@ window.PROGRAMS = {
     "sec": "Danger Урок 2"
    },
    {
-    "n": 37,
-    "week": "18.01–24.01",
+    "n": 38,
+    "week": "25.01–31.01",
     "type": "",
     "title": "Make a Face",
     "unit": "Danger Урок 3",
@@ -19147,7 +19173,7 @@ window.PROGRAMS = {
     "sec": "Danger Урок 3"
    },
    {
-    "n": 38,
+    "n": 39,
     "week": "25.01–31.01",
     "type": "",
     "title": "Let's make a monster!",
@@ -19173,8 +19199,8 @@ window.PROGRAMS = {
     "sec": "Danger Урок 4"
    },
    {
-    "n": 39,
-    "week": "25.01–31.01",
+    "n": 40,
+    "week": "01.02–07.02",
     "type": "",
     "title": "Doctor, Doctor! Body parts",
     "unit": "Danger Урок 5",
@@ -19199,7 +19225,7 @@ window.PROGRAMS = {
     "sec": "Danger Урок 5"
    },
    {
-    "n": 40,
+    "n": 41,
     "week": "01.02–07.02",
     "type": "",
     "title": "Winter clothes",
@@ -19225,8 +19251,8 @@ window.PROGRAMS = {
     "sec": "Danger Урок 6"
    },
    {
-    "n": 41,
-    "week": "01.02–07.02",
+    "n": 42,
+    "week": "08.02–14.02",
     "type": "",
     "title": "Summer clothes",
     "unit": "Danger Урок 7",
@@ -19251,7 +19277,7 @@ window.PROGRAMS = {
     "sec": "Danger Урок 7"
    },
    {
-    "n": 42,
+    "n": 43,
     "week": "08.02–14.02",
     "type": "",
     "title": "Danger Review · уровень пройден",
@@ -19277,8 +19303,8 @@ window.PROGRAMS = {
     "sec": "Danger Review"
    },
    {
-    "n": 43,
-    "week": "08.02–14.02",
+    "n": 44,
+    "week": "15.02–21.02",
     "type": "",
     "title": "Treasure Adventure",
     "unit": "Experts Урок 1",
@@ -19303,7 +19329,7 @@ window.PROGRAMS = {
     "sec": "Experts Урок 1"
    },
    {
-    "n": 44,
+    "n": 45,
     "week": "15.02–21.02",
     "type": "",
     "title": "How many?",
@@ -19329,8 +19355,8 @@ window.PROGRAMS = {
     "sec": "Experts Урок 2"
    },
    {
-    "n": 45,
-    "week": "15.02–21.02",
+    "n": 46,
+    "week": "22.02–28.02",
     "type": "",
     "title": "Numbers 13–20",
     "unit": "Experts Урок 3",
@@ -19355,7 +19381,7 @@ window.PROGRAMS = {
     "sec": "Experts Урок 3"
    },
    {
-    "n": 46,
+    "n": 47,
     "week": "22.02–28.02",
     "type": "",
     "title": "How much? Money",
@@ -19381,8 +19407,8 @@ window.PROGRAMS = {
     "sec": "Experts Урок 4"
    },
    {
-    "n": 47,
-    "week": "22.02–28.02",
+    "n": 48,
+    "week": "01.03–07.03",
     "type": "",
     "title": "Rocket Launch! Numbers 10–100",
     "unit": "Experts Урок 5",
@@ -19407,7 +19433,7 @@ window.PROGRAMS = {
     "sec": "Experts Урок 5"
    },
    {
-    "n": 48,
+    "n": 49,
     "week": "01.03–07.03",
     "type": "",
     "title": "Shapes",
@@ -19433,8 +19459,8 @@ window.PROGRAMS = {
     "sec": "Experts Урок 6"
    },
    {
-    "n": 49,
-    "week": "01.03–07.03",
+    "n": 50,
+    "week": "08.03–14.03",
     "type": "",
     "title": "Experts Review · уровень пройден",
     "unit": "Experts Review",
@@ -19459,7 +19485,7 @@ window.PROGRAMS = {
     "sec": "Experts Review"
    },
    {
-    "n": 50,
+    "n": 51,
     "week": "08.03–14.03",
     "type": "",
     "title": "Fruit Market",
@@ -19485,8 +19511,8 @@ window.PROGRAMS = {
     "sec": "Fantastic Урок 1"
    },
    {
-    "n": 51,
-    "week": "08.03–14.03",
+    "n": 52,
+    "week": "15.03–21.03",
     "type": "",
     "title": "Can you speak…?",
     "unit": "Fantastic Урок 2",
@@ -19511,7 +19537,7 @@ window.PROGRAMS = {
     "sec": "Fantastic Урок 2"
    },
    {
-    "n": 52,
+    "n": 53,
     "week": "15.03–21.03",
     "type": "",
     "title": "Come on, Come on! / Can you kick?",
@@ -19537,8 +19563,8 @@ window.PROGRAMS = {
     "sec": "Fantastic Урок 3"
    },
    {
-    "n": 53,
-    "week": "15.03–21.03",
+    "n": 54,
+    "week": "22.03–28.03",
     "type": "",
     "title": "I can do it!",
     "unit": "Fantastic Урок 4",
@@ -19563,7 +19589,7 @@ window.PROGRAMS = {
     "sec": "Fantastic Урок 4"
    },
    {
-    "n": 54,
+    "n": 55,
     "week": "22.03–28.03",
     "type": "",
     "title": "Where are you from?",
@@ -19589,8 +19615,8 @@ window.PROGRAMS = {
     "sec": "Fantastic Урок 5"
    },
    {
-    "n": 55,
-    "week": "22.03–28.03",
+    "n": 56,
+    "week": "29.03–04.04",
     "type": "",
     "title": "Fantastic Review · уровень пройден",
     "unit": "Fantastic Review",
@@ -19615,7 +19641,7 @@ window.PROGRAMS = {
     "sec": "Fantastic Review"
    },
    {
-    "n": 56,
+    "n": 57,
     "week": "29.03–04.04",
     "type": "",
     "title": "Where do you live?",
@@ -19641,8 +19667,8 @@ window.PROGRAMS = {
     "sec": "Giant Урок 1"
    },
    {
-    "n": 57,
-    "week": "29.03–04.04",
+    "n": 58,
+    "week": "05.04–11.04",
     "type": "",
     "title": "How do you say…?",
     "unit": "Giant Урок 2",
@@ -19667,7 +19693,7 @@ window.PROGRAMS = {
     "sec": "Giant Урок 2"
    },
    {
-    "n": 58,
+    "n": 59,
     "week": "05.04–11.04",
     "type": "",
     "title": "I am a robot",
@@ -19693,8 +19719,8 @@ window.PROGRAMS = {
     "sec": "Giant Урок 3"
    },
    {
-    "n": 59,
-    "week": "05.04–11.04",
+    "n": 60,
+    "week": "12.04–18.04",
     "type": "",
     "title": "Mr Octopus",
     "unit": "Giant Урок 4",
@@ -19719,7 +19745,7 @@ window.PROGRAMS = {
     "sec": "Giant Урок 4"
    },
    {
-    "n": 60,
+    "n": 61,
     "week": "12.04–18.04",
     "type": "",
     "title": "What time is it, Mr Wolf?",
@@ -19745,8 +19771,8 @@ window.PROGRAMS = {
     "sec": "Giant Урок 5"
    },
    {
-    "n": 61,
-    "week": "12.04–18.04",
+    "n": 62,
+    "week": "19.04–25.04",
     "type": "",
     "title": "What time is it? (часть 2/3)",
     "unit": "Giant Урок 6",
@@ -19771,7 +19797,7 @@ window.PROGRAMS = {
     "sec": "Giant Урок 6"
    },
    {
-    "n": 62,
+    "n": 63,
     "week": "19.04–25.04",
     "type": "",
     "title": "Summer sports",
@@ -19797,8 +19823,8 @@ window.PROGRAMS = {
     "sec": "Giant Урок 7"
    },
    {
-    "n": 63,
-    "week": "19.04–25.04",
+    "n": 64,
+    "week": "26.04–02.05",
     "type": "",
     "title": "Winter Sports",
     "unit": "Giant Урок 8",
@@ -19823,7 +19849,7 @@ window.PROGRAMS = {
     "sec": "Giant Урок 8"
    },
    {
-    "n": 64,
+    "n": 65,
     "week": "26.04–02.05",
     "type": "",
     "title": "Giant Review · уровень пройден",
@@ -19849,8 +19875,8 @@ window.PROGRAMS = {
     "sec": "Giant Review"
    },
    {
-    "n": 65,
-    "week": "26.04–02.05",
+    "n": 66,
+    "week": "03.05–09.05",
     "type": "",
     "title": "What sports do you play?",
     "unit": "High Урок 1",
@@ -19875,37 +19901,63 @@ window.PROGRAMS = {
     "sec": "High Урок 1"
    },
    {
-    "n": 66,
+    "n": 67,
     "week": "03.05–09.05",
     "type": "",
-    "title": "When is your birthday? + Months",
+    "title": "When is your birthday? + Months (часть 1)",
     "unit": "High Урок 2",
     "fields": [
      [
       "Тема урока (Genki song)",
-      "When is your birthday? + Months"
+      "When is your birthday? + Months (часть 1)"
      ],
      [
       "Лексика",
-      "January, February, March, April, May, June, July, August, September, October, November, December"
+      "January, February, March, April, May, June, when is your birthday, my birthday is in"
      ],
      [
       "Речевые структуры",
-      "When is your birthday? / My birthday is in May. / In September. / In December."
+      "When is your birthday? / My birthday is in May. / In March."
      ],
      [
       "Виды деятельности",
-      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Months song (все 12) + «When is your birthday?», календарь-игра, построиться по месяцу, Birthday song. Финал: Thank you song."
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Months song (Jan–Jun) + «When is your birthday?», календарь-игра, построиться по месяцу. Финал: Thank you song."
      ]
     ],
     "sec": "High Урок 2"
    },
    {
-    "n": 67,
-    "week": "03.05–09.05",
+    "n": 68,
+    "week": "10.05–16.05",
+    "type": "",
+    "title": "When is your birthday? + Months (часть 2)",
+    "unit": "High Урок 3",
+    "fields": [
+     [
+      "Тема урока (Genki song)",
+      "When is your birthday? + Months (часть 2)"
+     ],
+     [
+      "Лексика",
+      "July, August, September, October, November, December"
+     ],
+     [
+      "Речевые структуры",
+      "When is your birthday? / My birthday is in September. / In December."
+     ],
+     [
+      "Виды деятельности",
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); отработка Months (Jul–Dec, все 12), birthday-mingle, календарь года, Birthday song. Финал: Thank you song."
+     ]
+    ],
+    "sec": "High Урок 3"
+   },
+   {
+    "n": 69,
+    "week": "10.05–16.05",
     "type": "",
     "title": "How did you get here?",
-    "unit": "High Урок 3",
+    "unit": "High Урок 4",
     "fields": [
      [
       "Тема урока (Genki song)",
@@ -19924,14 +19976,14 @@ window.PROGRAMS = {
       "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация How did you get here? song, «how did you get here?»-опрос, транспорт-мим, дорожная игра. Финал: Thank you song."
      ]
     ],
-    "sec": "High Урок 3"
+    "sec": "High Урок 4"
    },
    {
-    "n": 68,
-    "week": "10.05–16.05",
+    "n": 70,
+    "week": "17.05–23.05",
     "type": "",
     "title": "Colours & Pirates",
-    "unit": "High Урок 4",
+    "unit": "High Урок 5",
     "fields": [
      [
       "Тема урока (Genki song)",
@@ -19950,14 +20002,14 @@ window.PROGRAMS = {
       "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Colours & Pirates song, пиратский поиск клада по цветам, colour-охота, флешкарды. Финал: Thank you song."
      ]
     ],
-    "sec": "High Урок 4"
+    "sec": "High Урок 5"
    },
    {
-    "n": 69,
-    "week": "10.05–16.05",
+    "n": 71,
+    "week": "17.05–23.05",
     "type": "",
     "title": "What's your favourite colour?",
-    "unit": "High Урок 5",
+    "unit": "High Урок 6",
     "fields": [
      [
       "Тема урока (Genki song)",
@@ -19965,7 +20017,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "red, blue, green, yellow, black, white, pink, orange, purple, gold, silver, bronze, favourite"
+      "red, blue, green, yellow, black, white, pink, orange, purple, favourite"
      ],
      [
       "Речевые структуры",
@@ -19976,59 +20028,7 @@ window.PROGRAMS = {
       "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Favourite Colour song, опрос любимых цветов, colour-mingle, постер любимого цвета. Финал: Thank you song."
      ]
     ],
-    "sec": "High Урок 5"
-   },
-   {
-    "n": 70,
-    "week": "17.05–23.05",
-    "type": "",
-    "title": "What's your favourite flavour?",
-    "unit": "High Урок 6",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "What's your favourite flavour?"
-     ],
-     [
-      "Лексика",
-      "vanilla, chocolate, strawberry, lemon, mint, ice cream, favourite flavour"
-     ],
-     [
-      "Речевые структуры",
-      "What's your favourite flavour? / I like chocolate. / My favourite flavour is vanilla."
-     ],
-     [
-      "Виды деятельности",
-      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Favourite Flavour song, ice-cream ролевая, опрос вкусов, флешкарды. Финал: Thank you song."
-     ]
-    ],
     "sec": "High Урок 6"
-   },
-   {
-    "n": 71,
-    "week": "17.05–23.05",
-    "type": "",
-    "title": "What's your favourite subject?",
-    "unit": "High Урок 7",
-    "fields": [
-     [
-      "Тема урока (Genki song)",
-      "What's your favourite subject?"
-     ],
-     [
-      "Лексика",
-      "maths, art, science, P.E., music, English, history, favourite subject"
-     ],
-     [
-      "Речевые структуры",
-      "What's your favourite subject? / I like art. / My favourite subject is music."
-     ],
-     [
-      "Виды деятельности",
-      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); презентация Favourite Subject song, опрос любимых предметов, интервью, постер школы. Финал: Thank you song."
-     ]
-    ],
-    "sec": "High Урок 7"
    },
    {
     "n": 72,
@@ -20043,15 +20043,15 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "sports, birthday months, transport, colours, flavours, subjects"
+      "sports, birthday months, transport, colours (revision всего года)"
      ],
      [
       "Речевые структуры",
-      "What sports do you play? / When is your birthday? / How did you get here? / What's your favourite…?"
+      "What sports do you play? / When is your birthday? / How did you get here? / What's your favourite colour?"
      ],
      [
       "Виды деятельности",
-      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); РЕВЬЮ УРОВНЯ High + финал года: медли любимых песен, showcase речевых образцов, праздник, сертификаты. Финал: Thank you song."
+      "Повтор всех пройденных Q&A по кругу (вопрос–ответ); РЕВЬЮ УРОВНЯ High + финал года: медли любимых песен, showcase речевых образцов всего года, праздник, сертификаты. Финал: Thank you song."
      ]
     ],
     "sec": "High Review"
