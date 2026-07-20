@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<title>GMF2 (с нуля) · Intro · Занятие 9 — Animal Noises · house / farm / zoo (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 2 (с нуля) · Вводный блок Genki · Занятие 9 / Intro L9 — Animal Noises · house / farm / zoo</div>
+    <div class="s">Pre-A1 young learners (~8–9 y.o., zero beginners · линия с нуля) · 60 min · Genki English + Phonics Hero · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 28.09–04.10 · Занятие 9</span><span class="chip new">✨ NEW · I have a… + animal noises</span><span class="chip">~10 pupils · pairs &amp; 2 teams</span><span class="chip">🦸 Phonics Hero ур.9 · z·qu</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to say <b>“I have a (dog) — woof, woof!”</b> and sort animals into house / farm / zoo contexts.</li><li><span class="lb">Subsidiary.</span> Phonics ур.9: sounds <b>z·qu</b> — АЛФАВИТ-ПАРАД: все 26 звуков + qu собраны! 🎉</li><li><span class="lb">Personal.</span> Три контекста (In my house / On my farm / In my zoo) — рамки-декорации, не грамматика предлогов; шум — управляемый (volume arm).</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>say <span class="en">I have a dog. Woof, woof!</span> про 8+ животных;</li><li>sort animals: house / farm / zoo;</li><li>voice ALL 26 sounds + qu — alphabet parade complete!</li></ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">dog/woof</span><span class="w">cat/meow</span><span class="w">bird/tweet</span><span class="w">cow/moo</span><span class="w">pig/oink</span><span class="w">elephant</span><span class="w">monkey</span><span class="w">snake/hiss</span><span class="w">tiger/roar</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I have a (dog). / Woof, woof! · In my house… / On my farm… / In my zoo…</div></div>
+      <div class="r"><div class="k">Form</div><div>have a + ОДно животное (a dog — мой пёс); контраст с з.7: like dogs (все) vs have a dog (один мой).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>английские звуки животных ≠ русские: woof не «гав», oink не «хрю» — в этом весь фан!</div></div>
+      <div class="r"><div class="k">Phonics</div><div><b>Phonics Hero ур.9 (тетрадь стр.23–25)</b>: звуки <b>z·qu</b> (q и u — неразлучные!) · блендинг (<i>zip, quiz, buzz, quilt</i>) · «найди слово» · диктант · история «Як и жук» · АЛФАВИТ-ПАРАД всех звуков · tricky <i>do, no</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“I have a dog — сколько у меня собак?” → одна, моя.</div>
+      <div class="ccq" style="margin-bottom:12px">“Собака по-английски говорит «гав»?” → нет — woof-woof!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Занятия 1–8 done: животные з.7 переиспользуются + новые cow/pig; like vs have различаем жестами.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>like/have путаница</td><td>Жесты: like = сердечко, have = обнимаю; контраст-дрилл.</td></tr><tr><td>Шум зашкаливает</td><td>Volume arm сразу в правилах игры; Freeze! резет.</td></tr><tr><td>Русские звуки животных</td><td>Игра «переводчик животных» — фан-контраст гав/woof.</td></tr><tr><td>qu раздельно («кью-у»)</td><td>Секрет «неразлучные друзья» + жест утки; CCQ.</td></tr><tr><td>Три контекста путаются</td><td>Три зоны на ковре с картинками-декорациями.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="min">0–5′</td>
+        <td class="stage"><div class="nm">Opening / Disco</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p><span class="ph">Warm up ritual.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> Carpet circle. <span class="sp">🦝 Speaky</span> waves: <span class="en">Hello, friends!</span> — class: <span class="en">Hello, Speaky!</span></p><p><span class="en">Stand up! Disco time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the full command routine, faster each round; trick calls (<span class="en">Sit down!</span> when they already sit). Arm down = volume down: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · Speaky · carpet</td>
+      </tr>
+      <tr>
+        <td class="min">5–8′</td>
+        <td class="stage"><div class="nm">Review · veg &amp; animals</div><div class="zone">carpet</div></td>
+        <td class="flow"><p>Speed flash: 4 овоща + 4 животных — chorus. <span class="en">Do you like pigs? — Yes, I do!</span> Мостик: <span class="sp">🦝 Speaky</span> слышит «woof!» за сценой — <span class="en">What's that?! A DOG! I have a dog!</span></p></td>
+        <td class="mat">cards · Speaky</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">8–9′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">transition</div></td>
+        <td class="flow"><p><span class="en">Come to the board — ABC time!</span> Sing the ABC phonics song with the sound gestures → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+<tr>
+        <td class="min">9–24′</td>
+        <td class="stage"><div class="nm">Phonics Hero ур.9 — z·qu 🎉</div><div class="zone">board → desks</div></td>
+        <td class="flow"><p><span class="ph">Speed reading — стр.23 №1.</span> Strip s→y — почти весь алфавит! Beat your time.</p>
+      <p><span class="ph">Meet z · qu.</span> <b>z</b> — пчела: <span class="en">zzz!</span> · <b>qu</b> — утка: <span class="en">кв-кв — quack!</span> Spiky line: <b>q и u — неразлучные друзья, вместе дают /кв/</b>. Copy ×3.</p>
+      <p><span class="ph">Blend — стр.24 №1.</span> Windows: <span class="en">/z/ /i/ /p/ — zip! /qu/ /i/ /z/ — quiz!</span> … <i>buzz, quilt, squid, yak</i>.</p>
+      <p><span class="ph">Trace — стр.23 (desks).</span> Прописи <i>z · qu · zip · quiz</i>; whisper.</p>
+      <p><span class="ph">Find the word — стр.24 №2.</span> Hidden words in letter strings (<i>a-zip-to · o-buzz-at · i-quiz-an</i>) — read the string slowly together, every child circles the real word; partner check.</p>
+      <p><span class="ph">Dictation — стр.24 №3.</span> Segment → write → <span class="en">Show me!</span> Words: <i>zip, buzz, quiz</i>. Tricky strip <b>do · no</b> (<b>do</b> — из «Yes, I DO»!). Medal ⭐.</p>
+      <p><span class="ph">Story — стр.25 «Як и жук» + АЛФАВИТ-ПАРАД (settler → cheer).</span> Echo-read: <span class="en">A big yak. A red bug!…</span> Then the parade: flash all 26+qu cards in order — class voices each sound with its gesture — <span class="en">YOU KNOW THE WHOLE ALPHABET! CHEER!</span> 🎉</p>
+      <p style="font-size:.84rem;color:var(--muted)">🎮 <b>Phonics Hub</b> (speakandsmile.ru/gmf1/phonics/, дорожка «Начинающие») — набор «y z qu» + полный strip: «⚡ Speed reading» на таймер. <b style="color:var(--zone)">◆ Support:</b> dictation 2 words. <b style="color:var(--zone)">▲ Extension:</b> write <i>quilt</i>. ✔ <b>Assess:</b> the parade shows exactly who owns which sounds.</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> тетрадь стр.23–25 · z/qu cards · full sound-card set · pencils · Phonics Hub (board)</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">24–26′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">transition</div></td>
+        <td class="flow"><p><span class="en">New song!</span> First listen of <span class="game">Genki «Animal Noises»</span> — make each noise you hear, quietly… then LOUD!</p></td>
+        <td class="mat"><b>Genki «Animal Noises»</b> mp3</td>
+      </tr>
+      <tr>
+        <td class="min">26–34′</td>
+        <td class="stage"><div class="nm">Presentation · I have a… + noises</div><div class="zone">carpet circle</div></td>
+        <td class="flow"><p><span class="ph">The have-chunk.</span> <span class="sp">🦝 Speaky</span> обнимает игрушку: <span class="en">I have a dog! Woof, woof!</span> Chorus-build: <i>a dog → have a dog → I have a dog</i> + звук. По кругу с карточками: каждый — <span class="en">I have a […]! + noise</span>, класс эхо-отвечает шумом.</p><p><span class="ph">Английские звуки.</span> Контраст-фан: гав→<span class="en">woof</span>, мяу→<span class="en">meow</span>, му→<span class="en">moo</span>, хрю→<span class="en">oink</span>, шшш→<span class="en">hiss</span>, ррр→<span class="en">roar</span>. Кто «переводит» быстрее?</p></td>
+        <td class="mat">animal cards · toy</td>
+      </tr>
+      <tr>
+        <td class="min">34–41′</td>
+        <td class="stage"><div class="nm">Three worlds</div><div class="zone">carpet zones</div></td>
+        <td class="flow"><p><span class="ph">House / farm / zoo.</span> Три зоны-декорации. Sort together: <span class="en">A cat — in my house? on my farm? in my zoo?</span> — все голосуют жестом, карточка едет в зону.</p><p><span class="game">▶ Noise worlds:</span> класс = 3 группы по зонам. Teacher: <span class="en">In my house…!</span> — «домашние» шумят своими звуками; <span class="en">On my farm…! In my zoo…!</span> Меняемся зонами. Volume arm рулит громкостью — это часть игры!</p></td>
+        <td class="mat">3 zone pictures · animal cards</td>
+      </tr>
+      <tr>
+        <td class="min">41–47′</td>
+        <td class="stage"><div class="nm">My animal · draw</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Settler.</span> Draw ONE animal you have или dream-животное: <span class="en">I have a tiger!</span> 😄 Подпиши слово с доски. Circulate: <span class="en">What do you have? — I have a cat. Meow!</span></p></td>
+        <td class="mat">paper · crayons</td>
+      </tr>
+      <tr>
+        <td class="min">47–53′</td>
+        <td class="stage"><div class="nm">▶ Guess my animal</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Showdown в парах:</span> прячь рисунок; делай ЗВУК — партнёр угадывает: <span class="en">A pig! You have a pig!</span> → показ, swap. Потом 3 добровольца звучат на класс — весь класс угадывает хором. Финал: общий «зоопарк-оркестр» 10 секунд + <span class="en">Freeze!</span> 🎉</p></td>
+        <td class="mat">рисунки</td>
+      </tr>
+      <tr>
+        <td class="min">53–56′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner: I have a… + noise. Partner answers: You have a…!</span> (20 sec each — everyone talks, at the same time.)</p><p>Speaky stamp ritual: each child names one thing they can do → stamp/high-five.</p></td>
+        <td class="mat">Speaky stamp / stickers</td>
+      </tr>
+      <tr>
+        <td class="min">56–58′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing the Goodbye song. <span class="en">Your homework is on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Each child at the door answers: звук от учителя — ребёнок: <span class="en">A cow! Moo!</span> + high five: <span class="en">Goodbye! See you!</span></p></td>
+        <td class="mat">high fives 🖐</td>
+      </tr>
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>🦸 Phonics Hero:</b> стр.23–25 — перечитать «Як и жук»; прогнать алфавит-парад семье (26+qu звуков — ты можешь всё!). <b>App:</b> animals+noises set, 5–7 мин.</p></td>
+        <td class="mat">Phonics Hero стр.23–25 · app (homework link)</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · GMF2 с нуля · Вводный блок Genki · Занятие 9 — lesson plan &amp; staging</span>
+    <span>Phonics verified against Phonics Hero 2.0 стр.23–25 · КТП-GMF2-с-нуля занятие 9.</span>
+  </div>
+</div>

@@ -1,0 +1,228 @@
+<meta charset="utf-8">
+<title>GMF2 (с нуля) · Intro · Занятие 2 — What's your name? + Rock Paper Scissors (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 2 (с нуля) · Вводный блок Genki · Занятие 2 / Intro L2 — What's your name? + Rock Paper Scissors</div>
+    <div class="s">Pre-A1 young learners (~8–9 y.o., zero beginners · линия с нуля) · 60 min · Genki English + Phonics Hero · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 07.09–13.09 · Занятие 2</span><span class="chip new">✨ NEW · introductions</span><span class="chip">~10 pupils · pairs &amp; 2 teams</span><span class="chip">🦸 Phonics Hero ур.2 · i·p·n</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>introduce themselves and ask a partner's name</b>: “What's your name? — My name is… Nice to meet you!” — and play Rock Paper Scissors in English.</li><li><span class="lb">Subsidiary.</span> Phonics ур.2: sounds <b>i·p·n</b> → first dictation + FIRST STORY read; keep the Disco ritual alive.</li><li><span class="lb">Personal.</span> Back-chain the question; keep every child talking every round (mingle, not queue); losers cheer winners — set the game culture.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>ask &amp; answer <span class="en">What's your name? — My name is […]!</span>;</li><li>play Rock Paper Scissors with the chant, win/lose politely;</li><li>blend and write <i>pin, tap, ant, sit</i> — first dictation + first story!</li></ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">name</span><span class="w">rock</span><span class="w">paper</span><span class="w">scissors</span><span class="w">win</span><span class="w">lose</span><span class="w">nice to meet you</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What's your name? — My name is […]. · Nice to meet you! · Rock, paper, scissors — 1, 2, 3! · I win! / Good game!</div></div>
+      <div class="r"><div class="k">Form</div><div>What + <b>'s</b> (is) + your name? Answer builds from name-only to the full “My name is…”.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>“name” /eɪ/ not /а/; rhythm <b>WHAT's your NAME?</b> (clap the two beats); scissors /ˈsɪzəz/.</div></div>
+      <div class="r"><div class="k">Phonics</div><div><b>Phonics Hero ур.2 (тетрадь стр.5–7)</b>: звуки <b>i·p·n</b> + жесты · блендинг 6 звуков (<i>pin, tap, pan, nap, tin, sit</i>) · ПЕРВЫЙ диктант · история «Моя первая история!» · tricky <i>I, is</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“When I ask What's your name? — do you say Hello or your name?” → your name.</div>
+      <div class="ccq" style="margin-bottom:12px">“You lose at Rock Paper Scissors — what do you say?” → <b>Good game!</b> (and cheer).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Занятие 1 done: 7 commands, Freeze!, carpet spots, s·a·t. Names were said informally — today the full question is taught properly.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Answer «I'm fine» to What's your name?</td><td>Contrast the two questions with gestures; CCQ “name or feeling?”.</td></tr><tr><td>RPS arguments</td><td>Pre-teach I win! / Oh no! / Good game!; losers become the winner's fan-train.</td></tr><tr><td>Letter names instead of sounds</td><td>Recast with the gesture; CCQ “sound or name?”.</td></tr><tr><td>Mingle chaos</td><td>Music on = walk, music off = pair up; Freeze! resets.</td></tr><tr><td>Fast finishers in dictation</td><td>Extension word by ear (<i>tin</i>); support: first letter given.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="min">0–5′</td>
+        <td class="stage"><div class="nm">Opening / Disco</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p><span class="ph">Warm up ritual.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> Carpet circle. <span class="sp">🦝 Speaky</span> waves: <span class="en">Hello, friends!</span> — class: <span class="en">Hello, Speaky!</span></p><p><span class="en">Stand up! Disco time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the full command routine, faster each round; trick calls (<span class="en">Sit down!</span> when they already sit). Arm down = volume down: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · Speaky · carpet</td>
+      </tr>
+      <tr>
+        <td class="min">5–8′</td>
+        <td class="stage"><div class="nm">Review · commands</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="game">▶ Speaky says</span> — 6 quick commands from занятие 1, all-play. Then teams: flash a command card — do + say it for a point.</p></td>
+        <td class="mat">command cards</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">8–9′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">transition</div></td>
+        <td class="flow"><p><span class="en">Come to the board — ABC time!</span> Sing the ABC phonics song with the sound gestures → settle into the phonics block.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+<tr>
+        <td class="min">9–24′</td>
+        <td class="stage"><div class="nm">Phonics Hero ур.2 — i·p·n</div><div class="zone">board → desks</div></td>
+        <td class="flow"><p><span class="ph">Speed reading — стр.5 №1.</span> Strip <b>s · a · t</b>: <span class="en">There and back — fast!</span> Boys… girls… whisper… LOUD!</p>
+      <p><span class="ph">Meet i · p · n.</span> <b>i</b> — мышка: <span class="en">i-i-i!</span> (пальчики-усики) · <b>p</b> — задуваем свечку: <span class="en">p-p-p!</span> · <b>n</b> — самолёт гудит: <span class="en">nnn!</span> Copy sound + gesture ×3; mixed flash.</p>
+      <p><span class="ph">Blend — стр.6 №1 (шесть звуков — читаем целые слова!).</span> Sound windows: <span class="en">/p/ /i/ /n/ — pin! /t/ /a/ /p/ — tap!</span> … <i>pan, nap, tin, sit</i>. Every child air-blends with a finger.</p>
+      <p><span class="ph">Trace — стр.5 (desks).</span> Прописи <i>i · p · n · pin · nap</i> — whisper as you write. Then «соедини» task: word → picture (<i>ant, pan, tin, nap</i>), partner check (RallyCoach).</p>
+      <p><span class="ph">FIRST DICTATION — стр.6 (everyone writes).</span> <span class="en">Listen: /p/ /i/ /n/… pin!</span> — segment on fingers → write → <span class="en">Show me!</span> → reveal. Words: <i>pin, tap, ant, sit</i>. Tricky strip <b>I · is</b> — flash, chorus, air-write.</p>
+      <p><span class="ph">Story — стр.7 «Моя первая история!» (settler).</span> Chorus the 5 frames, finger under the words: <span class="en">A pan. An ant is in the pan. The ant naps…</span> — <b>их первая прочитанная история!</b> Big cheer 🎉 + medal ⭐.</p>
+      <p style="font-size:.84rem;color:var(--muted)">🎮 <b>Phonics Hub</b> (speakandsmile.ru/gmf1/phonics/, дорожка «Начинающие») — набор «s a t i p n»: Station «Блендинг» (sound windows) + история on screen. <b style="color:var(--zone)">◆ Support:</b> dictation with first letter given. <b style="color:var(--zone)">▲ Extension:</b> 5th word by ear (<i>tin</i>). ✔ <b>Assess:</b> the Show-me boards on dictation = live check of every child.</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> тетрадь стр.5–7 · i/p/n cards · pencils · Phonics Hub (board)</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">24–26′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">transition</div></td>
+        <td class="flow"><p><span class="en">Now — a new song!</span> First listen of <span class="game">Genki «What's Your Name?»</span> — clap the beat, wave on every <span class="en">What's your name?</span></p></td>
+        <td class="mat"><b>Genki «What's Your Name?»</b> mp3 (03)</td>
+      </tr>
+      <tr>
+        <td class="min">26–34′</td>
+        <td class="stage"><div class="nm">Presentation · What's your name?</div><div class="zone">carpet circle</div></td>
+        <td class="flow"><p><span class="ph">Model with Speaky.</span> <span class="en">What's your name?</span> — <span class="sp">🦝</span> <span class="en">My name is Speaky! Nice to meet you!</span> + handshake. Back-chain: <i>name? → your name? → What's your name?</i> Chorus ×3.</p><p><span class="ph">Circle round.</span> Pass Speaky: the WHOLE CLASS chants <span class="en">What's your name?</span> → the holder answers <span class="en">My name is […]!</span> → class: <span class="en">Nice to meet you!</span> Brisk — 10 sec a head, all chanting all the time.</p></td>
+        <td class="mat">Speaky · circle</td>
+      </tr>
+      <tr>
+        <td class="min">34–41′</td>
+        <td class="stage"><div class="nm">Song &amp; mingle</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p>Sing <span class="game">«What's Your Name?»</span> with actions (hands to mouth on the question, to chest on the answer).</p><p><span class="game">▶ Mix–Pair–Share:</span> music on — walk; music off — <span class="en">Pair up!</span> Dialogue + handshake: <span class="en">What's your name? — My name is […]. Nice to meet you!</span> 3 rounds, new partner each time — everyone talks simultaneously.</p></td>
+        <td class="mat">music · space · <span class="game">▶ Mix-Pair-Share</span></td>
+      </tr>
+      <tr>
+        <td class="min">41–45′</td>
+        <td class="stage"><div class="nm">Name badges</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Settler.</span> Make a name badge: write your name big (заглавная — как в фонике!), decorate. Teacher circulates: <span class="en">What's your name? — My name is…!</span></p><p><span class="ph">Countdown.</span> <span class="en">5… 4… 3… 2… 1… pencils down.</span></p></td>
+        <td class="mat">card badges · crayons</td>
+      </tr>
+      <tr>
+        <td class="min">45–53′</td>
+        <td class="stage"><div class="nm">▶ Rock Paper Scissors</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p>Teach with the chant: <span class="game">Genki «Rock, Paper, Scissors»</span> — <span class="en">Rock, paper, scissors — 1, 2, 3!</span> Practise the three shapes chorally.</p><p><span class="ph">All-play tournament.</span> Everyone pairs and plays best-of-3 <b>simultaneously</b> — but first ASK: <span class="en">What's your name?</span> — know your rival! 😄 Winners: <span class="en">I win!</span>, partners: <span class="en">Good game!</span> + cheer. Losers join the winner's fan-train → champions meet → one champion, whole class = cheering train. 🎉</p></td>
+        <td class="mat"><b>Genki «Rock, Paper, Scissors»</b> mp3 (02)</td>
+      </tr>
+      <tr>
+        <td class="min">53–56′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Ask your partner: What's your name? Then teach them your best RPS move!</span> (20 sec each — everyone talks, at the same time.)</p><p>Speaky stamp ritual: each child names one thing they can do → stamp/high-five.</p></td>
+        <td class="mat">Speaky stamp / stickers</td>
+      </tr>
+      <tr>
+        <td class="min">56–58′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing the Goodbye song. <span class="en">Your homework is on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Each child at the door answers: <span class="en">What's your name? — My name is […]!</span> + high five: <span class="en">Goodbye! See you!</span></p></td>
+        <td class="mat">high fives 🖐</td>
+      </tr>
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>🦸 Phonics Hero:</b> re-read the FIRST STORY (<b>стр.7</b>) to your family — маме, папе или коту 🐱; finish tracing стр.5–6. <b>App:</b> today's phrases, 5–7 мин. <b>Family:</b> play Rock Paper Scissors in English — best of 5!</p></td>
+        <td class="mat">Phonics Hero стр.5–7 · app (homework link)</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · GMF2 с нуля · Вводный блок Genki · Занятие 2 — lesson plan &amp; staging</span>
+    <span>Phonics verified against Phonics Hero 2.0 стр.5–7 · КТП-GMF2-с-нуля занятие 2 · songs: Genki 02·03.</span>
+  </div>
+</div>

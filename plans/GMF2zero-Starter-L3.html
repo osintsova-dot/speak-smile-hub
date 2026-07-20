@@ -1,0 +1,226 @@
+<meta charset="utf-8">
+<title>GMF2 (с нуля) · Starter · Занятие 15 — Story «The storm» + alphabet (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 2 (с нуля) · Starter “Let's go back to school!” · Занятие 15 / L3 — Story «The storm» + alphabet</div>
+    <div class="s">Pre-A1 young learners (~8–9 y.o., zero beginners · линия с нуля) · 60 min · PPP + TPR + Phonics · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 19.10–25.10 · Занятие 15</span><span class="chip new">✨ NEW · alphabet names + weather story</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">🦸 Phonics Hero ур.14a · ee·or</span><span class="chip">Pupil's Book pp.6–7 · AB pp.4–5</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>say the alphabet a–z</b> (letter NAMES) and follow &amp; act out the story «The storm» with weather language: “It's (cloudy) today. / Is it (raining)? — Yes, it is!”</li><li><span class="lb">Subsidiary.</span> Phonics ур.14 (a): первый показ пары <b>ee·or</b> (ослик «ee-or»!); звук ↔ имя буквы — разводим понятия.</li><li><span class="lb">Personal.</span> Первая история учебника — событие! Слушаем → следим пальцем → играем; погоду учим жестами.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>sing/say the alphabet with letter names;</li><li>say the weather: <span class="en">It's cloudy / sunny / raining!</span>;</li><li>act out a story frame from «The storm».</li></ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">the alphabet a–z</span><span class="w">cloudy</span><span class="w">raining</span><span class="w">sunny</span><span class="w">windy</span><span class="w">stormy</span><span class="w">weather</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>It's (cloudy) today. · Is it (raining)? — Yes, it is. / No, it isn't. · The alphabet song a–z.</div></div>
+      <div class="r"><div class="k">Form</div><div>Имена букв (эй-би-си) ≠ звуки (фоника!) — «у буквы есть имя и голос»; Is it…? → Yes, it is / No, it isn't.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>letter-traps: g /dʒiː/ vs j /dʒeɪ/, e /iː/ vs i /aɪ/; stormy /ˈstɔːmi/ — как or из фоники!</div></div>
+      <div class="r"><div class="k">Phonics</div><div><b>Phonics Hero ур.14 (a) — тетрадь стр.36–38</b>: пара <b>ee</b> /и:/ · <b>or</b> /о:/ — ослик кричит «ee-or»! · блендинг <i>bee, fork, tree, corn</i> · прописи. (Сорт, диктант и история «Пчёлы и пирог» — занятие 16.)</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“«Эс» — это имя буквы или её голос?” → имя; голос — sss!</div>
+      <div class="ccq" style="margin-bottom:12px">“Is it raining? — я смотрю в окно или вспоминаю лето?” → в окно, СЕЙЧАС.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Занятия 13–14: учебник и герои знакомы. Звуки — все; имена букв частично из ABC song. История — первая, ритуал ставим.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Имена букв ↔ звуки путаются</td><td>Рамка «имя и голос»: flash — «имя?» «голос?»; хвалим обе системы.</td></tr><tr><td>g/j, e/i ловушки</td><td>Minimal-pair flash с жестами; ловим играючи.</td></tr><tr><td>Первая история: теряют строку</td><td>Палец под словами, chunk-by-chunk echo; кадры пронумерованы.</td></tr><tr><td>Act out хаотичен</td><td>Роли по кадрам, репетиция шёпотом, потом showtime.</td></tr><tr><td>Весь алфавит подряд тяжело</td><td>Кусками a–g / h–n / o–t / u–z, волной по кругу.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Disco</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet at the door: <span class="en">Hello! Come in!</span> <span class="sp">🦝 Speaky</span>: <span class="en">Hello, friends!</span> Quick <span class="game">▶ Disco Warm Up</span> ritual — full routine once, fast. <span class="en">And… freeze. Sit down.</span></p></td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · Speaky</td>
+      </tr>
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval · subjects + weather hook</div><div class="zone">carpet</div></td>
+        <td class="flow"><p>Speed-опрос: <span class="en">What's your favourite subject?</span> — 4 ребёнка. Мостик-хук: <span class="sp">🦝 Speaky</span> смотрит в окно: <span class="en">Look! What's the weather like today?</span> — вводим первые погодные жесты (sunny ☀ руки-солнце, cloudy ☁, raining 🌧 пальцы-капли).</p></td>
+        <td class="mat">subject cards · окно 😄</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">transition</div></td>
+        <td class="flow"><p><span class="en">To the board — ABC song!</span> Sing with sound gestures → settle into phonics.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+<tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics Hero ур.14 (a) — ee·or</div><div class="zone">board → desks</div></td>
+        <td class="flow"><p><span class="ph">Speed reading — стр.36 №1.</span> Strip <b>ai · oa · ie</b> + alphabet tail — beat your time.</p>
+      <p><span class="ph">Meet the donkey!</span> <b>Это один ослик</b> — на обеих картинках он кричит «иа-иа», по-английски <span class="en">ee-or</span>: сначала долгое <b>ee</b> /и:/ (уши-ладошки вверх), потом <b>or</b> /о:/ (кулачки-копытца). Кричим как ослик ×3 — оба звука запомнились парой! CCQ: two letters — one sound, и их ДВОЕ друзей.</p>
+      <p><span class="ph">Blend — стр.37 №1 (windows).</span> <span class="en">/b/ /ee/ — bee! /f/ /or/ /k/ — fork!</span> + <i>tree, feet, green, corn</i> — air-blend, pictures.</p>
+      <p><span class="ph">Trace — стр.36 (desks, settle).</span> Прописи <i>ee · or · bee · fork</i> — диграф цветным. <span style="color:var(--muted)">(Sort, диктант, tricky <i>here-there-by</i> и история «Пчёлы и пирог» — на занятии 16, там же ур.14b.)</span></p>
+      <p style="font-size:.84rem;color:var(--muted)">🎮 <b>Phonics Hub</b> (speakandsmile.ru/gmf1/phonics/, дорожка «Начинающие») — набор «ee·or». <b style="color:var(--zone)">◆ Support:</b> blend <i>bee, fork</i> only. <b style="color:var(--zone)">▲ Extension:</b> write <i>green</i>. ✔ <b>Assess:</b> donkey-check: flash ee/or — кто путает порядок пары.</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> тетрадь стр.36–38 · ee/or cards · coloured pencils · Phonics Hub (board)</td>
+      </tr>
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">transition</div></td>
+        <td class="flow"><p><span class="ph">Имена букв.</span> <span class="en">Sounds — you KNOW. Now — letter NAMES!</span> PB p.6: the alphabet song — first listen, слежение пальцем по буквам.</p></td>
+        <td class="mat">PB p.6 · audio</td>
+      </tr>
+      <tr>
+        <td class="min">24–31′</td>
+        <td class="stage"><div class="nm">Alphabet · names</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="ph">Волны алфавита.</span> Sing again кусками: a–g / h–n / o–t / u–z — волной по кругу (каждый — букву, по порядку, темп растёт). Trap-буквы отдельно: <span class="en">g! j! e! i!</span> — flash-контраст.</p><p><span class="game">▶ Letter pop:</span> teacher says a NAME — все пишут букву в воздухе; says a SOUND — показывают жест фоники. «Имя или голос?» — весь класс реагирует каждый раунд.</p></td>
+        <td class="mat">alphabet strip · PB p.6</td>
+      </tr>
+      <tr>
+        <td class="min">31–40′</td>
+        <td class="stage"><div class="nm">Story · The storm</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">First listen (books closed).</span> Gist-вопрос: <span class="en">What's the weather in the story?</span> Слушаем → отвечаем жестами (stormy!).</p><p><span class="ph">Second listen (PB pp.6–7, палец под текстом).</span> Frame by frame: echo-read ключевые реплики: <span class="en">It's cloudy today. Is it raining? — Yes, it is!</span> True/false votes по кадрам (thumbs) — все голосуют.</p></td>
+        <td class="mat">PB pp.6–7 · audio</td>
+      </tr>
+      <tr>
+        <td class="min">40–48′</td>
+        <td class="stage"><div class="nm">Act out · storm theatre</div><div class="zone">carpet, groups</div></td>
+        <td class="flow"><p><span class="ph">КТП: act out.</span> Группы по 3–4, роли по кадрам. Погодные спецэффекты всем классом: дождь — пальцы по полу, ветер — шшш, гром — топот! Каждая группа играет свой кадр, класс делает погоду. 🎭</p><p>Reset: <span class="en">Freeze!</span> → <span class="en">And… sunny again!</span> ☀</p></td>
+        <td class="mat">PB story frames · «спецэффекты»</td>
+      </tr>
+      <tr>
+        <td class="min">48–53′</td>
+        <td class="stage"><div class="nm">AB pp.4–5 · start</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Settler.</span> AB p.4 ex.1 (Toby's bone — listen and colour: ведём вместе) + p.5 ex.1 Remember the story — number (первые 2 кадра вместе). Остальное — дома. Countdown.</p></td>
+        <td class="mat">Activity Book pp.4–5</td>
+      </tr>
+      <tr>
+        <td class="min">53–56′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Show your partner today's weather + one story line: It's…! Is it…?</span> (20 sec each.)</p><p>“I can…” badge: colour it — сегодняшнее умение отмечено!</p></td>
+        <td class="mat">badges (notebook) · Speaky</td>
+      </tr>
+      <tr>
+        <td class="min">56–58′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing the Goodbye song. <span class="en">Your homework is on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
+      </tr>
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Each child: <span class="en">What's the weather like today? — It's…!</span> (жест + слово) + high five: <span class="en">Goodbye! See you!</span></p></td>
+        <td class="mat">high fives 🖐</td>
+      </tr>
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — pp. 4–5:</b> p.4 ex.1–2 (alphabet с семьёй!) + p.5 ex.1 Remember the story + ex.2 Weather today — write and draw. <b>🦸 Phonics Hero:</b> стр.36 — прописи ee·or. <b>App:</b> 5–7 мин.</p></td>
+        <td class="mat">Activity Book pp.4–5 · Phonics Hero стр.36–38 · app (homework link)</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · GMF2 с нуля · Starter · Занятие 15 — lesson plan &amp; staging</span>
+    <span>Phonics verified against Phonics Hero 2.0 стр.36–38 · КТП-GMF2-с-нуля занятие 15 · PB pp.6–7 / AB pp.4–5.</span>
+  </div>
+</div>
