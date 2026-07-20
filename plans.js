@@ -281,4 +281,10 @@ window.PLANS = {
   "Genki-High-L7": 1,
   "Genki-High-L8": 1,
   "Genki-High-Review": 1,
+  "Genki-Fantastic-L1": 1,
+  "Genki-Fantastic-L2": 1,
+  "Genki-Fantastic-L3": 1,
+  "Genki-Fantastic-L4": 1,
+  "Genki-Fantastic-L5": 1,
+  "Genki-Fantastic-Review": 1,
 };
