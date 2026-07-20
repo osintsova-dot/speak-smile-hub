@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF2 · Unit 4 · Lesson 4 — Vocabulary &amp; Grammar (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 2 · Unit 4 “The nature trail” · Lesson 4 — Vocab &amp; Grammar · up · down · along · across</div>
+    <div class="s">A1 young learners (~8–9 y.o., early readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 07.12–13.12 · Lesson 28</span><span class="chip new">✨ NEW · 4 prepositions of movement</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.44 · AB p.41</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>use 4 movement prepositions</b> (up · down · along · across) with Present Continuous: “He's running up the hill. / She's swimming across the lake.”</li><li><span class="lb">Subsidiary.</span> Sing «What's he doing?» (CD2 24); Talk Partners game (CD2 25); cooperative song «Calm down» (CD2 26) — the settle-tool of the season; Yes-he-is/No-she-isn't short answers.</li><li><span class="lb">Personal.</span> Prepositions live in the body — every drill has an arm-path gesture; keep the obstacle course orderly (one mover per lane).</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>show &amp; say the 4 prepositions with a gesture each;</li><li>make He's/She's + -ing + preposition + place sentences;</li><li>answer “Is he…? — Yes, he is / No, he isn't.”</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">up</span><span class="w">down</span><span class="w">along</span><span class="w">across</span></div></div><div class="r"><div class="k">Structure</div><div>He's (riding a horse) across the (sand). / She's (walking) up the (hill). &nbsp;·&nbsp; Is he (walking) up a hill? — Yes, he is. / No, he isn't.</div></div><div class="r"><div class="k">Form</div><div>preposition + the + place; questions with Is he/she…? → Yes, he is / No, she isn't.</div></div><div class="r"><div class="k">Pron. watch</div><div>across /əˈkrɒs/ weak first syllable; along vs across minimal-ish pair — gesture separates them.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“Up — show me with your arm! Down? Along? Across?” → four clean paths.</div><div class="ccq" style="margin-bottom:10px">“Is she running down? (picture: up)” → No, she isn't — she's running UP!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> He's/She's + -ing fresh from the story; nature places active. Four prepositions only (по учебнику — up/down/along/across, без over/through). Gestures carry the meaning.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>along/across blurred</td><td>Arm-paths: along = follow the line, across = cut the line; drill as contrast pair with a rope on the floor.</td></tr><tr><td>Preposition dropped in sentences</td><td>Sentence builder cards physically ordered: [He's] [running] [up] [the hill].</td></tr><tr><td>Obstacle course over-excites</td><td>One mover per lane, walk-speed rule, Calm down song ready as the settle tool.</td></tr><tr><td>Short answers drift (“Yes, is”)</td><td>Twins card Yes-he-is / No-he-isn't; beat drill.</td></tr><tr><td>Fast finishers in writing</td><td>Extension: second sentence with a different preposition.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Arms ready? Up! Down! Along! Across!</span> Instant gesture drill.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Story + continuous back.</span> Story frames flash: <span class="en">What's Toby doing here? — He's rolling down the hill!</span> chorus.</p><p><span class="game">▶ Swat it!</span> — nature words on the board; racers swat, class spells. 4 rounds.</p></td>
+        <td class="mat">story frames · nature cards · flyswatters</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen — what's HE doing?</span> Song hook (CD2 24) with pointing gesture → topic.</p></td>
+        <td class="mat"><b>«What's he doing?»</b> (CD2 24)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–19′</td>
+        <td class="stage"><div class="nm">Presentation · 4 prepositions</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Present with the rope-line.</span> Rope on the floor = the path. Walk it: <span class="en">along the path!</span> Cut it: <span class="en">across the path!</span> Stairs mime: <span class="en">up! down!</span> Choral + arm-path ×3 each.</p><p><span class="ph">Combine (act. 1, CD2 23).</span> PB p.44 pictures: <span class="en">He's riding a horse ACROSS the sand!</span> — class repeats with the arm-path on the preposition. All 5 pictures.</p><p><span class="game">▶ Simon Says, preposition edition:</span> <span class="en">Walk up the hill! …across the river!</span> — mime on the spot; no “Simon says” → freeze. Everyone moves every call.</p><p><span class="diff"><span class="sup">💪 Support:</span> gesture + preposition word. <span class="ext">⭐ Extension:</span> full sentence with place: <span class="en">I'm walking along the path!</span></span></p></td>
+        <td class="mat">rope · Pupil's Book p.44 · CD2 23</td>
+      </tr>
+
+      <tr>
+        <td class="min">19–27′</td>
+        <td class="stage"><div class="nm">Song · What's he doing?</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Sing (act. 2, CD2 24).</span> Listen &amp; point; 2nd run sing + arm-paths.</p><p><span class="ph">Talk Partners (act. 3, CD2 25).</span> Book game: A picks a picture secretly, B asks: <span class="en">Is he running up the hill? — Yes, he is!</span> Swap. </p><p><span class="ph">Cooperative song (CD2 26).</span> «Calm down» — learn the calm-gesture; it's our new settle signal for the winter.</p></td>
+        <td class="mat">Pupil's Book p.44 · CD2 24–26</td>
+      </tr>
+
+      <tr>
+        <td class="min">27–37′</td>
+        <td class="stage"><div class="nm">Obstacle course</div><div class="zone">carpet lanes</div></td>
+        <td class="flow"><p><span class="ph">Mini course:</span> rope (path) · blue cloth (lake) · chair bridge · book hill. One mover per lane walks it while the CLASS narrates: <span class="en">She's walking along the path… she's going across the bridge!</span> Everyone moves once, everyone narrates constantly.</p><p><p><span class="asr">✔ <b>Assess:</b> narration is the check — who supplies the preposition unaided?</span></p></p><p><span class="ph">Settle:</span> Calm down song gesture → carpet.</p></td>
+        <td class="mat">rope · cloth · chair · books</td>
+      </tr>
+
+      <tr>
+        <td class="min">37–46′</td>
+        <td class="stage"><div class="nm">Board game · preposition path</div><div class="zone">desks, groups</div></td>
+        <td class="flow"><p><span class="game">▶ Board game.</span> Dice + counters; each cell shows figure+arrow: say it to stay — <span class="en">He's cycling along the road!</span> Group judges with arm-paths. First to FINISH wins.</p><p><div class="ig">🎮 <b>Interactive (projector): «Ходилка» — prepositions.</b> Shared run; class speaks every cell. · 🎮 <a href="https://speakandsmile.ru/gmf2/games/nature-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">nature-board</a></div></p></td>
+        <td class="mat">printed boards · dice · counters · 🎮 <a href="https://speakandsmile.ru/gmf2/games/nature-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">nature-board</a></td>
+      </tr>
+
+      <tr>
+        <td class="min">46–52′</td>
+        <td class="stage"><div class="nm">Write it</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Notebooks.</span> 3 sentences from board pictures: <i>He's/She's + -ing + up/down/along/across + the ___.</i> Self-check against the builder cards.</p><p><span class="diff"><span class="sup">💪 Support:</span> builder cards on desk to copy order. <span class="ext">⭐ Extension:</span> add one question + short answer pair.</span></p></td>
+        <td class="mat">notebooks · builder cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Arm-path quiz your partner: show a path — partner says the preposition.</span> (20 sec each).</p><p>“I can…” badge: <span class="en">Colour your badge — I know up, down, along, across!</span></p></td>
+        <td class="mat">“I can…” badges (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, path-finders! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Arrow card at the door: make a sentence to leave. Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="mat">arrow cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 41:</b> ex. 1 <i>Listen and write. Match</i> (CD2 27 — или по картинкам со стрелками) + ex. 2 <i>Read, look and write</i> (Yes, he is / No, she isn't). <b>+ app trainer</b> — 5–7 min.</p><p>🎮 <b>Дома:</b> <a href="https://speakandsmile.ru/gmf2/games/nature-ttt.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">nature-ttt</a> — 🤖 полные предложения вслух (5 мин).</p></td>
+        <td class="mat">Activity Book p.41 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 2 · Unit 4 “The nature trail” · Lesson 4 (Vocab &amp; Grammar · prepositions of movement) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.44 (CD2 23–27) · Activity Book p.41 · КТП урок 28 (по учебнику 4 предлога: up·down·along·across). Genki option: «Left And Right» (06).</span>
+  </div>
+</div>
