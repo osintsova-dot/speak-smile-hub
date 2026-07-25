@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF3 · Unit 8 · Lesson 4 — Vocabulary &amp; Grammar (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">📺 Give Me Five! 3 · Unit 8 “What's on TV?” · Lesson 4 — Vocab &amp; Grammar · Past Simple -ed</div>
+    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 05.04–11.04 · Lesson 58</span><span class="chip new">✨ NEW · 6 activities + I painted / I didn't watch</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.86 · AB p.83</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 6 more free-time activities</b> and <b>talk about the past with regular -ed verbs</b>: “I (painted a picture) yesterday. / We didn't (watch TV) last night.”</li><li><span class="lb">Subsidiary.</span> Sing «Did you watch TV?» (CD4 03); consolidate the -ed verbs noticed in the story (L3) — now drilled; discover the rule — add <b>-ed</b> for the past, but after <b>didn't</b> the verb stays plain (Grammar clue); a real “what I did” report (AB follow-up).</li><li><span class="lb">Personal.</span> Insist on the -ed ending (<i>painted, played</i>) AND the plain verb after <i>didn't</i> (<i>didn't play</i>, not <i>didn't played</i>); model with a “yesterday” timeline; keep the info-gap moving — max 30 sec per partner.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name 6 activities (play cards, climb a tree, skip, phone a friend, paint a picture, plant seeds);</li><li>say past sentences with -ed: “I planted seeds last week.”;</li><li>say negatives: “I didn't watch TV yesterday.”</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">play cards</span><span class="w">climb a tree</span><span class="w">skip</span><span class="w">phone a friend</span><span class="w">paint a picture</span><span class="w">plant seeds</span></div></div><div class="r"><div class="k">Structure</div><div>I (painted a picture) yesterday. &nbsp;·&nbsp; He (climbed a tree) last night. &nbsp;·&nbsp; We didn't (watch TV) / We didn't (play cards) last weekend.</div></div><div class="r"><div class="k">Form</div><div>Past positive: verb + <b>-ed</b> (play → played, plant → planted, climb → climbed). Past negative: <b>didn't</b> + <b>plain verb</b> (didn't skip, didn't climb — NO -ed after didn't).</div></div><div class="r"><div class="k">Pron. watch</div><div>painted /ˈpeɪntɪd/ &amp; planted /ˈplɑːntɪd/ (extra /ɪd/ after t/d); played /pleɪd/ &amp; climbed /klaɪmd/ (just /d/); skipped /skɪpt/ (/t/).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>played</i> — now or before?” → before, past (the -ed shows it!).</div><div class="ccq" style="margin-bottom:10px">“<i>I didn't play</i> or <i>I didn't played</i>?” → I didn't <b>play</b> — plain verb after didn't!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> -ed verbs were met in the story (L3: carried, jumped, climbed). <i>Did you…?</i> questions are active from L2. play cards / climb a tree / skip / phone a friend / paint a picture / plant seeds are largely new as a set. The positive-vs-negative (-ed vs plain) contrast is the key challenge. Readers read the short verb phrases.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>-ed dropped in the positive (“I paint yesterday”)</td><td>Yesterday timeline: point back → the verb MUST wear its -ed hat; add the ending with a gesture.</td></tr><tr><td>-ed kept after didn't (“didn't played”)</td><td>Two boxes: <b>+ = verb+ed</b> · <b>− = didn't + plain verb</b>; contrast-drill side by side.</td></tr><tr><td>activities mispronounced (plant/paint)</td><td>Clap &amp; mime one action per verb (skip = rope, plant = dig, paint = brush).</td></tr><tr><td>info-gap chaos</td><td>Music on = mingle, off = pair; 30-sec cap; ICQ before starting.</td></tr><tr><td><i>do/did</i> vs -ed muddled</td><td>Keep L2's <b>Did…?</b> box and today's <b>-ed</b> box both on the board — one for questions, one for statements.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Ready to talk about YESTERDAY?</span> Mime: paint, skip, dig/plant — kids guess the action.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Story + programmes back.</span> Flash story frames: <span class="en">What did the teams carry?</span> chorus (water!). Then <span class="game">▶ Swat it!</span> — programme + activity cards on the board, two flyswatters, you call the word, racers swat; the class chorus-SPELLS the word during each race (everyone busy). 4 rounds, rotate racers.</p></td>
+        <td class="mat">story frames · flyswatters · <span class="game">▶ Swat it!</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen — DID YOU WATCH TV?</span> Play the song (PB p.86, CD4 03) hook once; act “no!” + mime an activity → topic.</p></td>
+        <td class="mat"><b>«Did you watch TV?»</b> (CD4 03)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–19′</td>
+        <td class="stage"><div class="nm">Presentation · activities + -ed</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Present (act. 1, CD4 02).</span> Photo cards: <span class="en">What's she doing? Playing cards! Climbing a tree! Planting seeds!</span> Choral ×3 + one action each.</p><p><span class="ph">Into the past.</span> Board timeline yesterday → today. Turn each phrase to the past: <span class="en">play cards → I played cards. paint a picture → I painted a picture.</span> Class adds the -ed with a gesture. Show the negative: <span class="en">I didn't skip.</span> (plain verb!).</p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if you painted a picture yesterday!</span> — flash cards fast, everyone reacts truthfully every time.</p><p><span class="diff"><span class="sup">💪 Support:</span> action carries the meaning. <span class="ext">⭐ Extension:</span> read the verb phrase without the photo.</span></p></td>
+        <td class="mat">6 activity photo cards · board timeline · CD4 02</td>
+      </tr>
+
+      <tr>
+        <td class="min">19–27′</td>
+        <td class="stage"><div class="nm">Song + grammar box</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Sing (act. 2, CD4 03).</span> PB p.86. First run listen &amp; point; second sing with the action gestures (“I painted a picture in the afternoon…”).</p><p><span class="ph">Grammar box (act. 3, CD4 04).</span> Board: <i>I climbed a tree last night. / We didn't play cards yesterday.</i> Grammar clue: <span class="en">Add -ed for the past — played, danced, wanted! BUT after didn't the verb is plain — I didn't skip, I didn't climb.</span> Circle the -ed and the plain verb after didn't.</p><p><span class="ph">ICQ:</span> <span class="en">“I didn't ___ TV.” watch or watched?</span> (→ watch!)</p></td>
+        <td class="mat">Pupil's Book p.86 · CD4 03–04 · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">27–37′</td>
+        <td class="stage"><div class="nm">Make true past sentences</div><div class="zone">desks, 2 teams</div></td>
+        <td class="flow"><p><span class="ph">Showdown.</span> Mini-whiteboards: you show an activity card + a ✔ or ✘ → all write <i>I painted a picture yesterday.</i> (✔) or <i>I didn't paint a picture.</i> (✘) — <span class="en">Show me!</span> Reveal together, self-check (-ed vs plain). 5 rounds.</p><p><div class="ig">🎮 <b>Projector option:</b> flash card + ✔/✘ on the board; whole class chants the sentence before writing.</div></p><p><span class="ph">ICQ:</span> <span class="en">After “didn't”, do you add -ed?</span> (→ no — plain verb!)</p></td>
+        <td class="mat">mini-whiteboards · activity + ✔/✘ cards · <span class="game">▶ Showdown</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">37–46′</td>
+        <td class="stage"><div class="nm">What did you do? (info-gap)</div><div class="zone">mingle → desks</div></td>
+        <td class="flow"><p><span class="ph">Model first.</span> Ask 2 pupils publicly: <span class="en">What did you do yesterday? — I played cards. I didn't watch TV.</span></p><p><span class="game">▶ Talk Partners info-gap (act. 4-style).</span> Each child has a “my week” grid (✔/✘ for 5 activities). Music → mingle; off → pair: A <span class="en">Did you paint a picture?</span> B <span class="en">Yes, I did / No, I didn't — I planted seeds.</span> A ticks &amp; TRADES. 5–6 exchanges.</p><p><p><span class="asr">✔ <b>Assess:</b> circulate — -ed in the positive? plain verb after didn't? Recast, note names.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> grid + sentence starters printed. <span class="ext">⭐ Extension:</span> add a time word: <i>…in the afternoon / last weekend.</i></span></p></td>
+        <td class="mat">“my week” grids · music · <span class="game">▶ Talk Partners</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">46–52′</td>
+        <td class="stage"><div class="nm">My yesterday · write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Notebooks / AB p.83 format.</span> Board frame: <i>Yesterday I ___. I also ___. But I didn't ___.</i> Each child writes 3 true past sentences.</p><p><span class="diff"><span class="sup">💪 Support:</span> gapped frame + verb word bank (played · painted · planted). <span class="ext">⭐ Extension:</span> add a <i>Did you…?</i> question for a partner.</span></p></td>
+        <td class="mat">notebooks · board frame</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner two things you did yesterday — with -ed! And one you didn't do.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">Colour your progress card — I can say I painted / I planted, and I didn't watch TV!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show an activity card at the door: <span class="en">Did you do this yesterday?</span> → past answer. Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">activity cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 83:</b> ex. 1 <i>Order and write the words</i> (play cards, phone a friend, plant seeds, climb a tree, paint a picture, skip) + ex. 2 <i>Order the words in the grammar table. Write the sentences</i> (I painted / They didn't climb…) + ex. 3 <i>What did you do last week? Write</i> (phone a friend · play cards · skip · watch TV). <b>+ app trainer</b> — Past Simple -ed, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.83 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 8 “What's on TV?” · Lesson 4 (Vocab &amp; Grammar · Past Simple -ed) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.86 (CD4 02–04) · Activity Book p.83 · КТП урок 58. Genki: «What Sports Do You Play?» (48 / 48b «I played…») — на Past Simple regular; оставляю.</span>
+  </div>
+</div>

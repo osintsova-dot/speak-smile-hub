@@ -1,0 +1,222 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF3 · Unit 3 · Lesson 6 — Review + Project (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 3 · Unit 3 “Fit and healthy” · Lesson 6 — Review · Team Quiz + Zoo project launch</div>
+    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 16.11–22.11 · Lesson 23</span><span class="chip">🏆 Flagship Team Quiz + reward</span><span class="chip">~10 pupils · 2 teams</span><span class="chip">Activity Book p.34 (Review) · PB pp.38–39</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will have <b>consolidated Unit 3</b> — 12 health problems, Has/Does questions, healthy habits + must/mustn't — shown it in the flagship <b>Team Quiz with reward game</b>, and <b>launched My project 1 «The zoo challenge»</b> (There's / There are).</li><li><span class="lb">Subsidiary.</span> AB Review «Ready, Steady, Go!» (p.34): name problems &amp; habits, must/mustn't advice, break Luke's code (→ INDIA, a bridge to Unit 4); spelling check; self-assessment. Project launch (PB pp.38–39): investigate a zoo &amp; use “There's a (crocodile). It's got (a pool). There are (some giraffes).”</li><li><span class="lb">Personal.</span> Quiz = every child answers (Showdown boards), not captains only; keep the reward game short &amp; joyful — it's the cherry, not the cake. Keep the project launch a light, exciting brief (full design is homework / reserve).</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name unit words from pictures AND spell key ones;</li><li>ask &amp; answer Has/Does + give must/mustn't advice;</li><li>start the zoo project with There's / There are; self-assess honestly.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">all Unit 3: health problems + healthy habits</span><span class="w">project: zoo · crocodile · giraffes · pool · picnic area · There's / There are</span></div></div><div class="r"><div class="k">Structure</div><div>Has he got…? · Does she feel…? &nbsp;·&nbsp; You must / mustn't… &nbsp;·&nbsp; <i>project:</i> There's a (crocodile) in the zoo. It's got (a pool). There are (some giraffes).</div></div><div class="r"><div class="k">Form</div><div>Has/Does-questions &amp; must/mustn't recap; project: <b>There's a</b> + singular · <b>There are some</b> + plural · <b>It's got</b> + facilities. Error harvest from the week feeds the quiz items.</div></div><div class="r"><div class="k">Pron. watch</div><div>stomach /k/, mustn't (silent t), chameleon — the week's watch-points, recycled in quiz items.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“Is the quiz a test?” → no — it's training with fun; mistakes are how we learn.</div><div class="ccq" style="margin-bottom:10px">“There's a giraffe or There ARE some giraffes — which for MANY?” → There are some giraffes!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> All unit language introduced; today is consolidation before the test. Pupils know Showdown mechanics and the alphabet code. <i>There's / There are</i> known from GMF2 — reactivated for the project.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Quiz excitement → noise spiral</td><td>Fixed rules up front: answer only after “Show me!”; volume arm; one warning = minus point.</td></tr><tr><td>Weaker pupils hide in teams</td><td>Showdown: every child writes every answer on their own board; team point = majority correct.</td></tr><tr><td>Reward game drags</td><td>One roll/throw per win, 20 seconds, done; score big on the board.</td></tr><tr><td>Project launch balloons over time</td><td>Brief + investigate only (~6′): choose a zoo name &amp; list animals; DESIGN &amp; present = homework / reserve.</td></tr><tr><td>There's / There are muddled</td><td>Board pair: <i>There's a…</i> (one) · <i>There are some…</i> (many); model with animal cards first.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello, champions! Today — the BIG Unit 3 quiz AND we design a zoo!</span> Drum-roll on knees.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Warm-up review circuit</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Fast rounds, all together:</span> ① flash 12 health cards — chorus “What's the matter? — He's got… / He feels…”; ② habits — mime chain round the circle, class calls ✔/✘; ③ two-verb drill: point to a HAS-card → <span class="en">Has she got…? — Yes, she has.</span>; point to a DOES-card → <span class="en">Does he feel…? — No, he doesn't.</span></p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if this is HEALTHY… eat healthy snacks! …be lazy!</span> — instant whole-class check.</p></td>
+        <td class="mat">health + habit flashcards</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–18′</td>
+        <td class="stage"><div class="nm">AB Review p.34 · Ready, Steady, Go!</div><div class="zone">desks, pairs</div></td>
+        <td class="flow"><p><span class="ph">Beat the clock (Cooperative learning).</span> Pairs race the quiz: name 3 health problems, 3 “must” things, 3 “mustn't” things, write must/mustn't advice for the patients (I've got earache → <span class="en">You must wear a hat, you mustn't swim.</span>).</p><p><span class="ph">Code + where's Luke.</span> <span class="en">Where's Luke in this unit?</span> (Malta!) Then break the code to find where he goes next: 36-56-16-36-4 → <span class="en">I-N-D-I-A!</span> <span class="en">That's Unit 4 — food in India!</span></p><p><p><span class="asr">✔ <b>Assess:</b> circulate with the class list — tick who produces Has/Does + must/mustn't unaided; the rest get support cards in the quiz.</span></p></p></td>
+        <td class="mat">Activity Book p.34 · code key cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">18–22′</td>
+        <td class="stage"><div class="nm">Spelling sprint</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Look–copy–cover–write live.</span> 3 words (<i>headache · stomach · healthy</i>) on mini-whiteboards — look 5 sec, cover, write, <span class="en">Show me!</span> Self-check letter by letter (watch ch = /k/!).</p></td>
+        <td class="mat">mini-whiteboards</td>
+      </tr>
+
+      <tr>
+        <td class="min">22–42′</td>
+        <td class="stage"><div class="nm">🏆 TEAM QUIZ + reward</div><div class="zone">desks, 2 teams</div></td>
+        <td class="flow"><p><span class="ph">Flagship quiz (board or projector).</span> Grid of tiles: picture→problem, problem→spelling, Has/Does question, matched short answer, healthy/unhealthy sort, must/mustn't advice, break-the-code. Mechanics: tile opens → <b>Showdown</b>: EVERY child writes/says on their board → <span class="en">Show me!</span> → majority correct = team point → <span class="ph">reward:</span> one player takes a bowling / penalty shot (paper ball into a box). Rotate the shooter strictly.</p><p><div class="ig">🎮 <b>Offline setup:</b> card grid on the whiteboard + a real paper-ball penalty into a box/basket — one shot per win, 20 sec.</div></p><p><span class="ph">ICQ:</span> <span class="en">When do you show your board?</span> (→ only on “Show me!”)</p><p><span class="ph">Finale.</span> Count scores together in English; both teams: <span class="en">Give me five!</span></p></td>
+        <td class="mat">quiz grid (board) · mini-whiteboards · box + paper ball</td>
+      </tr>
+
+      <tr>
+        <td class="min">42–48′</td>
+        <td class="stage"><div class="nm">🦁 My project 1 launch · The zoo challenge</div><div class="zone">carpet → desks, groups</div></td>
+        <td class="flow"><p><span class="ph">Brief (PB pp.38–39).</span> <span class="en">New challenge — design a zoo and present it! Is there a zoo in your town? What can you see and do there?</span> Quick brainstorm.</p><p><span class="ph">Model There's / There are.</span> Board pair with animal cards: <span class="en">There's a crocodile in the zoo. It's got a pool. There are some giraffes. They've got some trees.</span> Class echoes.</p><p><span class="game">▶ Group investigate (act. 2).</span> Groups of 3–4 (<span class="game">▶ RallyRobin</span> turns): name a zoo, list animals (choose ~8) &amp; one thing each animal needs — <span class="en">We can have some elephants. The crocodile needs a pool.</span> Jot on the notes sheet.</p><p><span class="ph">ICQ:</span> <span class="en">There's a giraffe or There are some giraffes — for many?</span> (→ There are some!)</p><p><span class="diff"><span class="sup">💪 Support:</span> choose animals from a picture bank. <span class="ext">⭐ Extension:</span> add a service for visitors: <span class="en">There's a picnic area.</span></span></p></td>
+        <td class="mat">Pupil's Book pp.38–39 · animal cards · project notes (AB pp.36–37 format)</td>
+      </tr>
+
+      <tr>
+        <td class="min">48–52′</td>
+        <td class="stage"><div class="nm">Well done! · self-assessment</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Cheer «Well done!»</span> Whole class + Give Me Five! choreography.</p><p><span class="ph">My progress (AB p.34).</span> Eyes closed; you read the can-do lines (<span class="en">I can name health problems… I can ask Has he got…? / Does she feel…? … I can say must / mustn't…</span>); pupils show green/yellow/red. Open eyes; <span class="en">Yellow or red? Tell me after class — we'll fix it before the test.</span></p></td>
+        <td class="mat">traffic-light cards · AB p.34</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done — you beat the quiz AND started a zoo! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Test next lesson — don't worry, it's what we practised. Finish the Review + make your zoo notes tonight!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. At the door — one quiz-style question each (from the pile they found hardest). Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">question cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 34 (Review «Ready, Steady, Go!»):</b> finish the quiz — name problems · must/mustn't advice · read &amp; answer · break the code + <i>My progress</i> self-check. <b>+ project:</b> make notes about 3 zoo animals on <b>AB pp.36–37</b> (Name · mammal/reptile/bird · climate · land/water · what it eats). Повторить слова юнита в приложении перед тестом (5–7 min).</p></td>
+        <td class="mat">Activity Book p.34 (+pp.36–37 project) · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 3 “Fit and healthy” · Lesson 6 (Review · Team Quiz + Zoo project launch) — lesson plan &amp; staging (continuing line)</span>
+    <span>Activity Book p.34 (Review) · Pupil's Book pp.38–39 (My project 1, CD2 17) · КТП урок 23. Флагман-квиз с наградой — только на Review. Genki: «I Like Animals» (15) + «Animal Voices» (18) — под зоо-проект.</span>
+  </div>
+</div>

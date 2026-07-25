@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF3 · Unit 7 · Lesson 5 — Phonics · Culture · Literacy (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🔍 Give Me Five! 3 · Unit 7 “Detectives” · Lesson 5 — Phonics (wr = r) · Australia · a script</div>
+    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 15.03–21.03 · Lesson 52</span><span class="chip new">✨ Sound /r/ spelt ‘wr’ · Australia · text type: a script</span><span class="chip">~10 pupils · pairs + teams</span><span class="chip">Pupil's Book pp.77–81 · AB pp.74–76</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>read &amp; say the /r/ sound spelt <i>wr</i></b> (Ron the robber writes on the red wrapper — “<i>wr</i> says <i>r</i>, the w is silent”), <b>talk about an underground town in Australia</b>, and <b>read &amp; plan a script</b> — three mini-blocks, one detective thread.</li><li><span class="lb">Subsidiary.</span> Phonics: notice that <b>wr</b> spells /r/ with a silent w (recognise → say → sort); culture — an underground town in Australia (My town blog) + Channel 21 video, 21C: paying attention; literacy — text type <b>a script</b> (characters · stage directions · exclamation marks), read «The missing necklace» &amp; plan a scene.</li><li><span class="lb">Personal.</span> Three blocks — keep transitions crisp (chant/drum bridges); the robber tongue-twister is play; cap each block hard so the script plan actually gets written. Silent w in wr — cross it out, don't say it.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>say the robber /r/ twister and sort wr / r words;</li><li>say 2–3 facts about the underground town &amp; compare with our homes;</li><li>find characters &amp; stage directions in a script and plan a scene.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">Ron · robber · writes · red · wrapper · wrist · wrong · wrap</span><span class="w">underground · above ground · cooler · bedroom · window</span><span class="w">script · scene · character · stage direction · exclamation mark</span></div></div><div class="r"><div class="k">Structure</div><div>Ron the robber <b>wr</b>ites on the red <b>wr</b>apper. &nbsp;·&nbsp; Many people live <b>under the ground</b> in my town. &nbsp;·&nbsp; script: Police officer: (whispering) Can you see the robber?</div></div><div class="r"><div class="k">Form</div><div>/r/ = <b>r</b> (red, robber) AND <b>wr</b> with a silent w (write, wrist, wrong, wrapper). Script: NAME + (stage direction) + line; exclamation marks show feeling — Hands up!</div></div><div class="r"><div class="k">Pron. watch</div><div>silent w in wr — write /raɪt/, wrist /rɪst/, wrong /rɒŋ/; contrast red /r/ vs write /r/ (same sound!); Australia /ɒˈstreɪliə/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>write</i> and <i>red</i> — same first SOUND? Same first LETTER?” → same sound /r/, different letters (w is silent!).</div><div class="ccq" style="margin-bottom:10px">“A script — is it a story to READ quietly, or words for actors to SAY?” → words for actors to say, with actions.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> was/were, belongings &amp; the story are active (L1–L4). Sound–letter awareness from earlier phonics is enough to enjoy the wr / r noticing (по учебнику). Pupils can read the short script lines with support.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Twister said too fast → mush</td><td>Speed ladder: slow → normal → fast → whisper-fast; quality before speed.</td></tr><tr><td>silent w pronounced (“wuh-rite”)</td><td>Cross out the w on the card; finger over the w while saying the word — /raɪt/.</td></tr><tr><td>Culture block = passive watching</td><td>Every photo/video clip gets a task: point, thumbs if you'd live there, one fact each.</td></tr><tr><td>Script reading = flat / no action</td><td>Model with big feeling + the stage direction acted out (whispering, nervously); pupils copy.</td></tr><tr><td>Three blocks overrun</td><td>Hard caps: 16′ + 12′ + 22′; visible timer; park extra AB pages for homework.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello, detectives! Today — a robber's tricky sound, an underground town, and a real detective SCRIPT. Ready?</span></p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–7′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ RallyRobin:</span> <span class="en">Take turns: Was/Were … ? — belongings + places, short answers!</span> Then a quick was/were chorus about yesterday — warms up detective language for the script later.</p></td>
+        <td class="mat"><span class="game">▶ RallyRobin</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">7–23′</td>
+        <td class="stage"><div class="nm">Block 1 · Phonics /r/ = wr</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="ph">Listen, read and say (act. 1, CD3 35).</span> PB p.77: <span class="en">wr says r — the w is silent! Ron the robber writes on the red wrapper.</span> Listen, then the speed ladder: slow → fast → whisper. Pairs test each other ×3.</p><p><span class="ph">Sort r / wr.</span> Two hoops/columns: <b>r</b> (red, robber, ring, rain) · <b>wr</b> (write, wrist, wrong, wrapper). Hold up word cards — every child points/steps to the right hoop BEFORE you place each card.</p><p><span class="ph">Notice the rule.</span> <span class="en">Same sound /r/ — but wr has a SILENT w. Cross it out!</span> (notice, don't lecture).</p><p><span class="diff"><span class="sup">💪 Support:</span> say the word, teacher shows the hoop. <span class="ext">⭐ Extension:</span> add one more wr word (wrap, wren).</span></p><p><p><span class="asr">✔ <b>Assess:</b> who still says the silent w? Note them — extra RallyRead next unit.</span></p></p></td>
+        <td class="mat">Pupil's Book p.77 · CD3 35 · word cards · 2 hoops</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">23–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — fly to AUSTRALIA! Some people live UNDER the ground there!</span> Australia photo up, drum-roll on knees.</p></td>
+        <td class="mat">photo · PB p.80</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–36′</td>
+        <td class="stage"><div class="nm">Block 2 · Culture · Australia</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read the town blog (act. 1, PB p.80).</span> <span class="en">Do you know that many people build houses UNDER the ground in this town? Why?</span> Read/discuss: <span class="en">Living underground is COOLER than above ground.</span> Point to rooms in the underground house (three bedrooms, living room, kitchen, bathroom).</p><p><span class="ph">Channel 21 video + paying attention (PB p.81).</span> Watch the houses clip: <span class="en">Which of these don't you see? How many windows has the house got?</span> 21C skill — <span class="en">Detectives PAY ATTENTION! What did you notice?</span></p><p><span class="ph">Think about your home.</span> <span class="en">Would YOU like to live underground? Why / why not?</span> 3–4 hands, recast.</p><p><p><span class="asr">✔ <b>Assess:</b> call a fact — pupils thumbs-up if true; who's really paying attention?</span></p></p></td>
+        <td class="mat">Pupil's Book pp.80–81 · video</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">36–37′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">The detectives put on a PLAY — a script! Let's read one.</span> Point to «The missing necklace» (PB p.78).</p></td>
+        <td class="mat">PB p.78</td>
+      </tr>
+
+      <tr>
+        <td class="min">37–52′</td>
+        <td class="stage"><div class="nm">Block 3 · Literacy · a script</div><div class="zone">carpet → desks, pairs</div></td>
+        <td class="flow"><p><span class="ph">Before you read (act. 1–3, CD3 37).</span> PB p.78 «The missing necklace: Scene 1»: <span class="en">Who are the characters? What are they talking about?</span> Read/listen — a police officer investigates Lady Muck's missing necklace.</p><p><span class="ph">Investigate the script (PB p.79, act. 3).</span> Find: <span class="en">Where are the characters' names? How many ways do they speak? What actions do they do?</span> Notice stage directions <i>(whispering) (nervously) (angrily)</i> &amp; exclamation marks — <span class="en">Hands up!</span></p><p><span class="game">▶ Perform a snippet (Talk Partners).</span> Pairs read 4 lines of Scene 1 aloud WITH the stage directions acted out. Swap roles. 2 pairs show the class.</p><p><span class="game">▶ Plan a script (Cooperative learning, AB p.76 format).</span> Pairs plan a short mystery scene: <i>Characters · What's missing? · Where was it? · A funny line.</i> Make notes; 2 pairs share one line aloud.</p><p><span class="diff"><span class="sup">💪 Support:</span> fill the script plan template with word support. <span class="ext">⭐ Extension:</span> write the full scene with 2 stage directions + an exclamation.</span></p></td>
+        <td class="mat">Pupil's Book pp.78–79 · CD3 37 · script plan sheets</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Say the robber twister to your partner — fast! Then: would you live underground?</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">Colour your progress card — I can read wr words! I know about Australia! I can plan a script!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, scriptwriters! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. At the door: a wr word (write / wrist / wrong) OR <span class="en">one fact about the underground town!</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 74</b> (Speaking &amp; Spelling): wordsearch — find the <b>wr</b> words (wrist · wrapper · write · wring · ring) + <i>How do you spell…?</i>; <b>p. 75</b> (Reading): read the script «The ball game» (Lily &amp; Josh) + comprehension; <b>p. 76</b> (Writing): <i>Cooperative learning — plan and write your script. Share and check</i>. По желанию: culture web quest (p. 77, со взрослым). <b>+ app trainer</b> — 5–7 min.</p></td>
+        <td class="mat">Activity Book pp.74–76 (+77) · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 7 “Detectives” · Lesson 5 (Phonics /r/=wr · Culture Australia · Literacy script) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book pp.77–81 (CD3 35–39) · Activity Book pp.74–77 · КТП урок 52. Фоника — материал учебника (wr = /r/, silent w). Genki: «What Were You Doing?» (58b) — police interview, точно на детективную тему/скрипт.</span>
+  </div>
+</div>

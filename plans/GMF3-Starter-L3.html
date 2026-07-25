@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF3 · Starter · Lesson 3 — Story (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 3 · Starter “Welcome to the lighthouse!” · Lesson 3 — Story «The secret message» + spelling</div>
+    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 07.09–13.09 · Lesson 3</span><span class="chip new">✨ NEW · alphabet code + How do you spell…?</span><span class="chip">~10 pupils · groups of 3–4</span><span class="chip">Pupil's Book pp.6–7 · AB pp.4–5</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>follow &amp; act out</b> the story «The secret message», <b>break the alphabet code</b> (A = 4, B = 8 … × 4) and <b>ask how to spell</b>: “How do you spell (message)? — M-E-S-S-A-G-E.”</li><li><span class="lb">Subsidiary.</span> Say the alphabet a–z and the secret code rap (CD1 08); numbers 1–100 in a real task (the code wheel); double letters (<i>mm = double m</i>); story skills — predict → listen → sequence → act out; meet the story engine (Luke's travel blog).</li><li><span class="lb">Personal.</span> Keep spelling snappy — letter NAMES only; spell in chunks of 2–3 letters with the class echoing; give every child a story role. Let the code-breaking be a team puzzle, not a race.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>say/sing the alphabet a–z and spell familiar words aloud;</li><li>break the number-code to read a hidden word;</li><li>act out a story scene in a group.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">the alphabet a–z</span><span class="w">the secret code (A=4 … Z=104)</span><span class="w">message · password · secret</span><span class="w">brother · scientist · blog</span><span class="w">double letters (ss · mm)</span></div></div><div class="r"><div class="k">Structure</div><div>Who's this? — He's our (brother). &nbsp;·&nbsp; Break the code and write the password. &nbsp;·&nbsp; How do you spell (message)? — M-E-S-S-A-G-E.</div></div><div class="r"><div class="k">Form</div><div>Letter NAMES for spelling (a /eɪ/, e /iː/, i /aɪ/…). The code: letter position × 4 → 4=A, 8=B, 48=L, 84=U. Double letters: <b>ss</b> = double s, <b>mm</b> = double m.</div></div><div class="r"><div class="k">Pron. watch</div><div>letter names g /dʒiː/ vs j /dʒeɪ/; e /iː/ vs i /aɪ/ (classic traps); numbers 40–100 in the code (forty, sixty, eighty).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>Spell</i> — do I say the WORD or the LETTERS?” → the letters.</div><div class="ccq" style="margin-bottom:10px">“In the code, letter A = number 4. So B = …? Count in fours!” → 8.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Alphabet letter-names known patchily from GMF2; numbers 1–100 revised in L1. First story of the year — the act-out routine needs a full model. Readers follow the story text in the book while listening.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Letters g/j and e/i confused</td><td>Contrast pairs on the board; point-and-chorus the tricky pairs extra.</td></tr><tr><td>Code maths too hard for some</td><td>Give a printed code wheel / A=4 key card; solve one letter together, then groups continue.</td></tr><tr><td>Spelling too slow, class drifts</td><td>Spell in chunks of 2–3 letters, class echoes each chunk; short words only today.</td></tr><tr><td>Story acting — everyone wants Luke</td><td>Groups of 3–4, roles rotate each run; role badges — no fighting over parts.</td></tr><tr><td>Double letters missed in spelling</td><td>The “Remember! mm = double m” card up; clap twice on the double letter.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Today we crack a SECRET CODE. Are you ready, agents?</span> Whisper voice — build the mystery.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval · alphabet</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Recycle L2, woven in.</span> <span class="game">▶ RallyRobin:</span> <span class="en">Take turns: do you like…? — 3 questions each.</span></p><p><span class="ph">Alphabet warm-up.</span> Sing the ABC once; then tricky letters on the board (<b>g–j</b>, <b>e–i</b>): <span class="en">Look at my mouth: g… j…</span> — YOU point randomly, class calls the letter name. Every child answers every time.</p><p><span class="game">▶ Alphabet aerobics (stirrer).</span> <span class="en">Make a T with your arms! An O! An X!</span> — body letters, 60 sec.</p></td>
+        <td class="mat">board (tricky letters)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–11′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">The lighthouse computer has a message from big brother Luke. Listen!</span> Play the secret code rap (PB p.7, CD1 08) once; pupils tap the beat → into the story.</p></td>
+        <td class="mat">secret code rap (CD1 08)</td>
+      </tr>
+
+      <tr>
+        <td class="min">11–21′</td>
+        <td class="stage"><div class="nm">Story · The secret message</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Predict.</span> PB p.6, books closed, frame 1 on the board: <span class="en">A family moves into a lighthouse. What do they find?</span> 2–3 guesses (Russian OK, recast).</p><p><span class="ph">Listen 1 — gist (CD1 06, books closed).</span> <span class="en">Listen: WHO sends the message?</span> → big brother Luke!</p><p><span class="ph">Listen 2 — read along (books open pp.6–7).</span> Finger under the text; pause per frame: <span class="en">Who's this? — He's our big brother, Luke. What's that noise? — It's the computer!</span></p><p><span class="ph">Comprehension.</span> Thumbs up/down: <span class="en">Luke is their dad… thumbs! The password is “adventure”… thumbs!</span> — every child votes.</p></td>
+        <td class="mat">Pupil's Book pp.6–7 · CD1 06</td>
+      </tr>
+
+      <tr>
+        <td class="min">21–31′</td>
+        <td class="stage"><div class="nm">Break the code</div><div class="zone">desks, groups of 3</div></td>
+        <td class="flow"><p><span class="ph">Crack it together (act. 4 of the story).</span> Show the code key: <span class="en">Number four is the letter A. Count in fours — eight is B, twelve is C!</span> Decode the story password as a class: 4-16-88-20-56-80-84-72-20 → <span class="en">A-D-V-E-N-T-U-R-E!</span></p><p><span class="game">▶ Code-breaker teams (RallyCoach).</span> Each group gets a short coded word (their group name) + the key card. Partner A reads a number, partner B finds the letter, then swap. First to decode shouts it — but everyone in the group must read it aloud.</p><p><div class="ig">🎮 <b>Projector option:</b> show the code wheel from PB p.7 on screen; a rotating child spins to a number, the WHOLE class calls the letter.</div></p><p><span class="diff"><span class="sup">💪 Support:</span> printed A=4 key card in view. <span class="ext">⭐ Extension:</span> encode your OWN name into numbers for a partner.</span></p></td>
+        <td class="mat">code key cards · Pupil's Book p.7</td>
+      </tr>
+
+      <tr>
+        <td class="min">31–41′</td>
+        <td class="stage"><div class="nm">Act out</div><div class="zone">carpet, groups of 3–4</div></td>
+        <td class="flow"><p><span class="ph">Model a scene.</span> You + 2 pupils play frames 3–4 (hearing the noise, cracking the code) with big drama.</p><p><span class="ph">Groups of 3–4 (roles: Lily · Josh · Ravi · Luke-on-screen).</span> Rehearse the scene with the book as a script (readers). Rotate roles once.</p><p><span class="ph">Showtime.</span> 2 groups perform; audience job: shout the password at the end — everyone has a task.</p></td>
+        <td class="mat">Pupil's Book pp.6–7 · role badges</td>
+      </tr>
+
+      <tr>
+        <td class="min">41–52′</td>
+        <td class="stage"><div class="nm">How do you spell…?</div><div class="zone">carpet, pairs → board</div></td>
+        <td class="flow"><p><span class="ph">Model (PB p.7 act. 3, CD1 09).</span> <span class="en">How do you spell message? — M-E-S-S-A-G-E!</span> Point to the “Remember! mm = double m” card; clap twice on the double letter.</p><p><span class="game">▶ Spelling Showdown.</span> Mini-whiteboards: you say a word (message · school · password · swimming) — all write, <span class="en">Show me!</span> Reveal together, self-check letter by letter. Then <span class="game">▶ Talk Partners:</span> pairs spell their names from their tags.</p><p><span class="ph">ICQ:</span> <span class="en">swimming — one m or double m?</span> (→ double m!)</p><p><p><span class="asr">✔ <b>Assess:</b> listen for g/j, e/i and the double letters — recast immediately; these carry the whole year's spelling work.</span></p></p></td>
+        <td class="mat">mini-whiteboards · name tags · “double letter” card</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Ask your partner: “How do you spell your name?” — spell it back.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">Colour your progress card — I can break the code and spell words!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, secret agents! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. At the door: <span class="en">How do you spell your name?</span> (support: spell any 3-letter word). Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">name tags · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 4:</b> ex. 1 <i>Read and write true or false</i> + ex. 2 <i>Read and match</i> (speech bubbles ↔ characters) + ex. 3 <i>Listen and circle the eight mistakes. Write the correct words</i> (CD1 07 — можно по картинкам/книге без аудио); <b>p. 5:</b> ex. 1 <i>Circle the letters that have the same sound</i> + ex. 3 <i>Break the code</i>. <b>+ app trainer</b> — 5–7 min.</p></td>
+        <td class="mat">Activity Book pp.4–5 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 3 · Starter “Welcome to the lighthouse!” · Lesson 3 (Story «The secret message» · spelling) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book pp.6–7 (CD1 06–09) · Activity Book pp.4–5 · КТП урок 3. Genki: «How Do You Say … In English?» (41) — тема алфавит/код.</span>
+  </div>
+</div>

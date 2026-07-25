@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF3 · Unit 7 · Lesson 3 — Story (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🔍 Give Me Five! 3 · Unit 7 “Detectives” · Lesson 3 — Story «The missing watch»</div>
+    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 08.03–14.03 · Lesson 50</span><span class="chip new">✨ NEW · Where was it? It was in… (past in a story)</span><span class="chip">~10 pupils · groups of 4</span><span class="chip">Pupil's Book pp.74–75 · AB p.72</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>follow, read and act out</b> the story «The missing watch» and <b>talk about the past mystery</b>: “Where was Mum's watch? — It was in a magpie's nest in the castle.”</li><li><span class="lb">Subsidiary.</span> Break Luke's code again («Have you got a watch, too?») — recycles the alphabet code; Values — <i>looking after your personal belongings</i>; story skills: predict → listen → read along → sequence the events → act out; consolidate was/were from L2 in context.</li><li><span class="lb">Personal.</span> Let the story breathe — big detective voices, pauses, prediction; every child gets a story role; keep the sequencing hands-on. Don't over-correct was/were — notice and recast.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>retell 2–3 events of the watch mystery in order;</li><li>read their role's lines from the book;</li><li>answer “Where was/were…?” about the story with was/were.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">missing · watch · magpie · nest · castle · feather</span><span class="w">shiny things · sweet wrapper · clue · mystery</span><span class="w">was / were (in context)</span></div></div><div class="r"><div class="k">Structure</div><div>Where <b>was</b> the watch? — It <b>was</b> in a magpie's nest. &nbsp;·&nbsp; Where <b>were</b> the shiny things? &nbsp;·&nbsp; It <b>was</b> in the living room, but it isn't there now.</div></div><div class="r"><div class="k">Form</div><div>Story recycles <b>was/were</b> (L2) in questions &amp; answers; <i>Where was/were … ? — It was / They were … .</i> Magpies collect shiny things — the “clue”.</div></div><div class="r"><div class="k">Pron. watch</div><div>magpie /ˈmæɡpaɪ/; castle /ˈkɑːsl/ (silent t!); feather /ˈfeðə/ (voiced th); nest /nest/; shiny /ˈʃaɪni/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“The watch was MISSING — is it here or has it gone?” → it's gone; we can't find it.</div><div class="ccq" style="margin-bottom:10px">“A magpie took it — why?” → magpies love SHINY things; the watch is shiny.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> was/were are active from L2; household objects &amp; prepositions from L1; the alphabet code was used across the year. First act-out of the term for this cast — routine known. Readers follow the text with a finger.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Code pre-reading too hard</td><td>Solve the first two numbers together; give the A=4 key card — it's a warm hook, not a test.</td></tr><tr><td>Where was/were confusion in answers</td><td>Anchor cards: <i>it → was</i>, <i>they → were</i>; frame stays on the board while they answer.</td></tr><tr><td>Sequencing = guessing</td><td>Print the 6 story pictures; groups physically ORDER them, then check against pp.74–75.</td></tr><tr><td>Acting groups off-task</td><td>Roles printed (Lily · Mum · Ravi · Dad); strongest reader narrates; rotate once only.</td></tr><tr><td>Story audio too fast for some</td><td>Second listening with pauses per frame; readers follow the text with a finger.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello, detectives! Someone's watch is MISSING. Can we solve the mystery?</span> Thumbs; quick chorus.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval + code hook</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Recycle L2 was/were.</span> <span class="game">▶ RallyRobin:</span> <span class="en">Take turns: Where were you yesterday morning / afternoon / evening?</span> — 3 exchanges each, full answers.</p><p><span class="ph">Before you read — break the code (act. 1).</span> Luke's message: <i>I've got a new watch. It's big and 76–32–36–56–98.</i> Decode with the A=4 key: <span class="en">S-H-I-N-Y — it's big and SHINY!</span> <span class="en">Where do you think the children find the missing watch?</span> — 2–3 guesses.</p></td>
+        <td class="mat">code key cards · board</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Let's find out where the watch really was. Story time!</span> Show the story title «The missing watch».</p></td>
+        <td class="mat">Pupil's Book p.74</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–20′</td>
+        <td class="stage"><div class="nm">Story · listen &amp; read</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Listen 1 — gist (CD3 30, books closed).</span> <span class="en">Listen: WHO finds the watch? WHERE was it?</span> Check ideas on fingers/hands.</p><p><span class="ph">Listen 2 — read along (books open pp.74–75).</span> Finger under the text. Pause per frame: <span class="en">Where was the watch? — It was in the living room, but it isn't there now! Look at the shiny things in the nest!</span> Raise a “was/were” card each time it sounds.</p><p><span class="ph">Values (act. 4).</span> <span class="en">Mum was worried. How can you look after YOUR things — your watch, your keys, your phone?</span> 3–4 hands, Russian OK, recast key words.</p></td>
+        <td class="mat">Pupil's Book pp.74–75 · CD3 30 · “was/were” card</td>
+      </tr>
+
+      <tr>
+        <td class="min">20–30′</td>
+        <td class="stage"><div class="nm">Sequence &amp; correct · comprehension</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="ph">Order the events (groups of 4).</span> 6 story pictures per group — race to put them in order; then check against pp.74–75. <span class="en">What happens first? — Mum can't find her watch.</span> Groups narrate their order with was/were.</p><p><span class="ph">Read and correct (Talk Partners).</span> Statements: <span class="en">The watch was under the sofa… true or false?</span> Pairs correct the false ones fully: <span class="en">No, it wasn't. It was in the magpie's nest.</span> 5 statements — every pair speaks.</p><p><p><span class="asr">✔ <b>Assess:</b> listen in on the correcting — is it “No, it WASN'T” + the true place? Note who needs the anchor cards.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> point to the right frame in the book. <span class="ext">⭐ Extension:</span> add a second true fact about that frame.</span></p></td>
+        <td class="mat">6 story pictures per group · Pupil's Book pp.74–75</td>
+      </tr>
+
+      <tr>
+        <td class="min">30–40′</td>
+        <td class="stage"><div class="nm">Act out</div><div class="zone">carpet, groups of 4</div></td>
+        <td class="flow"><p><span class="ph">Model a frame.</span> You + 3 pupils play the nest-discovery frame with big drama: <span class="en">Wow! Look at all the shiny things! My watch! Where was it?</span></p><p><span class="ph">Groups of 4 (Lily · Mum · Ravi · Dad).</span> Rehearse 2 frames with books as scripts. Rotate roles once.</p><p><span class="ph">Showtime.</span> Each group performs ONE frame (30–40 sec — fast carousel, no long waits). Audience task: shout WHERE the watch was at the end (in the magpie's nest!).</p><p><span class="diff"><span class="sup">💪 Support:</span> shortest lines / the “Wow, shiny things!” chorus for the shyest child. <span class="ext">⭐ Extension:</span> add an extra line from the frame.</span></p></td>
+        <td class="mat">Pupil's Book pp.74–75 · role badges</td>
+      </tr>
+
+      <tr>
+        <td class="min">40–52′</td>
+        <td class="stage"><div class="nm">🔍 Where is it? · search game</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="game">▶ Hide &amp; ask — Where was it?</span> Before class, “the magpie” hid a shiny object card in the room. Detectives ask past questions to narrow it down: <span class="en">Was it behind the bookcase? Was it under the mat?</span> You answer <span class="en">No, it wasn't / Yes, it was!</span> Whole class calls the questions together — the finder becomes the magpie next round.</p><p><div class="ig">🎮 <b>Board option:</b> a room picture with 6 hiding spots numbered; a rotating child taps a spot as the WHOLE class asks the was/were question.</div></p><p><span class="ph">ICQ:</span> <span class="en">Do you ask “Is it…?” or “Was it…?” — it's a PAST mystery!</span> (→ Was it…?)</p></td>
+        <td class="mat">shiny object card · room picture (board)</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner: where was the watch, and how can you look after your things?</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">Colour your progress card — I can read our story! I can ask “Where was it?”</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, detectives! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. At the door: <span class="en">Where was Mum's watch in the story?</span> or <span class="en">What do magpies love?</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">story frames · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 72:</b> ex. 1 <i>After you read: Read and answer</i> (Where was the feather? What colour? Where was the nest? Where were the objects?) + ex. 2 <i>Listen and circle the eight mistakes in the blog. Write the correct words</i> (CD3 31 — можно по книге/картинкам без аудио). <b>+ app trainer</b> — 5–7 min.</p></td>
+        <td class="mat">Activity Book p.72 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 7 “Detectives” · Lesson 3 (Story «The missing watch») — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book pp.74–75 (CD3 30) · Activity Book p.72 · КТП урок 50. Genki: «Where Is It?» (82) — поиск пропавшей вещи + предлоги, точно на историю.</span>
+  </div>
+</div>

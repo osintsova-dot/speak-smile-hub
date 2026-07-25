@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF3 · Unit 3 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 3 · Unit 3 “Fit and healthy” · Lesson 1 — Vocabulary · Health problems</div>
+    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 02.11–08.11 · Lesson 18</span><span class="chip new">✨ NEW · 12 health problems</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.28 · AB p.26</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 12 health problems</b> and <b>ask &amp; answer about not feeling well</b>: “Have you got a (headache)? — No, I haven't. / Do you feel (dizzy)? — Yes, I do.”</li><li><span class="lb">Subsidiary.</span> Sing «I'm not very well» (CD1 48) &amp; the vocabulary chant (CD1 47); brainstorm ways to answer “How are you?” (Learning to learn); notice the two patterns — <i>Have you got…?</i> for a thing you HAVE, <i>Do you feel…?</i> for how you FEEL (fully drilled in L2); early literacy — read the health words and solve the AB puzzle.</li><li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; stirrer→settler rhythm — the mime game is high-energy, plan the freezes. Insist on the article: <i>a</i> headache, <i>a</i> cold, <i>a</i> cough (but <i>flu / stomach ache</i> without <i>a</i> when they say “I've got…”).</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name the 12 health problems from the pictures;</li><li>ask &amp; answer “Have you got…? / Do you feel…?”;</li><li>read the health words and match word ↔ picture.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">headache</span><span class="w">flu</span><span class="w">stomach ache</span><span class="w">temperature</span><span class="w">earache</span><span class="w">cut</span><span class="w">cold</span><span class="w">broken leg</span><span class="w">cough</span><span class="w">feel dizzy</span><span class="w">sore throat</span><span class="w">feel sick</span></div></div><div class="r"><div class="k">Structure</div><div>Have you got a (headache)? — Yes, I have. / No, I haven't. &nbsp;·&nbsp; Do you feel (dizzy)? — Yes, I do. / No, I don't. &nbsp;·&nbsp; I've got (a cough) and (stomach ache), too.</div></div><div class="r"><div class="k">Form</div><div>Two patterns: <b>Have</b> you got + a + problem? (a thing) &nbsp;·&nbsp; <b>Do</b> you <b>feel</b> + adjective? (dizzy / sick). Watch <i>a</i> before headache/cold/cough; NO <i>a</i> before flu / stomach ache / earache when saying “I've got…”.</div></div><div class="r"><div class="k">Pron. watch</div><div>stomach /ˈstʌmək/ (ch = /k/!); headache /ˈhedeɪk/ (ache = /eɪk/); cough /kɒf/ (gh = /f/); sore throat /θ/ — tongue between teeth; dizzy /ˈdɪzi/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“I've got a headache — is it a problem I HAVE, so <i>Have you got…?</i> or how I FEEL, so <i>Do you feel…?</i>” → Have you got.</div><div class="ccq" style="margin-bottom:10px">“I feel dizzy — Have you got dizzy, or Do you feel dizzy?” → Do you feel dizzy!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Unit 2 routines (chores + adverbs of frequency) are active; pupils know <i>How are you? — I'm fine</i> and <i>have got</i> from GMF2. The 12 health problems are largely NEW; the <i>Have you got…? / Do you feel…?</i> split is met receptively today, drilled in L2. Readers — word cards work alongside pictures.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Wrong pattern (“Have you got dizzy?”)</td><td>Two-colour board: HAVE-side = things (headache, cold) · DO-FEEL-side = dizzy/sick; sort each card before drilling.</td></tr><tr><td>Article dropped / added wrongly</td><td>Colour the <b>a</b> on the HAVE-side; flu &amp; stomach ache go on a “no-a” sticky note.</td></tr><tr><td>stomach / headache said with /tʃ/</td><td>Anchor: <i>ch here says /k/</i> — plant the L5 phonics; clap STO-MACK, HEAD-AKE.</td></tr><tr><td>Mime game gets wild</td><td>Slow-motion + Freeze!; problems mimed on the spot, no travelling round the room.</td></tr><tr><td>Some read word cards slowly</td><td>Icon on every card; pair a strong reader with a developing one in card games.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Welcome to a new unit — FIT AND HEALTHY!</span> Hold your head, groan a little; kids guess “headache / not well”.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval mingle</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Recycle Unit 2, on-topic.</span> <span class="game">▶ Mix–Pair–Share:</span> music → <span class="en">Stand up, hand up, pair up!</span></p><p>R1 <span class="ph">chores + frequency:</span> <span class="en">Do you always tidy up? Does your mum often cook?</span> R2 <span class="ph">how are you:</span> <span class="en">How are you today?</span> R3 <span class="ph">brainstorm (act. 1):</span> <span class="en">Think of DIFFERENT answers to “How are you?” — good ones and not-good ones! (Russian OK — we'll learn them in English today!)</span></p><p><p><span class="asr">✔ <b>Assess:</b> who can already say more than “I'm fine”? Note names — stretch them at Reflection.</span></p></p></td>
+        <td class="mat">music · <span class="game">▶ Mix-Pair-Share</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen — this poor boy is NOT very well!</span> Play the song «I'm not very well» (PB p.28, CD1 48) once; pupils hold their tummy/head to the beat → into the topic.</p></td>
+        <td class="mat"><b>«I'm not very well»</b> (CD1 48)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–20′</td>
+        <td class="stage"><div class="nm">Presentation · 12 health problems</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Present with flashcards + chant (act. 2, CD1 47).</span> Each card: <span class="en">What's the matter? He's got… a headache!</span> Choral ×3 + one gesture (headache = hold head, cough = cover mouth, broken leg = limp, feel dizzy = wobble). </p><p><span class="ph">Sort HAVE vs FEEL.</span> Two board columns: <b>Have you got…?</b> (headache · cold · cough · sore throat · temperature · stomach ache · earache · cut · broken leg · flu) &nbsp;·&nbsp; <b>Do you feel…?</b> (dizzy · sick). Hold each card — class points to the right column BEFORE you place it.</p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if you've got THIS today… a headache!</span> — flash cards fast, everyone moves every time.</p><p><span class="diff"><span class="sup">💪 Support:</span> answer with the gesture + word. <span class="ext">⭐ Extension:</span> full sentence — <span class="en">I've got a bad headache today.</span></span></p></td>
+        <td class="mat">12 health flashcards · board · CD1 47</td>
+      </tr>
+
+      <tr>
+        <td class="min">20–28′</td>
+        <td class="stage"><div class="nm">Song · I'm not very well</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="en">To your tables! Open your books at page 28.</span> <span class="ph">Sing (act. 3, CD1 48).</span> Listen &amp; point to the problems in the big picture; 2nd run — sing with gestures.</p><p><span class="ph">Notice the questions.</span> Read the mime-game bubbles: <span class="en">Have you got a headache? — No, I haven't. Do you feel dizzy? — Yes, I do.</span> Choral — plants L2's grammar. Freeze between verses.</p></td>
+        <td class="mat">Pupil's Book p.28 · CD1 48</td>
+      </tr>
+
+      <tr>
+        <td class="min">28–36′</td>
+        <td class="stage"><div class="nm">Word ↔ picture · Memory</div><div class="zone">carpet, pairs</div></td>
+        <td class="flow"><p><span class="game">▶ Memory · What's the matter? — in pairs.</span> Each pair: 6 picture cards + 6 WORD cards (readers!) face-down in two rows. Turn one of each; a match is claimed only with a sentence: <span class="en">He's got a cough!</span> or <span class="en">She feels sick!</span> Wrong pattern → cards go back. Most pairs wins.</p><p><span class="ph">ICQ:</span> <span class="en">For “dizzy” — do you say He's GOT dizzy or He FEELS dizzy?</span> (→ He feels dizzy!)</p><p><p><span class="asr">✔ <b>Assess:</b> stand behind one pair at a time — is the HAVE/FEEL split automatic yet?</span></p></p></td>
+        <td class="mat">6+6 cards per pair</td>
+      </tr>
+
+      <tr>
+        <td class="min">36–44′</td>
+        <td class="stage"><div class="nm">Mime &amp; guess</div><div class="zone">carpet, 2 teams</div></td>
+        <td class="flow"><p><span class="game">▶ Slow-motion doctor mime.</span> One player mimes a health problem; their team guesses together with the QUESTION: <span class="en">Have you got a headache? Do you feel sick?</span> Mimer answers <span class="en">Yes, I have! / No, I haven't.</span> Point per correct guess; rotate the mimer every round — everyone mimes once.</p><p>Whole team asks together — no solo shouting: <span class="en">One voice, one team!</span></p></td>
+        <td class="mat">health flashcards (prompt deck)</td>
+      </tr>
+
+      <tr>
+        <td class="min">44–52′</td>
+        <td class="stage"><div class="nm">At the doctor's · speak &amp; write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Speak.</span> <span class="game">▶ RallyRobin:</span> <span class="en">Take turns: What's the matter? — I've got… / I feel…</span> — about a card you pick.</p><p><span class="ph">Write (notebooks / AB p.26 format).</span> Board frame: <i>I've got a ___. I feel ___.</i> Each child writes 3 “not well” sentences, copying the health words. Fast finishers add <i>and</i>: <i>I've got a cough and a sore throat.</i></p><p><span class="diff"><span class="sup">💪 Support:</span> copy the frame + choose from 3 word cards. <span class="ext">⭐ Extension:</span> add advice: <i>I must go to bed.</i></span></p></td>
+        <td class="mat">notebooks · board frames</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner two health problems — one with “I've got a…”, one with “I feel…”.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">Colour your progress card — I can name 12 health problems! I can ask Have you got…? / Do you feel…?</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, young doctors! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show a health card at the door: <span class="en">What's the matter? Have you got a…? / Do you feel…?</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">health cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 26:</b> ex. 1 <i>Look and complete the puzzle. What's the mystery word?</i> (health crossword) + ex. 2 <i>Look and complete the sentences</i> (dizzy · cold · flu · earache · cough · sick). <b>+ app trainer</b> — health words, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.26 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 3 “Fit and healthy” · Lesson 1 (Vocabulary · health problems) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.28 (CD1 47–48) · Activity Book p.26 · КТП урок 18. Song «I'm not very well» (book) — точный тематический матч. Genki: «Doctor, Doctor!» (26) — болезни/симптомы.</span>
+  </div>
+</div>

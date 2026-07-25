@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF3 · Unit 5 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 3 · Unit 5 “Under the sea” · Lesson 1 — Vocabulary · Sea animals</div>
+    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 11.01–17.01 · Lesson 34</span><span class="chip new">✨ NEW · 12 sea animals (back from the holidays!)</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.50 · AB p.48</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 12 sea animals</b> and <b>describe the underwater world</b> in context: “There are (turtles) in the sea. There's a very big (shark) — and it's got (sharp teeth)!”</li><li><span class="lb">Subsidiary.</span> Sing «Under the sea» (CD2 37) &amp; the vocabulary chant (CD2 36); recycle <i>has got</i> + big/small from earlier units, woven into the new sea theme; preview the comparative <i>bigger than</i> (planted for L2); early literacy — read the animal words &amp; solve the AB crossword.</li><li><span class="lb">Personal.</span> First lesson after the winter break — warm reunion, big energy, low teacher-talk. ICQ before every task; sea-creature mimes are stirrers — plan the freezes. Insist on the plural: <i>fish → fish</i>, <i>shark → sharks</i>.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name the 12 sea animals;</li><li>say “There's a … / There are …” about the underwater picture;</li><li>read the animal words and match word ↔ picture.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">fish</span><span class="w">turtle</span><span class="w">crab</span><span class="w">squid</span><span class="w">shark</span><span class="w">seahorse</span><span class="w">whale</span><span class="w">starfish</span><span class="w">seal</span><span class="w">jellyfish</span><span class="w">dolphin</span><span class="w">octopus</span></div></div><div class="r"><div class="k">Structure</div><div>There are (turtles) in the sea. &nbsp;·&nbsp; There's a very big (shark). It's got (sharp teeth / a hard shell). &nbsp;·&nbsp; <i>preview:</i> A (whale) is (bigger) than a (fish).</div></div><div class="r"><div class="k">Form</div><div>There's a + singular · There are + plural. <b>Irregular plural:</b> one fish → two <b>fish</b>! Describe with <i>It's got …</i> (has got, recycled).</div></div><div class="r"><div class="k">Pron. watch</div><div>squid /skwɪd/; octopus /ˈɒktəpəs/ (3 syll.); seahorse — stress the first part (SEA-horse); jellyfish /ˈdʒelifɪʃ/ (soft j); turtle /ˈtɜːtl/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>fish</i> — one fish, and two…?” → two fish! (same word).</div><div class="ccq" style="margin-bottom:10px">“A shark is very big — is it bigger or smaller than a little fish?” → bigger! (plants L2).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Pupils are back from the winter break — routines need a quick reboot. <i>There is / There are</i> and <i>has got</i> are known from earlier units; the 12 sea animals are largely NEW. Readers use word cards alongside pictures.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Plural of <i>fish</i> (“fishes”)</td><td><b>Remember!</b> card on the board: <i>one fish – two fish</i>; beat-echo it.</td></tr><tr><td>Long words (jellyfish · octopus · seahorse)</td><td>Chunk &amp; clap: JEL-ly-fish · OC-to-pus; icon on every card.</td></tr><tr><td><i>a</i> dropped (“There's shark”)</td><td>Board frame keeps the <b>a</b> in a bright colour; echo with a beat — <i>There's — A — shark</i>.</td></tr><tr><td>Sea-mime game gets wild</td><td>Slow-motion swimming + Freeze!; mimes on the spot, no travelling.</td></tr><tr><td>Some read word cards slowly</td><td>Picture icon on every card; pair a strong reader with a developing one in card games.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Happy New Year! Welcome back! Today we dive UNDER THE SEA!</span> Mime swimming / goggles on; kids guess the topic.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval mingle</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Reboot after the break, on-topic.</span> <span class="game">▶ Mix–Pair–Share:</span> music → <span class="en">Stand up, hand up, pair up!</span></p><p>R1 <span class="ph">reconnect:</span> <span class="en">Happy New Year! What did you do in the holidays?</span> R2 <span class="ph">recycle has got + big/small:</span> <span class="en">Think of an animal. It's got… — big or small?</span> R3 <span class="ph">brainstorm (act. 1):</span> <span class="en">Take turns — what animals live UNDER THE SEA? (Russian OK — we'll learn them in English today!)</span></p><p><p><span class="asr">✔ <b>Assess:</b> who still can't make a full sentence after two weeks off? Note names — recycle at Reflection.</span></p></p></td>
+        <td class="mat">music · <span class="game">▶ Mix-Pair-Share</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen — UNDER THE SEA!</span> Play the song (PB p.50, CD2 37) once through; pupils sway &amp; clap the beat → into the topic.</p></td>
+        <td class="mat"><b>«Under the sea»</b> (CD2 37)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–20′</td>
+        <td class="stage"><div class="nm">Presentation · 12 sea animals</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Present with flashcards + chant (act. 2, CD2 36).</span> Each card: <span class="en">What's this? It's… a dolphin!</span> Choral ×3 + one gesture (shark = fin on head, octopus = wiggle 8 arms, crab = pinchers). Contrast held together: <span class="en">WHALE — the biggest! CRAB — small!</span></p><p><span class="ph">There's a / There are (act. 4-style).</span> Board frame over the big picture: <span class="en">There's a whale. There are two jellyfish.</span> Point to the aquarium scene — class makes the sentence; watch <i>fish → fish</i>.</p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if you can see this animal in the picture… a seahorse!</span> — flash cards fast, everyone moves every time.</p><p><span class="diff"><span class="sup">💪 Support:</span> answer with the gesture + word. <span class="ext">⭐ Extension:</span> full sentence — <span class="en">There's a very big shark. It's got sharp teeth!</span></span></p></td>
+        <td class="mat">12 sea-animal flashcards · board frame · PB p.50</td>
+      </tr>
+
+      <tr>
+        <td class="min">20–28′</td>
+        <td class="stage"><div class="nm">Song · Under the sea</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="en">To your tables! Open your books at page 50.</span> <span class="ph">Sing (act. 3, CD2 37).</span> Listen &amp; point to the animals in the big picture; 2nd run — sing with gestures.</p><p><span class="ph">Preview bigger than.</span> Read a song line: <span class="en">There's a very big shark…</span> then <span class="en">Is a shark bigger or smaller than a little fish? — Bigger!</span> Choral — plants L2's comparative. Freeze between verses.</p></td>
+        <td class="mat">Pupil's Book p.50 · CD2 37</td>
+      </tr>
+
+      <tr>
+        <td class="min">28–36′</td>
+        <td class="stage"><div class="nm">Word ↔ picture · Memory</div><div class="zone">carpet, pairs</div></td>
+        <td class="flow"><p><span class="game">▶ Memory · There's a … — in pairs.</span> Each pair: 6 picture cards + 6 WORD cards (readers!) face-down in two rows. Turn one of each; a match is claimed only with a sentence: <span class="en">There's a seahorse!</span> Wrong / no article → cards go back. Most pairs wins.</p><p><span class="ph">ICQ:</span> <span class="en">Can you keep the cards if you forget the “a”?</span> (→ no — There's A seahorse!)</p><p><p><span class="asr">✔ <b>Assess:</b> stand behind one pair at a time — is the animal word automatic yet?</span></p></p></td>
+        <td class="mat">6+6 sea-animal cards per pair</td>
+      </tr>
+
+      <tr>
+        <td class="min">36–44′</td>
+        <td class="stage"><div class="nm">Sea-creature mime &amp; guess</div><div class="zone">carpet, 2 teams</div></td>
+        <td class="flow"><p><span class="game">▶ Slow-motion sea mime.</span> One player mimes a sea animal (shark fin, octopus arms, crab claws); their team guesses together: <span class="en">It's a shark!</span> Mimer confirms. Point per correct guess; rotate the mimer every round — everyone mimes once.</p><p>Whole team must guess together — no solo shouting: <span class="en">One voice, one team!</span></p></td>
+        <td class="mat">sea-animal flashcards (prompt deck)</td>
+      </tr>
+
+      <tr>
+        <td class="min">44–52′</td>
+        <td class="stage"><div class="nm">Our aquarium · speak &amp; write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Speak.</span> <span class="game">▶ RallyRobin:</span> <span class="en">Take turns: There's a… / There are… — about the sea picture.</span></p><p><span class="ph">Write (notebooks / AB p.48 format).</span> Board frames: <i>There's a ___. There are ___.</i> Each child writes 3 true sentences about the underwater picture, copying animal words (watch <i>fish</i>!). Fast finishers add <i>It's got…</i>.</p><p><span class="diff"><span class="sup">💪 Support:</span> copy the frame + choose from 3 word cards. <span class="ext">⭐ Extension:</span> add a description: <i>There's a big whale. It's got a long body.</i></span></p></td>
+        <td class="mat">notebooks · board frames · PB p.50</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner two sea animals — with “There's a…” or “There are…”.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">Colour your progress card — I can name 12 sea animals! I can say There's a / There are!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, sea explorers! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show a sea-animal card at the door: <span class="en">What's this? Is it big or small?</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">sea-animal cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 48:</b> ex. 1 <i>Read and write. Order the letters to find the mystery word</i> (sea-animal crossword) + ex. 2 <i>Order and write the words. Count and write</i> (There are six fish / There's a crab…). <b>+ app trainer</b> — sea-animal words, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.48 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 5 “Under the sea” · Lesson 1 (Vocabulary · sea animals) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.50 (CD2 36–37) · Activity Book p.48 · КТП урок 34. Genki: «Under The Sea» (22) — тема морские животные (в КТП указан №21; в каталоге эта песня — №22).</span>
+  </div>
+</div>

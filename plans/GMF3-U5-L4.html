@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF3 · Unit 5 · Lesson 4 — Vocabulary &amp; Grammar (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 3 · Unit 5 “Under the sea” · Lesson 4 — Vocab &amp; Grammar · Describing animals</div>
+    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 18.01–24.01 · Lesson 37</span><span class="chip new">✨ NEW · 6 adjectives + prettier / more dangerous</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.54 · AB p.51</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>describe sea animals</b> with 6 adjectives and <b>make longer comparatives</b>: “A (shark) is (more dangerous) than a (seahorse). An (octopus) is (prettier) than a (whale).”</li><li><span class="lb">Subsidiary.</span> Sing «The sea animal rap» (CD2 44); discover TWO new rules — adjectives in <b>-y</b> take <b>-ier</b> (pretty → prettier), and LONG adjectives take <b>more</b> (dangerous → more dangerous); recycle the -er comparatives from L2; a real opinion game (AB follow-up).</li><li><span class="lb">Personal.</span> Two rules today — keep them on two coloured boards side by side (-ier · more). Model with height/face gestures; insist on <i>than</i>; keep the game moving — max 30 sec per partner.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name 6 adjectives (heavy · ugly · pretty · colourful · intelligent · dangerous);</li><li>make -ier comparatives (pretty → prettier, heavy → heavier);</li><li>use <i>more</i> with long words: “more dangerous / more colourful / more intelligent”.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">heavy</span><span class="w">ugly</span><span class="w">pretty</span><span class="w">colourful</span><span class="w">intelligent</span><span class="w">dangerous</span></div></div><div class="r"><div class="k">Structure</div><div>A (shark) is (more dangerous) than a (seahorse). &nbsp;·&nbsp; An (octopus) is (prettier) than a (whale). &nbsp;·&nbsp; A (dolphin) is (heavier) than a (seahorse).</div></div><div class="r"><div class="k">Form</div><div><b>-y → -ier</b>: pretty → prett<b>ier</b>, heavy → heav<b>ier</b>, ugly → ugl<b>ier</b>. <b>Long word → more</b>: dangerous → <b>more</b> dangerous, colourful → <b>more</b> colourful, intelligent → <b>more</b> intelligent. + <b>than</b>.</div></div><div class="r"><div class="k">Pron. watch</div><div>prettier /ˈprɪtiə/; heavier /ˈheviə/; intelligent /ɪnˈtelɪdʒənt/ (soft g); dangerous /ˈdeɪndʒərəs/; colourful /ˈkʌləfʊl/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“pretty → ? (it ends in -y!)” → prettier (y → ier).</div><div class="ccq">“dangerous is a LONG word — do I add -er or use <i>more</i>?” → more dangerous!</div><div class="ccq" style="margin-bottom:10px">“more prettier — right or wrong?” → wrong! Just prettier.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> 12 sea animals + the -er comparative are active from L1–L3. big/small/fast/slow/long carry over. The 6 adjectives are new; the split rule (-ier vs more) is the key challenge. Readers can read short adjective words. <i>(NB: КТП listed 10 adjectives — book's new set is these 6; the rest were the -er words from L2.)</i></p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td><i>more</i> + short/-y word (“more pretty / more big”)</td><td>Two-board contrast: -y words → -ier · long words → more; sort each adjective onto the right board first.</td></tr><tr><td>Doubling forgotten in -ier (“heavyer”)</td><td>Show the swap: heav<s>y</s> + <b>ier</b>; colour the change.</td></tr><tr><td><i>than</i> dropped again</td><td>Keep the [than] strip from L2 on the board; beat-echo the whole chunk.</td></tr><tr><td>Adjectives mispronounced (intelligent)</td><td>Clap the syllables; one action per adjective (dangerous = shark teeth, pretty = sparkle hands).</td></tr><tr><td>Opinion game = argument</td><td>It's opinion — both answers OK: “That's true / I think so too / I don't agree!”; keep it light.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Ready to describe some sea animals?</span> Mime: dangerous (teeth), pretty (sparkle), heavy (strain) — kids guess.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">L2 -er comparatives back.</span> Hold up two animal cards: <span class="en">Whale… fish? — A whale is bigger than a fish!</span> chorus. Then <span class="game">▶ Swat it!</span> — animal cards on the board, two flyswatters, you say an animal, racers swat; the class chorus-SPELLS the word during each race (everyone busy). 4 rounds, rotate racers.</p></td>
+        <td class="mat">animal cards · flyswatters · <span class="game">▶ Swat it!</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen — THE SEA ANIMAL RAP!</span> Play the rap (PB p.54, CD2 44) hook once; clap the beat → topic.</p></td>
+        <td class="mat"><b>«The sea animal rap»</b> (CD2 44)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–19′</td>
+        <td class="stage"><div class="nm">Presentation · adjectives + 2 rules</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Present (act. 1, CD2 43).</span> Icon cards: <span class="en">It's heavy! It's ugly! It's pretty! It's colourful! It's intelligent! It's dangerous!</span> Choral ×3 + one action each.</p><p><span class="ph">Two rule-boards.</span> Board A <b>-y → -ier</b> (pretty→prettier, heavy→heavier, ugly→uglier). Board B <b>more</b> (dangerous→more dangerous, colourful→more colourful, intelligent→more intelligent). Sort each adjective card onto the right board WITH the class.</p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if a shark is DANGEROUS!… if a seahorse is PRETTY!</span> — everyone reacts every time.</p><p><span class="diff"><span class="sup">💪 Support:</span> icon carries the meaning. <span class="ext">⭐ Extension:</span> read the adjective word without the icon.</span></p></td>
+        <td class="mat">6 adjective icon cards · 2 rule-boards · CD2 43</td>
+      </tr>
+
+      <tr>
+        <td class="min">19–27′</td>
+        <td class="stage"><div class="nm">Rap + grammar box</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Say the rap (act. 2, CD2 44).</span> PB p.54. First run listen &amp; point; second join in with the gestures.</p><p><span class="ph">Grammar box (act. 3, CD2 45).</span> Board: <i>An octopus is prettier than a whale. A jellyfish is more dangerous than a squid.</i> Grammar clue: <span class="en">-y becomes -ier. Long words take “more”. Never say “more prettier”!</span> Circle <b>-ier</b> and <b>more</b>.</p><p><span class="ph">ICQ:</span> <span class="en">“colourful” — colourfuler or more colourful?</span> (→ more colourful!)</p></td>
+        <td class="mat">Pupil's Book p.54 · CD2 44–45 · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">27–37′</td>
+        <td class="stage"><div class="nm">Opinion game · true or false</div><div class="zone">mingle → desks</div></td>
+        <td class="flow"><p><span class="ph">Model first.</span> Say a comparison, class judges: <span class="en">A jellyfish is more dangerous than a crab. — True or false?</span></p><p><span class="game">▶ Quiz-Quiz-Trade (act. 4-style).</span> Each child holds an animal-pair card + adjective. Music → mingle; off → pair: A <span class="en">A dolphin is more intelligent than a fish — true?</span> B answers <span class="en">That's true! / I don't think so.</span> TRADE cards, new partner. 5–6 exchanges.</p><p><p><span class="asr">✔ <b>Assess:</b> circulate — is it -ier for -y words and <b>more</b> for long words? Recast, note names.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> card shows the full sentence. <span class="ext">⭐ Extension:</span> add another comparison for the same pair.</span></p></td>
+        <td class="mat">animal-pair + adjective cards · music · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">37–46′</td>
+        <td class="stage"><div class="nm">Make true sentences · build</div><div class="zone">desks, 2 teams</div></td>
+        <td class="flow"><p><span class="ph">Showdown build.</span> Mini-whiteboards: you show two animals + an adjective (💡 pretty / dangerous / heavy) → all write the full comparison — <span class="en">A seahorse is prettier than a shark.</span> / <span class="en">A shark is more dangerous than a seahorse.</span> <span class="en">Show me!</span> Reveal together, self-check the rule. 5 rounds.</p><p><span class="ph">ICQ:</span> <span class="en">For “pretty” — do you write prettier or more pretty?</span> (→ prettier!)</p></td>
+        <td class="mat">mini-whiteboards · animal + adjective cards · <span class="game">▶ Showdown</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">46–52′</td>
+        <td class="stage"><div class="nm">Animal facts · write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Notebooks / AB p.51 format.</span> Board frame: <i>A ___ is ___er/more ___ than a ___.</i> Each child writes 3 true comparisons — at least one -ier and one <b>more</b>.</p><p><span class="diff"><span class="sup">💪 Support:</span> gapped frame + adjective word bank. <span class="ext">⭐ Extension:</span> write about non-sea animals too: <i>An elephant is heavier than a tiger.</i> (AB ex. 3)</span></p></td>
+        <td class="mat">notebooks · board frame</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Compare two animals for your partner — one with -ier, one with <i>more</i>!</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">Colour your progress card — I can describe animals and use prettier / more dangerous!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, animal experts! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show two cards + an adjective at the door: <span class="en">Make a true sentence!</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">animal + adjective cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 51:</b> ex. 1 <i>Look, read and circle</i> (adjective for each animal) + ex. 2 <i>Order the words in the grammar table. Write the sentences</i> + ex. 3 <i>Write true sentences about other animals</i> (tiger/elephant, dog/fish…). <b>+ app trainer</b> — adjectives + comparatives, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.51 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 5 “Under the sea” · Lesson 4 (Vocab &amp; Grammar · adjectives + comparatives -ier / more) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.54 (CD2 43–45) · Activity Book p.51 · КТП урок 37. Genki: «What Do You Think Of…?» (78) — прилагательные + мнение. NB: книга даёт 6 новых прилагательных + ДВЕ модели (-ier и more), а не только «more dangerous».</span>
+  </div>
+</div>

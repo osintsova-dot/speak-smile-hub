@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF3 · Unit 3 · Lesson 5 — Phonics · Culture · Literacy (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 3 · Unit 3 “Fit and healthy” · Lesson 5 — Phonics (k) · Malta · a quiz</div>
+    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 16.11–22.11 · Lesson 22</span><span class="chip new">✨ Sound /k/ (ch says k) · Malta · text type: a quiz</span><span class="chip">~10 pupils · pairs + teams</span><span class="chip">Pupil's Book pp.33–37 · AB pp.30–33</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>read &amp; say the /k/ sound</b> (pink chameleon headache · king · stomach ache — “sometimes ch says k”), <b>talk about sea animal rescue in Malta</b>, and <b>read &amp; plan a quiz</b> — three mini-blocks, one “fit &amp; healthy” thread.</li><li><span class="lb">Subsidiary.</span> Phonics: notice that <b>k</b> and <b>ch</b> can spell the same /k/ sound (recognise → say → sort); culture — sea animal rescue in Malta (turtles, divers, vets) + Channel 21 video, 21C: being fit &amp; healthy; literacy — text type <b>a quiz</b>, question marks, plan &amp; write a healthy-eating quiz.</li><li><span class="lb">Personal.</span> Three blocks — keep transitions crisp (chant/drum bridges); the chameleon twister is play; cap each block hard so the literacy plan actually gets written.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>say the pink-chameleon twister and sort ch / k words;</li><li>name how divers &amp; vets rescue turtles in Malta;</li><li>find the key features of a quiz and plan one with a partner.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">chameleon · headache · stomach ache · chemist's · school</span><span class="w">king · karate · kite · kiss · pink</span><span class="w">turtle · dolphin · diver · vet · rescue centre</span><span class="w">quiz · question mark · healthy diet</span></div></div><div class="r"><div class="k">Structure</div><div>The pin<b>k</b> <b>ch</b>ameleon's got a heada<b>ch</b>e and the <b>k</b>ing's got stoma<b>ch</b> a<b>ch</b>e. &nbsp;·&nbsp; Divers help the turtles. &nbsp;·&nbsp; quiz: How often do you eat fruit? Do you eat breakfast?</div></div><div class="r"><div class="k">Form</div><div>/k/ = <b>k</b> (king, kite, pink) AND <b>ch</b> (chameleon, headache, stomach, school, chemist). Quiz: a question at the start of each item + a <b>question mark ?</b> at the end.</div></div><div class="r"><div class="k">Pron. watch</div><div>/k/ clean in king / chameleon / stomach; contrast <b>ch</b> /k/ (school, ache) vs <b>ch</b> /tʃ/ (chips, lunch); Malta /ˈmɒltə/; turtle /ˈtɜːtl/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>king</i> and <i>ache</i> — same first/last SOUND /k/? Same letters?” → same sound, different letters (k vs ch)!</div><div class="ccq" style="margin-bottom:10px">“A quiz — one question or a long story? What goes at the end of a question?” → questions with a ? mark.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Health problems, habits and must/mustn't are active (L1–L4). Sound–letter awareness from earlier phonics is enough to enjoy the ch/k noticing (по учебнику). Pupils can read the short quiz items with support.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Twister said too fast → mush</td><td>Speed ladder: slow → normal → fast → whisper-fast; quality before speed.</td></tr><tr><td>ch not linked to /k/</td><td>Two hoops on the floor: <b>k</b>-hoop &amp; <b>ch-says-k</b>-hoop; pupils physically stand in the right hoop per word card.</td></tr><tr><td>Culture block = passive watching</td><td>Every photo/video clip gets a task: point, mime the rescue, thumbs if you'd help.</td></tr><tr><td>Quiz reading = word-by-word</td><td>Scavenger hunt: race to FIND the healthy answer (a) — reading with a purpose.</td></tr><tr><td>Three blocks overrun</td><td>Hard caps: 16′ + 14′ + 20′; visible timer; park extra AB pages for homework.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Today — a funny sound, a trip to Malta and a cool quiz. Ready?</span></p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–7′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ RallyRobin:</span> <span class="en">Take turns: You must… / You mustn't… — healthy rules!</span> Then a quick “Has he got…? / Does she feel…?” chorus — warms up health language for the quiz later.</p></td>
+        <td class="mat"><span class="game">▶ RallyRobin</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">7–23′</td>
+        <td class="stage"><div class="nm">Block 1 · Phonics /k/</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="ph">Speak and spell (act. 1, CD2 09).</span> PB p.33: <span class="en">Sometimes “ch” says “k”. The pink chameleon's got a headache and the king's got stomach ache!</span> Listen, then the speed ladder: slow → fast → whisper. Pairs test each other ×3.</p><p><span class="ph">Sort k / ch-says-k.</span> Two hoops/columns: <b>k</b> (king, kite, kiss, pink, karate) · <b>ch-says-k</b> (chameleon, headache, stomach, school, chemist). Hold up word cards — every child points/steps to the right hoop BEFORE you place each card.</p><p><span class="ph">Notice the rule.</span> <span class="en">Look — headache, stomach, school, chameleon… here “ch” says /k/, not /tʃ/!</span> (notice, don't lecture).</p><p><span class="diff"><span class="sup">💪 Support:</span> say the word, teacher shows the hoop. <span class="ext">⭐ Extension:</span> add one more /k/ word to a hoop (e.g. Christmas, cook).</span></p><p><p><span class="asr">✔ <b>Assess:</b> who still reads <b>ch</b> as /tʃ/ everywhere? Note them — extra RallyRead next unit.</span></p></p></td>
+        <td class="mat">Pupil's Book p.33 · CD2 09 · word cards · 2 hoops</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">23–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — fly to MALTA! People there rescue sea animals. Let's meet them!</span> Malta flag up (red-white), drum-roll on knees.</p></td>
+        <td class="mat">flag/photo · PB p.36</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–38′</td>
+        <td class="stage"><div class="nm">Block 2 · Culture · Malta</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read Luke's questions (act. 1).</span> <span class="en">How do divers help sea animals? Why do turtles need help? How do the vets help the turtles?</span> Guesses.</p><p><span class="ph">Read &amp; listen (act. 2, CD2 13).</span> PB p.36 «Animal Rescue» page: divers swim under water; turtles eat plastic bags &amp; get hurt by boats; vets wash them, give medicine, put them in a warm pool, then back to the sea in summer. Per step: point, name, MIME it on the spot (10-sec bursts — built-in stirrers). Answer Luke's questions.</p><p><span class="ph">Channel 21 video + being healthy (PB p.37).</span> Watch/discuss the healthy-activities clip: <span class="en">Which activities are healthy? Why? When you look after your body, you have more energy!</span> — hands, recast.</p><p><span class="ph">Think about your culture.</span> <span class="en">Do people help wild animals in OUR country? Which animals?</span> 3–4 hands.</p><p><p><span class="asr">✔ <b>Assess:</b> call a rescue step — pupils point to the right photo; who points late?</span></p></p></td>
+        <td class="mat">Pupil's Book pp.36–37 · CD2 13 · video</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">38–39′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Are YOU fit and healthy? Let's read a quiz and find out!</span> Point to the «Are you fit and healthy?» quiz.</p></td>
+        <td class="mat">PB p.34</td>
+      </tr>
+
+      <tr>
+        <td class="min">39–52′</td>
+        <td class="stage"><div class="nm">Block 3 · Literacy · a quiz</div><div class="zone">carpet → desks, pairs</div></td>
+        <td class="flow"><p><span class="ph">Before/After you read (act. 1–2, CD2 11).</span> PB p.34 «Are you fit and healthy?»: <span class="en">What must you do to be fit and healthy? What mustn't you do?</span> Read/listen — do the quiz with a partner, count the points.</p><p><span class="game">▶ Quiz scavenger hunt.</span> Race in pairs to find on the quiz: <span class="en">Which answer is worth 3 points? How many questions are there? What's at the end of each question?</span> First hands up read the answer aloud — everyone scans.</p><p><span class="ph">Investigate a text (PB p.35, CD2 12).</span> «Do you have a healthy diet?» quiz: find the title · three answers a/b/c · the points. Writing tip: <span class="en">We write a QUESTION MARK at the end of a question — Do you eat breakfast?</span></p><p><span class="game">▶ Plan a quiz (Cooperative learning, AB p.32 format).</span> Pairs plan a healthy-eating quiz: list <i>healthy</i> and <i>unhealthy</i> food, then write 2–3 questions (<i>How often do you…? Do you…?</i>) with a/b/c answers. 2 pairs share one question aloud.</p><p><span class="diff"><span class="sup">💪 Support:</span> fill the quiz template with word support. <span class="ext">⭐ Extension:</span> write the full quiz with a title + question marks.</span></p></td>
+        <td class="mat">Pupil's Book pp.34–35 · CD2 11–12 · quiz plan sheets</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Say the chameleon twister to your partner — fast! Then: how do the vets in Malta help turtles?</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">Colour your progress card — I can read the /k/ sound! I know about Malta! I can plan a quiz!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, quiz designers! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. At the door: a /k/ word (king/chameleon/stomach) OR <span class="en">How do divers help sea animals in Malta?</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 30</b> (Phonics): ex. 1 <i>Complete and say</i> (chameleon sentence) + ex. 2 <i>Find and circle the words. Classify ch / k</i> + ex. 3 <i>Talk Partners: test spelling</i>; <b>p. 31</b> (Reading): ex. 1 <i>Read and match</i> + ex. 2 <i>Read Emma's quiz answers. Count the points</i> + ex. 3 <i>Talk Partners: is your friend fit and healthy?</i>; <b>p. 32</b> (Writing): <i>Plan and write your quiz. Share and check</i>. По желанию: <b>p. 33</b> Malta web quest (ICT, со взрослым). <b>+ app trainer</b> — 5–7 min.</p></td>
+        <td class="mat">Activity Book pp.30–32 (+33) · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 3 “Fit and healthy” · Lesson 5 (Phonics /k/ · Culture Malta · Literacy quiz) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book pp.33–37 (CD2 09–13) · Activity Book pp.30–33 · КТП урок 22. Фоника — материал учебника (ch says k). Genki: «Doctor, Doctor!» (26) — рециклинг health для quiz-темы.</span>
+  </div>
+</div>
