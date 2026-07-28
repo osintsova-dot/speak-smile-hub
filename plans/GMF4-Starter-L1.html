@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 · Starter · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 4 · Starter “Welcome back, Luke!” · Lesson 1 — Vocabulary · Information about people</div>
+    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 03.09–06.09 · Lesson 1</span><span class="chip new">✨ FIRST LESSON of the year</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.4 · AB p.2</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>give information about other people</b> — “His name's (Luke). He's (23). He's a (scientist). He likes (travelling).” — and <b>ask the four 3rd-person questions</b>: “What's his/her name? How old is he/she? What does he/she do? What does he/she like doing?”</li><li><span class="lb">Subsidiary.</span> Meet the Level-4 characters again (Lily, Josh, Ravi &amp; big brother Luke); re-establish routines &amp; signals after the summer; sing «This is my best friend» (CD1 02); retrieve Level 3 vocabulary (sea animals · water sports · water-sports equipment · free-time activities · numbers · food · places) via the «Find and say» mind-map.</li><li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; re-train the signals patiently — this lesson sets the tone for the whole year. Give extra wait-time and picture support — Level-3 words are rusty after summer.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>ask &amp; answer the four 3rd-person questions about a person;</li><li>say 4 facts about someone (name · age · job · likes);</li><li>retrieve Level 3 vocabulary in 7 categories.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">name</span><span class="w">age</span><span class="w">job (scientist · doctor · teacher…)</span><span class="w">likes doing (travelling · swimming · taking photos)</span><span class="w">Level 3 review: sea animals · water sports · water-sports equipment · free-time activities · numbers · food · places</span></div></div><div class="r"><div class="k">Structure</div><div>What's his/her name? — His/Her name's (Luke). &nbsp;·&nbsp; How old is he/she? — He's (23). &nbsp;·&nbsp; What does he/she do? — He's a (scientist). &nbsp;·&nbsp; What does he/she like doing? — He likes (travelling).</div></div><div class="r"><div class="k">Form</div><div>Wh-word + <b>is</b> (name/age) OR <b>does</b> + he/she (job/likes)…? Answers: <b>His/Her name's</b> · <b>He's</b> + age/job · <b>He likes</b> + verb-<b>ing</b>. 3rd person <b>-s</b>: he like<b>s</b>, she do<b>es</b>.</div></div><div class="r"><div class="k">Pron. watch</div><div>scientist /ˈsaɪəntɪst/; contraction name's /neɪmz/; he's /hiːz/; -ing endings unstressed (tra-vel-ling).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>What does he do?</i> — do I answer with his age or his JOB?” → his job (He's a scientist).</div><div class="ccq" style="margin-bottom:10px">“<i>He likes travelling</i> — one person or many? Which word shows it?” → one person → like<b>s</b>.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Pupils finished GMF3 in May: Level 3 vocabulary (sea animals, water sports, food, places, numbers) is passive after the summer — plan extra recall time. 3rd-person questions existed receptively; production is the stretch. They read &amp; write short sentences (readers). Carpet &amp; team routines need re-training after the break.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Summer rust — Level 3 words “gone”</td><td>Retrieval before anything new: mind-map categories with picture support; accept the L3 word + recast.</td></tr><tr><td>“What does he do?” answered with age</td><td>Anchor gestures — briefcase for job, birthday cake for age; contrast-drill the two Qs side by side.</td></tr><tr><td>3rd-person <i>-s</i> dropped (“He like…”)</td><td>Board frame keeps the <b>-s</b> in a bright colour; echo-correct with a beat: <i>He — like — S</i>.</td></tr><tr><td>Routines forgotten after summer</td><td>Re-teach signals explicitly in Stage 2; praise fast reactions — make it a game.</td></tr><tr><td>New pupil / over-excitement (friends reunited)</td><td>Name tags for everyone; pair a new child with a confident buddy; mingle with a clear stop-signal.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Welcome back to Speak &amp; Smile! I'm so happy to see you!</span> Big smiles, high-fives at the door.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Routines reboot</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Signals training (make it a game).</span> <span class="en">When I say “Class?” — you say “Yes!” Let's try!</span> Drill Class?-Yes!, “WiFi” 🖐, Freeze!, countdown. Speed rounds — who reacts fastest?</p><p><span class="ph">Name tags.</span> Hand out card + marker: <span class="en">Write your name. Beautiful letters!</span> (1 min, countdown).</p><p><span class="game">▶ Stand up if…</span> — <span class="en">Stand up if you had a holiday! … if you can swim! … if you've got a brother or sister!</span> — every child moves, English switches on.</p></td>
+        <td class="mat">name cards · markers</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–17′</td>
+        <td class="stage"><div class="nm">Retrieval · Level 3 mind-map</div><div class="zone">carpet → desks, standing</div></td>
+        <td class="flow"><p><span class="ph">Category mingle (PB p.4 «Find and say»).</span> <span class="game">▶ Mix–Pair–Share:</span> music → <span class="en">Stand up, hand up, pair up!</span></p><p>R1: <span class="en">Tell your partner five SEA ANIMALS!</span> R2: <span class="en">Five WATER SPORTS and five foods!</span> R3: <span class="en">Five FREE-TIME activities and five places in a town!</span></p><p><span class="ph">Whole-class harvest (AB p.2 mind-map format).</span> Board split into category bubbles; teams call words, you write 2–3 per bubble — the “word wall” stays up all lesson.</p><p><p><span class="asr">✔ <b>Assess:</b> listen as you circulate — which categories are weakest? Give those extra recycling next lessons.</span></p></p></td>
+        <td class="mat">music · board “word wall” · <span class="game">▶ Mix-Pair-Share</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">17–19′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Three friends are waiting for someone at the harbour. Who is it? Listen!</span> Play «This is my best friend» (PB p.4, CD1 02) once through; pupils clap the beat → into the topic.</p></td>
+        <td class="mat"><b>«This is my best friend»</b> (CD1 02)</td>
+      </tr>
+
+      <tr>
+        <td class="min">19–29′</td>
+        <td class="stage"><div class="nm">PB p.4 · Meet the people</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="en">Open your books at page 4. Josh, Lily and Ravi are waiting for their big brother Luke.</span> <span class="ph">Listen &amp; read, act out (act. 2, CD1 01).</span> Point to each speech bubble: <span class="en">What's his name? — His name's Luke. How old is he? — He's 23. What does he do? — He's a scientist.</span></p><p><span class="ph">Form focus (board).</span> Write the four Qs &amp; answers; circle <b>is</b> (name/age) vs <b>does</b> (job/likes): <span class="en">How old IS he? What DOES he do?</span> and the 3rd-person <b>-s</b> in <i>likes</i>.</p><p><span class="ph">ICQ:</span> <span class="en">For “what does he do” — do I say his age or his JOB?</span> (→ his job!)</p></td>
+        <td class="mat">Pupil's Book p.4 · CD1 01 · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">29–37′</td>
+        <td class="stage"><div class="nm">Talk about my family</div><div class="zone">carpet, pairs</div></td>
+        <td class="flow"><p><span class="ph">Talk Partners (act. 4).</span> Model with a strong pupil about YOUR relative, then pairs ask &amp; answer about someone in their family: <span class="en">What's his name? How old is he? What does he do? What does he like doing?</span> Swap on your clap.</p><p><span class="ph">Sing (act. 3, CD1 02).</span> «This is my best friend» — listen &amp; point to each friend, then sing verse for one character with a gesture.</p><p><span class="diff"><span class="sup">💪 Support:</span> answer with 2 facts (name + age). <span class="ext">⭐ Extension:</span> add: <span class="en">He likes taking photos.</span> with the -s.</span></p></td>
+        <td class="mat">Pupil's Book p.4 · CD1 02</td>
+      </tr>
+
+      <tr>
+        <td class="min">37–46′</td>
+        <td class="stage"><div class="nm">Person-card carousel</div><div class="zone">mingle</div></td>
+        <td class="flow"><p><span class="game">▶ Quiz-Quiz-Trade.</span> Each child gets a person card (a made-up name · age · job · a “likes” picture). Music → mingle; music off → pair: A asks a 3rd-person question, B answers <i>as the card</i> — then swap, TRADE cards, new partner. 5–6 exchanges — everyone asks &amp; answers many times, no spectators.</p><p><span class="ph">Find-someone twist.</span> <span class="en">Find a card person who is a doctor! Find someone who likes swimming!</span></p><p><p><span class="asr">✔ <b>Assess:</b> stand in the flow — can they choose <b>is/does</b> correctly and keep the -s? Note names for tomorrow's recycling.</span></p></p></td>
+        <td class="mat">person cards · music · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">46–52′</td>
+        <td class="stage"><div class="nm">About someone · write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Notebooks / AB p.2 format.</span> Each child writes 4 sentences about a person (family member or a card person) from the board frame: <i>His name's ___. He's ___. He's a ___. He likes ___.</i> Fast finishers add where the person lives.</p><p><span class="diff"><span class="sup">💪 Support:</span> copy the frame, fill 4 gaps. <span class="ext">⭐ Extension:</span> add: <i>His favourite … is …</i></span></p></td>
+        <td class="mat">notebooks · board frames</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner three facts about a person — name, age, and what they do.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can give information about other people!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done today — welcome back to a new year! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. At the door, ask each child ONE question about a card person: <span class="en">What's his name? / What does she do? / What does he like doing?</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">person cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 2:</b> ex. 1 <i>Complete the mind map — write three words in each group</i> (sea animals · water sports · activities · food · numbers · sports equipment) + ex. 2 <i>Read and match</i> (questions ↔ answers about Josh &amp; Lily) + ex. 3 <i>Write about you</i> (name · age · where you live · birthday · what you like). <b>+ app trainer</b> — Level 3 review, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.2 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 4 · Starter “Welcome back, Luke!” · Lesson 1 (Vocabulary · information about people) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.4 (CD1 01–02) · Activity Book p.2 · КТП урок 1. Порядок по учебнику: p.4 (personal info) — L1, p.5 (descriptions) — L2 (КТП называет их наоборот; взят книжный порядок). Genki: «Genki Disco Warm Up» (warm-up) + «This is my best friend» (CD1 02, песня учебника).</span>
+  </div>
+</div>

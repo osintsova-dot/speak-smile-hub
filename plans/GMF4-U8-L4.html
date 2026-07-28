@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 · Unit 8 · Lesson 4 — Vocabulary &amp; Grammar (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 4 · Unit 8 “Jobs we do” · Lesson 4 — Vocab &amp; Grammar · Places of work</div>
+    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 05.04–11.04 · Lesson 58</span><span class="chip new">✨ NEW · 6 places of work + who / where</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.84 · AB p.83</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name places of work</b> and <b>define jobs &amp; places with relative clauses</b>: “A dentist is a person <b>who</b> works in a clinic. / A garage is a place <b>where</b> a mechanic works.”</li><li><span class="lb">Subsidiary.</span> Sing «In my street» (CD4 02); consolidate the “works in / works at” idea noticed in the story (L3) — now taught properly; discover the rule — <b>who</b> for people, <b>where</b> for places; match each of the 12 jobs to its workplace; a true/false relative-clause game (AB follow-up).</li><li><span class="lb">Personal.</span> Insist on the full relative clause (not just “dentist → clinic”); model each place with a picture &amp; the matching job; keep the game moving — short turns, everyone speaks.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name 6 places of work (clinic · salon · garage · factory · workshop · office);</li><li>make sentences with who (people) and where (places);</li><li>match jobs and workplaces and check them true/false.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">clinic</span><span class="w">salon</span><span class="w">garage</span><span class="w">factory</span><span class="w">workshop</span><span class="w">office</span><span class="w">(is a person who · is a place where)</span></div></div><div class="r"><div class="k">Structure</div><div>A dentist is a person who works in a clinic. &nbsp;·&nbsp; A garage is a place where a mechanic works. &nbsp;·&nbsp; A hairdresser is a person who works in a salon.</div></div><div class="r"><div class="k">Form</div><div><b>who</b> (people) + verb: <i>A dentist is a person <b>who</b> works in…</i> · <b>where</b> (places) + subject + verb: <i>A garage is a place <b>where</b> a mechanic works.</i></div></div><div class="r"><div class="k">Pron. watch</div><div>salon /ˈsælɒn/; garage /ˈɡærɑːʒ/ or /ˈɡærɪdʒ/; factory /ˈfæktri/ (2 syll.); clinic /ˈklɪnɪk/; the relative <i>who</i> /huː/ vs <i>where</i> /weə/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“A dentist is a person ___ works in a clinic — who or where?” → who (a dentist is a person).</div><div class="ccq" style="margin-bottom:10px">“A clinic is a place ___ a dentist works — who or where?” → where (a clinic is a place).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> “works in/at” was met in the story (L3); the 6 places are new but very picturable and pair 1-to-1 with known jobs. The switch to <b>who / where</b> relative clauses is the key challenge. Readers can read short place words. (Book teaches 6 places: clinic · salon · garage · factory · workshop · office — note КТП listed a different set.)</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>who / where swapped</td><td>Board frame: PERSON → <b>who</b> · PLACE → <b>where</b> in two bright colours; contrast-drill side by side.</td></tr><tr><td>Relative clause dropped to a label</td><td>Back-chain: <i>…in a clinic → works in a clinic → who works in a clinic → A dentist is a person who works in a clinic.</i></td></tr><tr><td>Places mispronounced (salon/garage)</td><td>Big picture per place; clap the syllables; mirror the mouth for /ʒ/ in garage.</td></tr><tr><td>True/false game gets wild</td><td>One pair models publicly first; Freeze!; a point only after the full corrected sentence.</td></tr><tr><td>Song lyrics too fast</td><td>First run listen &amp; do the job actions; second run join in on the place words only.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! A vet works at the aquarium. Where do OTHER people work? Let's find out!</span> Mime opening a shop door; kids guess a place.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Story + jobs back.</span> Flash story frames: <span class="en">What's Ravi's dad's job? Where does he work?</span> chorus. Then <span class="game">▶ Swat it!</span> — job cards on the board, two flyswatters, you give a clue, racers swat the job; the class chorus-says “Is it a …?” during each race (everyone busy). 4 rounds, rotate racers.</p></td>
+        <td class="mat">story frames · flyswatters · <span class="game">▶ Swat it!</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen — IN MY STREET! There's a dentist, a hairdresser, a mechanic… Where do they all work?</span> Play «In my street» (PB p.84, CD4 02) hook once → topic.</p></td>
+        <td class="mat"><b>«In my street»</b> (CD4 02)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–19′</td>
+        <td class="stage"><div class="nm">Presentation · 6 places of work</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Listen, point and say (act. 1, CD4 01).</span> Place cards: <span class="en">A clinic! A salon! A garage! A factory! A workshop! An office!</span> Choral ×3 + one gesture per place (clinic = check teeth, salon = snip, garage = fix, workshop = saw).</p><p><span class="game">▶ Take Off–Touch Down / job–place match.</span> <span class="en">Stand up if a MECHANIC works here… a garage! …a salon?</span> — everyone reacts; trick them with a fast one.</p><p><span class="ph">Notice who / where.</span> Board: <span class="en">A dentist is a person WHO works in a clinic. A clinic is a place WHERE a dentist works.</span> Circle <b>who</b> (people) &amp; <b>where</b> (places).</p><p><span class="diff"><span class="sup">💪 Support:</span> match the place to the job with a gesture. <span class="ext">⭐ Extension:</span> read the place word without the picture.</span></p></td>
+        <td class="mat">6 place cards · board · CD4 01</td>
+      </tr>
+
+      <tr>
+        <td class="min">19–27′</td>
+        <td class="stage"><div class="nm">Song + grammar box</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Sing (act. 2, CD4 02).</span> PB p.84 «In my street». First run listen &amp; do the job actions; second sing with the who/where lines (a dentist cleans &amp; brushes; a mechanic oils &amp; fixes; a carpenter saws &amp; builds).</p><p><span class="ph">Grammar box (act. 3, CD4 04).</span> Board: <i>A dentist / hairdresser / carpenter is a person <b>who</b> works in… · A garage / kitchen / office is a place <b>where</b> a mechanic / chef / lawyer works.</i> Grammar clue: <span class="en">We say WHO when we talk about people. We say WHERE when we talk about places.</span> Circle <b>who / where</b>.</p><p><span class="ph">ICQ:</span> <span class="en">“A salon is a place ___ a hairdresser works.” — who or where?</span> (→ where!)</p></td>
+        <td class="mat">Pupil's Book p.84 · CD4 02, 04 · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">27–37′</td>
+        <td class="stage"><div class="nm">Job–place match game</div><div class="zone">desks, pairs → 2 teams</div></td>
+        <td class="flow"><p><span class="ph">Model first.</span> Show a jumbled set of job cards + place cards. Ask 2 pupils publicly: <span class="en">Where does a carpenter work? — A carpenter is a person who works in a workshop.</span></p><p><span class="game">▶ Quiz-Quiz-Trade (jobs ↔ places).</span> Each child holds a job OR a place card; mingle → pair → make the who/where sentence, then TRADE. 5–6 exchanges, new partner every time.</p><p><span class="game">▶ Listen &amp; match (team relay).</span> You call a job — teams race to hold up the matching place card &amp; say the full sentence. Point per correct.</p><p><p><span class="asr">✔ <b>Assess:</b> circulate — is it who/where correct + full relative clause? Recast, note names.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> cards have the word printed + an icon. <span class="ext">⭐ Extension:</span> add: <span class="en">A dentist looks after your teeth.</span></span></p></td>
+        <td class="mat">job + place cards · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">37–46′</td>
+        <td class="stage"><div class="nm">True or false? · who / where</div><div class="zone">carpet, 2 teams</div></td>
+        <td class="flow"><p><span class="game">▶ True or false game (act. 4, Talk Partners → teams).</span> You (then a pupil) say a sentence — <span class="en">A dentist is a person who works in a salon.</span> — teams huddle 5 sec, then <span class="en">Show me!</span> thumbs up/down. If FALSE, they must say the correct sentence: <span class="en">A dentist is a person who works in a clinic!</span> Point per correct fix.</p><p><span class="ph">ICQ:</span> <span class="en">If it's false, do you just say “false” — or fix it?</span> (→ fix it with the full sentence!)</p></td>
+        <td class="mat">job + place cards · thumbs / mini-whiteboards</td>
+      </tr>
+
+      <tr>
+        <td class="min">46–52′</td>
+        <td class="stage"><div class="nm">Who / where · write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Notebooks / AB p.83 format.</span> Board frames: <i>A ___ is a person who works in a ___. A ___ is a place where a ___ works.</i> Each child writes 3 who-sentences &amp; 1 where-sentence.</p><p><span class="diff"><span class="sup">💪 Support:</span> gapped frames + job/place word bank. <span class="ext">⭐ Extension:</span> define your dream job with a who-sentence.</span></p></td>
+        <td class="mat">notebooks · board frames</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Say one who-sentence and one where-sentence to your partner — full relative clauses!</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can name places of work and use who / where!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, city planners! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show a job or place card at the door: <span class="en">A … is a person who … / A … is a place where …</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">job + place cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 83:</b> ex. 1 <i>Read the clues. Order and write</i> (unscramble the places: salon · workshop · office · garage · clinic) + ex. 2 <i>Order the words in the grammar table. Write the sentences</i> (A dentist is a person who works in a clinic… An office is a place where a lawyer works…). <b>+ app trainer</b> — places + who/where, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.83 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 8 “Jobs we do” · Lesson 4 (Vocab &amp; Grammar · places of work · relative clauses who/where) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.84 (CD4 01–04) · Activity Book p.83 · КТП урок 58. Учебник даёт 6 мест работы (clinic · salon · garage · factory · workshop · office) — взят книжный набор (КТП перечисляла surgery/fire station/court/studio/farm). Genki: «What Do You Want To Be?» — по теме профессий.</span>
+  </div>
+</div>

@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 · Unit 4 · Lesson 2 — Grammar (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 4 · Unit 4 “Lost in space” · Lesson 2 — Grammar · Superlatives (short adjectives)</div>
+    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 30.11–06.12 · Lesson 26</span><span class="chip new">✨ NEW · superlative -est</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.41 · AB p.39</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>form and use the superlative of short adjectives</b> to compare planets: “Jupiter is the <b>biggest</b> planet. Mercury is the <b>closest</b> planet to the Sun. Neptune is the <b>furthest</b> from the Sun.”</li><li><span class="lb">Subsidiary.</span> Understand Josh &amp; Ravi's dialogue about the solar-system model (CD2 18); discover the rules — add <b>-est</b> (small → smallest), <b>double the last letter</b> (big → biggest), <b>irregular</b> (good → best); use <i>the</i> before every superlative; recycle the 12 space words from L1; write true sentences about the planets (AB).</li><li><span class="lb">Personal.</span> Drill the spelling rules until they're automatic; keep <b>the</b> visible before every superlative; model the full sentence, accept short answers and recast. Make the planet facts real — biggest, hottest, coldest, furthest.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>add -est / double the letter / use best correctly;</li><li>always say “the” before the superlative;</li><li>make true superlative sentences about the planets.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">planets (revision)</span><span class="w">big → biggest · small → smallest · hot → hottest · cold → coldest · close → closest · far → furthest</span><span class="w">good → best · bad → worst</span></div></div><div class="r"><div class="k">Structure</div><div>Jupiter is the biggest planet. &nbsp;·&nbsp; Mercury is the closest planet to the Sun. &nbsp;·&nbsp; Neptune is the furthest planet from the Sun. &nbsp;·&nbsp; Earth is the best planet!</div></div><div class="r"><div class="k">Form</div><div>Short adj + <b>-est</b> (cold → coldest); <b>double</b> final consonant (big → biggest, hot → hottest); <b>irregular</b> good → best, bad → worst. Always <b>the</b> + superlative. <i>furthest</i> = far.</div></div><div class="r"><div class="k">Pron. watch</div><div>biggest /ˈbɪɡɪst/ (double g, one /ɡ/); hottest /ˈhɒtɪst/; furthest /ˈfɜːðɪst/; the /ðə/ weak before the superlative.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>big → big___</i> — one g or two?” → two! double the last letter → biggest.</div><div class="ccq" style="margin-bottom:10px">“<i>the</i> biggest or just biggest?” → THE — one winner, so we need <i>the</i>.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> 12 space words are fresh from L1 (checked in warm-up); planet order is on the board. Superlatives are largely NEW as production — pupils met comparatives in Level 3. They can read the dialogue speech bubbles &amp; the grammar table.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td><i>the</i> dropped (“Jupiter is biggest”)</td><td>Board frame keeps <b>the</b> in a bright colour; echo-correct with a beat: <i>Jupiter is — THE — biggest.</i></td></tr><tr><td>Spelling: forgets to double (bigest)</td><td>Two-colour rule box: big → big<b>g</b>est, hot → hot<b>t</b>est; clap the double letter.</td></tr><tr><td>Regular -est on good/bad</td><td>Anchor cards: good → best · bad → worst (irregular corner on the board).</td></tr><tr><td>Interview = same partner again</td><td>Trade planet-fact cards after each exchange (new partner every time).</td></tr><tr><td>Answers too short (“biggest”)</td><td>Recast to the full sentence with a “stretch it” gesture; frame on the board.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Quick — which is the BIGGEST planet? The HOTTEST?</span> Whip round the circle, one guess each.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">L1 space words back fast.</span> Flash the 12 cards: chorus + sort <i>There is / There are</i> with a hand signal (one finger vs open hand). Then <span class="game">▶ Sticky Fingers:</span> two players at the board, you say a space word, first to slap the right card wins — the REST chorus “There's a… / There are…” while they race (everyone busy). 4 rounds, rotate players.</p><p><span class="diff"><span class="sup">💪 Support:</span> racing pair gets the icon side. <span class="ext">⭐ Extension:</span> the rest add is/are correctly.</span></p></td>
+        <td class="mat">space flashcards on board · <span class="game">▶ Sticky Fingers</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Ravi made a model of the solar system with his dad. Which planet is the biggest? Listen!</span> Set the scene of the dialogue (PB p.41).</p></td>
+        <td class="mat">Pupil's Book p.41</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–19′</td>
+        <td class="stage"><div class="nm">Dialogue &amp; grammar clue</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Listen &amp; repeat, act out (act. 1, CD2 18).</span> Books open p.41. Play line by line; class echoes with feeling (Josh curious, Ravi the expert).</p><p><span class="ph">Read again (act. 2).</span> <span class="en">Which planets does Josh NOT know?</span> Pairs find them.</p><p><span class="ph">Grammar box (act. 3, CD2 19).</span> Board table: <i>Venus / Jupiter / Mercury / Neptune is the hottest / biggest / closest / furthest…</i> Grammar clue: <span class="en">Add -est to short adjectives. Double the last letter: big → biggest. Irregular: good → best, bad → worst.</span> Circle <b>the</b> + the <b>-est</b> ending.</p><p><span class="ph">ICQ:</span> <span class="en">“Jupiter is ___ big planet.” — the biggest or the bigest?</span> (→ the biggest — double the g!)</p></td>
+        <td class="mat">Pupil's Book p.41 · CD2 18–19 · board grammar box</td>
+      </tr>
+
+      <tr>
+        <td class="min">19–27′</td>
+        <td class="stage"><div class="nm">Tic-Tac-Toe · superlatives</div><div class="zone">desks, 2 teams</div></td>
+        <td class="flow"><p><span class="game">▶ Noughts &amp; Crosses — planet facts.</span> 3×3 grid of adjectives (big · hot · cold · close · far · small · good…). To claim a cell, the team makes a TRUE superlative sentence — <span class="en">Jupiter is the biggest planet.</span> The other team judges true/false with the fact strip. Rotate the speaker.</p><p><div class="ig">🎮 <b>Projector/board option:</b> draw the 3×3 adjective grid on the whiteboard; a rotating child taps the winning cell as the WHOLE team says the sentence aloud.</div></p><p><span class="ph">ICQ:</span> <span class="en">far — the farest or the furthest?</span> (→ the furthest!)</p></td>
+        <td class="mat">3×3 adjective grid (board) · planet fact strip</td>
+      </tr>
+
+      <tr>
+        <td class="min">27–37′</td>
+        <td class="stage"><div class="nm">Planet-facts info-gap</div><div class="zone">desks, pairs</div></td>
+        <td class="flow"><p><span class="ph">Model first.</span> Show two half fact-cards (A knows biggest &amp; hottest, B knows coldest &amp; closest). Model publicly: <span class="en">Which is the hottest planet? — Venus is the hottest planet.</span></p><p><span class="game">▶ Talk Partners info-gap (act. 4-style).</span> Pairs ask &amp; answer to complete the missing facts — <span class="en">Which is the coldest / furthest / smallest planet?</span> Both write full sentences. 5–6 exchanges.</p><p><p><span class="asr">✔ <b>Assess:</b> circulate with the class list — who forms -est + doubles + uses “the” unaided? Recast, note names.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> question stems + the on the half-sheet. <span class="ext">⭐ Extension:</span> add a second superlative fact of their own.</span></p></td>
+        <td class="mat">half fact-cards (info-gap) · <span class="game">▶ Talk Partners</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">37–46′</td>
+        <td class="stage"><div class="nm">Make it true · Showdown chain</div><div class="zone">carpet, circle</div></td>
+        <td class="flow"><p><span class="game">▶ Numbered Heads Showdown.</span> Teams numbered 1–4. You show a planet + an adjective card → teams huddle 10 sec; call a number — that child says the full superlative sentence. Point per correct (the + -est + spelling). The number is random — everyone must be ready.</p><p><span class="ph">ICQ:</span> <span class="en">Do you shout the answer or wait for your number?</span> (→ wait!)</p></td>
+        <td class="mat">planet + adjective cards · <span class="game">▶ Numbered Heads</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">46–52′</td>
+        <td class="stage"><div class="nm">About the planets · write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Notebooks / AB p.39 format.</span> Board frame: <i>___ is the ___est planet. ___ is the furthest from the Sun.</i> Each child writes 4 true superlative sentences (big/small/far/cold/hot).</p><p><span class="diff"><span class="sup">💪 Support:</span> gapped frame + adjective word bank. <span class="ext">⭐ Extension:</span> add an irregular one: <i>Earth is the best planet!</i></span></p></td>
+        <td class="mat">notebooks · board frame</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner two true facts — “___ is the ___est planet.”</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can use superlatives — the biggest, the closest!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, planet experts! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. At the door — one true superlative each from the planet deck: <span class="en">___ is the ___est planet.</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">planet cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 39:</b> ex. 1 <i>Complete the sentences in the grammar table</i> (Uranus… the coldest · Venus… the hottest · Jupiter · Neptune the furthest) + ex. 2 <i>Write about the planets</i> (big/small/far/cold/hot → superlatives). <b>+ app trainer</b> — superlatives -est, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.39 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 4 “Lost in space” · Lesson 2 (Grammar · superlative short adjectives) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.41 (CD2 18–19) · Activity Book p.39 · КТП урок 26. Грамматика по учебнику: superlative -est (double letter · good→best). Genki: «Better Than The Best Of The Best» (Hip Hop) — превосходная степень, точный матч на грамматику.</span>
+  </div>
+</div>

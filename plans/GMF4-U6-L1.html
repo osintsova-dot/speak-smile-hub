@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 · Unit 6 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 4 · Unit 6 “Marvellous machines” · Lesson 1 — Vocabulary · Machines in our houses</div>
+    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 01.02–07.02 · Lesson 41</span><span class="chip new">✨ NEW · 12 machines</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.60 · AB p.58</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 12 machines in the house</b> and <b>say where they are &amp; what we use them for</b>: “There's a (cooker) in the kitchen. We use it for (cooking food).” · “Have you got a (dishwasher)? — Yes, I have.”</li><li><span class="lb">Subsidiary.</span> Sing «Our house» (CD3 06) &amp; the vocabulary chant (CD3 05); brainstorm the machines at home (Learning to learn); recycle rooms of the house + prepositions of place (on · next to · between · under · in front of); ask about frequency — “How often do you use it?” (every day / once a week); early literacy — read machine words &amp; place them by room (AB).</li><li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; stirrer→settler rhythm — the memory game is high-energy, plan the freezes. Insist on the full frame (There's a … in the …. We use it for …-ing) and on <i>every day / once a week</i> for frequency.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name the 12 house machines;</li><li>say “There's a … in the …. We use it for …-ing.”;</li><li>ask “Have you got …? Where is it? How often do you use it?” and answer truthfully.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">washing machine</span><span class="w">dishwasher</span><span class="w">toaster</span><span class="w">cooker</span><span class="w">DVD player</span><span class="w">blender</span><span class="w">hairdryer</span><span class="w">printer</span><span class="w">microwave</span><span class="w">fridge</span><span class="w">tablet</span><span class="w">hoover</span></div></div><div class="r"><div class="k">Structure</div><div>There's a (fridge) in the kitchen. We use it for (keeping food cool). &nbsp;·&nbsp; Have you got a (dishwasher)? — Yes, I have. &nbsp;·&nbsp; Where is it? — It's in the kitchen. &nbsp;·&nbsp; How often do you use it? — I use it every day.</div></div><div class="r"><div class="k">Form</div><div><b>There's a</b> + machine + <b>in the</b> + room. <b>We use it for</b> + verb-<b>ing</b> (cooking / drying / washing). Question: <b>Have you got a …?</b> — Yes, I have / No, I haven't. Frequency: every day · once/twice a week · never.</div></div><div class="r"><div class="k">Pron. watch</div><div>microwave /ˈmaɪkrəweɪv/ (3 syll.); hoover /ˈhuːvə/; dishwasher /ˈdɪʃwɒʃə/; hairdryer /ˈheədraɪə/ (2 parts).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>fridge</i> — where do we keep it? What do we use it for?” → in the kitchen · keeping food cool.</div><div class="ccq" style="margin-bottom:10px">“<i>We use it for …</i> — cook or cooking?” → cook<b>ing</b> (verb + -ing after <i>for</i>).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Pupils know rooms of the house, prepositions of place &amp; there is/are from earlier levels (recycled in the warm-up); some machines are known (fridge, TV) but the 12-item set is largely NEW. <i>We use it for + -ing</i> is receptive — production is today's stretch. Readers — word cards work alongside pictures.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Room/machine mismatch (hairdryer → kitchen)</td><td>Board sorted by room (kitchen · bedroom · living room); place each card before the game.</td></tr><tr><td><i>for</i> + base verb (“for cook”)</td><td>Board frame keeps the <b>-ing</b> in a bright colour; echo-correct with a beat: <i>for — cook-ING</i>.</td></tr><tr><td>Long words (washing machine · microwave)</td><td>Chunk &amp; clap: WASH-ing ma-CHINE · MI-cro-wave; icon on every card.</td></tr><tr><td>Memory game gets wild</td><td>Slow-motion turns + Freeze!; one pair speaks at a time in the demo.</td></tr><tr><td>Some read word cards slowly</td><td>Icon on every card; pair a strong reader with a developing one in card games.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Welcome to a new unit — MARVELLOUS MACHINES! Which machines help you at home every day?</span> Mime pressing buttons; kids call out machines.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval + brainstorm</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Recycle rooms + prepositions, on-topic.</span> <span class="game">▶ Mix–Pair–Share:</span> music → <span class="en">Stand up, hand up, pair up!</span></p><p>R1 <span class="ph">rooms:</span> <span class="en">What rooms are in your house? What's in the kitchen?</span> R2 <span class="ph">brainstorm (act. 1):</span> <span class="en">Take turns — what machines are there in your house? Make a list! Where can you find each one? (Russian OK — we'll learn them in English today!)</span></p><p><p><span class="asr">✔ <b>Assess:</b> who still can't name a room / a preposition (in / on / next to)? Note names — recycle at Reflection.</span></p></p></td>
+        <td class="mat">music · <span class="game">▶ Mix-Pair-Share</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen — OUR HOUSE! It's full of machines, upstairs and downstairs!</span> Play the song (PB p.60, CD3 06) once through; pupils mime the machines → into the topic.</p></td>
+        <td class="mat"><b>«Our house»</b> (CD3 06)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–20′</td>
+        <td class="stage"><div class="nm">Presentation · 12 machines</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Present with flashcards + chant (act. 2, CD3 05).</span> Each card: <span class="en">What's this? It's a… fridge! toaster! hairdryer!</span> Choral ×3 + one gesture (hairdryer = dry hair, toaster = pop up, hoover = push &amp; hum).</p><p><span class="ph">Where + what for.</span> Board: three rooms — <b>kitchen</b> (fridge, cooker, dishwasher, blender, microwave, toaster) · <b>bedroom</b> (hairdryer) · <b>living room</b> (DVD player, tablet, printer). Hold each card — class says: <span class="en">There's a fridge in the kitchen. We use it for keeping food cool.</span></p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if this machine is in the KITCHEN… blender!</span> — flash cards fast, everyone reacts every time.</p><p><span class="diff"><span class="sup">💪 Support:</span> answer with the gesture + word. <span class="ext">⭐ Extension:</span> full frame — <span class="en">There's a blender in the kitchen. We use it for making cakes.</span></span></p></td>
+        <td class="mat">12 machine flashcards · board 3 rooms · CD3 05</td>
+      </tr>
+
+      <tr>
+        <td class="min">20–28′</td>
+        <td class="stage"><div class="nm">Song · Our house</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="en">To your tables! Open your books at page 60.</span> <span class="ph">Sing (act. 3, CD3 06).</span> Listen &amp; point to each machine in the house picture; 2nd run — sing with the machine gestures.</p><p><span class="ph">We use it for…</span> Read the song lines: <span class="en">There's a cooker in the kitchen. We use it for cooking food. There's a dishwasher in the kitchen. We use it for washing dirty plates.</span> Choral — plants the memory game. Freeze between verses.</p></td>
+        <td class="mat">Pupil's Book p.60 · CD3 06</td>
+      </tr>
+
+      <tr>
+        <td class="min">28–36′</td>
+        <td class="stage"><div class="nm">Have you got…? · memory game</div><div class="zone">carpet → desks, pairs</div></td>
+        <td class="flow"><p><span class="game">▶ Talk Partners (act. 4).</span> Pairs study the PB p.60 house picture 30 sec, then close books. A asks: <span class="en">Have you got a dishwasher? Where is it? How often do you use it?</span> B answers <span class="en">Yes, I have. It's in the kitchen. I use it every day.</span> Open to check. Swap. Point per full answer.</p><p><span class="ph">ICQ:</span> <span class="en">Do you answer with ONE word or a full sentence?</span> (→ full sentence!)</p><p><p><span class="asr">✔ <b>Assess:</b> stand behind one pair — is it the full frame + a real frequency word?</span></p></p></td>
+        <td class="mat">Pupil's Book p.60</td>
+      </tr>
+
+      <tr>
+        <td class="min">36–44′</td>
+        <td class="stage"><div class="nm">Machine trade</div><div class="zone">mingle</div></td>
+        <td class="flow"><p><span class="game">▶ Quiz-Quiz-Trade.</span> Each child holds a machine card. Music → mingle; off → pair: A shows the card, <span class="en">What's this? What do we use it for?</span> B answers <span class="en">It's a hoover. We use it for cleaning the floor.</span> then swap, TRADE cards, new partner. 5–6 exchanges — everyone speaks many times.</p><p>Whole-class check: <span class="en">Hands up if your machine is in the KITCHEN!</span></p></td>
+        <td class="mat">machine cards · music · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">44–52′</td>
+        <td class="stage"><div class="nm">Machines by room · write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Speak.</span> <span class="game">▶ RallyRobin:</span> <span class="en">Take turns: There's a … in the …. We use it for …-ing.</span> — machines you've got at home.</p><p><span class="ph">Write (notebooks / AB p.58 format).</span> Board frame: <i>There's a ___ in the ___. We use it for ___-ing.</i> Each child writes 3 sentences, one machine per room. Fast finishers add a frequency word.</p><p><span class="diff"><span class="sup">💪 Support:</span> copy the frame + choose from 3 word cards. <span class="ext">⭐ Extension:</span> add frequency: <i>I use it every day.</i></span></p></td>
+        <td class="mat">notebooks · board frame</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner two machines at home — with “There's a … We use it for …”.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can name 12 machines! I can say what we use them for!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, machine masters! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show a machine card at the door: <span class="en">What's this? What do we use it for?</span> → full answer. Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">machine cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 58:</b> ex. 1 <i>Look and complete the sentences</i> (prepositions of place — on / opposite / next to / between / under / in front of) + ex. 2 <i>What machines have you got in your house? How often do you use them?</i> (I've got a … I use it every day / once a week) + <i>Code!</i> (→ GO SAILING). <b>+ app trainer</b> — machine words, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.58 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 6 “Marvellous machines” · Lesson 1 (Vocabulary · machines in our houses) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.60 (CD3 05–06) · Activity Book p.58 · КТП урок 41. <b>Набор машин взят по учебнику</b> (washing machine · dishwasher · toaster · cooker · DVD player · blender · hairdryer · printer · microwave · fridge · tablet · hoover) — отличается от списка КТП (там kettle · vacuum cleaner). Grammar-in-context на p.60 = «There's a … We use it for …-ing» + «Have you got…?»; пассив «is/are used for» идёт в L2. Genki: «Our house»/«I Am A Robot» (42) — по теме.</span>
+  </div>
+</div>

@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 · Unit 6 · Lesson 4 — Vocabulary &amp; Grammar (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 4 · Unit 6 “Marvellous machines” · Lesson 4 — Vocab &amp; Grammar · Materials · made of</div>
+    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 15.02–21.02 · Lesson 44</span><span class="chip new">✨ NEW · 6 materials + is/are made of</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.64 · AB p.61</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name materials</b> and <b>say what things are made of</b>: “What's a (sweater) made of? — It's made of (wool). / What are (boots) made of? — They're made of (leather).”</li><li><span class="lb">Subsidiary.</span> Sing «What's it made of?» (CD3 13); consolidate <i>made of</i> noticed in the story (L3) — now taught properly; discover the rule — <b>It's</b> made of (one thing) · <b>They're</b> made of (plural things); recycle machines &amp; used for from L1–L2; a real guessing communication game (AB follow-up).</li><li><span class="lb">Personal.</span> Insist on <b>made of</b> + material (not just the material); model each material with a touch/feel gesture; keep the game moving — short turns, everyone guesses.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name 6 materials (wool · cotton · leather · plastic · gold · silver);</li><li>ask &amp; answer “What's it/are they made of?”;</li><li>choose It's (singular) vs They're (plural) correctly.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">wool</span><span class="w">cotton</span><span class="w">leather</span><span class="w">plastic</span><span class="w">gold</span><span class="w">silver</span><span class="w">(sweater · boots · bracelet · earrings · T-shirt · bottle)</span></div></div><div class="r"><div class="k">Structure</div><div>What's a sweater made of? — It's made of wool. &nbsp;·&nbsp; What are boots made of? — They're made of leather. &nbsp;·&nbsp; Earrings are made of silver. &nbsp;·&nbsp; A bottle is made of plastic.</div></div><div class="r"><div class="k">Form</div><div><b>It's made of</b> + material (one object) · <b>They're made of</b> + material (plural). Table: A sweater / bracelet / T-shirt <b>is</b> made of · Boots / earrings / bottles <b>are</b> made of.</div></div><div class="r"><div class="k">Pron. watch</div><div>wool /wʊl/ (short vowel); leather /ˈleðə/ (not “lee-ther”); plastic /ˈplæstɪk/; jewellery: gold /ɡəʊld/ · silver /ˈsɪlvə/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>a sweater</i> — It's or They're made of?” → It's (one).</div><div class="ccq" style="margin-bottom:10px">“<i>boots</i> — It's or They're made of?” → They're (two boots).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> <i>made of</i> was met in the story (L3); the 6 materials are new but very touchable (bring real objects if possible). The switch to It's/They're made of + choosing is/are is the key challenge. Readers can read short material words. (Book teaches 6: wool · cotton · leather · plastic · gold · silver — КТП listed a different set: metal · glass · wood · rubber.)</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>It's / They're chosen wrong</td><td>Two board columns — ONE object (It's) vs a PAIR/plural (They're); sort each card before playing.</td></tr><tr><td><i>of</i> dropped (“made wool”)</td><td>Board frame keeps <b>made OF</b> bright; back-chain: <i>wool → of wool → made of wool.</i></td></tr><tr><td>Materials mispronounced (leather/wool)</td><td>Touch-and-say: feel a woolly jumper, a leather shoe; mirror the mouth for /ð/ in leather.</td></tr><tr><td>Guessing game gets wild</td><td>One guesser at a time in the demo; Freeze! + slow-motion reveals.</td></tr><tr><td>Song lyrics too fast</td><td>First run listen &amp; touch the material; second run join in on “It's made of…”.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Touch your clothes — what are they made of? Wool? Cotton?</span> Kids feel a sleeve; call out guesses.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Machines + used for back.</span> Flash machine cards: <span class="en">A blender — what's it used for?</span> chorus. Then <span class="game">▶ Swat it!</span> — machine cards on the board, two flyswatters, you call a job, racers swat; the class chorus-says <span class="en">It's used for …-ing!</span> during each race (everyone busy). 4 rounds, rotate racers.</p></td>
+        <td class="mat">machine cards · flyswatters · <span class="game">▶ Swat it!</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen — WHAT'S IT MADE OF? A shiny bracelet, a warm sweater, soft boots…</span> Play «What's it made of?» (PB p.64, CD3 13) hook once; do the touch gestures → topic.</p></td>
+        <td class="mat"><b>«What's it made of?»</b> (CD3 13)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–19′</td>
+        <td class="stage"><div class="nm">Presentation · 6 materials</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Listen, point and say (act. 1, CD3 12).</span> Material cards/objects: <span class="en">Wool! Cotton! Leather! Plastic! Gold! Silver!</span> Choral ×3 + a touch gesture each (wool = soft, gold = shiny). Speed rounds — you show, they name.</p><p><span class="game">▶ Take Off–Touch Down.</span> <span class="en">Stand up if this is METAL you can wear… gold! …wool?</span> — everyone reacts every time; trick them with a fast one.</p><p><span class="ph">Notice made of.</span> Board: <span class="en">What's a sweater made of? — It's made of wool.</span> Circle <b>made of</b> + the material.</p><p><span class="diff"><span class="sup">💪 Support:</span> say the material with the touch gesture. <span class="ext">⭐ Extension:</span> read the material word without the picture.</span></p></td>
+        <td class="mat">6 material cards / real objects · board · CD3 12</td>
+      </tr>
+
+      <tr>
+        <td class="min">19–27′</td>
+        <td class="stage"><div class="nm">Song + grammar box</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Sing (act. 2, CD3 13).</span> PB p.64 «What's it made of?». First run listen &amp; touch the material; second sing with the gestures (shiny bracelet, warm sweater, soft boots).</p><p><span class="ph">Grammar box (act. 3, CD3 14).</span> Board table: <b>A sweater / A bracelet / A T-shirt + is</b> made of… · <b>Boots / Earrings / Bottles + are</b> made of… Grammar clue: <span class="en">What's a sweater made of? It's made of wool. What are boots made of? They're made of leather.</span> Circle <b>is / are</b>.</p><p><span class="ph">ICQ:</span> <span class="en">“What ___ boots made of?” — is or are?</span> (→ are!)</p></td>
+        <td class="mat">Pupil's Book p.64 · CD3 13–14 · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">27–37′</td>
+        <td class="stage"><div class="nm">Guess &amp; make true sentences</div><div class="zone">desks, pairs → 2 teams</div></td>
+        <td class="flow"><p><span class="ph">Model first.</span> Show an object card, hide it: <span class="en">It's made of wool. Is it a sweater? — Yes, it is!</span></p><p><span class="game">▶ Talk Partners (act. 4).</span> Pairs make true sentences: A says <span class="en">It's made of wool.</span> B guesses <span class="en">Is it a sweater? — Yes, it is / No, it isn't. Try again!</span> Swap. Both write one sentence.</p><p><span class="game">▶ Noughts &amp; Crosses — materials (2 teams).</span> 3×3 grid of object pictures. To claim a cell, the team ASKS — <span class="en">What are the earrings made of?</span> — the other team answers <span class="en">They're made of silver!</span> Both sides speak every turn. Rotate the asker.</p><p><p><span class="asr">✔ <b>Assess:</b> circulate — is it “made of” + is/are correct? Recast, note names.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> object cards have the material printed. <span class="ext">⭐ Extension:</span> add: <span class="en">My … is made of … and it's very ….</span></span></p></td>
+        <td class="mat">object cards · 3×3 grid (board) · <span class="game">▶ Talk Partners</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">37–46′</td>
+        <td class="stage"><div class="nm">What are they made of? · build</div><div class="zone">desks, 2 teams</div></td>
+        <td class="flow"><p><span class="ph">Make true sentences (Showdown).</span> Mini-whiteboards: you show an object (sweater / boots / bottle) + a material card → all write <i>It's made of wool.</i> / <i>They're made of leather.</i> — <span class="en">Show me!</span> Reveal together, self-check is/are + of. 5 rounds.</p><p><span class="ph">ICQ:</span> <span class="en">With “earrings” — is or are made of?</span> (→ are!)</p></td>
+        <td class="mat">mini-whiteboards · object + material cards · <span class="game">▶ Showdown</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">46–52′</td>
+        <td class="stage"><div class="nm">What I'm wearing · write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Notebooks / AB p.61 format.</span> Board frame: <i>My ___ is made of ___. My ___ are made of ___.</i> Each child writes 3 sentences about their own clothes/things.</p><p><span class="diff"><span class="sup">💪 Support:</span> gapped frame + material word bank. <span class="ext">⭐ Extension:</span> add a What's it/are they made of? question for a partner.</span></p></td>
+        <td class="mat">notebooks · board frame</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Ask your partner: “What's your …. made of?” — full answer with It's / They're made of!</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can name materials and say what things are made of!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, material detectives! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show an object card at the door: <span class="en">What's it / What are they made of?</span> → <span class="en">It's / They're made of ….</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">object cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 61:</b> ex. 1 <i>Read and write. Match</i> (earrings / bracelet / boots / T-shirt / bottle / sweater + material) + ex. 2 <i>Order the words in the grammar table. Write the sentences</i> (Boots are made of leather…) + ex. 3 <i>Talk Partners: Write sentences about your clothes. Ask and answer</i> + <i>Code!</i> (→ GO SHOPPING). <b>+ app trainer</b> — materials + made of, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.61 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 6 “Marvellous machines” · Lesson 4 (Vocab &amp; Grammar · materials · made of) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.64 (CD3 12–14) · Activity Book p.61 · КТП урок 44. <b>Учебник даёт 6 материалов</b> (wool · cotton · leather · plastic · gold · silver) — взят книжный набор (КТП перечисляла metal · glass · wood · rubber). Genki: «I Am A Robot» (42) / «What's it made of?» (unit song) — по теме.</span>
+  </div>
+</div>

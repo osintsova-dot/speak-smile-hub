@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 · Unit 2 · Lesson 5 — Phonics · Culture · Literacy (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 4 · Unit 2 “What are you like?” · Lesson 5 — Phonics (y / ey) · Hawaii · a biography</div>
+    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 19.10–25.10 · Lesson 15</span><span class="chip new">✨ Sound /iː/ (y · ey) · Famous Hawaiian people · text type: a biography</span><span class="chip">~10 pupils · pairs + teams</span><span class="chip">Pupil's Book pp.23–27 · AB pp.20–23</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>read &amp; say the /iː/ sound</b> spelt <b>y</b> and <b>ey</b> (happy · very · monkey · chimney · key), <b>talk about famous Hawaiian people</b>, and <b>read &amp; plan a biography / autobiography</b> — three mini-blocks, one “people &amp; the past” thread.</li><li><span class="lb">Subsidiary.</span> Phonics: notice that <b>y</b> and <b>ey</b> can both spell /iː/ (recognise → say → sort, next to ee &amp; ea); culture — famous Hawaiian people (Obama · Kamehameha · Onizuka · Bruno Mars) + Channel 21 “heroes” video, 21C: researching information &amp; planning a presentation; literacy — text type <b>a biography / autobiography</b> (chronological order, inverted commas), plan &amp; write your own.</li><li><span class="lb">Personal.</span> Three blocks — keep transitions crisp (chant/action bridges); the spelling “cross the river” is play; cap each block hard so the autobiography actually gets planned.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>say the /iː/ words and sort y / ey spellings;</li><li>name 2–3 famous Hawaiian people and say why they're famous;</li><li>find the parts of a biography and plan an autobiography with a partner.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">happy · very · noisy · lazy · lorry (y) · monkey · donkey · key · chimney (ey)</span><span class="w">Hawaii · president · king · astronaut · hero · famous</span><span class="w">biography · autobiography · born · chronological order · inverted commas · First/Then/Finally</span></div></div><div class="r"><div class="k">Structure</div><div>How do you spell chimney? — C-H-I-M-N-E-Y. &nbsp;·&nbsp; Barack Obama was born in Hawaii. &nbsp;·&nbsp; biography: He was born in… When he was young… Then… Finally…</div></div><div class="r"><div class="k">Form</div><div>/iː/ = <b>y</b> (happy, very, noisy, lazy, lorry) AND <b>ey</b> (monkey, donkey, key, chimney) — (also ee, ea). Biography layout: born → childhood → achievements, chronological, past simple, inverted commas for speech.</div></div><div class="r"><div class="k">Pron. watch</div><div>/iː/ clean in happy/key/chimney; Hawaii /həˈwaɪiː/; Onizuka /ˌɒnɪˈzuːkə/; biography /baɪˈɒɡrəfi/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>happy</i> and <i>key</i> — same /iː/ sound? Same letters?” → same sound, different spelling (y vs ey)!</div><div class="ccq" style="margin-bottom:10px">“A biography — the events in ANY order or in ORDER?” → in order — born first, then… Finally.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Character adjectives, was/were, past activities &amp; when-I-was are active (L1–L4). Sound–letter awareness from GMF3 phonics is enough to enjoy the y / ey noticing (по учебнику). Pupils can read the short biography with support.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>y read as /aɪ/ not /iː/ (why vs happy)</td><td>Contrast pair on the board: fl-Y /aɪ/ vs happ-Y /iː/; today's job = the /iː/ words at word-end.</td></tr><tr><td>y / ey not linked to /iː/</td><td>Two hoops on the floor: y-hoop (happy, very, lazy) &amp; ey-hoop (monkey, key, chimney); pupils physically stand in the right hoop per word card (+ spare ee / ea hoops).</td></tr><tr><td>Culture block = passive watching</td><td>Every photo/video clip gets a task: point, name the person, thumbs for the most surprising fact.</td></tr><tr><td>Biography reading = word-by-word</td><td>Scavenger hunt: race to FIND one part (Where born? What was he good at? What did he write?) — reading with a purpose.</td></tr><tr><td>Three blocks overrun</td><td>Hard caps: 16′ + 14′ + 20′; visible timer; park extra AB pages for homework.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Today — a funny sound, a trip to Hawaii and a real biography. Ready?</span></p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–7′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ RallyRobin:</span> <span class="en">Take turns: what did you do when you were young? — I learnt / I got / I went…, full past sentences!</span> Then a quick “I was… / I wasn't…” chorus — warms up past language for the biography later.</p></td>
+        <td class="mat"><span class="game">▶ RallyRobin</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">7–23′</td>
+        <td class="stage"><div class="nm">Block 1 · Phonics /iː/ (y · ey)</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="ph">Speak and spell (act. 1, PB p.23 · CD1 39-area).</span> Listen &amp; say: <span class="en">happy · very · noisy · monkey · donkey · key · lorry · chimney.</span> Speed ladder: slow → fast → whisper. Pairs test each other ×3.</p><p><span class="ph">Sort the /iː/ spellings.</span> Hoops/columns: <b>y</b> (happy, very, lazy, lorry) · <b>ey</b> (monkey, donkey, key, chimney) · (spares: ee — bee · ea — sea). Hold up word cards — every child points/steps to the right hoop BEFORE you place each card.</p><p><span class="ph">Notice the rule.</span> <span class="en">Happy and key — same sound /iː/, different letters! y at the end and ey both say /iː/.</span> (notice, don't lecture — and beware: fly says /aɪ/!).</p><p><span class="diff"><span class="sup">💪 Support:</span> say the word, teacher shows the hoop. <span class="ext">⭐ Extension:</span> add one more /iː/ word to a hoop (party, money).</span></p><p><p><span class="asr">✔ <b>Assess:</b> who still reads word-final y as /aɪ/? Note them — extra RallyRead next unit.</span></p></p></td>
+        <td class="mat">Pupil's Book p.23 · CD1 39 · word cards · hoops</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">23–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — fly to HAWAII! Sun, beaches, and famous people! Luke is there right now.</span> Beach photo up, ukulele-strum mime.</p></td>
+        <td class="mat">PB p.26 photo</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–38′</td>
+        <td class="stage"><div class="nm">Block 2 · Culture · Famous Hawaiian people</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read Luke's questions (act. 1, PB p.26).</span> <span class="en">Which President of the USA was born in Hawaii? Who was the first king of Hawaii? What was Ellison Onizuka's job? What's Bruno Mars' real name?</span> Guesses.</p><p><span class="ph">Read &amp; listen (act. 2, CD1 42).</span> PB p.26 «Hawaiian people»: Barack Obama (born in Hawaii), King Kamehameha (first king), Ellison Onizuka (astronaut), Bruno Mars (singer, real name Peter Gene Hernandez). Per person: point, name, thumbs for the most surprising fact. Answer Luke's questions.</p><p><span class="ph">Channel 21 video + 21C (PB p.27).</span> Watch the “heroes” clip: <span class="en">Why are these people heroes? When did Andy Murray start playing tennis? When was Emma Watson born?</span> Then <span class="game">▶ Teamwork (groups):</span> choose a hero to present &amp; note two facts — <span class="en">You need to research, take turns and plan together.</span></p><p><span class="ph">Think about your culture.</span> <span class="en">Who is a famous person from OUR country? When were they born?</span> 3–4 hands.</p><p><p><span class="asr">✔ <b>Assess:</b> call a name — pupils point to the right photo; who points late?</span></p></p></td>
+        <td class="mat">Pupil's Book pp.26–27 · CD1 42 · video</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">38–39′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Famous people have BIOGRAPHIES. Let's read one — about Roald Dahl, the writer!</span> Point to the biography photo.</p></td>
+        <td class="mat">PB p.24</td>
+      </tr>
+
+      <tr>
+        <td class="min">39–52′</td>
+        <td class="stage"><div class="nm">Block 3 · Literacy · a biography</div><div class="zone">carpet → desks, pairs</div></td>
+        <td class="flow"><p><span class="ph">Read a biography (PB p.24, act. 1–3, CD1 40).</span> «Roald Dahl»: <span class="en">Where was he born? What was he good at? What was his first children's book?</span> Read/listen; find the order — born → childhood → books.</p><p><span class="game">▶ Biography scavenger hunt.</span> Race in pairs to find on PB p.24: <span class="en">When was he born? What did he hide in the garden? What did he love?</span> First hands up read the answer aloud — everyone scans.</p><p><span class="ph">Writing tip (PB p.25 · Writing).</span> <span class="en">A biography is in ORDER: born first, then childhood, then… Use inverted commas for what people said!</span> Chorus the sequencers (First · Then · After that · Finally) with finger-counting.</p><p><span class="game">▶ Plan an autobiography (Cooperative learning, AB p.22 format).</span> Pairs make notes about THEMSELVES: <i>Born · When I was young · Things I learnt · Now.</i> 2 pairs share one line aloud.</p><p><span class="diff"><span class="sup">💪 Support:</span> fill the plan template with word/verb support. <span class="ext">⭐ Extension:</span> write the full autobiography with all sequencers + one inverted-comma quote.</span></p></td>
+        <td class="mat">Pupil's Book pp.24–25 · CD1 40 · autobiography plan sheets</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Say three /iː/ words to your partner — y and ey! Then: which famous Hawaiian person surprised you?</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can read the /iː/ sound! I know famous Hawaiians! I can plan a biography!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, biographers! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. At the door: a /iː/ word (happy / key / chimney) OR <span class="en">name a famous Hawaiian person!</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 20</b> (Phonics): ex. 1 <i>Think, say and write</i> (sort y / ey / ee / ea) + ex. 2 <i>Talk Partners: cross the river (spell words)</i> + <i>Code!</i> (759–849–311–153–715 → SUGAR); <b>p. 21</b> (Reading): ex. 1 <i>Read and circle</i> (Roald Dahl biography) + ex. 2 <i>Write the past of these verbs</i>; <b>p. 22</b> (Writing): <i>Plan and write your autobiography. Share and check</i>. По желанию: <b>p. 23</b> Hawaii web quest (ICT, со взрослым) + <b>p. 25</b> planning a presentation. <b>+ app trainer</b> — 5–7 min.</p></td>
+        <td class="mat">Activity Book pp.20–22 (+23, 25) · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 2 “What are you like?” · Lesson 5 (Phonics /iː/ y·ey · Culture Hawaii · Literacy biography) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book pp.23–27 (CD1 39–42) · Activity Book pp.20–23 (+25) · КТП урок 15. Фоника — материал учебника (y / ey для /iː/, рядом ee · ea). Литература — biography/autobiography (не «recipe»). Genki: «I'm A Superhero! I Can…» (05) — герои, по теме 21C-видео.</span>
+  </div>
+</div>

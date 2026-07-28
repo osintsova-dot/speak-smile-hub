@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 · Unit 5 · Lesson 3 — Story (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 4 · Unit 5 “Let's have fun!” · Lesson 3 — Story «The rainy day»</div>
+    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 18.01–24.01 · Lesson 36</span><span class="chip new">✨ NEW · Do you want to…? / I'd rather… · being creative</span><span class="chip">~10 pupils · groups of 4</span><span class="chip">Pupil's Book pp.52–53 · AB p.50</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>follow, read and act out</b> the story «The rainy day» and <b>talk about what to do on a rainy day</b>: “If it's wet, we can't ride our bikes. — Let's play the musical instruments!”</li><li><span class="lb">Subsidiary.</span> Value — <b>being creative with your time</b> (the children invent a water xylophone and make a music video); break Luke's code (→ DIDGERIDOO — a bridge to the New Zealand Culture block in L5); recycle conditional-with-can from L2; meet the story language <b>Do you want to…? / I'd rather…</b> (drilled properly in L4); story skills — predict → listen → read → Read &amp; answer → act out.</li><li><span class="lb">Personal.</span> Let the story breathe — big voices, pauses, prediction; the “I'd rather” idea is NOTICED today, drilled in L4 — don't over-correct. Give every child a story role.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>retell 2–3 things that happen in the story;</li><li>read their role's lines from the book;</li><li>answer comprehension questions: “They make a water xylophone.”</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">free-time activities (revision)</span><span class="w">musical instruments (preview): keyboard · drums · tambourine · xylophone · electric guitar</span><span class="w">lighthouse · curtains · music video · water xylophone</span><span class="w">be creative · Never mind · dangerous</span></div></div><div class="r"><div class="k">Structure</div><div>If it's wet, we can't ride our mountain bikes. &nbsp;·&nbsp; Do you want to play the tambourine? — No. I'd rather play the drums. &nbsp;·&nbsp; <i>answer:</i> They make a water xylophone.</div></div><div class="r"><div class="k">Form</div><div>conditional-with-can in context (If it's wet, we can't…); <i>Do you want to…?</i> + <i>I'd rather…</i> (recycled &amp; drilled in L4).</div></div><div class="r"><div class="k">Pron. watch</div><div>xylophone /ˈzaɪləfəʊn/ (starts /z/!); tambourine /ˌtæmbəˈriːn/; lighthouse /ˈlaɪthaʊs/; I'd rather /aɪd ˈrɑːðə/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“Can they ride their mountain bikes? Why not?” → no — it's raining, it's wet.</div><div class="ccq" style="margin-bottom:10px">“Are the children bored, or creative with their time?” → creative — they make instruments and a video!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Conditional-with-can is active from L2; the number-code was learnt in the Starter (recycled in act 5). Readers follow the text with a finger. The act-out routine was modelled earlier in the year.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Story audio too fast for some</td><td>Second listening with pauses per frame; readers follow the text with a finger.</td></tr><tr><td>“I'd rather” + wrong form</td><td>Notice-and-mark when it sounds — no lecture; it's drilled properly in L4.</td></tr><tr><td>Read &amp; answer — one-word replies</td><td>Model the full answer: <i>They make a water xylophone.</i>; sentence frame stays up.</td></tr><tr><td>Acting groups off-task</td><td>Roles printed (Josh · Lily · Ravi · narrator); strongest reader leads; rotate once only.</td></tr><tr><td>Code too hard</td><td>Solve the first two letters together; give the code key card — it's a warm hook, not a test.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! It's raining and the children can't ride their bikes. What can they do instead? Let's find out!</span> Drum a rain rhythm on knees.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval + predict</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Recycle L2 conditional.</span> <span class="game">▶ RallyRobin:</span> <span class="en">Take turns — If it's raining, we can/can't…? — 3 sentences each, full answers.</span></p><p><span class="ph">Before you read (act. 1–2).</span> <span class="en">Read the title — “The rainy day”. What activities can the children do if it's raining?</span> — 2–3 guesses.</p></td>
+        <td class="mat">weather + activity cards · board · <span class="game">▶ RallyRobin</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">First — a secret message from Luke! Crack the code!</span> Show the code (PB p.52).</p></td>
+        <td class="mat">Pupil's Book p.52 (code)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–20′</td>
+        <td class="stage"><div class="nm">Story · listen &amp; read</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Break Luke's code (act. 1).</span> Luke's message: <span class="en">When I was in Australia, I bought a … I'm learning to play it!</span> Decode 231-389-231-311-245-715-389-231-637-637 with the key → <span class="en">DIDGERIDOO!</span> <span class="en">An instrument from Australia — we'll meet it again in our New Zealand lesson!</span></p><p><span class="ph">Listen 1 — gist (CD2 37, books closed).</span> <span class="en">Listen: what do the children do on the rainy day?</span> → they play musical instruments and make a music video!</p><p><span class="ph">Listen 2 — read along (books open pp.52–53).</span> Finger under the text. Pause per frame: <span class="en">If it's wet, we can't ride our mountain bikes. … Let's play the musical instruments! … Do you want to play the tambourine? — No. I'd rather play the drums.</span></p><p><span class="ph">Values (act. 4, whole class).</span> <span class="en">Are the children disappointed? Are they creative with their time? What can YOU do if it's raining?</span> 3–4 hands, recast key words.</p></td>
+        <td class="mat">Pupil's Book pp.52–53 · CD2 37 · code key</td>
+      </tr>
+
+      <tr>
+        <td class="min">20–28′</td>
+        <td class="stage"><div class="nm">Read &amp; answer · comprehension</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="ph">Read and answer (act. 3, Talk Partners).</span> Questions: <span class="en">Can they ride their mountain bikes? Why? What do the children decide to do? What does Lily play at school? How do they make the xylophone? Who do they send a video to?</span> Pairs answer in full: <span class="en">They make a water xylophone.</span> Every pair speaks.</p><p><span class="ph">Who said it? (Showdown).</span> Mini-whiteboards: you read a line — <span class="en">“I'd rather play the drums.” Who says it?</span> — all write the name, <span class="en">Show me!</span> 4 rounds.</p><p><p><span class="asr">✔ <b>Assess:</b> the boards are your check — who follows the story? The rest sit with you in the board game.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> point to the right frame in the book. <span class="ext">⭐ Extension:</span> add a second true fact about that moment.</span></p></td>
+        <td class="mat">mini-whiteboards · Pupil's Book pp.52–53</td>
+      </tr>
+
+      <tr>
+        <td class="min">28–40′</td>
+        <td class="stage"><div class="nm">Act out</div><div class="zone">carpet, groups of 4</div></td>
+        <td class="flow"><p><span class="ph">Model a frame.</span> You + 3 pupils play the water-xylophone frame with big drama: <span class="en">Pour a different amount of water into each glass. — Wow! A water xylophone. Amazing!</span></p><p><span class="ph">Groups of 4 (Josh · Lily · Ravi · narrator).</span> Rehearse 2 frames with books as scripts. Rotate roles once.</p><p><span class="ph">Showtime.</span> Each group performs ONE frame (30–40 sec — fast carousel, no long waits). Audience task: shout the creative idea (“Water xylophone!” / “Music video!”) at the end.</p><p><span class="diff"><span class="sup">💪 Support:</span> shortest lines / the “Amazing!” reaction for the shyest child. <span class="ext">⭐ Extension:</span> add an extra line from the frame.</span></p></td>
+        <td class="mat">Pupil's Book pp.52–53 · role badges</td>
+      </tr>
+
+      <tr>
+        <td class="min">40–52′</td>
+        <td class="stage"><div class="nm">Rainy-day ideas · code teams</div><div class="zone">desks, groups</div></td>
+        <td class="flow"><p><span class="ph">Be creative (whole class).</span> <span class="en">The children made their own fun. What can WE do on a rainy day? Make a class list!</span> — quick brainstorm, board it.</p><p><span class="game">▶ Code-breaker teams (RallyCoach).</span> Each group decodes a short music word (drums · tune · band) with the key; partner A reads a number, B finds the letter, then swap. Everyone reads the word aloud.</p><p><div class="ig">🎮 <b>Projector option:</b> show the code machine (PB p.7) on screen; a rotating child spins to a number, the WHOLE class calls the letter.</div></p><p><span class="ph">ICQ:</span> <span class="en">Number 231 — which letter?</span> (→ D!)</p></td>
+        <td class="mat">code key cards · Pupil's Book pp.7, 52</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner one thing the children do — and one creative thing YOU can do on a rainy day.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can read our story! I can answer questions about it!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, actors! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. At the door: <span class="en">Why can't they ride their bikes?</span> or <span class="en">What do they make?</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">story frames · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 50:</b> ex. 1 <i>Read and match</i> (story sentence halves) + ex. 2 <i>Listen and circle the eight mistakes. Write the correct words</i> (Adventure Blog · CD2 38 — можно по книге/картинкам без аудио) + ex. 3 <i>Thinking skills: Read and complete. What do you think?</i> (opinion + which instrument you'd like to play) + <i>Code!</i> (→ MERCURY). <b>+ app trainer</b> — 5–7 min.</p></td>
+        <td class="mat">Activity Book p.50 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 5 “Let's have fun!” · Lesson 3 (Story «The rainy day») — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book pp.52–53 (CD2 37) · Activity Book p.50 · КТП урок 36. Код на p.52 расшифровывается в DIDGERIDOO (мост к Culture-блоку L5 — New Zealand / инструменты мира). Genki: «What Do You Do In Your Free Time?» (Hip Hop) — по теме досуга.</span>
+  </div>
+</div>

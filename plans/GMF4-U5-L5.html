@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 · Unit 5 · Lesson 5 — Phonics · Culture · Literacy (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 4 · Unit 5 “Let's have fun!” · Lesson 5 — Phonics (u_e / ue) · New Zealand · a myth</div>
+    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 25.01–31.01 · Lesson 38</span><span class="chip new">✨ Sound /uː/ (u_e · ue) · WOMAD New Zealand · text type: a myth</span><span class="chip">~10 pupils · pairs + teams</span><span class="chip">Pupil's Book pp.55–58 · AB pp.52–55</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>read &amp; say the /uː/ sound</b> spelt <b>u_e</b> and <b>ue</b> (a huge mule · a tune · a barbecue · a statue), <b>talk about the WOMAD music festival in New Zealand</b>, and <b>read &amp; plan a myth</b> — three mini-blocks, one “fun &amp; music” thread.</li><li><span class="lb">Subsidiary.</span> Phonics: notice that <b>u_e</b> and <b>ue</b> both spell /uː/ (recognise → say → sort, next to oo &amp; ui); culture — WOMAD in New Zealand &amp; world instruments (bagpipes · steel drum · didgeridoo · sitar), 21C: making your own fun; literacy — text type <b>a myth / a mythical creature</b> (Ulysses &amp; the Sirens · the Hydra), the possessive apostrophe, plan &amp; write a mythical creature.</li><li><span class="lb">Personal.</span> Three blocks — keep transitions crisp (chant/action bridges); the huge-mule tongue-twister is play; cap each block hard so the mythical creature actually gets planned.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>say the /uː/ twister and sort u_e / ue words;</li><li>name 2–3 world instruments from WOMAD and say where they're from;</li><li>find the parts of a myth and plan a mythical creature with a partner.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">huge · mule · tune · barbecue · statue · (fruit · moon · rescue)</span><span class="w">WOMAD · music festival · bagpipes · steel drum · didgeridoo · sitar</span><span class="w">myth · mythical creature · Sirens · Hydra · possessive apostrophe (Hydra's · Sirens')</span></div></div><div class="r"><div class="k">Structure</div><div>Can a huge mule play a tune at the barbecue next to the statue? &nbsp;·&nbsp; The didgeridoo comes from Australia. &nbsp;·&nbsp; myth: The (Hydra) lived in… It ate… It had…</div></div><div class="r"><div class="k">Form</div><div>/uː/ = <b>u_e</b> (huge, mule, tune — split digraph, magic e) AND <b>ue</b> (barbecue, statue, rescue) — (also oo: moon · ui: fruit). Myth layout: appearance · size · habitat · diet · possessive apostrophe (Hydra's claws · Sirens' island).</div></div><div class="r"><div class="k">Pron. watch</div><div>/uː/ (~/juː/) clean in huge/mule/tune; barbecue /ˈbɑːbɪkjuː/; statue /ˈstætʃuː/; didgeridoo /ˌdɪdʒərɪˈduː/; sitar /sɪˈtɑː/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>mule</i> and <i>barbecue</i> — same /uː/ sound? Same letters?” → same sound, different spelling (u_e vs ue)!</div><div class="ccq" style="margin-bottom:10px">“A myth — is it a true story or an old made-up tale with monsters &amp; heroes?” → an old made-up tale.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Free-time activities, conditional-with-can, instruments &amp; I'd rather are active (L1–L4). Sound–letter awareness from GMF3 phonics is enough to enjoy the u_e / ue noticing (по учебнику). Pupils can read the short myth texts with support.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Twister said too fast → mush</td><td>Speed ladder: slow → normal → fast → whisper-fast; quality before speed.</td></tr><tr><td>u_e not linked to /uː/</td><td>Two hoops on the floor: u_e-hoop (mule, tune, huge) &amp; ue-hoop (barbecue, statue, rescue); pupils physically stand in the right hoop per word card (+ spare oo / ui hoops).</td></tr><tr><td>Culture block = passive watching</td><td>Every instrument photo/clip gets a task: point, name, say where it's from, thumbs if you'd like to play it.</td></tr><tr><td>Myth reading = word-by-word</td><td>Scavenger hunt: race to FIND one part (What did they look like? Where did they live? What did they do?) — reading with a purpose.</td></tr><tr><td>Three blocks overrun</td><td>Hard caps: 15′ + 13′ + 20′; visible timer; park extra AB pages for homework.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Today — a funny sound, a music festival in New Zealand, and a myth with monsters. Ready?</span></p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–7′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ RallyRobin:</span> <span class="en">Take turns: Would you rather play … or …? — full “I'd rather … than …” answers!</span> Then a quick “If it's …, we can …” chorus — warms up unit language for later.</p></td>
+        <td class="mat"><span class="game">▶ RallyRobin</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">7–22′</td>
+        <td class="stage"><div class="nm">Block 1 · Phonics /uː/ (u_e · ue)</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="ph">Speak and spell (act. 1, CD2 43).</span> PB p.55: <span class="en">Can a huge mule play a tune at the barbecue next to the statue?</span> Remember! fruit · moon. Listen, then the speed ladder: slow → fast → whisper. Pairs test each other ×3.</p><p><span class="ph">Sort the /uː/ spellings.</span> Hoops/columns: <b>u_e</b> (mule, tune, huge, cube) · <b>ue</b> (barbecue, statue, rescue) · (spares: oo — moon · ui — fruit). Hold up word cards — every child points/steps to the right hoop BEFORE you place each card.</p><p><span class="ph">Notice the rule.</span> <span class="en">Mule and barbecue — same sound /uː/, different letters! u_e has a magic e; ue is two letters at the end.</span> (notice, don't lecture).</p><p><span class="diff"><span class="sup">💪 Support:</span> say the word, teacher shows the hoop. <span class="ext">⭐ Extension:</span> add one more /uː/ word to a hoop (June, glue).</span></p><p><p><span class="asr">✔ <b>Assess:</b> who still reads u_e as short /ʌ/? Note them — extra RallyRead next unit.</span></p></p></td>
+        <td class="mat">Pupil's Book p.55 · CD2 43 · word cards · hoops</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–23′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — fly to NEW ZEALAND, to the WOMAD music festival! Instruments from all over the world!</span> Festival photo up, drum-roll on knees.</p></td>
+        <td class="mat">PB p.58 photo</td>
+      </tr>
+
+      <tr>
+        <td class="min">23–36′</td>
+        <td class="stage"><div class="nm">Block 2 · Culture · New Zealand (WOMAD)</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read Luke's questions (act. 1).</span> <span class="en">What are bagpipes made from? Which instrument comes from Trinidad? What's a didgeridoo made from?</span> Guesses.</p><p><span class="ph">Read &amp; listen (act. 2, CD3 01).</span> PB p.58 «Music festivals in New Zealand»: bagpipes (Scotland — wood &amp; animal skin), steel drum (Trinidad &amp; Tobago — recycled metal), didgeridoo (Australia — a tree trunk/branch), sitar (India — like a guitar, ~20 strings). Per instrument: point, name, say where it's from, thumbs if you'd play it. Answer Luke's questions.</p><p><span class="ph">Callback.</span> <span class="en">Remember Luke's code in the story? DIDGERIDOO — from Australia! Here it is at WOMAD!</span></p><p><span class="ph">Think about your culture (21C · making your own fun).</span> <span class="en">Are there music festivals in YOUR country? What traditional instruments do people play? Do YOU play an instrument?</span> 3–4 hands.</p><p><p><span class="asr">✔ <b>Assess:</b> call an instrument — pupils point to the right photo; who points late?</span></p></p></td>
+        <td class="mat">Pupil's Book p.58 · CD3 01 · instrument photos</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">36–37′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Long ago, people told MYTHS — old tales with monsters and heroes. Let's read one!</span> Point to the Sirens picture.</p></td>
+        <td class="mat">PB p.56</td>
+      </tr>
+
+      <tr>
+        <td class="min">37–52′</td>
+        <td class="stage"><div class="nm">Block 3 · Literacy · a myth</div><div class="zone">carpet → desks, pairs</div></td>
+        <td class="flow"><p><span class="ph">Read a myth (PB p.56, act. 1–3, CD2 45).</span> «Ulysses and the Sirens»: <span class="en">Which of these will be in a myth — a monster? a hero? a mountain bike? What do the Sirens do?</span> Read/listen; the Sirens (part woman, part bird) sang songs that crashed ships.</p><p><span class="game">▶ Myth scavenger hunt.</span> Race in pairs to find on PB p.57 «the Hydra»: <span class="en">What did it look like? How big was it? Where did it live? What did it eat?</span> First hands up read the answer aloud — everyone scans.</p><p><span class="ph">Writing tip · possessive apostrophe (PB p.57).</span> <span class="en">The Hydra's claws — one Hydra, apostrophe + s. The Sirens' island — many Sirens, just an apostrophe!</span> Chorus two examples.</p><p><span class="game">▶ Plan a mythical creature (Cooperative learning, AB p.54 format).</span> Pairs invent a creature &amp; make notes: <i>Name · What it looks like · What it eats · Where it lives · How big · What it's got (claws / wings / a tail).</i> 2 pairs share one fact aloud.</p><p><span class="diff"><span class="sup">💪 Support:</span> fill the plan template with word support. <span class="ext">⭐ Extension:</span> write the full description using the possessive apostrophe.</span></p></td>
+        <td class="mat">Pupil's Book pp.56–57 · CD2 45 · creature plan sheets</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Say the huge-mule twister to your partner — fast! Then: which WOMAD instrument would you play?</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can read the /uː/ sound! I know about WOMAD! I can plan a myth!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, myth-makers! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. At the door: a /uː/ word (mule / tune / barbecue) OR <span class="en">name a world instrument &amp; where it's from!</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 52</b> (Phonics): ex. 1 <i>Think, say and write</i> (sort u_e / ue / oo / ui) + ex. 2 <i>Talk Partners: cross the river (spell words)</i>; <b>p. 53</b> (Reading): ex. 1 <i>Read and write true or false</i> (the Sirens) + ex. 2 <i>Complete the sentences</i> + ex. 3 <i>Write questions with What / Where / Who. Ask &amp; answer</i>; <b>p. 54</b> (Writing): <i>Plan and write about your mythical creature. Share and check</i>. По желанию: <b>p. 55</b> New Zealand web quest (ICT, со взрослым). <b>+ app trainer</b> — 5–7 min.</p></td>
+        <td class="mat">Activity Book pp.52–54 (+55) · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 5 “Let's have fun!” · Lesson 5 (Phonics /uː/ u_e·ue · Culture WOMAD NZ · Literacy a myth) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book pp.55–58 (CD2 43–45, CD3 01) · Activity Book pp.52–55 · КТП урок 38. Фоника — материал учебника (u_e / ue, рядом oo · ui). Literacy = миф (Sirens / Hydra) + притяжательный апостроф. Genki: нет точной песни — блок держится на книжном материале.</span>
+  </div>
+</div>

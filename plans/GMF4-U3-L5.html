@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 · Unit 3 · Lesson 5 — Phonics · Culture · Literacy (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 4 · Unit 3 “A long time ago” · Lesson 5 — Phonics (aw / au) · Canada · an encyclopaedia entry</div>
+    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 16.11–22.11 · Lesson 22</span><span class="chip new">✨ Sound /ɔː/ (aw · au) · dinosaur fossils in Canada · text type: an encyclopaedia entry</span><span class="chip">~10 pupils · pairs + teams</span><span class="chip">Pupil's Book pp.33–37 · AB pp.30–33</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>read &amp; say the /ɔː/ sound</b> spelt <b>aw</b> and <b>au</b> (Paul can draw with his claws · Saul drinks sauce), <b>talk about dinosaur fossils in Canada</b>, and <b>read &amp; plan an encyclopaedia entry</b> — three mini-blocks, one “prehistoric” thread.</li><li><span class="lb">Subsidiary.</span> Phonics: notice that <b>aw</b> and <b>au</b> both spell /ɔː/ (recognise → say → sort, next to or &amp; al); culture — dinosaur fossils in Canada (Dinosaur Provincial Park · Writing-on-Stone) + Channel 21 museums video, 21C digital skills: exploring virtual museums; literacy — text type <b>an encyclopaedia entry</b>, facts vs opinions, extreme adjectives (enormous · tiny), plan &amp; write an entry.</li><li><span class="lb">Personal.</span> Three blocks — keep transitions crisp (chant/action bridges); the Paul-the-parrot twister is play; cap each block hard so the encyclopaedia entry actually gets planned.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>say the /ɔː/ twister and sort aw / au words;</li><li>say 2–3 facts about Canada's dinosaur fossils;</li><li>find the parts of an encyclopaedia entry and plan one.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">Paul · draw · claws · Saul · sauce · paws · (horse · walk)</span><span class="w">Dinosaur Provincial Park · fossils · palaeontologist · cave paintings · species</span><span class="w">encyclopaedia entry · facts · herbivore · carnivore · enormous · tiny</span></div></div><div class="r"><div class="k">Structure</div><div>Paul can draw with his claws and Saul drinks sauce with his paws. &nbsp;·&nbsp; Canada is famous for its dinosaur fossils. &nbsp;·&nbsp; entry: The tyrannosaurus was an enormous carnivore. It had 60 sharp teeth.</div></div><div class="r"><div class="k">Form</div><div>/ɔː/ = <b>aw</b> (draw, claws, paws) AND <b>au</b> (Paul, sauce, Saul) — (also or: horse · al: walk). Encyclopaedia entry: facts (not opinions), labelled diagram, extreme adjectives — <b>enormous</b> = very big, <b>tiny</b> = very small (no “very” with these).</div></div><div class="r"><div class="k">Pron. watch</div><div>/ɔː/ clean in draw/claws/Paul/sauce; palaeontologist /ˌpæliɒnˈtɒlədʒɪst/ (chunk it); herbivore /ˈhɜːbɪvɔː/ · carnivore /ˈkɑːnɪvɔː/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>claws</i> and <i>sauce</i> — same /ɔː/ sound? Same letters?” → same sound, different spelling (aw vs au)!</div><div class="ccq" style="margin-bottom:10px">“An encyclopaedia entry — FACTS or someone's opinion?” → facts (true information).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Prehistoric objects, animals, past questions &amp; could are active (L1–L4). Sound–letter awareness from GMF3 phonics is enough to enjoy the aw / au noticing (по учебнику). Pupils can read the short encyclopaedia texts with support.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Twister said too fast → mush</td><td>Speed ladder: slow → normal → fast → whisper-fast; quality before speed.</td></tr><tr><td>aw not linked to /ɔː/</td><td>Two hoops on the floor: aw-hoop (draw, claws, paws) &amp; au-hoop (Paul, sauce, Saul); pupils physically stand in the right hoop per word card (+ spare or / al hoops).</td></tr><tr><td>Culture block = passive watching</td><td>Every photo/video clip gets a task: point, name it, thumbs if you'd like to go there.</td></tr><tr><td>Encyclopaedia reading = word-by-word</td><td>Scavenger hunt: race to FIND one fact (How long? How many teeth? Carnivore or herbivore?) — reading with a purpose.</td></tr><tr><td>Three blocks overrun</td><td>Hard caps: 16′ + 14′ + 20′; visible timer; park extra AB pages for homework.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Today — a funny sound, a trip to Canada and a real dinosaur encyclopaedia. Ready?</span></p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–7′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ RallyRobin:</span> <span class="en">Take turns: what could your favourite prehistoric animal do — and NOT do?</span> Then a quick chorus of two past questions (What did they eat? Where did they live?) — warms up prehistoric language for the encyclopaedia later.</p></td>
+        <td class="mat"><span class="game">▶ RallyRobin</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">7–23′</td>
+        <td class="stage"><div class="nm">Block 1 · Phonics /ɔː/ (aw · au)</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="ph">Speak and spell (act. 1, CD2 06).</span> PB p.33: <span class="en">Paul the parrot can draw with his claws. Saul the squirrel drinks sauce with his paws.</span> Remember! horse · walk. Listen, then the speed ladder: slow → fast → whisper. Pairs test each other ×3.</p><p><span class="ph">Sort the /ɔː/ spellings.</span> Hoops/columns: <b>aw</b> (draw, claws, paws) · <b>au</b> (Paul, sauce, Saul) · (spares: or — horse · al — walk). Hold up word cards — every child points/steps to the right hoop BEFORE you place each card.</p><p><span class="ph">Notice the rule.</span> <span class="en">Claws and sauce — same sound /ɔː/, different letters! Both say “or”.</span> (notice, don't lecture).</p><p><span class="diff"><span class="sup">💪 Support:</span> say the word, teacher shows the hoop. <span class="ext">⭐ Extension:</span> add one more /ɔː/ word to a hoop (yawn, autumn).</span></p><p><p><span class="asr">✔ <b>Assess:</b> who still can't hear /ɔː/? Note them — extra RallyRead next unit.</span></p></p></td>
+        <td class="mat">Pupil's Book p.33 · CD2 06 · word cards · hoops</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">23–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — fly to CANADA! Home of amazing dinosaur fossils!</span> Canada photo up, drum-roll on knees.</p></td>
+        <td class="mat">PB p.36 photo</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–38′</td>
+        <td class="stage"><div class="nm">Block 2 · Culture · Canada + museums video</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read Luke's questions (act. 1).</span> <span class="en">What's Dinosaur Provincial Park famous for? How can you tell a rock from a bone?</span> Guesses.</p><p><span class="ph">Read &amp; listen (act. 2, CD2 10).</span> PB p.36 «Dinosaur discoveries in Canada»: 40+ dinosaur species, fossils over 75 million years old, a fossil safari, a palaeontologist studies fossils; the lick-test (a bone sticks to your finger!); Writing-on-Stone cave paintings 3000+ years old. Answer Luke's questions.</p><p><span class="ph">Channel 21 museums video + 21C (PB p.37).</span> Watch the museums clip: <span class="en">What can a museum tell us about dinosaurs, cave men and fossils?</span> Then <span class="game">▶ Teamwork (groups):</span> plan a class “virtual museum” — choose 2 things to show (dinosaurs · mummies · cave men · fossils) and say why.</p><p><span class="ph">Think about your culture.</span> <span class="en">Are there dinosaur fossils or cave paintings in OUR country?</span> 3–4 hands.</p><p><p><span class="asr">✔ <b>Assess:</b> call a fact — pupils point to the right photo; who points late?</span></p></p></td>
+        <td class="mat">Pupil's Book pp.36–37 · CD2 10 · museums video</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">38–39′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Palaeontologists write ENCYCLOPAEDIAS about dinosaurs. Let's read one!</span> Point to the T-rex photo.</p></td>
+        <td class="mat">PB p.34</td>
+      </tr>
+
+      <tr>
+        <td class="min">39–52′</td>
+        <td class="stage"><div class="nm">Block 3 · Literacy · an encyclopaedia entry</div><div class="zone">carpet → desks, pairs</div></td>
+        <td class="flow"><p><span class="ph">Read an encyclopaedia entry (PB p.34, act. 1–2, CD2 08).</span> «Dinosaurs»: <span class="en">What do you want to know? What…? When…? How…?</span> Read/listen; find facts about tyrannosaurus (12 m long, could run fast, 60 teeth like bananas), diplodocus (long neck, couldn't run fast), triceratops (three horns).</p><p><span class="game">▶ Fact scavenger hunt.</span> Race in pairs on PB pp.34–35: <span class="en">Which dinosaur had 60 teeth? How long was the tyrannosaurus? Facts or opinions?</span> First hands up read the answer aloud — everyone scans.</p><p><span class="ph">Writing tip · extreme adjectives (PB p.35).</span> <span class="en">We don't say “very enormous”! Enormous already means very big. Tiny means very small.</span> Chorus: enormous ✋ (big arms) · tiny 🤏 (tiny fingers).</p><p><span class="game">▶ Plan an entry (Cooperative learning, AB p.32 format).</span> Pairs choose a dinosaur &amp; make notes: <i>Name · When did it live? · Herbivore or carnivore? · What did it have? · What could it do?</i> 2 pairs share one fact aloud.</p><p><span class="diff"><span class="sup">💪 Support:</span> fill the plan template with word support. <span class="ext">⭐ Extension:</span> write full sentences with an extreme adjective (enormous · tiny).</span></p></td>
+        <td class="mat">Pupil's Book pp.34–35 · CD2 08 · entry plan sheets</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Say the Paul-the-parrot twister to your partner — fast! Then: one fact you learned about dinosaurs or Canada.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can read the /ɔː/ sound! I know about Canada! I can plan an encyclopaedia entry!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, encyclopaedia writers! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. At the door: an /ɔː/ word (draw / claws / sauce) OR <span class="en">one dinosaur fact!</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 30</b> (Phonics): ex. 1 <i>Think, say and write</i> (sort aw / au / or / al) + ex. 2 <i>Talk Partners: cross the river (spell words)</i>; <b>p. 31</b> (Reading): ex. 1 <i>Read and write</i> (triceratops / diplodocus / tyrannosaurus) + ex. 2 <i>Complete the chart</i> (It was… / It had…) + ex. 3 <i>Write questions. Ask and answer</i> (+ investigate the pteranodon); <b>p. 32</b> (Writing): <i>Plan and write your encyclopaedia entry. Draw and label. Share and check</i>. По желанию: <b>p. 33</b> Canada web quest (ICT, со взрослым). <b>+ app trainer</b> — 5–7 min.</p></td>
+        <td class="mat">Activity Book pp.30–32 (+33) · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 3 “A long time ago” · Lesson 5 (Phonics /ɔː/ aw·au · Culture Canada · Literacy encyclopaedia entry) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book pp.33–37 (CD2 06–10) · Activity Book pp.30–33 · КТП урок 22. Фоника — материал учебника (aw / au, рядом or · al в тетради). Culture = dinosaur fossils in Canada. Literacy = an encyclopaedia entry (динозавры: tyrannosaurus · diplodocus · triceratops · stegosaurus). Genki: «Baby Dinosaur — What Did You Do?» (86) — динозавры/прошлое.</span>
+  </div>
+</div>

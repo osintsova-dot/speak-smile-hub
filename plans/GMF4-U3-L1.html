@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 · Unit 3 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 4 · Unit 3 “A long time ago” · Lesson 1 — Vocabulary · Prehistoric times</div>
+    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 02.11–08.11 · Lesson 18</span><span class="chip new">✨ NEW · 12 prehistoric objects</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.28 · AB p.26</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 12 prehistoric objects</b> and <b>ask &amp; answer about the past</b>: “Were there (tools) in prehistoric times? — Yes, there were. / No, there weren't.”</li><li><span class="lb">Subsidiary.</span> Sing «In prehistoric times» (CD1 47) &amp; the vocabulary chant (CD1 46); brainstorm museums (Learning to learn); meet the past of <i>there is/are</i> — <b>Were there…?</b> / there were / there weren't; hear past verbs in context (wore · ate · made · had); early literacy — unscramble &amp; read the object words (AB).</li><li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; stirrer→settler rhythm — the memory game is high-energy, plan the freezes. Insist on <b>were</b> in the question and the right short answer (there were / there weren't).</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name the 12 prehistoric objects;</li><li>ask “Were there any…?” and answer “Yes, there were / No, there weren't”;</li><li>read &amp; spell the object words (unscramble).</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">cave</span><span class="w">basket</span><span class="w">axe</span><span class="w">spear</span><span class="w">knife</span><span class="w">bones</span><span class="w">hammer</span><span class="w">fire</span><span class="w">bowl</span><span class="w">tools</span><span class="w">fossil</span><span class="w">fur</span></div></div><div class="r"><div class="k">Structure</div><div>Were there (tools) in prehistoric times? — Yes, there were. &nbsp;·&nbsp; Were there (computers) in prehistoric times? — No, there weren't. &nbsp;·&nbsp; <i>in the song:</i> They wore fur. They ate meat. They made fire. They had spears.</div></div><div class="r"><div class="k">Form</div><div><b>Were there</b> + noun (in the past)? Short answers: Yes, there were · No, there weren't. Notice past verbs in the song: wear→<b>wore</b>, eat→<b>ate</b>, make→<b>made</b>, have→<b>had</b> (irregular — met here, drilled in L2).</div></div><div class="r"><div class="k">Pron. watch</div><div>axe /æks/; spear /spɪə/; fur /fɜː/ (not “foor”); fossil /ˈfɒsl/; there were /ðeəwə/ weak at speed.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>Were there</i> cars in prehistoric times? Yes or no?” → no → No, there weren't.</div><div class="ccq" style="margin-bottom:10px">“<i>Were there</i> caves? — one word for many long ago: is or WERE?” → WERE (past, more than one).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Starter + Units 1–2 routines are solid; pupils met <i>was/were</i> and past adjectives in Unit 2, so <b>Were there…?</b> is a natural next step. The 12 objects are largely NEW; irregular past verbs (wore/ate/made/had) are noticed today, drilled in L2. Readers — word cards work alongside pictures.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td><i>were</i> dropped / said as <i>was</i></td><td>Board frame keeps <b>Were there</b> in a bright colour; echo-correct with a beat: <i>WERE — there — tools?</i></td></tr><tr><td>New objects hard to hold (spear/axe/fossil)</td><td>One TPR gesture per card (spear = throw, axe = chop, fossil = trace a spiral); icon on every card.</td></tr><tr><td>Yes/No answer form (there was)</td><td>Anchor pair on the board: Yes, there WERE · No, there WEREN'T; chorus the answer half before playing.</td></tr><tr><td>Memory game gets wild</td><td>Slow-motion turns + Freeze!; one pair speaks at a time in the demo.</td></tr><tr><td>Some read word cards slowly</td><td>Icon on every card; pair a strong reader with a developing one in card games.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! A new unit — A LONG TIME AGO! Close your eyes… we're travelling back to prehistoric times! What can you see?</span> Kids call out ideas.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval + brainstorm</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Recycle Unit 2, on-topic.</span> <span class="game">▶ Mix–Pair–Share:</span> music → <span class="en">Stand up, hand up, pair up!</span></p><p>R1 <span class="ph">past self:</span> <span class="en">What were you like when you were a baby? — I was small / naughty…</span> (Unit 2 was/were). R2 <span class="ph">brainstorm (act. 1):</span> <span class="en">Take turns — what can you see in a museum? Make a list! (Russian OK — we'll learn them in English today!)</span></p><p><p><span class="asr">✔ <b>Assess:</b> who still can't produce a clean “I was…” / “There were…”? Note names — recycle at Reflection.</span></p></p></td>
+        <td class="mat">music · <span class="game">▶ Mix-Pair-Share</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen — IN PREHISTORIC TIMES! Cave men and women walked the Earth!</span> Play the song (PB p.28, CD1 47) once through; pupils mime cave life → into the topic.</p></td>
+        <td class="mat"><b>«In prehistoric times»</b> (CD1 47)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–20′</td>
+        <td class="stage"><div class="nm">Presentation · 12 objects</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Present with flashcards + chant (act. 2, CD1 46).</span> Each card: <span class="en">What's this? It's… a cave! An axe! A spear!</span> Choral ×3 + one gesture (axe = chop, spear = throw, fire = warm hands, fossil = trace a spiral).</p><p><span class="ph">Were there…? (act. 4 language).</span> Board frame in bright colour: <span class="en">Were there (spears) in prehistoric times? — Yes, there were.</span> vs <span class="en">Were there (computers)? — No, there weren't.</span> Hold each card; class asks &amp; answers truthfully.</p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if it was in prehistoric times… a spear! …a phone! …a fossil!</span> — flash cards fast, everyone reacts every time.</p><p><span class="diff"><span class="sup">💪 Support:</span> answer with the gesture + Yes/No. <span class="ext">⭐ Extension:</span> full answer — <span class="en">Yes, there were spears in prehistoric times.</span></span></p></td>
+        <td class="mat">12 object flashcards · board frame · CD1 46</td>
+      </tr>
+
+      <tr>
+        <td class="min">20–28′</td>
+        <td class="stage"><div class="nm">Song · In prehistoric times</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="en">To your tables! Open your books at page 28.</span> <span class="ph">Sing (act. 3, CD1 47).</span> Listen &amp; point to the objects in the cave picture; 2nd run — sing with cave-life gestures.</p><p><span class="ph">Hear the past verbs.</span> Read the song lines: <span class="en">They wore fur. They ate meat and fish. They made fire. They had spears.</span> Underline the past verbs (wore · ate · made · had) — <span class="en">These are PAST — they show a long time ago!</span> Notice, don't lecture (drilled in L2). Freeze between verses.</p></td>
+        <td class="mat">Pupil's Book p.28 · CD1 47</td>
+      </tr>
+
+      <tr>
+        <td class="min">28–36′</td>
+        <td class="stage"><div class="nm">Cave memory game</div><div class="zone">carpet → desks, pairs</div></td>
+        <td class="flow"><p><span class="game">▶ Memory game (Talk Partners).</span> Pairs study the PB p.28 cave picture for 30 sec, then close books. A asks: <span class="en">Were there bones in the cave? Were there baskets?</span> B answers from memory <span class="en">Yes, there were / No, there weren't.</span> Open to check. Swap. Point per correct memory.</p><p><span class="ph">ICQ:</span> <span class="en">Do you look at the picture while you ask?</span> (→ no — from memory!)</p><p><p><span class="asr">✔ <b>Assess:</b> stand behind one pair — is it <i>Were there…?</i> + the right there were / there weren't?</span></p></p></td>
+        <td class="mat">Pupil's Book p.28</td>
+      </tr>
+
+      <tr>
+        <td class="min">36–44′</td>
+        <td class="stage"><div class="nm">Object trade</div><div class="zone">mingle</div></td>
+        <td class="flow"><p><span class="game">▶ Quiz-Quiz-Trade.</span> Each child holds an object card. Music → mingle; off → pair: A shows the card, <span class="en">Were there (axes) in prehistoric times?</span> B answers <span class="en">Yes, there were!</span> then swap, TRADE cards, new partner. 5–6 exchanges — everyone speaks many times.</p><p>Whole-class check: <span class="en">Hands up if your object was a TOOL for hunting!</span></p></td>
+        <td class="mat">object cards · music · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">44–52′</td>
+        <td class="stage"><div class="nm">Unscramble &amp; ask · write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Write (notebooks / AB p.26 format).</span> Two jobs: ① unscramble 4 object words (<i>praes→spear · veca→cave · reif→fire · esnbo→bones</i>); ② write 2 questions with the frame <i>Were there ___ in prehistoric times?</i> and a true answer.</p><p><span class="diff"><span class="sup">💪 Support:</span> copy the frame + choose from picture-word cards. <span class="ext">⭐ Extension:</span> add: <span class="en">but there weren't any phones!</span></span></p></td>
+        <td class="mat">notebooks · board frame</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Ask your partner: “Were there ___ in prehistoric times?” — two objects, true answers!</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can name prehistoric objects! I can ask “Were there…?”</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, time-travellers! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show an object card at the door: <span class="en">Were there …? Yes/No, there were/weren't.</span> → truthful full answer. Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">object cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 26:</b> ex. 1 <i>Order the letters and write the words. Match</i> (unscramble 10 objects → cave picture) + ex. 2 <i>Write the questions. Answer “Yes, there were” or “No, there weren't”</i> (Were there …? — spears / computers / bowls / tools / tablets) + <i>Code!</i> (decode). <b>+ app trainer</b> — prehistoric words, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.26 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 3 “A long time ago” · Lesson 1 (Vocabulary · prehistoric times) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.28 (CD1 46–47) · Activity Book p.26 · КТП урок 18. <b>Набор объектов взят по учебнику</b> (cave · basket · axe · spear · knife · bones · hammer · fire · bowl · tools · fossil · fur) — отличается от списка КТП (hunters/paintings/skins). <b>Grammar-in-context на p.28 = «Were there…? Yes there were / No there weren't»</b> (прошедшее there is/are), а полные вопросы Past Simple (What/Where did…?) идут в L2 — КТП их смешала. Genki: «Baby Dinosaur — What Did You Do?» (86) — past simple + доисторическая тема.</span>
+  </div>
+</div>

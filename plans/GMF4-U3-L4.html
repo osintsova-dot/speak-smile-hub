@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 · Unit 3 · Lesson 4 — Vocabulary &amp; Grammar (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 4 · Unit 3 “A long time ago” · Lesson 4 — Vocab &amp; Grammar · Animals from the past · could</div>
+    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 09.11–15.11 · Lesson 21</span><span class="chip new">✨ NEW · 6 animals from the past + could / couldn't</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.32 · AB p.29</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 6 animals from the past</b> and <b>talk about past ability</b>: “A dodo could run, but it couldn't fly. Could dodos swim? — No, they couldn't.”</li><li><span class="lb">Subsidiary.</span> Sing «A long, long time ago» (CD2 04); discover <b>could / couldn't</b> for ability in the past (Grammar clue); meet <i>extinct · tusks · shell</i>; a true-or-false ability game (Talk Partners); build could/couldn't sentences from a chart (AB follow-up).</li><li><span class="lb">Personal.</span> Insist on <b>could / couldn't</b> + base verb; model each animal &amp; ability with a big TPR action; keep the game moving — short turns, everyone mimes.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name 6 animals from the past;</li><li>say what an animal could / couldn't do;</li><li>ask &amp; answer “Could …? — Yes, it could / No, it couldn't.”</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">sabre-toothed tiger</span><span class="w">giant ground sloth</span><span class="w">prehistoric armadillo</span><span class="w">dodo</span><span class="w">sabre-toothed squirrel</span><span class="w">woolly mammoth</span></div></div><div class="r"><div class="k">Structure</div><div>It could (walk), but it couldn't (jump). &nbsp;·&nbsp; Could dodos (fly)? — No, they couldn't. &nbsp;·&nbsp; Some of them are now extinct.</div></div><div class="r"><div class="k">Form</div><div><b>could / couldn't</b> + base verb (ability in the past) — same for I/you/he/she/it/we/they. Question: <b>Could</b> + subject + base verb? — Yes, … could / No, … couldn't.</div></div><div class="r"><div class="k">Pron. watch</div><div>couldn't /ˈkʊdnt/ (silent l); sabre-toothed /ˈseɪbə tuːθt/; mammoth /ˈmæməθ/; extinct /ɪkˈstɪŋkt/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>It could swim</i> — is that now or a long time ago?” → a long time ago (past ability).</div><div class="ccq" style="margin-bottom:10px">“<i>couldn't</i> — can it do it or NOT?” → NOT (couldn't = could not).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Story language &amp; past questions are active (L2–L3); the 6 animals are new but very picturable and some were named in the story (mammoth, sabre-toothed tiger). The switch to <b>could / couldn't</b> + base verb is the key challenge. (Book teaches 6 animals: sabre-toothed tiger · giant ground sloth · prehistoric armadillo · dodo · sabre-toothed squirrel · woolly mammoth — note КТП listed a different set.)</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td><i>could</i> + wrong form (“could to fly”)</td><td>Board frame keeps <b>could + base verb</b>; back-chain <i>fly → could fly → It could fly.</i></td></tr><tr><td>could / couldn't mixed in a sentence</td><td>Two-colour board: could ✔ (can do) · couldn't ✘ (can't); mime a big tick / cross per verb.</td></tr><tr><td>Long animal names</td><td>Chunk &amp; clap: SA-bre-toothed TI-ger · WOOL-ly MAM-moth; icon on every card.</td></tr><tr><td>Mime game gets wild</td><td>Slow-motion actions + Freeze!; one actor at a time in the demo, all copy on the spot.</td></tr><tr><td>Song lyrics too fast</td><td>First run listen &amp; do the actions; second run join in on could / couldn't only.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Roar! Which prehistoric animals do YOU know? A mammoth? A sabre-toothed tiger?</span> Kids roar &amp; guess.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Story + past questions back.</span> Flash story frames: <span class="en">What did the children find in the cave?</span> chorus. Then <span class="game">▶ Swat it!</span> — object cards on the board, two flyswatters, you call a word, racers swat; the class chorus-asks <span class="en">What did they use? — They used spears!</span> during each race (everyone busy). 4 rounds, rotate racers.</p></td>
+        <td class="mat">story frames · flyswatters · <span class="game">▶ Swat it!</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen — A LONG, LONG TIME AGO! Some animals are now EXTINCT — gone forever!</span> Play «A long, long time ago» (PB p.32, CD2 04) hook once → topic.</p></td>
+        <td class="mat"><b>«A long, long time ago»</b> (CD2 04)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–19′</td>
+        <td class="stage"><div class="nm">Presentation · 6 animals</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Listen, point and say (act. 1, CD2 03).</span> Animal cards: <span class="en">A dodo! A woolly mammoth! A sabre-toothed tiger!</span> Choral ×3 + a big TPR shape each (mammoth = tusks, sloth = slow, armadillo = curl up).</p><p><span class="game">▶ Charades / Take Off–Touch Down.</span> <span class="en">Stand up if this animal could FLY!</span> …the dodo (no!). Then mime an ability — the class guesses the animal + says <span class="en">It could swim!</span> — everyone reacts every time.</p><p><span class="ph">Notice could.</span> Board: <span class="en">A dodo could run, but it couldn't fly.</span> Circle <b>could</b> ✔ / <b>couldn't</b> ✘ + the base verb.</p><p><span class="diff"><span class="sup">💪 Support:</span> action carries the meaning. <span class="ext">⭐ Extension:</span> read the animal word without the picture.</span></p></td>
+        <td class="mat">6 animal cards · board · CD2 03</td>
+      </tr>
+
+      <tr>
+        <td class="min">19–27′</td>
+        <td class="stage"><div class="nm">Song + grammar box</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Sing (act. 2, CD2 04).</span> PB p.32 «A long, long time ago». First run listen &amp; do the animal actions; second sing with could/couldn't gestures (tick = could, cross = couldn't).</p><p><span class="ph">Grammar box (act. 3, CD2 05).</span> Board: <i>I/You/He/She/It/We/They + could / couldn't + walk · fly · swim · jump · run · climb.</i> Grammar clue: <span class="en">We use “could” to talk about ability in the past. Sabre-toothed squirrels couldn't fly.</span> Circle <b>could / couldn't</b>.</p><p><span class="ph">ICQ:</span> <span class="en">A mammoth — could jump or couldn't jump?</span> (→ couldn't jump!)</p></td>
+        <td class="mat">Pupil's Book p.32 · CD2 04–05 · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">27–37′</td>
+        <td class="stage"><div class="nm">True or false · ability game</div><div class="zone">desks, pairs → 2 teams</div></td>
+        <td class="flow"><p><span class="ph">Model first.</span> Say some true &amp; false facts: <span class="en">A dodo could fly. — That's false! A mammoth could walk. — That's true!</span></p><p><span class="game">▶ Talk Partners (act. 4).</span> Pairs play true/false: A says <span class="en">An armadillo could climb trees.</span> B replies <span class="en">That's false! It couldn't climb trees.</span> Swap. 6+ turns each.</p><p><span class="game">▶ Fact-file relay (team).</span> Using the PB p.33 animal fact cards, you say an ability — teams race to hold up the matching animal card &amp; say the full sentence <span class="en">A sabre-toothed tiger could climb trees!</span> Point per correct.</p><p><p><span class="asr">✔ <b>Assess:</b> circulate — is it <i>could / couldn't</i> + base verb, right animal? Recast, note names.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> animal cards have the ability icons. <span class="ext">⭐ Extension:</span> add a Could…? question: <span class="en">Could a dodo swim? — No, it couldn't.</span></span></p></td>
+        <td class="mat">animal cards · PB p.33 fact cards · <span class="game">▶ Talk Partners</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">37–46′</td>
+        <td class="stage"><div class="nm">Could it…? · build sentences</div><div class="zone">desks, 2 teams</div></td>
+        <td class="flow"><p><span class="ph">Make true sentences (Showdown).</span> Mini-whiteboards + an ability chart (dodos / squirrels / tigers × fly · climb · swim · run). You point to a cell → all write <i>Dodos couldn't fly.</i> / <i>Sabre-toothed tigers could run.</i> — <span class="en">Show me!</span> Reveal together, self-check could/couldn't. 5 rounds.</p><p><span class="ph">ICQ:</span> <span class="en">Dodos and flying — could or couldn't?</span> (→ couldn't!)</p></td>
+        <td class="mat">mini-whiteboards · ability chart · <span class="game">▶ Showdown</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">46–52′</td>
+        <td class="stage"><div class="nm">My prehistoric animal · write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Notebooks / AB p.29 format.</span> Board frame: <i>A ___ lived a long time ago. It could ___ and ___, but it couldn't ___.</i> Each child writes about one animal (2 positive, 1 negative).</p><p><span class="diff"><span class="sup">💪 Support:</span> gapped frame + verb word bank. <span class="ext">⭐ Extension:</span> add a Could…? question for a partner.</span></p></td>
+        <td class="mat">notebooks · board frame</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner: what could your animal do, and what couldn't it do?</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can name animals from the past and say “could / couldn't”!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, palaeontologists! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show an animal card at the door: <span class="en">What could it do? What couldn't it do?</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">animal cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 29:</b> ex. 1 <i>Look and write the names of the animals from the past</i> (dodo · prehistoric armadillo · woolly mammoth · giant ground sloth · sabre-toothed tiger · sabre-toothed squirrel) + ex. 2 <i>Order the words in the grammar table. Write the sentences</i> (It could / couldn't …) + ex. 3 <i>Look at the chart. Write two positive and two negative sentences</i> (dodos / squirrels / tigers × fly/climb/swim/run) + <i>Code!</i> (decode). <b>+ app trainer</b> — animals + could, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.29 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 3 “A long time ago” · Lesson 4 (Vocab &amp; Grammar · animals from the past · could) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.32 (CD2 03–05) · Activity Book p.29 · КТП урок 21. <b>Учебник даёт 6 животных</b> (sabre-toothed tiger · giant ground sloth · prehistoric armadillo · dodo · sabre-toothed squirrel · woolly mammoth) — взят книжный набор (КТП перечисляла dinosaur/woolly rhino/pterodactyl/giant deer; динозавры идут в L5–L6 Literacy). Grammar = could/couldn't (ability in the past). Genki: «Can You Kick?» (37e) — can + глаголы, рядом по идее «умею/не умею».</span>
+  </div>
+</div>

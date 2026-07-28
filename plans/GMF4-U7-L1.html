@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 · Unit 7 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🖐 Give Me Five! 4 · Unit 7 “In the city” · Lesson 1 — Vocabulary · Places in a city</div>
+    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 01.03–07.03 · Lesson 48</span><span class="chip new">✨ NEW · 12 places in a city</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.72 · AB p.70</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 12 places in a city</b> and <b>say what you do there</b>: “Where do you go? — I go to the (ice rink). — What do you do there? — I skate on the ice.”</li><li><span class="lb">Subsidiary.</span> Sing «I go to the city» (CD3 25) &amp; the vocabulary chant (CD3 24); brainstorm places in a city (Learning to learn); early preview of <i>Will there be…?</i> (grammar comes properly in L2); literacy — read place words &amp; solve the AB clue puzzle.</li><li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; stirrer→settler rhythm — the mingle game is high-energy, plan the freezes. Push the “What do you do there?” follow-up so places live in context, not as a bare list.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name the 12 places in a city;</li><li>ask &amp; answer “Where do you go? — I go to the… / What do you do there?”;</li><li>read place words and match them to what you do there.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">library</span><span class="w">airport</span><span class="w">hotel</span><span class="w">university</span><span class="w">bowling alley</span><span class="w">shopping centre</span><span class="w">market</span><span class="w">ice rink</span><span class="w">art gallery</span><span class="w">cinema</span><span class="w">football stadium</span><span class="w">adventure playground</span></div></div><div class="r"><div class="k">Structure</div><div>Where do you go (at the weekend)? — I go to the (art gallery). &nbsp;·&nbsp; What do you do there? — I watch a (football match). &nbsp;·&nbsp; <i>preview:</i> Will there be (ice rinks) in the future?</div></div><div class="r"><div class="k">Form</div><div><b>go to</b> + place (I go to the shopping centre). Follow-up: <b>What do you do there?</b> — I + present-simple activity (skate · watch · buy · read).</div></div><div class="r"><div class="k">Pron. watch</div><div>university /ˌjuːnɪˈvɜːsəti/ (5 syll.); gallery /ˈɡæləri/; stadium /ˈsteɪdiəm/; bowling /ˈbəʊlɪŋ/ (long /əʊ/, not “bow-wow”).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“<i>You catch a plane here</i> — which place?” → the airport.</div><div class="ccq" style="margin-bottom:10px">“<i>You watch a film here</i> — cinema or market?” → the cinema.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Pupils know some town words from GMF3 (<i>town</i> category revised earlier). The 12 city places are largely NEW; <i>go to + place</i> is known. Readers — word cards work alongside pictures. This unit's grammar (Will there be…?) is only previewed today.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Long words (adventure playground · university)</td><td>Chunk &amp; clap: ad-VEN-ture PLAY-ground · u-ni-VER-si-ty; icon on every card.</td></tr><tr><td><i>the</i> dropped (“I go to airport”)</td><td>Board frame keeps <b>the</b> in a bright colour; echo-correct with a beat: <i>I go to — THE — airport.</i></td></tr><tr><td>Place named but no “what you do” follow-up</td><td>Always pair the two questions on the board; model <i>Where…? → What do you do there?</i> as a duo.</td></tr><tr><td>Mingle game gets wild</td><td>Music-off = Freeze!; slow-motion demo with one pair first; volume arm ready.</td></tr><tr><td>Some read word cards slowly</td><td>Icon on every card; pair a strong reader with a developing one in card games.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Welcome to a new unit — IN THE CITY! Quick — name ONE place in a city!</span> Whip round; kids call out places (Russian OK for now).</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval + brainstorm</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Recycle GMF3 town words, on-topic.</span> <span class="game">▶ Mix–Pair–Share:</span> music → <span class="en">Stand up, hand up, pair up!</span></p><p>R1 <span class="ph">recall:</span> <span class="en">Tell your partner two places in a town you know in English.</span> R2 <span class="ph">brainstorm (act. 1):</span> <span class="en">Take turns — think of places in a city. Make a list! What's your favourite? (Russian OK — we'll learn them in English today!)</span></p><p><p><span class="asr">✔ <b>Assess:</b> who still can't produce a place in English? Note names — recycle at Reflection.</span></p></p></td>
+        <td class="mat">music · <span class="game">▶ Mix-Pair-Share</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Listen — I GO TO THE CITY! Where do you go at the weekend?</span> Play the song (PB p.72, CD3 25) once through; pupils mime the actions → into the topic.</p></td>
+        <td class="mat"><b>«I go to the city»</b> (CD3 25)</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–20′</td>
+        <td class="stage"><div class="nm">Presentation · 12 city places</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="ph">Present with flashcards + chant (act. 2, CD3 24).</span> Each card: <span class="en">What's this? It's… the library! The airport! The ice rink!</span> Choral ×3 + one gesture per card (library = open a book, airport = plane arms, ice rink = skate).</p><p><span class="ph">Where do you go? What do you do there?</span> Board the question duo. Hold each card — class says: <span class="en">Where do you go? — I go to the football stadium. — What do you do there? — I watch a match!</span></p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if you can WATCH A FILM here… the cinema!</span> — flash cards fast, describe the place, everyone reacts every time.</p><p><span class="diff"><span class="sup">💪 Support:</span> answer with the gesture + place word. <span class="ext">⭐ Extension:</span> add the follow-up: <span class="en">I go to the market. I buy fruit.</span></span></p></td>
+        <td class="mat">12 city-place flashcards · board · CD3 24</td>
+      </tr>
+
+      <tr>
+        <td class="min">20–28′</td>
+        <td class="stage"><div class="nm">Song · I go to the city</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="en">To your tables! Open your books at page 72.</span> <span class="ph">Sing (act. 3, CD3 25).</span> Listen &amp; point to the places in the city picture; 2nd run — sing with the place gestures.</p><p><span class="ph">Where + what.</span> Read the song lines: <span class="en">Where do you go? — I go to the football stadium. What do you do there? — I watch a football match.</span> Choral — plants the memory game. Freeze between verses.</p></td>
+        <td class="mat">Pupil's Book p.72 · CD3 25</td>
+      </tr>
+
+      <tr>
+        <td class="min">28–36′</td>
+        <td class="stage"><div class="nm">City memory game</div><div class="zone">carpet → desks, pairs</div></td>
+        <td class="flow"><p><span class="game">▶ Memory game (Talk Partners).</span> Pairs study 8 place cards laid out for 30 sec, then cards flip face-down. A points at a spot: <span class="en">Where's the ice rink?</span> B answers from memory <span class="en">It's here! I go there to skate.</span> Flip to check. Swap. Point per correct memory.</p><p><span class="ph">ICQ:</span> <span class="en">Do you look at the cards while your partner asks?</span> (→ no — from memory!)</p><p><p><span class="asr">✔ <b>Assess:</b> stand behind one pair — is it a full place word + a “what you do there” idea?</span></p></p></td>
+        <td class="mat">8 place cards per pair</td>
+      </tr>
+
+      <tr>
+        <td class="min">36–44′</td>
+        <td class="stage"><div class="nm">City trade</div><div class="zone">mingle</div></td>
+        <td class="flow"><p><span class="game">▶ Quiz-Quiz-Trade.</span> Each child holds a place card. Music → mingle; off → pair: A shows the card, <span class="en">Where do you go? What do you do there?</span> B answers, then swap, TRADE cards, new partner. 5–6 exchanges — everyone speaks many times.</p><p>Whole-class check: <span class="en">Hands up if you had a place where you can BUY something!</span> (shopping centre · market).</p></td>
+        <td class="mat">place cards · music · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">44–52′</td>
+        <td class="stage"><div class="nm">Clue puzzle · write</div><div class="zone">desks</div></td>
+        <td class="flow"><p><span class="ph">Speak.</span> <span class="game">▶ RallyRobin:</span> <span class="en">Take turns: I go to the… and I…</span> — places you really go to.</p><p><span class="ph">Write (notebooks / AB p.70 format).</span> Board frame: <i>I go to the ___. I ___ there.</i> Each child writes 3 true sentences + solves 2 place clues (<span class="en">You catch a plane here → the airport</span>). Fast finishers add <i>always / sometimes / never</i>.</p><p><span class="diff"><span class="sup">💪 Support:</span> copy the frame + choose from 3 word cards. <span class="ext">⭐ Extension:</span> add frequency: <span class="en">I sometimes go to the ice rink.</span></span></p></td>
+        <td class="mat">notebooks · board frame · clue cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–55′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner one place you go to — and what you do there.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can name 12 places in a city! I can say where I go and what I do!</span></p></td>
+        <td class="mat">“I can…” progress cards (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Well done, city explorers! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door. Show a place card at the door: <span class="en">Where do you go? What do you do there?</span> → truthful full answer. Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat">place cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Activity Book — p. 70:</b> ex. 1 <i>Read the clues and complete the puzzle. What's the mystery place?</i> (10 places → crossword) + ex. 2 <i>Where do you go at the weekend? Look and write true sentences</i> (I always / sometimes / never go to the…) + <i>Code!</i> (decode the numbers → a city). <b>+ app trainer</b> — city-place words, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.70 · app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 7 “In the city” · Lesson 1 (Vocabulary · places in a city) — lesson plan &amp; staging (continuing line)</span>
+    <span>Pupil's Book p.72 (CD3 24–25) · Activity Book p.70 · КТП урок 48. ⚠️ Набор мест взят ПО УЧЕБНИКУ (library · airport · hotel · university · bowling alley · shopping centre · market · ice rink · art gallery · cinema · football stadium · adventure playground) — отличается от списка КТП (skyscraper/factory/office building/bridge в учебнике нет). Grammar «Will there be…?» — только превью, полноценно в L2. Genki: «Excuse me, where's the …?» (Hip Hop) / «Where Do You Live?» (40) — места в городе.</span>
+  </div>
+</div>
