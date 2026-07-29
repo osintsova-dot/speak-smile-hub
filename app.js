@@ -109,7 +109,7 @@ function planKeyFor(program, L){
     }
     return null;
   }
-  const um = /unit\s*(\d+)/i.exec(src);
+  const um = /(?:unit|Юнит)\s*(\d+)/i.exec(src);
   let unitPart;
   if (um) unitPart = "U" + um[1];
   else if (/starter/i.test(src)) unitPart = "Starter";   // Starter «Hello, friends!» (L1–L3)

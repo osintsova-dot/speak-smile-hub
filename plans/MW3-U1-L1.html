@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MW3 · Unit 1 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🎡 Mimi's Wheel 3 · Unit 1 “Hello” · Lesson 1 — Vocabulary · Mimi's family, numbers &amp; colours</div>
+    <div class="s">Pre-primary / early years (~5–6 y.o., <b>pre-readers</b>) · 60 min · <b>Genki recipe</b> · Disco warm-up → phonics → curiosity input → Genki games → song → craft · TPR + puppet · <b>Phonics Hero 2.0</b> (reading: recognise → blend → speed-read) · carpet + tables</div>
+    <div class="meta"><span class="chip">Week 03.09–06.09 · Lesson 1</span><span class="chip new">✨ NEW · Mimi's family · numbers 1–6 · colours</span><span class="chip">~8 pupils · circle + tables</span><span class="chip">PH 1–3 (s a t i p n c k e · p.3–9) · Genki: Numbers(08)·Colours(52)</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, children will be better able to <b>name Mimi's family</b> (Mummy · Daddy · Mimi · Dylan) and the <b>Big Wheel</b>, <b>count 1–6</b>, and <b>match numbers to colours</b>: “Where's number (one)? — It's on (red).”</li><li><span class="lb">Subsidiary.</span> Greet with “Hello, how are you? — I'm fine, thank you”; sing the <b>Big Wheel song</b> (CD1 T17) + <b>Genki «Numbers 1 To 12»</b> (08) with actions; <b>Phonics Hero</b> — review sounds <b>s a t i p n c k e</b>, blend CVC + speed-read p.3–9; stick number stickers &amp; circle a favourite number (PB p.3).</li><li><span class="lb">Personal.</span> Tiny teacher-talk, big TPR — let Speaky do the talking. Genki recipe: disco first, phonics early, input through curiosity, energy up in the games then down for the table. Accept non-verbal answers this early — smiles first, words next.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name Mimi's family and the Big Wheel;</li><li>count from one to six in English;</li><li>say a colour for a number — “It's on red.”</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Disco energy</span><span>Wonder</span><span>Play &amp; move</span><span>Sing</span><span>Show me</span><span>Happy goodbye</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">Mummy</span><span class="w">Daddy</span><span class="w">Mimi</span><span class="w">Dylan</span><span class="w">Big Wheel</span><span class="w">red</span><span class="w">blue</span><span class="w">green</span><span class="w">orange</span><span class="w">pink</span><span class="w">yellow</span><span class="w">one–six</span></div></div><div class="r"><div class="k">Structure</div><div>Hello, how are you? — I'm fine, thank you. &nbsp;·&nbsp; Where's number (one)? — It's on (red).</div></div><div class="r"><div class="k">Form</div><div>Where's = Where is. Answer: It's on + colour. Numbers 1–6; colours as single words (no article).</div></div><div class="r"><div class="k">Pron. watch</div><div>colour words clear &amp; short; count crisply <i>one–two–three</i>; the /ð/ in <i>the</i> Big Wheel.</div></div><div class="r"><div class="k">Phonics</div><div><b>Phonics Hero 2.0</b> (our reading workbook) — review sounds <b>s a t i p n c k e</b> with the Jolly gesture, blend CVC (<i>s-a-t → sat</i>) with a meaning picture, then <b>speed-read p.3–9</b>. Children already know the 26 sounds — this is learning to READ (GMF1-style).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“Show me number three — how many fingers?” → three fingers up.</div><div class="ccq" style="margin-bottom:10px">“Red — is it a number or a colour?” → a colour!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> First lesson of the year. Children may know a few colours/numbers passively; the family words &amp; the Big Wheel are new. They already know all 26 phonic sounds — reading starts now. Pre-readers of text — everything lands through pictures, song, movement &amp; the puppet.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Wriggling / can't sit long on the carpet</td><td>Keep every stage 5–8 min; use <b>Freeze!</b> and the volume-arm; a movement stage always follows a sitting one.</td></tr><tr><td>Too shy to speak</td><td>The puppet asks, not you; non-verbal (point / wave / show fingers) is a full answer at this stage.</td></tr><tr><td>Colours &amp; numbers get mixed up</td><td>Always pair them on the Big Wheel — point to the pod, chorus <i>number three… it's on orange</i>.</td></tr><tr><td>Answers in Russian</td><td>Accept warmly, recast in English once with the puppet — don't correct, just model.</td></tr><tr><td>Sticker frenzy</td><td>Stickers only at the table, one at a time, on your countdown: <i>5…4…3…</i></td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Genki Disco Warm Up ⚡</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door with <span class="sp">🦝 Speaky</span>: <span class="en">Hello! How are you?</span> — quick high-five, straight onto the carpet.</p><p><span class="ph">Dance it out.</span> <span class="game">▶ Genki Disco Warm Up (01)</span> — hands up/down, jump, clap, turn around, wiggle. <span class="sp">🦝 Speaky</span> bring the energy UP, then trick them: <span class="en">Speaky says… FREEZE!</span> while they're already moving, then <span class="en">And… sit down!</span></p><p><span class="ph">Today (kid-friendly).</span> Show today's picture: <span class="en">Hello! Look — a big, big wheel with our new friends!</span> Hold up the Big Wheel mat / poster.</p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 (01) · Speaky puppet · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">4–9′</td>
+        <td class="stage"><div class="nm">Warm review · last time</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Who are we?</span> First-day names: <span class="en">Hello! I'm… — Hello!</span> point to yourself and to a friend, wave hello. Everyone waves back.</p><p><span class="game">▶ Colour flash.</span> flash colour cards you'll meet on the wheel — children shout any colour they know &amp; clap once. Non-verbal fine.</p></td>
+        <td class="mat">name/colour flashcards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–17′</td>
+        <td class="stage"><div class="nm">Phonics Hero 🔤 ⚡</div><div class="zone">carpet, moving</div></td>
+        <td class="flow"><p><span class="ph">① Recognise / review.</span> <b>Phonics Hero lessons 1–3</b> — sounds <b>s · a · t · i · p · n · c · k · e</b>. <span class="sp">🦝 Speaky</span> shows each with its <b>Jolly action</b> (gesture technique); children do the action and NAME the sound — they already know all 26. We don't drill bare sounds: teacher voices, children gesture.</p><p><span class="ph">② Blend / build.</span> Slide the sounds into a word: <i>s-a-t → sat, p-i-n → pin, c-a-t → cat</i> — big arm-sweep + a meaning picture. <span class="game">▶ Blend &amp; jump — Speaky says a CVC word slowly; children blend it with the actions and jump on the whole word.</span></p><p><span class="ph">③ Speed reading.</span> open <b>Phonics Hero 2.0</b> (our workbook) <b>p.3–9</b> — finger under each word, read the row FAST as a group (whole words, playful, celebrate speed — real reading from zero, GMF1-style).</p><p><span class="ph">Tricky words:</span> read <i>the · a · I · is</i> together as whole words (we don't sound tricky words out).</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> workbook p.3–9 · sound-action cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–25′</td>
+        <td class="stage"><div class="nm">Curiosity input · family + wheel</div><div class="zone">carpet → Big Wheel mat</div></td>
+        <td class="flow"><p><span class="ph">Guess who!</span> Slowly slide a family flashcard out of an envelope — <span class="en">Who's this? Guess!</span> Children guess; reveal + BIG wave: <span class="en">Hello, Mimi!</span> Do all four (Mummy · Daddy · Mimi · Dylan) + the Big Wheel, whole class echoes.</p><p><span class="ph">Numbers 1–6 + colours.</span> Point to each coloured pod — big gesture per colour, then count the pods together: <span class="en">What colour? Red! What number? One!… one, two, three, four, five, six!</span></p><p><span class="ig" style="display:block">📱 <b>Coursebook app (Macmillan digital):</b> put the interactive <b>Big Wheel</b> (numbers 1–6 on coloured pods) on screen — children point &amp; answer <i>It's on red!</i>. The spinning wheel itself comes from the coursebook app; our songs &amp; games add to it, we don't reproduce it.</span></p><p><span class="diff"><span class="sup">💪 Support:</span> point &amp; copy the puppet. <span class="ext">⭐ Extension:</span> say the full <i>It's on red</i>.</span></p></td>
+        <td class="mat">family flashcards · Big Wheel mat · coursebook app · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">25–30′</td>
+        <td class="stage"><div class="nm">Game · Island Hopping (23)</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Island Hopping</span> Genki <b>Island Hopping</b>: each child gets a little pile of family/colour mini-cards (their “island”). <span class="sp">🦝 Speaky</span> calls <span class="en">Show me… Mimi! Show me… red!</span> — children who have it hold it UP and say it; everyone else copies.</p><p>Calm, seated start — all cards up every round, nobody waits. Speed up the calls.</p></td>
+        <td class="mat">family &amp; colour mini-cards (a set per child)</td>
+      </tr>
+
+      <tr>
+        <td class="min">30–36′</td>
+        <td class="stage"><div class="nm">Game · Dinosaur Danger! (12) ⚡</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="game">▶ Dinosaur Danger!</span> Genki <b>Dinosaur Danger!</b>: children on the “safe” side. <span class="sp">🦝 Speaky</span> holds up a pod card: children make the sentence <span class="en">It's on red!</span> — then when Speaky roars <span class="en">Dinosaur!</span>, everyone runs to the other safe side. Freeze on landing.</p><p>Number-then-colour calls link the two: <span class="en">Number three… it's on orange!</span> Slow-mo + Freeze keep it safe.</p><p><p><span class="asr">✔ <b>Assess:</b> who says <i>It's on + colour</i>, who only runs? Note it — no pressure, just for next time.</span></p></p></td>
+        <td class="mat">Big Wheel pod cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">36–42′</td>
+        <td class="stage"><div class="nm">Reading corner 📖</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read-aloud.</span> Read our own Speak &amp; Smile story-book <b>«Speaky's Family»</b> aloud — our mascot's own family (Mummy · Daddy · brothers · sister · Grandma · Grandpa). A warm, calm read after the running game — bonds with Speaky and recycles today's family words.</p><p>Hold up each spread — children look at the pictures, do the gestures and echo the key line <span class="en">Hello, Mummy! Hello, Daddy!</span>. Pre-readers: they <b>listen, watch &amp; repeat</b>, they don't read the words.</p><p>Point to each family member — children wave and say <i>Hello, (Mummy)!</i>; count the meerkats on the last page (1→6) to fold in today's numbers.</p></td>
+        <td class="mat"><b>«Speaky's Family»</b> (Speak &amp; Smile Genki story-book · chfam.pdf) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">42–48′</td>
+        <td class="stage"><div class="nm">Song — Big Wheel + Genki Numbers</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Sing &amp; move.</span> Play the <b>Big Wheel song</b> (CD1 T17). Teach the actions: big circle arms (Big Wheel), 1–2–3 fingers, point to flashcards then to yourself, wave hello, thumbs-up on <span class="en">I'm fine, thank you!</span> Sing it 3× — normal, super-quiet, giant voice.</p><p><span class="ph">Count &amp; jump.</span> Play <b>Genki «Numbers 1 To 12»</b> (08) — jump &amp; count, showing fingers 1→6. A pure counting boost on today's numbers.</p></td>
+        <td class="mat"><b>Big Wheel song</b> (CD1 T17) · <b>Genki «Numbers»</b> (08)</td>
+      </tr>
+
+      <tr>
+        <td class="min">48–54′</td>
+        <td class="stage"><div class="nm">Table time · Pupil's Book p.3 🧘</div><div class="zone">tables</div></td>
+        <td class="flow"><p><span class="ph">Listen, point &amp; say.</span> Point to the numbers on the Big Wheel as Mimi &amp; Dylan speak; children point in their books and join the counting.</p><p><span class="ph">Stickers + favourite.</span> Children stick the number stickers on the right pods, then <span class="en">Which number do you like? Circle it!</span> circle their favourite number.</p><p><span class="ph">Answer.</span> <span class="en">Where's number one? — It's on red! Where's number five? — It's on pink!</span> children answer or point.</p></td>
+        <td class="mat">Pupil's Book p.3 · number stickers · crayons</td>
+      </tr>
+
+      <tr>
+        <td class="min">54–58′</td>
+        <td class="stage"><div class="nm">Cool-down · I can… + Goodbye 🧘</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">How do you feel?</span> Eyes closed — <span class="en">Did you like it today?</span> show a happy or sad face (an honest signal, no copying).</p><p><span class="game">▶ Turn &amp; tell:</span> <span class="en">Say hello to your partner and show one number with your fingers.</span> — tell your talk-partner / show me (no writing).</p><p>“I can…” badge: <span class="en">I can count to six! I can say hello!</span> colour one star.</p><p>Fantastic first lesson, superstars! <span class="ph">Goodbye song.</span> Sing the <b>Goodbye song</b> (CD1 T3) with <span class="sp">🦝 Speaky</span> — wave to every friend.</p></td>
+        <td class="mat">“I can…” badges · crayons · <b>Goodbye song</b> (CD1 T3) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door with <span class="sp">🦝 Speaky</span>. Show <span class="sp">🦝 Speaky</span> at the door: hold up fingers for a number, or wave and say <span class="en">Hello!</span> Answered / shown → high-five out: <span class="en">Bye-bye! See you next time!</span></p></td>
+        <td class="mat">number cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Приложение (тренажёр Mimi 3)</b> — family · numbers 1–6 · colours, 5–7 мин (со взрослым). <b>Phonics Hero 2.0 (наша тетрадь) — стр. 3–9:</b> звуки <b>s a t i p n c k e</b> + блендинг CVC (speed reading) (speed reading — прочитать/показать, Jolly-жесты дома). + дома посчитать по-английски 1–6 и назвать любимый цвет.</p></td>
+        <td class="mat">Mimi 3 app · Phonics Hero 2.0 p.3–9</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Mimi's Wheel 3 · Unit 1 “Hello” · Lesson 1 (Vocabulary · family · numbers · colours) — Genki-recipe plan (pre-primary)</span>
+    <span>Pupil's Book p.3 (CD1 T17) · Big Wheel = coursebook app · КТП урок 1 · Phonics Hero 2.0 (PH ур.1–3 · s a t i p n c k e · стр.3–9). Genki songs: Numbers 1 To 12 (08) · Colours (52). Games: Island Hopping (23) · Dinosaur Danger! (12). Reading: S&S story-book «Speaky's Family» (chfam).</span>
+  </div>
+</div>

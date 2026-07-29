@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MW3 · Unit 1 · Lesson 5 — Speaking / Life skills (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🎡 Mimi's Wheel 3 · Unit 1 “Hello” · Lesson 5 — Speaking · Hello, how are you?</div>
+    <div class="s">Pre-primary / early years (~5–6 y.o., <b>pre-readers</b>) · 60 min · <b>Genki recipe</b> · Disco warm-up → phonics → curiosity input → Genki games → song → craft · TPR + puppet · <b>Phonics Hero 2.0</b> (reading: recognise → blend → speed-read) · carpet + tables</div>
+    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 5</span><span class="chip">🗣 Life skills · greeting friends politely</span><span class="chip">~8 pupils · mingle + pairs</span><span class="chip">PH 11 (big reading · p.28–29) · Genki: How Are You?(04)·What's Your Name?(03) · game: Monster Game(5)</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, children will be better able to <b>greet a friend and reply</b> in a short exchange: “Hello! How are you? — I'm fine, thank you. Goodbye!” — a life skill: saying hello, thank you and goodbye kindly.</li><li><span class="lb">Subsidiary.</span> Role-play meeting friends with the puppet; sing <b>Genki «How Are You?»</b> (04) &amp; <b>«What's Your Name?»</b> (03); add feeling faces; <b>Phonics Hero</b> — big reading (all 26 sounds), speed-read p.28–29; run the <b>Monster Game</b> (5).</li><li><span class="lb">Personal.</span> First speaking-focus lesson — never force a shy child; non-verbal (wave, thumbs) counts. Model with the puppet first, then let them try. Keep exchanges ~20 seconds, then swap.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>start a greeting — “Hello! How are you?”;</li><li>reply politely — “I'm fine, thank you.”;</li><li>say goodbye kindly — “Goodbye! See you!”</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Disco energy</span><span>Wonder</span><span>Play &amp; move</span><span>Sing</span><span>Show me</span><span>Happy goodbye</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">Hello</span><span class="w">How are you?</span><span class="w">I'm fine, thank you</span><span class="w">Goodbye</span><span class="w">fine</span><span class="w">sleepy</span><span class="w">happy</span></div></div><div class="r"><div class="k">Structure</div><div>Hello! How are you? — I'm fine, thank you. — Goodbye! See you!</div></div><div class="r"><div class="k">Form</div><div>Fixed social chunks: greeting → reply → thanks → goodbye. Feeling words swap in the reply.</div></div><div class="r"><div class="k">Pron. watch</div><div>friendly, sing-song intonation; <i>thank you</i> /ˈθæŋk juː/; wave on <i>Goodbye</i>.</div></div><div class="r"><div class="k">Phonics</div><div><b>Phonics Hero 2.0</b> — <b>big reading</b>: review all 26 sounds, read CVC words &amp; the first little sentences, then <b>speed-read p.28–29</b>. First proper reading!</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“My friend says hello — do I turn away or say hello back?” → say hello back!</div><div class="ccq" style="margin-bottom:10px">“Someone gives you a pencil — what do you say?” → thank you!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Greetings met in L1–L2; children can produce parts of the exchange. Today builds the whole polite routine as a life skill. Reading has reached whole words &amp; first sentences (Phonics Hero p.28–29).</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Shy — won't speak to a peer</td><td>Start by greeting the puppet, then you, then a friend; non-verbal is fine at first.</td></tr><tr><td>Forgets <i>thank you</i></td><td>Puppet always adds it with a bow; children copy the bow + words.</td></tr><tr><td>Same partner / clumps</td><td>Music on = walk, music off = greet the nearest person (Mix-Pair).</td></tr><tr><td>Exchange fizzles out</td><td>Give the 3-step frame with finger-counting: hello (1) · how are you (2) · thank you (3).</td></tr><tr><td>Over-excited mingling</td><td>Small space, walking feet, Freeze on the tambourine.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Genki Disco Warm Up ⚡</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door with <span class="sp">🦝 Speaky</span>: <span class="en">Hello! How are you?</span> — quick high-five, straight onto the carpet.</p><p><span class="ph">Dance it out.</span> <span class="game">▶ Genki Disco Warm Up (01)</span> — hands up/down, jump, clap, turn around, wiggle. <span class="sp">🦝 Speaky</span> bring the energy UP, then trick them: <span class="en">Speaky says… FREEZE!</span> while they're already moving, then <span class="en">And… sit down!</span></p><p><span class="ph">Today (kid-friendly).</span> Show today's picture: <span class="en">Hello, hello! Wave to a friend! Now blow them a kiss hello!</span> Warm, silly greetings, then dance.</p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 (01) · Speaky puppet · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">4–9′</td>
+        <td class="stage"><div class="nm">Warm review · last time</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Feeling chorus.</span> point to a face card → whole class replies <span class="en">I'm fine, thank you!</span> Swap feelings fast (happy · sleepy · fine).</p><p><span class="ph">Names.</span> quick names round: <span class="en">Hello! What's your name? — I'm…</span> — the meeting frame we'll build on today.</p></td>
+        <td class="mat">feeling-face cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–17′</td>
+        <td class="stage"><div class="nm">Phonics Hero 🔤 ⚡</div><div class="zone">carpet, moving</div></td>
+        <td class="flow"><p><span class="ph">① Recognise / review.</span> <b>Phonics Hero lesson 11 · big reading</b> — sounds <b>review all 26 sounds — first read</b>. <span class="sp">🦝 Speaky</span> shows each with its <b>Jolly action</b> (gesture technique); children do the action and NAME the sound — they already know all 26. We don't drill bare sounds: teacher voices, children gesture.</p><p><span class="ph">② Blend / build.</span> Read short CVC words &amp; the first little sentences on the page — blend any sticky one together first. <span class="game">▶ Speed-read race — beat Speaky's clap-clock reading the row of words.</span></p><p><span class="ph">③ Speed reading.</span> open <b>Phonics Hero 2.0</b> (our workbook) <b>p.28–29</b> — finger under each word, read the row FAST as a group (whole words, playful, celebrate speed — real reading from zero, GMF1-style).</p><p><span class="ph">Tricky words:</span> read <i>you · your</i> together as whole words (we don't sound tricky words out).</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> workbook p.28–29 · sound-action cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–26′</td>
+        <td class="stage"><div class="nm">Curiosity input · the polite greeting</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Watch the puppet.</span> Speaky peeks shyly: <span class="en">Ooh — a new friend! How do we say hello nicely?</span> With the puppet, act meeting a friend: <span class="en">Hello! — Hello! — How are you? — I'm fine, thank you! — Goodbye!</span> Point to the 3 steps on your fingers.</p><p><span class="ph">Feeling faces.</span> try different feelings: sleepy voice, happy voice, giant voice — children copy the puppet.</p></td>
+        <td class="mat">Speaky puppet · feeling-face cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">26–31′</td>
+        <td class="stage"><div class="nm">Game · Stand up if…</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="game">▶ Stand &amp; greet.</span> <span class="en">Stand up if you're HAPPY today!</span> children who feel that way stand, wave, and say <span class="en">Hello! I'm happy!</span> Everyone reacts every round.</p><p>Mix feelings fast (happy · sleepy · fine) — lots of standing, sitting, waving.</p></td>
+        <td class="mat">feeling-face cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">31–37′</td>
+        <td class="stage"><div class="nm">Game · Monster Game (5) ⚡</div><div class="zone">floor space</div></td>
+        <td class="flow"><p><span class="game">▶ Monster Game</span> Genki <b>Monster Game</b>: children on the “safe” side want to cross to the other side. Speaky is the friendly monster in the middle. To pass, a child must greet it: <span class="en">Hello! How are you? — I'm fine, thank you!</span> If they do the full exchange, they run across; freeze on the safe side.</p><p>The best greeting game — everyone crosses several times, greeting each run.</p><p><span class="diff"><span class="sup">💪 Support:</span> wave + say <i>Hello!</i> to cross. <span class="ext">⭐ Extension:</span> add <i>Goodbye! See you!</i> as you run.</span></p></td>
+        <td class="mat">open floor · Speaky (monster)</td>
+      </tr>
+
+      <tr>
+        <td class="min">37–42′</td>
+        <td class="stage"><div class="nm">Reading corner 📖</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read-aloud.</span> Read our own Speak &amp; Smile story-book <b>«Good Morning, Speaky»</b> aloud — Speaky wakes up and greets everyone through the day — the perfect calm read for our greetings life-skills lesson, straight after the running Monster Game.</p><p>Hold up each spread — children look at the pictures, do the gestures and echo the key line <span class="en">Good morning! Hello! How are you?</span>. Pre-readers: they <b>listen, watch &amp; repeat</b>, they don't read the words.</p><p>Show each page — children wave and greet back <i>Good morning! Hello!</i>; add the feeling on the reply page (<i>I'm fine, thank you!</i>) with a happy face.</p></td>
+        <td class="mat"><b>«Good Morning, Speaky»</b> (Speak &amp; Smile Genki story-book · brhello.pdf) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">42–48′</td>
+        <td class="stage"><div class="nm">Song — Genki «How Are You?» + «What's Your Name?»</div><div class="zone">carpet, mingle</div></td>
+        <td class="flow"><p><span class="ph">Meet &amp; greet.</span> Play <b>Genki «How Are You?»</b> (04): children mingle; on the pause they meet the nearest friend and do the full exchange <span class="en">Hello! How are you? — I'm fine, thank you! Goodbye!</span></p><p><span class="ph">Names too.</span> Play <b>Genki «What's Your Name?»</b> (03) — add names to the meeting: <span class="en">Hello! What's your name? — I'm…</span> New partner each pause + a handshake.</p><p><p><span class="asr">✔ <b>Assess:</b> who does all 3 steps? who needs the puppet nearby? Note it — celebrate every hello.</span></p></p></td>
+        <td class="mat"><b>Genki «How Are You?»</b> (04) · <b>«What's Your Name?»</b> (03) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">48–54′</td>
+        <td class="stage"><div class="nm">Table time · make a hello card 🧘</div><div class="zone">tables</div></td>
+        <td class="flow"><p><span class="ph">Draw &amp; colour.</span> Children draw &amp; colour a little “Hello!” card for a friend or family member (a happy face, their favourite colour).</p><p><span class="ph">Give it kindly.</span> in pairs, give the card: <span class="en">Hello! This is for you! — Thank you!</span> — a calm, kind finish that practises the words.</p></td>
+        <td class="mat">paper · crayons</td>
+      </tr>
+
+      <tr>
+        <td class="min">54–58′</td>
+        <td class="stage"><div class="nm">Cool-down · I can… + Goodbye 🧘</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">How do you feel?</span> Eyes closed — <span class="en">Did you like it today?</span> show a happy or sad face (an honest signal, no copying).</p><p><span class="game">▶ Turn &amp; tell:</span> <span class="en">Greet your partner the whole way — hello, how are you, thank you, goodbye!</span> — tell your talk-partner / show me (no writing).</p><p>“I can…” badge: <span class="en">I can say hello and goodbye nicely!</span> colour one star.</p><p>Such kind, friendly children! <span class="ph">Goodbye song.</span> Sing the <b>Goodbye song</b> (CD1 T3) with <span class="sp">🦝 Speaky</span> — wave to every friend.</p></td>
+        <td class="mat">“I can…” badges · crayons · <b>Goodbye song</b> (CD1 T3) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door with <span class="sp">🦝 Speaky</span>. At the door, do the whole greeting with <span class="sp">🦝 Speaky</span>: hello → how are you → thank you → goodbye. Answered / shown → high-five out: <span class="en">Bye-bye! See you next time!</span></p></td>
+        <td class="mat">— · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Приложение (тренажёр Mimi 3)</b> — hello · how are you · thank you · goodbye, 5–7 мин (со взрослым). <b>Phonics Hero 2.0 (наша тетрадь) — стр. 28–29:</b> большое чтение — CVC-слова и первые предложения (speed reading — прочитать/показать, Jolly-жесты дома). + дома поздороваться и попрощаться с семьёй по-английски.</p></td>
+        <td class="mat">Mimi 3 app · Phonics Hero 2.0 p.28–29</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Mimi's Wheel 3 · Unit 1 “Hello” · Lesson 5 (Speaking · Life skills · greetings) — Genki-recipe plan (pre-primary)</span>
+    <span>greetings role-play · КТП урок 5 · Phonics Hero 2.0 (PH ур.11 · большое чтение · стр.28–29). Genki songs: How Are You? (04) · What's Your Name? (03). Game: Monster Game (5) — квинтэссенция игры-приветствия. Reading: S&S story-book «Good Morning, Speaky» (brhello).</span>
+  </div>
+</div>

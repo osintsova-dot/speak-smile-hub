@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MW3 · Unit 3 · Lesson 4 — Story Song (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🎡 Mimi's Wheel 3 · Unit 3 “The park” · Lesson 4 — Story Song «Fly the kite»</div>
+    <div class="s">Pre-primary / early years (~5–6 y.o., <b>pre-readers</b>) · 60 min · <b>Genki recipe</b> · Disco warm-up → phonics → curiosity input → Genki games → song → craft · TPR + puppet · <b>Phonics Hero 2.0</b> (reading: recognise → blend → speed-read) · carpet + tables</div>
+    <div class="meta"><span class="chip">Week 09.11–15.11 · Lesson 4</span><span class="chip">🎵 Song focus · «Fly the kite» · order the objects 1–4</span><span class="chip">~8 pupils · circle + tables</span><span class="chip">PH 18 (ue · er · ar · p.49–51) · Genki: Numbers(08)·What's The Weather Like?(10)</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, children will be better able to <b>sing &amp; act out the story song «Fly the kite»</b> (CD1 T42) and <b>put the park objects in order 1–4</b>, saying “There's the (pond)! There are the (trees)!” as each one comes.</li><li><span class="lb">Subsidiary.</span> Mime the story with an imaginary kite; sing <b>«Fly the kite»</b> with actions; trace numbers 1–4 &amp; match to the picture sequence (PB p.56); sing <b>Genki «Numbers»</b> (08) &amp; <b>«What's The Weather Like?»</b> (10); read <b>«What's the weather?»</b>; <b>Phonics Hero</b> — sounds <b>ue · er · ar</b>, speed-read p.49–51.</li><li><span class="lb">Personal.</span> Sing in stages — join first with actions, then words. Repeat several times without it feeling repetitive by changing HOW (loud / quiet / fast / slow-mo). TB tip: pairs check each other's number-order.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>sing «Fly the kite» with actions;</li><li>put the park objects in order 1–4;</li><li>say “There's the…! There are the…!” for each object.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Disco energy</span><span>Wonder</span><span>Play &amp; move</span><span>Sing</span><span>Show me</span><span>Happy goodbye</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">kite</span><span class="w">windy</span><span class="w">one</span><span class="w">two</span><span class="w">three</span><span class="w">four</span><span class="w">trees</span><span class="w">flowers</span><span class="w">path</span><span class="w">grass</span><span class="w">pond</span></div></div><div class="r"><div class="k">Structure</div><div>(song) It's very windy! There's the (pond)! There are the (trees)! Help us, please! &nbsp;·&nbsp; numbers 1–4</div></div><div class="r"><div class="k">Form</div><div>Recycled frames in a musical sequence; objects counted &amp; ordered 1→4.</div></div><div class="r"><div class="k">Pron. watch</div><div>sing on the beat; clear <i>one–two–three–four</i>; happy <i>Help us, please!</i></div></div><div class="r"><div class="k">Phonics</div><div><b>Phonics Hero 2.0</b> — review <b>ue · er · ar</b> → blend (<i>ar → farm, er → sister, ue → true</i>) → <b>speed-read p.49–51</b>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“In the song — is the kite up because it's WINDY or SUNNY?” → windy!</div><div class="ccq" style="margin-bottom:10px">“Which is object number ONE in the song?” → the pond! (check on the page)</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Song language met in L2 and the story in L3 — today deepens both. Numbers 1–6 are secure from Units 1–2; ordering 1–4 is the new step. Pre-readers order by <b>pictures &amp; numbers</b>, not text.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Bored by repetition of the song</td><td>Change the mode each time: whisper, giant-voice, super-fast, slow-motion.</td></tr><tr><td>Number order muddled</td><td>Order together first with big cards on the floor, then pairs check (TB tip).</td></tr><tr><td>Only a few sing</td><td>Give everyone an action job; sing the actions even without the words.</td></tr><tr><td>Cards get grabbed</td><td>One card per child; hold it up, place it in the line on your countdown.</td></tr><tr><td>Energy too high after song</td><td>Freeze + a slow breathing verse before the table.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Genki Disco Warm Up ⚡</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door with <span class="sp">🦝 Speaky</span>: <span class="en">Hello! How are you?</span> — quick high-five, straight onto the carpet.</p><p><span class="ph">Dance it out.</span> <span class="game">▶ Genki Disco Warm Up (01)</span> — hands up/down, jump, clap, turn around, wiggle. <span class="sp">🦝 Speaky</span> bring the energy UP, then trick them: <span class="en">Speaky says… FREEZE!</span> while they're already moving, then <span class="en">And… sit down!</span></p><p><span class="ph">Today (kid-friendly).</span> Show today's picture: <span class="en">Hello! Grab your kite… hold the string… look UP! Ready to fly it?</span> Mime holding a kite string, look up, then dance.</p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 (01) · Speaky puppet · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">4–9′</td>
+        <td class="stage"><div class="nm">Warm review · last time</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Story flash.</span> mime yesterday's story fast: windy sway, fly kite, stuck!, cheer — class calls <span class="en">It's windy! The kite's in the tree!</span></p><p><span class="game">▶ Park sentences.</span> say what's in the park with <span class="en">There's a pond!</span> / <span class="en">There are flowers!</span> to warm the frames.</p></td>
+        <td class="mat">story cards · park flashcards</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–17′</td>
+        <td class="stage"><div class="nm">Phonics Hero 🔤 ⚡</div><div class="zone">carpet, moving</div></td>
+        <td class="flow"><p><span class="ph">① Recognise / review.</span> <b>Phonics Hero lesson 18 (again)</b> — sounds <b>ue · er · ar</b>. <span class="sp">🦝 Speaky</span> shows each with its <b>Jolly action</b> (gesture technique); children do the action and NAME the sound — they already know all 26. We don't drill bare sounds: teacher voices, children gesture.</p><p><span class="ph">② Blend / build.</span> Build the word: <i>ar → park, er → water, ue → glue</i> — arm-sweep + a picture. Park link: <i>p-ar-k · wat-er</i>! <span class="game">▶ Capital / sound hop — Speaky calls a sound; children jump to its card and blend a word.</span></p><p><span class="ph">③ Speed reading.</span> open <b>Phonics Hero 2.0</b> (our workbook) <b>p.49–51</b> — finger under each word, read the row FAST as a group (whole words, playful, celebrate speed — real reading from zero, GMF1-style).</p><p><span class="ph">Tricky words:</span> read <i>want · because</i> together as whole words (we don't sound tricky words out).</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> workbook p.49–51 · sound-action cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–26′</td>
+        <td class="stage"><div class="nm">Play with an imaginary kite + «Fly the kite» in stages</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Imaginary kite.</span> Mime holding a kite string, looking up at the sky — children copy. Use the song language: <span class="en">It's very windy! There's the pond! Help us, please!</span></p><p><span class="ph">Sing &amp; move.</span> Play <b>«Fly the kite»</b> (CD1 T42). Round 1 — join the ACTIONS only (fly kite, point to pond/trees). Round 2 — add words. Round 3 — a silly voice.</p><p><span class="diff"><span class="sup">💪 Support:</span> do the actions, hum along. <span class="ext">⭐ Extension:</span> lead an action for the class.</span></p></td>
+        <td class="mat"><b>«Fly the kite»</b> song (CD1 T42) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">26–32′</td>
+        <td class="stage"><div class="nm">Game · Order the objects 1–4</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Song line-up.</span> Lay the song's object cards (pond · trees · grass · kite) mixed, face-up. Play the song; <span class="en">What's first? The pond!</span> together decide the order 1→4; then hand 4 children a card each to stand in the line while the class claps &amp; says each: <span class="en">There's the pond! There are the trees!</span></p><p><div class="ig">🎮 <b>Pairs check (TB tip):</b> partners look at each other's PB numbers 1–4 and check they match the song order — thumbs-up when they agree.</div></p><p><p><span class="asr">✔ <b>Assess:</b> do they order by the numbers &amp; pictures? Prompt with the song if stuck.</span></p></p></td>
+        <td class="mat">song object cards ×4 · <b>«Fly the kite»</b> (CD1 T42)</td>
+      </tr>
+
+      <tr>
+        <td class="min">32–38′</td>
+        <td class="stage"><div class="nm">Reading corner 📖</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read-aloud.</span> Read our own Speak &amp; Smile story-book <b>«What's the weather?»</b> aloud — Speaky checks the sky — sunny, rainy, windy. A calm read that lands the story's WINDY day (the wind flies the kite!) right after the song.</p><p>Hold up each spread — children look at the pictures, do the gestures and echo the key line <span class="en">What's the weather? It's windy!</span>. Pre-readers: they <b>listen, watch &amp; repeat</b>, they don't read the words.</p><p>Turn each page — children do the weather action (wiggle fingers for rain, sway for wind, big circle for sun) and shout the weather; land hard on <i>It's windy!</i> to tie back to the kite.</p></td>
+        <td class="mat"><b>«What's the weather?»</b> (Speak &amp; Smile Genki story-book · weather.pdf) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">38–46′</td>
+        <td class="stage"><div class="nm">Song — perform + Genki «Numbers» + «Weather»</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Act to the song.</span> Play <b>«Fly the kite»</b> again; children act it right through (fly kite, point to each object in order, cheer). Everyone moves the whole time.</p><p><span class="ph">Count &amp; weather.</span> Sing <b>Genki «Numbers 1 To 12»</b> (08) — count the objects 1→4; then <b>«What's The Weather Like?»</b> (10) — a quick windy reprise.</p></td>
+        <td class="mat"><b>«Fly the kite»</b> (CD1 T42) · <b>Genki «Numbers»</b> (08) · <b>«Weather»</b> (10)</td>
+      </tr>
+
+      <tr>
+        <td class="min">46–56′</td>
+        <td class="stage"><div class="nm">Table time · trace &amp; order (PB p.56) 🧘</div><div class="zone">tables</div></td>
+        <td class="flow"><p><span class="ph">Sing &amp; point.</span> Books open; play the song once more — children point to each object as it comes and join in softly.</p><p><span class="ph">Trace &amp; match.</span> children <b>trace the numbers 1–4</b> and match each number to the right picture to show the song's order — say <span class="en">There's the pond! There are the trees!</span> as they go.</p></td>
+        <td class="mat">Pupil's Book p.56 · CD1 T42 · crayons</td>
+      </tr>
+
+      <tr>
+        <td class="min">56–60′</td>
+        <td class="stage"><div class="nm">Cool-down · I can… + Goodbye 🧘</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">How do you feel?</span> Eyes closed — <span class="en">Did you like it today?</span> show a happy or sad face (an honest signal, no copying).</p><p><span class="game">▶ Turn &amp; tell:</span> <span class="en">Show your partner your favourite «Fly the kite» action.</span> — tell your talk-partner / show me (no writing).</p><p>“I can…” badge: <span class="en">I can sing «Fly the kite»! I can order 1–4!</span> colour one star.</p><p>Beautiful singing, stars! <span class="ph">Goodbye song.</span> Sing the <b>Goodbye song</b> (CD1 T3) with <span class="sp">🦝 Speaky</span> — wave to every friend.</p></td>
+        <td class="mat">“I can…” badges · crayons · <b>Goodbye song</b> (CD1 T3) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door with <span class="sp">🦝 Speaky</span>. At the door, do one «Fly the kite» action for <span class="sp">🦝 Speaky</span> to copy. Answered / shown → high-five out: <span class="en">Bye-bye! See you next time!</span></p></td>
+        <td class="mat">— · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Приложение (тренажёр Mimi 3)</b> — «Fly the kite» words · There's the… / There are the… · 1–4, 5–7 мин (со взрослым). <b>Phonics Hero 2.0 (наша тетрадь) — стр. 49–51:</b> звуки <b>ue · er · ar</b> + блендинг (закрепление) (speed reading — прочитать/показать, Jolly-жесты дома). + дома спеть/показать «Fly the kite» взрослому.</p></td>
+        <td class="mat">Mimi 3 app · Phonics Hero 2.0 p.49–51</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Mimi's Wheel 3 · Unit 3 “The park” · Lesson 4 (Story Song · «Fly the kite») — Genki-recipe plan (pre-primary)</span>
+    <span>Pupil's Book p.56 (CD1 T42) · КТП урок 20 · Phonics Hero 2.0 (PH ур.18 · ue·er·ar · стр.49–51, закрепление). Book song: «Fly the kite» (CD1 T42). Genki songs: Numbers (08) · What's The Weather Like? (10). Game: Order the objects 1–4. Reading: S&S story-book «What's the weather?» (weather). TB tip: checking in pairs.</span>
+  </div>
+</div>

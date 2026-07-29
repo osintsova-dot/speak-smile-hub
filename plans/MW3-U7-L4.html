@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MW3 · Unit 7 · Lesson 4 — Story Song (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🎡 Mimi's Wheel 3 · Unit 7 “Town” · Lesson 4 — Story Song · Dinosaurs in space</div>
+    <div class="s">Pre-primary / early years (~5–6 y.o., <b>pre-readers</b>) · 60 min · <b>Genki recipe</b> · Disco warm-up → phonics → curiosity input → Genki games → song → craft · TPR + puppet · <b>Phonics Hero 2.0</b> (reading: recognise → blend → speed-read) · carpet + tables</div>
+    <div class="meta"><span class="chip">Week 15.03–21.03 · Lesson 4</span><span class="chip">🎵 Song focus · Dinosaurs in space · I want to learn about (space)</span><span class="chip">~8 pupils · circle + tables</span><span class="chip">PH 21–22 Magic E (p.58–63) · Genki: What Do You Want To Do?(59) · game: Dino says! · Ball &amp; Music(16)</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, children will be better able to <b>sing &amp; act the story song «Dinosaurs in space»</b> with full actions, and <b>say what they want to do</b>: “I want to play with dinosaur toys. I want to learn about space.”</li><li><span class="lb">Subsidiary.</span> Re-tell the story &amp; order the story cards; play <b>Dino says!</b> (Simon Says) &amp; <b>Ball &amp; Music</b> (16); sing <b>Genki «What Do You Want To Do?»</b> (59); match Mimi &amp; Dylan to what they want to do &amp; draw something they want to learn about (PB p.48); <b>Phonics Hero</b> — Magic E (a-e i-e o-e u-e) consolidation, speed-read p.58–63.</li><li><span class="lb">Personal.</span> Sing in stages — join first with actions (dino arms, rocket arms), then words. Repeat several times without it feeling repetitive by changing HOW (whisper, super-fast, giant voice). After the big acting, use the calm breathing reset before the table.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>sing «Dinosaurs in space» with the dino &amp; rocket actions;</li><li>say “I want to play with dinosaur toys!”;</li><li>say “I want to learn about (space / animals).”</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Disco energy</span><span>Wonder</span><span>Play &amp; move</span><span>Sing</span><span>Show me</span><span>Happy goodbye</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">I want to learn about…</span><span class="w">I want to play with…</span><span class="w">dinosaurs</span><span class="w">space</span><span class="w">toys</span><span class="w">books</span><span class="w">go</span><span class="w">learn</span><span class="w">play</span><span class="w">read</span></div></div><div class="r"><div class="k">Structure</div><div>I want to learn about (space). I want to play with (dinosaur) toys. &nbsp;·&nbsp; And go to the cinema with you!</div></div><div class="r"><div class="k">Form</div><div><b>I want to</b> + verb: <i>learn about</i> + topic / <i>play with</i> + toys / <i>read</i> + books / <i>go to</i> + place. Saying what I want to do.</div></div><div class="r"><div class="k">Pron. watch</div><div>sing on the beat; big dino stomp on <i>dinosaurs</i>, rocket-arms up on <i>space</i>; happy confident <i>I want to learn about space!</i></div></div><div class="r"><div class="k">Phonics</div><div><b>Phonics Hero 2.0</b> — Magic E again, a bit faster: blend (<i>cake, bike, home, cube, tube, nose</i>) → <b>speed-read p.58–63</b>. Reading review, GMF1-style.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“I want to LEARN about dinosaurs — do I read &amp; find out, or run away?” → read &amp; find out!</div><div class="ccq" style="margin-bottom:10px">“Dino toys — do I play with them or eat them?” → play with them!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Story met in L3 — today deepens it through the song. Children know the ten places &amp; the Simon-Says format from earlier units. Reading continues on Magic E. Pre-readers follow the song by <b>pictures &amp; actions</b>, not text.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Bored by repetition of the song</td><td>Change the mode each time: whisper, super-fast, slow-motion, giant voice.</td></tr><tr><td>Only a few sing</td><td>Give everyone an action job (dino arms / rocket arms); sing the actions even without the words.</td></tr><tr><td>Dino says — same few win</td><td>Mistake = help, not out; keep everyone standing and re-joining so all mime.</td></tr><tr><td>Over-excited after acting</td><td>Use the breathing reset — <i>breathe in… breathe out…</i> four times before the table.</td></tr><tr><td>Says the toy, not the sentence</td><td>Puppet models <i>I want to play with… DINOSAUR TOYS!</i>; child copies with the mime.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Genki Disco Warm Up ⚡</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door with <span class="sp">🦝 Speaky</span>: <span class="en">Hello! How are you?</span> — quick high-five, straight onto the carpet.</p><p><span class="ph">Dance it out.</span> <span class="game">▶ Genki Disco Warm Up (01)</span> — hands up/down, jump, clap, turn around, wiggle. <span class="sp">🦝 Speaky</span> bring the energy UP, then trick them: <span class="en">Speaky says… FREEZE!</span> while they're already moving, then <span class="en">And… sit down!</span></p><p><span class="ph">Today (kid-friendly).</span> Show today's picture: <span class="en">Hello! Dinosaurs… in SPACE! Stomp like a dinosaur… now blast off like a rocket! What do you want to do today?</span> Dino stomp + rocket blast-off.</p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 (01) · Speaky puppet · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">4–9′</td>
+        <td class="stage"><div class="nm">Warm review · last time</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Story flash.</span> re-tell «A day out» fast: mime the places; every time you say <i>Let's go to the…!</i>, class mimes it big.</p><p><span class="ph">Order the cards.</span> lay the story cards jumbled — children put them in order (shopping centre → toy shop → bookshop → cinema).</p></td>
+        <td class="mat">story cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–17′</td>
+        <td class="stage"><div class="nm">Phonics Hero 🔤 ⚡</div><div class="zone">carpet, moving</div></td>
+        <td class="flow"><p><span class="ph">① Recognise / review.</span> <b>Phonics Hero review · lessons 21–22 · Magic E</b> — sounds <b>a-e · i-e · o-e · u-e &nbsp;(silent e = long vowel)</b>. <span class="sp">🦝 Speaky</span> shows each with its <b>Jolly action</b> (gesture technique); children do the action and NAME the sound — they already know all 26. We don't drill bare sounds: teacher voices, children gesture.</p><p><span class="ph">② Blend / build.</span> Build the word: <i>n-o-se → nose, t-u-be → tube, k-i-te → kite, ca-ke → cake</i> — silent-e tap + sweep + a picture. <span class="game">▶ Speed-read race — beat Speaky's clap-clock reading the Magic-E row.</span></p><p><span class="ph">③ Speed reading.</span> open <b>Phonics Hero 2.0</b> (our workbook) <b>p.58–63</b> — finger under each word, read the row FAST as a group (whole words, playful, celebrate speed — real reading from zero, GMF1-style).</p><p><span class="ph">Tricky words:</span> read <i>have · give</i> together as whole words (we don't sound tricky words out).</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> workbook p.58–63 · sound-action cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–24′</td>
+        <td class="stage"><div class="nm">Curiosity input · «Dinosaurs in space» song</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Listen for the wants.</span> Ask <span class="en">What does Mimi want to do? What does Dylan want to learn about?</span> Play the song/video once. Children listen &amp; spot what Mimi &amp; Dylan want to do.</p><p><span class="ph">Name them.</span> Check together — <i>play with dino toys · read books about space · go to the cinema · learn about dinosaurs &amp; space</i>. Teach the two big actions: dino arms + rocket-up.</p></td>
+        <td class="mat">story song audio/video · story cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–31′</td>
+        <td class="stage"><div class="nm">Game · Dino says! (Simon Says) ⚡</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="game">▶ Dino says!</span> Say <span class="en">Dino says… learn about space!</span> children do the dino stomp. Say just <i>Play with dino toys</i> (no “Dino says”) — they stand still, hands on heads. Mistake = a friendly wobble, keep going. Practise all the wants.</p></td>
+        <td class="mat">Speaky · open space</td>
+      </tr>
+
+      <tr>
+        <td class="min">31–37′</td>
+        <td class="stage"><div class="nm">Reading corner 📖</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read-aloud.</span> Read our own Speak &amp; Smile story-book <b>«Where Do You Live?»</b> aloud — A calm places read to settle after Dino says — Speaky's map of town, a gentle recall of where we can go and what we want to do.</p><p>Hold up each spread — children look at the pictures, do the gestures and echo the key line <span class="en">Where do you want to go? I want to go here!</span>. Pre-readers: they <b>listen, watch &amp; repeat</b>, they don't read the words.</p><p>Children point to Speaky's map and say <span class="en">I want to go to the…!</span> — a quiet recall of the day's language.</p></td>
+        <td class="mat"><b>«Where Do You Live?»</b> (Speak &amp; Smile Genki story-book · gtwdl.pdf) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">37–44′</td>
+        <td class="stage"><div class="nm">Song — perform «Dinosaurs in space» + Genki (59)</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Sing &amp; act.</span> Play <b>«Dinosaurs in space»</b>: Round 1 — actions only (dino arms, rocket-up, read a book, point to a friend); Round 2 — add the words; Round 3 — giant voice. Two volunteers are Mimi &amp; Dylan; everyone moves throughout.</p><p><span class="ph">Want-to boost.</span> Sing <b>Genki «What Do You Want To Do?»</b> (59) — a joyful <i>I want to…</i> boost that matches the song's language perfectly.</p></td>
+        <td class="mat">story song audio/video · <b>Genki «What Do You Want To Do?»</b> (59)</td>
+      </tr>
+
+      <tr>
+        <td class="min">44–54′</td>
+        <td class="stage"><div class="nm">Table time · Pupil's Book p.48 🧘</div><div class="zone">tables</div></td>
+        <td class="flow"><p><span class="ph">Listen, point &amp; sing.</span> Play the song; children point to the pictures &amp; sing along (karaoke version when confident).</p><p><span class="ph">Match &amp; say.</span> children match Mimi &amp; Dylan to what they want to do, then point &amp; say <span class="en">Mimi wants to learn about dinosaurs. Dylan wants to learn about space.</span></p><p><span class="ph">Draw &amp; say.</span> children draw one thing THEY want to learn about, then tell a partner <span class="en">I want to learn about… dogs!</span></p><p><span class="ph">Calm down.</span> a slow breathing reset — <span class="en">Breathe in… breathe out…</span> four times — before we finish.</p></td>
+        <td class="mat">Pupil's Book p.48 · story song audio · crayons</td>
+      </tr>
+
+      <tr>
+        <td class="min">54–58′</td>
+        <td class="stage"><div class="nm">Cool-down · I can… + Goodbye 🧘</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">How do you feel?</span> Eyes closed — <span class="en">Did you like it today?</span> show a happy or sad face (an honest signal, no copying).</p><p><span class="game">▶ Turn &amp; tell:</span> <span class="en">Tell your partner “I want to learn about…!”</span> — tell your talk-partner / show me (no writing).</p><p>“I can…” badge: <span class="en">I can sing «Dinosaurs in space»! I want to learn about space!</span> colour one star.</p><p>Beautiful singing, dino-stars! <span class="ph">Goodbye song.</span> Sing the <b>Goodbye song</b> (CD1 T3) with <span class="sp">🦝 Speaky</span> — wave to every friend.</p></td>
+        <td class="mat">“I can…” badges · crayons · <b>Goodbye song</b> (CD1 T3) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door with <span class="sp">🦝 Speaky</span>. At the door, <span class="sp">🦝 Speaky</span> asks <span class="en">What do you want to learn about?</span> — big happy answer! Answered / shown → high-five out: <span class="en">Bye-bye! See you next time!</span></p></td>
+        <td class="mat">— · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Приложение (тренажёр Mimi 3)</b> — Dinosaurs in space · I want to learn about… · I want to play with…, 5–7 мин (со взрослым). <b>Phonics Hero 2.0 (наша тетрадь) — стр. 58–63:</b> звуки <b>Magic E</b> a-e i-e o-e u-e + блендинг (speed reading — прочитать/показать, Jolly-жесты дома). + дома спеть/показать «Dinosaurs in space» взрослому и сказать, что хочешь узнать.</p></td>
+        <td class="mat">Mimi 3 app · Phonics Hero 2.0 p.58–63</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Mimi's Wheel 3 · Unit 7 “Town” · Lesson 4 (Story Song · Dinosaurs in space) — Genki-recipe plan (pre-primary)</span>
+    <span>Pupil's Book p.48 (story song audio) · КТП урок 52 · Phonics Hero 2.0 (PH ур.21–22 review · Magic E · стр.58–63). Songs: «Dinosaurs in space» (story song) · Genki «What Do You Want To Do?» (59) — точно на структуру. Games: Dino says! (Simon Says) · Ball &amp; Music (16). Reading: S&amp;S story-book «Where Do You Live?» (gtwdl).</span>
+  </div>
+</div>

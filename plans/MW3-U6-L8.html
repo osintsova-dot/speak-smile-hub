@@ -1,0 +1,222 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MW3 · Unit 6 · Lesson 8 — Project (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🎡 Mimi's Wheel 3 · Unit 6 “Meals” · Lesson 8 — Project · My favourite meal menu</div>
+    <div class="s">Pre-primary / early years (~5–6 y.o., <b>pre-readers</b>) · 60 min · <b>Genki recipe</b> · Disco warm-up → phonics → curiosity input → Genki games → song → craft · TPR + puppet · <b>Phonics Hero 2.0</b> (reading: recognise → blend → speed-read) · carpet + tables</div>
+    <div class="meta"><span class="chip">Week 01.03–07.03 · Lesson 8</span><span class="chip">🎨 Project · My favourite meal · paper-plate menu</span><span class="chip">~8 pupils · make + present</span><span class="chip">PH Part 2 review (les.15–16 · p.39–45) · songs: «What do you have for breakfast?»(T5)·Do You Like Food?(12)</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, children will have <b>made and presented a “My favourite meal” paper-plate menu</b> — drawing their food and saying: “This is my favourite meal. I have pizza and salad for dinner!” in a mini café gallery.</li><li><span class="lb">Subsidiary.</span> Recycle all ten foods &amp; <i>What do you have for…? / I have…</i> through a creative product; sing <b>Genki «Do You Like Food?»</b> (12) &amp; the language song; take turns presenting like a café; <b>Phonics Hero</b> — Part 2 review, digraphs from lessons 15–16 (<b>ng·oo · ch·sh·th</b>), speed-read our story pages p.39–45; a happy end-of-unit gallery.</li><li><span class="lb">Personal.</span> Project = process &amp; pride, not perfection. Model the making &amp; the presenting sentences first. Keep making calm; keep presenting short (my meal + 2 foods each) so no long waiting.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>draw my favourite meal on a plate;</li><li>present it — “I have pizza and salad for dinner!”;</li><li>say “Well done!” to a friend's meal.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Disco energy</span><span>Wonder</span><span>Play &amp; move</span><span>Sing</span><span>Show me</span><span>Happy goodbye</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">toast</span><span class="w">chicken</span><span class="w">pancakes</span><span class="w">salad</span><span class="w">yogurt</span><span class="w">rice</span><span class="w">fish</span><span class="w">pizza</span><span class="w">soup</span><span class="w">spaghetti</span><span class="w">breakfast</span><span class="w">lunch</span><span class="w">dinner</span><span class="w">my favourite meal</span><span class="w">This is…</span><span class="w">Well done</span></div></div><div class="r"><div class="k">Structure</div><div>This is my favourite meal. I have (pizza) and (salad) for (dinner). &nbsp;·&nbsp; (audience) Yummy! Well done!</div></div><div class="r"><div class="k">Form</div><div><b>This is my favourite meal.</b> + <b>I have</b> + food(s) + <b>for</b> + meal. Proud whole-plate output.</div></div><div class="r"><div class="k">Pron. watch</div><div>proud, clear <i>This is my favourite meal!</i>; happy <i>Yummy! Well done!</i></div></div><div class="r"><div class="k">Phonics</div><div><b>Phonics Hero 2.0</b> — Part 2 review: the digraphs from lessons 15–16 — <b>ng · oo</b> and <b>ch · sh · th</b>. Re-blend a few (<i>r-i-ng → ring, m-oo-n → moon, ch-i-p → chip, sh-i-p → ship, th-i-n → thin</i>) → <b>speed-read our story pages p.39–45</b>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“Do we draw ALL the food we know, or our favourite meal?” → my favourite meal!</div><div class="ccq" style="margin-bottom:10px">“Your friend shows their plate — what do we say?” → Yummy! Well done!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> All Unit 6 language is consolidated (L7 review done). Children can name the ten foods, say what they have for a meal, and order politely; reading loops through the last Part-2 digraph stories. They know the making &amp; presenting routines from earlier projects.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Can't decide a meal</td><td>Model with the Big Wheel / flashcards first: pick a meal (breakfast/lunch/dinner) then 2–3 foods.</td></tr><tr><td>Making takes over the lesson</td><td>A ready paper plate + food picture-stickers to add; time-cap with a visible timer + countdown.</td></tr><tr><td>Freezes when presenting</td><td>Say it together with the puppet first; showing the plate + one food is enough.</td></tr><tr><td>Audience not listening</td><td>Give a job: everyone says <i>Yummy! Well done!</i> after each child.</td></tr><tr><td>Long waiting to present</td><td>Present as a fast café carousel / small groups at once — my meal + 2 foods each.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Genki Disco Warm Up ⚡</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door with <span class="sp">🦝 Speaky</span>: <span class="en">Hello! How are you?</span> — quick high-five, straight onto the carpet.</p><p><span class="ph">Dance it out.</span> <span class="game">▶ Genki Disco Warm Up (01)</span> — hands up/down, jump, clap, turn around, wiggle. <span class="sp">🦝 Speaky</span> bring the energy UP, then trick them: <span class="en">Speaky says… FREEZE!</span> while they're already moving, then <span class="en">And… sit down!</span></p><p><span class="ph">Today (kid-friendly).</span> Show today's picture: <span class="en">Good morning, chefs! Today we make our OWN favourite meal on a plate — what's YOUR favourite food?</span> Show a finished model plate, then dance.</p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 (01) · Speaky puppet · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">4–9′</td>
+        <td class="stage"><div class="nm">Warm review · last time</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Food in colour.</span> sing <b>Genki «Do You Like Food?»</b> (12) with mimes; lay the food flashcards on the Big Wheel.</p><p><span class="ph">Say your meal.</span> <span class="en">What do you have for dinner?</span> children answer with a meal + 2 foods.</p></td>
+        <td class="mat">Big Wheel mat · food cards · <b>Genki «Do You Like Food?»</b> (12)</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–17′</td>
+        <td class="stage"><div class="nm">Phonics Hero 🔤 ⚡</div><div class="zone">carpet, moving</div></td>
+        <td class="flow"><p><span class="ph">① Recognise / review.</span> <b>Phonics Hero · Part 2 review (lessons 15–16)</b> — sounds <b>ng · oo &nbsp;·&nbsp; ch · sh · th</b>. <span class="sp">🦝 Speaky</span> shows each with its <b>Jolly action</b> (gesture technique); children do the action and NAME the sound — they already know all 26. We don't drill bare sounds: teacher voices, children gesture.</p><p><span class="ph">② Blend / build.</span> Re-blend: <i>r-i-ng → ring, m-oo-n → moon, ch-i-p → chip, sh-i-p → ship, th-i-n → thin</i> — proud, fluent! <span class="game">▶ Star read — read a digraph word from our story page to Speaky to earn your reading star.</span></p><p><span class="ph">③ Speed reading.</span> open <b>Phonics Hero 2.0</b> (our workbook) <b>p.39–45</b> — finger under each word, read the row FAST as a group (whole words, playful, celebrate speed — real reading from zero, GMF1-style).</p><p><span class="ph">Tricky words:</span> read review <i>Yellow</i> tricky words together as whole words (we don't sound tricky words out).</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> workbook p.39–45 · sound-action cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–22′</td>
+        <td class="stage"><div class="nm">Model the product + sentences</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Watch &amp; copy.</span> Show how to make the paper-plate meal — draw / stick 2–3 foods for a favourite meal. Model presenting with the puppet: <span class="en">This is my favourite meal. I have pizza and salad for dinner!</span> Everyone says it together once.</p></td>
+        <td class="mat">model paper-plate meal · Big Wheel mat · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">22–38′</td>
+        <td class="stage"><div class="nm">Make · My favourite meal plate 🧘</div><div class="zone">tables</div></td>
+        <td class="flow"><p><span class="ph">Make it.</span> Children draw / stick their favourite foods on a paper plate and decorate. Write/trace the food words if they can.</p><p><span class="ph">Rehearse as they work.</span> go round: <span class="en">Tell me — what's your favourite meal? What do you have?</span> help each child rehearse their meal quietly at the table.</p><p><span class="diff"><span class="sup">💪 Support:</span> draw &amp; name the foods with the puppet. <span class="ext">⭐ Extension:</span> join them: <i>I have pizza AND salad for dinner.</i></span></p></td>
+        <td class="mat">paper plates · food picture-stickers · crayons</td>
+      </tr>
+
+      <tr>
+        <td class="min">38–42′</td>
+        <td class="stage"><div class="nm">Wiggle break · sing &amp; move ⚡</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Shake out.</span> A quick <b>«What do you have for breakfast?»</b> (CD3 T5) + <b>Genki «Do You Like Food?»</b> (12) with actions to shake out before the gallery — stand, sing, freeze.</p></td>
+        <td class="mat"><b>«What do you have for breakfast?»</b> (CD3 T5) · <b>Genki «Do You Like Food?»</b> (12)</td>
+      </tr>
+
+      <tr>
+        <td class="min">42–52′</td>
+        <td class="stage"><div class="nm">Café gallery · present &amp; celebrate</div><div class="zone">carpet, circle</div></td>
+        <td class="flow"><p><span class="game">▶ Show &amp; say.</span> In a fast café carousel, each child holds up their plate: <span class="en">This is my favourite meal. I have pizza and salad for dinner!</span> The audience claps &amp; says <span class="en">Yummy! Well done!</span></p><p><span class="ph">Pairs → circle.</span> pairs first (say it to your partner), then a few to the whole circle — keeps waiting short, everyone speaks.</p><p><p><span class="asr">✔ <b>Assess:</b> who says their meal with <i>I have… and… for…</i>? who needs the puppet? — a lovely end-of-unit picture of progress.</span></p></p></td>
+        <td class="mat">finished paper-plate meals · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–57′</td>
+        <td class="stage"><div class="nm">Cool-down · I can… + Goodbye 🧘</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">How do you feel?</span> Eyes closed — <span class="en">Did you like it today?</span> show a happy or sad face (an honest signal, no copying).</p><p><span class="game">▶ Turn &amp; tell:</span> <span class="en">Show your partner your plate and say two foods on it.</span> — tell your talk-partner / show me (no writing).</p><p>“I can…” badge: <span class="en">I made it! I can say my favourite meal!</span> colour one star.</p><p>What amazing chefs — I'm so proud of you! <span class="ph">Goodbye song.</span> Sing the <b>Goodbye song</b> (CD1 T3) with <span class="sp">🦝 Speaky</span> — wave to every friend.</p></td>
+        <td class="mat">“I can…” badges · crayons · <b>Goodbye song</b> (CD1 T3) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door with <span class="sp">🦝 Speaky</span>. At the door, tell <span class="sp">🦝 Speaky</span> your favourite meal: <span class="en">I have pizza and salad for dinner!</span> Answered / shown → high-five out: <span class="en">Bye-bye! See you next time!</span></p></td>
+        <td class="mat">plates to take home · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Приложение (тренажёр Mimi 3)</b> — my favourite meal · say my meal, 5–7 мин (со взрослым). <b>Phonics Hero 2.0 (наша тетрадь) — стр. 39–45:</b> повторение Части 2 — диграфы <b>ng·oo · ch·sh·th</b> (speed reading по нашим страницам) (speed reading — прочитать/показать, Jolly-жесты дома). + показать свою тарелку дома и рассказать: “This is my favourite meal. I have…”.</p></td>
+        <td class="mat">Mimi 3 app · Phonics Hero 2.0 p.39–45</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Mimi's Wheel 3 · Unit 6 “Meals” · Lesson 8 (Project · My favourite meal menu) — Genki-recipe plan (pre-primary)</span>
+    <span>КТП урок 48 · Phonics Hero 2.0 (повторение Части 2 · ур.15–16 · ng·oo · ch·sh·th · стр.39–45). Проект «My favourite meal» — тарелка-меню + презентация (café gallery). Songs: «What do you have for breakfast?» (CD3 T5) · Genki Do You Like Food? (12).</span>
+  </div>
+</div>

@@ -1,0 +1,222 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MW3 · Unit 9 · Lesson 6 — Values · Content · Culture (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🎡 Mimi's Wheel 3 · Unit 9 “Bugs” · Lesson 6 — Values · Content · Culture · caring for our world</div>
+    <div class="s">Pre-primary / early years (~5–6 y.o., <b>pre-readers</b>) · 60 min · <b>Genki recipe</b> · Disco warm-up → phonics → curiosity input → Genki games → song → craft · TPR + puppet · <b>Phonics Hero 2.0</b> (reading: recognise → blend → speed-read) · carpet + tables</div>
+    <div class="meta"><span class="chip">Week 17.05–23.05 · Lesson 70 (L6)</span><span class="chip">💛 Values caring for our world · Content butterfly life cycle · Culture the ant &amp; the grasshopper</span><span class="chip">~8 pupils · circle + tables</span><span class="chip">PH finale · Phonics Hero DIPLOMA (p.91) · Genki: Do You Like Animals?(13)</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, children will be better able to <b>value caring for our world</b> (nature · animals · little bugs · family · friends), understand the <b>life cycle of a butterfly</b> (egg → caterpillar → chrysalis → butterfly), and enjoy the culture story <b>«The ant and the grasshopper»</b> — and earn their <b>Phonics Hero Diploma</b>.</li><li><span class="lb">Subsidiary.</span> Values — sing <b>«I care for our world»</b> (CD4 T26) &amp; say what they care for; Content — <b>mime the butterfly life cycle</b> &amp; number the stages (CD4 T27); Culture — act out <b>«The ant and the grasshopper»</b> (CD4 T28, work vs play); <b>Phonics Hero finale</b> — each child reads their line &amp; earns the <b>Diploma (p.91)</b>.</li><li><span class="lb">Personal.</span> Keep the three mini-blocks crisp with song/puppet bridges. Values &amp; culture through DOING (mime the life cycle, act the ant &amp; grasshopper) not talking-at. The Phonics Diploma is a big proud moment — make it feel special. Every child cares-for-something, mimes the life cycle, and reads their diploma line.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>say what I care for — “I care for little bugs!”;</li><li>mime &amp; order the butterfly life cycle (egg → caterpillar → chrysalis → butterfly);</li><li>act the ant &amp; the grasshopper — work &amp; play.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Disco energy</span><span>Wonder</span><span>Play &amp; move</span><span>Sing</span><span>Show me</span><span>Happy goodbye</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">I care for…</span><span class="w">nature</span><span class="w">animals</span><span class="w">bugs</span><span class="w">family</span><span class="w">friends</span><span class="w">trees</span><span class="w">flowers</span><span class="w">egg</span><span class="w">caterpillar</span><span class="w">chrysalis</span><span class="w">butterfly</span><span class="w">leaf</span><span class="w">summer</span><span class="w">winter</span><span class="w">work</span><span class="w">play</span></div></div><div class="r"><div class="k">Structure</div><div>I care for (nature)! &nbsp;·&nbsp; They're eggs on a leaf. It's a caterpillar. &nbsp;·&nbsp; I want to (play)! I'm (hungry)!</div></div><div class="r"><div class="k">Form</div><div><b>I care for</b> + noun. Life-cycle naming: <i>egg → caterpillar → chrysalis → butterfly</i>. Story chunks: <i>I want to play! I've got food!</i></div></div><div class="r"><div class="k">Pron. watch</div><div>warm <i>I care for our world</i>; wonder in <i>a beautiful butterfly!</i>; contrast busy Ant / lazy Grasshopper voices.</div></div><div class="r"><div class="k">Phonics</div><div><b>Phonics Hero 2.0</b> — FINALE. The <b>Phonics Hero Diploma (p.91)</b>: each child reads their diploma line to the class &amp; to Speaky, then colours/signs their diploma — <i>I am a Phonics Hero — I can READ!</i> A proud, special moment near the end of the course.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“Do we care for little bugs, or squash them?” → care for them!</div><div class="ccq" style="margin-bottom:10px">“A caterpillar goes into a chrysalis and comes out as a…?” → a beautiful butterfly!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> All the bug language is secure (L1–L5); reading is at its diploma celebration. Children handle three short blocks well if each is active &amp; bridged by a song. <i>Being curious / caring</i> and the life cycle build on the whole unit. The ant-and-grasshopper drama recycles work/play, happy/sad, hungry.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>“Care for” too abstract</td><td>Make it doable: mime stroking an animal, watering a flower, gently watching a bug — praise it live as <i>caring!</i></td></tr><tr><td>Life cycle confusing</td><td>Do it as a whole-body mime: tiny egg (curl) → hungry caterpillar (wriggle &amp; grow) → still chrysalis (freeze) → butterfly (fly).</td></tr><tr><td>Culture block = just listening</td><td>Everyone is an ant (busy, carrying) or a grasshopper (playing) &amp; acts the seasons — deep/light voices.</td></tr><tr><td>Diploma rushed / one child at a time = waiting</td><td>All read together first, then a quick carousel of one line each; everyone claps every reader.</td></tr><tr><td>Three blocks overrun</td><td>Hard mini-caps; a song bridge moves everyone on.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Genki Disco Warm Up ⚡</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door with <span class="sp">🦝 Speaky</span>: <span class="en">Hello! How are you?</span> — quick high-five, straight onto the carpet.</p><p><span class="ph">Dance it out.</span> <span class="game">▶ Genki Disco Warm Up (01)</span> — hands up/down, jump, clap, turn around, wiggle. <span class="sp">🦝 Speaky</span> bring the energy UP, then trick them: <span class="en">Speaky says… FREEZE!</span> while they're already moving, then <span class="en">And… sit down!</span></p><p><span class="ph">Today (kid-friendly).</span> Show today's picture: <span class="en">Good morning! Today we care for our world — nature, animals, and all the little bugs! Show me: water a flower… stroke a puppy… watch a butterfly!</span> Mime caring, then dance.</p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 (01) · Speaky puppet · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">4–9′</td>
+        <td class="stage"><div class="nm">Warm review · last time</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Describe it.</span> quick round: describe a bug — <i>It's got wings. It's got spots!</i></p><p><span class="ph">Think back.</span> <span class="en">Were Mimi &amp; Dylan kind to the bugs?</span> (Yes!) recall that Mimi &amp; Dylan were kind &amp; polite to the bugs in the story.</p></td>
+        <td class="mat">bug cards · story cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–17′</td>
+        <td class="stage"><div class="nm">Phonics Hero 🔤 ⚡ (finale)</div><div class="zone">carpet, moving</div></td>
+        <td class="flow"><p><span class="ph">Phonics Hero DIPLOMA (p.91).</span> the big moment: open <b>p.91</b>. All read the diploma line together, then a quick carousel — each child reads their line to <span class="sp">🦝 Speaky</span> and the class claps.</p><p><span class="ph">Sign your diploma.</span> each child colours / signs their <b>Phonics Hero Diploma</b> — <i>I can READ!</i></p><p><span class="ph">Cheer.</span> a huge cheer — we are all Phonics Heroes!</p><p><span class="ph">Tricky words:</span> diploma reading (all)</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> workbook · sound-action cards · Speaky · Phonics Hero Diploma p.91 · crayons</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–25′</td>
+        <td class="stage"><div class="nm">Values · caring for our world + song</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Talk &amp; do.</span> <span class="en">Do you care for our world? What do you care for?</span> Elicit what children care for (nature · animals · bugs · family · friends). Make the point: we care for people, animals AND things.</p><p><span class="ph">Values song.</span> Sing <b>«I care for our world»</b> (CD4 T26) — mime a tree, stroke a dog, hug yourself, flutter like a butterfly. Sing 2×.</p></td>
+        <td class="mat"><b>«I care for our world»</b> (CD4 T26) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">25–33′</td>
+        <td class="stage"><div class="nm">Content · butterfly life cycle mime ⚡</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Mime the life cycle.</span> Show the four stages (egg on a leaf → caterpillar → chrysalis → butterfly). Then mime it with your whole body: <span class="en">You're a tiny egg on a leaf… now a hungry caterpillar, eat and grow… now a chrysalis, stay VERY still… now — a beautiful butterfly! Fly!</span></p><p><span class="ph">Order it.</span> children number the stages 1–4 in the air, then reprise the mime faster.</p><p><span class="diff"><span class="sup">💪 Support:</span> do the life-cycle mime. <span class="ext">⭐ Extension:</span> name each stage — <i>egg · caterpillar · chrysalis · butterfly!</i></span></p></td>
+        <td class="mat">life-cycle picture cards ×4 · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">33–43′</td>
+        <td class="stage"><div class="nm">Culture · «The ant and the grasshopper» + act</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Culture story.</span> Play <b>«The ant and the grasshopper»</b> (CD4 T28) with the story cards. Pause: in summer the Ant works &amp; the Grasshopper plays; in winter the Ant has food &amp; is happy, the Grasshopper is hungry &amp; sad.</p><p><span class="game">▶ Act it out</span> two groups — Ants (busy, carrying food, <span class="en">I'm busy!</span>) and Grasshoppers (playing, <span class="en">I want to play!</span>). Act the seasons: sunny summer → cold winter.</p><p><span class="ph">Think.</span> <span class="en">Who's happy in winter? Who's sad?</span> Was the Ant right? — a gentle talk about being ready &amp; caring.</p></td>
+        <td class="mat">story cards · <b>«The ant and the grasshopper»</b> (CD4 T28) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">43–53′</td>
+        <td class="stage"><div class="nm">Table time · Values p.96 + Content p.97 🧘</div><div class="zone">tables</div></td>
+        <td class="flow"><p><span class="ph">Colour what I care for.</span> Play the values song (CD4 T26); children colour the frames of the pictures that show things they care for (PB p.96), then draw &amp; say <span class="en">I care for my family. I care for little bugs.</span></p><p><span class="ph">Number the life cycle.</span> children listen (CD4 T27) &amp; number the stages of the butterfly life cycle 1–4, then draw &amp; colour them (PB p.97).</p></td>
+        <td class="mat">Pupil's Book p.96 &amp; p.97 · CD4 T26/T27 · crayons</td>
+      </tr>
+
+      <tr>
+        <td class="min">53–57′</td>
+        <td class="stage"><div class="nm">Cool-down · I can… + Goodbye 🧘</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">How do you feel?</span> Eyes closed — <span class="en">Did you like it today?</span> show a happy or sad face (an honest signal, no copying).</p><p><span class="game">▶ Turn &amp; tell:</span> <span class="en">Tell your partner one thing you care for.</span> — tell your talk-partner / show me (no writing).</p><p>“I can…” badge: <span class="en">I care for our world! I care for little bugs!</span> colour one star.</p><p>You are all so kind and curious — and you can READ! <span class="ph">Goodbye song.</span> Sing the <b>Goodbye song</b> (CD1 T3) with <span class="sp">🦝 Speaky</span> — wave to every friend.</p></td>
+        <td class="mat">“I can…” badges · crayons · <b>Goodbye song</b> (CD1 T3) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door with <span class="sp">🦝 Speaky</span>. At the door, tell <span class="sp">🦝 Speaky</span> one thing you care for, or name a life-cycle stage (egg · caterpillar · chrysalis · butterfly). Answered / shown → high-five out: <span class="en">Bye-bye! See you next time!</span></p></td>
+        <td class="mat">caring / life-cycle cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Приложение (тренажёр Mimi 3)</b> — caring for our world · butterfly life cycle · the ant &amp; the grasshopper, 5–7 мин (со взрослым). <b>Phonics Hero 2.0 (наша тетрадь) — стр. 91:</b> прочитать свой ДИПЛОМ Фоникс-героя дома (я умею читать!) (speed reading — прочитать/показать, Jolly-жесты дома). + дома показать взрослому жизненный цикл бабочки: egg → caterpillar → chrysalis → butterfly.</p></td>
+        <td class="mat">Mimi 3 app · Phonics Hero 2.0 p.91</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Mimi's Wheel 3 · Unit 9 “Bugs” · Lesson 6 (Values · Content · Culture · caring for our world) — Genki-recipe plan (pre-primary)</span>
+    <span>Pupil's Book p.96 (Values · CD4 T26) &amp; p.97 (Content life cycle · CD4 T27) &amp; p.98 (Culture «The ant and the grasshopper» · CD4 T28 — as carpet drama) · КТП урок 70 · Phonics Hero 2.0 FINALE — Диплом Фоникс-героя (стр.91). Songs: «I care for our world» (CD4 T26) · Genki Do You Like Animals? (13).</span>
+  </div>
+</div>

@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MW3 · Unit 7 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🎡 Mimi's Wheel 3 · Unit 7 “Town” · Lesson 1 — Vocabulary · places in my town on the Big Wheel</div>
+    <div class="s">Pre-primary / early years (~5–6 y.o., <b>pre-readers</b>) · 60 min · <b>Genki recipe</b> · Disco warm-up → phonics → curiosity input → Genki games → song → craft · TPR + puppet · <b>Phonics Hero 2.0</b> (reading: recognise → blend → speed-read) · carpet + tables</div>
+    <div class="meta"><span class="chip">Week 01.03–07.03 · Lesson 1</span><span class="chip new">✨ NEW · cinema · museum · shopping centre · swimming pool · toy shop · zoo</span><span class="chip">~8 pupils · circle + tables</span><span class="chip">PH 17–18 review (/aʊ/ ou · /ɔɪ/ oi · ue er ar · p.46–51) · Genki: Where Are You Going?(56)</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, children will be better able to <b>name six places in town</b> — cinema · museum · shopping centre · swimming pool · toy shop · zoo — and <b>match each to its colour on the Big Wheel</b>: “Where's the museum? — It's on blue!”</li><li><span class="lb">Subsidiary.</span> Clap the syllables of each place (pre-reading rhythm); play <b>Go to the zoo!</b> &amp; <b>Teddy Dancing</b> (35); listen &amp; stick the town stickers (PB p.45); play <b>Listen &amp; Memory</b>; <b>Phonics Hero</b> — review the /aʊ/ <b>ou</b> &amp; /ɔɪ/ <b>oi</b> (+ ue er ar) spellings, blend &amp; speed-read p.46–51.</li><li><span class="lb">Personal.</span> Tiny teacher-talk, big TPR — Speaky mimes a trip round town, children copy. Genki recipe: disco first, phonics early, input through curiosity, energy up in the games then down for the table. Every place gets its own big gesture and its own colour on the wheel.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>name six places in town;</li><li>say a place for a colour — “It's on blue — museum!”;</li><li>clap the syllables of a place (zoo · toy-shop · su-per-mar-ket).</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Disco energy</span><span>Wonder</span><span>Play &amp; move</span><span>Sing</span><span>Show me</span><span>Happy goodbye</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">cinema</span><span class="w">museum</span><span class="w">shopping centre</span><span class="w">swimming pool</span><span class="w">toy shop</span><span class="w">zoo</span><span class="w">red</span><span class="w">blue</span><span class="w">green</span><span class="w">orange</span><span class="w">pink</span><span class="w">yellow</span></div></div><div class="r"><div class="k">Structure</div><div>Where's the (museum)? — It's on (blue). &nbsp;·&nbsp; Go to the (zoo)! &nbsp;·&nbsp; It's a (cinema).</div></div><div class="r"><div class="k">Form</div><div><b>Where's the</b> + place → <b>It's on</b> + colour. Places named as fixed chunks (<i>shopping centre</i>, <i>swimming pool</i> = two-word places). No new tense — just naming places I know.</div></div><div class="r"><div class="k">Pron. watch</div><div>clap the syllables: <i>zoo</i> (1), <i>toy-shop / mu-se-um / ci-ne-ma</i>; keep two-word places joined: <i>shopping-centre</i>, <i>swimming-pool</i>.</div></div><div class="r"><div class="k">Phonics</div><div><b>Phonics Hero 2.0</b> (our reading workbook) — a <b>spiral review</b>: the /aʊ/ sound written <b>ou</b> (<i>out, house, town, cloud</i>) and /ɔɪ/ <b>oi</b> (<i>coin, oil, soil</i>), plus <b>ue · er · ar</b>. Show the Jolly actions, blend words with a meaning picture, then <b>speed-read p.46–51</b>. <i>town</i> &amp; <i>house</i> tie right into our unit! Reading review, GMF1-style.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“Zoo — do we see animals or buy shoes?” → animals!</div><div class="ccq" style="margin-bottom:10px">“Swimming pool — morning or swimming?” → swimming!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Colours (blue · green · orange · pink · red · yellow) &amp; greetings are secure from Units 1–6 and re-used here to pin places to the wheel. The six town places are new but very picturable/mimeable and many children know them from real life. They already know all the phonic sounds; today they REVIEW the /aʊ/ ou &amp; /ɔɪ/ oi spellings.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Two-word places get shortened</td><td>Say them as one joined chunk with two claps: <i>shopping-CENTRE</i>, <i>swimming-POOL</i> — clap the beats.</td></tr><tr><td>Colour &amp; place get muddled</td><td>Always pair them on the Big Wheel: point to the pod, chorus <i>blue… museum!</i></td></tr><tr><td>Wriggling on the carpet</td><td>Keep stages 5–8 min; a mime/movement game always follows a sitting stage; use <b>Freeze!</b>.</td></tr><tr><td>Answers in Russian</td><td>Accept warmly, recast once in English with the puppet — model, don't correct.</td></tr><tr><td>Sticker frenzy</td><td>Stickers only at the table, one at a time, on your countdown <i>5…4…3…</i></td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Genki Disco Warm Up ⚡</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door with <span class="sp">🦝 Speaky</span>: <span class="en">Hello! How are you?</span> — quick high-five, straight onto the carpet.</p><p><span class="ph">Dance it out.</span> <span class="game">▶ Genki Disco Warm Up (01)</span> — hands up/down, jump, clap, turn around, wiggle. <span class="sp">🦝 Speaky</span> bring the energy UP, then trick them: <span class="en">Speaky says… FREEZE!</span> while they're already moving, then <span class="en">And… sit down!</span></p><p><span class="ph">Today (kid-friendly).</span> Show today's picture: <span class="en">Hello! Come with me… we're going out into TOWN today! Where shall we go — the zoo? the toy shop?</span> March on the spot, then dance.</p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 (01) · Speaky puppet · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">4–9′</td>
+        <td class="stage"><div class="nm">Warm review · last time</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Colour flash.</span> flash the six colour cards — children shout the colour &amp; clap once; we'll need every colour for our Big Wheel town today.</p><p><span class="ph">Hello song.</span> round the circle: <span class="en">Hello! How are you? — I'm fine, thank you!</span> — a friendly greeting to open our new unit.</p></td>
+        <td class="mat">colour flashcards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–17′</td>
+        <td class="stage"><div class="nm">Phonics Hero 🔤 ⚡</div><div class="zone">carpet, moving</div></td>
+        <td class="flow"><p><span class="ph">① Recognise / review.</span> <b>Phonics Hero review · lessons 17–18</b> — sounds <b>ou (/aʊ/) · oi (/ɔɪ/) &nbsp;+&nbsp; ue · er · ar</b>. <span class="sp">🦝 Speaky</span> shows each with its <b>Jolly action</b> (gesture technique); children do the action and NAME the sound — they already know all 26. We don't drill bare sounds: teacher voices, children gesture.</p><p><span class="ph">② Blend / build.</span> Slide the sounds into a word: <i>ou-t → out, h-ou-se → house, t-ow-n → town, c-oi-n → coin</i> — big arm-sweep + a meaning picture (<i>town</i> &amp; <i>house</i> are our topic!). <span class="game">▶ Blend &amp; jump — Speaky says an <b>ou / oi</b> word slowly; children blend it with the actions and jump on the whole word.</span></p><p><span class="ph">③ Speed reading.</span> open <b>Phonics Hero 2.0</b> (our workbook) <b>p.46–51</b> — finger under each word, read the row FAST as a group (whole words, playful, celebrate speed — real reading from zero, GMF1-style).</p><p><span class="ph">Tricky words:</span> read <i>house · out</i> together as whole words (we don't sound tricky words out).</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> workbook p.46–51 · sound-action cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–25′</td>
+        <td class="stage"><div class="nm">Curiosity input · six places in town + wheel</div><div class="zone">carpet → Big Wheel mat</div></td>
+        <td class="flow"><p><span class="ph">Guess the place!</span> Slowly slide a place flashcard out of an envelope — <span class="en">Where are we? Guess! …the ZOO!</span> Reveal + do the BIG mime together (watch a film, swim, look at dinosaurs…), whole class echoes. Do all six (cinema · museum · shopping centre · swimming pool · toy shop · zoo).</p><p><span class="ph">Clap the syllables.</span> Clap the syllables of each place — <i>zoo</i> (one clap), <i>toy-shop</i> (two), <i>ci-ne-ma / mu-se-um</i> (three). Children guess the place from the claps.</p><p><span class="ph">Places on the wheel.</span> Lay the six flashcards on the wheel — one per colour. Point to each pod: <span class="en">Where's the museum? It's on blue! Where's the zoo? It's on red!</span></p><p><span class="ig" style="display:block">📱 <b>Coursebook app (Macmillan digital):</b> put the interactive <b>Big Wheel</b> on screen with the six town-place pods (<i>orange = toy shop · blue = museum · pink = shopping centre · yellow = swimming pool · green = cinema · red = zoo</i>) — children point &amp; answer <i>It's on blue — museum!</i>. The wheel comes from the coursebook app; our songs &amp; games add to it, we don't reproduce it.</span></p><p><span class="diff"><span class="sup">💪 Support:</span> mime &amp; copy the puppet. <span class="ext">⭐ Extension:</span> say the place for a colour — <i>It's on green — cinema!</i></span></p></td>
+        <td class="mat">place flashcards ×6 · Big Wheel mat · coursebook app · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">25–32′</td>
+        <td class="stage"><div class="nm">Game · Go to the zoo! + Teddy Dancing (35) ⚡</div><div class="zone">whole room, standing</div></td>
+        <td class="flow"><p><span class="game">▶ Go to the zoo!</span> Stick the six place flashcards on different walls. <span class="en">Go to the zoo! …Go to the swimming pool!</span> two children (then more) walk to that place, touch it and say it. Fast rounds — everyone moves.</p><p><span class="game">▶ Teddy Dancing</span> Genki <b>Teddy Dancing</b>: place mini-cards spread at the back. Music plays, children dance; music stops — everyone grabs the nearest card, mimes the place and shouts it. Repeat fast.</p></td>
+        <td class="mat">place flashcards ×6 · place mini-cards · music · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">32–38′</td>
+        <td class="stage"><div class="nm">Reading corner 📖</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read-aloud.</span> Read our own Speak &amp; Smile story-book <b>«Where Do You Live?»</b> aloud — Speaky stands on a big MAP with houses, trees, a river and a mountain — the perfect calm read to open our town unit, straight after the dancing game.</p><p>Hold up each spread — children look at the pictures, do the gestures and echo the key line <span class="en">Where do you live? I live here!</span>. Pre-readers: they <b>listen, watch &amp; repeat</b>, they don't read the words.</p><p>Turn each spread — children point to the places on Speaky's map and echo the key line <span class="en">Where do you live?</span>; on the last page find a place like ours (a house, a park) together.</p></td>
+        <td class="mat"><b>«Where Do You Live?»</b> (Speak &amp; Smile Genki story-book · gtwdl.pdf) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">38–44′</td>
+        <td class="stage"><div class="nm">Song — Genki «Where Are You Going?» + move</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Sing &amp; move.</span> Play <b>Genki «Where Are You Going?»</b> (56) — going out to places, set to music. Teach a walk-on-the-spot + a mime for each place; sing it 3× — normal, super-quiet, giant voice.</p><p>Point to the Big Wheel pods as each place comes — link place + colour while we move.</p></td>
+        <td class="mat"><b>Genki «Where Are You Going?»</b> (56) · Big Wheel mat</td>
+      </tr>
+
+      <tr>
+        <td class="min">44–54′</td>
+        <td class="stage"><div class="nm">Table time · Pupil's Book p.45 🧘</div><div class="zone">tables</div></td>
+        <td class="flow"><p><span class="ph">Listen, point &amp; repeat.</span> Play the audio (CD T15); children point to each place on the wheel in their books &amp; repeat (<i>museum… toy shop… swimming pool… shopping centre… cinema</i>). Guess the missing place behind the <b>?</b> on the wheel (<span class="en">the zoo — it's on red!</span>).</p><p><span class="ph">Stickers + Memory.</span> Play CD T16 — children stick the town stickers on the right colour pods, then play <b>Listen &amp; Memory</b> (CD T17): cover eyes, remember which place is on each colour.</p><p><span class="ph">Circle &amp; say.</span> <span class="en">Where do YOU go in your town?</span> children circle the places they go to in their own town &amp; say them.</p><p><span class="ig" style="display:block">📱 <b>Coursebook app (Macmillan digital):</b> <b>Navio App</b> — play the town-places vocabulary game and watch the <i>A day out</i> story video on screen; children tap the place they hear.</span></p></td>
+        <td class="mat">Pupil's Book p.45 · CD T15/16/17 · town stickers · crayons</td>
+      </tr>
+
+      <tr>
+        <td class="min">54–58′</td>
+        <td class="stage"><div class="nm">Cool-down · I can… + Goodbye 🧘</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">How do you feel?</span> Eyes closed — <span class="en">Did you like it today?</span> show a happy or sad face (an honest signal, no copying).</p><p><span class="game">▶ Turn &amp; tell:</span> <span class="en">Mime a place for your partner — they guess it!</span> — tell your talk-partner / show me (no writing).</p><p>“I can…” badge: <span class="en">I can name places in my town! Museum! Zoo! Cinema!</span> colour one star.</p><p>Fantastic first day of our Town unit, superstars! <span class="ph">Goodbye song.</span> Sing the <b>Goodbye song</b> (CD1 T3) with <span class="sp">🦝 Speaky</span> — wave to every friend.</p></td>
+        <td class="mat">“I can…” badges · crayons · <b>Goodbye song</b> (CD1 T3) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door with <span class="sp">🦝 Speaky</span>. Show <span class="sp">🦝 Speaky</span> at the door: mime one place in town and say it — <span class="en">the zoo!</span> Answered / shown → high-five out: <span class="en">Bye-bye! See you next time!</span></p></td>
+        <td class="mat">place cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Приложение (тренажёр Mimi 3)</b> — town places · cinema · museum · zoo · swimming pool, 5–7 мин (со взрослым). <b>Phonics Hero 2.0 (наша тетрадь) — стр. 46–51:</b> звуки <b>/aʊ/ ou</b> &amp; <b>/ɔɪ/ oi</b> (+ ue er ar) — блендинг (speed reading) (speed reading — прочитать/показать, Jolly-жесты дома). + дома показать 3 места в своём городе и назвать их по-английски.</p></td>
+        <td class="mat">Mimi 3 app · Phonics Hero 2.0 p.46–51</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Mimi's Wheel 3 · Unit 7 “Town” · Lesson 1 (Vocabulary · six places in town) — Genki-recipe plan (pre-primary)</span>
+    <span>Pupil's Book p.45 (CD T15/16/17) · Big Wheel = coursebook app (Navio) · КТП урок 49 · Phonics Hero 2.0 (PH ур.17–18 review · /aʊ/ ou · /ɔɪ/ oi · ue er ar · стр.46–51). Genki song: Where Are You Going? (56). Games: Go to the zoo! · Teddy Dancing (35). Reading: S&amp;S story-book «Where Do You Live?» (gtwdl).</span>
+  </div>
+</div>

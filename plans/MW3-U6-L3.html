@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MW3 · Unit 6 · Lesson 3 — Story (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🎡 Mimi's Wheel 3 · Unit 6 “Meals” · Lesson 3 — Story «Toast, toast, toast!»</div>
+    <div class="s">Pre-primary / early years (~5–6 y.o., <b>pre-readers</b>) · 60 min · <b>Genki recipe</b> · Disco warm-up → phonics → curiosity input → Genki games → song → craft · TPR + puppet · <b>Phonics Hero 2.0</b> (reading: recognise → blend → speed-read) · carpet + tables</div>
+    <div class="meta"><span class="chip">Week 08.02–14.02 · Lesson 3</span><span class="chip new">✨ Story · What do you have for lunch? · I want toast, please!</span><span class="chip">~8 pupils · circle + tables</span><span class="chip">PH 30 (/ɜː/ er ir ur · p.83–85) · game: 3 2 1 Jump!(34)</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, children will be better able to <b>follow &amp; enjoy the story «Toast, toast, toast!»</b> (CD3 T6) and understand <b>“What do you have for (lunch)? — I have toast.”</b> — Mimi wants only toast for every meal, until at last she tries pizza and salad!</li><li><span class="lb">Subsidiary.</span> Predict from the pictures; listen (CD3 T6) with the story cards; play <b>I want toast, please!</b> &amp; Genki <b>3 2 1 Jump!</b> (34); act tiny bits; answer story questions &amp; stick the story sticker (PB p.39); <b>Phonics Hero</b> — the /ɜː/ spellings <b>er ir ur</b>, blend &amp; speed-read p.83–85.</li><li><span class="lb">Personal.</span> Let the story breathe — enjoy the running gag <i>“Toast, toast, toast!”</i>. Willingness to try new food is the heart of it — cheer Mimi at the end when she tries pizza and salad. Give every child a food card so all are involved.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>follow the story &amp; point to what happens in each picture;</li><li>understand “What do you have for lunch? — I have toast”;</li><li>name the food Mimi &amp; Dylan have for each meal.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Disco energy</span><span>Wonder</span><span>Play &amp; move</span><span>Sing</span><span>Show me</span><span>Happy goodbye</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">What do you have for (lunch)?</span><span class="w">I have (toast)</span><span class="w">I want (toast), please</span><span class="w">toast</span><span class="w">pizza</span><span class="w">salad</span><span class="w">Toast, toast, toast!</span></div></div><div class="r"><div class="k">Structure</div><div>What do you have for breakfast/lunch/dinner? — I have (toast). &nbsp;·&nbsp; I want toast, please! &nbsp;·&nbsp; Toast, toast, toast!</div></div><div class="r"><div class="k">Form</div><div><b>What do you have for</b> + meal? → <b>I have</b> + food. <i>I want (toast), please</i> = polite request (recycled).</div></div><div class="r"><div class="k">Pron. watch</div><div>the gleeful chant <i>Toast, toast, toast!</i>; a big happy <i>I want pizza and salad!</i> at the end.</div></div><div class="r"><div class="k">Phonics</div><div><b>Phonics Hero 2.0</b> — the <b>/ɜː/</b> sound written <b>er · ir · ur</b>. Jolly action → blend (<i>h-er → her, b-ir-d → bird, t-ur-n → turn, g-ir-l → girl</i>) → <b>speed-read p.83–85</b>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“Mimi has toast for breakfast, lunch AND dinner — is she trying different food?” → no, only toast!</div><div class="ccq" style="margin-bottom:10px">“At the end Mimi tries pizza and salad — is that a good idea?” → yes — try new food!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> All ten foods &amp; <i>What do you have for…?</i> are active from L1–L2; reading continues in the Phonics Hero workbook. The story-time routine (listen · point · join in) is well established. The running joke <i>Toast, toast, toast!</i> is highly supported by picture &amp; mime.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Story audio a bit fast</td><td>Play once for fun, then again pausing on each picture; point &amp; mime as you go.</td></tr><tr><td>Children lose the thread</td><td>Use the six big story cards frame by frame; ask a yes/no picture question after each.</td></tr><tr><td>Everyone wants to jump at once</td><td>Give one food card each; only children whose food is called jump.</td></tr><tr><td>Just says the food, not the phrase</td><td>Puppet models <i>I have… TOAST!</i>; child echoes with the taste-mime.</td></tr><tr><td>Wriggling during listening</td><td>Give a job: <i>shout «Toast!» every time Mimi has toast!</i> — active listening.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Genki Disco Warm Up ⚡</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door with <span class="sp">🦝 Speaky</span>: <span class="en">Hello! How are you?</span> — quick high-five, straight onto the carpet.</p><p><span class="ph">Dance it out.</span> <span class="game">▶ Genki Disco Warm Up (01)</span> — hands up/down, jump, clap, turn around, wiggle. <span class="sp">🦝 Speaky</span> bring the energy UP, then trick them: <span class="en">Speaky says… FREEZE!</span> while they're already moving, then <span class="en">And… sit down!</span></p><p><span class="ph">Today (kid-friendly).</span> Show today's picture: <span class="en">Good morning! Mimi wants toast… toast… TOAST! For breakfast, for lunch, for dinner! Can you guess what happens?!</span> Crunch-crunch mime, then dance.</p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 (01) · Speaky puppet · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">4–9′</td>
+        <td class="stage"><div class="nm">Warm review · last time</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Meal flash.</span> quick <i>meal chorus</i>: <span class="en">What do you have for lunch? — I have fish… I have soup…</span> class mimes &amp; names each food.</p><p><span class="ph">Wheel warm-up.</span> point to a pod → chorus the food — links yesterday's language before the story.</p></td>
+        <td class="mat">Big Wheel mat · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–17′</td>
+        <td class="stage"><div class="nm">Phonics Hero 🔤 ⚡</div><div class="zone">carpet, moving</div></td>
+        <td class="flow"><p><span class="ph">① Recognise / review.</span> <b>Phonics Hero lesson 30 · /ɜː/</b> — sounds <b>er · ir · ur &nbsp;(all say /ɜː/)</b>. <span class="sp">🦝 Speaky</span> shows each with its <b>Jolly action</b> (gesture technique); children do the action and NAME the sound — they already know all 26. We don't drill bare sounds: teacher voices, children gesture.</p><p><span class="ph">② Blend / build.</span> Build the word: <i>h-er → her, b-ir-d → bird, t-ur-n → turn, g-ir-l → girl</i> — arm-sweep + a meaning picture. <span class="game">▶ Blend relay — Speaky shows an /ɜː/ word; teams blend it and race to touch its picture.</span></p><p><span class="ph">③ Speed reading.</span> open <b>Phonics Hero 2.0</b> (our workbook) <b>p.83–85</b> — finger under each word, read the row FAST as a group (whole words, playful, celebrate speed — real reading from zero, GMF1-style).</p><p><span class="ph">Tricky words:</span> read <i>of · also</i> together as whole words (we don't sound tricky words out).</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> workbook p.83–85 · sound-action cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–26′</td>
+        <td class="stage"><div class="nm">Curiosity input · Story «Toast, toast, toast!»</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Predict.</span> Show the six story cards — <span class="en">Mimi &amp; Dylan stay with Grandma &amp; Grandpa. What does Mimi want for breakfast, lunch and dinner?</span> Take 2–3 guesses (Russian OK).</p><p><span class="ph">Listen 1 — for fun.</span> Play the story (CD3 T6) with the cards. Pause on each picture — enjoy the running gag: <span class="en">What do you have for breakfast, Mimi? — Toast! And lunch? — Toast! And dinner? — Toast, toast, toast!</span> Children join the chant &amp; the foods they can.</p><p><span class="ph">Listen 2 — spot the toast.</span> <span class="en">Shout «Toast!» every time Mimi has toast!</span> children shout it &amp; do a crunch — active listening.</p><p><span class="ig" style="display:block">📱 <b>Coursebook app (Macmillan digital):</b> <b>Navio App</b> — play the meals vocabulary game and watch the <i>«Toast, toast, toast!»</i> story video on screen; children tap the food they hear.</span></p></td>
+        <td class="mat">story cards ×6 · <b>«Toast, toast, toast!»</b> (CD3 T6)</td>
+      </tr>
+
+      <tr>
+        <td class="min">26–36′</td>
+        <td class="stage"><div class="nm">Game · I want toast, please! + 3 2 1 Jump! (34) ⚡</div><div class="zone">carpet, standing / circle</div></td>
+        <td class="flow"><p><span class="game">▶ I want toast, please!</span> Hold up a food card &amp; ask <span class="en">Do you want yogurt?</span> If it's toast, children spread their arms and say <span class="en">No, thank you — I want toast, please!</span> if it's another food, they fold their arms and stay silent. Show toast most often — lots of giggles.</p><p><span class="game">▶ 3 2 1 Jump!</span> Genki <b>3 2 1 Jump!</b>: everyone in a circle, each child holds a food mini-card. Speaky calls <span class="en">Three, two, one — TOAST!</span> — every child holding that food jumps into the circle, names it, jumps back. Fast rounds, everyone jumps.</p><p><span class="diff"><span class="sup">💪 Support:</span> jump &amp; say the food. <span class="ext">⭐ Extension:</span> say the whole line <i>I have toast for lunch!</i></span></p></td>
+        <td class="mat">food cards ×10 · food mini-cards (one per child) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">36–42′</td>
+        <td class="stage"><div class="nm">Reading corner 📖</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read-aloud.</span> Read our own Speak &amp; Smile story-book <b>«Do you like food?»</b> aloud — Speaky's picnic again — a gentle re-read after the jumping game, and the perfect calm bridge on our willingness-to-try-food story: he tries everything in the basket!</p><p>Hold up each spread — children look at the pictures, do the gestures and echo the key line <span class="en">Do you like food? Yes! I try everything!</span>. Pre-readers: they <b>listen, watch &amp; repeat</b>, they don't read the words.</p><p>Turn each spread — children taste-mime each food and echo <span class="en">Do you like food? Yummy!</span>; on the last page cheer that Speaky, like Mimi, tries new food.</p></td>
+        <td class="mat"><b>«Do you like food?»</b> (Speak &amp; Smile Genki story-book · food.pdf) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">42–48′</td>
+        <td class="stage"><div class="nm">Perform · act the story «Toast, toast, toast!»</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Act it out.</span> Play the story again; children mime through it — Mimi crunching toast at every meal, Dylan trying pancakes, chicken, soup, and BIG happy pizza-and-salad at the end. Pick 2 to be Mimi &amp; Dylan; the class does the food mimes.</p><p><span class="ph">Everyone in.</span> every time Grandpa asks <i>What do you have for lunch?</i>, the whole class chants Mimi's answer <i>Toast!</i> — then cheers when she finally tries pizza.</p></td>
+        <td class="mat">story cards · food cards · <b>«Toast, toast, toast!»</b> (CD3 T6)</td>
+      </tr>
+
+      <tr>
+        <td class="min">48–54′</td>
+        <td class="stage"><div class="nm">Table time · Pupil's Book p.39 🧘</div><div class="zone">tables</div></td>
+        <td class="flow"><p><span class="ph">Story questions.</span> Point to each picture; ask the story questions — children answer yes/no: <span class="en">Does Dylan want pancakes for breakfast? — Yes! What does Mimi have for lunch? — Toast! Is Mimi happy to have pizza and salad at the end? — Yes!</span></p><p><span class="ph">Circle &amp; stick.</span> children circle the food Mimi has for every meal (toast!) and stick the story sticker.</p></td>
+        <td class="mat">Pupil's Book p.39 · story sticker · crayons</td>
+      </tr>
+
+      <tr>
+        <td class="min">53–58′</td>
+        <td class="stage"><div class="nm">Cool-down · I can… + Goodbye 🧘</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">How do you feel?</span> Eyes closed — <span class="en">Did you like it today?</span> show a happy or sad face (an honest signal, no copying).</p><p><span class="game">▶ Turn &amp; tell:</span> <span class="en">Tell your partner “What do you have for lunch?” — say a food!</span> — tell your talk-partner / show me (no writing).</p><p>“I can…” badge: <span class="en">I know the story «Toast, toast, toast!»! I try new food!</span> colour one star.</p><p>Wonderful storytellers today! <span class="ph">Goodbye song.</span> Sing the <b>Goodbye song</b> (CD1 T3) with <span class="sp">🦝 Speaky</span> — wave to every friend.</p></td>
+        <td class="mat">“I can…” badges · crayons · <b>Goodbye song</b> (CD1 T3) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door with <span class="sp">🦝 Speaky</span>. At the door, <span class="sp">🦝 Speaky</span> asks <span class="en">What do you have for dinner?</span> — you answer with a food! Answered / shown → high-five out: <span class="en">Bye-bye! See you next time!</span></p></td>
+        <td class="mat">food cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Приложение (тренажёр Mimi 3)</b> — story «Toast, toast, toast!» · What do you have for…? · I have…, 5–7 мин (со взрослым). <b>Phonics Hero 2.0 (наша тетрадь) — стр. 83–85:</b> звуки <b>/ɜː/ er ir ur</b> + блендинг (speed reading — прочитать/показать, Jolly-жесты дома). + дома «поиграть в историю»: сказать, что ты ешь на breakfast, lunch, dinner.</p></td>
+        <td class="mat">Mimi 3 app · Phonics Hero 2.0 p.83–85</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Mimi's Wheel 3 · Unit 6 “Meals” · Lesson 3 (Story «Toast, toast, toast!») — Genki-recipe plan (pre-primary)</span>
+    <span>Pupil's Book p.39 (CD3 T6/T7) · story cards · КТП урок 43 · Phonics Hero 2.0 (PH ур.30 · /ɜː/ er ir ur · стр.83–85). Games: I want toast, please! · 3 2 1 Jump! (34). Reading: S&S story-book «Do you like food?» (food).</span>
+  </div>
+</div>

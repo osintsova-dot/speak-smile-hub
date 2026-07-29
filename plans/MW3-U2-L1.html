@@ -1,0 +1,236 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MW3 · Unit 2 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🏫 Mimi's Wheel 3 · Unit 2 “School” · Lesson 1 — Vocabulary · school activities</div>
+    <div class="s">Pre-primary / early years (~5–6 y.o., <b>pre-readers</b>) · 60 min · <b>Genki recipe</b> · Disco warm-up → phonics → curiosity input → Genki games → song → craft · TPR + puppet · <b>Phonics Hero 2.0</b> (reading: recognise → blend → speed-read) · carpet + tables</div>
+    <div class="meta"><span class="chip">Week 28.09–04.10 · Lesson 9</span><span class="chip new">✨ NEW · colour · count · draw · paint · play · sing</span><span class="chip">~8 pupils · circle + tables</span><span class="chip">PH 13 (ai oa ie · p.33–35) · Genki: Colours(52) · games: Karuta(31)·Teddy Dancing(35)</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, children will be better able to <b>name six school activities</b> (colour · count · draw · paint · play · sing) and <b>match each to a Big Wheel colour</b>: “Where's (draw)? — It's on (red).”</li><li><span class="lb">Subsidiary.</span> Recycle Unit 1 numbers · colours · greetings woven into school; sing <b>Genki «Colours»</b> (52) for the wheel pods; <b>Phonics Hero</b> — digraphs <b>ai · oa · ie</b>, blend + speed-read p.33–35; stick the school-activity stickers &amp; circle a favourite activity (PB p.5).</li><li><span class="lb">Personal.</span> Tiny teacher-talk, big TPR — a clear action for every word (crayon-scribble for <i>colour</i>, count on fingers, paintbrush strokes…). Genki recipe: disco first, phonics early, input through curiosity, energy up in the games then down for the table.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>do &amp; name six school activities;</li><li>point to an activity on the Big Wheel by its colour;</li><li>answer “It's on (red).”</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Disco energy</span><span>Wonder</span><span>Play &amp; move</span><span>Sing</span><span>Show me</span><span>Happy goodbye</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">colour</span><span class="w">count</span><span class="w">draw</span><span class="w">paint</span><span class="w">play</span><span class="w">sing</span><span class="w">red</span><span class="w">blue</span><span class="w">green</span><span class="w">orange</span><span class="w">pink</span><span class="w">yellow</span></div></div><div class="r"><div class="k">Structure</div><div>Where's (draw)? — It's on (red). &nbsp;·&nbsp; (recycled) Hello, how are you? — I'm fine, thank you.</div></div><div class="r"><div class="k">Form</div><div>Where's = Where is + activity. Answer: It's on + colour. Activities as single action verbs.</div></div><div class="r"><div class="k">Pron. watch</div><div>clear action words <i>colour · count · draw · paint · play · sing</i>; linked <i>It's on…</i>; short colour words.</div></div><div class="r"><div class="k">Phonics</div><div><b>Phonics Hero 2.0</b> (our reading workbook) — <b>digraphs ai · oa · ie</b> with the Jolly gesture, blend two-letter teams (<i>r-ai-n → rain</i>) with a meaning picture, then <b>speed-read p.33–35</b>. Children know the 26 single sounds — now they read letter-teams (GMF1-style).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“I <i>draw</i> — do I use a pencil or my feet?” → a pencil!</div><div class="ccq" style="margin-bottom:10px">“Where's draw? It's on RED — is red a colour or a number?” → a colour!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> First lesson of Unit 2. Numbers, colours &amp; greetings are secure from Unit 1 (checked in the warm review). The six action verbs are new but very actable. Children read single sounds; digraphs start now. Pre-readers of text — everything lands through action, picture, song &amp; the puppet.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Wriggling / can't sit long</td><td>Every stage 5–8 min; <b>Freeze!</b> + volume-arm; a moving stage always follows a sitting one.</td></tr><tr><td>Says the colour, not the activity</td><td>Do the ACTION first every time — puppet mimes <i>draw</i>, then names it; child copies the action + word.</td></tr><tr><td>Activity + colour get muddled</td><td>Always pair on the Big Wheel — point to the pod: <i>draw… it's on RED</i>.</td></tr><tr><td>Answers in Russian</td><td>Accept warmly, recast once in English with the puppet — model, don't correct.</td></tr><tr><td>Sticker frenzy</td><td>Stickers only at the table, one at a time, on your countdown: <i>5…4…3…</i></td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Genki Disco Warm Up ⚡</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door with <span class="sp">🦝 Speaky</span>: <span class="en">Hello! How are you?</span> — quick high-five, straight onto the carpet.</p><p><span class="ph">Dance it out.</span> <span class="game">▶ Genki Disco Warm Up (01)</span> — hands up/down, jump, clap, turn around, wiggle. <span class="sp">🦝 Speaky</span> bring the energy UP, then trick them: <span class="en">Speaky says… FREEZE!</span> while they're already moving, then <span class="en">And… sit down!</span></p><p><span class="ph">Today (kid-friendly).</span> Show today's picture: <span class="en">Look — Mimi &amp; Dylan are going back to SCHOOL! What do we DO at school?</span> Mime drawing, counting, jumping — kids copy.</p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 (01) · Speaky puppet · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">4–9′</td>
+        <td class="stage"><div class="nm">Warm review · last time</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Hello &amp; count.</span> greet round the circle <span class="en">Hello! How are you? — I'm fine, thank you!</span>; count the Big Wheel pods 1→6 with fingers — Unit 1 warm-up.</p><p><span class="ph">Colour chorus.</span> point to a pod → class chorus the colour <span class="en">It's on red! It's on blue!</span> Today the wheel has SCHOOL things on the colours!</p></td>
+        <td class="mat">Big Wheel mat · colour cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–17′</td>
+        <td class="stage"><div class="nm">Phonics Hero 🔤 ⚡</div><div class="zone">carpet, moving</div></td>
+        <td class="flow"><p><span class="ph">① Recognise / review.</span> <b>Phonics Hero lesson 13</b> — sounds <b>ai · oa · ie (letter-teams)</b>. <span class="sp">🦝 Speaky</span> shows each with its <b>Jolly action</b> (gesture technique); children do the action and NAME the sound — they already know all 26. We don't drill bare sounds: teacher voices, children gesture.</p><p><span class="ph">② Blend / build.</span> Slide the team into a word: <i>r-ai-n → rain, b-oa-t → boat, p-ie → pie</i> — a big arm-sweep over the two letters + a meaning picture. <span class="game">▶ Team hop — Speaky shows a word; children blend the letter-team and jump on the whole word.</span></p><p><span class="ph">③ Speed reading.</span> open <b>Phonics Hero 2.0</b> (our workbook) <b>p.33–35</b> — finger under each word, read the row FAST as a group (whole words, playful, celebrate speed — real reading from zero, GMF1-style).</p><p><span class="ph">Tricky words:</span> read <i>come · some</i> together as whole words (we don't sound tricky words out).</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> workbook p.33–35 · sound-action cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–26′</td>
+        <td class="stage"><div class="nm">Curiosity input · school activities</div><div class="zone">carpet → Big Wheel mat</div></td>
+        <td class="flow"><p><span class="ph">Guess &amp; do.</span> Reach into a school bag and pull out a real thing — a crayon, a book, a paintbrush. <span class="en">Ooh, what's this? A crayon… I COLOUR! Colour, colour!</span> Mime the action HUGE, name it, whole class echoes with the action: colour · count · draw · paint · play · sing.</p><p><span class="ph">On the wheel.</span> Turn over an activity card on each coloured pod — big gesture per activity, then link it to its colour: <span class="en">Where's draw? It's on RED! Where's play? It's on GREEN!</span> (draw=red · colour=orange · count=pink · sing=yellow · play=green · paint=blue).</p><p><span class="ig" style="display:block">📱 <b>Coursebook app (Macmillan digital):</b> play the unit <b>videos, songs &amp; the Big Wheel</b> game on screen — the story «A new friend», the <b>Katy Kangaroo</b> song and <b>Go in and out the window</b> come from the coursebook app (Navio); our Genki songs &amp; games add to it, we don't reproduce it.</span></p><p><span class="diff"><span class="sup">💪 Support:</span> do the action &amp; copy the word. <span class="ext">⭐ Extension:</span> say the full <i>It's on (red)</i>.</span></p></td>
+        <td class="mat">school bag + real items · activity flashcards · Big Wheel mat · coursebook app · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">26–31′</td>
+        <td class="stage"><div class="nm">Game · Genki Karuta (31)</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Genki Karuta</span> Genki <b>Karuta</b>: each child has a little set of the six activity mini-cards. <span class="sp">🦝 Speaky</span> calls <span class="en">Do me… PAINT! Do me… COUNT!</span> — children who have it hold it UP, say it and DO the action; everyone copies.</p><p>Calm, seated — all cards up every round, nobody waits. Speed up the calls.</p></td>
+        <td class="mat">activity mini-cards (a set per child) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">31–37′</td>
+        <td class="stage"><div class="nm">Game · Teddy Dancing (35) ⚡</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="game">▶ Teddy Dancing</span> Genki <b>Teddy Dancing</b>: activity mini-cards spread on the floor, a cuddly Speaky at the front. <span class="sp">🦝 Speaky</span> calls an activity; children run, grab that card, do the action all the way to Speaky and hand it over: <span class="en">Sing! …I sing! Draw! …I draw!</span></p><p>Every activity called → everyone moves &amp; does the action. Big cheer each hand-over.</p></td>
+        <td class="mat">activity mini-cards ×6 · cuddly Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">37–42′</td>
+        <td class="stage"><div class="nm">Reading corner 📖</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read-aloud.</span> Read our own Speak &amp; Smile story-book <b>«Super Speaky!»</b> aloud — our mascot flies as a superhero and shows what he CAN do — jump, run, fly! A calm, joyful read after the dancing that recycles today's action words.</p><p>Hold up each spread — children look at the pictures, do the gestures and echo the key line <span class="en">I can jump! I can run!</span>. Pre-readers: they <b>listen, watch &amp; repeat</b>, they don't read the words.</p><p>Point to each action — children do the tiny action and echo <i>I can (jump)!</i>; link <i>run</i> &amp; <i>jump</i> to the school-activity cards we'll add next lesson.</p></td>
+        <td class="mat"><b>«Super Speaky!»</b> (Speak &amp; Smile Genki story-book · hero.pdf) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">42–47′</td>
+        <td class="stage"><div class="nm">Song — Genki «Colours» + activity chant</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Sing &amp; point.</span> Play <b>Genki «Colours»</b> (52) — point to each Big Wheel pod colour as it comes, then name the activity on it: <span class="en">Red… DRAW! Green… PLAY!</span> A joyful colour + activity boost.</p><p><span class="ph">Three ways.</span> Sing it 3× — normal, super-quiet, giant voice (Genki ‘3 times’ rule).</p></td>
+        <td class="mat"><b>Genki «Colours»</b> (52) · Big Wheel mat</td>
+      </tr>
+
+      <tr>
+        <td class="min">47–54′</td>
+        <td class="stage"><div class="nm">Table time · Pupil's Book p.5 🧘</div><div class="zone">tables</div></td>
+        <td class="flow"><p><span class="ph">Listen, point &amp; repeat.</span> Play the audio (CD1 T21) — Mimi &amp; Dylan name the activities; children point in their books and echo.</p><p><span class="ph">Stick &amp; Memory.</span> Play CD1 T22 — children stick the school-activity stickers on the right coloured pods; then play Memory (T23): <span class="en">Blue… PAINT! Red… DRAW!</span> eyes closed, then say the activity for a colour.</p><p><span class="ph">Circle a favourite.</span> children circle the activities they like.</p></td>
+        <td class="mat">Pupil's Book p.5 · CD1 T21/22/23 · activity stickers · crayons</td>
+      </tr>
+
+      <tr>
+        <td class="min">54–58′</td>
+        <td class="stage"><div class="nm">Cool-down · I can… + Goodbye 🧘</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">How do you feel?</span> Eyes closed — <span class="en">Did you like it today?</span> show a happy or sad face (an honest signal, no copying).</p><p><span class="game">▶ Turn &amp; tell:</span> <span class="en">Show your partner your favourite activity — do the action!</span> — tell your talk-partner / show me (no writing).</p><p>“I can…” badge: <span class="en">I can do school activities! I can say “It's on red!”</span> colour one star.</p><p>Fantastic first School lesson, superstars! <span class="ph">Goodbye song.</span> Sing the <b>Goodbye song</b> (CD1 T3) with <span class="sp">🦝 Speaky</span> — wave to every friend.</p></td>
+        <td class="mat">“I can…” badges · crayons · <b>Goodbye song</b> (CD1 T3) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door with <span class="sp">🦝 Speaky</span>. At the door, <span class="sp">🦝 Speaky</span> mimes an activity — you name it, or you mime &amp; <span class="sp">🦝 Speaky</span> names it. Answered / shown → high-five out: <span class="en">Bye-bye! See you next time!</span></p></td>
+        <td class="mat">activity cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Приложение (тренажёр Mimi 3)</b> — school activities · Where's…? It's on (colour), 5–7 мин (со взрослым). <b>Phonics Hero 2.0 (наша тетрадь) — стр. 33–35:</b> диграфы <b>ai · oa · ie</b> + блендинг (r-ai-n → rain) (speed reading — прочитать/показать, Jolly-жесты дома). + дома показать 2–3 школьных действия и назвать по-английски.</p></td>
+        <td class="mat">Mimi 3 app · Phonics Hero 2.0 p.33–35</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Mimi's Wheel 3 · Unit 2 “School” · Lesson 1 (Vocabulary · school activities) — Genki-recipe plan (pre-primary)</span>
+    <span>Pupil's Book p.5 (CD1 T21/22/23) · Big Wheel = coursebook app · КТП урок 9 · Phonics Hero 2.0 (PH ур.13 · диграфы ai·oa·ie · стр.33–35). ⚠️ Учебник даёт 6 действий в L1 (colour·count·draw·paint·play·sing); +4 в L2. Genki song: Colours (52). Games: Genki Karuta (31) · Teddy Dancing (35). Reading: S&S story-book «Super Speaky!» (hero).</span>
+  </div>
+</div>

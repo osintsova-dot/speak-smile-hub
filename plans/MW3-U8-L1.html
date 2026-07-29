@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MW3 · Unit 8 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🎸 Mimi's Wheel 3 · Unit 8 “Music” · Lesson 1 — Vocabulary · Mimi's band on the Big Wheel</div>
+    <div class="s">Pre-primary / early years (~5–6 y.o., <b>pre-readers</b>) · 60 min · <b>Genki recipe</b> · Disco warm-up → phonics → curiosity input → Genki games → song → craft · TPR + puppet · <b>Phonics Hero 2.0</b> (reading: recognise → blend → speed-read) · carpet + tables</div>
+    <div class="meta"><span class="chip">Week 29.03–04.04 · Lesson 1</span><span class="chip new">✨ NEW · guitar · recorder · tambourine · piano · maracas · drum</span><span class="chip">~8 pupils · circle + tables</span><span class="chip">PH 27 (/oʊ/ oa ow o-e · p.75–76) · Genki: What Are You Doing?(58)</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, children will be better able to <b>name six musical instruments</b> — guitar · recorder · tambourine · piano · maracas · drum — and <b>match each to its colour on the Big Wheel</b>: “Where's the guitar? — It's on red!”</li><li><span class="lb">Subsidiary.</span> Mime &amp; make the SOUND of each instrument (TPR); play <b>Say the colour!</b> &amp; <b>Teddy Dancing</b> (35); mime-sing <b>Genki «What Are You Doing?»</b> (58); <b>Phonics Hero</b> — read the /oʊ/ spellings <b>oa ow o-e</b>, blend &amp; speed-read p.75–76; stick the music stickers on the wheel &amp; play Memory (PB p.77–78).</li><li><span class="lb">Personal.</span> Tiny teacher-talk, big TPR — Speaky mimes &amp; SOUNDS every instrument, children copy. Genki recipe: disco first, phonics early, input through curiosity, energy up in the games then down for the table. Every instrument gets its own big mime, its own sound and its own colour.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>mime and name six musical instruments;</li><li>say an instrument for a colour — “It's on red — guitar!”;</li><li>join in Speaky's band story &amp; play along.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Disco energy</span><span>Wonder</span><span>Play &amp; move</span><span>Sing</span><span>Show me</span><span>Happy goodbye</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">guitar</span><span class="w">recorder</span><span class="w">tambourine</span><span class="w">piano</span><span class="w">maracas</span><span class="w">drum</span><span class="w">red</span><span class="w">blue</span><span class="w">green</span><span class="w">orange</span><span class="w">pink</span><span class="w">yellow</span></div></div><div class="r"><div class="k">Structure</div><div>Where's the (piano)? — It's on (yellow). &nbsp;·&nbsp; guitar · recorder · tambourine · piano · maracas · drum.</div></div><div class="r"><div class="k">Form</div><div><b>Where's the</b> + instrument → <b>It's on</b> + colour. Instruments as single naming words. No new tense — just naming what I can play.</div></div><div class="r"><div class="k">Pron. watch</div><div>clear final sounds: <i>guitar</i>, <i>drum</i>, <i>piano</i>; <i>maracas</i> = 3 beats ma-ra-cas; keep colour words short.</div></div><div class="r"><div class="k">Phonics</div><div><b>Phonics Hero 2.0</b> (our reading workbook) — the long <b>/oʊ/</b> sound written <b>oa · ow · o-e</b>. Show the Jolly /oa/ action, blend words (<i>b-oa-t → boat, s-n-ow → snow, h-o-me → home</i>) with a meaning picture, then <b>speed-read p.75–76</b>. Reading from zero, GMF1-style.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+<div class="ccq">“The drum — do I hit it or blow it?” → hit it! Boom boom!</div><div class="ccq" style="margin-bottom:10px">“The guitar — is it on red or on blue?” → on red!</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Late in the year — carpet &amp; story-time routines are automatic and all six colours are secure, so we pin the new instruments straight onto the coloured wheel. Instrument words are new but very mimeable &amp; each has a clear sound. Children know all 26 phonic sounds; today they read the /oʊ/ spellings.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Instrument words all new at once</td><td>One big mime + its SOUND per instrument — <i>strum</i> (guitar), <i>boom</i> (drum), <i>shake-shake</i> (maracas) — mime &amp; sound FIRST, word second.</td></tr><tr><td>Colour &amp; instrument get muddled</td><td>Always pair them on the Big Wheel: point to the pod, chorus <i>yellow… piano!</i></td></tr><tr><td>Wriggling on the carpet</td><td>Keep stages 5–8 min; a mime game always follows a sitting stage; use <b>Freeze!</b>.</td></tr><tr><td>Answers in Russian</td><td>Accept warmly, recast once in English with the puppet — model, don't correct.</td></tr><tr><td>Sticker frenzy</td><td>Stickers only at the table, one at a time, on your countdown <i>5…4…3…</i></td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Genki Disco Warm Up ⚡</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet each child at the door with <span class="sp">🦝 Speaky</span>: <span class="en">Hello! How are you?</span> — quick high-five, straight onto the carpet.</p><p><span class="ph">Dance it out.</span> <span class="game">▶ Genki Disco Warm Up (01)</span> — hands up/down, jump, clap, turn around, wiggle. <span class="sp">🦝 Speaky</span> bring the energy UP, then trick them: <span class="en">Speaky says… FREEZE!</span> while they're already moving, then <span class="en">And… sit down!</span></p><p><span class="ph">Today (kid-friendly).</span> Show today's picture: <span class="en">Good morning, musicians! Can you hear it? …drums… guitars… Today we make MUSIC! Play an air-guitar!</span> Air-guitar &amp; drum, then dance.</p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 (01) · Speaky puppet · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">4–9′</td>
+        <td class="stage"><div class="nm">Warm review · last time</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">▶ Colour flash.</span> flash colour cards — children shout the colour &amp; clap once; we'll need every colour for our Big Wheel today.</p><p><span class="ph">Greeting.</span> round the circle: <span class="en">Hello! How are you? — I'm fine, thank you!</span> — a friendly greeting to open our music unit.</p></td>
+        <td class="mat">colour flashcards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–17′</td>
+        <td class="stage"><div class="nm">Phonics Hero 🔤 ⚡</div><div class="zone">carpet, moving</div></td>
+        <td class="flow"><p><span class="ph">① Recognise / review.</span> <b>Phonics Hero lesson 27 · long /oʊ/</b> — sounds <b>oa · ow · o-e &nbsp;(all say /oʊ/)</b>. <span class="sp">🦝 Speaky</span> shows each with its <b>Jolly action</b> (gesture technique); children do the action and NAME the sound — they already know all 26. We don't drill bare sounds: teacher voices, children gesture.</p><p><span class="ph">② Blend / build.</span> Slide the sounds into a word: <i>b-oa-t → boat, s-n-ow → snow, h-o-me → home</i> — big arm-sweep + a meaning picture. <span class="game">▶ Blend &amp; play — Speaky says an /oʊ/ word slowly; children blend it and mime an air-instrument on the whole word.</span></p><p><span class="ph">③ Speed reading.</span> open <b>Phonics Hero 2.0</b> (our workbook) <b>p.75–76</b> — finger under each word, read the row FAST as a group (whole words, playful, celebrate speed — real reading from zero, GMF1-style).</p><p><span class="ph">Tricky words:</span> read <i>many · any</i> together as whole words (we don't sound tricky words out).</p></td>
+        <td class="mat"><b>Phonics Hero 2.0</b> workbook p.75–76 · sound-action cards · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">17–25′</td>
+        <td class="stage"><div class="nm">Curiosity input · six instruments + wheel</div><div class="zone">carpet → Big Wheel mat</div></td>
+        <td class="flow"><p><span class="ph">Guess the sound!</span> Slowly slide an instrument flashcard out of an envelope, mime it &amp; make its SOUND before you reveal — <span class="en">What can I play? Listen… STRUM STRUM… GUITAR!</span> Do all six (guitar · recorder · tambourine · piano · maracas · drum).</p><p><span class="ph">Instruments on the wheel.</span> Lay the six flashcards on the wheel — one per colour. Point to each pod: <span class="en">What's on red? Guitar! What's on yellow? Piano!</span></p><p><span class="ig" style="display:block">📱 <b>Coursebook app (Macmillan digital):</b> put the interactive <b>Big Wheel</b> on screen with the six instrument pods (<i>red = guitar · blue = recorder · green = maracas · yellow = piano · pink = drum · orange = tambourine</i>) — children point &amp; answer <i>It's on red — guitar!</i>. The wheel comes from the coursebook app; our songs &amp; games add to it, we don't reproduce it.</span></p><p><span class="diff"><span class="sup">💪 Support:</span> mime &amp; sound the instrument with the puppet. <span class="ext">⭐ Extension:</span> say the instrument for a colour — <i>It's on green — maracas!</i></span></p></td>
+        <td class="mat">instrument flashcards ×6 · Big Wheel mat · coursebook app · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">25–32′</td>
+        <td class="stage"><div class="nm">Game · Say the colour! + Teddy Dancing (35) ⚡</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="game">▶ Say the colour!</span> Name an instrument on the Big Wheel — children shout its colour &amp; point to the pod (<span class="en">Guitar! — Red! Piano! — Yellow!</span>). Then reverse: you say a colour, they name the instrument. Everyone points every round.</p><p><span class="game">▶ Teddy Dancing</span> Genki <b>Teddy Dancing</b>: instrument mini-cards spread at the back. Music plays, children dance; music stops — everyone grabs the nearest card, mimes &amp; sounds it and shouts the instrument. Repeat fast.</p></td>
+        <td class="mat">instrument mini-cards · music · Big Wheel mat · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">32–38′</td>
+        <td class="stage"><div class="nm">Reading corner 📖</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Read-aloud.</span> Read our own Speak &amp; Smile story-book <b>«Speaky's Band!»</b> aloud — Speaky and his friends make a band — Speaky on the trumpet, the puppy on the drum, the bunny on the guitar. A joyful music read to open our instruments unit, right after the dancing game.</p><p>Hold up each spread — children look at the pictures, do the gestures and echo the key line <span class="en">I'm playing the drum! I'm playing the guitar!</span>. Pre-readers: they <b>listen, watch &amp; repeat</b>, they don't read the words.</p><p>Turn each spread — children mime &amp; sound the instrument (strum, boom, shake) and echo the line <span class="en">I'm playing the guitar!</span>; on the last page everyone plays in Speaky's band together.</p></td>
+        <td class="mat"><b>«Speaky's Band!»</b> (Speak &amp; Smile Genki story-book · band.pdf) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">38–44′</td>
+        <td class="stage"><div class="nm">Song — Genki «What Are You Doing?» + move</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="ph">Sing &amp; play.</span> Play <b>Genki «What Are You Doing?»</b> (58). Each time, mime a different instrument on <i>I'm playing the…</i>; sing it 3× — normal, super-quiet, giant voice.</p><p>Point to the Big Wheel pod as each instrument comes — link instrument + colour while we move.</p></td>
+        <td class="mat"><b>Genki «What Are You Doing?»</b> (58) · Big Wheel mat</td>
+      </tr>
+
+      <tr>
+        <td class="min">44–54′</td>
+        <td class="stage"><div class="nm">Table time · Pupil's Book p.77–78 🧘</div><div class="zone">tables</div></td>
+        <td class="flow"><p><span class="ph">Listen, point &amp; repeat.</span> Play CD4 T1; children point to each instrument in their books &amp; repeat. Find the missing instrument behind the ? on the wheel (<span class="en">drum!</span>).</p><p><span class="ph">Stickers + Memory.</span> Play CD4 T2 — children stick the music stickers on the right colour pods, then play <b>Listen &amp; Memory</b> (CD4 T3): cover eyes, remember which instrument is on each colour.</p><p><span class="ph">Circle &amp; say.</span> <span class="en">Which instruments do you like?</span> children circle the instruments they like &amp; say them; draw the next instrument in the sequence (PB p.78).</p><p><span class="ig" style="display:block">📱 <b>Coursebook app (Macmillan digital):</b> <b>Navio App</b> — play the music vocabulary game and watch the <i>Mimi's band</i> story video on screen; children tap the instrument they hear.</span></p></td>
+        <td class="mat">Pupil's Book p.77–78 · CD4 T1/T2/T3 · music stickers · crayons</td>
+      </tr>
+
+      <tr>
+        <td class="min">54–58′</td>
+        <td class="stage"><div class="nm">Cool-down · I can… + Goodbye 🧘</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">How do you feel?</span> Eyes closed — <span class="en">Did you like it today?</span> show a happy or sad face (an honest signal, no copying).</p><p><span class="game">▶ Turn &amp; tell:</span> <span class="en">Mime one instrument for your partner — they guess it!</span> — tell your talk-partner / show me (no writing).</p><p>“I can…” badge: <span class="en">I can name musical instruments! I'm playing the guitar!</span> colour one star.</p><p>Fantastic first day of our music unit, superstars! <span class="ph">Goodbye song.</span> Sing the <b>Goodbye song</b> (CD1 T3) with <span class="sp">🦝 Speaky</span> — wave to every friend.</p></td>
+        <td class="mat">“I can…” badges · crayons · <b>Goodbye song</b> (CD1 T3) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up at the door with <span class="sp">🦝 Speaky</span>. Show <span class="sp">🦝 Speaky</span> at the door: mime one instrument and say it — <span class="en">guitar!</span> Answered / shown → high-five out: <span class="en">Bye-bye! See you next time!</span></p></td>
+        <td class="mat">instrument cards · reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Приложение (тренажёр Mimi 3)</b> — musical instruments · guitar · recorder · tambourine · piano · maracas · drum, 5–7 мин (со взрослым). <b>Phonics Hero 2.0 (наша тетрадь) — стр. 75–76:</b> звуки <b>/oʊ/ oa ow o-e</b> + блендинг (speed reading) (speed reading — прочитать/показать, Jolly-жесты дома). + дома показать 3 инструмента-мимикой и назвать их по-английски.</p></td>
+        <td class="mat">Mimi 3 app · Phonics Hero 2.0 p.75–76</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Mimi's Wheel 3 · Unit 8 “Music” · Lesson 1 (Vocabulary · six instruments) — Genki-recipe plan (pre-primary)</span>
+    <span>Pupil's Book p.77–78 (CD4 T1/T2/T3) · Big Wheel = coursebook app (Navio) · КТП урок 57 · Phonics Hero 2.0 (PH ур.27 · /oʊ/ oa ow o-e · стр.75–76). Genki song: What Are You Doing? (58). Games: Say the colour! · Teddy Dancing (35). Reading: S&S story-book «Speaky's Band!» (band).</span>
+  </div>
+</div>
