@@ -1,0 +1,223 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 &middot; Speaking Exam &mdash; End-of-Year Oral Assessment (Protocol)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">&#127908; Give Me Five! 4 &middot; Speaking Exam &mdash; End-of-Year Oral Assessment (Units 1&ndash;9)</div>
+    <div class="s">A2 young learners (~10 y.o., readers &middot; <b>continuing line</b>) &middot; 60 min &middot; warm 1-to-1 / paired mini-interview &middot; exam corner + quiet desks</div>
+    <div class="meta"><span class="chip">Week 17.05&ndash;23.05 &middot; Lesson 70</span><span class="chip new">&#127908; Speaking Exam &mdash; warm &amp; encouraging</span><span class="chip">~10 pupils &middot; ~4&ndash;5 min each</span><span class="chip">YLE Movers/Flyers speaking format</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> Each pupil <b>demonstrates spoken English</b> from the year in a friendly oral exam &mdash; three parts (dialogue &middot; description &middot; question &amp; answer) &mdash; assessed on fluency, vocabulary, grammar and pronunciation.</li><li><span class="lb">Subsidiary.</span> Interaction skills: greet, take turns, answer in full where they can, ask back, self-repair. Familiar YLE Movers/Flyers speaking shape so the format is not a surprise.</li><li><span class="lb">Personal.</span> Warmth first &mdash; a nervous child underperforms. Easy opening question, smile, wait-time, prompt/rephrase freely; grade the <b>English</b>, not the nerves. Keep the waiting class calm &amp; productive.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can&hellip;</div>
+      <ul class="a"><li>hold a short dialogue about themselves &amp; the year&rsquo;s topics;</li><li>describe a picture / topic card in 3&ndash;5 sentences;</li><li>answer &ldquo;Have you ever&hellip;?&rdquo; and unit questions with short answers.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Reassure</span><span>Warm up</span><span>Show</span><span>Stretch</span><span>Praise</span><span>Positive close</span></div>
+    </div>
+  </div>
+
+  <!-- STRUCTURE OF THE EXAM -->
+  <div class="eyebrow">Structure of the exam &middot; assessed language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Part 1 &middot; Dialogue</div><div>~1.5 min. Warm interview / paired chat: name, age, family, likes, this year. <span class="w">What&rsquo;s your name? How old are you? What are you like? What do you like doing? What did you do at the weekend?</span></div></div>
+<div class="r"><div class="k">Part 2 &middot; Description</div><div>~1.5 min. Pupil picks a topic/picture card &amp; describes it in 3&ndash;5 sentences: a job, a machine, a city / transport, a country, a meal, space. <span class="w">This is&hellip; It&rsquo;s used for&hellip; It&rsquo;s made of&hellip; A &hellip; is a person who&hellip;</span></div></div>
+<div class="r"><div class="k">Part 3 &middot; Q &amp; A</div><div>~1.5 min. You ask, pupil answers (short answers ok): <span class="w">Have you ever been to&hellip;? Have you ever eaten&hellip;? Would you rather&hellip; or&hellip;? Will there be&hellip; in the future? Do you have to&hellip; in your job card?</span></div></div>
+<div class="r"><div class="k">Format</div><div>Examine in pairs for Part 1 (turn-taking), then each pupil solo for Parts 2&ndash;3. ~4&ndash;5 min per pupil / ~8&ndash;9 min per pair. YLE Movers/Flyers speaking style.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) &middot; Assumptions</div>
+      <div class="ccq">&ldquo;Is this a scary test?&rdquo; &rarr; no &mdash; it&rsquo;s a friendly chat; I just listen and smile.</div>
+      <div class="ccq">&ldquo;If you don&rsquo;t know a word, do you stop?&rdquo; &rarr; no &mdash; try another word, or ask &ldquo;How do you say&hellip;?&rdquo;</div>
+      <div class="ccq" style="margin-bottom:10px">&ldquo;Short answers &mdash; are they allowed?&rdquo; &rarr; yes; a full sentence is a bonus.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> All units taught &amp; reviewed; Final Test done (lesson 69). Pupils have met all three part-types in Talk Partners routines through the year. Waiting class can self-direct a quiet task.</p>
+    </div>
+  </div>
+
+  <!-- ASSESSMENT CRITERIA -->
+  <div class="eyebrow">Assessment criteria &mdash; band descriptors (tick per pupil)</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Fluency &amp; interaction.</span> <b>Strong</b> = speaks readily, takes turns, minimal prompting &middot; <b>Developing</b> = answers with some prompts, short pauses &middot; <b>Emerging</b> = one-word answers, needs each question re-asked.</li>
+      <li><span class="lb">Vocabulary.</span> <b>Strong</b> = uses unit words accurately &amp; a range &middot; <b>Developing</b> = core words, some gaps &middot; <b>Emerging</b> = few words, much L1/pointing.</li>
+    </ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Grammar.</span> <b>Strong</b> = target structures mostly correct (present perfect, passive, will, have to&hellip;) &middot; <b>Developing</b> = correct with slips &middot; <b>Emerging</b> = memorised chunks only.</li>
+      <li><span class="lb">Pronunciation.</span> <b>Strong</b> = clear, easy to understand &middot; <b>Developing</b> = mostly clear, some L1 sounds &middot; <b>Emerging</b> = often hard to follow.</li>
+      <li><span class="asr" style="margin-top:6px">&#10004; <b>Record:</b> one tick per criterion on your class-list grid, + a one-word note (&ldquo;strong present perfect&rdquo; / &ldquo;watch th-&rdquo;). Grade English, never nerves.</span></li>
+    </ul></div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Pupil freezes / goes silent</td><td>Drop to the easiest question (&ldquo;What&rsquo;s your name?&rdquo;), smile, give wait-time, offer a choice: &ldquo;Cinema or bowling?&rdquo; &mdash; never leave them stuck.</td></tr>
+<tr><td>Very shy child</td><td>Let them go in a pair with a friend for Part 1; sit beside, not across; start with a picture they choose.</td></tr>
+<tr><td>One-word answers only</td><td>Prompt to extend: &ldquo;Tell me more&hellip; Why?&rdquo; Accept short answers &mdash; don&rsquo;t penalise, just note the band.</td></tr>
+<tr><td>Waiting class gets loud</td><td>Quiet self-directed task ready before you start (see stage 2); volume arm; a helper monitor.</td></tr>
+<tr><td>Pupil asks &ldquo;How do you say&hellip;?&rdquo;</td><td>Tell them warmly &mdash; that&rsquo;s good exam behaviour; note it positively, continue.</td></tr>
+<tr><td>Runs over time</td><td>Soft close: &ldquo;Lovely &mdash; thank you!&rdquo; Keep to ~4&ndash;5 min; better all pupils calm than a few perfect.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management &mdash; signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>&ldquo;Class? &mdash; Yes!&rdquo;</b> &mdash; you: <span class="call">&ldquo;Class!&rdquo;</span> &rarr; pupils stop &amp; echo <span class="call">&ldquo;Yes!&rdquo;</span></div>
+        <div class="sigc"><b>&ldquo;WiFi&rdquo; &#128587;</b> &mdash; say &ldquo;WiFi&rdquo; + raise a spread hand &rarr; pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> &mdash; raise/lower your arm = louder/quieter &rarr; settler.</div>
+        <div class="sigc"><b>&ldquo;Give me five&rdquo;</b> &mdash; eyes &middot; ears &middot; mouth &middot; hands &middot; feet.</div>
+        <div class="sigc"><b>Countdown</b> &mdash; &ldquo;Finishing in 5&hellip;4&hellip;3&hellip;2&hellip;1&hellip; pencils down.&rdquo;</div>
+        <div class="sigc"><b>&ldquo;Freeze!&rdquo;</b> &mdash; statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">&#9654;</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">&#127918;</span> = interactive (projector)</span>
+    <span><span class="sup">&#128170;</span> support &middot; <span class="ext">&#11088;</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0&ndash;3&prime;</td>
+        <td class="stage"><div class="nm">Opening / settle</div><div class="zone">door &rarr; carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Carpet. <span class="en">Today we just chat, one by one &mdash; it&rsquo;s easy and friendly. I smile the whole time!</span> Calm breath together: <span class="en">Breathe in&hellip; and out&hellip;</span></p></td>
+        <td class="mat">carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3&ndash;10&prime;</td>
+        <td class="stage"><div class="nm">Whole-class warm-up + set the quiet task</div><div class="zone">carpet &rarr; desks</div></td>
+        <td class="flow"><p><span class="ph">Confidence warm-up (all together).</span> <span class="game">&#9654; Quick Talk Partners:</span> in pairs, 30 sec each &mdash; <span class="en">Ask your partner: Have you ever been to another country?</span> Then flash 6 easy topic cards, chorus a sentence. Everyone hears themselves speak once before the exam.</p><p><span class="ph">Set the quiet self-directed task.</span> <span class="en">While I chat with one pair, everyone else: make your &lsquo;My best unit this year&rsquo; mini-poster &mdash; draw + label + one sentence.</span> ICQ: <span class="en">Talking or quiet drawing while you wait?</span> (&rarr; quiet). Name a helper monitor.</p></td>
+        <td class="mat">topic cards &middot; poster paper + pencils &middot; app option</td>
+      </tr>
+
+      <tr>
+        <td class="min">10&ndash;52&prime;</td>
+        <td class="stage"><div class="nm">Speaking Exam &mdash; pairs rotate</div><div class="zone">exam corner</div></td>
+        <td class="flow"><p><span class="ph">Call pairs to the exam corner (~8&ndash;9 min/pair, 5 pairs).</span> Sit beside them, warm tone. Run the 3 parts:</p>
+<p><span class="ph">Part 1 &middot; Dialogue (together).</span> <span class="en">Hello! What&rsquo;s your name? How old are you? What are you like? What do you like doing? What did you do at the weekend?</span> Let them answer in turn; nudge them to ask each other one question.</p>
+<p><span class="ph">Part 2 &middot; Description (each solo).</span> <span class="en">Choose a card. Tell me about it.</span> Prompt if needed: <span class="en">What is it? What&rsquo;s it used for? / What&rsquo;s it made of? / Who works there?</span></p>
+<p><span class="ph">Part 3 &middot; Q &amp; A (each solo).</span> <span class="en">Have you ever been to another country? Have you ever eaten sushi? Would you rather play the drums or the guitar? Will cars fly in the future?</span> Short answers fine.</p>
+<p>Close each pupil warmly: <span class="en">Thank you &mdash; that was great! Well done!</span></p>
+<p><span class="asr">&#10004; <b>Assess live:</b> tick the 4-criteria grid + one note per pupil the moment they finish, before the next pair. Send finished pupils back to their poster silently.</span></p></td>
+        <td class="mat">topic/picture cards &middot; class-list criteria grid &middot; pen &middot; 2 chairs</td>
+      </tr>
+
+      <tr>
+        <td class="min">52&ndash;57&prime;</td>
+        <td class="stage"><div class="nm">Poster share &middot; reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Quick gallery.</span> Each child holds up their &lsquo;best unit&rsquo; poster &amp; says the one sentence &mdash; whole-class applause. <span class="game">&#9654; Timed Pair Share:</span> <span class="en">Tell your partner: which part of the chat was easy?</span> (20 sec each).</p></td>
+        <td class="mat">posters</td>
+      </tr>
+
+      <tr>
+        <td class="min">57&ndash;60&prime;</td>
+        <td class="stage"><div class="nm">Closing &middot; exit</div><div class="zone">carpet &rarr; door</div></td>
+        <td class="flow"><p><span class="en">You all spoke so well &mdash; I&rsquo;m proud of you! Let&rsquo;s sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. High-five line at the door &mdash; every child hears one personal praise word: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 &middot; reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">&#127968;</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>No homework</b> &mdash; the exams are done! Optional: keep playing favourite units in the app over the break. &#1069;&#1082;&#1079;&#1072;&#1084;&#1077;&#1085;&#1099; &#1089;&#1076;&#1072;&#1085;&#1099; &mdash; &#1086;&#1090;&#1076;&#1099;&#1093;&#1072;&#1077;&#1084;! (&#1044;&#1072;&#1083;&#1077;&#1077; &mdash; &#1056;&#1077;&#1079;&#1077;&#1088;&#1074; 2 / &#1087;&#1086;&#1074;&#1090;&#1086;&#1088;&#1077;&#1085;&#1080;&#1077; Units 5&ndash;9.)</p></td>
+        <td class="mat">app (optional)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile &middot; Give Me Five! 4 &middot; Speaking Exam (End-of-Year Oral Assessment, Units 1&ndash;9) &mdash; assessment protocol (continuing line)</span>
+    <span>&#1050;&#1058;&#1055; &#1091;&#1088;&#1086;&#1082; 70. &#1058;&#1088;&#1080; &#1095;&#1072;&#1089;&#1090;&#1080;: &#1076;&#1080;&#1072;&#1083;&#1086;&#1075; &middot; &#1086;&#1087;&#1080;&#1089;&#1072;&#1085;&#1080;&#1077; &middot; &#1074;&#1086;&#1087;&#1088;&#1086;&#1089;-&#1086;&#1090;&#1074;&#1077;&#1090;. &#1050;&#1088;&#1080;&#1090;&#1077;&#1088;&#1080;&#1080;: fluency &middot; vocabulary &middot; grammar &middot; pronunciation. &#1058;&#1077;&#1087;&#1083;&#1099;&#1081; &#1087;&#1088;&#1086;&#1090;&#1086;&#1082;&#1086;&#1083;, &#1073;&#1077;&#1079; &#1089;&#1086;&#1088;&#1077;&#1074;&#1085;&#1086;&#1074;&#1072;&#1085;&#1080;&#1081;. &#1060;&#1086;&#1088;&#1084;&#1072;&#1090; YLE Movers/Flyers speaking.</span>
+  </div>
+
+</div>

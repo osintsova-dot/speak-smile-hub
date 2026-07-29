@@ -95,6 +95,10 @@ function planKeyFor(program, L){
   // (старый выдуманный Genki-КТП: «Юнит N Урок M» — оставлено на всякий случай)
   const rm = /Юнит\s*(\d+)\s*Урок\s*(\d+)/i.exec(src);
   if (rm){ const rkey = `${program}-U${rm[1]}-L${rm[2]}`; return window.PLANS[rkey] ? rkey : null; }
+  // Резерв / Финальный тест / Устный экзамен (в типе нет номера L)
+  if (/FINAL TEST/i.test(src) || /^Final/i.test(L.type||"")){ const k=`${program}-Final`; return window.PLANS[k]?k:null; }
+  if (/SPEAKING EXAM/i.test(src) || /^Speaking/i.test(L.type||"")){ const k=`${program}-Speaking`; return window.PLANS[k]?k:null; }
+  if (/Повторение/i.test(L.type||"") || /РЕЗЕРВ/i.test(src)){ const k=`${program}-Reserve${(L.n<=40?"1":"2")}`; return window.PLANS[k]?k:null; }
   const lm = /\bL(\d+)\b/i.exec(L.type || "");
   if (!lm){
     // Вводный Genki-блок линии «с нуля»: тип урока «Genki N» → план Intro-LN (занятия 1–12)

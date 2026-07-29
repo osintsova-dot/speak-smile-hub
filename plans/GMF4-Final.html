@@ -1,0 +1,225 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 &middot; Final Test &mdash; End-of-Year Written Control (Protocol)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">&#128221; Give Me Five! 4 &middot; Final Test &mdash; End-of-Year Written Control (Units 1&ndash;9)</div>
+    <div class="s">A2 young learners (~10 y.o., readers &middot; <b>continuing line</b>) &middot; 60 min &middot; calm written protocol, model-first &middot; solo desks</div>
+    <div class="meta"><span class="chip">Week 10.05&ndash;16.05 &middot; Lesson 69</span><span class="chip new">&#128221; Final Test &mdash; calm &amp; kind</span><span class="chip">~10 pupils &middot; solo desks</span><span class="chip">YLE Movers/Flyers practice format</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> Pupils <b>show the year&rsquo;s learning</b> on the end-of-year written test &mdash; four parts (vocabulary &middot; grammar &middot; reading &middot; listening) across Units 1&ndash;9 &mdash; in a calm, supported, model-first format with no surprises.</li><li><span class="lb">Subsidiary.</span> Exam micro-skills for the whole test, not one unit: budget your time across 4 parts, read the example first, skip &amp; return, check your name &amp; that nothing is blank. A proud year-end milestone.</li><li><span class="lb">Personal.</span> Radiate calm; no competitive games; help procedure, not answers (&ldquo;read the example again&rdquo;). Note common errors &mdash; they feed tomorrow&rsquo;s Speaking Exam warm-up.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can&hellip;</div>
+      <ul class="a"><li>work independently through a 4-part paper;</li><li>manage ~13&ndash;14 min per part with a visible timer;</li><li>use &ldquo;skip and come back&rdquo; and check their work.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Settle</span><span>Reassure</span><span>Focus</span><span>Persevere</span><span>Finish proud</span><span>Positive close</span></div>
+    </div>
+  </div>
+
+  <!-- ASSESSED LANGUAGE + STRUCTURE OF PAPER -->
+  <div class="eyebrow">Assessed language &middot; structure of the paper</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Part 1 &middot; Vocabulary</div><div>picture / word matching across all units: food &amp; cooking, character &amp; past, prehistory &amp; space, free time &amp; instruments, machines &amp; materials, city &amp; transport, jobs &amp; workplaces, countries &amp; holiday activities.</div></div>
+<div class="r"><div class="k">Part 2 &middot; Grammar</div><div>quantifiers (a lot of / some / a few / a little) &middot; was/were &middot; past simple &amp; could &middot; superlatives &middot; first conditional with can &middot; passive (used for / made of) &middot; will-future &middot; have to &amp; who/where &middot; present perfect (ever / been).</div></div>
+<div class="r"><div class="k">Part 3 &middot; Reading</div><div>read a short text / dialogue &rarr; comprehension (true-false / match / gap) &mdash; YLE Flyers reading style.</div></div>
+<div class="r"><div class="k">Part 4 &middot; Listening</div><div>listen &amp; tick / number / match &mdash; each item played <b>twice</b>, point-follow the numbers. YLE Movers/Flyers listening style.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) &middot; Assumptions</div>
+      <div class="ccq">&ldquo;If a task is hard &mdash; stop, or skip and return?&rdquo; &rarr; skip and return.</div>
+      <div class="ccq">&ldquo;How many times do you hear each listening item?&rdquo; &rarr; twice.</div>
+      <div class="ccq" style="margin-bottom:10px">&ldquo;Is it OK to look at a friend&rsquo;s paper?&rdquo; &rarr; no &mdash; I want to see what YOU know; that&rsquo;s how I help you.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> All nine units taught, tested and reviewed (incl. Reserve 1). Pupils know the four part-types, the traffic-light self-check and the &ldquo;quiet menu&rdquo; routine. Source paper = <b>GMF Level 4 Units 1&ndash;9 Higher Level Tests</b> (course folder); assemble the four parts from it (only the Higher Level paper is provided &mdash; scale it to your group).</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Year-end nerves &mdash; &ldquo;it&rsquo;s the BIG test&rdquo;</td><td>Normalise: &ldquo;it&rsquo;s the same as our books, just quiet and longer&rdquo;; smile; breathing in-2-3-out-2-3 before starting.</td></tr>
+<tr><td>Running out of time on one part</td><td>Pre-agreed pace: ~13&ndash;14 min/part; announce softly at each switch: &ldquo;Halfway &mdash; move on if you&rsquo;re stuck.&rdquo;</td></tr>
+<tr><td>Listening &mdash; someone loses the place</td><td>Point-follow the item numbers on your held-up copy; play each item twice; pause between items.</td></tr>
+<tr><td>Early finishers disturb others</td><td>Quiet menu ready ON desks before the test: mixed word-search + reading corner. No walking about.</td></tr>
+<tr><td>A child freezes completely</td><td>Kneel beside, whisper the example through, do the first item together, then step away.</td></tr>
+<tr><td>Copy-glancing</td><td>Folder screens between desks, framed as &ldquo;exam style, like big kids&rdquo;.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management &mdash; signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>&ldquo;Class? &mdash; Yes!&rdquo;</b> &mdash; you: <span class="call">&ldquo;Class!&rdquo;</span> &rarr; pupils stop &amp; echo <span class="call">&ldquo;Yes!&rdquo;</span></div>
+        <div class="sigc"><b>&ldquo;WiFi&rdquo; &#128587;</b> &mdash; say &ldquo;WiFi&rdquo; + raise a spread hand &rarr; pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> &mdash; raise/lower your arm = louder/quieter &rarr; settler.</div>
+        <div class="sigc"><b>&ldquo;Give me five&rdquo;</b> &mdash; eyes &middot; ears &middot; mouth &middot; hands &middot; feet.</div>
+        <div class="sigc"><b>Countdown</b> &mdash; &ldquo;Finishing in 5&hellip;4&hellip;3&hellip;2&hellip;1&hellip; pencils down.&rdquo;</div>
+        <div class="sigc"><b>&ldquo;Freeze!&rdquo;</b> &mdash; statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">&#9654;</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">&#127918;</span> = interactive (projector)</span>
+    <span><span class="sup">&#128170;</span> support &middot; <span class="ext">&#11088;</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0&ndash;3&prime;</td>
+        <td class="stage"><div class="nm">Opening / settle</div><div class="zone">door &rarr; carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Carpet. <span class="en">Today is our show-what-you-know day for the WHOLE year &mdash; and you know it all. It&rsquo;s just our books, quietly.</span></p><p>Calm breath together: <span class="en">Breathe in&hellip; two&hellip; three&hellip; and out&hellip; two&hellip; three.</span> No Disco today &mdash; keep it low and steady.</p></td>
+        <td class="mat">carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3&ndash;8&prime;</td>
+        <td class="stage"><div class="nm">Test how-to (whole test)</div><div class="zone">carpet &rarr; desks</div></td>
+        <td class="flow"><p><span class="ph">Confidence loop.</span> Flash 5&ndash;6 of the easiest cards from across the year &mdash; quick chorus, smiles, then stop. No games.</p><p><span class="ph">The 4 parts + rules.</span> Show the paper: <span class="en">Four parts: words, grammar, reading, listening. Name here first! Example first! Hard task? Skip it, come back. Listening plays twice. Finished? Check, then quiet menu.</span> ICQ: <span class="en">What do you do if it&rsquo;s hard?</span> (&rarr; skip &amp; return) / <span class="en">How many times do you hear the listening?</span> (&rarr; twice). Settle at solo desks, folder screens up.</p></td>
+        <td class="mat">sample cards &middot; test papers &middot; folder screens</td>
+      </tr>
+
+      <tr>
+        <td class="min">8&ndash;21&prime;</td>
+        <td class="stage"><div class="nm">Part 1&ndash;2 &middot; Vocabulary + Grammar</div><div class="zone">solo desks</div></td>
+        <td class="flow"><p><span class="ph">Written, solo, visible timer.</span> Part 1 Vocabulary (picture/word across all units) then Part 2 Grammar (the nine structures). ~13&prime; for the two. Whisper-help with <b>procedure only</b> (&ldquo;read the example again&rdquo;), never answers. Soft mid-call: <span class="en">Halfway &mdash; move on if you&rsquo;re stuck.</span></p></td>
+        <td class="mat">test papers (Parts 1&ndash;2) &middot; timer</td>
+      </tr>
+
+      <tr>
+        <td class="min">21&ndash;34&prime;</td>
+        <td class="stage"><div class="nm">Part 3 &middot; Reading</div><div class="zone">solo desks</div></td>
+        <td class="flow"><p><span class="ph">Reading comprehension (YLE Flyers style).</span> ~13&prime;. Remind once: <span class="en">Read the whole text first, then the questions.</span> Same whisper-procedure-only support. Countdown to the switch: <span class="en">Finishing Part 3 in 5&hellip;4&hellip;3&hellip;2&hellip;1.</span></p></td>
+        <td class="mat">test papers (Part 3) &middot; timer</td>
+      </tr>
+
+      <tr>
+        <td class="min">34&ndash;46&prime;</td>
+        <td class="stage"><div class="nm">Part 4 &middot; Listening</div><div class="zone">solo desks</div></td>
+        <td class="flow"><p><span class="ph">Listening, teacher-paced.</span> <span class="en">Pencils down, eyes on your paper, listen.</span> Play each item <b>twice</b>, pause between items, point-follow the item numbers on your held-up copy. ~12&prime; incl. settling. ICQ before start: <span class="en">Do you write while it plays or after?</span> (&rarr; either &mdash; you hear it twice).</p><p><span class="asr">&#10004; <b>Assess:</b> as papers come in, skim &amp; note the 2&ndash;3 most common errors &rarr; they open tomorrow&rsquo;s Speaking Exam warm-up as retrieval.</span></p></td>
+        <td class="mat">CD / audio track &middot; test papers (Part 4)</td>
+      </tr>
+
+      <tr>
+        <td class="min">46&ndash;52&prime;</td>
+        <td class="stage"><div class="nm">Check &middot; collect &middot; early finishers</div><div class="zone">solo desks</div></td>
+        <td class="flow"><p><span class="ph">Check routine.</span> <span class="en">Check your name is on it. Any blank boxes? Fill or leave a dash. Then hand it to me and take the quiet menu.</span> Collect face-down in one pile. Early finishers: mixed word-search + reading corner, silently.</p></td>
+        <td class="mat">quiet menu (word-search &middot; reading corner) &middot; collection tray</td>
+      </tr>
+
+      <tr>
+        <td class="min">52&ndash;57&prime;</td>
+        <td class="stage"><div class="nm">Brain unwind &middot; reflection</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Calm cooperative round (not competitive).</span> <span class="game">&#9654; Class chain</span> &mdash; go round the circle celebrating the year: <span class="en">This year I learnt to&hellip; / My favourite unit was&hellip;</span></p><p><span class="game">&#9654; Timed Pair Share:</span> <span class="en">Tell your partner: one part that was easy, one that was tricky.</span> (20 sec each). Praise the WORK: <span class="en">A whole year in one test &mdash; brilliant effort!</span></p></td>
+        <td class="mat">&mdash;</td>
+      </tr>
+
+      <tr>
+        <td class="min">57&ndash;60&prime;</td>
+        <td class="stage"><div class="nm">Closing &middot; exit</div><div class="zone">carpet &rarr; door</div></td>
+        <td class="flow"><p><span class="en">I&rsquo;m proud of you &mdash; really. Let&rsquo;s sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. High-five line at the door &mdash; every child hears one personal praise word: <span class="en">Thank you! See you next time! Goodbye!</span> <span class="en">Speaking Exam next lesson &mdash; nothing new, just talking about what you know.</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 &middot; reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">&#127968;</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>No written homework</b> (test day). Light prep for the Speaking Exam: in the app, do one mixed-practice round and practise saying answers aloud &mdash; &ldquo;Have you ever&hellip;?&rdquo;, &ldquo;What&rsquo;s your favourite&hellip;?&rdquo;, describe a picture (5&ndash;7 min). &#1054;&#1090;&#1076;&#1099;&#1093;&#1072;&#1077;&#1084; &mdash; &#1075;&#1083;&#1072;&#1074;&#1085;&#1099;&#1081; &#1090;&#1077;&#1089;&#1090; &#1075;&#1086;&#1076;&#1072; &#1089;&#1076;&#1072;&#1085;.</p></td>
+        <td class="mat">app (homework link) &middot; speak-aloud practice</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile &middot; Give Me Five! 4 &middot; Final Test (End-of-Year Written Control, Units 1&ndash;9) &mdash; assessment protocol (continuing line)</span>
+    <span>&#1050;&#1058;&#1055; &#1091;&#1088;&#1086;&#1082; 69. &#1048;&#1089;&#1090;&#1086;&#1095;&#1085;&#1080;&#1082; &#1073;&#1083;&#1072;&#1085;&#1082;&#1072;: GMF Level 4 Units 1&ndash;9 Higher Level Tests (&#1087;&#1072;&#1087;&#1082;&#1072; tests) + Answer Key. &#1057;&#1087;&#1086;&#1082;&#1086;&#1081;&#1085;&#1099;&#1081; &#1087;&#1088;&#1086;&#1090;&#1086;&#1082;&#1086;&#1083;, &#1073;&#1077;&#1079; &#1089;&#1086;&#1088;&#1077;&#1074;&#1085;&#1086;&#1074;&#1072;&#1085;&#1080;&#1081;. &#1060;&#1086;&#1088;&#1084;&#1072;&#1090; YLE Movers/Flyers.</span>
+  </div>
+
+</div>

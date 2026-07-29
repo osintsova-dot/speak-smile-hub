@@ -1,0 +1,230 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF3 · Reserve 2 — Revision Units 5&ndash;9 (Constructor Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">&#128075; Give Me Five! 3 &middot; Reserve 2 &middot; Revision Units 5&ndash;9 &mdash; End-of-Year Constructor</div>
+    <div class="s">A1+ young learners (~9 y.o., readers &middot; <b>continuing line</b>) &middot; 60 min &middot; Diagnose &rarr; Stations &rarr; Team Quiz &middot; carpet + desks</div>
+    <div class="meta"><span class="chip">Weeks 17.05&ndash;26.05 &middot; Lessons 71&ndash;72</span><span class="chip new">&#127881; End-of-year revision (2 lessons)</span><span class="chip">~10 pupils &middot; teacher picks weak topics</span><span class="chip">Option: Jar of Awesomeness</span></div>
+  </div>
+
+  <!-- HOW TO USE -->
+  <div class="eyebrow">How to use this plan (RU)</div>
+  <div class="cardb" style="border-left:3px solid var(--honey)">
+    <p style="margin:0 0 7px;font-size:.93rem"><b>&#128295; Это ШАБЛОН-конструктор на 2 финальных резервных урока (71&ndash;72)</b> &mdash; ПОСЛЕ Final Test (69) и Speaking Exam (70). Экзамены сданы, давление снято: это <b>празднично-повторительные</b> уроки. Ты латаешь пробелы в Units 5&ndash;9 и красиво закрываешь год.</p>
+    <p style="margin:0 0 7px;font-size:.93rem"><b>Шаг 1.</b> Быстрая диагностика (этап 3&ndash;12&prime;) по Units 5&ndash;9 &mdash; либо возьми реальные слабые места из Final Test (у тебя уже есть проверенные работы!). <b>Шаг 2.</b> 3 станции под западающие темы из «Меню». <b>Шаг 3.</b> Команда-квиз с наградой. <b>Шаг 4.</b> Рефлексия + итоги года.</p>
+    <p style="margin:0;font-size:.93rem"><b>End-of-year опция (по желанию, из КТП):</b> <b>Jar of Awesomeness</b> &mdash; в течение обоих уроков дети (и ты) кидают в банку записки «this year I can&hellip; / my best moment was&hellip;», в конце достаёте и читаете вслух. Тёплое закрытие года, работает на самооценку и английскую речь о себе.</p>
+  </div>
+
+  <!-- STATION MENU -->
+  <div class="eyebrow">Station menu &mdash; Units 5&ndash;9 (pick 3 by diagnosis)</div>
+  <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Unit &middot; topic</th><th>Station options (lexis / grammar / reading)</th></tr></thead><tbody>
+    <tr><td><b>U5</b> Under the sea<br><span class="w">sea animals</span> <span class="w">describing adjectives</span></td><td><b>Lexis:</b> Quiz-Quiz-Trade sea-animal cards. <b>Grammar:</b> comparatives &mdash; <span class="en">A dolphin is bigger than a fish.</span> &middot; <span class="en">A shark is more dangerous than a seahorse.</span> <b>Reading:</b> magazine-article strips &rarr; match animal to fact.</td></tr>
+    <tr><td><b>U6</b> Sports mad<br><span class="w">water sports kit</span> <span class="w">adverbs of manner</span></td><td><b>Lexis:</b> equipment race (kayak, wetsuit, goggles&hellip;). <b>Grammar:</b> be going to &mdash; <span class="en">I'm going to&hellip; / Are you going to&hellip;?</span> &middot; adverbs <span class="en">He swims quickly.</span> <b>Reading:</b> a letter &rarr; True/False.</td></tr>
+    <tr><td><b>U7</b> Detectives<br><span class="w">household objects</span> <span class="w">personal belongings</span></td><td><b>Lexis:</b> mime/where-is-it (cupboard, shelf, mirror&hellip;). <b>Grammar:</b> was/were &mdash; <span class="en">Was the watch on the table? / Were the keys in the cupboard?</span> <b>Reading:</b> detective script &rarr; find the clue.</td></tr>
+    <tr><td><b>U8</b> What's on TV?<br><span class="w">TV programmes</span> <span class="w">free-time verbs</span></td><td><b>Lexis:</b> programme cards (cartoon, quiz show, documentary&hellip;). <b>Grammar:</b> Past Simple Q &mdash; <span class="en">Did you watch a cartoon? Yes, I did. / No, I didn't.</span> &middot; regular past <span class="en">I painted&hellip;</span> <b>Reading:</b> a review &rarr; opinion match.</td></tr>
+    <tr><td><b>U9</b> Let's celebrate!<br><span class="w">festival attractions</span> <span class="w">telling the time</span></td><td><b>Lexis:</b> festival cards (fireworks, parade, costumes&hellip;). <b>Grammar:</b> irregular past <span class="en">What did you wear? &mdash; I wore jeans.</span> &middot; time <span class="en">What time did she go to bed? &mdash; At twenty past nine.</span> <b>Reading:</b> an email &rarr; comprehension.</td></tr>
+  </tbody></table></div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end of the two reserve lessons, learners will have <b>re-consolidated the shakiest language from Units 5&ndash;9</b> (teacher-selected, ideally from Final-Test evidence) &mdash; comparatives, be going to, was/were, Past Simple, telling the time &mdash; and celebrated a year of English.</li><li><span class="lb">Subsidiary.</span> Retrieval practice, peer-teaching via Kagan, positive self-talk about the whole year (Jar of Awesomeness), reading recognition across genres.</li><li><span class="lb">Personal.</span> Exams are DONE &mdash; radiate &laquo;we made it&raquo; joy. Diagnose to the gap, keep it playful, and make sure every child hears something they're proud of before summer.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can&hellip;</div>
+      <ul class="a"><li>re-produce target words &amp; one key structure from each revised unit;</li><li>peer-teach a partner and talk about the year in English;</li><li>name one thing they're proud of learning this year.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Celebrate</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language (revision pool &mdash; teacher narrows)</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">Lexis</div><div><span class="w">sea animals &amp; adjectives</span><span class="w">sports kit &amp; adverbs</span><span class="w">objects &amp; belongings</span><span class="w">TV &amp; free-time</span><span class="w">festivals &amp; time</span></div></div><div class="r"><div class="k">Structure</div><div>comparatives -er / more &middot; be going to &middot; adverbs of manner &middot; was/were &middot; Past Simple Q (did) &middot; regular &amp; irregular past &middot; telling the time.</div></div><div class="r"><div class="k">Form</div><div>-er vs more + adj &middot; did + bare infinitive &middot; -ed regular vs irregular (wore, went) &middot; adverb = adj + -ly. Error harvest from Final Test / diagnosis feeds stations &amp; quiz.</div></div><div class="r"><div class="k">Pron. watch</div><div>Whatever surfaces &mdash; e.g. -ed endings /t/ /d/ /&#618;d/, was /w&#601;z/ weak form, quarter /&#712;kw&#596;&#720;t&#601;/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) &middot; Assumptions</div>
+<div class="ccq">&ldquo;Is this a test?&rdquo; &rarr; no &mdash; exams are finished! This is a fun memory workout to end the year.</div><div class="ccq" style="margin-bottom:10px">&ldquo;In the quiz, who answers?&rdquo; &rarr; EVERYONE, on their own board.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Units 5&ndash;9 all taught &amp; tested; Final Test (L69) &amp; Speaking Exam (L70) done &mdash; you already know each child's weak spots. Kagan routines &amp; traffic-light self-check known.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>&laquo;Exams over &mdash; why work?&raquo; low motivation</td><td>Frame as celebration + challenge, not study: games, reward animation, Jar of Awesomeness. Movement stations first.</td></tr>
+        <tr><td>You don't know what to revise</td><td>Use Final-Test evidence: the items most pupils missed become your stations. Data, not guessing.</td></tr>
+        <tr><td>Mixed pace at stations</td><td>Each station has a &#128170; core + &#11088; extension card &mdash; no one waits, no one's lost.</td></tr>
+        <tr><td>Weaker pupils hide in the team</td><td>Showdown: every child writes every answer; team point = majority; rotate the runner.</td></tr>
+        <tr><td>End-of-year wobbliness / goodbyes</td><td>Channel feelings into Jar of Awesomeness &amp; a warm closing circle; name each child's win.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management &mdash; signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>&ldquo;Class? &mdash; Yes!&rdquo;</b> &mdash; you: <span class="call">&ldquo;Class!&rdquo;</span> &rarr; pupils stop &amp; echo <span class="call">&ldquo;Yes!&rdquo;</span></div>
+        <div class="sigc"><b>&ldquo;WiFi&rdquo; &#128075;</b> &mdash; say &ldquo;WiFi&rdquo; + raise a spread hand &rarr; pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> &mdash; raise/lower your arm = louder/quieter &rarr; settler.</div>
+        <div class="sigc"><b>&ldquo;Give me five&rdquo;</b> &mdash; eyes &middot; ears &middot; mouth &middot; hands &middot; feet.</div>
+        <div class="sigc"><b>Countdown</b> &mdash; &ldquo;Finishing in 5&hellip;4&hellip;3&hellip;2&hellip;1&hellip; pencils down.&rdquo;</div>
+        <div class="sigc"><b>&ldquo;Freeze!&rdquo;</b> &mdash; statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure &mdash; staging (same frame for Lessons 71 &amp; 72)</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">&#9654;</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">&#127918;</span> = interactive (projector)</span>
+    <span><span class="sup">&#128170;</span> support &middot; <span class="ext">&#11088;</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0&ndash;3&prime;</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door &rarr; carpet</div></td>
+        <td class="flow"><p>Greet at the door: <span class="en">Hello! Come in!</span> Carpet. <span class="en">Hello, superstars! Exams are DONE &mdash; today we celebrate a whole year of English!</span></p><p><span class="en">Stand up! Let's wake up!</span> &rarr; <span class="game">&#9654; Disco Warm Up</span> &mdash; call moves (jump &middot; spin &middot; clap &middot; stamp &middot; sit &middot; stand); trick them: <span class="en">Sit down!</span> when already sitting. Bring down: <span class="en">And&hellip; freeze.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 &middot; carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3&ndash;12&prime;</td>
+        <td class="stage"><div class="nm">&#128269; Quick diagnosis</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Fast gap-finder (all together, ~2&prime; per unit).</span> Flash 3&ndash;4 signal cards per unit; whole-class chorus + one target sentence each:</p><p>U5 <span class="en">A dolphin is bigger than a fish.</span> &middot; U6 <span class="en">I'm going to&hellip; / He swims quickly.</span> &middot; U7 <span class="en">Was the watch on the table?</span> &middot; U8 <span class="en">Did you watch a cartoon? Yes, I did.</span> &middot; U9 <span class="en">What did you wear? &mdash; I wore&hellip; / It's half past six.</span></p><p><span class="game">&#9654; Traffic-light vote (eyes closed):</span> <span class="en">Green &mdash; easy! Yellow &mdash; tricky. Red &mdash; help me!</span> <span class="asr">&#10004; <b>Decide live:</b> cross-check with Final-Test results &mdash; the 2&ndash;3 weakest units become today's stations.</span></p></td>
+        <td class="mat">signal flashcards (U5&ndash;9) &middot; traffic-light cards &middot; Final-Test notes</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">12&ndash;14&prime;</td>
+        <td class="stage"><div class="nm">Bridge &middot; song</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Transition into stations with a song.</span> Sing one Genki song matched to a chosen unit (e.g. U5 <b>Under the Sea</b>, U6 <b>Summer Sports</b>) while you set up 3 station tables.</p></td>
+        <td class="mat"><b>Genki song</b> mp3 (unit-matched)</td>
+      </tr>
+
+      <tr>
+        <td class="min">14&ndash;38&prime;</td>
+        <td class="stage"><div class="nm">&#127919; Revision stations (3 &times; 8&prime;)</div><div class="zone">3 tables + carpet</div></td>
+        <td class="flow"><p><span class="ph">Rotation (Cooperative learning).</span> 3 stations from the <b>Station menu</b> under your chosen topics &mdash; one <b>Lexis</b>, one <b>Grammar</b>, one <b>Reading</b>. 3 small teams, rotate every 8&prime; on <span class="en">Freeze! Move on!</span></p><p><span class="ph">Station A &mdash; Lexis (movement).</span> <span class="game">&#9654; Quiz-Quiz-Trade</span> with the weak unit's word cards &mdash; all up, pairs quiz, swap, new partner. Kagan: <b>StandUp-HandUp-PairUp</b>.</p><p><span class="ph">Station B &mdash; Grammar (talk).</span> <span class="game">&#9654; RallyRobin survey</span> &mdash; take turns asking the unit question (<span class="en">Are you going to&hellip;? / Did you watch&hellip;? / What time did you&hellip;?</span>) &amp; noting answers. Kagan: <b>RallyRobin</b>.</p><p><span class="ph">Station C &mdash; Reading (calm, seated).</span> re-read a genre text from the unit (article / letter / script / review / email) &rarr; True-False or match. Kagan: <b>RallyCoach</b>.</p><p><span class="ig">&#128170; support: picture-word cards at each station &middot; &#11088; extension: &ldquo;write one more sentence&rdquo; card. &nbsp;&#127994; <b>Jar of Awesomeness</b> sits on carpet all lesson &mdash; finishers drop in a note.</span></p><p><span class="asr">&#10004; <b>Assess:</b> circulate with the class list &mdash; tick who now produces each target structure unaided.</span></p></td>
+        <td class="mat">3 station kits (word cards &middot; survey grid &middot; genre texts) &middot; timer &middot; Jar of Awesomeness &middot; class list</td>
+      </tr>
+
+      <tr>
+        <td class="min">38&ndash;52&prime;</td>
+        <td class="stage"><div class="nm">&#127942; TEAM QUIZ + reward</div><div class="zone">desks, 2 teams</div></td>
+        <td class="flow"><p><span class="ph">Consolidation quiz (board or projector).</span> Grid of tiles mixing revised units: picture&rarr;word &middot; spelling &middot; make the target sentence (comparative / past / time) &middot; True/False &middot; a &ldquo;whole-year&rdquo; bonus tile. Mechanics: tile opens &rarr; <b>Showdown</b>: EVERY child writes/says on their mini-whiteboard &rarr; <span class="en">Show me!</span> &rarr; majority correct = team point &rarr; <span class="ph">reward:</span> one player takes a <b>&#127923; bowling</b> or <b>&#127936; basketball</b> shot (paper ball into box / on-screen animation). Rotate the shooter strictly.</p><p><span class="ig">&#127918; <b>Offline setup:</b> card grid on whiteboard + real paper-ball shot into a box/basket &mdash; one shot per win, 20 sec.</span></p><p><span class="ph">ICQ:</span> <span class="en">When do you show your board?</span> (&rarr; only on &ldquo;Show me!&rdquo;) &nbsp; <span class="ph">Finale:</span> count scores in English; both teams <span class="en">Give me five!</span></p></td>
+        <td class="mat">quiz grid (board) &middot; mini-whiteboards &middot; box + paper ball / projector animation</td>
+      </tr>
+
+      <tr>
+        <td class="min">52&ndash;58&prime;</td>
+        <td class="stage"><div class="nm">&#127994; Jar of Awesomeness &middot; reflection</div><div class="zone">carpet circle</div></td>
+        <td class="flow"><p><span class="ph">Whole-year close.</span> Pull notes from the jar and read a few aloud: <span class="en">This year I can&hellip; / My best moment was&hellip;</span> Then <span class="game">&#9654; Timed Pair Share:</span> <span class="en">Tell your partner ONE thing you're proud of learning this year.</span> (20 sec each).</p><p><span class="en">You learnt SO much this year &mdash; sea animals, sports, the past, telling the time&hellip; I'm so proud of you.</span></p></td>
+        <td class="mat">Jar of Awesomeness &middot; note slips</td>
+      </tr>
+
+      <tr>
+        <td class="min">58&ndash;60&prime;</td>
+        <td class="stage"><div class="nm">Closing / Exit ticket</div><div class="zone">carpet &rarr; door</div></td>
+        <td class="flow"><p><span class="en">What a year! Have a brilliant summer! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. Line up &mdash; at the door each child hears one personal praise word + says <b>one</b> thing they'll remember &rarr; out: <span class="en">Thank you! Have a great summer! Goodbye!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 &middot; end-of-year certificates / stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">&#127968;</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Последние уроки года &mdash; без письменного ДЗ.</b> Летнее пожелание: играть в приложении и слушать любимые Genki-песни, чтобы не забыть английский за лето (&laquo;&#1042;&#1086;&#1079;&#1100;&#1084;&#1080; &#1072;&#1085;&#1075;&#1083;&#1080;&#1081;&#1089;&#1082;&#1080;&#1081; &#1089; &#1089;&#1086;&#1073;&#1086;&#1081; &#1074; &#1083;&#1077;&#1090;&#1086;&raquo;). &#1044;&#1086; &#1074;&#1089;&#1090;&#1088;&#1077;&#1095;&#1080; &#1074; &#1089;&#1077;&#1085;&#1090;&#1103;&#1073;&#1088;&#1077;!</p></td>
+        <td class="mat">app (optional) &middot; no written HW</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile &middot; Give Me Five! 3 &middot; Reserve 2 (Revision Units 5&ndash;9) &mdash; end-of-year constructor plan &amp; staging (continuing line)</span>
+    <span>&#1050;&#1058;&#1055; &#1091;&#1088;&#1086;&#1082;&#1080; 71&ndash;72 (&#1087;&#1086;&#1089;&#1083;&#1077; Final Test 69 + Speaking 70). &#1044;&#1080;&#1072;&#1075;&#1085;&#1086;&#1089;&#1090;&#1080;&#1082;&#1072; &#1087;&#1086; &#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1072;&#1084; &rarr; &#1089;&#1090;&#1072;&#1085;&#1094;&#1080;&#1080; &rarr; &#1082;&#1074;&#1080;&#1079; &rarr; Jar of Awesomeness. &#1055;&#1088;&#1072;&#1079;&#1076;&#1085;&#1080;&#1095;&#1085;&#1099;&#1081; &#1092;&#1080;&#1085;&#1072;&#1083; &#1075;&#1086;&#1076;&#1072;.</span>
+  </div>
+</div>

@@ -1,0 +1,229 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF4 &middot; Reserve 2 &mdash; Revision Units 5&ndash;9 (Lesson Plan)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">&#128218; Give Me Five! 4 &middot; Reserve 2 &mdash; Revision Units 5&ndash;9 (end of year)</div>
+    <div class="s">A2 young learners (~10 y.o., readers &middot; <b>continuing line</b>) &middot; 60 min &middot; teacher-built diagnostic + stations + team review &middot; carpet + desks</div>
+    <div class="meta"><span class="chip">Week 17.05&ndash;26.05 &middot; Lessons 71&ndash;72</span><span class="chip new">&#127923; Constructor template &mdash; you pick the weak topics</span><span class="chip">~10 pupils &middot; teams + 3 stations</span><span class="chip">Revision &mdash; no new AB page</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will have <b>closed their own gaps in Units 5&ndash;9</b> &mdash; the 2&ndash;3 topics YOU choose from the diagnostic &mdash; through targeted stations and shown them in a team review game with a reward shot.</li><li><span class="lb">Subsidiary.</span> Learner autonomy: pupils name what they find easy / tricky (traffic light), then work at the right station. Cooperative-learning micro-skills (RallyRobin, Sage &amp; Scribe, Quiz-Quiz-Trade). End-of-year victory lap &mdash; celebrate how far they&rsquo;ve come; exams are done.</li><li><span class="lb">Personal.</span> This is a <b>constructor, not a script</b> &mdash; run the diagnostic first, then load the stations with the topics that actually wobbled. Every child works at every moment; the reward game is the cherry, not the cake. Both slots (lessons 71&ndash;72) use this template with different chosen topics.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can&hellip;</div>
+      <ul class="a"><li>use their 2&ndash;3 revised Units 5&ndash;9 topics more accurately;</li><li>self-diagnose &mdash; say which topic is easy / tricky;</li><li>ask &amp; answer the revised structures in a team game.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Celebrate</span><span>Diagnose</span><span>Target-practice</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+    </div>
+  </div>
+
+  <!-- REVISION POOL -->
+  <div class="eyebrow">Revision language pool &mdash; Units 5&ndash;9</div>
+  <div class="grid2">
+    <div class="cardb tl">
+<div class="r"><div class="k">U5 Let&rsquo;s have fun!</div><div><span class="w">go to the cinema, have a picnic, have a barbecue, play board games, fly a kite, go bowling</span><span class="w">drums, guitar, violin, piano, trumpet, flute, recorder, keyboard</span><br>If it&rsquo;s sunny, we can / can&rsquo;t have a picnic &middot; I&rsquo;d rather (play the drums) than sing.</div></div>
+<div class="r"><div class="k">U6 Marvellous machines</div><div><span class="w">fridge, microwave, washing machine, dishwasher, vacuum cleaner, kettle, toaster, hairdryer</span><span class="w">wool, leather, plastic, metal, glass, wood, rubber, cotton</span><br>A fridge is used for keeping food cold &middot; A sweater is made of wool (passive).</div></div>
+<div class="r"><div class="k">U7 In the city</div><div><span class="w">hotel, skyscraper, factory, office building, airport, shopping centre, stadium, bridge</span><span class="w">tram, underground, ferry, taxi, scooter, lorry, van, motorbike</span><br>Will there be hotels? Yes there will / No there won&rsquo;t &middot; Cars will / won&rsquo;t fly.</div></div>
+<div class="r"><div class="k">U8 Jobs we do</div><div><span class="w">dentist, mechanic, journalist, vet, firefighter, lawyer, architect, engineer, hairdresser, farmer</span><span class="w">clinic, garage, office, surgery, fire station, court, studio, farm</span><br>Do I have to wear a uniform? &middot; A dentist is a person who works in a clinic (who/where).</div></div>
+<div class="r"><div class="k">U9 All around the world</div><div><span class="w">Morocco, China, India, Brazil, Egypt, Japan, Mexico, Turkey, the USA, the UK</span><span class="w">eat sushi, see a whale, ride a camel, climb a mountain, visit a pyramid, swim in the ocean</span><br>Have you ever been to Morocco? I&rsquo;ve been to India (present perfect).</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Constructor &mdash; build the lesson in 3 steps</div>
+      <ul class="a"><li><span class="lb">1 &middot; Before class.</span> Skim the Unit 5&ndash;9 tests + Final Test / Speaking Exam notes &rarr; pre-mark weak topics.</li>
+<li><span class="lb">2 &middot; In class.</span> Run the 9-min diagnostic &rarr; confirm the <b>2&ndash;3 weakest</b> &rarr; load stations A/B/C with exactly those.</li>
+<li><span class="lb">3 &middot; Reward.</span> Pick bowling &#127923; or basketball &#127936; for the team-review shot. It&rsquo;s a victory lap &mdash; keep it joyful.</li></ul>
+      <div class="ig" style="margin-top:10px">&#127918; <b>Offline setup:</b> 3 desk-clusters = 3 stations, sign on each. Reward game needs only a box/basket + a paper ball. Everything else = flashcards + mini-whiteboards you already own.</div>
+    </div>
+  </div>
+
+  <!-- CONCEPT / ASSUMPTIONS -->
+  <div class="grid2">
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) &middot; Assumptions</div>
+      <div class="ccq">&ldquo;Is this a test?&rdquo; &rarr; no &mdash; it&rsquo;s free training to fix tricky bits; mistakes are welcome.</div>
+      <div class="ccq" style="margin-bottom:10px">&ldquo;Who works at a station &mdash; one person?&rdquo; &rarr; EVERYONE, all the time.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Units 5&ndash;9 taught earlier this year; pupils know Showdown, station rotation and the traffic-light self-check. Teacher has skimmed the recent unit tests / L6 self-assessments to pre-select likely weak spots.</p>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">How the 3 stations run (all-active)</div>
+      <ul class="a">
+        <li><span class="lb">A &middot; Vocabulary.</span> Quiz-Quiz-Trade cards / picture&rarr;word mini-whiteboards &mdash; each child holds a card, all quiz in pairs.</li>
+        <li><span class="lb">B &middot; Grammar.</span> Sage &amp; Scribe (Rally Coach): one coaches, one writes the target structure, then swap &mdash; both busy.</li>
+        <li><span class="lb">C &middot; Reading.</span> Read-and-match / true-false strips from the revised units &mdash; each child has own strip set.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+<tr><td>Diagnostic shows too many gaps</td><td>Pick only the 2&ndash;3 weakest; the rest wait for next year. Depth over coverage.</td></tr>
+<tr><td>Fast group finishes a station early</td><td>Extension card on each station (&#11088; write your own example / make one for a friend).</td></tr>
+<tr><td>Rotation chaos on &ldquo;Freeze!&rdquo;</td><td>Number the teams; teams move clockwise only; you count 5&hellip;4&hellip;3 to the next station.</td></tr>
+<tr><td>Weaker pupils hide in the team game</td><td>Showdown: every child writes on their own board; team point = majority correct.</td></tr>
+<tr><td>Reward game drags / sore losers</td><td>One shot per point, 20 sec; both teams get the &ldquo;Well done!&rdquo; cheer &mdash; &ldquo;we beat the gaps together&rdquo;.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management &mdash; signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>&ldquo;Class? &mdash; Yes!&rdquo;</b> &mdash; you: <span class="call">&ldquo;Class!&rdquo;</span> &rarr; pupils stop &amp; echo <span class="call">&ldquo;Yes!&rdquo;</span></div>
+        <div class="sigc"><b>&ldquo;WiFi&rdquo; &#128587;</b> &mdash; say &ldquo;WiFi&rdquo; + raise a spread hand &rarr; pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> &mdash; raise/lower your arm = louder/quieter &rarr; settler.</div>
+        <div class="sigc"><b>&ldquo;Give me five&rdquo;</b> &mdash; eyes &middot; ears &middot; mouth &middot; hands &middot; feet.</div>
+        <div class="sigc"><b>Countdown</b> &mdash; &ldquo;Finishing in 5&hellip;4&hellip;3&hellip;2&hellip;1&hellip; pencils down.&rdquo;</div>
+        <div class="sigc"><b>&ldquo;Freeze!&rdquo;</b> &mdash; statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">&#9654;</span> = game</span>
+    <span><span class="ig" style="padding:1px 6px;display:inline">&#127918;</span> = interactive (projector)</span>
+    <span><span class="sup">&#128170;</span> support &middot; <span class="ext">&#11088;</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0&ndash;3&prime;</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door &rarr; carpet</div></td>
+        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Carpet. <span class="en">Today YOU choose what we practise &mdash; let&rsquo;s find the tricky bits and beat them!</span></p><p><span class="en">Stand up! Let&rsquo;s wake up!</span> &rarr; <span class="game">&#9654; Disco Warm Up</span> &mdash; call the moves (jump &middot; spin &middot; clap &middot; stamp &middot; sit down &middot; stand up); trick them: say <span class="en">Sit down!</span> when they are already sitting.</p><p>Arm down: <span class="en">And&hellip; freeze. Sit on the carpet.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 &middot; carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3&ndash;12&prime;</td>
+        <td class="stage"><div class="nm">Diagnostic gap-finder</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Rapid all-respond sweep (Units 5&ndash;9).</span> Fire ~10 quick items across the units (flash a card / say a prompt) &mdash; every child answers on a mini-whiteboard: <span class="en">Show me!</span> One per unit for each skill: a word, a structure gap, a picture. You are not scoring &mdash; you are <b>spotting</b>.</p><p><span class="ph">Confidence thermometer.</span> Read each topic name; <span class="en">Easy? Green. Tricky? Red. Eyes on your own hand.</span> Tally on the board.</p><p><span class="asr">&#10004; <b>Decide now:</b> circle the <b>2&ndash;3 weakest topics</b> (most reds + most Showdown errors). Those load the stations &amp; the game. Announce them: <span class="en">Today we fix &hellip; and &hellip;!</span></span></p></td>
+        <td class="mat">mini-whiteboards &middot; unit flashcards &middot; board tally &middot; traffic-light cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">12&ndash;40&prime;</td>
+        <td class="stage"><div class="nm">Target-practice STATIONS</div><div class="zone">desks &middot; 3 teams</div></td>
+        <td class="flow"><p><span class="ph">3 stations &times; ~9&prime;, rotate on Freeze (Cooperative learning).</span> Load each with your chosen topics. <b>A Vocabulary</b> (Quiz-Quiz-Trade cards) &middot; <b>B Grammar</b> (Sage &amp; Scribe on the target structure) &middot; <b>C Reading</b> (read-and-match strips). Model each in 20 sec before starting.</p><p>ICQ: <span class="en">At a station, who is working?</span> (&rarr; everyone). Rotate: <span class="en">Freeze! &hellip; Teams, move clockwise. 5&hellip;4&hellip;3&hellip;2&hellip;1 &mdash; go!</span> Movement between stations = the brain-break.</p><p><span class="ig">&#127918; <b>Support / extension:</b> <span class="sup">&#128170;</span> stuck pupils get a word/structure prompt strip; <span class="ext">&#11088;</span> fast finishers write their own example for a friend to solve.</p></td>
+        <td class="mat">station A/B/C kits (chosen topics) &middot; mini-whiteboards &middot; prompt + extension cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">40&ndash;54&prime;</td>
+        <td class="stage"><div class="nm">&#127942; TEAM REVIEW + reward</div><div class="zone">desks &middot; 2 teams</div></td>
+        <td class="flow"><p><span class="ph">Review game on the chosen topics (board or projector).</span> Tile grid mixing the revised words &amp; structures. Mechanics: tile opens &rarr; <b>Showdown</b>: EVERY child writes/says on their board &rarr; <span class="en">Show me!</span> &rarr; majority correct = team point &rarr; <span class="ph">reward:</span> one player takes a bowling / basketball shot (paper ball into a box). Rotate the shooter strictly so all get a turn.</p><p><span class="ig">&#127918; <b>Offline setup:</b> card grid on the whiteboard + a real paper-ball shot into a box/basket &mdash; one shot per win, 20 sec.</p><p><span class="ph">ICQ:</span> <span class="en">When do you show your board?</span> (&rarr; only on &ldquo;Show me!&rdquo;) <span class="ph">Finale:</span> count scores in English; both teams <span class="en">Give me five!</span></p></td>
+        <td class="mat">review grid (board) &middot; mini-whiteboards &middot; box + paper ball</td>
+      </tr>
+
+      <tr>
+        <td class="min">54&ndash;58&prime;</td>
+        <td class="stage"><div class="nm">Reflection &middot; self-assessment</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="game">&#9654; Timed Pair Share:</span> <span class="en">Tell your partner: one thing that was tricky before and is easier NOW.</span> (20 sec each).</p><p><span class="ph">Traffic light again.</span> Read the same topics; eyes closed, show green/yellow/red. Compare with the start: <span class="en">More green now? That&rsquo;s the point!</span> <span class="en">Still yellow? Tell me &mdash; we&rsquo;ll fix it together.</span></p></td>
+        <td class="mat">traffic-light cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">58&ndash;60&prime;</td>
+        <td class="stage"><div class="nm">Closing &middot; exit ticket</div><div class="zone">carpet &rarr; door</div></td>
+        <td class="flow"><p><span class="en">Great fixing today! Let&rsquo;s sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. Line up. At the door &mdash; one quick question each from today&rsquo;s chosen topics. Answered &rarr; out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 &middot; question cards &middot; reward stickers</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">&#127968;</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>No new Activity Book page</b> (reserve/revision slot). Optional light practice: revisit the AB page of the wobbly unit (Units 5&ndash;9) OR do a mixed-practice round in the app on today&rsquo;s chosen topics (5&ndash;7 min). &#1069;&#1082;&#1079;&#1072;&#1084;&#1077;&#1085;&#1099; &#1089;&#1076;&#1072;&#1085;&#1099; &mdash; &#1101;&#1090;&#1086; &#1082;&#1088;&#1091;&#1075; &#1087;&#1086;&#1095;&#1105;&#1090;&#1072;, &#1085;&#1077; &#1085;&#1072;&#1075;&#1088;&#1091;&#1079;&#1082;&#1072;.</p></td>
+        <td class="mat">chosen-unit AB pages &middot; app (homework link)</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile &middot; Give Me Five! 4 &middot; Reserve 2 &mdash; Revision Units 5&ndash;9 (end of year) &mdash; teacher-built revision template (continuing line)</span>
+    <span>&#1050;&#1058;&#1055; &#1091;&#1088;&#1086;&#1082;&#1080; 71&ndash;72. &#1064;&#1072;&#1073;&#1083;&#1086;&#1085;-&#1082;&#1086;&#1085;&#1089;&#1090;&#1088;&#1091;&#1082;&#1090;&#1086;&#1088;: &#1076;&#1080;&#1072;&#1075;&#1085;&#1086;&#1089;&#1090;&#1080;&#1082;&#1072; &rarr; &#1089;&#1090;&#1072;&#1085;&#1094;&#1080;&#1080; &rarr; &#1082;&#1086;&#1084;&#1072;&#1085;&#1076;&#1085;&#1072;&#1103; &#1080;&#1075;&#1088;&#1072; &#1089; &#1085;&#1072;&#1075;&#1088;&#1072;&#1076;&#1086;&#1081;. &#1060;&#1083;&#1072;&#1075;&#1084;&#1072;&#1085;-&#1082;&#1074;&#1080;&#1079; &#1088;&#1072;&#1079;&#1088;&#1077;&#1096;&#1105;&#1085; &mdash; &#1101;&#1090;&#1086; review-&#1091;&#1088;&#1086;&#1082;. Genki: Disco Warm Up (01) + Goodbye song.</span>
+  </div>
+
+</div>
