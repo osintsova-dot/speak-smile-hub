@@ -69,6 +69,13 @@ main{padding:14px 12px 50px;max-width:760px;margin:0 auto}
 .planbar button{background:rgba(255,255,255,.18);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:14px;font-weight:700;cursor:pointer}
 #planframe{flex:1;width:100%;border:none;background:#fff}
 footer{text-align:center;color:var(--muted);font-size:11px;padding:0 12px 30px}
+/* раздел «Программы» */
+#progview{position:fixed;inset:0;z-index:49;background:var(--bg);display:none;flex-direction:column}
+#progview.show{display:flex}
+#progbody{flex:1;overflow:auto;padding:14px;max-width:760px;margin:0 auto;width:100%}
+.progcard{background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(108,63,197,.08);border-left:4px solid var(--p);padding:14px;margin-bottom:10px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.progcard b{font-size:15px}.progcard .c{font-size:12px;color:var(--muted);white-space:nowrap}
+.secrow{font-weight:800;color:var(--p);margin:16px 0 8px;font-size:13px}
 </style>
 </head>
 <body>
@@ -83,10 +90,20 @@ footer{text-align:center;color:var(--muted);font-size:11px;padding:0 12px 30px}
     <button class="arrowbtn" id="next">›</button>
     <button class="today" id="todaybtn">Сегодня</button>
     <input type="date" id="datepick">
+    <button class="today" id="progbtn">📚 Программы</button>
   </div>
 </header>
 <main><div id="day"></div></main>
 <footer>Speak&amp;Smile · Teaching Hub · 14 программ · расписание: <span id="srcnote">встроенное</span> · отметки «внесено» хранятся локально</footer>
+
+<div id="progview">
+  <div class="planbar">
+    <button id="progback" style="display:none">‹ Назад</button>
+    <b id="progtitle">📚 Программы</b>
+    <button id="progclose">Закрыть ✕</button>
+  </div>
+  <div id="progbody"></div>
+</div>
 
 <div id="planview">
   <div class="planbar">
@@ -107,6 +124,9 @@ document.getElementById("planopen").addEventListener("click", ()=>{
   if(src && src!=="about:blank") window.open(src,"_blank");
 });
 document.addEventListener("keydown", e=>{ if(e.key==="Escape") closePlan(); });
+document.getElementById("progbtn").addEventListener("click", openProg);
+document.getElementById("progback").addEventListener("click", renderProgList);
+document.getElementById("progclose").addEventListener("click", ()=>{ document.getElementById("progview").classList.remove("show"); document.body.style.overflow=""; });
 </script>
 <script>
 // Регистрируем service worker только при работе через сервер (http/https), не через file://

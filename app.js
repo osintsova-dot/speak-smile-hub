@@ -268,4 +268,50 @@ async function loadSchedule(){
 
 render();
 document.getElementById("datepick").value = iso(current);
+
+// ── Браузер программ (все курсы независимо от расписания) ──
+function openProg(){
+  document.getElementById("progview").classList.add("show");
+  document.body.style.overflow = "hidden";
+  renderProgList();
+}
+function renderProgList(){
+  document.getElementById("progtitle").textContent = "📚 Программы";
+  document.getElementById("progback").style.display = "none";
+  const b = document.getElementById("progbody");
+  const P = window.PROGRAMS || {};
+  const keys = Object.keys(P);
+  b.innerHTML = keys.length
+    ? keys.map(k => `<div class="progcard" data-prog="${esc(k)}"><div><b>${esc(P[k].label||k)}</b></div><div class="c">${(P[k].lessons||[]).length} уроков ›</div></div>`).join("")
+    : '<div class="empty">Нет программ с КТП</div>';
+  b.querySelectorAll(".progcard").forEach(c => c.addEventListener("click", () => renderProgLessons(c.dataset.prog)));
+  b.scrollTop = 0;
+}
+function renderProgLessons(prog){
+  const P = window.PROGRAMS[prog]; if(!P) return;
+  document.getElementById("progtitle").textContent = "📚 " + (P.label || prog);
+  document.getElementById("progback").style.display = "";
+  const b = document.getElementById("progbody");
+  let html = "", lastSec = "";
+  (P.lessons||[]).forEach(L => {
+    const sec = L.sec || "";
+    if (sec && sec !== lastSec){ html += `<div class="secrow">${esc(sec)}</div>`; lastSec = sec; }
+    const key = planKeyFor(prog, L);
+    const planBtn = key
+      ? `<button class="planbtn" data-plan="${esc(key)}">📋 Открыть план урока</button>`
+      : `<div class="unit" style="margin-top:10px">план не создан (резерв/тест/устный)</div>`;
+    const fields = (L.fields||[]).map(f => `<div class="field"><div class="flabel">${esc(f[0])}</div><div class="frow"><div class="fval">${esc(f[1])}</div><button class="copy" data-copy="${esc(f[1])}">📋</button></div></div>`).join("");
+    html += `<div class="card"><div class="cardhead"><div class="time">${L.n}</div><div><div class="title">${esc(L.title||"")}</div><div class="unit">${esc(L.type||"")}</div></div><div class="arrow">›</div></div><div class="detail">${fields}${planBtn}</div></div>`;
+  });
+  b.innerHTML = html || '<div class="empty">Нет уроков</div>';
+  b.scrollTop = 0;
+  b.querySelectorAll(".cardhead").forEach(h => h.addEventListener("click", () => h.parentElement.classList.toggle("open")));
+  b.querySelectorAll(".planbtn").forEach(x => x.addEventListener("click", e => { e.stopPropagation(); openPlan(x.dataset.plan); }));
+  b.querySelectorAll(".copy").forEach(x => x.addEventListener("click", async e => {
+    e.stopPropagation();
+    try { await navigator.clipboard.writeText(x.dataset.copy); } catch(_){}
+    const o = x.textContent; x.textContent = "✓"; x.classList.add("ok");
+    setTimeout(() => { x.textContent = o; x.classList.remove("ok"); }, 1000);
+  }));
+}
 loadSchedule();
