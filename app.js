@@ -16,6 +16,7 @@ const GROUPS_FALLBACK = [
   // Вт/Чт
   {name:"GMF 3A",  program:"GMF3",    room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"15:00"},{d:4,t:"15:00"}]},
   {name:"GMF 2C",  program:"GMF2zero",room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"16:05"},{d:4,t:"16:05"}]},
+  {name:"GMF 2D",  program:"GMF2zero",room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"17:10"},{d:4,t:"17:10"}]},
   {name:"Mimi 3",  program:"MW3",     room:"Discovery", teacher:"Оксана",    days:[{d:2,t:"18:20"},{d:4,t:"18:20"}]},
   {name:"GMF 1A",  program:"GMF1",    room:"Discovery", teacher:"Оксана",    days:[{d:2,t:"19:30"},{d:4,t:"19:30"}]},
   {name:"Get Involved 1A", program:"GIA1", room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"15:00"},{d:4,t:"15:00"}]},
