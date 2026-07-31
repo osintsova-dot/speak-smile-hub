@@ -148,6 +148,14 @@ function reminderHtml(program, L){
 const ROOM_DOT = {Discovery:"#4B89C9", Adventure:"#D58A2E", Innovation:"#45A06B"};
 function roomColor(r){ return ROOM_DOT[r] || "#9aa"; }
 
+// длительность урока по программе (мин): детские 60, экзаменационные/подростковые 90
+const LESSON_MIN = {GIA1:90, GIA2:90, Prepare3:90, Prepare4:90, Prepare5:90, Gateway:90};
+function lessonEnd(program, t){
+  const [h,m] = t.split(":").map(Number);
+  const total = h*60 + m + (LESSON_MIN[program]||60);
+  return String(Math.floor(total/60)).padStart(2,"0")+":"+String(total%60).padStart(2,"0");
+}
+
 // ---- фильтры: педагог / кабинет / вид «неделя» ----
 let fltTeacher = localStorage.getItem("fltTeacher") || "";
 let fltRoom    = localStorage.getItem("fltRoom") || "";
@@ -174,7 +182,7 @@ function renderWeek(root, headHtml, matchF){
     rows.forEach(({g,t})=>{
       const res=lessonForGroup(g,d);
       const lt=res.status==="ok"?esc(res.lesson.title||res.lesson.type||""):({holiday:"каникулы",nolesson:"нет урока по КТП",noktp:"КТП в работе",offyear:"вне года"}[res.status]||"—");
-      html+=`<div class="wkrow" data-d="${iso(d)}"><div class="wkr1"><b>${t}</b> · ${esc(g.name)} <span class="prog">${esc(PROGRAM_LABELS[g.program]||g.program)}</span><span class="wkmeta"><span class="roomdot" style="background:${roomColor(g.room)}"></span>${esc(g.room)} · ${esc(canonTeacher(g.teacher))}</span></div><div class="wkl">${lt}</div></div>`;
+      html+=`<div class="wkrow" data-d="${iso(d)}"><div class="wkr1"><b>${t}–${lessonEnd(g.program,t)}</b> · ${esc(g.name)} <span class="prog">${esc(PROGRAM_LABELS[g.program]||g.program)}</span><span class="wkmeta"><span class="roomdot" style="background:${roomColor(g.room)}"></span>${esc(g.room)} · ${esc(canonTeacher(g.teacher))}</span></div><div class="wkl">${lt}</div></div>`;
     });
   }
   if(!any) html+=`<div class="empty">Нет занятий на этой неделе под выбранный фильтр.</div>`;
@@ -316,7 +324,7 @@ function render(){
 
     return `<div class="card ${res.status} ${done?"done":""}" data-room="${esc(g.room)}" data-id="${id}">
       <div class="cardhead" data-toggle>
-        <div class="time">${t}</div>
+        <div class="time">${t}<span class="tend">${lessonEnd(g.program,t)}</span></div>
         <div class="grp">
           <div class="gname">${esc(g.name)} <span class="prog">${esc(progName)}</span></div>
           ${head}
