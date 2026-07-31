@@ -79,6 +79,49 @@ function lessonForGroup(g, date){
 
 // поля урока приходят готовыми из L.fields (парсер собирает их по заголовкам КТП)
 
+// ---- панель учителя: генераторы отчётов (по итогам юнита) + письма родителям (начало юнита) ----
+const REPORTS = {
+  Genki:   "https://osintsova-dot.github.io/Genkireport/",
+  MW3:     "https://osintsova-dot.github.io/MWreport/?v=2",
+  GMF1:    "https://osintsova-dot.github.io/GMF1letters/?v=2",
+  GMF1zero:"https://osintsova-dot.github.io/GMF1zero/",
+  GMF2:    "https://osintsova-dot.github.io/GMF2letters/?v=2",
+  GMF2zero:"https://osintsova-dot.github.io/Gmf2zero/",
+  GMF3:    "https://osintsova-dot.github.io/GMF3letters/?v=2",
+  GMF4:    "https://osintsova-dot.github.io/GMF4letters/?v=2",
+  GIA1:    "https://osintsova-dot.github.io/Get1report/",
+  GIA2:    "https://osintsova-dot.github.io/Get2report/",
+  Prepare3:"https://osintsova-dot.github.io/Prepare3report/",
+  Prepare4:"https://osintsova-dot.github.io/Prepare4/",
+  Prepare5:"https://osintsova-dot.github.io/Prepare5report/",
+  Gateway: "https://osintsova-dot.github.io/Gatewayb2/"
+};
+const LETTERS = {
+  GMF1: "https://drive.google.com/file/d/1dt1PC8MwGulBLYqQON2Vd-Nxbeamc8xR/view",
+  GMF2: "https://drive.google.com/file/d/1jm2pVx8sIwcF5rGU0mev6LtX_7OUu8zM/view",
+  GMF3: "https://drive.google.com/file/d/17an5dIJXnwARR7ZZrHt4jH-4u0g4ZilE/view",
+  GIA1: "https://docs.google.com/document/d/13gugWCBs-sekQB88k-pBK_iJm0Yv51bY-oYng7GVcl8/edit"
+};
+// первый/последний ли это урок юнита (секции ≥4 уроков, чтобы не дёргать на Genki-однострочных секциях)
+function unitEdge(program, L){
+  const prog = window.PROGRAMS[program]; if(!prog || !L.sec) return {first:false,last:false};
+  const same = prog.lessons.filter(x=>x.sec===L.sec);
+  if (same.length < 4) return {first:false,last:false};
+  const ns = same.map(x=>x.n);
+  return {first: L.n===Math.min(...ns), last: L.n===Math.max(...ns)};
+}
+function reminderHtml(program, L){
+  const e = unitEdge(program, L); let out="";
+  if (e.first){
+    const btn = LETTERS[program] ? ` <a class="rembtn" href="${LETTERS[program]}" target="_blank" rel="noopener">Открыть письма ↗</a>` : "";
+    out += `<div class="remind letter">📩 Начало юнита — отправь родителям письмо «что будем учить»${btn}</div>`;
+  }
+  if (e.last && REPORTS[program]){
+    out += `<div class="remind report">📊 Конец юнита — сгенерируй индивидуальные отчёты <a class="rembtn" href="${REPORTS[program]}" target="_blank" rel="noopener">Генератор ↗</a></div>`;
+  }
+  return out;
+}
+
 const ROOM_DOT = {Discovery:"#4B89C9", Adventure:"#D58A2E", Innovation:"#45A06B"};
 function roomColor(r){ return ROOM_DOT[r] || "#9aa"; }
 function esc(s){ return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
@@ -174,7 +217,8 @@ function render(){
       const fields = L.fields || [];
       const planKey = planKeyFor(g.program, L);
       const planBtn = planKey ? `<button class="planbtn" data-plan="${esc(planKey)}">📋 Открыть план урока</button>` : "";
-      body = `<div class="detail">` + planBtn + fields.map(([lab,val])=>`
+      const remind = reminderHtml(g.program, L);
+      body = `<div class="detail">` + remind + planBtn + fields.map(([lab,val])=>`
         <div class="field">
           <div class="flabel">${esc(lab)}</div>
           <div class="frow"><div class="fval">${esc(val)}</div>
@@ -297,6 +341,11 @@ function renderProgLessons(prog){
   document.getElementById("progback").style.display = "";
   const b = document.getElementById("progbody");
   let html = "", lastSec = "";
+  // панель программы: генератор отчётов + письма родителям
+  const tools = [];
+  if (REPORTS[prog]) tools.push(`<a class="toolbtn" href="${REPORTS[prog]}" target="_blank" rel="noopener">📊 Генератор отчётов ↗</a>`);
+  if (LETTERS[prog]) tools.push(`<a class="toolbtn" href="${LETTERS[prog]}" target="_blank" rel="noopener">📩 Письма родителям ↗</a>`);
+  if (tools.length) html += `<div class="progtools">${tools.join("")}</div>`;
   (P.lessons||[]).forEach(L => {
     const sec = L.sec || "";
     if (sec && sec !== lastSec){ html += `<div class="secrow">${esc(sec)}</div>`; lastSec = sec; }
@@ -304,8 +353,9 @@ function renderProgLessons(prog){
     const planBtn = key
       ? `<button class="planbtn" data-plan="${esc(key)}">📋 Открыть план урока</button>`
       : `<div class="unit" style="margin-top:10px">план не создан (резерв/тест/устный)</div>`;
+    const remind = reminderHtml(prog, L);
     const fields = (L.fields||[]).map(f => `<div class="field"><div class="flabel">${esc(f[0])}</div><div class="frow"><div class="fval">${esc(f[1])}</div><button class="copy" data-copy="${esc(f[1])}">📋</button></div></div>`).join("");
-    html += `<div class="card"><div class="cardhead"><div class="time">${L.n}</div><div><div class="title">${esc(L.title||"")}</div><div class="unit">${esc(L.type||"")}</div></div><div class="arrow">›</div></div><div class="detail">${fields}${planBtn}</div></div>`;
+    html += `<div class="card"><div class="cardhead"><div class="time">${L.n}</div><div><div class="title">${esc(L.title||"")}</div><div class="unit">${esc(L.type||"")}</div></div><div class="arrow">›</div></div><div class="detail">${remind}${fields}${planBtn}</div></div>`;
   });
   b.innerHTML = html || '<div class="empty">Нет уроков</div>';
   b.scrollTop = 0;
