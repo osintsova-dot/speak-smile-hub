@@ -322,7 +322,7 @@ function render(){
       head = `<div class="title muted">${esc(msg)}</div><div class="unit">${esc(progName)}</div>`;
     }
 
-    return `<div class="card ${res.status} ${done?"done":""}" data-room="${esc(g.room)}" data-id="${id}">
+    return `<div class="card ${res.status} ${done?"done":""}${(LESSON_MIN[g.program]===90)?" dur90":""}" data-room="${esc(g.room)}" data-id="${id}">
       <div class="cardhead" data-toggle>
         <div class="time">${t}<span class="tend">${lessonEnd(g.program,t)}</span></div>
         <div class="grp">
