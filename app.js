@@ -335,12 +335,23 @@ function render(){
     </div>`;
   };
   if (roomsMode){
-    const cols = rooms.filter(r=>!fltRoom || r===fltRoom).map(r=>{
-      const rows = todays.filter(x=>x.g.room===r);
-      if (!rows.length) return "";
-      return `<div class="roomcol"><div class="roomhead" style="border-color:${roomColor(r)}"><span class="roomdot" style="background:${roomColor(r)}"></span>${esc(r)}</div>${rows.map(cardHtml).join("")}</div>`;
-    }).filter(Boolean).join("");
-    html += `<div class="roomcols">${cols}</div>`;
+    // временнáя сетка: 1 строка грида = 1 минута → параллельные уроки на одной линии
+    const toMin = t => { const [h,m]=t.split(":").map(Number); return h*60+m; };
+    const items = todays.map(x=>({ ...x, s:toMin(x.t), e:toMin(x.t)+(LESSON_MIN[x.g.program]||60) }));
+    const cols = rooms.filter(r=>(!fltRoom||r===fltRoom) && items.some(x=>x.g.room===r));
+    if (items.length && cols.length){
+      const t0=Math.min(...items.map(x=>x.s)), t1=Math.max(...items.map(x=>x.e));
+      let grid = `<div class="roomswrap"><div class="tgrid" style="grid-template-columns:repeat(${cols.length},1fr);grid-template-rows:36px repeat(${t1-t0},2.2px)">`;
+      cols.forEach((r,ci)=>{ grid += `<div class="roomhead" style="grid-column:${ci+1};grid-row:1;border-color:${roomColor(r)}"><span class="roomdot" style="background:${roomColor(r)}"></span>${esc(r)}</div>`; });
+      items.forEach(x=>{
+        const ci = cols.indexOf(x.g.room); if (ci<0) return;
+        grid += `<div class="tcell" style="grid-column:${ci+1};grid-row:${x.s-t0+2} / span ${x.e-x.s}">${cardHtml(x)}</div>`;
+      });
+      grid += `</div></div>`;
+      html += grid;
+    } else {
+      html += `<div class="empty">Под выбранный фильтр занятий нет.</div>`;
+    }
   } else {
     todays.forEach(x=>{ html += cardHtml(x); });
   }
