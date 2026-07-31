@@ -165,6 +165,7 @@ function renderWeek(root, headHtml, matchF){
   let html=headHtml, any=false;
   for(let i=0;i<7;i++){
     const d=new Date(mon); d.setDate(mon.getDate()+i);
+    if (d < SCHOOL_START || d > YEAR_END || inHoliday(d)) continue; // вне года/каникулы — не показываем
     const rows=GROUPS.map(g=>{const s=g.days.find(x=>x.d===d.getDay());return s?{g,t:s.t}:null}).filter(Boolean)
       .filter(x=>matchF(x.g)).sort((a,b)=>a.t.localeCompare(b.t));
     if(!rows.length) continue;
@@ -262,6 +263,13 @@ function render(){
   const matchF = g => (!fltTeacher || canonTeacher(g.teacher)===fltTeacher) && (!fltRoom || g.room===fltRoom);
 
   if (weekMode){ renderWeek(root, banner+fbar, matchF); return; }
+
+  // вне учебного года и в каникулы — ничего не показываем
+  if (current < SCHOOL_START || current > YEAR_END || inHoliday(current)){
+    root.innerHTML = banner + fbar + `<div class="empty">Занятий нет</div>`;
+    bindFilters(root);
+    return;
+  }
 
   // группы этого дня
   const todays = GROUPS
