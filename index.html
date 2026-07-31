@@ -83,6 +83,12 @@ footer{text-align:center;color:var(--muted);font-size:11px;padding:0 12px 30px}
 .fchip.on{background:var(--p);border-color:var(--p);color:#fff}
 .fchip.wk{margin-left:auto;background:#fff7df;border-color:#f0dd9a;color:#7a5b00}
 .fchip.wk.on{background:var(--y);border-color:var(--y);color:#4A2E85}
+/* вид «по кабинетам»: колонки параллельных групп */
+.roomcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:10px;align-items:start}
+@media(max-width:760px){.roomcols{display:flex;overflow-x:auto;gap:10px;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+ .roomcols .roomcol{flex:0 0 82vw}}
+.roomcol{min-width:0}
+.roomhead{font-weight:800;font-size:13px;background:#fff;border-radius:10px;border-left:4px solid var(--p);padding:8px 12px;margin-bottom:8px;box-shadow:0 1px 8px rgba(108,63,197,.07)}
 .wkday{font-weight:800;color:var(--p);margin:14px 2px 6px;font-size:13px}
 .wkrow{background:#fff;border-radius:10px;border-left:4px solid var(--p);box-shadow:0 1px 8px rgba(108,63,197,.07);padding:9px 12px;margin-bottom:6px;cursor:pointer}
 .wkr1{font-size:13px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}

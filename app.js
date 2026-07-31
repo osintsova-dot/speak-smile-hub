@@ -152,11 +152,13 @@ function roomColor(r){ return ROOM_DOT[r] || "#9aa"; }
 let fltTeacher = localStorage.getItem("fltTeacher") || "";
 let fltRoom    = localStorage.getItem("fltRoom") || "";
 let weekMode   = false;
+let roomsMode  = localStorage.getItem("roomsMode")==="1";
 const canonTeacher = t => (t==="Катя" ? "Екатерина" : (t||""));
 function bindFilters(root){
   root.querySelectorAll(".fchip.ft").forEach(b=>b.addEventListener("click",()=>{ fltTeacher=b.dataset.v; localStorage.setItem("fltTeacher",fltTeacher); render(); }));
   root.querySelectorAll(".fchip.fr").forEach(b=>b.addEventListener("click",()=>{ fltRoom=b.dataset.v; localStorage.setItem("fltRoom",fltRoom); render(); }));
   const wk=root.querySelector("#wkbtn"); if(wk) wk.addEventListener("click",()=>{ weekMode=!weekMode; render(); });
+  const rm=root.querySelector("#rmbtn"); if(rm) rm.addEventListener("click",()=>{ roomsMode=!roomsMode; localStorage.setItem("roomsMode",roomsMode?"1":"0"); render(); });
 }
 function renderWeek(root, headHtml, matchF){
   const mon=new Date(current); const off=(mon.getDay()+6)%7; mon.setDate(mon.getDate()-off);
@@ -255,7 +257,7 @@ function render(){
   const chip=(cls,v,cur,lab)=>`<button class="fchip ${cls}${v===cur?" on":""}" data-v="${esc(v)}">${lab}</button>`;
   const fbar = `<div class="filters">
     <div class="frow2">👩‍🏫${chip("ft","",fltTeacher,"Все")}${teachers.map(t=>chip("ft",t,fltTeacher,esc(t))).join("")}</div>
-    <div class="frow2">🚪${chip("fr","",fltRoom,"Все")}${rooms.map(r=>chip("fr",r,fltRoom,esc(r))).join("")}<button class="fchip wk${weekMode?" on":""}" id="wkbtn">📅 Неделя</button></div>
+    <div class="frow2">🚪${chip("fr","",fltRoom,"Все")}${rooms.map(r=>chip("fr",r,fltRoom,esc(r))).join("")}<button class="fchip wk${roomsMode?" on":""}" id="rmbtn">🏛 Кабинеты</button><button class="fchip wk${weekMode?" on":""}" id="wkbtn">📅 Неделя</button></div>
   </div>`;
   const matchF = g => (!fltTeacher || canonTeacher(g.teacher)===fltTeacher) && (!fltRoom || g.room===fltRoom);
 
@@ -275,7 +277,7 @@ function render(){
   }
 
   let html = banner + fbar;
-  for (const {g,t} of todays){
+  const cardHtml = ({g,t}) => {
     const res = lessonForGroup(g, current);
     const done = localStorage.getItem(doneKey(g,current))==="1";
     const id = "c_"+g.name.replace(/\W/g,"_");
@@ -304,7 +306,7 @@ function render(){
       head = `<div class="title muted">${esc(msg)}</div><div class="unit">${esc(progName)}</div>`;
     }
 
-    html += `<div class="card ${res.status} ${done?"done":""}" data-room="${esc(g.room)}" data-id="${id}">
+    return `<div class="card ${res.status} ${done?"done":""}" data-room="${esc(g.room)}" data-id="${id}">
       <div class="cardhead" data-toggle>
         <div class="time">${t}</div>
         <div class="grp">
@@ -315,6 +317,16 @@ function render(){
       </div>
       ${body}
     </div>`;
+  };
+  if (roomsMode){
+    const cols = rooms.filter(r=>!fltRoom || r===fltRoom).map(r=>{
+      const rows = todays.filter(x=>x.g.room===r);
+      if (!rows.length) return "";
+      return `<div class="roomcol"><div class="roomhead" style="border-color:${roomColor(r)}"><span class="roomdot" style="background:${roomColor(r)}"></span>${esc(r)}</div>${rows.map(cardHtml).join("")}</div>`;
+    }).filter(Boolean).join("");
+    html += `<div class="roomcols">${cols}</div>`;
+  } else {
+    todays.forEach(x=>{ html += cardHtml(x); });
   }
   root.innerHTML = html;
   bindFilters(root);
