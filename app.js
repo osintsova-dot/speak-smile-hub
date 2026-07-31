@@ -96,11 +96,34 @@ const REPORTS = {
   Prepare5:"https://osintsova-dot.github.io/Prepare5report/",
   Gateway: "https://osintsova-dot.github.io/Gatewayb2/"
 };
-const LETTERS = {
-  GMF1: "https://drive.google.com/file/d/1dt1PC8MwGulBLYqQON2Vd-Nxbeamc8xR/view",
-  GMF2: "https://drive.google.com/file/d/1jm2pVx8sIwcF5rGU0mev6LtX_7OUu8zM/view",
-  GMF3: "https://drive.google.com/file/d/17an5dIJXnwARR7ZZrHt4jH-4u0g4ZilE/view",
-  GIA1: "https://docs.google.com/document/d/13gugWCBs-sekQB88k-pBK_iJm0Yv51bY-oYng7GVcl8/edit"
+const LETTERS = {  // письма родителям в начале юнита (последние версии с Drive)
+  Genki:   "https://drive.google.com/file/d/1qjoPdPmlTsbbkJrR_9tu4hZCzPIARBlm/view",
+  MW3:     "https://drive.google.com/file/d/1-YMZgKCwOney4-42jS1XqxcgFAKyQ71c/view",
+  GMF1:    "https://drive.google.com/file/d/14Kv_0_iEWKYT2hRyKdI0q9iGJ5HVjBGi/view",
+  GMF1zero:"https://drive.google.com/file/d/1GyfAf-nI5YZBLu-0ooFHkW1ZuevrHhYX/view",
+  GMF2:    "https://drive.google.com/file/d/1OiBTDh-Ue9caV794kXuB6u4KM-CM5LPm/view",
+  GMF2zero:"https://drive.google.com/file/d/1slIyjoewMYP-ZLs1ccoAMK-2UM5uPO9g/view",
+  GMF3:    "https://drive.google.com/file/d/1SxWBOWwGPWbhnz2wbDaWybhNXbAxEWJx/view",
+  GMF4:    "https://drive.google.com/file/d/1CgyxoDi3Pq7sx87QZ3NWQt9sx_Y7miz8/view",
+  GIA1:    "https://docs.google.com/document/d/13gugWCBs-sekQB88k-pBK_iJm0Yv51bY-oYng7GVcl8/edit",
+  GIA2:    "https://drive.google.com/file/d/1U-MHrJ1CtCnOR_oURK_X_FKkqIBemxhN/view",
+  Prepare3:"https://drive.google.com/file/d/1tmihpfCkYp20qXZmXbByGEHy074rjQfQ/view",
+  Prepare4:"https://drive.google.com/file/d/1uT5vmOP4DZz_Jt3w2YOJNzHAGTyraLwy/view",
+  Prepare5:"https://drive.google.com/file/d/1g7_YTrHjauko9clyJJobyeuTXWLy7r5D/view",
+  Gateway: "https://drive.google.com/file/d/10S6pa8Aj9nrpqCoyA9PP4yWNY3wX8DJC/view"
+};
+const JOURNALS = { // журнал наблюдений (печать)
+  Genki:   "https://drive.google.com/file/d/1YLKF5n37RotvlRt0SGJZ2YqdMO-xtJYw/view",
+  MW3:     "https://drive.google.com/file/d/1iVx-SV0ACpR7tETR64uxZ5-ObIwqVrou/view",
+  GMF1:    "https://drive.google.com/file/d/1waWSKU9LAVhV6fO5MemcK-6EPKmhGqfD/view",
+  GMF1zero:"https://drive.google.com/file/d/1waWSKU9LAVhV6fO5MemcK-6EPKmhGqfD/view",
+  GMF2:    "https://drive.google.com/file/d/1MlQFpo04DjeYUOlGUdQSx62fSFFIm9ZT/view",
+  GMF2zero:"https://drive.google.com/file/d/1MlQFpo04DjeYUOlGUdQSx62fSFFIm9ZT/view",
+  GMF3:    "https://drive.google.com/file/d/1krPTkektmquhYnuIpF2ZKZx6SX_pplVL/view",
+  GMF4:    "https://drive.google.com/file/d/1CAMf2BxCXMRwC8hwvyTmllwDu_YpRa5U/view",
+  GIA1:    "https://drive.google.com/file/d/191eWQIYlDh-0N26eKB-bW7AL_N3oi5U9/view",
+  GIA2:    "https://drive.google.com/file/d/1wHdolz7eG9K4b9Ch5zkorJdfexvh3KE_/view",
+  Prepare3:"https://drive.google.com/file/d/1z9ElIruPY8EoJ5wWKjw0Z48AiTHC0FG7/view"
 };
 // первый/последний ли это урок юнита (секции ≥4 уроков, чтобы не дёргать на Genki-однострочных секциях)
 function unitEdge(program, L){
@@ -345,6 +368,7 @@ function renderProgLessons(prog){
   const tools = [];
   if (REPORTS[prog]) tools.push(`<a class="toolbtn" href="${REPORTS[prog]}" target="_blank" rel="noopener">📊 Генератор отчётов ↗</a>`);
   if (LETTERS[prog]) tools.push(`<a class="toolbtn" href="${LETTERS[prog]}" target="_blank" rel="noopener">📩 Письма родителям ↗</a>`);
+  if (JOURNALS[prog]) tools.push(`<a class="toolbtn" href="${JOURNALS[prog]}" target="_blank" rel="noopener">🖨 Журнал (печать) ↗</a>`);
   if (tools.length) html += `<div class="progtools">${tools.join("")}</div>`;
   (P.lessons||[]).forEach(L => {
     const sec = L.sec || "";
