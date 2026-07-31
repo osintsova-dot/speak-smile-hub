@@ -147,6 +147,42 @@ function reminderHtml(program, L){
 
 const ROOM_DOT = {Discovery:"#4B89C9", Adventure:"#D58A2E", Innovation:"#45A06B"};
 function roomColor(r){ return ROOM_DOT[r] || "#9aa"; }
+
+// ---- фильтры: педагог / кабинет / вид «неделя» ----
+let fltTeacher = localStorage.getItem("fltTeacher") || "";
+let fltRoom    = localStorage.getItem("fltRoom") || "";
+let weekMode   = false;
+const canonTeacher = t => (t==="Катя" ? "Екатерина" : (t||""));
+function bindFilters(root){
+  root.querySelectorAll(".fchip.ft").forEach(b=>b.addEventListener("click",()=>{ fltTeacher=b.dataset.v; localStorage.setItem("fltTeacher",fltTeacher); render(); }));
+  root.querySelectorAll(".fchip.fr").forEach(b=>b.addEventListener("click",()=>{ fltRoom=b.dataset.v; localStorage.setItem("fltRoom",fltRoom); render(); }));
+  const wk=root.querySelector("#wkbtn"); if(wk) wk.addEventListener("click",()=>{ weekMode=!weekMode; render(); });
+}
+function renderWeek(root, headHtml, matchF){
+  const mon=new Date(current); const off=(mon.getDay()+6)%7; mon.setDate(mon.getDate()-off);
+  let html=headHtml, any=false;
+  for(let i=0;i<7;i++){
+    const d=new Date(mon); d.setDate(mon.getDate()+i);
+    const rows=GROUPS.map(g=>{const s=g.days.find(x=>x.d===d.getDay());return s?{g,t:s.t}:null}).filter(Boolean)
+      .filter(x=>matchF(x.g)).sort((a,b)=>a.t.localeCompare(b.t));
+    if(!rows.length) continue;
+    any=true;
+    html+=`<div class="wkday">${fmtDate(d)}</div>`;
+    rows.forEach(({g,t})=>{
+      const res=lessonForGroup(g,d);
+      const lt=res.status==="ok"?esc(res.lesson.title||res.lesson.type||""):({holiday:"каникулы",nolesson:"нет урока по КТП",noktp:"КТП в работе",offyear:"вне года"}[res.status]||"—");
+      html+=`<div class="wkrow" data-d="${iso(d)}"><div class="wkr1"><b>${t}</b> · ${esc(g.name)} <span class="prog">${esc(PROGRAM_LABELS[g.program]||g.program)}</span><span class="wkmeta"><span class="roomdot" style="background:${roomColor(g.room)}"></span>${esc(g.room)} · ${esc(canonTeacher(g.teacher))}</span></div><div class="wkl">${lt}</div></div>`;
+    });
+  }
+  if(!any) html+=`<div class="empty">Нет занятий на этой неделе под выбранный фильтр.</div>`;
+  root.innerHTML=html;
+  bindFilters(root);
+  root.querySelectorAll(".wkrow").forEach(r=>r.addEventListener("click",()=>{
+    const [y,m,dd]=r.dataset.d.split("-").map(Number);
+    current=new Date(y,m-1,dd); weekMode=false; render();
+    const dp=document.getElementById("datepick"); if(dp) dp.value=r.dataset.d;
+  }));
+}
 function esc(s){ return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 function doneKey(g,date){ return "done:"+g.name+":"+iso(date); }
 
@@ -213,18 +249,32 @@ function render(){
   }
   if (inHoliday(current)) banner = `<div class="banner">❄ Зимние каникулы 28.12.2026 – 10.01.2027 — занятий нет.</div>`;
 
+  // панель фильтров: педагог / кабинет / неделя
+  const teachers=[...new Set(GROUPS.map(g=>canonTeacher(g.teacher)))].filter(Boolean).sort();
+  const rooms=[...new Set(GROUPS.map(g=>g.room))].filter(Boolean).sort();
+  const chip=(cls,v,cur,lab)=>`<button class="fchip ${cls}${v===cur?" on":""}" data-v="${esc(v)}">${lab}</button>`;
+  const fbar = `<div class="filters">
+    <div class="frow2">👩‍🏫${chip("ft","",fltTeacher,"Все")}${teachers.map(t=>chip("ft",t,fltTeacher,esc(t))).join("")}</div>
+    <div class="frow2">🚪${chip("fr","",fltRoom,"Все")}${rooms.map(r=>chip("fr",r,fltRoom,esc(r))).join("")}<button class="fchip wk${weekMode?" on":""}" id="wkbtn">📅 Неделя</button></div>
+  </div>`;
+  const matchF = g => (!fltTeacher || canonTeacher(g.teacher)===fltTeacher) && (!fltRoom || g.room===fltRoom);
+
+  if (weekMode){ renderWeek(root, banner+fbar, matchF); return; }
+
   // группы этого дня
   const todays = GROUPS
     .map(g=>{ const slot=g.days.find(x=>x.d===wd); return slot?{g,t:slot.t}:null; })
     .filter(Boolean)
+    .filter(x=>matchF(x.g))
     .sort((a,b)=>a.t.localeCompare(b.t));
 
   if (!todays.length){
-    root.innerHTML = banner + `<div class="empty">В этот день занятий нет.</div>`;
+    root.innerHTML = banner + fbar + `<div class="empty">${(fltTeacher||fltRoom)?"Под выбранный фильтр занятий нет.":"В этот день занятий нет."}</div>`;
+    bindFilters(root);
     return;
   }
 
-  let html = banner;
+  let html = banner + fbar;
   for (const {g,t} of todays){
     const res = lessonForGroup(g, current);
     const done = localStorage.getItem(doneKey(g,current))==="1";
@@ -267,6 +317,7 @@ function render(){
     </div>`;
   }
   root.innerHTML = html;
+  bindFilters(root);
 
   // раскрытие карточек
   root.querySelectorAll(".cardhead[data-toggle]").forEach(h=>{

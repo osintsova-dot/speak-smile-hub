@@ -1,0 +1,303 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF1 (с нуля) · Unit 6 · Занятие 48 · Lesson 3 — Story: Hide and seek (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 (с нуля) · Unit 6 “A day in the park” · Занятие 48 / L3 — Story: Hide and seek</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., first-year beginners · линия с нуля) · 60 min · Story: listen → follow → act out (drama) · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 01.03–07.03 · Занятие 48</span><span class="chip new">✨ STORY</span><span class="chip">~12 pupils · small groups for drama</span><span class="chip">Линия с нуля</span><span class="chip">🦸 Phonics Hero ур.30b · /ё:/ er·ir·ur</span></div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>follow and understand the story “Hide and seek”</b> (Pupil's Book pp. 62–63, CD3 6) and <b>act it out</b> using key story language: “Where's Toby? — He's on the slide.”, “Where are Jake and Molly? — They're behind the tree.”, “He isn't under the bush.”, “You can't play in here.”, “You can have a ride on the magic bike.”</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning</b> — park objects + “Where's…? — He's/She's on the…” (L1–L2) — <b>woven into the story work</b> (find the hidden children); phonics — <b>Phonics Hero ур.30 (b) закрепление</b>: <b>er·ir·ur</b> (sort → dictation → tricky Yellow set → story «Мальчик и море»); value: play fair &amp; take turns; <b>preview</b> plural <i>Where are they? — They're behind the tree</i> for Lesson 4.</li>
+      <li><span class="lb">Personal.</span> Keep story listening active (gesture responses, prediction); manage drama noise with Freeze; <b>every child acts in a group at the same time</b> — no “2 on stage, 10 watching” until the final 1-min showcase.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>show they understand the story (order the frames, answer with gestures);</li>
+        <li>say the key lines in role: “Where's Toby? — He's on the slide!”, “Ready or not, here I come!”;</li>
+        <li>read, sort &amp; write <b>er/ir/ur</b> words (<i>her, girl, bird, turn</i>) and chorus the story «Мальчик и море»;</li>
+        <li>take turns fairly in a game (value).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">swing</span><span class="w">slide</span><span class="w">roundabout</span><span class="w">tree</span><span class="w">bush</span><span class="w">rock</span><span class="w">grass</span><span class="w">flower</span><span class="w">playground</span> <span style="color:var(--muted);font-size:.82rem">(recycled: Beth · Jake · Molly · Toby the dog · the magic bike · <i>on / behind / under</i>)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Where's (Toby)? — He's on the slide. · Where are (Jake and Molly)? — They're behind the tree. · He isn't under the bush. · You can't play in here. · You can have a ride on the magic bike. · Ready or not, here I come!</div></div>
+      <div class="r"><div class="k">Form</div><div>He's / She's (one) vs They're (two) + place (receptive here — meaning through gesture; full focus in L4).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>contracted <i>They're</i> /ðeə/; keep the place preposition (<i>behind / under</i>); /ё:/ one sound in <i>her, turn</i>.</div></div>
+      <div class="r"><div class="k">Phonics</div><div><b>Phonics Hero ур.30 (b) закрепление</b>: <b>er·ir·ur</b> /ё:/ — read &amp; sort <i>fern · bird · girl · shirt · turn · purple · burn · her</i> · dictation <i>her, bird, girl, turn</i> · tricky strip Yellow set · story «Мальчик и море» (тетрадь стр.84–85) · sight words: <i>of, also</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">Frame: “Where's Toby? He's a dog — he or she?” → <b>“He's on the slide!”</b></div>
+      <div class="ccq">Two children hiding: “Where are Jake and Molly? One or TWO?” → two → <b>“They're behind the tree!”</b></div>
+      <div class="ccq" style="margin-bottom:12px">Toby wants to play: “Can Toby play in here?” → <b>“No! You can't play in here — but you can ride the magic bike!”</b></div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> park objects + Where's…? known from L1–L2; children know Beth, Jake, Molly, Toby &amp; the magic bike. Emergent readers → they FOLLOW the pictures while listening; the teacher points, children don't read the bubbles alone. <i>They're + place</i> is met here in context and studied properly next lesson. <b>Группы:</b> команда — максимум 4; при другой численности делим на команды по 3–4 (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4).</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>New words block the story (<i>hide, seek, in here</i>)</td><td>Pre-teach with gesture: hide (crouch), seek (hand over eyes, count), “in here” (point).</td></tr>
+        <tr><td>Children call answers over the audio</td><td>“Listening hands” rule — hands cupped behind ears while the CD plays; talk only when it stops.</td></tr>
+        <tr><td><i>er/ir/ur</i> said with a rolled r</td><td>Thinking-hum gesture; “ONE sound /ё:/”; no rolled r — <i>girl, her</i>.</td></tr>
+        <tr><td>Drama turns to chaos (real hiding!)</td><td>Hiding is a crouch ON THE SPOT; roles fixed by colour badges; <span class="call">“Freeze!”</span> resets.</td></tr>
+        <tr><td>Frame cards ordered by one child in the pair</td><td>Rule “one card each turn, take turns” (RallyRobin with cards); praise pairs where both hands work.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset (essential in drama).</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Come in!</span> On the carpet <span class="sp">🦝 Speaky</span> covers his eyes: <span class="en">One… two… three… Ready or not, here I come! Where is everyone hiding?</span> (children giggle — that's the hook).</p>
+          <p><span class="en">Stand up! Warm-up time!</span> → <span class="game">▶ Genki Disco Warm Up</span> — the opening ritual, finish seated.</p>
+        </td>
+        <td class="mat"><b>Genki «Disco Warm Up»</b> mp3 · Speaky · carpet</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Review → into the story</div><div class="zone">carpet, circle</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle L1–L2 woven into today.</span> Quick flash: <span class="en">What's this? — It's a bush!</span> (5–6 cards, choral). Then dolls on the park poster: <span class="en">Where's Beth? — She's on the swing! Where's Toby? — He's on the slide!</span> — every child does the he/she gesture.</p>
+          <p><span class="ph">Two gestures for today.</span> <b>hide</b> = crouch small 🙈 · <b>seek</b> = hand over eyes, count 🔢. Call: <span class="en">Show me HIDE! Show me SEEK!</span> <span class="sp">🦝 Speaky</span>: <span class="en">The children play hide and seek in the park!</span></p>
+          <p><span class="ph">Bridge.</span> <span class="en">Where is everyone hiding? Behind the tree? Under the bush? Let's find out!</span> Signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">park flashcards · park poster + dolls · Speaky</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">8–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">To the board — ABC time!</span> Sing the ABC / phonics song with actions → settle into phonics.</p></td>
+        <td class="mat"><b>ABC phonics song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">Phonics Hero — /ё:/ er·ir·ur (b, light)</div><div class="zone">board → desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Speed reading.</span> The strip up to <b>er · ir · ur</b>: <span class="en">There and back — beat your time!</span> Hum recall: <span class="en">/ё:/ — her! girl! turn!</span></p>
+          <p><span class="ph">Read &amp; sort — тетрадь стр.84 №1–2 (all point first).</span> Read each word (<i>fern · bird · girl · shirt · turn · purple · burn · her</i>), <b>everyone points</b> to the right house (er / ir / ur) → write it in the column. Neighbour-check: <span class="en">Girl — ir? — Yes!</span></p>
+          <p><span class="ph">Dictation — стр.84 №3 (short, story day).</span> 4 words once each: <i>her · bird · girl · turn</i> → segment on fingers (<span class="en">/g/ /ir/ /l/ — girl!</span>) → write → <span class="en">Show me!</span> Tricky strip: Yellow set — there and back.</p>
+          <p><span class="ph">Story taste — стр.85 «Мальчик и море» (1–2′, settler).</span> Chorus the frames, finger under the words: <span class="en">A boy by the sea. The girl turns…</span> The draw-task («A boy by the sea», стр.85) goes home. Colour the star «Я молодец!» (стр.84).</p>
+          <p style="font-size:.85rem;color:var(--muted)">💪 Support: sort with the house card in hand; dictation with <i>g__l</i>. ⭐ Extension: 5th word by ear (<i>shirt</i>). <b>No long written work</b> — full story lesson. 🎮 Phonics Hub (speakandsmile.ru/gmf1/phonics/) — набор er·ir·ur, ✅ готов.</p>
+        </td>
+        <td class="mat"><b>Phonics Hero 2.0</b> тетрадь стр.84–85 (1 per pupil) · <b>Phonics Hub</b> (board) · er/ir/ur cards · pencils</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–24′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="en">Now — where is everyone?</span> Sing <span class="game">Genki «Where is Mr Monkey?»</span> moving the toy monkey <b>behind / under / on</b> the park cards → it rehearses the exact story frame: <span class="en">Where is he? — He's behind the tree!</span> → <span class="en">And now — the story!</span></p></td>
+        <td class="mat"><b>Genki «Where is Mr Monkey?»</b> mp3 · toy monkey · park cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–34′</td>
+        <td class="stage"><div class="nm">📺 Story — listen &amp; follow</div><div class="zone">carpet, books/screen</div></td>
+        <td class="flow">
+          <p><span class="ph">Before you read (PB p. 62).</span> Big story picture on screen / books open. Pre-teach with gesture: <span class="en">hide</span> (crouch) · <span class="en">seek</span> (count, hand over eyes) · <span class="en">You can't play in here</span> (hand-stop).</p>
+          <div style="background:var(--p-soft);border:1px solid var(--line);border-left:4px solid var(--honey);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Find it! — “Who's hiding where?” <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span> · 🎮 <a href="https://speakandsmile.ru/gmf1/games/find-it-u6.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">find-it-u6</a></div>
+            <div><b>Screen:</b> the U6 <b>“Find it!”</b> engine on the big story picture. <b>· How:</b> Speaky asks, a child taps a hidden child; they light up. <b>· Pupils:</b> whole class points in their book / calls it — <span class="en">Behind the tree! Under the bush! On the slide!</span> <b>· Teacher:</b> <span class="sp">🦝</span> <span class="en">Where's Toby? Point!</span> — 4–5 things, quick. <b>· Offline reserve:</b> point in the open Pupil's Book (p. 62), pairs 15 sec &amp; chorus.</div>
+          </div>
+          <p><span class="ph">Predict (thinking) — before we listen.</span> <span class="en">The children hide. Where is Jake? Behind the tree? Under the bush? On the slide?</span> Thumbs vote. <span class="en">Let's listen and check your guess!</span></p>
+          <p><span class="ph">Listen 1 — global (CD3 6).</span> “Listening hands” behind ears. Teacher points frame by frame; children follow the pictures. Gist check: <span class="en">Does Toby find them? Show me!</span> (thumbs)</p>
+          <p><span class="ph">Detail check — True or False? (thumbs up / down, all react).</span> Say a sentence, class shows a thumb: <span class="en">Jake and Molly are behind the tree.</span> (👍) · <span class="en">Toby is on the swing.</span> (👎 — <span class="en">on the slide!</span>) · <span class="en">Toby can play in here.</span> (👎 — <span class="en">You can't play in here!</span>) · <span class="en">Toby rides the magic bike.</span> (👍). Re-point the frame to fix any wrong thumb.</p>
+          <p><span class="ph">Listen 2 — active (all respond).</span> Play again; children do the story gestures: hide 🙈, seek 🔢, “here I come!”, ring the magic bike 🔔. CCQs between frames (see box). At the hiding frame stop: <span class="en">Where are Jake and Molly? — They're… BEHIND THE TREE!</span></p>
+        </td>
+        <td class="mat">PB pp. 62–63 · CD3 6 / animated story (Navio) · <b>“Find it!”</b> (board) · board · 🎮 <a href="https://speakandsmile.ru/gmf1/games/find-it-u6.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">find-it-u6</a></td>
+      </tr>
+
+      <tr>
+        <td class="min">34–35′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at carpet</div></td>
+        <td class="flow"><p><span class="en">Everybody up! Let's play hide and seek — on the spot!</span> Teacher counts <span class="en">One… two… three… here I come!</span> → children crouch/hide (on the spot) then pop up: <span class="en">Here I am!</span> Two rounds → <span class="en">Freeze!</span> → sit.</p></td>
+        <td class="mat">— (movement only)</td>
+      </tr>
+
+      <tr>
+        <td class="min">35–43′</td>
+        <td class="stage"><div class="nm">▶ Build the story</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Story Builders</span> (Mido №54 “Reconstruction”, picture re-skin for non-readers — <b>all pairs work at once</b>). Each pair gets 8 mini frame-cards of “Hide and seek”, shuffled.</p>
+          <p><span class="ph">Order it.</span> <span class="en">Put the story in order — one card each, take turns!</span> (RallyRobin with cards.) Countdown 2 min.</p>
+          <p><span class="ph">Check with the audio.</span> Replay CD3 6: pairs touch each card as they hear it — self-check, fix the order. Then choral retell, teacher holds up big frames, class says the line: <span class="en">Let's play hide and seek! · Ready or not, here I come! · They're behind the tree! · You can't play in here, Toby! · You can ride the magic bike!</span></p>
+          <div style="background:var(--honey-soft);border:1px solid var(--line);border-left:4px solid var(--p);border-radius:9px;padding:8px 11px;margin:7px 0;font-size:.87rem">
+            <div style="font-weight:800;color:var(--p-ink);margin-bottom:3px">🎮 Интерактив (проектор): Hide-and-Seek Story-Sequence 1–8 <span style="background:var(--good);color:#fff;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:700;margin-left:4px">✅ ГОТОВ</span> · 🎮 <a href="https://speakandsmile.ru/gmf1/games/u6-story-hide.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">u6-story-hide</a></div>
+            <div><b>Screen:</b> the key story frames appear <b>shuffled</b> with empty number badges. <b>· How:</b> tap two frames to swap (or drag); a “Check” button lights correct frames green with a cheer. <b>· Pupils:</b> the class calls the order — <span class="en">Number one — let's play! Number two — hide!</span> — and gesture each frame. <b>· Teacher:</b> take votes (Numbered Heads), tap as they decide, replay CD3 6 to confirm. <b>· Offline reserve:</b> big frame cards on the board, children come up in a fast rotation.</div>
+          </div>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> hand that pair only the <b>5</b> clearest frames &amp; number the first. <b style="color:var(--p)">Extension:</b> after ordering, say one whole line for each frame from memory before the audio check.</p>
+        </td>
+        <td class="mat">8 story frame mini-cards per pair (print from PB pp. 62–63) · 5-frame set for support pairs · CD3 6 · big frame cards for the board</td>
+      </tr>
+
+      <tr>
+        <td class="min">43–51′</td>
+        <td class="stage"><div class="nm">Act out — drama</div><div class="zone">carpet, groups</div></td>
+        <td class="flow">
+          <p><span class="ph">Roles.</span> Groups of 4: <b>the seeker</b> (red badge) · <b>Jake &amp; Molly hiding</b> (green ×2) · <b>Toby + magic bike bell</b> (blue). Teacher narrates and models once with a strong group.</p>
+          <p><span class="ph">All groups act at the same time.</span> Narrate slowly, frame by frame; every group plays in their own spot (hiding = crouch on the spot): <span class="en">Let's play hide and seek! — One, two, three… Ready or not, here I come! — Where are Jake and Molly? — They're behind the tree! — Come on, Toby! — Sorry, Toby. You can't play in here. — But you can ride the magic bike! — Ring! Ring!</span></p>
+          <p><span class="ph">Create (thinking) — make it yours.</span> Before round 2: <span class="en">Choose a NEW hiding place!</span> Each group picks a spot &amp; adds the line: <span class="en">Where are they? — They're under the bush! / next to the rock!</span> (support: point to a place card; extension: invent the whole exchange).</p>
+          <p>Swap roles, run it again (2 rounds). Volunteers: ONE group shows 30 sec for the class — big applause. <span class="ph">Value (PB p. 63):</span> <span class="en">In a game, we take turns and play fair.</span></p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:4px"><b style="color:var(--good)">Support:</b> quieter children get Toby (short line <span class="en">Ring! Ring!</span> + gesture) + a line card. <b style="color:var(--p)">Extension:</b> confident children are the seeker / narrate and lead.</p>
+        </td>
+        <td class="mat">role badges ×colours · bell · place cards · PB p. 63 (value)</td>
+      </tr>
+
+      <tr>
+        <td class="min">51–55′</td>
+        <td class="stage"><div class="nm">▶ Who says it?</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Who says it?</span> (guessing settler — character re-skin; <b>every child answers every round</b>). Each child holds a fan of 3 small character cards: the seeker · Jake/Molly · Toby.</p>
+          <p><span class="sp">🦝 Speaky</span> “remembers” story lines in funny voices: <span class="en">Ready or not, here I come!</span> → hold up the seeker; <span class="en">Ring! Ring!</span> → Toby; <span class="en">They're behind the tree!</span> → … 6–7 lines, instant show-me check each time.</p>
+        </td>
+        <td class="mat">character card fan (3) per pupil · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–57′</td>
+        <td class="stage"><div class="nm">Reflection + Closing</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p>Point at the big frames: <span class="en">Which picture do you like? Point and tell your partner one word or line!</span> (pairs, 20 sec each). “I can…” badge: <span class="en">Colour your badge — I can act out the story!</span></p>
+          <p><span class="en">Well done, superstars! Let's sing Goodbye. Your homework is in your Activity Book and on the app!</span> Sing Goodbye.</p>
+        </td>
+        <td class="mat">“I can…” badges · <b>Goodbye song</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">57–60′</td>
+        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Show each child one frame card: say any line from it (<span class="en">They're behind the tree!</span>) — or answer <span class="en">Where's Toby here?</span> Said it → out: <span class="en">Well done! Take care! Goodbye!</span></p></td>
+        <td class="mat">story frame cards · folder reward stickers 🦝</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow">
+          <p><b>Activity Book — p. 60, exercises 1–2 (Lesson 3 Story · After you read):</b> ① <i>Remember the story. Read and tick</i> — 3 comprehension questions (What game do the children play? · Where are Jake and Molly? · What can Toby do?) · ② <i>Look at the story again. Read and match</i> — match 4 speech bubbles to the right characters (<i>“Sorry, Toby. You can't play in here.” · “Ready or not, here I come!” · “They're behind the tree.” · “You can have a ride on the magic bike.”</i>). + app: story words micro-set (5–7 min). <b>🦸 Phonics Hero:</b> read the story <b>«Мальчик и море» (стр.85)</b> to mum, dad or the cat 🐱 and draw «A boy by the sea» in the frame.</p>
+          <p style="font-size:.85rem;color:var(--muted);margin-top:2px"><b style="color:var(--good)">Support (core):</b> ex. 1 (tick) — read with a grown-up if needed; ex. 2 match with the pictures. <b style="color:var(--p)">Extension (challenge):</b> after ex. 2, tell a grown-up the whole story with the pictures — one line per frame.</p>
+          <p>🎮 <b>Дома:</b> <a href="https://speakandsmile.ru/gmf1/games/park-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">park-board</a> — бродилка с кубиком: сыграйте вдвоём с родителем, на каждой клетке говорим вслух — <span class="en">It's a slide!</span> (5–7 мин).</p>
+          <p>💻 Онлайн-тренажёр юнита: <a href="https://speakandsmile.ru/gmf1/u6.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/u6.html</a> — Practice + Booster по Unit 6 (лексика/грамматика урока).</p>
+        </td>
+        <td class="mat">Activity Book p. 60 · Phonics Hero стр.85 · app (homework link) · тренажёр u6.html</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 (с нуля) · Unit 6 · Lesson 3 (Story: Hide and seek) — lesson plan &amp; staging</span>
+    <span>Story verified against Pupil's Book pp. 62–63 (CD3 6); homework against Activity Book p. 60 · Phonics verified against Phonics Hero 2.0 стр.83–85 + КТП-с-нуля занятие 48 (ур.30b).</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

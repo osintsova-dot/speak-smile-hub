@@ -1,0 +1,241 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF1 (с нуля) · Reserve · Year-End Revision Units 1–9 (Constructor Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 (с нуля) · Занятие 72 · Reserve — Year-End Revision Units 1–9 (Teacher's Constructor)</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., first-year beginners · <b>линия с нуля</b>) · 60 min · Diagnose → Stations → Team Quiz + Reading Party · carpet + desks · 🎉 last lesson of the year</div>
+    <div class="meta"><span class="chip">Week 24.05–26.05 · Занятие 72</span><span class="chip new">🎉 Year-end revision (1 lesson)</span><span class="chip">~12 pupils · teacher picks weak topics</span><span class="chip">🦸 Phonics Hero · праздник чтения — любимые истории тетради</span></div>
+  </div>
+
+  <!-- HOW TO USE -->
+  <div class="eyebrow">How to use this plan (RU)</div>
+  <div class="cardb" style="border-left:3px solid var(--honey)">
+    <p style="margin:0 0 7px;font-size:.93rem"><b>🔧 Это ШАБЛОН-конструктор на 1 резервный урок (72) в конце года.</b> Ты не «проходишь» новую тему — ты <b>чинишь пробелы</b> из Units 1–9 (по итогам Final Test / Speaking) И <b>празднуешь</b> целый год. Каркас: <b>диагностика → 3 станции под западающие темы → команда-квиз с наградой → праздник чтения</b>. По усмотрению педагога (КТП урок 72: «педагог выбирает темы»).</p>
+    <p style="margin:0;font-size:.93rem"><b>Шаг 1.</b> Прогони быструю диагностику (этап 3–12′) — увидишь, что подзабыли. <b>Шаг 2.</b> Из «Меню станций» выбери 3 под западающие темы. <b>Шаг 3.</b> Команда-квиз (боулинг/футбол) собирает всё вместе. <b>Шаг 4.</b> Праздник чтения — дети читают любимые истории тетради (Phonics Hero) — гордый финал первого года «с нуля».</p>
+  </div>
+
+  <!-- STATION MENU -->
+  <div class="eyebrow">Station menu — Units 1–9 (pick 3 by diagnosis)</div>
+  <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Unit · topic</th><th>Station options (lexis / grammar / reading)</th></tr></thead><tbody>
+    <tr><td><b>U1</b> Ready for school!<br><span class="w">classroom objects</span> <span class="w">in/on/under</span></td><td><b>Lexis:</b> Quiz-Quiz-Trade with object cards. <b>Grammar:</b> <span class="en">Where's my pencil? — It's on the bag.</span> hide-and-find. <b>Reading:</b> word–picture match.</td></tr>
+    <tr><td><b>U2 · U3</b> Toys · Body<br><span class="w">toys</span> <span class="w">body parts</span></td><td><b>Lexis:</b> mime &amp; guess. <b>Grammar:</b> <span class="en">Is it a…? — Yes, it is / No, it isn't.</span> · <span class="en">I've got…</span> <b>Reading:</b> read the toy/body word → point.</td></tr>
+    <tr><td><b>U4 · U5</b> Food · Farm<br><span class="w">food &amp; fruit</span> <span class="w">farm animals</span></td><td><b>Lexis:</b> «Do you like…?» survey. <b>Grammar:</b> <span class="en">I like / don't like…</span> · <span class="en">Cows can't fly / Birds can fly.</span> <b>Reading:</b> like/can sentence sort.</td></tr>
+    <tr><td><b>U6 · U7</b> Park · Town<br><span class="w">playground</span> <span class="w">places &amp; transport</span></td><td><b>Lexis:</b> Fly-swatters. <b>Grammar:</b> <span class="en">Where's Beth? — behind the tree.</span> · <span class="en">There's a… / There are…</span> <b>Reading:</b> preposition/there-is strips.</td></tr>
+    <tr><td><b>U8 · U9</b> Clothes · Day &amp; night<br><span class="w">clothes</span> <span class="w">daily routines &amp; meals</span></td><td><b>Lexis:</b> «What's he doing?» mime. <b>Grammar:</b> <span class="en">He's riding a horse.</span> · <span class="en">I (…) every day. / I have (…) in the (morning).</span> <b>Reading:</b> routine/meal sentence match.</td></tr>
+  </tbody></table></div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will have <b>re-consolidated the shakiest language from Units 1–9</b> (teacher-selected) — naming, one target structure per topic, and reading recognition — and shown it in a low-stakes <b>Team Quiz with reward game</b> + a proud <b>Reading Party</b>.</li><li><span class="lb">Subsidiary.</span> Retrieval practice, peer-teaching via Kagan, honest self-check; celebrate a whole first year from zero (reading, speaking, singing).</li><li><span class="lb">Personal.</span> This is repair + celebration, not new load: keep it light and joyful. Diagnose first, teach to the gap. Every child works at every station — no watching.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>re-produce the target words &amp; one key structure from each revised topic;</li><li>peer-teach a partner what they remember;</li><li>read a favourite story aloud and feel proud of a whole year of English.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Proud finish</span></div>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language (revision pool — teacher narrows)</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">school things</span><span class="w">toys · body</span><span class="w">food · farm animals</span><span class="w">park · town</span><span class="w">clothes · routines</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Where's my…? · Is it a…? · I've got… · I like / don't like… · can / can't · There's a… / There are… · He's …ing · I (…) every day · I have (…) in the (morning).</div></div>
+      <div class="r"><div class="k">Form</div><div>Short answers <i>Yes, it is / No, it isn't</i>; plain verb after <i>I</i>; <i>in the</i> morning / <i>at</i> night. Error harvest from Final Test / diagnosis feeds the stations &amp; quiz.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>Whatever the diagnosis surfaces — e.g. <i>-n't</i> in <i>isn't</i>, /θ/ <i>teeth</i>, silent-b <i>comb</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">«Is this a test?» → no — it's a memory party at the end of the year; mistakes just show what to play more.</div>
+      <div class="ccq" style="margin-bottom:10px">«In the quiz, who answers?» → EVERYONE, on their own board / with their own card.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Units 1–9 all taught &amp; tested; Final Test &amp; Speaking done. Pupils know Quiz-Quiz-Trade, RallyRobin, Showdown, the traffic-light self-check and the Phonics Hero stories. <b>КТП урок 72: педагог выбирает темы.</b> <b>Группы:</b> команда — максимум 4; при другой численности делим на команды по 3–4 (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4).</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>You don't know what to revise</td><td>Let the diagnosis + Final-Test errors decide: the 2–3 topics with most red hands become your stations. Don't revise everything.</td></tr>
+        <tr><td>End-of-year over-excitement</td><td>Keep pace tight, stations timed (visible timer), one warning system; channel energy into movement stations, not chaos.</td></tr>
+        <tr><td>Mixed pace at stations</td><td>Each station has a 💪 core task + ⭐ extension card — fast finishers keep going, no one waits.</td></tr>
+        <tr><td>Weaker pupils hide in the team</td><td>Showdown / own card: every child answers every question; rotate who runs to the board.</td></tr>
+        <tr><td>«We did this already, boring»</td><td>Frame as a game/challenge + reward animation; new format (Quiz-Quiz-Trade, mime), not the same worksheet.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>«Class? — Yes!»</b> — you: <span class="call">«Class!»</span> → pupils stop &amp; echo <span class="call">«Yes!»</span></div>
+        <div class="sigc"><b>«WiFi» 🖐</b> — say «WiFi» + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>«Give me five»</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — «Finishing in 5…4…3…2…1… pencils down.»</div>
+        <div class="sigc"><b>«Freeze!»</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = game</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet at the door: <span class="en">Hello! Come in!</span> Carpet. <span class="sp">🦝 Speaky</span>: <span class="en">Our LAST lesson this year — a big memory party from everything we've learnt!</span></p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Genki Disco Warm Up</span> — call moves (jump · spin · clap · stamp · sit · stand); trick them: <span class="en">Sit down!</span> when already sitting. Bring energy down: <span class="en">And… freeze.</span></p></td>
+        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">3–12′</td>
+        <td class="stage"><div class="nm">🔍 Quick diagnosis</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Fast gap-finder (all together, ~1′ per topic).</span> Flash 3–4 signal cards per topic; whole-class chorus + one target sentence each:</p><p>U1 <span class="en">Where's my pencil? — It's here!</span> · U2/U3 <span class="en">Is it a robot? — Yes, it is! / I've got a nose.</span> · U4/U5 <span class="en">I like apples. / Birds can fly.</span> · U6/U7 <span class="en">Where's Beth? — behind the tree. / There's a zoo.</span> · U8/U9 <span class="en">He's riding a horse. / I brush my teeth every day.</span></p><p><span class="game">▶ Traffic-light vote (eyes closed):</span> after each topic <span class="en">Green — easy! Yellow — a bit tricky. Red — help me!</span> — count reds. <span class="asr">✔ <b>Decide live</b> (with your Final-Test notes): the 3 topics with most yellow/red become today's stations. <span class="en">Today we play with THESE three!</span></span></p></td>
+        <td class="mat">signal flashcards (U1–9) · traffic-light cards · Final-Test error notes</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">12–14′</td>
+        <td class="stage"><div class="nm">🎵 Bridge · song</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="ph">Transition into stations with a favourite song.</span> Sing one Genki / GMF1 song matched to a chosen topic (e.g. <span class="game">«It's a beautiful day»</span> for U9, or a year-favourite the class picks). Set up 3 station tables while they sing.</p></td>
+        <td class="mat"><b>Genki / GMF1 song</b> mp3 (topic- or class-favourite)</td>
+      </tr>
+
+      <tr>
+        <td class="min">14–36′</td>
+        <td class="stage"><div class="nm">🎯 Revision stations (3 × 7′)</div><div class="zone">3 tables + carpet</div></td>
+        <td class="flow"><p><span class="ph">Rotation (Cooperative learning).</span> 3 stations built from the <b>Station menu</b> under your chosen topics — typically one <b>Lexis</b>, one <b>Grammar</b>, one <b>Reading</b>. Split class into 3 small teams; rotate every 7′ on <span class="en">Freeze! Move on!</span></p><p><span class="ph">Station A — Lexis (movement).</span> e.g. <span class="game">▶ Quiz-Quiz-Trade</span> with the weak topic's word cards — every child up, pairs quiz, swap cards, new partner. Kagan: <b>StandUp-HandUp-PairUp</b>.</p><p><span class="ph">Station B — Grammar (talk).</span> e.g. <span class="game">▶ RallyRobin / mime survey</span> — take turns with the topic structure (<span class="en">Is it a…? / Can you…? / I … every day</span>). Kagan: <b>RallyRobin</b>.</p><p><span class="ph">Station C — Reading (calm, seated).</span> word–picture match / sentence strips → point &amp; read. Kagan: <b>RallyCoach</b> (coach the partner).</p><p><span class="ig"><span class="sup">💪 support:</span> picture–word cards at each station · <span class="ext">⭐ extension:</span> «say one more sentence» challenge card.</span></p><p><span class="asr">✔ <b>Assess:</b> circulate with the class list — tick who now produces the target structure unaided.</span></p></td>
+        <td class="mat">3 station kits (word cards · survey/mime prompts · sentence strips) · timer · class list</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">36–37′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand</div></td>
+        <td class="flow"><p><span class="en">Everybody up! Show me: jump! swim! fly! brush your teeth! …Freeze!</span> 45-sec TPR through the year's action words → sit in quiz teams.</p></td>
+        <td class="mat">— (movement only)</td>
+      </tr>
+
+      <tr>
+        <td class="min">37–50′</td>
+        <td class="stage"><div class="nm">🏆 TEAM QUIZ + reward</div><div class="zone">desks, 3 teams</div></td>
+        <td class="flow"><p><span class="ph">Consolidation quiz (board or projector).</span> Grid of tiles mixing the revised topics: picture→word · <span class="en">Is it a…?</span> · make the target sentence · True/False · a mime tile. Mechanics: tile opens → <b>Showdown</b>: EVERY child writes/draws or holds up their card → <span class="en">Show me!</span> → majority correct = team point → <span class="ph">reward:</span> one player takes a <b>🎳 bowling</b> or <b>⚽ football</b> shot (paper ball into box / on-screen animation). Rotate the shooter strictly.</p><p><span class="ig">🎮 <b>Ready-made engines:</b> <a href="https://speakandsmile.ru/gmf1/games/routines-quiz.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">routines-quiz</a> (U9) or <a href="https://speakandsmile.ru/gmf1/games/review3-quiz.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">review3-quiz</a> (mixed Units 7–9) — the team answers chorally, one child throws; the score counts itself. <b>Offline:</b> card grid on whiteboard + real paper-ball shot into a box — one shot per win, 20 sec.</span></p><p><span class="ph">ICQ:</span> <span class="en">When do you show your board?</span> (→ only on «Show me!») &nbsp; <span class="ph">Finale:</span> count scores in English; both teams <span class="en">Give me five!</span></p></td>
+        <td class="mat">quiz grid (board / projector) · mini-whiteboards or own cards · box + paper ball · 🎮 <a href="https://speakandsmile.ru/gmf1/games/routines-quiz.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">routines-quiz</a> · <a href="https://speakandsmile.ru/gmf1/games/review3-quiz.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">review3-quiz</a></td>
+      </tr>
+
+      <tr>
+        <td class="min">50–56′</td>
+        <td class="stage"><div class="nm">🦸 Reading Party</div><div class="zone">carpet, pairs</div></td>
+        <td class="flow"><p><span class="ph">Phonics Hero — праздник чтения (тетрадь).</span> <span class="sp">🦝 Speaky</span>: <span class="en">Remember September? You couldn't read at all. Now — read me your FAVOURITE story!</span> Each child opens their favourite Phonics Hero story from the тетрадь; <span class="ph">RallyRobin:</span> pairs read a favourite to each other, one frame each, with actor voices. A few volunteers read one page to the class — big applause. A proud, joyful end to a whole first year from zero.</p><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner: your favourite thing you learnt this year.</span> (20 sec each).</p></td>
+        <td class="mat">Phonics Hero тетрадь (favourite stories) · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">56–60′</td>
+        <td class="stage"><div class="nm">Closing / Exit ticket</div><div class="zone">carpet → door</div></td>
+        <td class="flow"><p><span class="en">Amazing year, superstars — from ZERO to reading and talking! Have a wonderful summer! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. Line up — at the door each child says <b>one</b> word/sentence they love → out: <span class="en">Thank you! Happy summer! Goodbye!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward stickers / certificates 🦝</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Последний урок года — без письменного ДЗ.</b> По желанию: летом играть в приложении в любимые игры года <a href="https://speakandsmile.ru/gmf1/games/" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">speakandsmile.ru/gmf1/games</a> и перечитывать любимые истории тетради (5–7 мин) — «Возьми английский с собой в лето». Отдыхаем! 🎉</p></td>
+        <td class="mat">app (optional) · no written HW</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 (с нуля) · Занятие 72 (Reserve — Year-End Revision Units 1–9) — teacher's constructor plan &amp; staging</span>
+    <span>КТП-с-нуля урок 72 «Резерв / педагог выбирает темы». Каркас: диагностика → станции (выбор педагога) → квиз-награда → праздник чтения. Phonics: любимые истории тетради. Единственный резерв в году (у линии с нуля 1 резервный урок).</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

@@ -1,0 +1,247 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GMF1 (с нуля) · Speaking Exam — Administration Protocol (Units 1–9)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .slot{ color:var(--muted); font-weight:700; }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">🦝 Give Me Five! 1 (с нуля) · Занятие 71 · Speaking Exam — Administration Protocol (Units 1–9)</div>
+    <div class="s">Pre-A1 young learners (~7 y.o., first-year beginners · <b>линия с нуля</b>) · 60 min · End-of-Year oral chat · one-to-one + quiet menu · warm &amp; calm</div>
+    <div class="meta"><span class="chip">Week 17.05–23.05 · Занятие 71</span><span class="chip new">🎤 Speaking Exam — kind protocol</span><span class="chip">~12 pupils · ~3–4′ each</span><span class="chip">YLE Starters Speaking format</span><span class="chip">🦸 Phonics Hero · Карта прогресса — финиш! (тетрадь стр.92)</span></div>
+  </div>
+
+  <!-- WHAT THIS IS -->
+  <div class="eyebrow">What this document is (RU)</div>
+  <div class="cardb" style="border-left:3px solid var(--honey)">
+    <p style="margin:0 0 7px;font-size:.93rem"><b>🎤 Это ПРОТОКОЛ проведения итогового устного экзамена</b> (занятие 71, после Final Test). Формат-опора — <b>Cambridge YLE Starters Speaking</b>: три коротких знакомых детям части — <b>❶ приветствие-диалог · ❷ описание картинки (называем предметы) · ❸ вопрос-ответ</b>. Экзамен один-на-один с учителем, ~3–4 минуты на ученика. Тон — тёплый разговор со <span class="sp">🦝 Спики</span>, а НЕ проверка.</p>
+    <p style="margin:0;font-size:.93rem"><b>Главная задача организации</b> — чтобы, пока ты слушаешь одного ребёнка, <b>остальные не сидели без дела</b>: работает «тихое меню» + «уголок репетиции в парах». Ниже: тайминг на ученика, рассадка, реплики экзаменатора, критерии оценивания и как поддержать волнующихся. <b>Подготовь заранее:</b> набор картинок для описания (сцена с игрушками/днём), карточки-вопросы года, бланк оценивания на каждого ребёнка.</p>
+  </div>
+
+  <!-- ROOM SETUP -->
+  <div class="eyebrow">Room setup — solving «1 speaks, 11 wait»</div>
+  <div class="grid2">
+    <div class="cardb"><div class="eyebrow" style="margin-top:0">🎤 Exam corner (with you)</div><ul class="a">
+      <li>Two chairs at a small table, side-on (not interrogation-style), your back to the room.</li>
+      <li>Picture prompt + question cards face-down; assessment sheet + pen; <span class="sp">🦝 Speaky</span> sits on the table as a friendly co-host.</li>
+      <li>One child at a time, ~3–4′. A visible «now / next» name order so children know when they're up.</li>
+      <li>Warm body language: smile, nod, lean in. This is a chat with Speaky, not a trial.</li>
+    </ul></div>
+    <div class="cardb"><div class="eyebrow" style="margin-top:0">🧠 Waiting = busy (the other children)</div><ul class="a">
+      <li><b>Quiet menu (desks):</b> end-of-year colouring, app games, «draw &amp; label your favourite unit» sheet — independent, silent.</li>
+      <li><b>Rehearsal buddies (carpet corner):</b> pairs quietly rehearse the exam questions on prompt cards — <b>RallyRobin</b>, so everyone speaks while waiting.</li>
+      <li>A reliable child or assistant manages the «now/next» order &amp; keeps volume low.</li>
+      <li>Rule up front: <span class="en">Whisper voices — I'm listening to your friends.</span></li>
+    </ul></div>
+  </div>
+
+  <!-- THE THREE PARTS -->
+  <div class="eyebrow">The exam — three parts (~3–4′ per pupil)</div>
+  <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Part · ~time</th><th>What happens · examiner script</th></tr></thead><tbody>
+    <tr><td><b>❶ Warm-up hello</b><br>(interview) · ~1′</td><td>Settle the child, then easy personal Qs from across the year: <span class="en">Hello! What's your name? How are you? How old are you?</span> · <span class="en">What's your favourite colour? What's your favourite toy? Can you jump?</span> Aim: relaxed, happy answers, no freezing.</td></tr>
+    <tr><td><b>❷ Look &amp; tell</b><br>(picture) · ~1′</td><td>Show one busy scene (a bedroom / a park / a toy shop). <span class="en">Look! What can you see?</span> Prompt if needed: <span class="en">How many balls? What colour is the bed? Is it a dog? Where's the cat?</span> Aim: name things + a known structure (It's a…, There's a…, How many…, colours, prepositions).</td></tr>
+    <tr><td><b>❸ Question &amp; answer</b><br>· ~1–1.5′</td><td>Pull 3–4 question cards mixing units: <span class="en">Do you like apples? What do you do every day? When do you have breakfast? Have you got a pet?</span> Aim: understand the question + answer in a short sentence.</td></tr>
+  </tbody></table></div>
+
+  <!-- ASSESSMENT CRITERIA -->
+  <div class="eyebrow">Assessment criteria (per pupil — 1 to 4)</div>
+  <div class="grid2">
+    <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Criterion</th><th>What you listen for</th></tr></thead><tbody>
+      <tr><td><b>Willingness &amp; interaction</b></td><td>Answers without long freezing; smiles, tries, responds to your prompts. (Not speed — willingness &amp; flow.)</td></tr>
+      <tr><td><b>Vocabulary</b></td><td>Range of unit words used correctly (toys · colours · numbers · animals · food · routines…).</td></tr>
+      <tr><td><b>Grammar/chunks</b></td><td>Target chunks attempted: It's a…, There's a…, I like…, I can…, I (…) every day.</td></tr>
+      <tr><td><b>Pronunciation</b></td><td>Intelligible; key sounds from the year (th, sh, ch, ou/oi, Magic E); clear enough to understand.</td></tr>
+    </tbody></table></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Simple 4-point scale</div>
+      <ul class="a">
+        <li><b>4 — Confident:</b> answers all 3 parts, short sentences, minor errors that don't block meaning.</li>
+        <li><b>3 — Competent:</b> answers most, some support needed, meaning clear.</li>
+        <li><b>2 — Developing:</b> single words, needs prompts, some meaning through.</li>
+        <li><b>1 — Emerging:</b> mostly words/gestures, heavy support — note for next year.</li>
+      </ul>
+      <div class="ig" style="margin-top:8px">📝 Score each criterion 1–4 on the child's sheet + one warm note. Total is for YOUR records &amp; parent feedback, not announced competitively.</div>
+    </div>
+  </div>
+
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> Each pupil <b>demonstrates spoken English from Units 1–9</b> across three Starters-style parts (hello · look &amp; tell · Q&amp;A) in a warm one-to-one, assessed on willingness, vocabulary, chunks &amp; pronunciation.</li><li><span class="lb">Subsidiary.</span> Waiting pupils keep practising speaking in pairs (RallyRobin) — no idle time; every child speaks a lot today, examined or rehearsing.</li><li><span class="lb">Personal.</span> Make it feel like a friendly chat with Speaky, not a test. Support nerves actively. Assess fairly &amp; kindly; end every child on a positive note.</li></ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a"><li>answer easy personal questions across the year's topics;</li><li>name what's in a picture with unit vocabulary &amp; a chunk;</li><li>understand &amp; answer a mixed question in a short exchange.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
+      <div class="arc"><span>Settle</span><span>Warm-up</span><span>Perform</span><span>Feel proud</span><span>Celebrate</span></div>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + SIGNALS -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Child freezes / very nervous</td><td>Start with the easiest Q (<span class="en">What's your name?</span>), smile, wait, give a starter (<span class="en">It's a…</span>); Speaky «asks» in a funny voice; a nervous child may go last after hearing others.</td></tr>
+        <tr><td>One-word answers only</td><td>Prompt to extend: <span class="en">Tell me more. What colour? How many?</span> Score what they DO produce; don't over-prompt into their score.</td></tr>
+        <tr><td>Waiting children get loud / bored</td><td>Quiet menu + rehearsal-buddy corner set up before you start; whisper rule; helper manages the queue.</td></tr>
+        <tr><td>Doesn't understand the question</td><td>Rephrase once, simpler; gesture; point at the picture; if still stuck, move on kindly — note it, don't dwell.</td></tr>
+        <tr><td>Fast finishers of the exam</td><td>Return to the quiet menu; can become a rehearsal buddy for someone still waiting.</td></tr>
+        <tr><td>Running over time</td><td>Keep a soft timer; 3 parts × ~1′; if a child is flowing, that's fine — trim prompts elsewhere.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>«Class? — Yes!»</b> — you: <span class="call">«Class!»</span> → pupils stop &amp; echo <span class="call">«Yes!»</span></div>
+        <div class="sigc"><b>«WiFi» 🖐</b> — say «WiFi» + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>«Give me five»</b> — eyes · ears · mouth · hands · feet.</div>
+        <div class="sigc"><b>Countdown</b> — «Finishing in 5…4…3…2…1… pencils down.»</div>
+        <div class="sigc"><b>«Freeze!»</b> — statue, mid-movement reset.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — lesson timeline (60 min)</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
+    <span><span class="game">▶</span> = structure</span>
+    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+  </div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+
+      <tr>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Opening &amp; reassure</div><div class="zone">door → carpet</div></td>
+        <td class="flow"><p>Greet at the door: <span class="en">Hello! Come in!</span> Carpet. <span class="sp">🦝 Speaky</span>: <span class="en">Hello, superstars! Today we CHAT in English — just you and me, about all the fun things we've learnt. It's easy — I love hearing you talk!</span></p><p>One deep breath together: <span class="en">Breathe in… and out. Big smile!</span></p></td>
+        <td class="mat">carpet · Speaky</td>
+      </tr>
+
+      <tr>
+        <td class="min">4–10′</td>
+        <td class="stage"><div class="nm">Warm-up + set the stations + 🦸 финиш</div><div class="zone">carpet → desks</div></td>
+        <td class="flow"><p><span class="ph">Prime the language (all together).</span> Quick chant of a few year-favourite question–answers so everyone hears the models: <span class="en">What's your favourite toy? — My favourite toy is a… What's your favourite colour? — It's…</span></p><p><span class="ph">🦸 Phonics Hero — Карта прогресса, финиш! (тетрадь стр.92).</span> <span class="en">Look how far you came — from no reading to a whole book! Colour the last square on your progress map — you FINISHED!</span> (Quiet, joyful.)</p><p><span class="ph">Explain the setup.</span> <span class="en">I'll call you one by one for our chat with Speaky. While you wait: quiet menu at your desk, OR practise the questions with a partner in the corner — whisper voices!</span> ICQ: <span class="en">Loud or whisper while I listen?</span> (→ whisper). Show the «now/next» name order.</p></td>
+        <td class="mat">question prompt cards · quiet menu sheets · «now/next» board · <b>Phonics Hero стр.92</b> + crayons</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–52′</td>
+        <td class="stage"><div class="nm">🎤 One-to-one Speaking Exam</div><div class="zone">exam corner + desks</div></td>
+        <td class="flow"><p><span class="ph">Call pupils one by one</span> (~3–4′ each, ~12 children in ~42′). For each child run the three parts:</p><p>❶ <b>Hello:</b> <span class="en">Hello! How are you? What's your name? How old are you? What's your favourite colour?</span></p><p>❷ <b>Look &amp; tell:</b> <span class="en">Look at this picture. What can you see? How many…? What colour is the…? Where's the cat?</span></p><p>❸ <b>Q&amp;A cards:</b> <span class="en">Do you like apples? Can you swim? What do you do every day? When do you have breakfast?</span></p><p>Close each child warmly: <span class="en">Thank you — that was GREAT! Well done!</span> <span class="asr">✔ <b>Score</b> willingness / vocab / chunks / pronunciation 1–4 on the sheet + one note, right after each child (while fresh). Send them back to the quiet menu.</span></p><p><span class="ig"><span class="sup">💪 Support:</span> a word starter + picture prompt for nervous / weaker pupils; Speaky asks in a funny voice. <span class="ext">⭐ Extension:</span> an extra «tell me more / what colour?» follow-up for confident speakers.</span></p></td>
+        <td class="mat">picture prompts · question cards · assessment sheets (1 per child) · Speaky · quiet menu · timer</td>
+      </tr>
+
+      <tr>
+        <td class="min">52–58′</td>
+        <td class="stage"><div class="nm">Whole-class celebrate</div><div class="zone">carpet circle</div></td>
+        <td class="flow"><p>Everyone back to the carpet. <span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner: what was your favourite question today?</span> (20 sec each). Whole-class cheer: <span class="en">You all spoke SO well — give me five!</span> Each child hears a specific praise: <span class="en">You told me all your favourite colours!</span></p></td>
+        <td class="mat">—</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Closing / Exit ticket</div><div class="zone">carpet → door</div></td>
+        <td class="flow"><p><span class="en">I'm so proud of your English this year — a WHOLE year from zero! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. High-five line at the door — each child says <b>one</b> English word/sentence they love → out: <span class="en">Thank you! Have a great summer! Goodbye!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward stickers / certificates 🦝</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>В день устного экзамена — без письменного ДЗ.</b> По желанию — рассказать дома маме/папе про любимую тему года («My favourite toy is a…», «I can…», «Every day I…»). Впереди — резервное занятие 72 (повторение + любимые игры года).</p></td>
+        <td class="mat">no written HW</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+  <!-- AFTER -->
+  <div class="eyebrow">After the exam — records &amp; feedback</div>
+  <div class="cardb">
+    <p style="margin:0 0 6px;font-size:.92rem">Collect assessment sheets; transfer scores + notes to the class list. Combine with Final-Test data for a full end-of-year picture. In parent feedback: lead with a spoken strength («confidently named all the colours») + one next step («working on full sentences»). Weak spots → feed the <b>Reserve</b> revision (lesson 72).</p>
+    <p style="margin:0;font-size:.92rem;color:var(--muted)">Экзамен — это тёплый дружелюбный разговор, а не допрос. Каждый ребёнок уходит с улыбкой. Первый год «с нуля» — от полного нуля до чтения и говорения; отпразднуй это с детьми и родителями.</p>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Give Me Five! 1 (с нуля) · Занятие 71 (Speaking Exam) — administration protocol</span>
+    <span>КТП-с-нуля урок 71. Формат YLE Starters Speaking (hello · look &amp; tell · Q&amp;A). Phonics: Карта прогресса — финиш! (тетрадь стр.92). Один на один, остальные — тихое меню + репетиция в парах.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>
