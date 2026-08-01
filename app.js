@@ -27,7 +27,7 @@ const GROUPS_FALLBACK = [
   // Ср/Сб
   {name:"Genki 1A", program:"Genki",  room:"Discovery", teacher:"Оксана",    days:[{d:3,t:"18:20"},{d:6,t:"12:10"}]},
   {name:"Genki 1B", program:"Genki",  room:"Discovery", teacher:"Оксана",    days:[{d:3,t:"19:30"},{d:6,t:"13:20"}]},
-  {name:"Get Involved 1B", program:"GIA1", room:"Discovery", teacher:"Катя", days:[{d:3,t:"16:40"},{d:6,t:"14:30"}]},
+  {name:"Get Involved 1B", program:"GIA1zero", room:"Discovery", teacher:"Катя", days:[{d:3,t:"16:40"},{d:6,t:"14:30"}]},
   {name:"GMF 3C",  program:"GMF3",    room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"15:00"},{d:6,t:"12:10"}]},
   {name:"GMF 3D",  program:"GMF3",    room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"16:05"},{d:6,t:"13:20"}]},
   {name:"Get Involved 2B", program:"GIA2", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"17:10"},{d:6,t:"14:30"}]},
@@ -40,7 +40,8 @@ const PROGRAM_LABELS = {
   GMF1:"Give Me Five! 1", GMF2:"Give Me Five! 2", GMF3:"Give Me Five! 3", GMF4:"Give Me Five! 4",
   GMF1zero:"Give Me Five! 1 (нулевой)", GMF2zero:"Give Me Five! 2 (нулевой)",
   Prepare3:"Prepare 3", Prepare4:"Prepare 4", Prepare5:"Prepare 5",
-  GIA1:"Get Involved! A1+", GIA2:"Get Involved! A2", Gateway:"Gateway to the World B2",
+  GIA1:"Get Involved! A1+", GIA1zero:"Get Involved! A1+ (с нуля)",
+  GIA2:"Get Involved! A2", Gateway:"Gateway to the World B2",
   MW3:"Mimi's Wheel 3+", Genki:"Genki English", Chinese:"Китайский",
 };
 
@@ -90,6 +91,7 @@ const REPORTS = {
   GMF3:    "https://osintsova-dot.github.io/GMF3letters/?v=2",
   GMF4:    "https://osintsova-dot.github.io/GMF4letters/?v=2",
   GIA1:    "https://osintsova-dot.github.io/Get1report/",
+  GIA1zero:"https://osintsova-dot.github.io/Get1report/",   // сетка юнитов общая с 1A
   GIA2:    "https://osintsova-dot.github.io/Get2report/",
   Prepare3:"https://osintsova-dot.github.io/Prepare3report/",
   Prepare4:"https://osintsova-dot.github.io/Prepare4/",
@@ -106,6 +108,7 @@ const LETTERS = {  // письма родителям в начале юнита
   GMF3:    "https://drive.google.com/file/d/1SxWBOWwGPWbhnz2wbDaWybhNXbAxEWJx/view",
   GMF4:    "https://drive.google.com/file/d/1CgyxoDi3Pq7sx87QZ3NWQt9sx_Y7miz8/view",
   GIA1:    "https://docs.google.com/document/d/13gugWCBs-sekQB88k-pBK_iJm0Yv51bY-oYng7GVcl8/edit",
+  GIA1zero:"https://docs.google.com/document/d/13gugWCBs-sekQB88k-pBK_iJm0Yv51bY-oYng7GVcl8/edit",
   GIA2:    "https://drive.google.com/file/d/1U-MHrJ1CtCnOR_oURK_X_FKkqIBemxhN/view",
   Prepare3:"https://drive.google.com/file/d/1tmihpfCkYp20qXZmXbByGEHy074rjQfQ/view",
   Prepare4:"https://drive.google.com/file/d/1uT5vmOP4DZz_Jt3w2YOJNzHAGTyraLwy/view",
@@ -122,6 +125,7 @@ const JOURNALS = { // журнал наблюдений (печать)
   GMF3:    "https://drive.google.com/file/d/1krPTkektmquhYnuIpF2ZKZx6SX_pplVL/view",
   GMF4:    "https://drive.google.com/file/d/1CAMf2BxCXMRwC8hwvyTmllwDu_YpRa5U/view",
   GIA1:    "https://drive.google.com/file/d/191eWQIYlDh-0N26eKB-bW7AL_N3oi5U9/view",
+  GIA1zero:"https://drive.google.com/file/d/191eWQIYlDh-0N26eKB-bW7AL_N3oi5U9/view",
   GIA2:    "https://drive.google.com/file/d/1wHdolz7eG9K4b9Ch5zkorJdfexvh3KE_/view",
   Prepare3:"https://drive.google.com/file/d/1z9ElIruPY8EoJ5wWKjw0Z48AiTHC0FG7/view"
 };
@@ -149,7 +153,7 @@ const ROOM_DOT = {Discovery:"#4B89C9", Adventure:"#D58A2E", Innovation:"#45A06B"
 function roomColor(r){ return ROOM_DOT[r] || "#9aa"; }
 
 // длительность урока по программе (мин): детские 60, экзаменационные/подростковые 90
-const LESSON_MIN = {GIA1:90, GIA2:90, Prepare3:90, Prepare4:90, Prepare5:90, Gateway:90};
+const LESSON_MIN = {GIA1:90, GIA1zero:90, GIA2:90, Prepare3:90, Prepare4:90, Prepare5:90, Gateway:90};
 function lessonEnd(program, t){
   const [h,m] = t.split(":").map(Number);
   const total = h*60 + m + (LESSON_MIN[program]||60);
