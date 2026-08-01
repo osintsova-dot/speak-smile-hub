@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1zero · Unit 1 · Pair 7 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 1 “Our world” · Pair 7 — Unit 1 Test + calm feedback</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · input → guided practice → speaking, in game shells · pairs + teams of 3 · points, no dry drills</div>
+    <div class="meta"><span class='chip'>Week 05.10–11.10 · lessons 21–22 (KTP pair 11)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>spec from SB p.21 Quick review</span><span class='chip'>teams of 3 · unit points board</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход в урок: спокойный check-in</td><td>тихая музыка, «одно слово о самочувствии», взгляд на стену стран — гордость вместо страха</td></tr><tr class='bridge'><td class='gmin'>6–14′</td><td class='gname'>Ревизия-молния (первая половина пары)</td><td>5 пунктов-молний по Quick review соло на черновике + самопроверка — «это был мини-тест, ты его прошёл»</td></tr><tr><td class='gmin'>14–20′</td><td class='gname'>Стратегия теста: разбираем по примеру</td><td>проходим 4 части теста по одному примеру; карточка стратегии на доску</td></tr><tr><td class='gmin'>20–45′</td><td class='gname'>Тест: лексика + грамматика</td><td>части 1–2 письменно в тишине; тайминги на доске</td></tr><tr><td class='gmin'>45–53′</td><td class='gname'>Тест: аудирование (урок Б)</td><td>вторая половина пары открывается аудированием: 30 сек изучаем таблицу, описание страны дважды: 4 правда/ложь + 4 заметки</td></tr><tr><td class='gmin'>53–63′</td><td class='gname'>Тест: письмо + сдаём работы</td><td>6 предложений о себе по напечатанным критериям; сдаём работы, разминка</td></tr><tr><td class='gmin'>63–72′</td><td class='gname'>Самопроверка по ключу</td><td>меняемся работами, проверяем цветной ручкой по ключу; письмо забираю себе</td></tr><tr><td class='gmin'>72–80′</td><td class='gname'>Мягкий разбор типичных ошибок</td><td>топ-5 типов ошибок юнита анонимно; «команды-доктора» лечат предложение-пациента</td></tr><tr><td class='gmin'>80–86′</td><td class='gname'>Личный журнал ошибок + строка гордости</td><td>каждый пишет свои «2 ошибки на убой в Unit 2» + строку гордости «I can now…»</td></tr><tr><td class='gmin'>86–90′</td><td class='gname'>Финал юнита: два подиума</td><td>награждаем ДВЕ команды (счёт и рост), закрываем юнит, тизер «Семья»</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 1 — конкретные стр./задания по линии (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + Research-бонус); детали внизу процедуры</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: спокойный check-in</div><div class='sub'>Opening · спокойный вход</div><div class='zone'>desks · calm</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> тихая музыка, «одно слово о самочувствии», взгляд на стену стран — гордость вместо страха</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Включаю тихую музыку до входа. У двери: <span class='en'>One word — how do you feel? Any word is fine.</span></li><li>Показываю на стену постеров: <span class='en'>Look at your countries. People who INVENT nations can handle a test.</span></li><li>Прошу: <span class='en'>Show test-readiness 1–5 on fingers. Whatever you showed — first we warm up. Together.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> тихая музыка · стена постеров</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> входят в спокойный режим, настраиваются через гордость за проект. Ожидаемо: тревожные выдыхают на слове «сначала разминка».</div></td><td class='mat'>музыка</td></tr><tr class='bridge'><td class='min'>6–14′</td><td class='stage'><div class='nm'>Ревизия-молния (первая половина пары)</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 5 пунктов-молний по Quick review соло на черновике + самопроверка — «это был мини-тест, ты его прошёл»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вывожу 5 пунктов-молний: спеллинг национальности · антоним · be-пропуск · краткий ответ · заглавные — решают на черновике соло, тихо.</li><li>Открываю ключ, самопроверка. Говорю: <span class='en'>That was a mini-test. You just passed it.</span></li><li>Пальцы: <span class='en'>Which round was hardest — one to five?</span> — 60-сек хоровой повтор именно этого пункта (рамкой).</li><li>Мостик: <span class='en'>Same formats, bigger paper. Strategy first — then calmly.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд 5 пунктов → ключ · черновики</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> решают мини-повтор молча, сами себя проверяют, называют свой трудный раунд — страх падает на глазах. Ожидаемо: 4–5 из 5 у большинства.</div></td><td class='mat'>черновики</td></tr><tr><td class='min'>14–20′</td><td class='stage'><div class='nm'>Стратегия теста: разбираем по примеру</div><div class='sub'>Strategy briefing</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> проходим 4 части теста по одному примеру; карточка стратегии на доску</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Раздаю тесты обложкой вверх: <span class='en'>Don't open yet.</span></li><li>Прохожу на проекторе по одному примеру из каждой части, класс отвечает хором.</li><li>Вешаю карточку стратегии: 1) example first · 2) skip &amp; return · 3) final check = apostrophes + capitals.</li><li>Напутствие ДО старта: <span class='en'>Remember: I amn't doesn't exist!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> тестовые работы · слайд с примерами · карточка стратегии на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> смотрят примеры, проговаривают стратегию, открывают тест только по команде. Ожидаемо: вопрос «а можно карандашом?» — можно.</div></td><td class='mat'>test papers · strategy card</td></tr><tr><td class='min'>20–45′</td><td class='stage'><div class='nm'>Тест: лексика + грамматика</div><div class='sub'>Test · Part 1 Vocabulary + Part 2 Grammar</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> части 1–2 письменно в тишине; тайминги на доске</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Объявляю тайминги: Part 1 — 10 мин, Part 2 — 13 мин; пишу на доске, предупреждаю за 2 мин до конца каждой.</li><li>Слежу за тишиной; вопросы — поднятой рукой, отвечаю шёпотом у парты.</li><li>Содержимое: P1 — 8× страна→национальность + 6× антонимы; P2 — 8 be-пропусков с контракциями · 6 вопросов из слов + правдивый краткий ответ · 4 «почини ошибку».</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> видимый таймер · тайминги на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> работают молча по стратегии (пример → пропусти-вернись). Ожидаемо: успевают с запасом. Типичная ошибка: гонят и роняют апострофы — финальная зачистка ловит.</div></td><td class='mat'>test pp.1–2 · timer</td></tr><tr><td class='min'>45–53′</td><td class='stage'><div class='nm'>Тест: аудирование (урок Б)</div><div class='sub'>Test · Part 3 Listening (урок Б)</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вторая половина пары открывается аудированием: 30 сек изучаем таблицу, описание страны дважды: 4 правда/ложь + 4 заметки</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Командую: <span class='en'>Thirty seconds — look at the grid. Photos, titles… clues! Don't write.</span></li><li>Включаю трек (или читаю скрипт из пакета теста) — 1-й раз.</li><li>Пауза 30 сек, второй прогон.</li><li>Собираю внимание: <span class='en'>Pens down. Part 4 next.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> audio или скрипт учителя (в пакете теста) · сетка заметок напечатана В тесте</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> 30 сек применяют приём visual clues, слушают дважды, отмечают T/F и заполняют 4 заметки одним словом. Ожидаемо: 6+ из 8 — формат зеркалит P3.</div></td><td class='mat'>audio/script · paper p.3</td></tr><tr><td class='min'>53–63′</td><td class='stage'><div class='nm'>Тест: письмо + сдаём работы</div><div class='sub'>Test · Part 4 Writing + hand-in</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 6 предложений о себе по напечатанным критериям; сдаём работы, разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Объявляю: <span class='en'>Part 4: six sentences about you. The criteria are ON the paper — use them as a checklist.</span></li><li>Ранним финишёрам молча кладу бонус-лист (word-search + головоломка).</li><li>Собираю работы спокойно, без «кто не успел».</li><li>2 мин разминки: окна, вода, потянулись.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> тест p.4 · тихие бонус-листы</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут 6 предложений, сверяясь с критериями на бланке; финишёры заняты бонусом молча. Ожидаемо: следуют чек-листу. Типичная ошибка: забыт adjective — критерий на бланке напоминает.</div></td><td class='mat'>paper p.4 · bonus sheets</td></tr><tr><td class='min'>63–72′</td><td class='stage'><div class='nm'>Самопроверка по ключу</div><div class='sub'>Self-mark objective parts</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> меняемся работами, проверяем цветной ручкой по ключу; письмо забираю себе</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Обмен с соседом, выдаю цветные ручки.</li><li>Открываю ключ ЧАСТЯМИ: <span class='en'>Part 1… say the correct answer quietly as you tick — marking is learning round two.</span></li><li>Часть 4 забираю на свою проверку: <span class='en'>Back next lesson — two stars and one wish each.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайды ключа по частям · цветные ручки</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проверяют аккуратно, проговаривая верные ответы шёпотом, считают баллы. Ожидаемо: честная проверка (цветная ручка дисциплинирует). Типичная ошибка: «подправить своё» — обмен с соседом решает.</div></td><td class='mat'>key slides · pens</td></tr><tr><td class='min'>72–80′</td><td class='stage'><div class='nm'>Мягкий разбор типичных ошибок</div><div class='sub'>Gentle error clinic</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> топ-5 типов ошибок юнита анонимно; «команды-доктора» лечат предложение-пациента</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вывожу тип №1 («apostrophe drift») + предложение-«пациента».</li><li>Командую: <span class='en'>Doctor teams — what's the cure? Fix the patient on your mini-board!</span></li><li>Прохожу 5 типов: apostrophe drift · Yes, I'm · adjective+s · lowercase countries · no inversion (два последних — прямо из TB Common errors и наших наблюдений).</li><li>Темп спокойный, БЕЗ очков — разговор мастеров, не гонка.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайды: тип ошибки + пациент-предложение (анонимно, из моих заметок за юнит)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> командами ставят диагноз и пишут лечение на мини-досках. Ожидаемо: «It's Yes, I AM — affirmative never contracts!». Типичная ошибка: ищут «чья это» — правило вслух: ошибки на доске принадлежат всему классу.</div></td><td class='mat'>error slides · mini-boards</td></tr><tr><td class='min'>80–86′</td><td class='stage'><div class='nm'>Личный журнал ошибок + строка гордости</div><div class='sub'>My error log + goal</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> каждый пишет свои «2 ошибки на убой в Unit 2» + строку гордости «I can now…»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Прошу открыть последнюю страницу тетради — «журнал ошибок» (живёт весь год).</li><li>Пишем личное: <b>«Top-2 to kill in Unit 2»</b> — из СВОЕЙ работы.</li><li>Добавляем строку гордости: <span class='en'>I can now… — finish it honestly.</span></li><li>Желающие читают ТОЛЬКО строку гордости вслух.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> образец журнала на слайде: Top-2 + I can now…</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выбирают из своего теста 2 личные цели и одну гордость; делятся только позитивом. Ожидаемо: «I can now ask questions in English!».</div></td><td class='mat'>notebooks (log page)</td></tr><tr><td class='min'>86–90′</td><td class='stage'><div class='nm'>Финал юнита: два подиума</div><div class='sub'>Close · Unit 2 teaser</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> награждаем ДВЕ команды (счёт и рост), закрываем юнит, тизер «Семья»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вручаю мини-сертификаты: лучший счёт + лучший прогресс (ДВА подиума всегда).</li><li>Закрываю юнит: <span class='en'>Unit 1 — closed. You can talk about the whole WORLD now.</span></li><li>Тизер: <span class='en'>Unit 2 is much closer to home: FAMILY. Bring ONE English word about yours.</span> ДЗ — мягкое (SEL-разворот WB).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-сертификаты · финальное табло · слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> аплодируют обоим подиумам, забирают мини-квест (слово о семье). Ожидаемо: «а какая команда теперь?» — «New unit — new race».</div></td><td class='mat'>certificates</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>🐣 Workbook Unit 1 (обязательные ☆–☆☆; ☆☆☆ = бонус за очки):</b> Мягкое ДЗ после теста — Workbook стр. 68–69 SEL «Making new people feel welcome»: прочитай истории и отметь чек-лист «что сделать, когда в классе новенький». Без оценок.</p><p style='font-size:.85rem;color:var(--muted)'>WB-аудио — в TRC; нет трека → аудио-пункты пропускаем. Фото слайда ДЗ — ок.</p></td><td class='mat'>Workbook U1 · notebook</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> Assess Unit 1: countries/nationalities, place adjectives, <i>be</i> (all forms), listening notes, a short writing task — in a calm, model-first format, with a <b>first-half revision block</b> (отдельной revision-пары в сетке нет).</li>
+      <li><span class="lb">Subsidiary.</span> Quick-review-молния как ревизия и снятие страха; test-taking basics (example first, manage time, final apostrophe/capital sweep); self-marking of objective parts; gentle error clinic; error log + строка гордости.</li>
+      <li><span class="lb">Personal.</span> Low-stress protocol: quiet music before start, clear timings per part, no competitive games during the test. Feedback = kind, specific, forward-looking. Ревизия ПЕРЕД тестом — чтобы каждый вошёл в тест с ощущением «я это уже сделал сегодня».</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>work through a 4-part test with strategy</li><li>self-mark objective parts against a key</li><li>name their own top-2 error types</li><li>say one thing they're proud of from Unit 1</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Revision lightning</span><span>Strategy</span><span>Test</span><span>Mark</span><span>Clinic</span><span>Log</span><span>Close</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>(everything from Unit 1)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>everything from Quick review p.21 (be all forms · 13 nationalities · 8 adjective pairs · capital letters)</div></div>
+      <div class="r"><div class="k">Form</div><div>test spec below — DRAFT until the TRC pack (Progress tests standard/higher).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>—</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Do we start writing immediately?” → No: read the example of each part first.</div><div class='ccq'>“Test finished early?” → The two checks: apostrophes + capital letters.</div><div class='ccq'>“Is a mistake a catastrophe?” → No — it's a target for Unit 2.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Quick review сделан в P5, revision-игры в P6, WB p.11 self-evaluation дома — каждый формат теста встречался минимум трижды. Listening: if no track — teacher reads the script twice (script in the test pack).</p>
+    </div>
+  </div>
+
+  <div class='eyebrow'>Спецификация теста Unit 1 (ЧЕРНОВИК до пака TRC — Progress tests standard/higher в Teacher's Resource Centre, TB стр. 5, 30)</div><div class='cardb' style='padding:4px 8px'><table class='ap'><thead><tr><th>Part</th><th>Contents &amp; marking</th></tr></thead><tbody><tr><td>Part 1 · Vocabulary (14 pts)</td><td>A) 8 items: country → nationality adjective, spelling counts (China → Chinese; the Netherlands → Dutch). B) 6 items: opposite adjectives (crowded → empty; safe → dangerous).</td></tr><tr><td>Part 2 · Grammar be (18 pts)</td><td>A) 8 gaps aff/neg with contractions (My parents ___ from Moscow. It ___ (not) cold today.). B) 6 items: order the words to make questions + write a true short answer (from / you / Are / Russia ?). C) 4 items: correct the mistake (I is 11. → I'm 11.).</td></tr><tr><td>Part 3 · Listening (8 pts)</td><td>A short description of a country (script in the plan; teacher-read twice if no track): 4 true/false + 4 notes to complete (population / capital / weather / sport) — mirrors SB p.17 ex.6–7.</td></tr><tr><td>Part 4 · Writing (10 pts)</td><td>6 sentences about you (name, age, country, nationality, your city + one adjective). Marked for: be forms correct (4) · capital letters (3) · task complete (3) — mirrors keypal criteria SB p.21.</td></tr></tbody></table><p style='font-size:.85rem;color:var(--muted);margin:8px 4px'>Total 50 pts · pass focus: not the number but the personal error log. Built strictly from Quick review SB p.21 — every format was met in class during the unit. Как только достанем пак TRC — заменить на официальный Progress test (🐣 standard / 🚀 higher).</p></div>
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Test anxiety spikes</td><td>Ревизия-молния первой половиной + model-first + timings on board + «skip and return» taught.</td></tr><tr><td>Fast finishers disturb others</td><td>Silent bonus sheet: word-search + one Brain-teaser-style puzzle.</td></tr><tr><td>Listening part chaos</td><td>Notes grid printed ON the paper; 30-sec silent preview; two plays, fixed.</td></tr><tr><td>Marking eats the second lesson</td><td>Objective parts self-marked against a projected key; collect only Part 4.</td></tr><tr><td>Feedback feels like blame</td><td>Errors anonymised and grouped by TYPE; each student logs privately.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 1 “Our world” (How are countries different?) · GIA1zero — lesson plan &amp; staging</span>
+    <span>Тест = спецификация Quick review SB p.21 — ЧЕРНОВИК до пака TRC (Progress tests standard/higher + Test Generator — Teacher's Resource Centre, TB стр. 5, 30). 4 части / 50 баллов; для 🐣 — акценты standard (без бонус-балла). Отдельной revision-пары в сетке нет — ревизия-молния первой половиной этой пары. Listening — скрипт учителя в пакете теста. КТП-Foundation пара 11.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

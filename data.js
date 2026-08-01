@@ -21937,26 +21937,26 @@ window.PROGRAMS = {
    {
     "n": 1,
     "week": "03.09–06.09",
-    "type": "Лексика",
-    "title": "Знакомство. Приветствия. Алфавит / Числа 1–100. Дни недели. Международные слова.",
+    "type": "Комбинированный",
+    "title": "Re-entry: Back to school. Приветствия. Кто мы теперь / Personal objects. Цвета. a/an + plurals — спринт",
     "unit": "",
-    "sec": "Стр. STARTER — Вводный блок · 3 пары · 6 уроков",
+    "sec": "STARTER — Back to school · 4 пары · 8 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Знакомство. Приветствия. Алфавит — Ввод classroom English, приветствий, алфавита. Цвета."
+      "Re-entry: Back to school. Приветствия. Кто мы теперь — Fast re-entry после GMF4: диалоги знакомства без опор, спринт pronouns/possessive adjectives, диагностика беглости."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Числа 1–100. Дни недели. Международные слова. — Таблица чисел, дни недели, drill, парные диалоги."
+      "Personal objects. Цвета. a/an + plurals — спринт — Актуализация-спринт: What's in your bag? развёрнутыми ответами; accuracy-check a/an и plurals; парные интервью."
      ],
      [
       "Лексика",
-      "saying hello, colours, days of the week, numbers 1–100"
+      "saying hello, personal objects, colours"
      ],
      [
       "Грамматика",
-      "classroom instructions, the alphabet"
+      "subject pronouns, possessive adjectives; a/an + plurals"
      ],
      [
       "Навыки",
@@ -21968,25 +21968,25 @@ window.PROGRAMS = {
     "n": 2,
     "week": "07.09–13.09",
     "type": "Комбинированный",
-    "title": "Личные вещи. Классная комната / Буквы алфавита в контексте. Classroom instructions.",
+    "title": "Дни недели. Классная комната — консолидация / this/that/these/those. Imperatives: командуем сами",
     "unit": "",
-    "sec": "Стр. STARTER — Вводный блок · 3 пары · 6 уроков",
+    "sec": "STARTER — Back to school · 4 пары · 8 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Личные вещи. Классная комната — Ввод personal objects, classroom items. What's this?"
+      "Дни недели. Классная комната — консолидация — Спринт-повтор days и classroom words; описание идеального класса развёрнутыми фразами."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Буквы алфавита в контексте. Classroom instructions. — Аудирование, TPR, парная работа, мини-диалоги."
+      "this/that/these/those. Imperatives: командуем сами — Точность this/these; ученики сами дают инструкции классу (output раньше); мини-gate по classroom English."
      ],
      [
       "Лексика",
-      "personal objects, classroom items"
+      "days of the week, the classroom, classroom instructions"
      ],
      [
       "Грамматика",
-      "classroom instructions"
+      "this/that/these/those; imperatives"
      ],
      [
       "Навыки",
@@ -21998,25 +21998,25 @@ window.PROGRAMS = {
     "n": 3,
     "week": "07.09–13.09",
     "type": "Комбинированный",
-    "title": "Международные слова. Цвета. В классе / Числа и буквы в игровых форматах. Парные диалоги.",
+    "title": "Числа 1–100. Международные слова. Алфавит — спринт / Classroom Challenge: миссия по учебнику",
     "unit": "",
-    "sec": "UNIT 1 — Our world · 8 пар · 16 уроков",
+    "sec": "STARTER — Back to school · 4 пары · 8 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Международные слова. Цвета. В классе — Международные слова. Цвета и предметы в классе."
+      "Числа 1–100. Международные слова. Алфавит — спринт — Числовые челленджи на скорость; spelling-гонка с алфавитным кодом; Fun facts квиз."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Числа и буквы в игровых форматах. Парные диалоги. — Revision-игры, мини-проверка понимания."
+      "Classroom Challenge: миссия по учебнику — Квест по учебнику на время; WDYT?-вопросы юнитов; онбординг в формат Get Involved."
      ],
      [
       "Лексика",
-      "international words, colours"
+      "numbers 1–100, international words, the alphabet"
      ],
      [
       "Грамматика",
-      "numbers, alphabet (review)"
+      "numbers, alphabet (consolidation)"
      ],
      [
       "Навыки",
@@ -22027,26 +22027,56 @@ window.PROGRAMS = {
    {
     "n": 4,
     "week": "14.09–20.09",
-    "type": "Лексика",
-    "title": "WDYT? Страны разные. Страны и национальности + Video skills / Video skills: топ-3 места в мире. be: утверждение — ввод.",
+    "type": "Revision",
+    "title": "Starter Gate: консолидация-квиз / Speaking confidence. Классный договор. Peer review — онбординг",
     "unit": "",
-    "sec": "UNIT 1 — Our world · 8 пар · 16 уроков",
+    "sec": "STARTER — Back to school · 4 пары · 8 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "WDYT? Страны разные. Страны и национальности + Video skills — WDYT? видео-старт. Ввод: countries & nationality adjectives."
+      "Starter Gate: консолидация-квиз — Командный gate-квиз по всему Starter; выявление пробелов; accuracy-tightening по spelling и числам."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Video skills: топ-3 места в мире. be: утверждение — ввод. — Карточки, карта, первые предложения с am/is/are."
+      "Speaking confidence. Классный договор. Peer review — онбординг — Спринты говорения по таймеру; договор группы; тренировка peer review и WDYT?-дискуссии."
      ],
      [
       "Лексика",
-      "countries, nationality adjectives, adjectives to describe places"
+      "Starter vocabulary (all)"
      ],
      [
       "Грамматика",
-      "be: affirmative and negative (введение)"
+      "pronouns, a/an + plurals, this/that/these/those, imperatives (review)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 5,
+    "week": "14.09–20.09",
+    "type": "Лексика",
+    "title": "WDYT? How are countries different? Страны и национальности — спринт / Video skills: Top three places in the world",
+    "unit": "",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "WDYT? How are countries different? Страны и национальности — спринт — WDYT?-голосование; актуализация стран из GMF4 + новый сет nationality adjectives (словообразование); длинные ответы."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Video skills: Top three places in the world — Видео с активной задачей (bingo); реакция как блогер; be сразу в живую речь."
+     ],
+     [
+      "Лексика",
+      "countries, nationality adjectives"
+     ],
+     [
+      "Грамматика",
+      "be: affirmative and negative (введение в контексте)"
      ],
      [
       "Навыки",
@@ -22055,28 +22085,28 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 5,
-    "week": "14.09–20.09",
+    "n": 6,
+    "week": "21.09–27.09",
     "type": "Чтение / КМ",
-    "title": "Чтение: Нидерланды — хорошее место для подростков / Word work, упражнения. Critical thinking: жизнь в разных странах.",
+    "title": "Чтение: The Netherlands — a good place to be a teenager / Word work + Critical thinking: где жить лучше?",
     "unit": "",
-    "sec": "UNIT 1 — Our world · 8 пар · 16 уроков",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Чтение: Нидерланды — хорошее место для подростков — Subskill: identifying different types of text. Skimming."
+      "Чтение: The Netherlands — a good place to be a teenager — Subskill: identifying types of text; текст-квест по станциям, гонка за фактами с таймером."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Word work, упражнения. Critical thinking: жизнь в разных странах. — Обсуждение: где хочешь жить и почему."
+      "Word work + Critical thinking: где жить лучше? — Word work как игровой раунд; ранжирование стран с аргументами 3+ предложения; challenge-дискуссия."
      ],
      [
       "Лексика",
-      "places vocabulary: mountains, beach, city, countryside…"
+      "adjectives to describe places (из текста)"
      ],
      [
       "Грамматика",
-      "be: aff/neg (reading context)"
+      "be (reading context)"
      ],
      [
       "Навыки",
@@ -22085,62 +22115,32 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 6,
-    "week": "21.09–27.09",
-    "type": "Грамматика",
-    "title": "Грамматика: be — утверждение и отрицание / Brain teaser. Grammar round-up. Короткие ответы.",
-    "unit": "",
-    "sec": "UNIT 1 — Our world · 8 пар · 16 уроков",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "Грамматика: be — утверждение и отрицание — Таблица be: am/is/are, 'm not/isn't/aren't. Drill."
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "Brain teaser. Grammar round-up. Короткие ответы. — Grammar round-up, письменные упражнения."
-     ],
-     [
-      "Лексика",
-      "nationality adjectives: French, Japanese, Brazilian…"
-     ],
-     [
-      "Грамматика",
-      "be: affirmative and negative — правила"
-     ],
-     [
-      "Навыки",
-      "Грамматика"
-     ]
-    ]
-   },
-   {
     "n": 7,
     "week": "21.09–27.09",
-    "type": "Аудирование",
-    "title": "Аудирование: информационные тексты о местах / be: вопросы и короткие ответы — ввод. Парные диалоги.",
+    "type": "Грамматика",
+    "title": "Грамматика: be — утверждение и отрицание (спринт-актуализация) / Vocabulary & Listening: прилагательные о местах. Новая Зеландия",
     "unit": "",
-    "sec": "UNIT 1 — Our world · 8 пар · 16 уроков",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Аудирование: информационные тексты о местах — Subskill: identifying text types. Ввод описаний мест."
+      "Грамматика: be — утверждение и отрицание (спринт-актуализация) — Таблица be командной гонкой за 5 мин; фокус на письменную точность contracted forms; Brain teaser challenge."
      ],
      [
       "Урок Б · 46–90 мин",
-      "be: вопросы и короткие ответы — ввод. Парные диалоги. — Post-listening speaking, вопросы Is it…? Are they…?"
+      "Vocabulary & Listening: прилагательные о местах. Новая Зеландия — Сет adjectives сразу в описания; аудирование (subskill: using visual clues) с битвой за ответы."
      ],
      [
       "Лексика",
-      "adjectives: amazing, beautiful, busy, quiet, old…"
+      "adjectives to describe places: amazing, busy, quiet…"
      ],
      [
       "Грамматика",
-      "be: questions and short answers (введение)"
+      "be: affirmative and negative (система)"
      ],
      [
       "Навыки",
-      "Лексика, Аудирование"
+      "Грамматика, Аудирование"
      ]
     ]
    },
@@ -22148,21 +22148,21 @@ window.PROGRAMS = {
     "n": 8,
     "week": "28.09–04.10",
     "type": "Грамматика",
-    "title": "Грамматика: be — вопросы и краткие ответы / Парные вопросы о странах. Grammar round-up.",
+    "title": "Грамматика: be — вопросы и краткие ответы (accuracy) / Real-world speaking: Meeting new people",
     "unit": "",
-    "sec": "UNIT 1 — Our world · 8 пар · 16 уроков",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: be — вопросы и краткие ответы — Таблица: Is/Are…? Yes, it is. / No, it isn't. Drill."
+      "Грамматика: be — вопросы и краткие ответы (accuracy) — Спринт-актуализация вопросов; точность инверсии и short answers письменно; раунд «поймай ошибку»; Grammar round-up."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Парные вопросы о странах. Grammar round-up. — Grammar round-up, Brain teaser, письменные упражнения."
+      "Real-world speaking: Meeting new people — Key phrases → сразу PERFORM: диалоги знакомства с ротацией партнёров; peer review по чек-листу."
      ],
      [
       "Лексика",
-      "question words: where, what, who"
+      "question words: where, what, who; Key phrases: Meeting new people"
      ],
      [
       "Грамматика",
@@ -22178,29 +22178,29 @@ window.PROGRAMS = {
     "n": 9,
     "week": "28.09–04.10",
     "type": "Развитие речи",
-    "title": "Real-world speaking + Письмо: информационный текст / Skills boost. Письмо: информационный текст о стране. Capital letters.",
+    "title": "Письмо: a keypal message — THINK → PREPARE / Письмо: WRITE → CHECK + Quick review Unit 1",
     "unit": "",
-    "sec": "UNIT 1 — Our world · 8 пар · 16 уроков",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Real-world speaking + Письмо: информационный текст — Диалог «Asking for information about a place». Key phrases."
+      "Письмо: a keypal message — THINK → PREPARE — Разбор модели; subskill capital letters как accuracy-мишень; план сообщения и черновик первых строк."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Skills boost. Письмо: информационный текст о стране. Capital letters. — Think→Write→Check. Написание, peer review."
+      "Письмо: WRITE → CHECK + Quick review Unit 1 — Дописываем и апгрейдим текст (длиннее и точнее); peer review; Quick review командным квизом."
      ],
      [
       "Лексика",
-      "phrases: Where is…? What's it like? Is it…?"
+      "Unit 1 vocabulary (в письме)"
      ],
      [
       "Грамматика",
-      "capital letters (writing subskill)"
+      "be (в письме); capital letters (writing subskill)"
      ],
      [
       "Навыки",
-      "Говорение, Письмо"
+      "Письмо"
      ]
     ]
    },
@@ -22208,17 +22208,17 @@ window.PROGRAMS = {
     "n": 10,
     "week": "05.10–11.10",
     "type": "Revision",
-    "title": "Проект: презентация места. Revision Unit 1 / Презентация. Quick review Unit 1. Revision-игра.",
+    "title": "Проект WDYT?: Design a new country — Think & Plan → Create / Проект: Present. Revision Unit 1",
     "unit": "",
-    "sec": "UNIT 1 — Our world · 8 пар · 16 уроков",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Проект: презентация места. Revision Unit 1 — Проект WDYT?: Top three places. Think & Plan → Create."
+      "Проект WDYT?: Design a new country — Think & Plan → Create — Тройки с ролями и таймерами; challenge: страна с легендой и фактами; язык — be + places adjectives."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Презентация. Quick review Unit 1. Revision-игра. — Устный опрос, revision, рефлексия."
+      "Проект: Present. Revision Unit 1 — Презентации с судейством Layout/Content/Language/Visuals; revision-квиз с очками; Final reflection."
      ],
      [
       "Лексика",
@@ -22238,17 +22238,17 @@ window.PROGRAMS = {
     "n": 11,
     "week": "05.10–11.10",
     "type": "Тест",
-    "title": "Тест по Unit 1 / be: questions and short answers. Аудирование.",
+    "title": "Тест по Unit 1 / Разбор: командный реванш-квиз",
     "unit": "",
-    "sec": "UNIT 2 — Family · 8 пар · 16 уроков",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Тест по Unit 1 — Лексика: countries, nationalities, places. Грамматика: be."
+      "Тест по Unit 1 — Тест Unit 1, вариант higher: страны, места, be — все формы письменно; чтение."
      ],
      [
       "Урок Б · 46–90 мин",
-      "be: questions and short answers. Аудирование. — Проверка, разбор ошибок, рефлексия."
+      "Разбор: командный реванш-квиз — Аудирование-часть; разбор ошибок реванш-квизом; цели точности на Unit 2."
      ],
      [
       "Навыки",
@@ -22260,25 +22260,25 @@ window.PROGRAMS = {
     "n": 12,
     "week": "12.10–18.10",
     "type": "Лексика",
-    "title": "WDYT? Что такое семья. Family + Video skills / Видео «Me and my family». have got: ввод.",
+    "title": "WDYT? What is a family? Семья — спринт / Video skills: Me and my family",
     "unit": "",
-    "sec": "UNIT 2 — Family · 8 пар · 16 уроков",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "WDYT? Что такое семья. Family + Video skills — WDYT? дискуссия. Ввод: family vocabulary."
+      "WDYT? What is a family? Семья — спринт — WDYT?-дискуссия с голосованием; актуализация family-слов + describing people; длинные ответы о своей семье."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Видео «Me and my family». have got: ввод. — Семейные деревья, have got в контексте видео."
+      "Video skills: Me and my family — Видео с задачей «кто первый заметит»; have got сразу в речь о семье."
      ],
      [
       "Лексика",
-      "family: parents, siblings, grandparents, cousins…"
+      "family, describing people"
      ],
      [
       "Грамматика",
-      "have got: affirmative and negative (введение)"
+      "have got: affirmative and negative (введение в контексте)"
      ],
      [
       "Навыки",
@@ -22290,21 +22290,21 @@ window.PROGRAMS = {
     "n": 13,
     "week": "12.10–18.10",
     "type": "Чтение / КМ",
-    "title": "Чтение: TV-гид — Meet the Putmans / Word work, упражнения. Critical thinking: разные типы семей.",
+    "title": "Чтение: TV-гид Meet the Putmans / Word work + Critical thinking: какие бывают семьи",
     "unit": "",
-    "sec": "UNIT 2 — Family · 8 пар · 16 уроков",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Чтение: TV-гид — Meet the Putmans — Subskill: predicting what a text is about. Skimming."
+      "Чтение: TV-гид Meet the Putmans — Subskill: predicting what a text is about; прогноз-ставки до чтения; jigsaw-гонка по тексту."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Word work, упражнения. Critical thinking: разные типы семей. — Обсуждение: что делает семью семьёй."
+      "Word work + Critical thinking: какие бывают семьи — Word work игрой; ранжирование и аргументы; challenge: сравнить семьи в 3+ предложениях."
      ],
      [
       "Лексика",
-      "describing people: tall, short, young, old, friendly…"
+      "describing people (из текста)"
      ],
      [
       "Грамматика",
@@ -22320,21 +22320,21 @@ window.PROGRAMS = {
     "n": 14,
     "week": "19.10–25.10",
     "type": "Грамматика",
-    "title": "Грамматика: have got — утверждение и отрицание / Drill, описание семьи. Brain teaser. Grammar round-up.",
+    "title": "Грамматика: have got + possessive 's (спринт-актуализация) / Vocabulary & Listening: тело и лицо. Необычные близнецы",
     "unit": "",
-    "sec": "UNIT 2 — Family · 8 пар · 16 уроков",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: have got — утверждение и отрицание — Таблица: have/has got, haven't/hasn't got. Possessive 's/s'."
+      "Грамматика: have got + possessive 's (спринт-актуализация) — Таблица have got командной гонкой; possessive 's/s' как accuracy-мишень; Brain teaser challenge."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Drill, описание семьи. Brain teaser. Grammar round-up. — Grammar round-up, письменные упражнения."
+      "Vocabulary & Listening: тело и лицо. Необычные близнецы — Сет body/face/hair сразу в описания; аудирование (subskill: using what you know) с битвой за ответы."
      ],
      [
       "Лексика",
-      "possessive: my, your, his, her, our, their"
+      "parts of the body and face, describing hair"
      ],
      [
       "Грамматика",
@@ -22342,59 +22342,29 @@ window.PROGRAMS = {
      ],
      [
       "Навыки",
-      "Грамматика"
+      "Грамматика, Аудирование"
      ]
     ]
    },
    {
     "n": 15,
     "week": "19.10–25.10",
-    "type": "Аудирование",
-    "title": "Аудирование: части тела и внешность / Listening: описание людей. Post-listening speaking.",
-    "unit": "",
-    "sec": "UNIT 2 — Family · 8 пар · 16 уроков",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "Аудирование: части тела и внешность — Ввод: parts of the body and face, describing hair."
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "Listening: описание людей. Post-listening speaking. — Парное описание, have got questions: ввод."
-     ],
-     [
-      "Лексика",
-      "parts of body/face: eyes, nose, mouth, hair; hair: straight, curly…"
-     ],
-     [
-      "Грамматика",
-      "have got: questions and short answers (введение)"
-     ],
-     [
-      "Навыки",
-      "Лексика, Аудирование"
-     ]
-    ]
-   },
-   {
-    "n": 16,
-    "week": "26.10–01.11",
     "type": "Грамматика",
-    "title": "Грамматика: have got — вопросы и краткие ответы / Описание внешности в парах. Grammar round-up.",
+    "title": "Грамматика: have got — вопросы и краткие ответы (accuracy) / Real-world speaking: Talking about photos",
     "unit": "",
-    "sec": "UNIT 2 — Family · 8 пар · 16 уроков",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: have got — вопросы и краткие ответы — Таблица: Have/Has…got? Yes/No. Drill."
+      "Грамматика: have got — вопросы и краткие ответы (accuracy) — Спринт вопросов Have/Has… got?; short answers письменно; «поймай ошибку»; Grammar round-up."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Описание внешности в парах. Grammar round-up. — Grammar round-up, Brain teaser, письменные упражнения."
+      "Real-world speaking: Talking about photos — Key phrases → PERFORM: описание фото с ротацией; peer review; challenge — фото своей семьи развёрнуто."
      ],
      [
       "Лексика",
-      "describing hair and face vocabulary"
+      "describing hair and face; Key phrases: Talking about photos"
      ],
      [
       "Грамматика",
@@ -22407,50 +22377,50 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 17,
+    "n": 16,
     "week": "26.10–01.11",
     "type": "Развитие речи",
-    "title": "Real-world speaking + Письмо: описание человека / Письмо: описание члена семьи. Subskill: and/but/or.",
+    "title": "Письмо: an email — THINK → PREPARE / Письмо: WRITE → CHECK + Quick review Unit 2",
     "unit": "",
-    "sec": "UNIT 2 — Family · 8 пар · 16 уроков",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Real-world speaking + Письмо: описание человека — Диалог «Describing people». Key phrases. Skills boost."
+      "Письмо: an email — THINK → PREPARE — Разбор модели email; subskill apostrophes как accuracy-мишень; план и черновик."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Письмо: описание члена семьи. Subskill: and/but/or. — Think→Write→Check. Написание, peer review."
+      "Письмо: WRITE → CHECK + Quick review Unit 2 — Апгрейд текста (длиннее и точнее); peer review; Quick review командным квизом."
      ],
      [
       "Лексика",
-      "description phrases: He/She has got… He/She is…"
+      "Unit 2 vocabulary (в письме)"
      ],
      [
       "Грамматика",
-      "and, but, or (writing subskill)"
+      "have got (в письме); apostrophes (writing subskill)"
      ],
      [
       "Навыки",
-      "Говорение, Письмо"
+      "Письмо"
      ]
     ]
    },
    {
-    "n": 18,
-    "week": "02.11–08.11",
+    "n": 17,
+    "week": "26.10–01.11",
     "type": "Revision",
-    "title": "Проект: семейный альбом. Revision Unit 2 / Презентация. Quick review Unit 2. Revision.",
+    "title": "Проект WDYT?: Circle map важных людей — Think & Plan → Create / Проект: Present. Revision Unit 2",
     "unit": "",
-    "sec": "UNIT 2 — Family · 8 пар · 16 уроков",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Проект: семейный альбом. Revision Unit 2 — Проект WDYT?: My family album. Think & Plan → Create."
+      "Проект WDYT?: Circle map важных людей — Think & Plan → Create — Тройки с ролями; challenge: карта с фактами have got о каждом; Super skill: critical thinking."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Презентация. Quick review Unit 2. Revision. — Устный опрос, revision, рефлексия."
+      "Проект: Present. Revision Unit 2 — Презентации с судейством по 4 осям; revision-квиз с очками; Final reflection."
      ],
      [
       "Лексика",
@@ -22467,20 +22437,20 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 19,
+    "n": 18,
     "week": "02.11–08.11",
     "type": "Тест",
-    "title": "Тест по Unit 2 / Possessive 's. Аудирование.",
+    "title": "Тест по Unit 2 / Разбор: командный реванш-квиз",
     "unit": "",
-    "sec": "UNIT 3 — Eat well · 8 пар · 16 уроков",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Тест по Unit 2 — Лексика: family, body, appearance. Грамматика: have got."
+      "Тест по Unit 2 — Тест Unit 2, вариант higher: семья, тело, внешность; have got все формы письменно."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Possessive 's. Аудирование. — Проверка, разбор ошибок, рефлексия."
+      "Разбор: командный реванш-квиз — Аудирование-часть; разбор ошибок реванш-квизом; цели точности на Unit 3."
      ],
      [
       "Навыки",
@@ -22489,28 +22459,28 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 20,
-    "week": "09.11–15.11",
+    "n": 19,
+    "week": "02.11–08.11",
     "type": "Лексика",
-    "title": "WDYT? Идеальная еда. Food & drink + Video skills / Видео «Farmers' market». Countable/uncountable: ввод.",
+    "title": "WDYT? What's the ideal meal? Еда и напитки — спринт / Video skills: Farmers' market",
     "unit": "",
-    "sec": "UNIT 3 — Eat well · 8 пар · 16 уроков",
+    "sec": "UNIT 3 — Eat well · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "WDYT? Идеальная еда. Food & drink + Video skills — WDYT? дискуссия. Ввод: food and drink vocabulary."
+      "WDYT? What's the ideal meal? Еда и напитки — спринт — WDYT?-голосование; актуализация food из GMF + новый сет; сортировка C/UC на скорость."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Видео «Farmers' market». Countable/uncountable: ввод. — Сортировка C/UC, видео, парная работа."
+      "Video skills: Farmers' market — Видео с bingo-задачей; countable/uncountable сразу в живой речи о еде."
      ],
      [
       "Лексика",
-      "food and drink: fruit, vegetables, meat, dairy, drinks…"
+      "food and drink"
      ],
      [
       "Грамматика",
-      "countable and uncountable nouns (введение)"
+      "countable and uncountable nouns (введение в контексте)"
      ],
      [
       "Навыки",
@@ -22519,24 +22489,24 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 21,
+    "n": 20,
     "week": "09.11–15.11",
     "type": "Чтение / КМ",
-    "title": "Чтение: новостная статья «Meatless Mondays» / Word work, упражнения. Critical thinking: еда и здоровье.",
+    "title": "Чтение: Meatless Mondays / Word work + Critical thinking: еда и здоровье",
     "unit": "",
-    "sec": "UNIT 3 — Eat well · 8 пар · 16 уроков",
+    "sec": "UNIT 3 — Eat well · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Чтение: новостная статья «Meatless Mondays» — Subskill: understanding the general idea. Skimming."
+      "Чтение: Meatless Mondays — Subskill: understanding the general idea; скоростной скимминг; гонка за фактами."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Word work, упражнения. Critical thinking: еда и здоровье. — Обсуждение: вегетарианство, привычки питания."
+      "Word work + Critical thinking: еда и здоровье — Word work игрой; challenge-дебаты «мясо или без»; аргументы 3+ предложения."
      ],
      [
       "Лексика",
-      "food collocations: have breakfast, eat well, drink water…"
+      "food collocations (из текста)"
      ],
      [
       "Грамматика",
@@ -22549,140 +22519,110 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 22,
-    "week": "16.11–22.11",
+    "n": 21,
+    "week": "09.11–15.11",
     "type": "Грамматика",
-    "title": "Грамматика: countable/uncountable. some/any/a lot of / there is/are: ввод. Brain teaser. Grammar round-up.",
+    "title": "Грамматика: C/UC + some/any/a lot of (спринт-актуализация) / Vocabulary & Listening: торговый центр",
     "unit": "",
-    "sec": "UNIT 3 — Eat well · 8 пар · 16 уроков",
+    "sec": "UNIT 3 — Eat well · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: countable/uncountable. some/any/a lot of — Таблица: a/an, some/any, a lot of. Drill."
+      "Грамматика: C/UC + some/any/a lot of (спринт-актуализация) — Актуализация квантификаторов из GMF4; письменная точность some/any; Brain teaser challenge."
      ],
      [
       "Урок Б · 46–90 мин",
-      "there is/are: ввод. Brain teaser. Grammar round-up. — Grammar round-up, письменные упражнения."
+      "Vocabulary & Listening: торговый центр — Сет shopping centre; аудирование street interview (subskill: taking notes) с битвой за ответы."
      ],
      [
       "Лексика",
-      "some, any, a lot of (утв./отриц./вопрос)"
+      "the shopping centre"
      ],
      [
       "Грамматика",
-      "countable/uncountable; some, any, a lot of; there is/are"
+      "countable/uncountable; some, any, a lot of"
      ],
      [
       "Навыки",
-      "Грамматика"
+      "Грамматика, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 22,
+    "week": "16.11–22.11",
+    "type": "Грамматика",
+    "title": "Грамматика: there is/are (accuracy) / Real-world speaking: Ordering food",
+    "unit": "",
+    "sec": "UNIT 3 — Eat well · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: there is/are (accuracy) — Спринт всех форм there is/are; описание мест письменно точно; «поймай ошибку»; Grammar round-up."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Real-world speaking: Ordering food — Key phrases → PERFORM: ролевая «кафе» с ротацией; challenge — вежливый развёрнутый заказ."
+     ],
+     [
+      "Лексика",
+      "food quantities; Key phrases: Ordering food"
+     ],
+     [
+      "Грамматика",
+      "there is/are"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Говорение"
      ]
     ]
    },
    {
     "n": 23,
     "week": "16.11–22.11",
-    "type": "Аудирование",
-    "title": "Аудирование: торговый центр с едой / Post-listening speaking. there is/are: закрепление.",
+    "type": "Развитие речи",
+    "title": "Письмо: a blog post about food — THINK → PREPARE / Письмо: WRITE → CHECK + Quick review Unit 3",
     "unit": "",
-    "sec": "UNIT 3 — Eat well · 8 пар · 16 уроков",
+    "sec": "UNIT 3 — Eat well · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Аудирование: торговый центр с едой — Ввод: the shopping centre. Listening: where to find food."
+      "Письмо: a blog post about food — THINK → PREPARE — Разбор модели блога; subskill and/but; план поста и черновик."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Post-listening speaking. there is/are: закрепление. — Описание места, парные вопросы Is there…? Are there…?"
+      "Письмо: WRITE → CHECK + Quick review Unit 3 — Апгрейд текста; peer review; Quick review командным квизом."
      ],
      [
       "Лексика",
-      "shopping centre vocabulary: floor, section, entrance…"
+      "Unit 3 vocabulary (в письме)"
      ],
      [
       "Грамматика",
-      "there is/are (practice)"
+      "and, but (writing subskill)"
      ],
      [
       "Навыки",
-      "Лексика, Аудирование"
+      "Письмо"
      ]
     ]
    },
    {
     "n": 24,
     "week": "23.11–29.11",
-    "type": "Грамматика",
-    "title": "Грамматика: there is/are — полная форма / Описание кухни/холодильника. Grammar round-up.",
+    "type": "Тест",
+    "title": "Мини-проект: Plan your ideal meal. Revision Unit 3 / Тест по Unit 3 + разбор",
     "unit": "",
-    "sec": "UNIT 3 — Eat well · 8 пар · 16 уроков",
+    "sec": "UNIT 3 — Eat well · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: there is/are — полная форма — Таблица: There is/There are aff/neg/questions. Drill."
+      "Мини-проект: Plan your ideal meal. Revision Unit 3 — Тройки с таймером; меню с there is / some / any; revision-спринт; Super skill: collaboration."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Описание кухни/холодильника. Grammar round-up. — Grammar round-up, Brain teaser, письменные упражнения."
-     ],
-     [
-      "Лексика",
-      "food quantities vocabulary"
-     ],
-     [
-      "Грамматика",
-      "there is/are: aff/neg/questions"
-     ],
-     [
-      "Навыки",
-      "Грамматика"
-     ]
-    ]
-   },
-   {
-    "n": 25,
-    "week": "23.11–29.11",
-    "type": "Развитие речи",
-    "title": "Real-world speaking + Письмо: рецепт / Письмо: простой рецепт. Subskill: imperatives.",
-    "unit": "",
-    "sec": "UNIT 3 — Eat well · 8 пар · 16 уроков",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "Real-world speaking + Письмо: рецепт — Диалог «Ordering food». Key phrases. Skills boost."
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "Письмо: простой рецепт. Subskill: imperatives. — Think→Write→Check. Написание рецепта, peer review."
-     ],
-     [
-      "Лексика",
-      "ordering phrases: I'd like… Can I have… How much is…?"
-     ],
-     [
-      "Грамматика",
-      "imperatives (writing subskill)"
-     ],
-     [
-      "Навыки",
-      "Говорение, Письмо"
-     ]
-    ]
-   },
-   {
-    "n": 26,
-    "week": "30.11–06.12",
-    "type": "Revision",
-    "title": "Проект: фермерский рынок. Revision Unit 3 / Презентация. Quick review Unit 3. Revision. Подготовка к Midterm.",
-    "unit": "",
-    "sec": "UNIT 3 — Eat well · 8 пар · 16 уроков",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "Проект: фермерский рынок. Revision Unit 3 — Проект WDYT?: Design a farmers' market stall. Think & Plan → Create."
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "Презентация. Quick review Unit 3. Revision. Подготовка к Midterm. — Revision-игра, рефлексия."
+      "Тест по Unit 3 + разбор — Тест higher: food, C/UC, some/any, there is/are; экспресс-разбор реванш-квизом."
      ],
      [
       "Лексика",
@@ -22690,7 +22630,7 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Unit 3 grammar: C/UC, some/any, there is/are"
+      "Unit 3 grammar (all)"
      ],
      [
       "Навыки",
@@ -22699,80 +22639,28 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 27,
-    "week": "30.11–06.12",
-    "type": "Тест",
-    "title": "Тест по Unit 3 / some/any/a lot of, there is/are. Аудирование.",
-    "unit": "",
-    "sec": "UNIT 3 — Eat well · 8 пар · 16 уроков",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "Тест по Unit 3 — Лексика: food and drink, shopping. Грамматика: countable/uncountable."
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "some/any/a lot of, there is/are. Аудирование. — Проверка, разбор ошибок. Подготовка к Midterm."
-     ],
-     [
-      "Навыки",
-      "Все навыки"
-     ]
-    ]
-   },
-   {
-    "n": 28,
-    "week": "07.12–13.12",
-    "type": "Midterm",
-    "title": "Промежуточный контроль: лексика и грамматика (Starter–Unit 3) / Чтение. Аудирование. Письменное задание. Разбор, рефлексия.",
-    "unit": "",
-    "sec": "UNIT 4 — My time · 8 пар · 16 уроков",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "Промежуточный контроль: лексика и грамматика (Starter–Unit 3) — Лексический тест. Грамматика: be / have got / C&UC / there is/are."
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "Чтение. Аудирование. Письменное задание. Разбор, рефлексия."
-     ],
-     [
-      "Лексика",
-      "Все темы: Starter, Units 1–3"
-     ],
-     [
-      "Грамматика",
-      "be, have got, countable/uncountable, some/any, there is/are"
-     ],
-     [
-      "Навыки",
-      "Все навыки"
-     ]
-    ]
-   },
-   {
-    "n": 29,
-    "week": "07.12–13.12",
+    "n": 25,
+    "week": "23.11–29.11",
     "type": "Лексика",
-    "title": "WDYT? Как организовать время. The time + Video skills / Видео «Sloth calendar». Free-time activities. Present Simple: ввод.",
+    "title": "WDYT? Организация времени. Время и распорядок — спринт / Video skills: Sloth calendar",
     "unit": "",
-    "sec": "UNIT 4 — My time · 8 пар · 16 уроков",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "WDYT? Как организовать время. The time + Video skills — WDYT? дискуссия. Ввод: telling the time, daily routines."
+      "WDYT? Организация времени. Время и распорядок — спринт — WDYT?-голосование; часы и daily routines спринтом; длинные ответы о своём дне."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Видео «Sloth calendar». Free-time activities. Present Simple: ввод. — Часы, распорядок, первые предложения с Present Simple."
+      "Video skills: Sloth calendar — Видео с активной задачей; Present simple сразу в речь о привычках."
      ],
      [
       "Лексика",
-      "the time, daily routines, free-time activities"
+      "the time, daily routines"
      ],
      [
       "Грамматика",
-      "Present simple: affirmative and negative (введение)"
+      "Present simple: affirmative and negative (введение в контексте)"
      ],
      [
       "Навыки",
@@ -22781,24 +22669,24 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 30,
-    "week": "14.12–20.12",
+    "n": 26,
+    "week": "30.11–06.12",
     "type": "Чтение / КМ",
-    "title": "Чтение: онлайн-статья «Life in a K-pop academy» / Word work, упражнения. Critical thinking: расписание и дисциплина.",
+    "title": "Чтение: Life in a K-pop academy / Word work + Critical thinking: расписание и дисциплина",
     "unit": "",
-    "sec": "UNIT 4 — My time · 8 пар · 16 уроков",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Чтение: онлайн-статья «Life in a K-pop academy» — Subskill: reading for detail. Skimming."
+      "Чтение: Life in a K-pop academy — Subskill: reading for detail; квест по тексту; гонка за деталями с таймером."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Word work, упражнения. Critical thinking: расписание и дисциплина. — Обсуждение: идеальный день."
+      "Word work + Critical thinking: расписание и дисциплина — Word work игрой; ранжирование «идеальный день»; challenge-аргументы о дисциплине."
      ],
      [
       "Лексика",
-      "K-pop/school schedule vocabulary"
+      "school/schedule vocabulary (из текста)"
      ],
      [
       "Грамматика",
@@ -22811,88 +22699,58 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 31,
-    "week": "14.12–20.12",
+    "n": 27,
+    "week": "30.11–06.12",
     "type": "Грамматика",
-    "title": "Грамматика: Present Simple — утверждение и отрицание / Brain teaser. Grammar round-up. Текст о распорядке дня.",
+    "title": "Грамматика: Present simple — утверждение и отрицание (спринт) / Vocabulary & Listening: free time. Приложение для телефона",
     "unit": "",
-    "sec": "UNIT 4 — My time · 8 пар · 16 уроков",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: Present Simple — утверждение и отрицание — Правила: 3 лицо ед.ч., орфография. Drill."
+      "Грамматика: Present simple — утверждение и отрицание (спринт) — Актуализация Present simple; accuracy-мишень: -s 3-го лица и spelling письменно; Brain teaser."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Brain teaser. Grammar round-up. Текст о распорядке дня. — Grammar round-up, письменные упражнения."
+      "Vocabulary & Listening: free time. Приложение для телефона — Сет free-time activities; аудирование (subskill: completing sentences) с битвой за ответы."
      ],
      [
       "Лексика",
-      "adverbs of frequency: always, usually, often, sometimes, never"
+      "free-time activities"
      ],
      [
       "Грамматика",
-      "Present simple: aff/neg, 3rd person spelling"
+      "Present simple: aff/neg; 3rd person spelling"
      ],
      [
       "Навыки",
-      "Грамматика"
+      "Грамматика, Аудирование"
      ]
     ]
    },
    {
-    "n": 32,
-    "week": "21.12–27.12",
-    "type": "Аудирование",
-    "title": "Аудирование: расписание — Yes/No questions / Post-listening: парные вопросы Do/Does…? Yes/No.",
-    "unit": "",
-    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "Аудирование: расписание — Yes/No questions — Ввод Yes/No questions. Listening: расписание школы."
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "Post-listening: парные вопросы Do/Does…? Yes/No. — Drill, описание своего расписания."
-     ],
-     [
-      "Лексика",
-      "schedule vocabulary: lesson, break, subject, timetable…"
-     ],
-     [
-      "Грамматика",
-      "Present simple: Yes/No questions and short answers (введение)"
-     ],
-     [
-      "Навыки",
-      "Аудирование, Говорение"
-     ]
-    ]
-   },
-   {
-    "n": 33,
-    "week": "21.12–27.12",
+    "n": 28,
+    "week": "07.12–13.12",
     "type": "Грамматика",
-    "title": "Грамматика: Wh-questions + object pronouns. Likes/dislikes / love/like/don't mind/hate + noun. Object pronouns. Grammar round-up.",
+    "title": "Грамматика: Present simple — вопросы. Likes. Object pronouns (accuracy) / Real-world speaking: Making plans",
     "unit": "",
-    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: Wh-questions + object pronouns. Likes/dislikes — Wh-questions: What/When/Where/How often. Drill."
+      "Грамматика: Present simple — вопросы. Likes. Object pronouns (accuracy) — Спринт Do/Does и Wh-вопросов; love/like/hate + noun; object pronouns точно письменно; Grammar round-up."
      ],
      [
       "Урок Б · 46–90 мин",
-      "love/like/don't mind/hate + noun. Object pronouns. Grammar round-up. — Grammar round-up, Brain teaser, письменные упражнения."
+      "Real-world speaking: Making plans — Key phrases → PERFORM: договариваемся о планах с ротацией; challenge — контрпредложения."
      ],
      [
       "Лексика",
-      "love/like/don't mind/hate + noun; object pronouns: me, him, her…"
+      "love/like/don't like/hate + noun; object pronouns; Key phrases: Making plans"
      ],
      [
       "Грамматика",
-      "Wh-questions; love/like/hate + noun; object pronouns"
+      "Present simple: Yes/No + Wh- questions; object pronouns"
      ],
      [
       "Навыки",
@@ -22901,50 +22759,50 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 34,
-    "week": "11.01–17.01",
+    "n": 29,
+    "week": "07.12–13.12",
     "type": "Развитие речи",
-    "title": "Real-world speaking + Письмо: блог о распорядке дня / Skills boost. Письмо: блог о типичном дне. because/and/but.",
+    "title": "Письмо: notes and messages — THINK → PREPARE / Письмо: WRITE → CHECK + Quick review Unit 4",
     "unit": "",
-    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Real-world speaking + Письмо: блог о распорядке дня — Диалог «Making and responding to suggestions». Key phrases."
+      "Письмо: notes and messages — THINK → PREPARE — Разбор моделей записок и сообщений; subskill because; план и черновик."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Skills boost. Письмо: блог о типичном дне. because/and/but. — Think→Write→Check. Написание, peer review."
+      "Письмо: WRITE → CHECK + Quick review Unit 4 — Апгрейд сообщений; peer review; Quick review командным квизом."
      ],
      [
       "Лексика",
-      "suggestion phrases: Why don't we…? Let's… What about…?"
+      "Unit 4 vocabulary (в письме)"
      ],
      [
       "Грамматика",
-      "because, and, but (writing subskill)"
+      "because (writing subskill)"
      ],
      [
       "Навыки",
-      "Говорение, Письмо"
+      "Письмо"
      ]
     ]
    },
    {
-    "n": 35,
-    "week": "11.01–17.01",
-    "type": "Revision",
-    "title": "Проект: идеальное расписание. Revision Unit 4 / Презентация. Quick review Unit 4. Revision.",
+    "n": 30,
+    "week": "14.12–20.12",
+    "type": "Тест",
+    "title": "Мини-проект: цифровой постер «Мой день». Revision Unit 4 / Тест по Unit 4 + разбор",
     "unit": "",
-    "sec": "КАНИКУЛЫ 28.12.2026 – 10.01.2027 (занятий нет)",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Проект: идеальное расписание. Revision Unit 4 — Проект WDYT?: Design your ideal timetable. Think & Plan → Create."
+      "Мини-проект: цифровой постер «Мой день». Revision Unit 4 — Тройки с таймером; постер с Present simple; revision-спринт перед Mid-year."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Презентация. Quick review Unit 4. Revision. — Устный опрос, revision."
+      "Тест по Unit 4 + разбор — Тест higher: time, routines, Present simple все формы; экспресс-разбор реванш-квизом."
      ],
      [
       "Лексика",
@@ -22961,20 +22819,28 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 36,
-    "week": "18.01–24.01",
-    "type": "Тест",
-    "title": "Тест по Unit 4 / Yes/No + Wh-questions, object pronouns. Аудирование.",
+    "n": 31,
+    "week": "14.12–20.12",
+    "type": "Revision",
+    "title": "Mid-year review: игры-станции Starter–Unit 4 / Mid-year review: грамматический марафон",
     "unit": "",
-    "sec": "UNIT 5 — Tech life · 8 пар · 16 уроков",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Тест по Unit 4 — Лексика: time, routines, activities. Грамматика: Present Simple."
+      "Mid-year review: игры-станции Starter–Unit 4 — Командные станции по лексике и грамматике полугодия; лидерборд; закрытие пробелов."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Yes/No + Wh-questions, object pronouns. Аудирование. — Проверка, разбор ошибок, рефлексия."
+      "Mid-year review: грамматический марафон — be / have got / C-UC / there is-are / Present simple в спринтах; стратегии теста."
+     ],
+     [
+      "Лексика",
+      "Starter–Unit 4 vocabulary (review)"
+     ],
+     [
+      "Грамматика",
+      "be, have got, countable/uncountable, some/any, there is/are, Present simple"
      ],
      [
       "Навыки",
@@ -22983,28 +22849,72 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 37,
-    "week": "18.01–24.01",
-    "type": "Лексика",
-    "title": "WDYT? Технологии и мир. Abilities + Video skills / Видео «Smartphone gadget crafts». can/can't: ввод.",
+    "n": 32,
+    "week": "21.12–27.12",
+    "type": "Midterm",
+    "title": "Mid-year тест: лексика и грамматика / Mid-year тест: чтение, аудирование, письмо",
     "unit": "",
-    "sec": "UNIT 5 — Tech life · 8 пар · 16 уроков",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "WDYT? Технологии и мир. Abilities + Video skills — WDYT? дискуссия. Ввод: abilities, technology nouns."
+      "Mid-year тест: лексика и грамматика — Вариант higher: комплексный тест Starter–Unit 4."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Видео «Smartphone gadget crafts». can/can't: ввод. — can для способностей, парные вопросы Can you…?"
+      "Mid-year тест: чтение, аудирование, письмо — Skills-часть теста; письменное задание — сообщение о себе."
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 33,
+    "week": "21.12–27.12",
+    "type": "Midterm",
+    "title": "Speaking checkpoint / Разбор теста. Итоги полугодия. Новогодний финал",
+    "unit": "",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Speaking checkpoint — Индивидуальный speaking-чек: диалог + мини-монолог; фиксация прогресса беглости."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Разбор теста. Итоги полугодия. Новогодний финал — Разбор ошибок реванш-квизом; цели на 2-е полугодие; праздничный финал."
+     ],
+     [
+      "Навыки",
+      "Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 34,
+    "week": "11.01–17.01",
+    "type": "Лексика",
+    "title": "WDYT? Технологии и мир. Abilities — спринт / Video skills: Smartphone gadget crafts",
+    "unit": "",
+    "sec": "UNIT 5 — Tech life · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "WDYT? Технологии и мир. Abilities — спринт — WDYT?-голосование; актуализация can-контекстов; сет abilities + technology nouns; длинные ответы Can you…?"
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Video skills: Smartphone gadget crafts — Видео с активной задачей; can/can't сразу в живую речь о гаджетах."
      ],
      [
       "Лексика",
-      "abilities vocabulary: draw, swim, cook, code, play…"
+      "abilities, technology nouns"
      ],
      [
       "Грамматика",
-      "can and can't (введение)"
+      "can and can't (введение в контексте)"
      ],
      [
       "Навыки",
@@ -23013,24 +22923,24 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 38,
-    "week": "25.01–31.01",
+    "n": 35,
+    "week": "11.01–17.01",
     "type": "Чтение / КМ",
-    "title": "Чтение: веб-страница «Amazing robots!» / Word work, упражнения. Critical thinking: роботы в жизни.",
+    "title": "Чтение: Amazing robots! / Word work + Critical thinking: роботы в жизни",
     "unit": "",
-    "sec": "UNIT 5 — Tech life · 8 пар · 16 уроков",
+    "sec": "UNIT 5 — Tech life · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Чтение: веб-страница «Amazing robots!» — Subskill: reading for specific information. Skimming."
+      "Чтение: Amazing robots! — Subskill: reading for specific information; сканирование на скорость; гонка за фактами."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Word work, упражнения. Critical thinking: роботы в жизни. — Обсуждение: что умеют делать роботы."
+      "Word work + Critical thinking: роботы в жизни — Word work игрой; challenge-дебаты «робот — друг или замена?»; аргументы 3+ предложения."
      ],
      [
       "Лексика",
-      "technology nouns: robot, app, device, screen, camera…"
+      "technology nouns (из текста)"
      ],
      [
       "Грамматика",
@@ -23043,54 +22953,54 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 39,
-    "week": "25.01–31.01",
+    "n": 36,
+    "week": "18.01–24.01",
     "type": "Грамматика",
-    "title": "Грамматика: can/can't — вопросы и ответы / Brain teaser. Grammar round-up. Comparative adjectives: ввод.",
+    "title": "Грамматика: can/can't — вопросы и ответы (спринт-актуализация) / Vocabulary & Listening: прилагательные. Доклад о технологиях",
     "unit": "",
-    "sec": "UNIT 5 — Tech life · 8 пар · 16 уроков",
+    "sec": "UNIT 5 — Tech life · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: can/can't — вопросы и ответы — Таблица: Can…? Yes/No. Drill. Adjectives: ввод."
+      "Грамматика: can/can't — вопросы и ответы (спринт-актуализация) — Актуализация can из GMF; точность вопросов и short answers письменно; Brain teaser challenge."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Brain teaser. Grammar round-up. Comparative adjectives: ввод. — Grammar round-up, первые сравнения."
+      "Vocabulary & Listening: прилагательные. Доклад о технологиях — Сет adjectives сразу в сравнения; аудирование (subskill: completing a table) с битвой за ответы."
      ],
      [
       "Лексика",
-      "adjectives: fast, slow, cheap, expensive, useful, powerful…"
+      "adjectives: fast, cheap, useful, powerful…"
      ],
      [
       "Грамматика",
-      "can: questions and short answers; comparative adjectives (введение)"
+      "can/can't: questions and short answers"
      ],
      [
       "Навыки",
-      "Грамматика"
+      "Грамматика, Аудирование"
      ]
     ]
    },
    {
-    "n": 40,
-    "week": "01.02–07.02",
-    "type": "Аудирование",
-    "title": "Аудирование: подкаст о технологиях / Post-listening. Comparative adjectives: закрепление. Possessive pronouns.",
+    "n": 37,
+    "week": "18.01–24.01",
+    "type": "Грамматика",
+    "title": "Грамматика: comparatives + possessive pronouns (accuracy) / Real-world speaking: Giving instructions",
     "unit": "",
-    "sec": "UNIT 5 — Tech life · 8 пар · 16 уроков",
+    "sec": "UNIT 5 — Tech life · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Аудирование: подкаст о технологиях — Subskill: listening for specific information."
+      "Грамматика: comparatives + possessive pronouns (accuracy) — Актуализация -er/more из GMF4; irregular-формы гонкой; possessive pronouns письменно точно; round-up."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Post-listening. Comparative adjectives: закрепление. Possessive pronouns. — Сравнение гаджетов, possessive pronouns drill."
+      "Real-world speaking: Giving instructions — Key phrases → PERFORM: инструкции к гаджету с ротацией; challenge — 5+ шагов инструкции."
      ],
      [
       "Лексика",
-      "gadget collocations: take photos, send messages, download…"
+      "gadget collocations; Key phrases: Giving instructions"
      ],
      [
       "Грамматика",
@@ -23098,85 +23008,55 @@ window.PROGRAMS = {
      ],
      [
       "Навыки",
-      "Аудирование, Говорение"
+      "Грамматика, Говорение"
      ]
     ]
    },
    {
-    "n": 41,
-    "week": "01.02–07.02",
-    "type": "Грамматика",
-    "title": "Грамматика: сравнительные прилагательные. Притяжательные местоимения / Grammar round-up. Brain teaser. Письменные упражнения.",
-    "unit": "",
-    "sec": "UNIT 5 — Tech life · 8 пар · 16 уроков",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "Грамматика: сравнительные прилагательные. Притяжательные местоимения — Таблица: -er/more, irregular. Possessive pronouns: mine, yours…"
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "Grammar round-up. Brain teaser. Письменные упражнения. — Grammar round-up, контроль понимания."
-     ],
-     [
-      "Лексика",
-      "irregular comparatives: better, worse, more/less"
-     ],
-     [
-      "Грамматика",
-      "comparative adjectives (full); possessive pronouns"
-     ],
-     [
-      "Навыки",
-      "Грамматика"
-     ]
-    ]
-   },
-   {
-    "n": 42,
-    "week": "08.02–14.02",
+    "n": 38,
+    "week": "25.01–31.01",
     "type": "Развитие речи",
-    "title": "Real-world speaking + Письмо: отзыв о гаджете / Skills boost. Письмо: отзыв о гаджете. Subskill: adjectives order.",
+    "title": "Письмо: an advert — THINK → PREPARE / Письмо: WRITE → CHECK + Quick review Unit 5",
     "unit": "",
-    "sec": "UNIT 5 — Tech life · 8 пар · 16 уроков",
+    "sec": "UNIT 5 — Tech life · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Real-world speaking + Письмо: отзыв о гаджете — Диалог «Asking for and giving opinions». Key phrases."
+      "Письмо: an advert — THINK → PREPARE — Разбор модели рекламы; subskill spelling как accuracy-мишень; план и черновик."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Skills boost. Письмо: отзыв о гаджете. Subskill: adjectives order. — Think→Write→Check. Написание, peer review."
+      "Письмо: WRITE → CHECK + Quick review Unit 5 — Апгрейд рекламы (слоган + сравнения); peer review; Quick review командным квизом."
      ],
      [
       "Лексика",
-      "opinion phrases: I think… In my opinion… It's better than…"
+      "Unit 5 vocabulary (в письме)"
      ],
      [
       "Грамматика",
-      "adjective order (writing subskill)"
+      "spelling (writing subskill)"
      ],
      [
       "Навыки",
-      "Говорение, Письмо"
+      "Письмо"
      ]
     ]
    },
    {
-    "n": 43,
-    "week": "08.02–14.02",
-    "type": "Revision",
-    "title": "Проект: гаджет-поделка. Revision Unit 5 / Презентация. Quick review Unit 5. Revision.",
+    "n": 39,
+    "week": "25.01–31.01",
+    "type": "Тест",
+    "title": "Мини-проект: Design a robot. Revision Unit 5 / Тест по Unit 5 + разбор",
     "unit": "",
-    "sec": "UNIT 5 — Tech life · 8 пар · 16 уроков",
+    "sec": "UNIT 5 — Tech life · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Проект: гаджет-поделка. Revision Unit 5 — Проект WDYT?: Design a smartphone gadget craft. Think & Plan → Create."
+      "Мини-проект: Design a robot. Revision Unit 5 — Тройки с ролями; робот-решение проблемы, презентация с can + comparatives; revision-спринт."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Презентация. Quick review Unit 5. Revision. — Устный опрос, revision."
+      "Тест по Unit 5 + разбор — Тест higher: abilities, tech, can, comparatives, possessive pronouns; реванш-квиз."
      ],
      [
       "Лексика",
@@ -23193,50 +23073,28 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 44,
-    "week": "15.02–21.02",
-    "type": "Тест",
-    "title": "Тест по Unit 5 / Comparative adjectives, possessive pronouns. Аудирование.",
-    "unit": "",
-    "sec": "UNIT 6 — The world is art · 8 пар · 16 уроков",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "Тест по Unit 5 — Лексика: abilities, technology. Грамматика: can/can't."
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "Comparative adjectives, possessive pronouns. Аудирование. — Проверка, разбор ошибок, рефлексия."
-     ],
-     [
-      "Навыки",
-      "Все навыки"
-     ]
-    ]
-   },
-   {
-    "n": 45,
-    "week": "15.02–21.02",
+    "n": 40,
+    "week": "01.02–07.02",
     "type": "Лексика",
-    "title": "WDYT? Что такое искусство. Rooms + Video skills / Видео «Fairy tale house». Present Continuous: ввод.",
+    "title": "WDYT? What is art? Комнаты и мебель — спринт / Video skills: Fairy tale house",
     "unit": "",
-    "sec": "UNIT 6 — The world is art · 8 пар · 16 уроков",
+    "sec": "UNIT 6 — The world is art · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "WDYT? Что такое искусство. Rooms + Video skills — WDYT? дискуссия. Ввод: rooms and furniture, prepositions."
+      "WDYT? What is art? Комнаты и мебель — спринт — WDYT?-голосование «что считать искусством»; сет rooms/furniture + prepositions спринтом; описания."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Видео «Fairy tale house». Present Continuous: ввод. — Ввод Pres.Cont., описание картинок."
+      "Video skills: Fairy tale house — Видео с задачей «кто первый заметит»; Present continuous сразу в речь по картинке."
      ],
      [
       "Лексика",
-      "rooms: bedroom, kitchen, living room; furniture: sofa, desk, shelf…"
+      "rooms and furniture, prepositions"
      ],
      [
       "Грамматика",
-      "Present continuous: affirmative and negative (введение)"
+      "Present continuous: affirmative and negative (введение в контексте)"
      ],
      [
       "Навыки",
@@ -23245,24 +23103,24 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 46,
-    "week": "22.02–28.02",
+    "n": 41,
+    "week": "01.02–07.02",
     "type": "Чтение / КМ",
-    "title": "Чтение: гид по развлечениям «The great escape!» / Word work, упражнения. Critical thinking: искусство вокруг нас.",
+    "title": "Чтение: The great escape! / Word work + Critical thinking: искусство вокруг нас",
     "unit": "",
-    "sec": "UNIT 6 — The world is art · 8 пар · 16 уроков",
+    "sec": "UNIT 6 — The world is art · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Чтение: гид по развлечениям «The great escape!» — Subskill: answering true or false questions. Skimming."
+      "Чтение: The great escape! — Subskill: answering true or false questions; квест по гиду развлечений; гонка за ответами."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Word work, упражнения. Critical thinking: искусство вокруг нас. — Обсуждение: что считать искусством."
+      "Word work + Critical thinking: искусство вокруг нас — Word work игрой; ранжирование «это искусство?»; challenge-аргументы."
      ],
      [
       "Лексика",
-      "clothes and accessories: coat, jacket, scarf, jewellery…"
+      "clothes and accessories (из текста)"
      ],
      [
       "Грамматика",
@@ -23275,54 +23133,54 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 47,
-    "week": "22.02–28.02",
+    "n": 42,
+    "week": "08.02–14.02",
     "type": "Грамматика",
-    "title": "Грамматика: Present Continuous — полная форма / Brain teaser. Grammar round-up. Описание картин.",
+    "title": "Грамматика: Present continuous — утверждение и отрицание (спринт) / Vocabulary & Listening: одежда. Арт-мастерская",
     "unit": "",
-    "sec": "UNIT 6 — The world is art · 8 пар · 16 уроков",
+    "sec": "UNIT 6 — The world is art · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: Present Continuous — полная форма — Таблица: aff/neg/questions, -ing орфография. Drill."
+      "Грамматика: Present continuous — утверждение и отрицание (спринт) — Ввод-актуализация Present continuous; accuracy-мишень: spelling -ing письменно; Brain teaser."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Brain teaser. Grammar round-up. Описание картин. — Grammar round-up, письменные упражнения."
+      "Vocabulary & Listening: одежда. Арт-мастерская — Сет clothes & accessories сразу в описания; аудирование (subskill: photo captions) с битвой за ответы."
      ],
      [
       "Лексика",
-      "time expressions: now, at the moment, today, this week"
+      "clothes and accessories"
      ],
      [
       "Грамматика",
-      "Present continuous: aff/neg/questions, spelling -ing"
+      "Present continuous: aff/neg; spelling -ing"
      ],
      [
       "Навыки",
-      "Грамматика"
+      "Грамматика, Аудирование"
      ]
     ]
    },
    {
-    "n": 48,
-    "week": "01.03–07.03",
-    "type": "Аудирование",
-    "title": "Аудирование: экскурсия по арт-галерее / Post-listening. Present Continuous: Yes/No + Wh-questions.",
+    "n": 43,
+    "week": "08.02–14.02",
+    "type": "Грамматика",
+    "title": "Грамматика: Present continuous — вопросы (accuracy) / Real-world speaking: Asking for information",
     "unit": "",
-    "sec": "UNIT 6 — The world is art · 8 пар · 16 уроков",
+    "sec": "UNIT 6 — The world is art · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Аудирование: экскурсия по арт-галерее — Ввод prepositions of place. Listening: описание комнаты."
+      "Грамматика: Present continuous — вопросы (accuracy) — Спринт Yes/No и Wh-вопросов; контраст с Present simple; «поймай ошибку»; Grammar round-up."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Post-listening. Present Continuous: Yes/No + Wh-questions. — Парные вопросы What is she doing? Where is he standing?"
+      "Real-world speaking: Asking for information — Key phrases → PERFORM: диалоги «узнай информацию» с ротацией; challenge — вежливые переспросы."
      ],
      [
       "Лексика",
-      "prepositions: in, on, under, next to, in front of, behind, between…"
+      "prepositions of place; Key phrases: Asking for information"
      ],
      [
       "Грамматика",
@@ -23330,85 +23188,55 @@ window.PROGRAMS = {
      ],
      [
       "Навыки",
-      "Аудирование, Говорение"
+      "Грамматика, Говорение"
      ]
     ]
    },
    {
-    "n": 49,
-    "week": "01.03–07.03",
-    "type": "Грамматика",
-    "title": "Грамматика: Present Continuous — вопросы (закрепление) / Grammar round-up. Brain teaser. Письменные упражнения.",
-    "unit": "",
-    "sec": "UNIT 6 — The world is art · 8 пар · 16 уроков",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "Грамматика: Present Continuous — вопросы (закрепление) — Таблица всех форм. Drill. Описание комнаты по памяти."
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "Grammar round-up. Brain teaser. Письменные упражнения. — Grammar round-up, контроль понимания."
-     ],
-     [
-      "Лексика",
-      "activity verbs: sit, stand, walk, run, read, draw, paint…"
-     ],
-     [
-      "Грамматика",
-      "Present continuous: all forms (review)"
-     ],
-     [
-      "Навыки",
-      "Грамматика"
-     ]
-    ]
-   },
-   {
-    "n": 50,
-    "week": "08.03–14.03",
+    "n": 44,
+    "week": "15.02–21.02",
     "type": "Развитие речи",
-    "title": "Real-world speaking + Письмо: описание картины/комнаты / Письмо: описание комнаты/картины. Subskill: there is/are + Pres.Cont.",
+    "title": "Письмо: text messages — THINK → PREPARE / Письмо: WRITE → CHECK + Quick review Unit 6",
     "unit": "",
-    "sec": "UNIT 6 — The world is art · 8 пар · 16 уроков",
+    "sec": "UNIT 6 — The world is art · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Real-world speaking + Письмо: описание картины/комнаты — Диалог «Describing a picture». Key phrases. Skills boost."
+      "Письмо: text messages — THINK → PREPARE — Разбор моделей переписки; subskill so; план и черновик."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Письмо: описание комнаты/картины. Subskill: there is/are + Pres.Cont. — Think→Write→Check. Написание, peer review."
+      "Письмо: WRITE → CHECK + Quick review Unit 6 — Апгрейд сообщений; peer review; Quick review командным квизом."
      ],
      [
       "Лексика",
-      "description phrases: In the picture… On the left… In the background…"
+      "Unit 6 vocabulary (в письме)"
      ],
      [
       "Грамматика",
-      "there is/are + Present continuous (writing subskill)"
+      "so (writing subskill)"
      ],
      [
       "Навыки",
-      "Говорение, Письмо"
+      "Письмо"
      ]
     ]
    },
    {
-    "n": 51,
-    "week": "08.03–14.03",
-    "type": "Revision",
-    "title": "Проект: сказочный дом. Revision Unit 6 / Презентация. Quick review Unit 6. Revision.",
+    "n": 45,
+    "week": "15.02–21.02",
+    "type": "Тест",
+    "title": "Мини-проект: video guide для фотовыставки. Revision Unit 6 / Тест по Unit 6 + разбор",
     "unit": "",
-    "sec": "UNIT 6 — The world is art · 8 пар · 16 уроков",
+    "sec": "UNIT 6 — The world is art · 6 пар · 12 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Проект: сказочный дом. Revision Unit 6 — Проект WDYT?: Design a fairy tale house. Think & Plan → Create."
+      "Мини-проект: video guide для фотовыставки. Revision Unit 6 — Тройки с ролями; видео-гид с Present continuous; revision-спринт; Super skill: communication."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Презентация. Quick review Unit 6. Revision. — Устный опрос, revision."
+      "Тест по Unit 6 + разбор — Тест higher: rooms, clothes, Present continuous все формы; реванш-квиз."
      ],
      [
       "Лексика",
@@ -23425,170 +23253,88 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 52,
-    "week": "15.03–21.03",
-    "type": "Тест",
-    "title": "Тест по Unit 6 / Prepositions of place. Аудирование.",
+    "n": 46,
+    "week": "22.02–28.02",
+    "type": "Комбинированный",
+    "title": "WDYT? Слава. Профессии и даты + Video: This day in history / Чтение-квест: Celebrities past and present + Critical thinking",
     "unit": "",
-    "sec": "UNIT 7 — Famous lives · 8 пар · 16 уроков",
+    "sec": "UNIT 7 — Famous lives · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Тест по Unit 6 — Лексика: rooms, furniture, clothes. Грамматика: Present Continuous."
+      "WDYT? Слава. Профессии и даты + Video: This day in history — Уплотнённый спринт jobs/dates; видео с активной задачей; was/were сразу в речь о прошлом."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Prepositions of place. Аудирование. — Проверка, разбор ошибок, рефлексия."
-     ],
-     [
-      "Навыки",
-      "Все навыки"
-     ]
-    ]
-   },
-   {
-    "n": 53,
-    "week": "15.03–21.03",
-    "type": "Лексика",
-    "title": "WDYT? Что значит быть знаменитым. Jobs + Video skills / Видео «This day in history». Past simple be: ввод.",
-    "unit": "",
-    "sec": "UNIT 7 — Famous lives · 8 пар · 16 уроков",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "WDYT? Что значит быть знаменитым. Jobs + Video skills — WDYT? дискуссия. Ввод: jobs, dates, adjectives to describe feelings."
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "Видео «This day in history». Past simple be: ввод. — Даты и годы, was/were в контексте видео."
+      "Чтение-квест: Celebrities past and present + Critical thinking — Subskill: reading in different ways; jigsaw-гонка по тексту; challenge-дебаты о славе."
      ],
      [
       "Лексика",
-      "jobs: actor, singer, athlete, politician, scientist, artist…"
+      "jobs, dates"
      ],
      [
       "Грамматика",
-      "Past simple of be: affirmative, negative (введение)"
+      "Past simple of be (введение в контексте)"
      ],
      [
       "Навыки",
-      "Лексика, Говорение"
+      "Лексика, Чтение, КМ"
      ]
     ]
    },
    {
-    "n": 54,
-    "week": "22.03–28.03",
-    "type": "Чтение / КМ",
-    "title": "Чтение: статья «Celebrities past and present» / Word work, упражнения. Critical thinking: слава и ответственность.",
-    "unit": "",
-    "sec": "UNIT 7 — Famous lives · 8 пар · 16 уроков",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "Чтение: статья «Celebrities past and present» — Subskill: reading in different ways. Skimming/scanning."
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "Word work, упражнения. Critical thinking: слава и ответственность. — Обсуждение: что делает человека знаменитым."
-     ],
-     [
-      "Лексика",
-      "feelings adjectives: excited, nervous, proud, surprised, bored…"
-     ],
-     [
-      "Грамматика",
-      "Past simple be (reading context)"
-     ],
-     [
-      "Навыки",
-      "Чтение, КМ"
-     ]
-    ]
-   },
-   {
-    "n": 55,
-    "week": "22.03–28.03",
+    "n": 47,
+    "week": "22.02–28.02",
     "type": "Грамматика",
-    "title": "Грамматика: Past simple be — утверждение/отрицание/вопросы / Brain teaser. Grammar round-up. Past simple regular: ввод.",
+    "title": "Грамматика: Past simple be — все формы (спринт-актуализация) / Vocabulary & Listening: чувства. Подростки и соцсети",
     "unit": "",
-    "sec": "UNIT 7 — Famous lives · 8 пар · 16 уроков",
+    "sec": "UNIT 7 — Famous lives · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: Past simple be — утверждение/отрицание/вопросы — Таблица: was/were aff/neg/questions. Past time expressions. Drill."
+      "Грамматика: Past simple be — все формы (спринт-актуализация) — Актуализация was/were из GMF4; точность вопросов и отрицаний письменно; Brain teaser challenge."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Brain teaser. Grammar round-up. Past simple regular: ввод. — Grammar round-up, письменные упражнения."
+      "Vocabulary & Listening: чувства. Подростки и соцсети — Сет feelings сразу в реакции; аудирование (subskill: matching speakers) с битвой за ответы."
      ],
      [
       "Лексика",
-      "past time expressions: yesterday, last week, in 2020, ago"
+      "adjectives to describe feelings"
      ],
      [
       "Грамматика",
-      "Past simple be: aff/neg/questions; Past simple regular: affirmative"
+      "Past simple of be: aff/neg, questions, Wh-"
      ],
      [
       "Навыки",
-      "Грамматика"
+      "Грамматика, Аудирование"
      ]
     ]
    },
    {
-    "n": 56,
-    "week": "29.03–04.04",
-    "type": "Аудирование",
-    "title": "Аудирование: подкаст о знаменитых людях прошлого / Post-listening. Past simple regular: отрицание и вопросы — ввод.",
-    "unit": "",
-    "sec": "UNIT 7 — Famous lives · 8 пар · 16 уроков",
-    "fields": [
-     [
-      "Урок А · 1–45 мин",
-      "Аудирование: подкаст о знаменитых людях прошлого — Subskill: listening for attitude and opinion."
-     ],
-     [
-      "Урок Б · 46–90 мин",
-      "Post-listening. Past simple regular: отрицание и вопросы — ввод. — Первые вопросы Did…? в контексте."
-     ],
-     [
-      "Лексика",
-      "achievement vocabulary: win, discover, invent, perform, publish…"
-     ],
-     [
-      "Грамматика",
-      "Past simple regular: negative; Did…? (введение)"
-     ],
-     [
-      "Навыки",
-      "Аудирование, Говорение"
-     ]
-    ]
-   },
-   {
-    "n": 57,
-    "week": "29.03–04.04",
+    "n": 48,
+    "week": "01.03–07.03",
     "type": "Грамматика",
-    "title": "Грамматика: Past simple irregular. Вопросы с ago / Интервью «Знаменитый человек из прошлого». Grammar round-up.",
+    "title": "Грамматика: Past simple regular/irregular — утверждение (спринт) / Real-world speaking: Talking about last weekend",
     "unit": "",
-    "sec": "UNIT 7 — Famous lives · 8 пар · 16 уроков",
+    "sec": "UNIT 7 — Famous lives · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: Past simple irregular. Вопросы с ago — Таблица irregular verbs (top 20). Did…? What did…? ago."
+      "Грамматика: Past simple regular/irregular — утверждение (спринт) — Актуализация past simple из GMF4; irregular-топ гонкой; accuracy: spelling -ed письменно."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Интервью «Знаменитый человек из прошлого». Grammar round-up. — Grammar round-up, Brain teaser, письменные упражнения."
+      "Real-world speaking: Talking about last weekend — Key phrases → PERFORM: рассказ о выходных с ротацией; challenge — 5+ предложений в past."
      ],
      [
       "Лексика",
-      "irregular verbs: go→went, see→saw, make→made, have→had…"
+      "past time expressions; Key phrases: Talking about last weekend"
      ],
      [
       "Грамматика",
-      "Past simple irregular: affirmative; questions; ago"
+      "Past simple regular and irregular: affirmative"
      ],
      [
       "Навыки",
@@ -23597,58 +23343,50 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 58,
-    "week": "05.04–11.04",
+    "n": 49,
+    "week": "01.03–07.03",
     "type": "Развитие речи",
-    "title": "Real-world speaking + Письмо: биография / Письмо: биография знаменитого человека. Subskill: sequencing.",
+    "title": "Письмо: описание вымышленного героя + Quick review / Мини-проект: комикс о незаметном герое. Revision Unit 7",
     "unit": "",
-    "sec": "UNIT 7 — Famous lives · 8 пар · 16 уроков",
+    "sec": "UNIT 7 — Famous lives · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Real-world speaking + Письмо: биография — Диалог «Talking about past events». Key phrases. Skills boost."
+      "Письмо: описание вымышленного героя + Quick review — Разбор модели; subskill also; текст порциями с апгрейдом; Quick review командным квизом."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Письмо: биография знаменитого человека. Subskill: sequencing. — Think→Write→Check. Написание, peer review."
+      "Мини-проект: комикс о незаметном герое. Revision Unit 7 — Тройки с ролями; комикс с past simple; revision-спринт; Super skill: collaboration."
      ],
      [
       "Лексика",
-      "time phrases: first, then, after that, finally, in (year)"
+      "Unit 7 vocabulary (в письме и проекте)"
      ],
      [
       "Грамматика",
-      "sequencing words: first, then, after that, finally"
+      "also (writing subskill); Past simple (в письме)"
      ],
      [
       "Навыки",
-      "Говорение, Письмо"
+      "Письмо, Говорение"
      ]
     ]
    },
    {
-    "n": 59,
-    "week": "05.04–11.04",
-    "type": "Revision",
-    "title": "Проект: день из истории. Revision Unit 7 / Презентация. Quick review Unit 7. Revision.",
+    "n": 50,
+    "week": "08.03–14.03",
+    "type": "Тест",
+    "title": "Тест по Unit 7 / Разбор: командный реванш-квиз",
     "unit": "",
-    "sec": "UNIT 7 — Famous lives · 8 пар · 16 уроков",
+    "sec": "UNIT 7 — Famous lives · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Проект: день из истории. Revision Unit 7 — Проект WDYT?: This day in history. Think & Plan → Create."
+      "Тест по Unit 7 — Тест higher: jobs, dates, feelings; Past simple be + regular/irregular письменно."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Презентация. Quick review Unit 7. Revision. — Устный опрос, revision."
-     ],
-     [
-      "Лексика",
-      "Unit 7 vocabulary (all)"
-     ],
-     [
-      "Грамматика",
-      "Unit 7 grammar: Past simple be + regular/irregular"
+      "Разбор: командный реванш-квиз — Аудирование-часть; разбор ошибок реванш-квизом; цели точности на Unit 8."
      ],
      [
       "Навыки",
@@ -23657,20 +23395,278 @@ window.PROGRAMS = {
     ]
    },
    {
-    "n": 60,
-    "week": "12.04–18.04",
-    "type": "Тест",
-    "title": "Тест по Unit 7 / Past simple regular/irregular, questions. Аудирование.",
+    "n": 51,
+    "week": "08.03–14.03",
+    "type": "Комбинированный",
+    "title": "WDYT? Как лучше путешествовать? Транспорт + Video: Nadiya's journey / Чтение-квест: Scooters in the 21st century + Critical thinking",
     "unit": "",
-    "sec": "UNIT 8 — From A to B · 8 пар · 16 уроков",
+    "sec": "UNIT 8 — From A to B · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Тест по Unit 7 — Лексика: jobs, dates, feelings. Грамматика: Past simple be."
+      "WDYT? Как лучше путешествовать? Транспорт + Video: Nadiya's journey — Уплотнённый спринт transport-слов; видео с активной задачей; didn't сразу в речь о поездках."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Past simple regular/irregular, questions. Аудирование. — Проверка, разбор ошибок, рефлексия."
+      "Чтение-квест: Scooters in the 21st century + Critical thinking — Subskill: asking questions before you read; вопросы-прогнозы; гонка за ответами; дебаты об экотранспорте."
+     ],
+     [
+      "Лексика",
+      "transport"
+     ],
+     [
+      "Грамматика",
+      "Past simple: negative (введение в контексте)"
+     ],
+     [
+      "Навыки",
+      "Лексика, Чтение, КМ"
+     ]
+    ]
+   },
+   {
+    "n": 52,
+    "week": "15.03–21.03",
+    "type": "Грамматика",
+    "title": "Грамматика: Past simple — отрицание и вопросы (спринт-актуализация) / Vocabulary & Listening: коллокации транспорта. Bike to School Week",
+    "unit": "",
+    "sec": "UNIT 8 — From A to B · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: Past simple — отрицание и вопросы (спринт-актуализация) — Актуализация didn't / Did…? из GMF4; точность Wh-вопросов письменно; Brain teaser challenge."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Vocabulary & Listening: коллокации транспорта. Bike to School Week — Сет transport collocations; аудирование (subskill: choosing the best summary) с битвой за ответы."
+     ],
+     [
+      "Лексика",
+      "transport collocations"
+     ],
+     [
+      "Грамматика",
+      "Past simple: negative and questions"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 53,
+    "week": "15.03–21.03",
+    "type": "Грамматика",
+    "title": "Грамматика: superlatives (спринт-актуализация) / Real-world speaking: Buying a ticket",
+    "unit": "",
+    "sec": "UNIT 8 — From A to B · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: superlatives (спринт-актуализация) — Актуализация -est/most из GMF4; irregular best/worst гонкой; письменная точность; round-up."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Real-world speaking: Buying a ticket — Key phrases → PERFORM: ролевая «касса» с ротацией; challenge — уточняющие вопросы."
+     ],
+     [
+      "Лексика",
+      "journey vocabulary; Key phrases: Buying a ticket"
+     ],
+     [
+      "Грамматика",
+      "superlative adjectives"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 54,
+    "week": "22.03–28.03",
+    "type": "Развитие речи",
+    "title": "Письмо: a story + Quick review / Мини-проект: class survey о транспорте. Revision Unit 8",
+    "unit": "",
+    "sec": "UNIT 8 — From A to B · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Письмо: a story + Quick review — Разбор модели истории; subskill before/after; текст порциями с апгрейдом; Quick review квизом."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Мини-проект: class survey о транспорте. Revision Unit 8 — Опрос класса в тройках, презентация результатов; revision-спринт; Super skill: collaboration."
+     ],
+     [
+      "Лексика",
+      "Unit 8 vocabulary (в письме и проекте)"
+     ],
+     [
+      "Грамматика",
+      "before, after (writing subskill); past simple + superlatives"
+     ],
+     [
+      "Навыки",
+      "Письмо, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 55,
+    "week": "22.03–28.03",
+    "type": "Тест",
+    "title": "Тест по Unit 8 / Разбор: командный реванш-квиз",
+    "unit": "",
+    "sec": "UNIT 8 — From A to B · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Тест по Unit 8 — Тест higher: transport, travel; Past simple neg/questions + superlatives письменно."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Разбор: командный реванш-квиз — Аудирование-часть; разбор ошибок реванш-квизом; настрой на Unit 9."
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 56,
+    "week": "29.03–04.04",
+    "type": "Revision",
+    "title": "Look what you know! Лексический марафон Units 1–8 / Лексические игры-станции",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Look what you know! Лексический марафон Units 1–8 — Стрик-квизы по всем сетам года; лидерборд; закрытие лексических пробелов."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Лексические игры-станции — Командные станции по темам юнитов; спеллинг-челленджи на скорость."
+     ],
+     [
+      "Лексика",
+      "Vocabulary review: Units 1–8"
+     ],
+     [
+      "Навыки",
+      "Лексика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 57,
+    "week": "29.03–04.04",
+    "type": "Revision",
+    "title": "Grammar review: стена вопросов / Грамматический квест по классу",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Grammar review: стена вопросов — Квест по «стене» грамматических квадратов; команды набирают очки за точность."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Грамматический квест по классу — Финал квеста; сводные таблицы по памяти; «поймай ошибку» по Common errors года."
+     ],
+     [
+      "Грамматика",
+      "Grammar review: Units 1–8"
+     ],
+     [
+      "Навыки",
+      "Грамматика"
+     ]
+    ]
+   },
+   {
+    "n": 58,
+    "week": "05.04–11.04",
+    "type": "Revision",
+    "title": "Reading review + Exam tips / Listening review: мини-диалоги и подкаст",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Reading review + Exam tips — Чтение «A world of festival fun» в экзаменационном формате; стратегии по Exam tips."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Listening review: мини-диалоги и подкаст — Аудирование формата A2 Key (картинки a/b/c); подкаст Harbin festival; битва за ответы."
+     ],
+     [
+      "Грамматика",
+      "all grammar (exam formats)"
+     ],
+     [
+      "Навыки",
+      "Чтение, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 59,
+    "week": "05.04–11.04",
+    "type": "Revision",
+    "title": "Speaking: Key phrases review / Writing: блог / email / история на выбор (100 слов) + Exam trainer",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Speaking: Key phrases review — Ролевые ситуации на все Key phrases года с ротацией; судейство по чек-листу."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Writing: блог / email / история на выбор (100 слов) + Exam trainer — Письмо 100 слов на выбор из 3 жанров; порция Exam trainer (WB) как challenge."
+     ],
+     [
+      "Лексика",
+      "Key phrases review (Units 1–8)"
+     ],
+     [
+      "Грамматика",
+      "all grammar (в письме)"
+     ],
+     [
+      "Навыки",
+      "Говорение, Письмо"
+     ]
+    ]
+   },
+   {
+    "n": 60,
+    "week": "12.04–18.04",
+    "type": "Revision",
+    "title": "Snake Challenge — настольный финал юнита / Итоги Unit 9. Мини-мок экзаменационных форматов",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Snake Challenge — настольный финал юнита — Игра Snake Challenge по всему курсу командами; очки за развёрнутые ответы."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Итоги Unit 9. Мини-мок экзаменационных форматов — Экспресс-мок по частям A2 Key (Exam trainer); рефлексия готовности."
+     ],
+     [
+      "Лексика",
+      "Весь курс (review)"
+     ],
+     [
+      "Грамматика",
+      "all grammar (review)"
      ],
      [
       "Навыки",
@@ -23681,206 +23677,206 @@ window.PROGRAMS = {
    {
     "n": 61,
     "week": "12.04–18.04",
-    "type": "Лексика",
-    "title": "WDYT? Лучший способ путешествовать. Transport + Video skills / Видео «Nadiya's journey». Past simple negative: ввод.",
+    "type": "Комбинированный",
+    "title": "Showcase launch: миссии финальных проектов / Планирование проектов. Language bank года",
     "unit": "",
-    "sec": "UNIT 8 — From A to B · 8 пар · 16 уроков",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "WDYT? Лучший способ путешествовать. Transport + Video skills — WDYT? видео. Ввод: transport and transport collocations."
+      "Showcase launch: миссии финальных проектов — Выбор форматов (TED-talk, video guide, project fair); команды, roadmap, критерии качества."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Видео «Nadiya's journey». Past simple negative: ввод. — Коллокации, видео, первые отрицательные предложения didn't."
+      "Планирование проектов. Language bank года — Собираем языковой банк года под проекты; распределение ролей; таймлайн с гейтами."
      ],
      [
       "Лексика",
-      "transport: bus, train, plane, bike, car, boat, underground…"
+      "Весь курс (в проектах)"
      ],
      [
       "Грамматика",
-      "Past simple: negative (введение)"
+      "All grammar (в речи)"
      ],
      [
       "Навыки",
-      "Лексика, Говорение"
+      "Все навыки"
      ]
     ]
    },
    {
     "n": 62,
     "week": "19.04–25.04",
-    "type": "Чтение / КМ",
-    "title": "Чтение: статья + интервью «Scooters in the 21st century» / Word work, упражнения. Critical thinking: экологичный транспорт.",
+    "type": "Комбинированный",
+    "title": "TED-style talks: подготовка выступления / TED-style talks: репетиции",
     "unit": "",
-    "sec": "UNIT 8 — From A to B · 8 пар · 16 уроков",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Чтение: статья + интервью «Scooters in the 21st century» — Subskill: asking questions before you read. Skimming."
+      "TED-style talks: подготовка выступления — Структура talk: hook — 3 факта — вывод; черновик по шагам Skills boost."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Word work, упражнения. Critical thinking: экологичный транспорт. — Обсуждение: как ты добираешься до школы."
+      "TED-style talks: репетиции — Прогоны по таймеру; peer review по чек-листу; полировка произношения."
      ],
      [
       "Лексика",
-      "transport collocations: catch a bus, miss a train, ride a bike…"
+      "Весь курс (в проектах)"
      ],
      [
       "Грамматика",
-      "Past simple: negative (reading context)"
+      "All grammar (в речи)"
      ],
      [
       "Навыки",
-      "Чтение, КМ"
+      "Все навыки"
      ]
     ]
    },
    {
     "n": 63,
     "week": "19.04–25.04",
-    "type": "Грамматика",
-    "title": "Грамматика: Past simple — отрицание и вопросы / Brain teaser. Grammar round-up. Письменные упражнения.",
+    "type": "Комбинированный",
+    "title": "TED-style talks: выступления, часть 1 / TED-style talks: выступления, часть 2. Разбор",
     "unit": "",
-    "sec": "UNIT 8 — From A to B · 8 пар · 16 уроков",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: Past simple — отрицание и вопросы — Таблица: didn't + inf; Did…? What/Where/When did…? Drill."
+      "TED-style talks: выступления, часть 1 — Выступления с судейством по критериям; вопросы из зала."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Brain teaser. Grammar round-up. Письменные упражнения. — Grammar round-up, контроль понимания."
+      "TED-style talks: выступления, часть 2. Разбор — Вторая волна выступлений; фидбек; награды по номинациям."
      ],
      [
       "Лексика",
-      "past time expressions: last year, two days ago, in the morning…"
+      "Весь курс (в проектах)"
      ],
      [
       "Грамматика",
-      "Past simple: negative and questions (full)"
+      "All grammar (в речи)"
      ],
      [
       "Навыки",
-      "Грамматика"
+      "Все навыки"
      ]
     ]
    },
    {
     "n": 64,
     "week": "26.04–02.05",
-    "type": "Аудирование",
-    "title": "Аудирование: репортаж о путешествии / Post-listening. Superlative adjectives: ввод.",
+    "type": "Комбинированный",
+    "title": "Video guide: сценарий / Video guide: съёмка",
     "unit": "",
-    "sec": "UNIT 8 — From A to B · 8 пар · 16 уроков",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Аудирование: репортаж о путешествии — Subskill: listening for specific information."
+      "Video guide: сценарий — Сценарий видео-гида (школа/город/класс); микс past + present в кадре."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Post-listening. Superlative adjectives: ввод. — Superlatives в контексте путешествий."
+      "Video guide: съёмка — Съёмка по сценам в тройках; роли: оператор, ведущий, режиссёр."
      ],
      [
       "Лексика",
-      "journey vocabulary: journey, trip, adventure, route, destination…"
+      "Весь курс (в проектах)"
      ],
      [
       "Грамматика",
-      "Superlative adjectives (введение)"
+      "All grammar (в речи)"
      ],
      [
       "Навыки",
-      "Аудирование, Говорение"
+      "Все навыки"
      ]
     ]
    },
    {
     "n": 65,
     "week": "26.04–02.05",
-    "type": "Грамматика",
-    "title": "Грамматика: превосходная степень прилагательных / Упражнения. Grammar round-up. Brain teaser.",
+    "type": "Комбинированный",
+    "title": "Video guide: монтаж и озвучка / Видео-показ + peer review",
     "unit": "",
-    "sec": "UNIT 8 — From A to B · 8 пар · 16 уроков",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Грамматика: превосходная степень прилагательных — Таблица: -est/most, irregular (best/worst/furthest). Drill."
+      "Video guide: монтаж и озвучка — Монтаж и озвучка; титры на английском; контроль языка по чек-листу."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Упражнения. Grammar round-up. Brain teaser. — Grammar round-up, письменные упражнения."
+      "Видео-показ + peer review — Премьера роликов; судейство Layout/Content/Language/Visuals; голосование."
      ],
      [
       "Лексика",
-      "irregular superlatives: best, worst, furthest"
+      "Весь курс (в проектах)"
      ],
      [
       "Грамматика",
-      "Superlative adjectives (full); irregular forms"
+      "All grammar (в речи)"
      ],
      [
       "Навыки",
-      "Грамматика"
+      "Все навыки"
      ]
     ]
    },
    {
     "n": 66,
     "week": "03.05–09.05",
-    "type": "Развитие речи",
-    "title": "Real-world speaking + Письмо: рассказ о поездке / Письмо: рассказ о реальной или воображаемой поездке.",
+    "type": "Комбинированный",
+    "title": "Project fair: подготовка стендов / Project fair: генеральная репетиция",
     "unit": "",
-    "sec": "UNIT 8 — From A to B · 8 пар · 16 уроков",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Real-world speaking + Письмо: рассказ о поездке — Диалог «Talking about a journey». Key phrases. Skills boost."
+      "Project fair: подготовка стендов — Стенды по темам года; challenge: интерактив для гостей стенда."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Письмо: рассказ о реальной или воображаемой поездке. — Think→Write→Check. Написание, peer review."
+      "Project fair: генеральная репетиция — Прогон презентаций стендов; тренировка Q&A с каверзными вопросами."
      ],
      [
       "Лексика",
-      "travel phrases: How did you get there? It took… The best part was…"
+      "Весь курс (в проектах)"
      ],
      [
       "Грамматика",
-      "past simple + superlatives (writing subskill)"
+      "All grammar (в речи)"
      ],
      [
       "Навыки",
-      "Говорение, Письмо"
+      "Все навыки"
      ]
     ]
    },
    {
     "n": 67,
     "week": "03.05–09.05",
-    "type": "Revision",
-    "title": "Проект: путешествие Надии. Revision Unit 8 / Презентация. Quick review Unit 8. Revision.",
+    "type": "Комбинированный",
+    "title": "Project fair: ярмарка проектов / Ярмарка: итоги и голосование",
     "unit": "",
-    "sec": "UNIT 8 — From A to B · 8 пар · 16 уроков",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Проект: путешествие Надии. Revision Unit 8 — Проект WDYT?: Plan an amazing journey. Think & Plan → Create."
+      "Project fair: ярмарка проектов — Ярмарка: команды презентуют стенды, гости задают вопросы."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Презентация. Quick review Unit 8. Revision. — Устный опрос, revision."
+      "Ярмарка: итоги и голосование — Голосование за лучшие стенды; развёрнутый фидбек; очки в лидерборд года."
      ],
      [
       "Лексика",
-      "Unit 8 vocabulary (all)"
+      "Весь курс (в проектах)"
      ],
      [
       "Грамматика",
-      "Unit 8 grammar: Past simple neg/questions; superlatives"
+      "All grammar (в речи)"
      ],
      [
       "Навыки",
@@ -23891,18 +23887,26 @@ window.PROGRAMS = {
    {
     "n": 68,
     "week": "10.05–16.05",
-    "type": "Тест",
-    "title": "Тест по Unit 8 / Superlative adjectives. Аудирование.",
+    "type": "Комбинированный",
+    "title": "My year in English: портфолио / My year in English: подготовка презентации",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 2 пары · 4 урока",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Тест по Unit 8 — Лексика: transport, travel. Грамматика: Past simple neg/questions."
+      "My year in English: портфолио — Портфолио года: лучшие работы, «I can»-лист; отбор материала для презентации."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Superlative adjectives. Аудирование. — Проверка, разбор ошибок, рефлексия."
+      "My year in English: подготовка презентации — История роста в 8–10 предложениях; репетиция с таймером."
+     ],
+     [
+      "Лексика",
+      "Весь курс (review)"
+     ],
+     [
+      "Грамматика",
+      "All grammar (review)"
      ],
      [
       "Навыки",
@@ -23913,30 +23917,30 @@ window.PROGRAMS = {
    {
     "n": 69,
     "week": "10.05–16.05",
-    "type": "Revision",
-    "title": "Итоговый review — лексика Units 1–8 / Grammar review: be, have got, C/UC, Present simple, can.",
+    "type": "Комбинированный",
+    "title": "My year in English: презентации / Финал showcase. Подготовка к Final review",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 2 пары · 4 урока",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Итоговый review — лексика Units 1–8 — Vocabulary review: все темы Units 1–8. Лексические игры."
+      "My year in English: презентации — Презентации «мой год в английском»; вопросы группы; судейство."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Grammar review: be, have got, C/UC, Present simple, can. — Грамматические таблицы-сводки, устный опрос."
+      "Финал showcase. Подготовка к Final review — Итоги showcase; стратегия финального теста; закрытие последних пробелов."
      ],
      [
       "Лексика",
-      "Vocabulary review: Units 1–8"
+      "Весь курс (review)"
      ],
      [
       "Грамматика",
-      "be, have got, countable/uncountable, Present simple, can"
+      "All grammar (review)"
      ],
      [
       "Навыки",
-      "Лексика, Грамматика"
+      "Все навыки"
      ]
     ]
    },
@@ -23944,25 +23948,25 @@ window.PROGRAMS = {
     "n": 70,
     "week": "17.05–23.05",
     "type": "Revision",
-    "title": "Итоговый review — навыки. Подготовка к Final / Present Continuous, Past simple, superlatives. Финальный warm-up.",
+    "title": "Final review: лексика и грамматика года / Final review: навыки и форматы",
     "unit": "",
-    "sec": "FINAL — Итоговый контроль + Рефлексия · 2 пары · 4 урока",
+    "sec": "▶▶ FINAL — Итоговый контроль + Рефлексия · 3 пары · 6 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Итоговый review — навыки. Подготовка к Final — Reading review of subskills. Разбор типичных ошибок."
+      "Final review: лексика и грамматика года — Спринт-повтор всех тем; командные станции; лидерборд; стратегии теста."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Present Continuous, Past simple, superlatives. Финальный warm-up. — Мини-тренировка по всем навыкам, стратегии теста."
+      "Final review: навыки и форматы — Мини-тренировка чтения/аудирования/письма в экзаменационных форматах."
      ],
      [
       "Лексика",
-      "All skills review"
+      "Весь курс (review)"
      ],
      [
       "Грамматика",
-      "Present Continuous, Past simple, Superlatives"
+      "All grammar (review)"
      ],
      [
       "Навыки",
@@ -23974,25 +23978,17 @@ window.PROGRAMS = {
     "n": 71,
     "week": "17.05–23.05",
     "type": "Final",
-    "title": "Итоговый тест (Units 1–8) / Письменное задание.",
+    "title": "Итоговый тест: лексика, грамматика, чтение / Итоговый тест: аудирование, письмо",
     "unit": "",
-    "sec": "FINAL — Итоговый контроль + Рефлексия · 2 пары · 4 урока",
+    "sec": "▶▶ FINAL — Итоговый контроль + Рефлексия · 3 пары · 6 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Итоговый тест (Units 1–8) — Лексика + грамматика: комплексный тест. Чтение. Аудирование."
+      "Итоговый тест: лексика, грамматика, чтение — Вариант higher: комплексный тест по курсу."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Письменное задание."
-     ],
-     [
-      "Лексика",
-      "Все темы курса"
-     ],
-     [
-      "Грамматика",
-      "be, have got, C/UC, Pres.simple, can, Pres.Cont., Past simple, superlatives"
+      "Итоговый тест: аудирование, письмо — Skills-часть; письмо на выбор из жанров года."
      ],
      [
       "Навыки",
@@ -24003,18 +23999,1755 @@ window.PROGRAMS = {
    {
     "n": 72,
     "week": "24.05–26.05",
-    "type": "Комбинированный",
-    "title": "Разбор финального теста. Итоги года. Рефлексия. / Итоги года: что умею теперь? Церемония вручения сертификатов.",
+    "type": "Final",
+    "title": "Speaking checkpoint + разбор теста / Итоги года. Сертификаты. Праздник",
     "unit": "",
-    "sec": "FINAL — Итоговый контроль + Рефлексия · 2 пары · 4 урока",
+    "sec": "▶▶ FINAL — Итоговый контроль + Рефлексия · 3 пары · 6 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
-      "Разбор финального теста. Итоги года. Рефлексия. — Разбор ошибок, ответы на вопросы учеников."
+      "Speaking checkpoint + разбор теста — Индивидуальный speaking-чек; экспресс-разбор ошибок; фиксация прогресса за год."
      ],
      [
       "Урок Б · 46–90 мин",
-      "Итоги года: что умею теперь? Церемония вручения сертификатов."
+      "Итоги года. Сертификаты. Праздник — Рефлексия «что я умею теперь»; церемония сертификатов; праздничный финал."
+     ],
+     [
+      "Навыки",
+      "Говорение"
+     ]
+    ]
+   }
+  ]
+ },
+ "GIA1zero": {
+  "label": "Get Involved! A1+ (с нуля)",
+  "lessons": [
+   {
+    "n": 1,
+    "week": "03.09–06.09",
+    "type": "Комбинированный",
+    "title": "Знакомство. Back to school: приветствия / Личные вещи. Цвета. a/an + plurals",
+    "unit": "",
+    "sec": "STARTER — Back to school · 4 пары · 8 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Знакомство. Back to school: приветствия — Безопасный старт: знакомство, hello-диалоги по модели; ввод subject pronouns и possessive adjectives с опорой."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Личные вещи. Цвета. a/an + plurals — Полный ввод personal objects и colours; правило a/an и plurals; игровой дрилл в парах."
+     ],
+     [
+      "Лексика",
+      "saying hello, personal objects, colours"
+     ],
+     [
+      "Грамматика",
+      "subject pronouns, possessive adjectives; a/an + plurals"
+     ],
+     [
+      "Навыки",
+      "Лексика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 2,
+    "week": "07.09–13.09",
+    "type": "Комбинированный",
+    "title": "Дни недели. Классная комната / this/that/these/those. Classroom instructions. Imperatives",
+    "unit": "",
+    "sec": "STARTER — Back to school · 4 пары · 8 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Дни недели. Классная комната — Ввод days of the week по календарю, classroom words; routines начала урока."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "this/that/these/those. Classroom instructions. Imperatives — Указательные местоимения с движением; TPR-дрилл инструкций; привычка реагировать на команды учителя по-английски."
+     ],
+     [
+      "Лексика",
+      "days of the week, the classroom, classroom instructions"
+     ],
+     [
+      "Грамматика",
+      "this/that/these/those; imperatives"
+     ],
+     [
+      "Навыки",
+      "Лексика, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 3,
+    "week": "07.09–13.09",
+    "type": "Комбинированный",
+    "title": "Числа 1–100. Международные слова. Алфавит / What's in this book? Знакомство с учебником",
+    "unit": "",
+    "sec": "STARTER — Back to school · 4 пары · 8 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Числа 1–100. Международные слова. Алфавит — Полный ввод чисел и алфавита; spelling своего имени; международные слова — опора уверенности «я уже понимаю английский»."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "What's in this book? Знакомство с учебником — Спокойный тур по учебнику; Classroom Challenge в парах с поддержкой; привычки работы с книгой."
+     ],
+     [
+      "Лексика",
+      "numbers 1–100, international words, the alphabet"
+     ],
+     [
+      "Грамматика",
+      "numbers, alphabet (consolidation)"
+     ],
+     [
+      "Навыки",
+      "Лексика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 4,
+    "week": "14.09–20.09",
+    "type": "Revision",
+    "title": "Повторение Starter в играх / Классный договор. Учимся работать в парах и тройках",
+    "unit": "",
+    "sec": "STARTER — Back to school · 4 пары · 8 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Повторение Starter в играх — Revision-игры по всем сетам Starter; дриллы в игровой обёртке; мини-чек без стресса."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Классный договор. Учимся работать в парах и тройках — Routines парной и групповой работы; первый peer review по чек-листу; уверенность и правила класса."
+     ],
+     [
+      "Лексика",
+      "Starter vocabulary (all)"
+     ],
+     [
+      "Грамматика",
+      "pronouns, a/an + plurals, this/that/these/those, imperatives (review)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 5,
+    "week": "14.09–20.09",
+    "type": "Лексика",
+    "title": "WDYT? How are countries different? Страны и национальности / Video skills: Top three places in the world",
+    "unit": "",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "WDYT? How are countries different? Страны и национальности — WDYT?-старт со стикерами-мнениями; полный ввод countries и nationality adjectives; карта, парный дрилл."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Video skills: Top three places in the world — Просмотр по шагам с опорами; первые фразы с am/is/are по модели; мини-высказывание в парах."
+     ],
+     [
+      "Лексика",
+      "countries, nationality adjectives"
+     ],
+     [
+      "Грамматика",
+      "be: affirmative and negative (введение в контексте)"
+     ],
+     [
+      "Навыки",
+      "Лексика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 6,
+    "week": "21.09–27.09",
+    "type": "Чтение / КМ",
+    "title": "Чтение: The Netherlands — a good place to be a teenager / Word work + Critical thinking: жизнь в разных странах",
+    "unit": "",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Чтение: The Netherlands — a good place to be a teenager — Subskill: identifying types of text — с опорой; чтение по кускам с проверкой понимания; глоссарий."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Word work + Critical thinking: жизнь в разных странах — Word work с примерами; critical thinking через голосование и выбор; короткие ответы по модели."
+     ],
+     [
+      "Лексика",
+      "adjectives to describe places (из текста)"
+     ],
+     [
+      "Грамматика",
+      "be (reading context)"
+     ],
+     [
+      "Навыки",
+      "Чтение, КМ"
+     ]
+    ]
+   },
+   {
+    "n": 7,
+    "week": "21.09–27.09",
+    "type": "Грамматика",
+    "title": "Грамматика: be — утверждение и отрицание / Vocabulary & Listening: прилагательные о местах. Новая Зеландия",
+    "unit": "",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: be — утверждение и отрицание — Полный ввод: таблица am/is/are, хоровой дрилл, игровые трансформации; письменное закрепление."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Vocabulary & Listening: прилагательные о местах. Новая Зеландия — Ввод adjectives с картинками; аудирование по шагам, subskill: using visual clues с опорой."
+     ],
+     [
+      "Лексика",
+      "adjectives to describe places: amazing, busy, quiet…"
+     ],
+     [
+      "Грамматика",
+      "be: affirmative and negative (система)"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 8,
+    "week": "28.09–04.10",
+    "type": "Грамматика",
+    "title": "Грамматика: be — вопросы и краткие ответы / Real-world speaking: Meeting new people",
+    "unit": "",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: be — вопросы и краткие ответы — Ввод Is/Are…? и коротких ответов; дрилл-игра «спроси–схвати»; Grammar round-up с поддержкой."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Real-world speaking: Meeting new people — Видео-модель; Key phrases по шагам THINK→PREPARE→PRACTISE→PERFORM; диалог знакомства по опоре."
+     ],
+     [
+      "Лексика",
+      "question words: where, what, who; Key phrases: Meeting new people"
+     ],
+     [
+      "Грамматика",
+      "be: questions and short answers"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 9,
+    "week": "28.09–04.10",
+    "type": "Развитие речи",
+    "title": "Письмо: a keypal message — THINK → PREPARE / Письмо: WRITE → CHECK + Quick review Unit 1",
+    "unit": "",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Письмо: a keypal message — THINK → PREPARE — Модельный текст по шагам; банк фраз-опор; subskill capital letters; пишем 3–5 предложений порциями."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Письмо: WRITE → CHECK + Quick review Unit 1 — Дописываем по scaffold-опоре; peer review по 2–3 галочкам; Quick review со взаимопомощью."
+     ],
+     [
+      "Лексика",
+      "Unit 1 vocabulary (в письме)"
+     ],
+     [
+      "Грамматика",
+      "be (в письме); capital letters (writing subskill)"
+     ],
+     [
+      "Навыки",
+      "Письмо"
+     ]
+    ]
+   },
+   {
+    "n": 10,
+    "week": "05.10–11.10",
+    "type": "Revision",
+    "title": "Проект WDYT?: Design a new country — Think & Plan → Create / Проект: Present. Revision Unit 1",
+    "unit": "",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Проект WDYT?: Design a new country — Think & Plan → Create — Graphic organiser (Project planner); роли по силам; опорные фразы для постера; Create с поддержкой учителя."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Проект: Present. Revision Unit 1 — Мини-презентации по опоре; дружеский peer review; revision-игры; Final reflection смайликами."
+     ],
+     [
+      "Лексика",
+      "Unit 1 vocabulary (all)"
+     ],
+     [
+      "Грамматика",
+      "Unit 1 grammar: be (all)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 11,
+    "week": "05.10–11.10",
+    "type": "Тест",
+    "title": "Тест по Unit 1 / Разбор и рефлексия",
+    "unit": "",
+    "sec": "UNIT 1 — Our world · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Тест по Unit 1 — Тест Unit 1, вариант standard: страны, места, be; формат заданий знаком заранее."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Разбор и рефлексия — Аудирование-часть; спокойный разбор ошибок; рефлексия «я уже умею»."
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 12,
+    "week": "12.10–18.10",
+    "type": "Лексика",
+    "title": "WDYT? What is a family? Семья / Video skills: Me and my family",
+    "unit": "",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "WDYT? What is a family? Семья — WDYT?-старт с голосованием; полный ввод family и describing people; семейное дерево с опорой."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Video skills: Me and my family — Просмотр по шагам; первые фразы have got по модели; парное мини-высказывание о семье."
+     ],
+     [
+      "Лексика",
+      "family, describing people"
+     ],
+     [
+      "Грамматика",
+      "have got: affirmative and negative (введение в контексте)"
+     ],
+     [
+      "Навыки",
+      "Лексика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 13,
+    "week": "12.10–18.10",
+    "type": "Чтение / КМ",
+    "title": "Чтение: TV-гид Meet the Putmans / Word work + Critical thinking: какие бывают семьи",
+    "unit": "",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Чтение: TV-гид Meet the Putmans — Subskill: predicting — прогноз по картинкам с опорой; чтение по кускам, проверка понимания."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Word work + Critical thinking: какие бывают семьи — Word work с примерами; critical thinking через выбор и голосование; ответы по модели."
+     ],
+     [
+      "Лексика",
+      "describing people (из текста)"
+     ],
+     [
+      "Грамматика",
+      "have got (reading context)"
+     ],
+     [
+      "Навыки",
+      "Чтение, КМ"
+     ]
+    ]
+   },
+   {
+    "n": 14,
+    "week": "19.10–25.10",
+    "type": "Грамматика",
+    "title": "Грамматика: have got — утверждение и отрицание. Possessive 's / Vocabulary & Listening: тело и лицо. Необычные близнецы",
+    "unit": "",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: have got — утверждение и отрицание. Possessive 's — Полный ввод have got и possessive 's; хоровой и парный дрилл; письменное закрепление."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Vocabulary & Listening: тело и лицо. Необычные близнецы — Ввод parts of body/face и hair с картинками; аудирование по шагам, subskill: using what you know с опорой."
+     ],
+     [
+      "Лексика",
+      "parts of the body and face, describing hair"
+     ],
+     [
+      "Грамматика",
+      "have got: aff/neg; possessive 's and s'"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 15,
+    "week": "19.10–25.10",
+    "type": "Грамматика",
+    "title": "Грамматика: have got — вопросы и краткие ответы / Real-world speaking: Talking about photos",
+    "unit": "",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: have got — вопросы и краткие ответы — Ввод вопросов Have/Has… got?; игра «угадай человека»; Grammar round-up с поддержкой."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Real-world speaking: Talking about photos — Видео-модель; Key phrases по шагам; описание фото по опоре в парах."
+     ],
+     [
+      "Лексика",
+      "describing hair and face; Key phrases: Talking about photos"
+     ],
+     [
+      "Грамматика",
+      "have got: questions and short answers"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 16,
+    "week": "26.10–01.11",
+    "type": "Развитие речи",
+    "title": "Письмо: an email — THINK → PREPARE / Письмо: WRITE → CHECK + Quick review Unit 2",
+    "unit": "",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Письмо: an email — THINK → PREPARE — Модель email по шагам; банк фраз-опор; subskill apostrophes; пишем порциями."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Письмо: WRITE → CHECK + Quick review Unit 2 — Дописываем по опоре; peer review по галочкам; Quick review со взаимопомощью."
+     ],
+     [
+      "Лексика",
+      "Unit 2 vocabulary (в письме)"
+     ],
+     [
+      "Грамматика",
+      "have got (в письме); apostrophes (writing subskill)"
+     ],
+     [
+      "Навыки",
+      "Письмо"
+     ]
+    ]
+   },
+   {
+    "n": 17,
+    "week": "26.10–01.11",
+    "type": "Revision",
+    "title": "Проект WDYT?: Circle map важных людей — Think & Plan → Create / Проект: Present. Revision Unit 2",
+    "unit": "",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Проект WDYT?: Circle map важных людей — Think & Plan → Create — Graphic organiser; роли по силам; опорные фразы have got; Create с поддержкой."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Проект: Present. Revision Unit 2 — Мини-презентации по опоре; дружеский peer review; revision-игры; смайлики-рефлексия."
+     ],
+     [
+      "Лексика",
+      "Unit 2 vocabulary (all)"
+     ],
+     [
+      "Грамматика",
+      "Unit 2 grammar: have got (all)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 18,
+    "week": "02.11–08.11",
+    "type": "Тест",
+    "title": "Тест по Unit 2 / Разбор и рефлексия",
+    "unit": "",
+    "sec": "UNIT 2 — Family · 7 пар · 14 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Тест по Unit 2 — Тест Unit 2, вариант standard: семья, тело, внешность, have got; формат знаком."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Разбор и рефлексия — Аудирование-часть; спокойный разбор ошибок; рефлексия «я уже умею»."
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 19,
+    "week": "02.11–08.11",
+    "type": "Лексика",
+    "title": "WDYT? What's the ideal meal? Еда и напитки / Video skills: Farmers' market",
+    "unit": "",
+    "sec": "UNIT 3 — Eat well · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "WDYT? What's the ideal meal? Еда и напитки — WDYT?-старт; полный ввод food and drink; сортировка C/UC с опорой; парный дрилл."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Video skills: Farmers' market — Просмотр по шагам; первые фразы о еде по модели; мини-высказывание в парах."
+     ],
+     [
+      "Лексика",
+      "food and drink"
+     ],
+     [
+      "Грамматика",
+      "countable and uncountable nouns (введение в контексте)"
+     ],
+     [
+      "Навыки",
+      "Лексика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 20,
+    "week": "09.11–15.11",
+    "type": "Чтение / КМ",
+    "title": "Чтение: Meatless Mondays / Word work + Critical thinking: еда и здоровье",
+    "unit": "",
+    "sec": "UNIT 3 — Eat well · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Чтение: Meatless Mondays — Subskill: understanding the general idea — с опорой; чтение по кускам с проверкой понимания."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Word work + Critical thinking: еда и здоровье — Word work с примерами; critical thinking через голосование «за/против»; ответы по модели."
+     ],
+     [
+      "Лексика",
+      "food collocations (из текста)"
+     ],
+     [
+      "Грамматика",
+      "countable/uncountable (reading context)"
+     ],
+     [
+      "Навыки",
+      "Чтение, КМ"
+     ]
+    ]
+   },
+   {
+    "n": 21,
+    "week": "09.11–15.11",
+    "type": "Грамматика",
+    "title": "Грамматика: countable/uncountable. some/any/a lot of / Vocabulary & Listening: торговый центр",
+    "unit": "",
+    "sec": "UNIT 3 — Eat well · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: countable/uncountable. some/any/a lot of — Полный ввод: таблица, дрилл-игры с продуктами; письменное закрепление."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Vocabulary & Listening: торговый центр — Ввод shopping centre с картинками; аудирование по шагам; заметки по шаблону (subskill: taking notes)."
+     ],
+     [
+      "Лексика",
+      "the shopping centre"
+     ],
+     [
+      "Грамматика",
+      "countable/uncountable; some, any, a lot of"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 22,
+    "week": "16.11–22.11",
+    "type": "Грамматика",
+    "title": "Грамматика: there is/are / Real-world speaking: Ordering food",
+    "unit": "",
+    "sec": "UNIT 3 — Eat well · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: there is/are — Полный ввод there is/are; описание кухни и класса; Grammar round-up с поддержкой."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Real-world speaking: Ordering food — Видео-модель; Key phrases по шагам; ролевая «кафе» по опоре в парах."
+     ],
+     [
+      "Лексика",
+      "food quantities; Key phrases: Ordering food"
+     ],
+     [
+      "Грамматика",
+      "there is/are"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 23,
+    "week": "16.11–22.11",
+    "type": "Развитие речи",
+    "title": "Письмо: a blog post about food — THINK → PREPARE / Письмо: WRITE → CHECK + Quick review Unit 3",
+    "unit": "",
+    "sec": "UNIT 3 — Eat well · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Письмо: a blog post about food — THINK → PREPARE — Модель блога по шагам; банк фраз-опор; subskill and/but; пишем порциями."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Письмо: WRITE → CHECK + Quick review Unit 3 — Дописываем по опоре; peer review по галочкам; Quick review со взаимопомощью."
+     ],
+     [
+      "Лексика",
+      "Unit 3 vocabulary (в письме)"
+     ],
+     [
+      "Грамматика",
+      "and, but (writing subskill)"
+     ],
+     [
+      "Навыки",
+      "Письмо"
+     ]
+    ]
+   },
+   {
+    "n": 24,
+    "week": "23.11–29.11",
+    "type": "Тест",
+    "title": "Мини-проект: Plan your ideal meal. Revision Unit 3 / Тест по Unit 3 + разбор",
+    "unit": "",
+    "sec": "UNIT 3 — Eat well · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Мини-проект: Plan your ideal meal. Revision Unit 3 — Graphic organiser; меню по опоре с there is / some; revision-игры; Super skill: collaboration."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Тест по Unit 3 + разбор — Тест standard: food, C/UC, some/any, there is/are; спокойный разбор, рефлексия."
+     ],
+     [
+      "Лексика",
+      "Unit 3 vocabulary (all)"
+     ],
+     [
+      "Грамматика",
+      "Unit 3 grammar (all)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 25,
+    "week": "23.11–29.11",
+    "type": "Лексика",
+    "title": "WDYT? Зачем организовывать время? Время и распорядок / Video skills: Sloth calendar",
+    "unit": "",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "WDYT? Зачем организовывать время? Время и распорядок — Полный ввод telling the time и daily routines; часы с опорой; парный дрилл распорядка."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Video skills: Sloth calendar — Просмотр по шагам; первые фразы о привычках по модели Present simple."
+     ],
+     [
+      "Лексика",
+      "the time, daily routines"
+     ],
+     [
+      "Грамматика",
+      "Present simple: affirmative and negative (введение в контексте)"
+     ],
+     [
+      "Навыки",
+      "Лексика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 26,
+    "week": "30.11–06.12",
+    "type": "Чтение / КМ",
+    "title": "Чтение: Life in a K-pop academy / Word work + Critical thinking: расписание и дисциплина",
+    "unit": "",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Чтение: Life in a K-pop academy — Subskill: reading for detail — с опорой; чтение по кускам; вопросы на детали по шагам."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Word work + Critical thinking: расписание и дисциплина — Word work с примерами; обсуждение «идеальный день» через выбор; ответы по модели."
+     ],
+     [
+      "Лексика",
+      "school/schedule vocabulary (из текста)"
+     ],
+     [
+      "Грамматика",
+      "Present simple (reading context)"
+     ],
+     [
+      "Навыки",
+      "Чтение, КМ"
+     ]
+    ]
+   },
+   {
+    "n": 27,
+    "week": "30.11–06.12",
+    "type": "Грамматика",
+    "title": "Грамматика: Present simple — утверждение и отрицание / Vocabulary & Listening: free time. Приложение для телефона",
+    "unit": "",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: Present simple — утверждение и отрицание — Полный ввод; правило 3-го лица и spelling; дрилл-игры; письменное закрепление."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Vocabulary & Listening: free time. Приложение для телефона — Ввод free-time activities; аудирование по шагам, subskill: completing sentences с опорой."
+     ],
+     [
+      "Лексика",
+      "free-time activities"
+     ],
+     [
+      "Грамматика",
+      "Present simple: aff/neg; 3rd person spelling"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 28,
+    "week": "07.12–13.12",
+    "type": "Грамматика",
+    "title": "Грамматика: Present simple — вопросы. love/like/hate. Object pronouns / Real-world speaking: Making plans",
+    "unit": "",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: Present simple — вопросы. love/like/hate. Object pronouns — Ввод по шагам: Yes/No → Wh-вопросы; likes-опрос группы; object pronouns в игре."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Real-world speaking: Making plans — Видео-модель; Key phrases по шагам; диалог-план по опоре в парах."
+     ],
+     [
+      "Лексика",
+      "love/like/don't like/hate + noun; object pronouns; Key phrases: Making plans"
+     ],
+     [
+      "Грамматика",
+      "Present simple: Yes/No + Wh- questions; object pronouns"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 29,
+    "week": "07.12–13.12",
+    "type": "Развитие речи",
+    "title": "Письмо: notes and messages — THINK → PREPARE / Письмо: WRITE → CHECK + Quick review Unit 4",
+    "unit": "",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Письмо: notes and messages — THINK → PREPARE — Модели записок по шагам; банк фраз-опор; subskill because; пишем порциями."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Письмо: WRITE → CHECK + Quick review Unit 4 — Дописываем по опоре; peer review по галочкам; Quick review со взаимопомощью."
+     ],
+     [
+      "Лексика",
+      "Unit 4 vocabulary (в письме)"
+     ],
+     [
+      "Грамматика",
+      "because (writing subskill)"
+     ],
+     [
+      "Навыки",
+      "Письмо"
+     ]
+    ]
+   },
+   {
+    "n": 30,
+    "week": "14.12–20.12",
+    "type": "Тест",
+    "title": "Мини-проект: цифровой постер «Мой день». Revision Unit 4 / Тест по Unit 4 + разбор",
+    "unit": "",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Мини-проект: цифровой постер «Мой день». Revision Unit 4 — Graphic organiser; постер по опоре с Present simple; revision-игры перед Mid-year."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Тест по Unit 4 + разбор — Тест standard: time, routines, Present simple; спокойный разбор, рефлексия."
+     ],
+     [
+      "Лексика",
+      "Unit 4 vocabulary (all)"
+     ],
+     [
+      "Грамматика",
+      "Unit 4 grammar: Present simple (all)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 31,
+    "week": "14.12–20.12",
+    "type": "Revision",
+    "title": "Mid-year review: игры-станции Starter–Unit 4 / Mid-year review: грамматический повтор",
+    "unit": "",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Mid-year review: игры-станции Starter–Unit 4 — Review-игры по всем темам полугодия; повтор с опорами; уверенность перед тестом."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Mid-year review: грамматический повтор — be / have got / C-UC / there is-are / Present simple в играх; мини-пробник в парах без оценок."
+     ],
+     [
+      "Лексика",
+      "Starter–Unit 4 vocabulary (review)"
+     ],
+     [
+      "Грамматика",
+      "be, have got, countable/uncountable, some/any, there is/are, Present simple"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 32,
+    "week": "21.12–27.12",
+    "type": "Midterm",
+    "title": "Mid-year тест: лексика и грамматика / Mid-year тест: чтение, аудирование, письмо",
+    "unit": "",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Mid-year тест: лексика и грамматика — Вариант standard: тест Starter–Unit 4; формат заданий знаком заранее."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Mid-year тест: чтение, аудирование, письмо — Skills-часть теста; письменное задание по опоре — сообщение о себе."
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 33,
+    "week": "21.12–27.12",
+    "type": "Midterm",
+    "title": "Speaking checkpoint / Разбор теста. Итоги полугодия. Новогодний финал",
+    "unit": "",
+    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Speaking checkpoint — Speaking-чек по опорам: знакомые вопросы, поддержка учителя; фиксация роста."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Разбор теста. Итоги полугодия. Новогодний финал — Спокойный разбор ошибок; рефлексия «что я умею»; праздничный финал."
+     ],
+     [
+      "Навыки",
+      "Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 34,
+    "week": "11.01–17.01",
+    "type": "Лексика",
+    "title": "WDYT? Технологии и мир. Abilities / Video skills: Smartphone gadget crafts",
+    "unit": "",
+    "sec": "UNIT 5 — Tech life · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "WDYT? Технологии и мир. Abilities — Мягкий возврат после каникул; полный ввод abilities и technology nouns; парные вопросы Can you…? по модели."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Video skills: Smartphone gadget crafts — Просмотр по шагам; первые фразы can/can't по модели; мини-высказывание о гаджетах."
+     ],
+     [
+      "Лексика",
+      "abilities, technology nouns"
+     ],
+     [
+      "Грамматика",
+      "can and can't (введение в контексте)"
+     ],
+     [
+      "Навыки",
+      "Лексика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 35,
+    "week": "11.01–17.01",
+    "type": "Чтение / КМ",
+    "title": "Чтение: Amazing robots! / Word work + Critical thinking: роботы в жизни",
+    "unit": "",
+    "sec": "UNIT 5 — Tech life · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Чтение: Amazing robots! — Subskill: reading for specific information — с опорой; чтение по кускам; поиск фактов по шагам."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Word work + Critical thinking: роботы в жизни — Word work с примерами; обсуждение через голосование «что умеют роботы»; ответы по модели."
+     ],
+     [
+      "Лексика",
+      "technology nouns (из текста)"
+     ],
+     [
+      "Грамматика",
+      "can/can't (reading context)"
+     ],
+     [
+      "Навыки",
+      "Чтение, КМ"
+     ]
+    ]
+   },
+   {
+    "n": 36,
+    "week": "18.01–24.01",
+    "type": "Грамматика",
+    "title": "Грамматика: can/can't — вопросы и ответы / Vocabulary & Listening: прилагательные. Доклад о технологиях",
+    "unit": "",
+    "sec": "UNIT 5 — Tech life · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: can/can't — вопросы и ответы — Полный ввод: таблица Can…?; дрилл-игра «найди кто умеет»; письменное закрепление."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Vocabulary & Listening: прилагательные. Доклад о технологиях — Ввод adjectives с картинками; аудирование по шагам, subskill: completing a table с опорой."
+     ],
+     [
+      "Лексика",
+      "adjectives: fast, cheap, useful, powerful…"
+     ],
+     [
+      "Грамматика",
+      "can/can't: questions and short answers"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 37,
+    "week": "18.01–24.01",
+    "type": "Грамматика",
+    "title": "Грамматика: сравнительные прилагательные. Притяжательные местоимения / Real-world speaking: Giving instructions",
+    "unit": "",
+    "sec": "UNIT 5 — Tech life · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: сравнительные прилагательные. Притяжательные местоимения — Полный ввод -er/more и irregular; possessive pronouns в игре; Grammar round-up с поддержкой."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Real-world speaking: Giving instructions — Видео-модель; Key phrases по шагам; инструкция к гаджету по опоре в парах."
+     ],
+     [
+      "Лексика",
+      "gadget collocations; Key phrases: Giving instructions"
+     ],
+     [
+      "Грамматика",
+      "comparative adjectives; possessive pronouns"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 38,
+    "week": "25.01–31.01",
+    "type": "Развитие речи",
+    "title": "Письмо: an advert — THINK → PREPARE / Письмо: WRITE → CHECK + Quick review Unit 5",
+    "unit": "",
+    "sec": "UNIT 5 — Tech life · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Письмо: an advert — THINK → PREPARE — Модель рекламы по шагам; банк фраз-опор; subskill spelling; пишем порциями."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Письмо: WRITE → CHECK + Quick review Unit 5 — Дописываем по опоре; peer review по галочкам; Quick review со взаимопомощью."
+     ],
+     [
+      "Лексика",
+      "Unit 5 vocabulary (в письме)"
+     ],
+     [
+      "Грамматика",
+      "spelling (writing subskill)"
+     ],
+     [
+      "Навыки",
+      "Письмо"
+     ]
+    ]
+   },
+   {
+    "n": 39,
+    "week": "25.01–31.01",
+    "type": "Тест",
+    "title": "Мини-проект: Design a robot. Revision Unit 5 / Тест по Unit 5 + разбор",
+    "unit": "",
+    "sec": "UNIT 5 — Tech life · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Мини-проект: Design a robot. Revision Unit 5 — Graphic organiser; робот по опоре с can + comparatives; revision-игры."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Тест по Unit 5 + разбор — Тест standard: abilities, tech, can, comparatives; спокойный разбор, рефлексия."
+     ],
+     [
+      "Лексика",
+      "Unit 5 vocabulary (all)"
+     ],
+     [
+      "Грамматика",
+      "Unit 5 grammar: can, comparatives, possessive pronouns"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 40,
+    "week": "01.02–07.02",
+    "type": "Лексика",
+    "title": "WDYT? What is art? Комнаты и мебель / Video skills: Fairy tale house",
+    "unit": "",
+    "sec": "UNIT 6 — The world is art · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "WDYT? What is art? Комнаты и мебель — WDYT?-старт с голосованием; полный ввод rooms/furniture и prepositions; описание комнаты с опорой."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Video skills: Fairy tale house — Просмотр по шагам; первые фразы Present continuous по модели с картинкой."
+     ],
+     [
+      "Лексика",
+      "rooms and furniture, prepositions"
+     ],
+     [
+      "Грамматика",
+      "Present continuous: affirmative and negative (введение в контексте)"
+     ],
+     [
+      "Навыки",
+      "Лексика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 41,
+    "week": "01.02–07.02",
+    "type": "Чтение / КМ",
+    "title": "Чтение: The great escape! / Word work + Critical thinking: искусство вокруг нас",
+    "unit": "",
+    "sec": "UNIT 6 — The world is art · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Чтение: The great escape! — Subskill: answering true or false — с опорой; чтение гида по кускам; проверка понимания."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Word work + Critical thinking: искусство вокруг нас — Word work с примерами; обсуждение «это искусство?» через выбор; ответы по модели."
+     ],
+     [
+      "Лексика",
+      "clothes and accessories (из текста)"
+     ],
+     [
+      "Грамматика",
+      "Present continuous (reading context)"
+     ],
+     [
+      "Навыки",
+      "Чтение, КМ"
+     ]
+    ]
+   },
+   {
+    "n": 42,
+    "week": "08.02–14.02",
+    "type": "Грамматика",
+    "title": "Грамматика: Present continuous — утверждение и отрицание / Vocabulary & Listening: одежда. Арт-мастерская",
+    "unit": "",
+    "sec": "UNIT 6 — The world is art · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: Present continuous — утверждение и отрицание — Полный ввод: таблица, spelling -ing; описание картинок; письменное закрепление."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Vocabulary & Listening: одежда. Арт-мастерская — Ввод clothes & accessories с картинками; аудирование по шагам, subskill: photo captions с опорой."
+     ],
+     [
+      "Лексика",
+      "clothes and accessories"
+     ],
+     [
+      "Грамматика",
+      "Present continuous: aff/neg; spelling -ing"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 43,
+    "week": "08.02–14.02",
+    "type": "Грамматика",
+    "title": "Грамматика: Present continuous — вопросы / Real-world speaking: Asking for information",
+    "unit": "",
+    "sec": "UNIT 6 — The world is art · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: Present continuous — вопросы — Ввод Yes/No и Wh-вопросов; игра «что я делаю?»; Grammar round-up с поддержкой."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Real-world speaking: Asking for information — Видео-модель; Key phrases по шагам; диалог «узнай информацию» по опоре."
+     ],
+     [
+      "Лексика",
+      "prepositions of place; Key phrases: Asking for information"
+     ],
+     [
+      "Грамматика",
+      "Present continuous: Yes/No and Wh- questions"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 44,
+    "week": "15.02–21.02",
+    "type": "Развитие речи",
+    "title": "Письмо: text messages — THINK → PREPARE / Письмо: WRITE → CHECK + Quick review Unit 6",
+    "unit": "",
+    "sec": "UNIT 6 — The world is art · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Письмо: text messages — THINK → PREPARE — Модели переписки по шагам; банк фраз-опор; subskill so; пишем порциями."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Письмо: WRITE → CHECK + Quick review Unit 6 — Дописываем по опоре; peer review по галочкам; Quick review со взаимопомощью."
+     ],
+     [
+      "Лексика",
+      "Unit 6 vocabulary (в письме)"
+     ],
+     [
+      "Грамматика",
+      "so (writing subskill)"
+     ],
+     [
+      "Навыки",
+      "Письмо"
+     ]
+    ]
+   },
+   {
+    "n": 45,
+    "week": "15.02–21.02",
+    "type": "Тест",
+    "title": "Мини-проект: video guide для фотовыставки. Revision Unit 6 / Тест по Unit 6 + разбор",
+    "unit": "",
+    "sec": "UNIT 6 — The world is art · 6 пар · 12 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Мини-проект: video guide для фотовыставки. Revision Unit 6 — Graphic organiser; короткий видео-гид по опоре с Present continuous; revision-игры."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Тест по Unit 6 + разбор — Тест standard: rooms, clothes, Present continuous; спокойный разбор, рефлексия."
+     ],
+     [
+      "Лексика",
+      "Unit 6 vocabulary (all)"
+     ],
+     [
+      "Грамматика",
+      "Unit 6 grammar: Present continuous (all)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 46,
+    "week": "22.02–28.02",
+    "type": "Комбинированный",
+    "title": "WDYT? Что значит быть знаменитым? Профессии и даты + Video: This day in history / Чтение: Celebrities past and present + Word work",
+    "unit": "",
+    "sec": "UNIT 7 — Famous lives · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "WDYT? Что значит быть знаменитым? Профессии и даты + Video: This day in history — Ввод jobs и dates в знакомом паттерне юнита; видео по шагам; was/were в контексте с опорой."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Чтение: Celebrities past and present + Word work — Subskill: reading in different ways — с опорой; чтение по кускам; critical thinking голосованием."
+     ],
+     [
+      "Лексика",
+      "jobs, dates"
+     ],
+     [
+      "Грамматика",
+      "Past simple of be (введение в контексте)"
+     ],
+     [
+      "Навыки",
+      "Лексика, Чтение, КМ"
+     ]
+    ]
+   },
+   {
+    "n": 47,
+    "week": "22.02–28.02",
+    "type": "Грамматика",
+    "title": "Грамматика: Past simple be — все формы / Vocabulary & Listening: чувства. Подростки и соцсети",
+    "unit": "",
+    "sec": "UNIT 7 — Famous lives · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: Past simple be — все формы — Полный ввод was/were: таблица, дриллы в игре; вопросы по шагам; письменное закрепление."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Vocabulary & Listening: чувства. Подростки и соцсети — Ввод feelings adjectives с картинками; аудирование по шагам, subskill: matching speakers с опорой."
+     ],
+     [
+      "Лексика",
+      "adjectives to describe feelings"
+     ],
+     [
+      "Грамматика",
+      "Past simple of be: aff/neg, questions, Wh-"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 48,
+    "week": "01.03–07.03",
+    "type": "Грамматика",
+    "title": "Грамматика: Past simple regular/irregular — утверждение / Real-world speaking: Talking about last weekend",
+    "unit": "",
+    "sec": "UNIT 7 — Famous lives · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: Past simple regular/irregular — утверждение — Ввод правила -ed и первых irregular (топ-15); дрилл-игры; письменное закрепление."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Real-world speaking: Talking about last weekend — Видео-модель; Key phrases по шагам; рассказ о выходных по опоре в парах."
+     ],
+     [
+      "Лексика",
+      "past time expressions; Key phrases: Talking about last weekend"
+     ],
+     [
+      "Грамматика",
+      "Past simple regular and irregular: affirmative"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 49,
+    "week": "01.03–07.03",
+    "type": "Развитие речи",
+    "title": "Письмо: описание вымышленного героя + Quick review / Мини-проект: комикс о незаметном герое. Revision Unit 7",
+    "unit": "",
+    "sec": "UNIT 7 — Famous lives · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Письмо: описание вымышленного героя + Quick review — Модель по шагам; банк опор; subskill also; 3–5 предложений порциями; Quick review со взаимопомощью."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Мини-проект: комикс о незаметном герое. Revision Unit 7 — Комикс по шаблону с опорами past simple; revision-игры; смайлики-рефлексия."
+     ],
+     [
+      "Лексика",
+      "Unit 7 vocabulary (в письме и проекте)"
+     ],
+     [
+      "Грамматика",
+      "also (writing subskill); Past simple (в письме)"
+     ],
+     [
+      "Навыки",
+      "Письмо, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 50,
+    "week": "08.03–14.03",
+    "type": "Тест",
+    "title": "Тест по Unit 7 / Разбор и рефлексия",
+    "unit": "",
+    "sec": "UNIT 7 — Famous lives · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Тест по Unit 7 — Тест standard: jobs, dates, feelings, Past simple be + regular; формат знаком."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Разбор и рефлексия — Аудирование-часть; спокойный разбор ошибок; рефлексия «я уже умею»."
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 51,
+    "week": "08.03–14.03",
+    "type": "Комбинированный",
+    "title": "WDYT? Как лучше путешествовать? Транспорт + Video: Nadiya's journey / Чтение: Scooters in the 21st century + Word work",
+    "unit": "",
+    "sec": "UNIT 8 — From A to B · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "WDYT? Как лучше путешествовать? Транспорт + Video: Nadiya's journey — Ввод transport-слов в знакомом паттерне; видео по шагам; первые отрицания didn't по модели."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Чтение: Scooters in the 21st century + Word work — Subskill: asking questions before you read — с опорой; чтение по кускам; обсуждение голосованием."
+     ],
+     [
+      "Лексика",
+      "transport"
+     ],
+     [
+      "Грамматика",
+      "Past simple: negative (введение в контексте)"
+     ],
+     [
+      "Навыки",
+      "Лексика, Чтение, КМ"
+     ]
+    ]
+   },
+   {
+    "n": 52,
+    "week": "15.03–21.03",
+    "type": "Грамматика",
+    "title": "Грамматика: Past simple — отрицание и вопросы / Vocabulary & Listening: коллокации транспорта. Bike to School Week",
+    "unit": "",
+    "sec": "UNIT 8 — From A to B · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: Past simple — отрицание и вопросы — Полный ввод didn't и Did…?; дрилл-игра «алиби»; Wh-вопросы по шагам; письменное закрепление."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Vocabulary & Listening: коллокации транспорта. Bike to School Week — Ввод transport collocations; аудирование по шагам, subskill: choosing the best summary с опорой."
+     ],
+     [
+      "Лексика",
+      "transport collocations"
+     ],
+     [
+      "Грамматика",
+      "Past simple: negative and questions"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 53,
+    "week": "15.03–21.03",
+    "type": "Грамматика",
+    "title": "Грамматика: превосходная степень прилагательных / Real-world speaking: Buying a ticket",
+    "unit": "",
+    "sec": "UNIT 8 — From A to B · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Грамматика: превосходная степень прилагательных — Полный ввод -est/most и irregular best/worst; игра «рекорды класса»; письменное закрепление."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Real-world speaking: Buying a ticket — Видео-модель; Key phrases по шагам; ролевая «касса» по опоре в парах."
+     ],
+     [
+      "Лексика",
+      "journey vocabulary; Key phrases: Buying a ticket"
+     ],
+     [
+      "Грамматика",
+      "superlative adjectives"
+     ],
+     [
+      "Навыки",
+      "Грамматика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 54,
+    "week": "22.03–28.03",
+    "type": "Развитие речи",
+    "title": "Письмо: a story + Quick review / Мини-проект: class survey о транспорте. Revision Unit 8",
+    "unit": "",
+    "sec": "UNIT 8 — From A to B · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Письмо: a story + Quick review — Модель истории по шагам; банк опор; subskill before/after; пишем порциями; Quick review со взаимопомощью."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Мини-проект: class survey о транспорте. Revision Unit 8 — Опрос класса по шаблону, простая презентация результатов; revision-игры."
+     ],
+     [
+      "Лексика",
+      "Unit 8 vocabulary (в письме и проекте)"
+     ],
+     [
+      "Грамматика",
+      "before, after (writing subskill); past simple + superlatives"
+     ],
+     [
+      "Навыки",
+      "Письмо, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 55,
+    "week": "22.03–28.03",
+    "type": "Тест",
+    "title": "Тест по Unit 8 / Разбор и рефлексия",
+    "unit": "",
+    "sec": "UNIT 8 — From A to B · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Тест по Unit 8 — Тест standard: transport, travel, Past simple neg/questions, superlatives; формат знаком."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Разбор и рефлексия — Аудирование-часть; спокойный разбор ошибок; настрой на итоговый повтор."
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 56,
+    "week": "29.03–04.04",
+    "type": "Revision",
+    "title": "Look what you know! Лексический повтор Units 1–8 / Лексические игры-станции",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Look what you know! Лексический повтор Units 1–8 — Повтор всех сетов года в играх с опорами; личные чек-листы «знаю/повторить»."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Лексические игры-станции — Станции по темам юнитов в парах; спеллинг в игровой обёртке; взаимопомощь."
+     ],
+     [
+      "Лексика",
+      "Vocabulary review: Units 1–8"
+     ],
+     [
+      "Навыки",
+      "Лексика, Говорение"
+     ]
+    ]
+   },
+   {
+    "n": 57,
+    "week": "29.03–04.04",
+    "type": "Revision",
+    "title": "Grammar review: стена вопросов / Грамматический квест по классу",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Grammar review: стена вопросов — Квест по «стене» грамматических квадратов в парах с опорными таблицами."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Грамматический квест по классу — Финал квеста; повтор сводных таблиц; разбор трудных мест без стресса."
+     ],
+     [
+      "Грамматика",
+      "Grammar review: Units 1–8"
+     ],
+     [
+      "Навыки",
+      "Грамматика"
+     ]
+    ]
+   },
+   {
+    "n": 58,
+    "week": "05.04–11.04",
+    "type": "Revision",
+    "title": "Reading review + Exam tips / Listening review: мини-диалоги и подкаст",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Reading review + Exam tips — Чтение «A world of festival fun» по шагам; знакомство с форматом заданий и Exam tips."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Listening review: мини-диалоги и подкаст — Аудирование с картинками a/b/c по шагам; подкаст Harbin festival с опорой."
+     ],
+     [
+      "Грамматика",
+      "all grammar (exam formats)"
+     ],
+     [
+      "Навыки",
+      "Чтение, Аудирование"
+     ]
+    ]
+   },
+   {
+    "n": 59,
+    "week": "05.04–11.04",
+    "type": "Revision",
+    "title": "Speaking: Key phrases review / Writing: блог / email / история на выбор + Exam trainer",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Speaking: Key phrases review — Ролевые ситуации на Key phrases года по опорам; поддержка в парах."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Writing: блог / email / история на выбор + Exam trainer — Письмо по опоре (жанр на выбор); лёгкая порция Exam trainer (WB) со взаимопомощью."
+     ],
+     [
+      "Лексика",
+      "Key phrases review (Units 1–8)"
+     ],
+     [
+      "Грамматика",
+      "all grammar (в письме)"
+     ],
+     [
+      "Навыки",
+      "Говорение, Письмо"
+     ]
+    ]
+   },
+   {
+    "n": 60,
+    "week": "12.04–18.04",
+    "type": "Revision",
+    "title": "Snake Challenge — настольный финал юнита / Итоги Unit 9. Спокойное закрепление",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Snake Challenge — настольный финал юнита — Игра Snake Challenge по курсу в командах; ответы по опорам, помощь команды."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Итоги Unit 9. Спокойное закрепление — Закрепление трудных мест в играх; рефлексия «как я вырос за год»."
      ],
      [
       "Лексика",
@@ -24022,11 +25755,355 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "All grammar (reflection)"
+      "all grammar (review)"
      ],
      [
       "Навыки",
       "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 61,
+    "week": "12.04–18.04",
+    "type": "Комбинированный",
+    "title": "Финальный смотр: выбираем формат по силам / Планирование. Повтор опор",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Финальный смотр: выбираем формат по силам — Мягкий запуск: 2–3 посильных формата выступления; повтор опорного языка года."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Планирование. Повтор опор — Роли по силам; шаблоны и банки фраз; повтор слабых тем в играх."
+     ],
+     [
+      "Лексика",
+      "Весь курс (в проектах)"
+     ],
+     [
+      "Грамматика",
+      "All grammar (в речи)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 62,
+    "week": "19.04–25.04",
+    "type": "Комбинированный",
+    "title": "Мини-выступление «Мой мир по-английски»: подготовка / Репетиции с опорами",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Мини-выступление «Мой мир по-английски»: подготовка — Опорная структура из 5–6 предложений; повтор нужной грамматики; черновик с поддержкой."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Репетиции с опорами — Прогоны в парах; дружеский peer review по галочкам; уверенность."
+     ],
+     [
+      "Лексика",
+      "Весь курс (в проектах)"
+     ],
+     [
+      "Грамматика",
+      "All grammar (в речи)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 63,
+    "week": "19.04–25.04",
+    "type": "Комбинированный",
+    "title": "Мини-выступления, часть 1 / Мини-выступления, часть 2. Разбор",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Мини-выступления, часть 1 — Выступления по опоре в малых группах; поддержка; смайлики-оценка."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Мини-выступления, часть 2. Разбор — Вторая волна выступлений; дружеский фидбек; праздник успеха."
+     ],
+     [
+      "Лексика",
+      "Весь курс (в проектах)"
+     ],
+     [
+      "Грамматика",
+      "All grammar (в речи)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 64,
+    "week": "26.04–02.05",
+    "type": "Комбинированный",
+    "title": "Видео-гид по классу: сценарий по шаблону + догон / Видео-гид: съёмка с поддержкой",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Видео-гид по классу: сценарий по шаблону + догон — Простой сценарий видео-гида по опоре; параллельно догон слабых тем в мини-группах."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Видео-гид: съёмка с поддержкой — Съёмка коротких сцен по опоре; много дублей — это нормально."
+     ],
+     [
+      "Лексика",
+      "Весь курс (в проектах)"
+     ],
+     [
+      "Грамматика",
+      "All grammar (в речи)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 65,
+    "week": "26.04–02.05",
+    "type": "Комбинированный",
+    "title": "Видео-гид: монтаж и озвучка / Видео-показ + дружеский peer review",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Видео-гид: монтаж и озвучка — Сборка ролика; озвучка по опоре; проверка языка вместе с учителем."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Видео-показ + дружеский peer review — Показ роликов; тёплый фидбек по 2–3 галочкам; голосование-симпатии."
+     ],
+     [
+      "Лексика",
+      "Весь курс (в проектах)"
+     ],
+     [
+      "Грамматика",
+      "All grammar (в речи)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 66,
+    "week": "03.05–09.05",
+    "type": "Комбинированный",
+    "title": "Project fair: стенд по шаблону + повтор-станции / Репетиция по опорам",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Project fair: стенд по шаблону + повтор-станции — Стенд по готовому шаблону; параллельно повтор-станции по слабым местам года."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Репетиция по опорам — Прогон презентации стенда по опорным фразам; тренировка простых Q&A."
+     ],
+     [
+      "Лексика",
+      "Весь курс (в проектах)"
+     ],
+     [
+      "Грамматика",
+      "All grammar (в речи)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 67,
+    "week": "03.05–09.05",
+    "type": "Комбинированный",
+    "title": "Project fair: ярмарка проектов / Ярмарка: итоги и голосование",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Project fair: ярмарка проектов — Ярмарка: презентации стендов по опоре; гости задают знакомые вопросы."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Ярмарка: итоги и голосование — Голосование-симпатии; тёплый фидбек; очки за смелость и рост."
+     ],
+     [
+      "Лексика",
+      "Весь курс (в проектах)"
+     ],
+     [
+      "Грамматика",
+      "All grammar (в речи)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 68,
+    "week": "10.05–16.05",
+    "type": "Комбинированный",
+    "title": "My year in English: портфолио / My year in English: подготовка презентации",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "My year in English: портфолио — Портфолио по шаблону; рефлексия «I can» со смайликами; повтор трудных мест."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "My year in English: подготовка презентации — Мини-история роста 5–6 предложений по опоре; репетиция в парах."
+     ],
+     [
+      "Лексика",
+      "Весь курс (review)"
+     ],
+     [
+      "Грамматика",
+      "All grammar (review)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 69,
+    "week": "10.05–16.05",
+    "type": "Комбинированный",
+    "title": "My year in English: презентации / Финал смотра. Подготовка к Final review",
+    "unit": "",
+    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "My year in English: презентации — Презентации по опоре в дружеской обстановке; поддержка группы."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Финал смотра. Подготовка к Final review — Итоги смотра; спокойная подготовка к тесту: формат, опоры, повтор."
+     ],
+     [
+      "Лексика",
+      "Весь курс (review)"
+     ],
+     [
+      "Грамматика",
+      "All grammar (review)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 70,
+    "week": "17.05–23.05",
+    "type": "Revision",
+    "title": "Final review: лексика и грамматика года / Final review: навыки и формат теста",
+    "unit": "",
+    "sec": "▶▶ FINAL — Итоговый контроль + Рефлексия · 3 пары · 6 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Final review: лексика и грамматика года — Повтор всех тем в играх с опорами; личные чек-листы; уверенность перед тестом."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Final review: навыки и формат теста — Мини-тренировка чтения/аудирования/письма; формат заданий знаком заранее."
+     ],
+     [
+      "Лексика",
+      "Весь курс (review)"
+     ],
+     [
+      "Грамматика",
+      "All grammar (review)"
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 71,
+    "week": "17.05–23.05",
+    "type": "Final",
+    "title": "Итоговый тест: лексика, грамматика, чтение / Итоговый тест: аудирование, письмо",
+    "unit": "",
+    "sec": "▶▶ FINAL — Итоговый контроль + Рефлексия · 3 пары · 6 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Итоговый тест: лексика, грамматика, чтение — Вариант standard: комплексный тест по курсу."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Итоговый тест: аудирование, письмо — Skills-часть; письмо по опоре — жанр на выбор."
+     ],
+     [
+      "Навыки",
+      "Все навыки"
+     ]
+    ]
+   },
+   {
+    "n": 72,
+    "week": "24.05–26.05",
+    "type": "Final",
+    "title": "Speaking checkpoint + разбор теста / Итоги года. Сертификаты. Праздник",
+    "unit": "",
+    "sec": "▶▶ FINAL — Итоговый контроль + Рефлексия · 3 пары · 6 уроков",
+    "fields": [
+     [
+      "Урок А · 1–45 мин",
+      "Speaking checkpoint + разбор теста — Speaking-чек по знакомым вопросам с поддержкой; спокойный разбор ошибок."
+     ],
+     [
+      "Урок Б · 46–90 мин",
+      "Итоги года. Сертификаты. Праздник — Рефлексия «что я умею теперь»; церемония сертификатов; праздничный финал."
+     ],
+     [
+      "Навыки",
+      "Говорение"
      ]
     ]
    }

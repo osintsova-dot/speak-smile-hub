@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1 · Unit 1 · Pair 1 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 1 “Our world” · Pair 1 — Mission «Global Top Three»: pitch the world's best places</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>continuing line 🚀 after GMF4</b> · 90 min · mission-based: gate → base sprint → challenge levels → GMF4 bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Week 14.09–20.09 · lessons 9–10 (KTP pair 5)</span><span class='chip new'>🚀 continuing after GMF4</span><span class='chip'>SB pp.12–13</span><span class='chip'>unit leaderboard · streaks · gold runs</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход в урок: приветствие + повтор прошлой пары</td><td>«What's new? — одно слово!» у двери; блиц-повтор Starter — первые очки; мостик «вы — тревел-продюсеры»</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Завязка миссии</td><td>объявляю миссию пары: командный питч «топ-3 места планеты» на 60 сек без пауз; открываю лидерборд</td></tr><tr class='bridge'><td class='gmin'>8–13′</td><td class='gname'>Входной тест на скорость (gate): национальности</td><td>3 минуты: пишут национальности к 8 странам — быстро И без ошибок; самопроверка, личный счёт на поля</td></tr><tr><td class='gmin'>13–22′</td><td class='gname'>Спринт по знакомому: квиз + таблица суффиксов</td><td>знакомое пролетаем на скорости за очки: квиз «Спасибо, мир!» за 90 сек + таблица суффиксов за 4 мин</td></tr><tr><td class='gmin'>22–31′</td><td class='gname'>Дуэль брендов (правило 5 секунд)</td><td>вопросы учебника с правилом 5 секунд; потом команды пишут СВОИ и дуэлятся; слово «country» — табу</td></tr><tr><td class='gmin'>31–40′</td><td class='gname'>Смотрим влог как контент-мейкеры</td><td>видео с 3 задачами: кто первый заметит топ-3 · укради фразу для своего влога · оцени ролик 1–10</td></tr><tr class='bridge'><td class='gmin'>40–49′</td><td class='gname'>Бонус-уровень: «этого нет в учебнике»</td><td>цепочка по кругу «I've never been to…, but next year I'll visit it» — страна не повторяется, стрик класса</td></tr><tr><td class='gmin'>49–58′</td><td class='gname'>Готовим 60-секундный питч</td><td>экипажи выбирают топ-3 места и готовят питч: каждый говорит ≥2 предложения, заметки только ключевыми словами</td></tr><tr><td class='gmin'>58–78′</td><td class='gname'>Выступления: питчи по секундомеру</td><td>каждый экипаж питчит 60 сек по секундомеру, остальные — судьи с рубрикой; после питча судья обосновывает оценку</td></tr><tr><td class='gmin'>78–90′</td><td class='gname'>Лидерборд + разбор дня</td><td>заносим очки, первые позиции, обсуждаем зону роста, ДЗ и тизер детективов</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 1 — конкретные стр./задания по линии (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + Research-бонус); детали внизу процедуры</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор прошлой пары</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> «What's new? — одно слово!» у двери; блиц-повтор Starter — первые очки; мостик «вы — тревел-продюсеры»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери: <span class='en'>What's new? One-word answers only!</span> Пальцы-настроение 1–5 — первый ритуал года, легко.</li><li>Повтор Starter: воздушный спеллинг 2 имён хором; 4 числа со слайда — выкрикнуть по-английски; 3 интернационализма — <span class='en'>thumbs up if English uses it!</span></li><li>TB-warmer «Two words — one country» (TB p.18): <span class='en'>California, Oscars — ? Football, London — ? Pandas, Beijing — ? Flamenco, Madrid — ?</span> — страну выкрикиваем хором, темп растёт.</li><li>Начисляю первые очки будущим экипажам.</li><li>Мостик: <span class='en'>Warm? Good. In one minute you're not students — you're travel producers with a job to win.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд настроения · 4 числа крупно на доске · слова pizza/taxi/football · пары слов TB-warmer</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> бросают слово у двери, хором спеллингуют и выкрикивают числа, голосуют пальцами. Ожидаемо: лёгкий разгон. Типичная ошибка: «hundred» без one — палец «1», чинят сами.</div></td><td class='mat'>слайды · табло</td></tr><tr class='bridge'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> объявляю миссию пары: командный питч «топ-3 места планеты» на 60 сек без пауз; открываю лидерборд</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Открываю слайд <b>MISSION «GLOBAL TOP THREE»</b>.</li><li>Говорю: <span class='en'>You are travel producers. Today your crew pitches the three best places on Earth — sixty seconds, no pauses, judges scoring. But first — prove your licence.</span></li><li>Объявляю экипажи по 3, вешаю лидерборд юнита (очки · стрики · gold runs).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии (или пишу название на доске) · постер-лидерборд на стену (живёт весь юнит, все 7 пар)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> рассаживаются экипажами, разглядывают лидерборд. Ожидаемо: «а что такое gold run?» — «Заработаете — поймёте».</div></td><td class='mat'>mission slide · leaderboard</td></tr><tr class='bridge'><td class='min'>8–13′</td><td class='stage'><div class='nm'>Входной тест на скорость (gate): национальности</div><div class='sub'>🎯 GATE · nationality blitz</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 3 минуты: пишут национальности к 8 странам — быстро И без ошибок; самопроверка, личный счёт на поля</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вывожу 8 стран: China · Spain · the Netherlands · Brazil · Turkey · Japan · the UK · New Zealand.</li><li>Говорю: <span class='en'>WRITE the nationality for each. Fast AND spelled right. You've known these words for years — prove it in writing. Three minutes!</span> Таймер.</li><li>По нулю таймера открываю ключ: самопроверка, счёт — на поля тетради.</li><li>Разворот: <span class='en'>8 out of 8? Silence?.. Chinese with -ese, Dutch out of nowhere — THIS is our game: not ‘knowing’, but fast-accurate-written. Rematch in Pair 7!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд: 8 стран → ключ (Chinese · Spanish · Dutch · Brazilian · Turkish · Japanese · British · New Zealand); нет слайда — страны столбиком на доске, ключ дописываю рядом</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> соло пишут 8 национальностей на скорость, честно считают чистые, записывают счёт на поля (приватно, не рейтинг). Ожидаемо: 4–6 из 8 — потолок вскрыт. Типичная ошибка: «Chinish/Dutchland» — не стыжу: «вот зона роста, реванш в P7».</div></td><td class='mat'>gate slide · timer</td></tr><tr><td class='min'>13–22′</td><td class='stage'><div class='nm'>Спринт по знакомому: квиз + таблица суффиксов</div><div class='sub'>⚡ Base sprint · quiz + suffix table</div><div class='zone'>desks · crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> знакомое пролетаем на скорости за очки: квиз «Спасибо, мир!» за 90 сек + таблица суффиксов за 4 мин</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Говорю: <span class='en'>Base sprint! Page 12, quiz — ninety seconds, commit your answers!</span></li><li>Проверяю audio 8 (или слайдом), +1 за верный.</li><li>Вторая часть: <span class='en'>The suffix table (ex.5–6) — ALL thirteen pairs in four columns. Four minutes, race!</span></li><li>Проверка проектором, уважение вслух: <span class='en'>You flew through what beginners need a whole lesson for. Points banked. Now it gets harder.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник pp.12–13 · audio 8 · проектор: ключ таблицы (или заполняю на доске)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> экипажи проходят квиз и строят полную таблицу суффиксов на скорость. Ожидаемо: 3–4 мин почти без ошибок. Типичная ошибка: New Zealand в -ish — колонка irregular ждёт.</div><span class='diff'><span class='ext'>⭐ Fast finishers (TB p.19):</span> напиши ещё 2 страны + национальности, которых нет в таблице.</span></td><td class='mat'>SB pp.12–13 · timer</td></tr><tr><td class='min'>22–31′</td><td class='stage'><div class='nm'>Дуэль брендов (правило 5 секунд)</div><div class='sub'>🔥 Challenge · Brand Duel</div><div class='zone'>desks · crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вопросы учебника с правилом 5 секунд; потом команды пишут СВОИ и дуэлятся; слово «country» — табу</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Раунд 1 (ex.7): <span class='en'>Full sentence in five seconds or the question bounces! Sony is a brand from…?</span> — по пунктам с ротацией.</li><li>Включаю ограничитель: <span class='en'>The word ‘country’ is TABOO — say: It's a JAPANESE brand!</span></li><li>Раунд 2 (ex.8): <span class='en'>Write two YOUR OWN items — gaming, football, K-pop welcome. Duel the next crew!</span> 2 мин.</li><li>Модерирую дуэли; блеф автора (не знает свой ответ) = −2.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайды пунктов ex.7 (или пишу на доске) · таблица суффиксов на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> отвечают полным предложением за 5 сек, сочиняют свои вопросы про любимые бренды и гоняют соседей. Ожидаемо: «Minecraft is a Swedish game!» — восторг. Типичная ошибка: «from Japanese» — стук по таблице: страна или прилагательное?</div></td><td class='mat'>duel slides · mini-boards</td></tr><tr><td class='min'>31–40′</td><td class='stage'><div class='nm'>Смотрим влог как контент-мейкеры</div><div class='sub'>Video skills · watch like makers</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> видео с 3 задачами: кто первый заметит топ-3 · укради фразу для своего влога · оцени ролик 1–10</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ставлю задачи ДО плей: <span class='en'>Task one: first to spot Isabel's top three places — hand up, I freeze, you name it. Task two: STEAL one phrase for your own vlog. Task three: rate the vlog 1–10.</span></li><li>Включаю влог (Video skills p.13), фризую на поднятые руки.</li><li>Собираю украденные фразы на доску — «фразобанк питча».</li><li>Ex.10: <span class='en'>Rate it 1–10 and defend the rating in ONE sentence — like a blogger.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> видео p.13; НЕТ видео → 6 тревел-фото + я «веду влог» по скрипту; доска: «фразобанк» украденных фраз</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> смотрят как контент-мейкеры: ловят топ-3, крадут по фразе, оценивают с аргументом. Ожидаемо: фразобанк из 5–8 фраз. Типичная ошибка: оценка без аргумента — жест «because…?»</div></td><td class='mat'>video · backup photos</td></tr><tr class='bridge'><td class='min'>40–49′</td><td class='stage'><div class='nm'>Бонус-уровень: «этого нет в учебнике»</div><div class='sub'>🚀 Bonus level · not in the book</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> цепочка по кругу «I've never been to…, but next year I'll visit it» — страна не повторяется, стрик класса</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Поднимаю статус: <span class='en'>This exercise is NOT in this book. Beginners can't do it. You can — GMF4 grads only.</span></li><li>Пишу рамку: <b>I've never been to ___, but next year I'll visit it, because it's ___.</b> Моделирую собой.</li><li>Запускаю цепочку по кругу: страна не повторяется; сорвался стрик — счёт заново (класс против себя).</li><li>+1 в лидерборд за каждое чистое бонус-предложение.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: рамка бонуса крупно · счётчик стрика в углу доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> по кругу строят предложение с perfect+will, следят за неповторением стран. Ожидаемо: стрик 8–12. Типичная ошибка: «I never was» — показываю рамку: точно как написано, это и есть уровень.</div></td><td class='mat'>bonus frame</td></tr><tr><td class='min'>49–58′</td><td class='stage'><div class='nm'>Готовим 60-секундный питч</div><div class='sub'>Prepare the pitch</div><div class='zone'>desks · crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> экипажи выбирают топ-3 места и готовят питч: каждый говорит ≥2 предложения, заметки только ключевыми словами</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ставлю задачу: <span class='en'>Your crew's GLOBAL TOP THREE — real places. Hook opening + one line per place. Nine minutes.</span></li><li>Правила на слайд: каждый говорит ≥2 предложения · минимум 1 национальность-прилагательное · 1 бонус-структура = richness.</li><li>ICQ: <span class='en'>Full script to read? — No! Keywords only!</span></li><li>Показываю рубрику судей, помогаю с hook-фразами (фразобанк в помощь).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд правил питча · рубрика судей крупно · фразобанк на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выбирают 3 места, распределяют, пишут ключевые слова (не текст!). Ожидаемо: споры о местах на английском из фразобанка. Типичная ошибка: пишут полный сценарий — забираю листок, оставляю 4 слова.</div><span class='ig'>🏆 <b>Планка продукта (рубрика судей, каждая пара):</b> Fluency — паузы не длиннее 3 сек (1–3) · Accuracy — формы чистые (1–3) · Richness — прилагательные, связки, бонус-структуры (1–3). 9/9 = «gold run», +5 в лидерборд.</span></td><td class='mat'>prep sheets · rubric slide</td></tr><tr><td class='min'>58–78′</td><td class='stage'><div class='nm'>Выступления: питчи по секундомеру</div><div class='sub'>🏁 PRODUCT · 60-sec pitches</div><div class='zone'>stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> каждый экипаж питчит 60 сек по секундомеру, остальные — судьи с рубрикой; после питча судья обосновывает оценку</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Запускаю: <span class='en'>Crew one — sixty seconds — GO!</span> Секундомер видимый.</li><li>Раздаю судейские карты: fluency/accuracy/richness по 1–3.</li><li>После каждого питча один судья: <span class='en'>Defend ONE score in English!</span> (<span class='en'>Richness 3 — they used ‘I've never been’ AND three adjectives.</span>)</li><li>Усредняю, заношу в лидерборд живьём, +1 за бонус-структуры в эфире.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> секундомер на экране · судейские карты · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> питчат по ключевым словам без чтения; судьи считают паузы пальцами и ставят 1–3 по трём шкалам, один обосновывает вслух. Ожидаемо: 1–2 экипажа близко к gold run. Типичная ошибка: пауза >3 сек — судьи фиксируют, планка учит сама.</div></td><td class='mat'>stopwatch · rubric cards</td></tr><tr><td class='min'>78–90′</td><td class='stage'><div class='nm'>Лидерборд + разбор дня</div><div class='sub'>Leaderboard + debrief</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> заносим очки, первые позиции, обсуждаем зону роста, ДЗ и тизер детективов</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Показываю первые позиции лидерборда, аплодисменты по протоколу.</li><li>Дебриф: <span class='en'>Your gate score vs your pitch — where's the REAL growth zone? Spoiler: spelling + no-pause speech. That's our unit.</span></li><li>ДЗ на слайде + Research-бонус.</li><li>Тизер: <span class='en'>Pair 2 — you become country detectives and fact-check a bold claim about the Netherlands.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> лидерборд · слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> смотрят позиции, называют свою зону роста одним словом, фотографируют ДЗ. Ожидаемо: «spelling!» — самодиагностика сработала.</div></td><td class='mat'>leaderboard · HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>🚀 Workbook Unit 1 (обязательные ☆☆–☆☆☆):</b> Workbook стр. 4: ex.2 ☆☆ + ex.3 ☆☆☆ (кроссворд + mystery word) + ex.4 ☆☆☆ (5 предложений «about you» — страна мечты, любимая еда, спорт).</p><p>🔎 Research bonus (+5, TB Get online): find where TWO of your things at home come from — bring the lines: <i>It's from Japan. It's Japanese.</i></p><p><b>🚀 Bonus level (optional, +5):</b> write your 60-sec pitch DOWN in 5 sentences — with one «I've never been… / I'll visit…» line.</p><p style='font-size:.85rem;color:var(--muted)'>WB-аудио — в TRC; нет трека → аудио-пункты пропускаем. Фото ДЗ со слайда — ок.</p></td><td class='mat'>Workbook U1 · notebook · leaderboard points logged next lesson</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>pitch a team «Global Top-3 places» in 60 seconds without pauses</b>, using 13 nationality adjectives accurately (spelling included).</li>
+      <li><span class="lb">Subsidiary.</span> Gate proves the spelling ceiling (-ese/-ish/-ian); suffix system fixed as a table; Video skills vlog watched ‘like content-makers’; GMF4 bonus: I've never been to… / I'll visit… as status structures.</li>
+      <li><span class="lb">Personal.</span> Anti-«мы всё знаем» frame from minute 1: the mission is speed + spelling + fluency. Respect their base loudly, raise the bar immediately. Launch the leaderboard ritual.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>write 8+ nationalities correctly under time pressure</li><li>test another pair with own brand-quiz items</li><li>react to a vlog with viewer language</li><li>deliver a 60-sec team pitch to the bar</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Bonus level</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>Australia – Australian</span><span class='w'>Brazil – Brazilian</span><span class='w'>China – Chinese</span><span class='w'>India – Indian</span><span class='w'>Japan – Japanese</span><span class='w'>Mexico – Mexican</span><span class='w'>New Zealand – New Zealand</span><span class='w'>Russia – Russian</span><span class='w'>Spain – Spanish</span><span class='w'>the Netherlands – Dutch</span><span class='w'>the UK – British</span><span class='w'>the USA – American</span><span class='w'>Turkey – Turkish</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>It's from (Japan) — it's (Japanese). · Our №1 is… because it's… · 🚀 bonus: I've never been to (Brazil), but next year I'll visit it.</div></div>
+      <div class="r"><div class="k">Form</div><div>suffix columns -an/-ian/-ese/-ish + irregular; the + UK/USA/Netherlands; nationality always capital.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>moving stress: Ja-PAN → Japa-NESE; BRA-zil → Bra-ZIL-ian; pitch voice — project to the back wall.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“You KNOW countries. Does knowing = writing Chinese correctly in 10 seconds?” → that's the gate.</div><div class='ccq'>“He's Dutch — which country?” → the Netherlands.</div><div class='ccq'>“In the pitch, is a 5-second pause OK?” → No — bar rule: pauses under 3 sec.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Post-GMF4: countries met in GMF4 U9, be automatic orally. Real gaps: nationality SPELLING, moving stress, sustained fluent speech. Gate is diagnosis, not humiliation: the ceiling must be REAL (spelling/speed/writing), results are private tallies, the reveal is “so THIS is our growth zone”.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>«Мы это уже проходили» whine</td><td>Never argue — point at the gate results: “Exactly. So today is about speed and gold runs.”</td></tr><tr><td>Strong ones dominate team answers</td><td>Rotation rule: the speaker changes every round; leaderboard logs SPEAKERS.</td></tr><tr><td>Spelling gate frustrates weaker movers</td><td>Score = personal best to beat in P7 rematch, not a ranking; tallies stay private.</td></tr><tr><td>Vlog watched passively</td><td>Content-maker tasks: first-to-spot + steal-a-phrase; no task — no play button.</td></tr><tr><td>Pitch turns into a list</td><td>Bar rubric visible; ‘because’ obligatory; judges count pauses with fingers.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 1 “Our world” (How are countries different?) · GIA1 — lesson plan &amp; staging</span>
+    <span>SB pp.12–13 (audio 8–9) · Video skills p.13 · Pronunciation p.116 · TB p.18–19 (warmer, Fast finishers, ABCD Country abbreviations). КТП-Accelerated пара 5. be «ввод» по КТП — для 🚀 не вводится, а используется (100% повторение GMF4). До урока: лидерборд-постер, gate/key-слайды, судейские карты.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

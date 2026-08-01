@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1zero · Unit 3 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 3 “Eat well” · Pair 2 — Reading quest: Meatless Mondays — why no meat?</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · input → guided practice → speaking, in game shells · pairs + teams of 3 · points, no dry drills</div>
+    <div class="meta"><span class='chip'>Week 09.11–15.11 · lessons 39–40 (KTP pair 20)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>SB pp.38–39</span><span class='chip'>teams of 3 · unit points board</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход в урок: приветствие + повтор прошлой пары</td><td>чек-ин; повтор P1: пинг-понг картинка→слово + 2 письменных на мини-досках; мостик «детектив еды»</td></tr><tr class='bridge'><td class='gmin'>6–11′</td><td class='gname'>Верю–не верю: 1 600 литров на один бургер?!</td><td>верю–не верю: 3 шок-факта до чтения; команды ставят фишки — проверим текстом</td></tr><tr><td class='gmin'>11–19′</td><td class='gname'>Разминка-опрос: как часто ты ешь…?</td><td>рамки частотности + опрос-карусель: 3 вопроса 3 партнёрам; never — перед глаголом</td></tr><tr><td class='gmin'>19–24′</td><td class='gname'>Учимся ловить общий смысл, не каждое слово</td><td>субнавык с опорой: смотрим на инфографику 60 сек и отвечаем, о чём страница — не читая текст</td></tr><tr><td class='gmin'>24–38′</td><td class='gname'>Читаем по кускам с проверкой понимания</td><td>текст по кускам: 3 параграфа = 3 задачи с таймером; матч параграфы↔вопросы; вскрываем «верю–не верю»</td></tr><tr><td class='gmin'>38–45′</td><td class='gname'>Числа текста на мини-досках</td><td>числа текста на мини-досках: матч ex.6 флипами по 10 сек; хвалим точность</td></tr><tr><td class='gmin'>45–54′</td><td class='gname'>6 новых слов из текста (Word work)</td><td>6 bold-слов текста: матч с определениями за 3 мин + пары гоняют друг друга по карточкам</td></tr><tr><td class='gmin'>54–64′</td><td class='gname'>Голосуем и говорим по модели: мясо — да/нет?</td><td>физическое голосование «Meatless Monday в нашей школе?» + аргументы по рамкам с подсказками TB</td></tr><tr><td class='gmin'>64–74′</td><td class='gname'>Пишем вердикт: 3 предложения по рамкам</td><td>пишут вердикт: 3 предложения по рамкам (мнение + факт + частотность о себе); взаимопроверка 2 галочки</td></tr><tr><td class='gmin'>74–82′</td><td class='gname'>Игра «факт-теннис»: чей факт последний?</td><td>закрепление-игра: команды перекидываются фактами текста — кто последний, тот выиграл</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Итоги + рефлексия</td><td>по одному вердикту вслух; очки; смайлик-самооценка субнавыка; ДЗ</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook стр. юнита (звёзды по линии группы) + Research-бонус за очки (детали внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор прошлой пары</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> чек-ин; повтор P1: пинг-понг картинка→слово + 2 письменных на мини-досках; мостик «детектив еды»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери: <span class='en'>One word about your weekend!</span></li><li>Пинг-понг P1: показываю картинку — хором слово; 6–8 бросков, темп растёт.</li><li>Последние 2 — письменно: <span class='en'>On your boards: BISCUIT!</span> — доски вверх (немая u!). +1 за чистую.</li><li>Мостик: <span class='en'>You know food words. Now — a food MYSTERY: millions of people say NO to meat. Why?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> картинки еды · мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> отвечают хором, пишут 2 слова с немыми буквами. Ожидаемо: biscuit уже чище. Типичная ошибка: «sandwich» без d — жёлтая буква на доске чинит.</div></td><td class='mat'>мини-доски</td></tr><tr class='bridge'><td class='min'>6–11′</td><td class='stage'><div class='nm'>Верю–не верю: 1 600 литров на один бургер?!</div><div class='sub'>Hook · believe it or not</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> верю–не верю: 3 шок-факта до чтения; команды ставят фишки — проверим текстом</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вывожу 3 утверждения: <span class='en'>① You need 1,600 litres of water for ONE burger. ② Farm animals make more gas than all cars and planes. ③ Vegetarians eat fish.</span></li><li>Команды ставят фишку: believe / don't believe. <span class='en'>Commit! We check with the text today.</span></li><li>Интрига: <span class='en'>One of these is FALSE. Which one? The text knows.</span> (③ — это pescatarians, fun facts box)</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд 3 фактов (или на доске) · фишки команд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> спорят и коммитят догадки командой. Ожидаемо: ① кажется фейком («слишком много!») — идеальная интрига. Типичная ошибка: требуют ответ сразу — «текст знает, мы — пока нет».</div></td><td class='mat'>fact slide · tokens</td></tr><tr><td class='min'>11–19′</td><td class='stage'><div class='nm'>Разминка-опрос: как часто ты ешь…?</div><div class='sub'>Warm-up · how often do you eat…?</div><div class='zone'>standing pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рамки частотности + опрос-карусель: 3 вопроса 3 партнёрам; never — перед глаголом</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Рамки на доску из ex.1: <b>I eat ___ every day / every week / one or two days a week. · I never eat ___ .</b> Хоровой дрилл ×2.</li><li>Правило-жест TB: <span class='en'>never прыгает ПЕРЕД глагол: I NEVER eat…</span> — жест «прыжок».</li><li>Карусель: два круга лицом друг к другу; вопрос <span class='en'>How often do you eat meat/fish/chocolate?</span> — ответ рамкой; внешний круг шагает. 3 раунда.</li><li>Блиц-итог: <span class='en'>Hands up if your partner never eats fish!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: рамки частотности · жест never</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> дриллят рамки и опрашивают трёх партнёров, двигаясь по кругу. Ожидаемо: все говорят одновременно ×3. Типичная ошибка: «I eat never» — жест «прыжок» чинит на месте.</div></td><td class='mat'>frequency frames</td></tr><tr><td class='min'>19–24′</td><td class='stage'><div class='nm'>Учимся ловить общий смысл, не каждое слово</div><div class='sub'>Discover · general idea (subskill)</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> субнавык с опорой: смотрим на инфографику 60 сек и отвечаем, о чём страница — не читая текст</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Читаю субнавык просто: <span class='en'>Rule of smart readers: first time — you do NOT read every word. You catch the BIG idea.</span></li><li>Тренируем на инфографике (ex.3): <span class='en'>Sixty seconds, look at page 39, DON'T read the article. What is it about: food? health? meat? sport?</span></li><li>Собираю: о чём страница? Which is NOT there? (sport — ключ TB). +1.</li><li>Заголовок: <span class='en'>MEATLESS Mondays. ‘-less’ = without. Mondays without…? — Meat!</span> (TB-ход)</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник p.39 · слайд-правило субнавыка</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> сканируют инфографику и заголовок, получают общий смысл ДО чтения. Ожидаемо: «понедельник без мяса!» сами. Типичная ошибка: начинают читать статью — «Look, don't read!»</div></td><td class='mat'>SB p.39</td></tr><tr><td class='min'>24–38′</td><td class='stage'><div class='nm'>Читаем по кускам с проверкой понимания</div><div class='sub'>Read · chunk by chunk</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> текст по кускам: 3 параграфа = 3 задачи с таймером; матч параграфы↔вопросы; вскрываем «верю–не верю»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Кусок 1 (пар. 1) + задача: <span class='en'>Find TWO numbers. Two minutes.</span> (375 million · «one day a week»). Проверка.</li><li>Кусок 2 (пар. 2): <span class='en'>Find: water for one burger? gas — who makes more?</span> (1,600 litres; farm animals). Вскрываем фишки ①–②: <span class='en'>Believers — points!</span></li><li>Кусок 3 (пар. 3): <span class='en'>Find: how many countries? who is Meghan?</span> (40; a vegan student from Vancouver).</li><li>Сборка ex.4 с опорой: параграфы↔вопросы a–c командами (ключ: a2·b3·c1). Fun facts box: vegetarian/pescatarian/vegan — вскрываем фишку ③ (False!).</li><li>Audio 25 фоном при желании во время чтения кусков.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник pp.38–39 · таймер · фишки «верю–не верю» на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> читают кусками с конкретной охотой, вскрывают утренние догадки, матчат параграфы. Ожидаемо: «1,600 — TRUE?!» — вау-эффект работает на чтение. Типичная ошибка: переводят подряд — таймер + «нужен ФАКТ, не перевод».</div><span class='diff'><span class='sup'>💪 Support (TB Reinforcement):</span> команде послабее — куски с подчёркнутыми ключевыми словами. <span class='ext'>⭐ Быстрым:</span> конверт «Fact+»: ещё 1 число + 1 имя из инфографики.</span></td><td class='mat'>SB pp.38–39 · timer</td></tr><tr><td class='min'>38–45′</td><td class='stage'><div class='nm'>Числа текста на мини-досках</div><div class='sub'>Check · numbers showdown</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> числа текста на мини-досках: матч ex.6 флипами по 10 сек; хвалим точность</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Формат: называю число — команды пишут, ЧТО оно значит (коротко!). <span class='en'>375 million — what is it? Boards UP!</span> (vegetarians)</li><li>4 раунда: 375 million · 1,600 · 40 · 5 (ключ ex.6 TB: 1d·2a·3b·4c — пять школ Ванкувера).</li><li>+1 за верную доску; спорные — ищем строку в тексте вместе.</li><li>Мини-мост: <span class='en'>Numbers are facts. Facts win arguments. Keep yours — debate in ten minutes!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-доски · слайд чисел</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> флипают значения чисел одновременно. Ожидаемо: 3 из 4 у большинства. Типичная ошибка: 5 = «стран» — перечитываем строку про Ванкувер вместе.</div></td><td class='mat'>mini-boards</td></tr><tr><td class='min'>45–54′</td><td class='stage'><div class='nm'>6 новых слов из текста (Word work)</div><div class='sub'>Word work round</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 6 bold-слов текста: матч с определениями за 3 мин + пары гоняют друг друга по карточкам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ex.7 с таймером: <span class='en'>Six bold words in the text — six definitions. Use the sentence around the word! Three minutes.</span></li><li>Ключ TB: 1 planet · 2 less · 3 production · 4 promise · 5 environment · 6 gas. Произношение: promise /ˈprɒmɪs/, environment по слогам.</li><li>Пары: A гоняет B по 3 карточкам, свап: <span class='en'>The opposite of more? — Less!</span></li><li>Блиц ex.8 устно 3 пункта с опорой (слово в чужом предложении → верное слово хором).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник p.38 ex.7–8 · карточки 6 слов · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> матчат по контексту, гоняют партнёра карточками. Ожидаемо: less/planet мгновенно, environment со скрипом — хлопаем слоги. Типичная ошибка: promise = «промис»-калька — «I PROMISE to do my homework!» с рукой на сердце.</div></td><td class='mat'>SB p.38 · word cards</td></tr><tr><td class='min'>54–64′</td><td class='stage'><div class='nm'>Голосуем и говорим по модели: мясо — да/нет?</div><div class='sub'>Critical thinking · за и против</div><div class='zone'>standing → desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> физическое голосование «Meatless Monday в нашей школе?» + аргументы по рамкам с подсказками TB</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Физически: <span class='en'>Meat-free Monday at OUR school? Stand LEFT = yes, RIGHT = no, MIDDLE = not sure.</span></li><li>Рамки на доску: <b>I think it's a good idea because… / I don't agree because…</b> + подсказки TB: health · animals · jobs · family food.</li><li>По 2 добровольца с каждой стороны — предложение по рамке (+2 за факт из текста!).</li><li>Apply-вопрос TB: <span class='en'>Good reasons FOR eating meat?</span> — собираю 2–3 идеи, рекаст в англ.</li><li>Финальное перестроение: <span class='en'>Change sides if somebody convinced you!</span> — кто перешёл, почему (1 фраза).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: рамки + подсказки · пространство для перестроений</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> голосуют телом, аргументируют рамками, меняют сторону, если убедили. Ожидаемо: 2–3 перехода — «слова двигают людей» видно физически. Типичная ошибка: аргумент по-русски — принимаю, рекаст, повтор за очко.</div></td><td class='mat'>frames on board</td></tr><tr><td class='min'>64–74′</td><td class='stage'><div class='nm'>Пишем вердикт: 3 предложения по рамкам</div><div class='sub'>Build · verdict portion</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> пишут вердикт: 3 предложения по рамкам (мнение + факт + частотность о себе); взаимопроверка 2 галочки</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Модель: <i>I think Meatless Monday is a good idea because you need 1,600 litres of water for one burger. I eat meat one or two days a week.</i></li><li>Рамки: <i>I think Meatless Monday is a ___ idea because ___ . I eat meat ___ . I never eat ___ .</i></li><li><span class='en'>Three sentences. Six minutes.</span> Таймер, хожу с карандашом.</li><li>Peer review: <span class='en'>Swap. TWO boxes: ☐ a FACT from the text? ☐ frequency at the END of the sentence? Tick or underline.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: модель → рамки · слайд 2 галочек · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут 3 предложения с фактом, проверяют парой по 2 пунктам. Ожидаемо: факты из showdown идут в дело. Типичная ошибка: «because is good» — рамка целиком: because IT'S good.</div></td><td class='mat'>notebooks · 2-box slide</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Игра «факт-теннис»: чей факт последний?</div><div class='sub'>Play · Fact tennis</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> закрепление-игра: команды перекидываются фактами текста — кто последний, тот выиграл</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Правила: команды по очереди называют факт текста ПОЛНЫМ предложением; повторяться нельзя; 10 сек на ход.</li><li><span class='en'>375 million people are vegetarian! — Your turn!</span></li><li>Подсказки разрешены из тетради/текста; судья — я; последний живой факт побеждает.</li><li>2 раунда, очки в табло.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> текст/тетради открыты · табло</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> перекидываются фактами полными предложениями. Ожидаемо: 8–12 обменов; числа из showdown живут. Типичная ошибка: повтор факта — класс хором «Repeat!», ход сгорает.</div></td><td class='mat'>points board</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Итоги + рефлексия</div><div class='sub'>Share & Reflect</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> по одному вердикту вслух; очки; смайлик-самооценка субнавыка; ДЗ</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Круг: 4–5 добровольцев читают вердикт (по 1 предложению).</li><li>Очки, команда дня.</li><li>Рефлексия субнавыка: <span class='en'>Did you understand EVERY word today? — No! Did you get the IDEA? — Yes! That's the skill.</span> Смайлик в тетрадь.</li><li>ДЗ: WB p.24 — <span class='en'>same skill, new text — restaurants where YOU are the cook!</span> + Research.</li><li>Тизер: <span class='en'>Next: somebody's lunchbox has a grammar mystery inside…</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> табло · слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> читают вердикты, ставят смайлик субнавыку, фотографируют ДЗ. Ожидаемо: гордость «прочитал настоящую статью».</div></td><td class='mat'>points board · HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook (🐣 звёзды ☆–☆☆, ☆☆☆ = бонус):</b> <b>WB p.24</b> (Reading «An online recommendation») ex.1 (☆ title), ex.2 (☆☆ photos), ex.3 (☆☆ table). Бонус ☆☆☆: ex.4 match halves.</p><p>🔎 Research bonus (+5 pts): find out if Meatless Mondays exist where we live + 1 famous person who does them.</p></td><td class='mat'>WB U3 (pp.20–27) · notebook · phone photo of board OK</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>get the general idea of a news story without understanding every word</b> and report 3 facts: “375 million people are vegetarian. You need 1,600 litres of water for one burger.”</li>
+      <li><span class="lb">Subsidiary.</span> Reading subskill: <b>understanding the general idea</b> — с опорой и по кускам; Word work — 6 слов текста; Critical thinking через голосование «за/против» с рамками ответов; частотные выражения (every day · never · one or two days a week).</li>
+      <li><span class="lb">Personal.</span> Первый ДЛИННЫЙ текст юнита у нулевиков — снять панику вслух: «понимать каждое слово НЕ нужно». Читаем кусками с задачей на каждый кусок, фронтального чтения вслух нет. Хвалить скорость находок, не перевод.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>say how often they eat things (frequency frames)</li><li>get the general idea of a paragraph</li><li>find a number-fact in a text chunk</li><li>vote and defend a choice with a model sentence</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Hook</span><span>Discover</span><span>Try it</span><span>Play</span><span>Build</span><span>Share</span><span>Reflect</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>planet</span><span class='w'>less</span><span class='w'>production</span><span class='w'>promise</span><span class='w'>environment</span><span class='w'>gas</span><span class='w'>vegetarian</span><span class='w'>vegan</span><span class='w'>diet</span><span class='w'>burger</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I eat meat every day / one or two days a week. · I never eat fish. · 375 million people are vegetarian. · I think it's a good/bad idea because…</div></div>
+      <div class="r"><div class="k">Form</div><div>частотность в конце предложения; NEVER — перед глаголом: I never eat meat (TB note); vegetarian/vegan/pescatarian — fun facts box.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>vegetarian /ˌvedʒəˈteəriən/ по слогам с хлопками · promise /ˈprɒmɪs/ · environment — не читать все буквы.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Нужно понять каждое слово текста?” → No — general idea: ключевые слова.</div><div class='ccq'>“Vegan ест сыр?” → No — no food from animals (fun facts box).</div><div class='ccq'>“I eat never meat?” → No — I NEVER eat meat.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Слова еды из P1 свежие (rewind достаёт). Длинный аутентичный текст — впервые; успех переопределяем как «найти факт». Числа-миллионы потренированы в Starter (numbers 1–100 → расширяем на million устно).</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Паника перед стеной текста</td><td>Правило-слайд: «You do NOT need every word. You need the idea.» Моделирую один кусок сам, думая вслух.</td></tr><tr><td>Читают по одному вслух → скука</td><td>Никогда: каждый кусок = задача командам с таймером; чтение только про себя.</td></tr><tr><td>Word work уходит в словарь</td><td>Матч только 6 BOLD-слов, карточки на партах, таймер 3 мин.</td></tr><tr><td>Голосование скатывается в русский</td><td>Рамки на доске: «I think it's a good idea because…»; только рамка = аргумент.</td></tr><tr><td>Быстрые команды простаивают</td><td>Конверт «Fact+»: найди ещё 1 число и 1 имя в тексте (TB Fast finishers стиль).</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 3 “Eat well” (What's the ideal meal?) · GIA1zero — lesson plan &amp; staging</span>
+    <span>SB pp.38–39 (audio 25) · ключи TB: ex.3 sport, ex.4 a2·b3·c1, ex.6 1d·2a·3b·4c, ex.7. КТП пара 20. Чтение кусками, не фронтально. До урока: фишки «верю–не верю», карточки Word work, слайды кусков.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

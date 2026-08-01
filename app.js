@@ -202,6 +202,17 @@ function doneKey(g,date){ return "done:"+g.name+":"+iso(date); }
 function planKeyFor(program, L){
   if (!window.PLANS) return null;
   const src = L.unit || L.sec || "";
+  // Get Involved: пары нумеруются сквозняком 1–72, план = <prog>-U<юнит>-P<№ пары внутри юнита>
+  if (program==="GIA1" || program==="GIA1zero"){
+    const um = /UNIT\s*(\d+)/i.exec(src);
+    if (!um) return null;
+    const prog = window.PROGRAMS[program];
+    const same = (prog?.lessons||[]).filter(x=>x.sec===L.sec).map(x=>x.n).sort((a,b)=>a-b);
+    const idx = same.indexOf(L.n);
+    if (idx < 0) return null;
+    const k = `${program}-U${um[1]}-P${idx+1}`;
+    return window.PLANS[k] ? k : null;
+  }
   // Genki (новый КТП): юнит = уровень + «Урок N» ИЛИ «Review» → ключ Genki-<Level>-L<N> / -Review
   const gl = /^(Adventure|Brainy|Christmas|Challenge|Danger|Experts|Fantastic|Giant|High)\s+(?:Урок\s*(\d+)|(Review))/i.exec(src);
   if (gl){ const suf = gl[2] ? ("L"+gl[2]) : "Review"; const glkey = `${program}-${gl[1]}-${suf}`; return window.PLANS[glkey] ? glkey : null; }

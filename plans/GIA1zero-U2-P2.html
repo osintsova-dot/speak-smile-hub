@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1zero · Unit 2 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 2 “Family” · Pair 2 — Reading quest: Meet the Putmans (26 people, one house!)</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · input → guided practice → speaking, in game shells · pairs + teams of 3 · points, no dry drills</div>
+    <div class="meta"><span class='chip'>Week 12.10–18.10 · lessons 25–26 (KTP pair 13)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>SB pp.26–27</span><span class='chip'>teams of 3 · unit points board</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход в урок: приветствие + повтор прошлой пары</td><td>слово о выходных; пинг-понг «мужское→женское» + 2 слова письменно (повтор P1); мостик «включаем телевизор»</td></tr><tr><td class='gmin'>6–10′</td><td class='gname'>Ставки до чтения: верю / не верю</td><td>фото со стр. 27: большая или маленькая семья? 4 ставки «верю/не верю» письменно, лицом вниз</td></tr><tr><td class='gmin'>10–18′</td><td class='gname'>Приём читателя: прогноз до чтения</td><td>приём «фото и заголовки говорят первыми»: тип страницы (TV guide) по виду; первое чтение с audio 17 — только проверка ставок</td></tr><tr><td class='gmin'>18–32′</td><td class='gname'>Квест по тексту: охота за фактами</td><td>жиг-со: каждый рейдит СВОЮ станцию-абзац с картой охоты (3 факта), возвращается и диктует команде — нужны все 12</td></tr><tr><td class='gmin'>32–41′</td><td class='gname'>Правда/ложь на мини-досках</td><td>утверждения ex.4 → все пишут T/F одновременно; ложь чиним фразой с haven't got (закладка на P3)</td></tr><tr><td class='gmin'>41–50′</td><td class='gname'>6 новых слов из текста (Word work)</td><td>конверты: 6 слов текста ↔ 6 определений на скорость; хоровое эхо; предложение о себе</td></tr><tr><td class='gmin'>50–60′</td><td class='gname'>Читаем комменты: кто счастлив и почему</td><td>3 онлайн-коммента (ex.8): кто единственный ребёнок, кто счастлив и почему; «кто похож на тебя?» по рамке</td></tr><tr><td class='gmin'>60–71′</td><td class='gname'>Большая или маленькая семья: плюсы и минусы</td><td>плюсы/минусы большой семьи из текста (Understand) → маленькой из головы (Apply) → голосование «идеальный размер» (Evaluate)</td></tr><tr><td class='gmin'>71–83′</td><td class='gname'>Пишем вердикт: 3 предложения</td><td>каждый пишет вердикт из 3 предложений (большая или маленькая семья — для меня + 2 факта), взаимопроверка</td></tr><tr><td class='gmin'>83–90′</td><td class='gname'>Итоги + рефлексия</td><td>3 вердикта вслух, сравнение с утренними ставками, очки, рефлексия, ДЗ</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 2 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор прошлой пары</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> слово о выходных; пинг-понг «мужское→женское» + 2 слова письменно (повтор P1); мостик «включаем телевизор»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери: <span class='en'>One word about your weekend!</span></li><li>Повтор P1 пинг-понгом с цветожестами: <span class='en'>father! — MOTHER! nephew! — NIECE! cousin! — COUSIN!</span></li><li>2 раунда письменно: <span class='en'>On boards: DAUGHTER!</span> — доски вверх, спеллинг важен, +1.</li><li>Мостик: <span class='en'>You know family words. Now — TV time: a family SO big you won't believe it. Twenty-six people. One house.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-доски · цветожесты из P1</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пинг-понгуют пары слов, пишут спеллинг. Ожидаемо: daughter уже чище. Типичная ошибка: «dauther» — палец на древо (остатки на доске/слайде).</div></td><td class='mat'>мини-доски</td></tr><tr><td class='min'>6–10′</td><td class='stage'><div class='nm'>Ставки до чтения: верю / не верю</div><div class='sub'>Hook · prediction bets</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> фото со стр. 27: большая или маленькая семья? 4 ставки «верю/не верю» письменно, лицом вниз</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Открываю фото p.27 (или учебники): <span class='en'>Look — the Putmans. Big family or small? Why unusual? Team guess — thirty seconds!</span></li><li>Вывожу 4 заявления: 26 people live in ONE house · each child has got a bedroom · they've got three cars · dinner is at ONE big table.</li><li>Команда: <span class='en'>Believe or not? Write T or F — face down! We check by READING.</span></li><li>(Ключ себе: T/F/F/F.)</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> фото p.27 · слайд 4 заявлений · листки-ставки</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> ставят письменно до чтения — двигаются все. Ожидаемо: «three cars» ловит многих. Ставки не озвучиваем!</div></td><td class='mat'>SB p.27 · bet slips</td></tr><tr><td class='min'>10–18′</td><td class='stage'><div class='nm'>Приём читателя: прогноз до чтения</div><div class='sub'>Discover · predicting (subskill)</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> приём «фото и заголовки говорят первыми»: тип страницы (TV guide) по виду; первое чтение с audio 17 — только проверка ставок</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Учу приёму: <span class='en'>Pro readers PREDICT: photos, titles, buttons — first. Reading — second. That's the subskill.</span></li><li>30 сек НЕ читая: <span class='en'>What page is it? Tabs? «Add to watchlist»? — a TV GUIDE!</span> +2 за признак.</li><li>Первое чтение с audio 17: <span class='en'>Read along. Check ONLY your four bets. Three minutes.</span></li><li>Вскрываем ставки хором: <span class='en'>One house — TRUE! Three cars — FALSE… they've got a BUS!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник pp.26–27 · audio 17 (бэкап: читаю сам) · ставки на партах</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> определяют тип страницы, читают с прицелом на ставки, вскрывают. Ожидаемо: «BUS!» с восторгом. Типичная ошибка: построчный перевод — «Scan for YOUR bet!»</div></td><td class='mat'>SB pp.26–27 · audio 17</td></tr><tr><td class='min'>18–32′</td><td class='stage'><div class='nm'>Квест по тексту: охота за фактами</div><div class='sub'>Play · Fact Hunt stations</div><div class='zone'>4 stations</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> жиг-со: каждый рейдит СВОЮ станцию-абзац с картой охоты (3 факта), возвращается и диктует команде — нужны все 12</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>До урока — 4 станции-абзаца по углам: №1 семья (26·names·«B») · №2 дом (small·2 bathrooms·share) · №3 транспорт+школа (bus·parents drive) · №4 вечера (homework help·dinner 6·three tables).</li><li>Раздаю карты охоты (3 коротких вопроса на станцию).</li><li>ICQ: <span class='en'>Copy sentences? — No! Short answers: bus, six, Montana!</span></li><li>Запускаю: <span class='en'>Four minutes — GO!</span> Возврат: диктуют команде, командный лист на 12 фактов; первой полной +5.</li><li>Сверка по ключу ex.3 (TB): Montana, USA · house · grandparents · four, 16 · small · bus · six.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> 4 станции · карты охоты · командные листы · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> рейдят свои станции, диктуют команде короткие ответы. Ожидаемо: Amsterdam-навык из U1 переносится: слова, не предложения. Типичная ошибка: переписывают предложение — образец «bus» одним словом.</div><span class='diff'><span class='ext'>⭐ Быстрым:</span> конверт «Fact+»: число, имя и «B»-имя, которых никто не использовал.</span></td><td class='mat'>stations · hunt cards · timer</td></tr><tr><td class='min'>32–41′</td><td class='stage'><div class='nm'>Правда/ложь на мини-досках</div><div class='sub'>Check · true/false showdown</div><div class='zone'>desks · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> утверждения ex.4 → все пишут T/F одновременно; ложь чиним фразой с haven't got (закладка на P3)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вывожу утверждение 1 (Bill and Barb have got two daughters).</li><li>Командую: <span class='en'>T or F on boards — five seconds — UP!</span></li><li>Ложь чиним хором двумя ходами: <span class='en'>They HAVEN'T got two daughters — they've got ONE daughter and three sons!</span></li><li>Прохожу все 6 (ключ TB: F·T·F·T·F·F).</li><li>Закладка: <span class='en'>Hear the move? HAVE got — HAVEN'T got. Remember it. Pair 3 — we open this machine.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайды утверждений по одному · мини-доски · ключ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> каждый коммитит T/F, ложь исправляют хором с haven't got. Ожидаемо: «They haven't got a car — a BUS!». Типичная ошибка: «they no have» — эхо рамкой, глубоко не чиню (система в P3).</div></td><td class='mat'>mini-boards · slides</td></tr><tr><td class='min'>41–50′</td><td class='stage'><div class='nm'>6 новых слов из текста (Word work)</div><div class='sub'>Word work round</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> конверты: 6 слов текста ↔ 6 определений на скорость; хоровое эхо; предложение о себе</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Раздаю конверты: unusual · reality show · share · lonely · together · fun + 6 определений (ex.5).</li><li>Запускаю: <span class='en'>Match! Three minutes!</span></li><li>Проверяю хоровым эхом: <span class='en'>Sad because you aren't with people? — LONELY! Use with another person? — SHARE!</span></li><li>Присвоение: <span class='en'>ONE sentence about YOU with any word: I share a room with… / My favourite reality show is…</span> — сказать соседней паре.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> конверты Word work · ключ на слайде</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> матчат, эхо-отвечают, присваивают слово о себе. Ожидаемо: «I share a room with my sister». Типичная ошибка: lonely=alone — CCQ из справки.</div></td><td class='mat'>word card sets</td></tr><tr><td class='min'>50–60′</td><td class='stage'><div class='nm'>Читаем комменты: кто счастлив и почему</div><div class='sub'>Comments · Eli, Clara, Toby</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 3 онлайн-коммента (ex.8): кто единственный ребёнок, кто счастлив и почему; «кто похож на тебя?» по рамке</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Пре-тич (TB): <span class='en'>annoying = makes you a little angry. My little brother sings ONE song all day — annoying!</span></li><li>Команды читают 3 коммента (90 сек): <span class='en'>Who is an only child? Who's happy? Who isn't — and why?</span></li><li>Проверка (ключ TB): only children — Eli и Toby; happy — Toby (много кузенов!); не очень — Eli (хочет сестру), Clara (надоедливые братья).</li><li>Рамка: <b>I'm like ___ because I've got / I haven't got ___ .</b> — 3–4 добровольца вслух.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник p.26 ex.8 · рамка на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> находят авторов по признакам, сравнивают с собой по рамке. Ожидаемо: «I'm like Clara — annoying brother!» + смех. Типичная ошибка: пересказ по-русски — рамка возвращает в английский.</div></td><td class='mat'>SB p.26</td></tr><tr><td class='min'>60–71′</td><td class='stage'><div class='nm'>Большая или маленькая семья: плюсы и минусы</div><div class='sub'>Critical thinking · big or small?</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> плюсы/минусы большой семьи из текста (Understand) → маленькой из головы (Apply) → голосование «идеальный размер» (Evaluate)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Understand: <span class='en'>Two GOOD things + two HARD things about a big family — FROM the text! Three minutes.</span> (помощь: never lonely · homework help / share a room · two bathrooms · noisy).</li><li>Apply: <span class='en'>Now a SMALL family — your ideas, the frame helps: You've got your own room. It's quiet.</span></li><li>Evaluate голосованием: <span class='en'>The ideal number of people in a family? Write YOUR number — boards up! Defend in one frame-sentence.</span></li><li>Рамки на доске: <b>A big family is ___ because ___ . / In a small family you've got ___ .</b></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: таблица «good/hard» + рамки · мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> вытаскивают аргументы из текста, добавляют свои, голосуют числом с защитой. Ожидаемо: числа 3–6, споры по рамкам. Типичная ошибка: аргумент по-русски — не попадает в таблицу (правило объявлено).</div></td><td class='mat'>argument table · mini-boards</td></tr><tr><td class='min'>71–83′</td><td class='stage'><div class='nm'>Пишем вердикт: 3 предложения</div><div class='sub'>Build · verdict portion</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> каждый пишет вердикт из 3 предложений (большая или маленькая семья — для меня + 2 факта), взаимопроверка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Рамка: <i>A big/small family is for me. Fact 1: … (from the text). Fact 2: … (my idea).</i></li><li>Пишем 5 минут, таймер.</li><li>Peer check: <span class='en'>Swap. Two boxes: real fact from the text? have got correct? Fix and return.</span> +1 за чистую проверку.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> рамка вердикта на доске · слайд 2 галочек · командные листы фактов</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут 3 предложения с опорой на добытые факты. Ожидаемо: «Fact 1: they've got a bus!». Типичная ошибка: выдуманный «факт из текста» — проверяющий спрашивает «Which paragraph?».</div></td><td class='mat'>notebooks · frames</td></tr><tr><td class='min'>83–90′</td><td class='stage'><div class='nm'>Итоги + рефлексия</div><div class='sub'>Share & Reflect</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 3 вердикта вслух, сравнение с утренними ставками, очки, рефлексия, ДЗ</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>3 добровольца читают вердикты; класс голосует пальцами «согласен/нет».</li><li>Возврат к ставкам: <span class='en'>Morning bets vs facts — did READING change your mind?</span></li><li>Очки. Рефлексия: <span class='en'>Fist to five: how brave are you with BIG English pages now?</span></li><li>ДЗ (WB стр. 16 — там ТОТ ЖЕ приём: сначала фото, потом чтение!) + тизер: <span class='en'>Pair 3 — the have got machine opens. And a case of twins nobody believes.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> табло · слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают, голосуют, сравнивают «до/после». Ожидаемо: часть честно меняет мнение — победа фактов.</div></td><td class='mat'>points board · HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook (родная тетрадь):</b> Workbook стр. 16, зад. 1–3 (☆–☆☆): книжная рекомендация «The Rest of the Story» — тот же subskill predicting, что на уроке (сначала фото → прогноз, потом чтение; аудио WB не обязательно).</p><p>⭐ Бонус (☆☆☆, +5): зад. 4 (правда/ложь + почини) ИЛИ зад. 5 — хочешь ли прочитать книгу и почему.</p></td><td class='mat'>WB Unit 2 (стр. 12–19) · фото доски на телефон — можно</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>find facts in a TV-guide article</b> and report them with simple <i>have got</i> sentences: “They've got a bus! The children haven't got their own bedroom.”</li>
+      <li><span class="lb">Subsidiary.</span> Reading subskill: <b>predicting what a text is about</b> (bets before reading); Word work — 6 text words; online comments (Eli·Clara·Toby); Critical thinking Understand→Apply→Evaluate with heavy scaffolds.</li>
+      <li><span class="lb">Personal.</span> Never read the page aloud frontally — bets and hunts do the reading. Timer visible in every hunt. Praise fact-finding speed, not translation. Seed haven't got corrections for Pair 3.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>predict text content from photos and check</li><li>find a named fact within a time limit</li><li>match 6 new words to definitions</li><li>say one advantage and one disadvantage of a big family</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Hook</span><span>Discover</span><span>Try it</span><span>Play</span><span>Build</span><span>Share</span><span>Reflect</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>lonely</span><span class='w'>together</span><span class='w'>unusual</span><span class='w'>share</span><span class='w'>reality show</span><span class='w'>fun</span><span class='w'>big family</span><span class='w'>only child</span><span class='w'>grandchildren</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>The Putmans have got 16 grandchildren. · They haven't got a car — they've got a bus! · A big family is fun because…</div></div>
+      <div class="r"><div class="k">Form</div><div>text type: a TV guide page (tabs, watchlist, blurb); paragraphs as fact-stations.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>unusual /ʌnˈjuːʒuəl/ · lonely /ˈləʊnli/ · together — stress GE.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Predicting = guessing after reading?” → No — BEFORE. Photos and titles speak first.</div><div class='ccq'>“Lonely = alone?” → No: alone = один, lonely = грустно одному.</div><div class='ccq'>“Share a room = у каждого своя комната?” → No — one room TOGETHER.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> 17 family words fresh from P1 (rewind retrieves them). Reading a long authentic page is scary — success = find facts, not understand every word; say it out loud. have got frames from P1 keep working receptively.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Panic at the wall of text</td><td>Rule on slide: “You do NOT need every word. You need THE fact.” Model one hunt aloud.</td></tr><tr><td>Everyone reads only paragraph 1</td><td>Jigsaw: each team member owns ONE station; the team needs all facts to win.</td></tr><tr><td>Word work turns into dictionary time</td><td>Cards matched to BOLD words only, 3-min timer, then choral echo.</td></tr><tr><td>Critical thinking slides into Russian</td><td>Frame strips: “A big family is fun because…” — only frame-sentences score.</td></tr><tr><td>Fast teams finish hunts early</td><td>Envelope «Fact+»: find a number, a name and a «B»-name nobody used.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 2 “Family” (What is a family?) · GIA1zero — lesson plan &amp; staging</span>
+    <span>SB pp.26–27 (audio 17) · Subskill: predicting → в ДЗ тот же приём (WB p.16). КТП пара 13. Тексты — на станциях (копирайт: домой не тиражируем). До урока: 4 станции, карты охоты, конверты Word work, слипы ставок.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

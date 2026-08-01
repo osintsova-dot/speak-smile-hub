@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1zero · Unit 4 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 4 “My time” · Pair 2 — Reading: Life in a K-pop academy (по кускам, с опорой)</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · input → guided practice → speaking, in game shells · pairs + teams of 3 · points, no dry drills</div>
+    <div class="meta"><span class='chip'>Week 30.11–06.12 · lessons 51–52 (KTP pair 26)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>SB pp.50–51</span><span class='chip'>teams of 3 · unit points board</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход + повтор P1 руками</td><td>вход; rewind P1: «живые часы» руками + 3 routine-жеста; мостик</td></tr><tr><td class='gmin'>6–12′</td><td class='gname'>Крючок: квиз о K-pop</td><td>ex.1 квиз о K-pop парами + ex.2 проверка по боксу Did you know?</td></tr><tr><td class='gmin'>12–18′</td><td class='gname'>Ввод: 6 слов до чтения</td><td>6 слов текста ДО чтения с картинками и жестами: fan · star · lucky · breaks · concerts · become</td></tr><tr><td class='gmin'>18–26′</td><td class='gname'>Приём чтения + первый заход</td><td>subskill reading for detail по шагам + ex.3 первый заход: easy or difficult?</td></tr><tr><td class='gmin'>26–36′</td><td class='gname'>Читаем по кускам: расписание академии</td><td>ex.4 расписание академии: текст по 4 кускам, после каждого — заполняем свои пропуски (audio 30 фоном)</td></tr><tr><td class='gmin'>36–45′</td><td class='gname'>Правда/ложь с доказательством (конец урока А)</td><td>ex.5 true/false с опорой «where does it say?» + ex.6 Ли и Джейми; чекпойнт урока А</td></tr><tr class='bridge'><td class='gmin'>45–52′</td><td class='gname'>Разминка: цепочка-память routines</td><td>разминка-мостик: игра на память с routine-фразами (TB Warmer) — движение после чтения</td></tr><tr><td class='gmin'>52–60′</td><td class='gname'>Word work: слова назад в текст</td><td>ex.7 матч определений (теперь легко — слова знакомы) + ex.8 предложения о себе</td></tr><tr><td class='gmin'>60–70′</td><td class='gname'>Критическое мышление: голосуем и спорим по рамкам</td><td>критическое мышление через выбор: голосование «трудно/ОК?» + рамки advantages/disadvantages (по 2)</td></tr><tr><td class='gmin'>70–84′</td><td class='gname'>Пишем: один день в академии</td><td>мини-продукт: 4 предложения от лица студента академии по опоре (TB extra) + чтение партнёру + 2 на класс</td></tr><tr><td class='gmin'>84–90′</td><td class='gname'>Итоги + рефлексия</td><td>итоги, рефлексия «я прочитал настоящую статью», ДЗ WB p.32</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 4 — страница пары (звёзды по линии: 🐣 ☆/☆☆ · 🚀 ☆☆/☆☆☆) + бонус за очки (детали внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход + повтор P1 руками</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вход; rewind P1: «живые часы» руками + 3 routine-жеста; мостик</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери: <span class='en'>One word — your morning: good or bad?</span></li><li>Rewind: <span class='en'>Hands are clock hands! Show: half past seven… quarter to four…</span> 3 раунда; 3 routine-жеста — класс хором фразы.</li><li>Мостик: <span class='en'>You get up at seven, poor you! Today — kids who get up at FIVE and go to bed after MIDNIGHT. Why?!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> якорь-часы на доске (восстановить)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> показывают время руками и фразы жестами — двигаются все с первой минуты. Ожидаемо: разгон за 3 мин.</div></td><td class='mat'>—</td></tr><tr><td class='min'>6–12′</td><td class='stage'><div class='nm'>Крючок: квиз о K-pop</div><div class='sub'>Hook · K-pop quiz</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1 квиз о K-pop парами + ex.2 проверка по боксу Did you know?</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ex.1: <span class='en'>Four questions about K-pop — pairs, two minutes! Where is it from? What type of music?</span></li><li>Собираю версии (не подтверждаю); ex.2: <span class='en'>Sixty seconds — check in the ‘Did you know?’ box on p.51!</span></li><li>Ключ: South Korea · mix of styles · dance AND sing + famous videos · свои ответы.</li><li>+1 за верные догадки; 30-сек culture note: Gangnam Style — вершина чартов в 30+ странах (TB p.60).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.50–51 · слайд с 4 вопросами</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> угадывают парами и проверяют по боксу. Ожидаемо: половина класса знает BTS — энергия сама. Типичная ошибка: Korea/Japan путают — бокс чинит.</div></td><td class='mat'>SB pp.50–51</td></tr><tr><td class='min'>12–18′</td><td class='stage'><div class='nm'>Ввод: 6 слов до чтения</div><div class='sub'>Discover · Word work first (глоссарий)</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 6 слов текста ДО чтения с картинками и жестами: fan · star · lucky · breaks · concerts · become</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ввожу по одному с картинкой/жестом: <span class='en'>fan — a person who LOVES a band · star — a famous person · lucky — happy chance! · breaks — free time between lessons · concerts · become — to start to be.</span></li><li>Хор ×2 на каждое; мини-чек: <span class='en'>Free time between lessons? — Breaks! A Manchester City lover? — A fan!</span></li><li>Слова остаются на доске столбиком — глоссарий охоты.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> 6 карточек-слов с картинками · доска-глоссарий</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> повторяют слова с жестами и отвечают на мини-чек. Ожидаемо: fan/star знают, breaks/become — новые. Типичная ошибка: break=сломать — жест «перемена».</div></td><td class='mat'>word cards</td></tr><tr><td class='min'>18–26′</td><td class='stage'><div class='nm'>Приём чтения + первый заход</div><div class='sub'>Discover 2 · subskill + quick read</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> subskill reading for detail по шагам + ex.3 первый заход: easy or difficult?</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Subskill на доске схемой: ПРОПУСК → какой ТИП слова? (время? действие?) → ищи РЯДОМ в тексте.</li><li>Тренируем на одном примере вместе: ex.4 строка 1 — «5:00 am ___, have breakfast» → пропуск = действие → ищем: get up!</li><li>Ex.3: <span class='en'>Ninety seconds, look through the article: is it EASY or DIFFICULT to become a K-pop singer? Just find the answer.</span></li><li>Проверка: It's difficult — и почему (they practise a lot).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.50–51 · схема subskill на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> осваивают приём на общем примере, делают первый короткий заход в текст. Ожидаемо: «difficult!» находят все. Типичная ошибка: читают подряд — схема пальцем: сначала пропуск!</div></td><td class='mat'>SB p.50</td></tr><tr><td class='min'>26–36′</td><td class='stage'><div class='nm'>Читаем по кускам: расписание академии</div><div class='sub'>Read · schedule chunk by chunk</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.4 расписание академии: текст по 4 кускам, после каждого — заполняем свои пропуски (audio 30 фоном)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Кусок 1 (абзацы 1–2): читаем (audio 30 или я вслух), команды заполняют пропуски этого куска. Проверка сразу.</li><li>Кусок 2 (finish school → dinner), кусок 3 (after dinner → languages), кусок 4 (lessons finish → start again) — так же.</li><li>Ключ собирается на доске: get up · 8:00 am · 5:00 pm · have lessons · 10:00 pm · go to bed.</li><li>Reinforcement (TB): сначала найди все ВРЕМЕНА в тексте, потом действия.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.50–51 · audio 30 · расписание-ключ строится на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> читают кусками с мгновенной проверкой — успех после каждого куска. Ожидаемо: все 6 пропусков к концу. Типичная ошибка: 5:00 am и 5:00 pm путают — жест утро/вечер.</div></td><td class='mat'>SB p.50 · audio 30</td></tr><tr><td class='min'>36–45′</td><td class='stage'><div class='nm'>Правда/ложь с доказательством (конец урока А)</div><div class='sub'>Check · T/F with evidence + чекпойнт</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.5 true/false с опорой «where does it say?» + ex.6 Ли и Джейми; чекпойнт урока А</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ex.5 по одному: команда отвечает T/F И показывает строку. <span class='en'>False! The text says: they're 8 to 14.</span> (+1 ответ, +1 строка).</li><li>Support: номера абзацев подсказкой на доске (1 → para 1…).</li><li>Ex.6 блиц: <span class='en'>Lee Jae-Gi — what does he do? Jamie Choi?</span> (studies 3 hours every evening · makes music videos).</li><li>Чекпойнт 45′: <span class='en'>You just read a REAL online article. All of it. Respect.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.50–51 · подсказки абзацев</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> отвечают с доказательством-строкой. Ожидаемо: 5–6 из 6 с опорой. Типичная ошибка: T/F без строки — «покажи пальцем — тогда очко».</div></td><td class='mat'>SB p.50</td></tr><tr class='bridge'><td class='min'>45–52′</td><td class='stage'><div class='nm'>Разминка: цепочка-память routines</div><div class='sub'>Play · Memory game routines</div><div class='zone'>standing · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка-мостик: игра на память с routine-фразами (TB Warmer) — движение после чтения</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>▶ <span class='game'>Memory game</span> (Activities bank TB p.7): <span class='en'>My day: I get up.</span> — следующий повторяет и добавляет: <span class='en'>I get up, I have breakfast…</span></li><li>Две команды-цепочки параллельно (все заняты); уронил цепочку — команда начинает заново, счёт длины на доске.</li><li>Финал: длиннейшая цепочка +3.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: счёт длины цепочек</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> строят растущую цепочку рутин по памяти — двигаются и хохочут. Ожидаемо: цепочки по 6–8 фраз. Типичная ошибка: порядок фраз — легально, важна память формы.</div></td><td class='mat'>—</td></tr><tr><td class='min'>52–60′</td><td class='stage'><div class='nm'>Word work: слова назад в текст</div><div class='sub'>Word work · назад в текст</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.7 матч определений (теперь легко — слова знакомы) + ex.8 предложения о себе</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ex.7: <span class='en'>Match the definitions — you KNOW these words now. Two minutes, pairs.</span> (ключ: star · lucky · fan · concerts · breaks · become).</li><li>Ex.8: подстановка + <span class='en'>Which sentences are true for YOU?</span> — 2 личных ответа в паре по рамке: <span class='en'>I'm a big fan of… · I chat with my friends during the breaks.</span></li><li>Fast finishers (TB): своё предложение с любым словом — класс угадывает, правда или нет.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.50 ex.7–8 · глоссарий на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> матчат уверенно (слова введены заранее) и применяют к себе. Ожидаемо: «I'm a big fan of…» у всех. Типичная ошибка: became/become — сегодня только become.</div></td><td class='mat'>SB p.50</td></tr><tr><td class='min'>60–70′</td><td class='stage'><div class='nm'>Критическое мышление: голосуем и спорим по рамкам</div><div class='sub'>Critical thinking · vote & frames</div><div class='zone'>board · standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> критическое мышление через выбор: голосование «трудно/ОК?» + рамки advantages/disadvantages (по 2)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Голосование ногами: стена А = <span class='en'>Academy life is TOO hard</span> · стена Б = <span class='en'>It's OK — it's their dream</span>. Все встают к стене.</li><li>По 3 голоса с каждой стены — по рамкам: <span class='en'>They learn (to dance / languages). · They haven't got time for (friends / homework).</span></li><li>Apply (ex.2) коротко: <span class='en'>A teen swimmer — same? They practise every day too!</span></li><li>Пары: по 1 advantage + 1 disadvantage письменно в тетрадь (рамки те же).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> рамки на доске · две стены-таблички</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> голосуют телом и защищают стену по рамкам — говорят многие, пишут все. Ожидаемо: раскол 50/50 — идеально. Типичная ошибка: аргумент по-русски — recast + повтор по-английски.</div></td><td class='mat'>wall signs</td></tr><tr><td class='min'>70–84′</td><td class='stage'><div class='nm'>Пишем: один день в академии</div><div class='sub'>Build · «One day at the academy»</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> мини-продукт: 4 предложения от лица студента академии по опоре (TB extra) + чтение партнёру + 2 на класс</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Опора: <b>I get up at ___ . I start school at ___ . I don't ___ . I go to bed ___ .</b> + банк: five o'clock · eight o'clock · relax · after midnight.</li><li><span class='en'>You are an academy student for five minutes. Write YOUR day — four sentences.</span> 7 мин, хожу и помогаю.</li><li>Чтение партнёру «как интервью журналисту» (TB extra activity): партнёр реагирует <span class='en'>Wow! / Really? / Poor you!</span></li><li>2 добровольца — на класс (+2).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: опора + банк слов · тетради</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут порцию от чужого лица по рамкам и читают с реакциями. Ожидаемо: 4 чистых предложения у всех; «poor you!» входит в обиход. Типичная ошибка: I don't relax → I don't relaxing — рамка: после don't глагол-словарь.</div><span class='diff'><span class='sup'>💪 Support:</span> первые слова каждого предложения уже в опоре. <span class='ext'>⭐ Быстрым:</span> +2 предложения с Word work (breaks, become).</span></td><td class='mat'>notebooks</td></tr><tr><td class='min'>84–90′</td><td class='stage'><div class='nm'>Итоги + рефлексия</div><div class='sub'>Share & Reflect</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> итоги, рефлексия «я прочитал настоящую статью», ДЗ WB p.32</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Табло: очки дня.</li><li>Рефлексия: <span class='en'>Hands up if the article was — too hard? OK? easy?</span> — фиксирую рост.</li><li>ДЗ: WB p.32 ex.1–3 (☆–☆☆, тоже про время — time zones!) + Get online бонус.</li><li>Тизер: <span class='en'>Pair 3 — the big secret of the letter S. Remember ‘he getS up’? Time to open it.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> табло · слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> оценивают трудность честно, фотографируют ДЗ. Ожидаемо: большинство «ОК» — успех для первого длинного текста.</div></td><td class='mat'>HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook (родная тетрадь, звёзды 🐣 = ☆/☆☆, ☆☆☆ — бонус):</b> WB p.32 ex.1–3 (☆–☆☆: time zones — clocks · match headings · reading for detail). ☆☆-бонус: ex.4 (about you).</p><p>🔎 Get online bonus (+5 pts, TB p.61): найди распорядок дня спортсмена или актёра-подростка — 2 факта с временами на следующую пару.</p></td><td class='mat'>WB Unit 4 (pp.28–35) · notebook · фото доски на телефон — можно</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>read for detail with support</b> (complete the academy schedule) and <b>say 3 facts about the text with times</b>: They get up at five o'clock. They don't relax…</li>
+      <li><span class="lb">Subsidiary.</span> Subskill «reading for detail» введён по шагам (сначала пропуск → тип слова → охота); глоссарий Word work ДО чтения; critical thinking через голосование и выбор; мини-продукт «One day at the academy» по опоре.</li>
+      <li><span class="lb">Personal.</span> Первое длинное чтение юнита для нуля: текст режем на куски с проверкой после каждого. Успех = «я понял настоящую статью», не скорость. Голосования держат всех в игре.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>use the 6 Word-work items with pictures</li><li>complete a schedule reading chunk by chunk</li><li>answer T/F with «where does it say?» support</li><li>write 4 sentences as an academy student (frame)</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Hook</span><span>Discover</span><span>Try it</span><span>Play</span><span>Build</span><span>Share</span><span>Reflect</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>fan</span><span class='w'>star</span><span class='w'>lucky</span><span class='w'>breaks</span><span class='w'>concerts</span><span class='w'>become</span><span class='w'>academy</span><span class='w'>practice room</span><span class='w'>all over the world</span><span class='w'>schedule</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>They get up at five o'clock. · They don't go home. · She wants to be a star. · It's difficult because…</div></div>
+      <div class="r"><div class="k">Form</div><div>reading for detail: смотри на пропуск → реши, время это или действие → ищи в тексте рядом; T/F всегда с местом в тексте.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>academy /əˈkædəmi/ · lucky /ˈlʌki/ · become /bɪˈkʌm/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Reading for detail — читаем всё-всё?” → Нет: сначала смотрим, ЧТО ищем, потом ищем ЭТО.</div><div class='ccq'>“Break — сломать?” → Здесь nоun: перемена между уроками.</div><div class='ccq'>“They don't relax — они отдыхают?” → Нет, НЕ отдыхают.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Время и routines в активе после P1; K-pop как тема знакома культурно (плюс мотивация); длинный текст — впервые в юните, отсюда куски+глоссарий+опоры.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Текст пугает объёмом</td><td>Никогда не «read the article» целиком: 4 куска, после каждого — быстрая проверка; успех накапливается.</td></tr><tr><td>Незнакомые слова стопорят</td><td>Глоссарий Word work с картинками ДО чтения; правило: незнакомое слово — подчеркни и читай дальше.</td></tr><tr><td>T/F отвечают наугад</td><td>Опора «where does it say?» — отвечаем только с пальцем на строке; учитель принимает и «я не нашёл» как честный ответ.</td></tr><tr><td>Critical thinking молчит</td><td>Не «обсудите» — голосование стикерами + рамки «They learn… / They haven't got time for…».</td></tr><tr><td>Сильные скучают на кусках</td><td>Fast finishers (TB): свои предложения с Word work; конверт «найди ещё одно время в тексте».</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 4 “My time” (Why is it a good idea to organise your time?) · GIA1zero — lesson plan &amp; staging</span>
+    <span>SB pp.50–51 (audio 30) · TB pp.59–61 (ключи, Culture note, Reinforcement «сначала времена», extra «интервью») · WB p.32. ⚠️ КТП пара 26: «school/schedule vocabulary» — фактический Word work p.50: fan · star · lucky · breaks · concerts · become; держим книгу. До урока: 6 карточек-слов с картинками, таблички стен, подсказки абзацев.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

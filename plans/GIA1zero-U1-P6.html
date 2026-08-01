@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1zero · Unit 1 · Pair 6 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 1 “Our world” · Pair 6 — Project: Design a new country (full pair) + revision games</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · input → guided practice → speaking, in game shells · pairs + teams of 3 · points, no dry drills</div>
+    <div class="meta"><span class='chip'>Week 05.10–11.10 · lessons 19–20 (KTP pair 10)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>SB pp.22–23 (+ Project planner p.118)</span><span class='chip'>teams of 3 · unit points board</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход в урок: приветствие + повтор прошлой пары</td><td>пять-в-ладошку у двери; блиц-повтор P5: 3 хода письма + починить заглавные; мостик к «финальному боссу»</td></tr><tr><td class='gmin'>6–10′</td><td class='gname'>Завязка: финальный босс + органайзер юнита</td><td>TB-warmer: пары 2 мин с Graphic organiser (p.118) «что узнал/что понравилось»; объявляю проект, сам делю на тройки</td></tr><tr><td class='gmin'>10–17′</td><td class='gname'>Видео-модель: страна Калобия</td><td>смотрим, как ученики презентуют Калобию: где она? сколько секций?</td></tr><tr><td class='gmin'>17–26′</td><td class='gname'>Шаг 1: выбираем 5 секций постера</td><td>тройки выбирают 5 секций — договариваться ТОЛЬКО фразами учебника; имя страны: 3 варианта</td></tr><tr><td class='gmin'>26–36′</td><td class='gname'>Шаг 2: роли и заметки</td><td>раздаю роли (флаг+факты / карта+города / язык+валюта), каждый пишет ЗАМЕТКИ 7 минут</td></tr><tr><td class='gmin'>36–58′</td><td class='gname'>Шаг 3: делаем постер (22 минуты)</td><td>пишут тексты секций (2–3 предложения с be) и клеят на А2; в середине — звонок-синхрон</td></tr><tr><td class='gmin'>58–72′</td><td class='gname'>Шаг 4: презентации + судейство</td><td>3 мин репетиции, презентации по ~2 мин; зрители-судьи отвечают вслух на 2 вопроса; мой учительский чек — 4 оси TB</td></tr><tr><td class='gmin'>72–78′</td><td class='gname'>Самооценка смайликами + галерея</td><td>самооценка смайликами по 3 вопросам книги, постеры на стену; жёлтый/красный смайлик → «что сделаю иначе»</td></tr><tr><td class='gmin'>78–90′</td><td class='gname'>Игры-повторение: разминка к тесту</td><td>три быстрых игры по всему юниту вместо сухого повторения; свой слабый раунд каждый берёт в ДЗ</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 1 — конкретные стр./задания по линии (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + Research-бонус); детали внизу процедуры</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор прошлой пары</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> пять-в-ладошку у двери; блиц-повтор P5: 3 хода письма + починить заглавные; мостик к «финальному боссу»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери — пять-в-ладошку + <span class='en'>one word: project mood? “Excited!” “Sleepy…”</span></li><li>Повтор P5 — хором: <span class='en'>The three message moves? — Start! Why! Ask to write!</span></li><li>Одно «преступление» на мини-досках: <i>i'm from tokyo</i> → <span class='en'>Boards UP!</span> +1 за чистую.</li><li>Мостик: <span class='en'>You've met the world, questioned it, written to it… Today — the FINAL BOSS of Unit 1.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-доски · строка-преступление на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> дают пять, досказывают ходы хором, чинят заглавные на досках. Ожидаемо: I'm from Tokyo. Типичная ошибка: чинят только Tokyo — «TWO crimes in this line!»</div></td><td class='mat'>мини-доски</td></tr><tr><td class='min'>6–10′</td><td class='stage'><div class='nm'>Завязка: финальный босс + органайзер юнита</div><div class='sub'>Hook · the final boss + TB-органайзер</div><div class='zone'>board · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> TB-warmer: пары 2 мин с Graphic organiser (p.118) «что узнал/что понравилось»; объявляю проект, сам делю на тройки</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>TB-warmer (p.29): <span class='en'>Pairs, two minutes, Graphic organiser p.118: what did you LEARN about countries? What did you enjoy most?</span> — 2–3 ответа вслух.</li><li>Объявляю: <span class='en'>You named 13 countries, flew to New Zealand, unmasked impostors… Today you INVENT your own country. Poster. Presentation. Fame.</span></li><li>Делю на тройки САМ (баланс сильный/тихий/художник), объявляю составы.</li><li>Призовой расклад: очки за контент · за «каждый говорил» · за креатив.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.118 · слайд WDYT · список троек · табло</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> вспоминают юнит парами, рассаживаются по тройкам, слушают правила. Ожидаемо: «а можно страну из Майнкрафта?» — «Invent your OWN. Even better».</div></td><td class='mat'>trio list</td></tr><tr><td class='min'>10–17′</td><td class='stage'><div class='nm'>Видео-модель: страна Калобия</div><div class='sub'>Model · Calobia video</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> смотрим, как ученики презентуют Калобию: где она? сколько секций?</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Включаю проектное видео (pp.22–23): <span class='en'>Watch the students present. Where is Calobia?</span> (≈3 000 км от НЗ, Тихий океан).</li><li>Вторая задача: <span class='en'>Count: how many sections on their poster? Which do you like?</span></li><li>Нет видео → открываю SB p.23 Model project как «замороженную презентацию» и озвучиваю вступление сам (скрипт TB p.138).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> видео проекта (бэкап: страница p.23 + TB p.138)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> смотрят, считают секции, отвечают: остров в Тихом океане; называют любимое (флаг! осьминог-питомец!). Ожидаемо: смех на фан-фактах — поняли жанр.</div><span class='diff'><span class='ext'>⭐ Fast finishers (TB p.29):</span> назови 2 плюса и 1 минус жизни на Калобии.</span></td><td class='mat'>project video · SB p.23</td></tr><tr><td class='min'>17–26′</td><td class='stage'><div class='nm'>Шаг 1: выбираем 5 секций постера</div><div class='sub'>THINK · sections menu</div><div class='zone'>desks · trios</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> тройки выбирают 5 секций — договариваться ТОЛЬКО фразами учебника; имя страны: 3 варианта</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Раздаю на столы палатки Key phrases (What's a good name/flag? · I like your idea · What about…? · That's a good idea! · No, that's not very original).</li><li>TB Reinforcement (p.29): сначала КАЖДЫЙ 60 сек выбирает секции сам — потом обсуждение: у тихих есть готовое мнение.</li><li>Задание (ex.2–3, 5): <span class='en'>Choose YOUR five sections. Decide ONLY with the Key phrases!</span> Хожу, начисляю teamwork-очки за услышанные фразы.</li><li>Правило креативности: <span class='en'>THREE name options minimum, then vote. Don't marry the first idea!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> палатки Key phrases на столах · слайд-меню секций</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выбирают секции сначала соло, потом торгуются фразами из палатки, генерят 3 имени и голосуют. Ожидаемо: слышно «That's a good idea!» без подсказки. Типичная ошибка: решают по-русски — решение «не считается», переигрываем по-английски за 20 сек.</div></td><td class='mat'>tents · menu slide</td></tr><tr><td class='min'>26–36′</td><td class='stage'><div class='nm'>Шаг 2: роли и заметки</div><div class='sub'>PLAN · roles + notes</div><div class='zone'>desks · trios</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> раздаю роли (флаг+факты / карта+города / язык+валюта), каждый пишет ЗАМЕТКИ 7 минут</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Раздаю карточки ролей (ex.7): S1 — flag + fun facts · S2 — map + important cities · S3 — language + currency + fact file. (TB-вариант: если в тройке художник — двое берут по 2 секции, художник 1 секцию + artwork/layout/титул.)</li><li>Показываю образец заметок из книги: <i>FLAG red–white–green (red = sun…)</i> — ключевые слова, НЕ предложения.</li><li>ICQ: <span class='en'>Full sentences in notes? — No! Notes! Sentences come at CREATE.</span></li><li>Таймер 7 мин, хожу, начисляю teamwork-очки.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки ролей · листы заметок · таймер на экране</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> каждый пишет заметки по СВОИМ секциям ключевыми словами. Ожидаемо: FLAG blue-gold, CAPITAL Dragonport. Типичная ошибка: пишут абзацы — показываю на образец: «Notes!»</div></td><td class='mat'>role cards · timer</td></tr><tr><td class='min'>36–58′</td><td class='stage'><div class='nm'>Шаг 3: делаем постер (22 минуты)</div><div class='sub'>CREATE · the poster (22′)</div><div class='zone'>desks · trios</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> пишут тексты секций (2–3 предложения с be) и клеят на А2; в середине — звонок-синхрон</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Запускаю обратный отсчёт 22 мин: <span class='en'>CREATE! Texts: two-three sentences per section. Visuals. Glue!</span> TB: сначала черновик, читаем секции друг друга, потом чистовик.</li><li>На 11-й минуте звоню в колокольчик: <span class='en'>Sync check! Fact file done? Flag drawn? Who's behind — help them!</span></li><li>Хожу с блокнотом: фиксирую 2 типичные ошибки в текстах (для revision-игр), НЕ исправляю на месте.</li><li>За 3 мин до конца: <span class='en'>Three minutes! Good enough is good — beauty is homework!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> листы А2 · маркеры · клей · полоски-рамки на столах (The capital is… · Our flag is… · (Colour) is for…)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут тексты своих секций с рамками, рисуют, клеят; на звонке сверяются и перекидывают силы. Ожидаемо: постер-черновик с 5 секциями. Типичная ошибка: художник рисует, тексты стоят — роль-карта напоминает: у КАЖДОГО свои секции.</div><span class='diff'><span class='ext'>⭐ Быстрым:</span> секция «unusual information» — школа по субботам, осьминоги-питомцы.</span> <span class='asr'>✔ Assess: 2 типичные ошибки — в revision-игры.</span></td><td class='mat'>A2 sheets · frames strips</td></tr><tr><td class='min'>58–72′</td><td class='stage'><div class='nm'>Шаг 4: презентации + судейство</div><div class='sub'>PRESENT + peer review</div><div class='zone'>stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 3 мин репетиции, презентации по ~2 мин; зрители-судьи отвечают вслух на 2 вопроса; мой учительский чек — 4 оси TB</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Даю 3 мин репетиции: <span class='en'>Everyone speaks three-plus sentences. Toes to the audience. A teammate holds the poster!</span></li><li>Вызываю тройки по очереди (~2 мин на тройку).</li><li>После каждой — судейские вопросы залу (ex.10): <span class='en'>How is it different from our real country? Do you want to visit — why?</span> Зрители отвечают вслух.</li><li>Очки по 3 шкалам: content 1–3 · everyone spoke 1–3 · creativity 1–3. (Себе — TB-рамка Layout/Content/Language/Visuals: замечания в блокнот для фидбека.) Аплодисменты — протокол.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> постеры · карточки peer review у зрителей · табло с 3 шкалами</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> репетируют, презентуют (каждый — свои секции), зрители слушают с задачей и отвечают. Ожидаемо: каждый говорит 3+ предложения. Типичная ошибка: бормотание в постер — жест «носки к залу», сосед держит постер.</div></td><td class='mat'>posters · peer cards</td></tr><tr><td class='min'>72–78′</td><td class='stage'><div class='nm'>Самооценка смайликами + галерея</div><div class='sub'>Final reflection + gallery</div><div class='zone'>wall</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> самооценка смайликами по 3 вопросам книги, постеры на стену; жёлтый/красный смайлик → «что сделаю иначе»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Читаю 3 вопроса Final reflection (p.23): постер понятен? фантазия? язык юнита?</li><li>Команда: <span class='en'>Show your smiley: 😊 😐 ☹ — honest!</span> — по каждому вопросу. TB-гайд (p.30): жёлтый/красный — мягко: <span class='en'>What will you do differently next time?</span> — одна фраза, без разбора.</li><li>Вешаем постеры на стену, минутка гордости: <span class='en'>Look at this wall. YOU made countries.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд 3 вопросов со смайлами · стена/скотч</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> честно показывают смайлы (учу: 😐 — это нормально), формулируют «что иначе», вешают постеры. Ожидаемо: 😊 по фантазии, 😐 по языку — фиксирую как план на повтор.</div></td><td class='mat'>smiley slips · wall</td></tr><tr><td class='min'>78–90′</td><td class='stage'><div class='nm'>Игры-повторение: разминка к тесту</div><div class='sub'>Revision games (разминка к тесту)</div><div class='zone'>stations · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> три быстрых игры по всему юниту вместо сухого повторения; свой слабый раунд каждый берёт в ДЗ</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Объявляю: <span class='en'>Test warm-up — three games, everything you know!</span></li><li>Игра 1 (4′) — спеллинг-эстафета: команды по цепочке пишут национальности к моим странам, одна буква — один игрок.</li><li>Игра 2 (4′) — Opposite Slam-финал: антоним предложением: <span class='en'>The city is old! — No, it's modern!</span></li><li>Игра 3 (4′) — «спроси-схвати» из P4: краткие ответы на карточках + 2 «почини ошибку» из сегодняшнего CREATE (анонимно!).</li><li>Итожу: <span class='en'>Your weakest game = tonight's focus. WB page 11 is your test map. Thursday — calm and sharp.</span> ДЗ на слайде.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мой список стран · мяч · карточки-ответы · 2 слипа ошибок CREATE · слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> играют три коротких раунда всеми командами одновременно, чинят собственные ошибки проекта, находят слабое место. Ожидаемо: уверенность «мы всё это умеем». Типичная ошибка: паника про тест — «формат знаком, страница одна: WB 11».</div></td><td class='mat'>stations · HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>🐣 Workbook Unit 1 (обязательные ☆–☆☆; ☆☆☆ = бонус за очки):</b> Workbook стр. 11 «Look what you know!»: Grammar review ex.1 (текст с be) + Round-up (обведи верное) + Self-evaluation со смайликами — это твоя карта теста; ☹-галочка = что повторить на стр. 21 SB.</p><p style='font-size:.85rem;color:var(--muted)'>WB-аудио — в TRC; нет трека → аудио-пункты пропускаем. Фото слайда ДЗ — ок.</p></td><td class='mat'>Workbook U1 · notebook</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, trios <b>design and present a poster of an invented country</b> (5 sections, strict roles, timed steps) recycling all Unit 1 language — and warm up for the test with revision games.</li>
+      <li><span class="lb">Subsidiary.</span> Project cycle THINK→PLAN→CREATE→PRESENT with the Calobia video model; Graphic-organiser warmer (p.118); Super skill Creativity + group Key phrases; Peer review; Final reflection (TB-гайд: жёлтый/красный смайлик → «что сделаю иначе»); revision-игры вместо сухого повторения.</li>
+      <li><span class="lb">Personal.</span> Ты — хранитель времени, не дизайнер: жёсткие роли, громкие таймеры на каждый STEP, хвалим процесс. Успех презентации = каждый сказал 3+ предложения. Проект теперь занимает ЦЕЛУЮ пару — время на Create честное, без гонки.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>agree ideas with Key phrases</li><li>own one poster role and deliver it on time</li><li>present their section in 3+ sentences with be</li><li>play the unit revision games with confidence</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Hook</span><span>Model</span><span>Think</span><span>Plan</span><span>Create</span><span>Present</span><span>Reflect</span><span>Revision games</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>What's a good name/flag/national sport?</span><span class='w'>I like that/your/Sara's idea.</span><span class='w'>What about (Calobia)?</span><span class='w'>That's a good idea!</span><span class='w'>That's great!</span><span class='w'>No, that's not very original.</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Our country is (Calobia). · The capital is… · The flag is… (colour) is for (the sea). · Life here is… · People are…</div></div>
+      <div class="r"><div class="k">Form</div><div>poster sections: Country fact file · Description · What's popular · Flag · Fun facts · Map — model = Calobia (SB p.23).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>presentation voice: loud, slow, eyes up; stress the country name proudly.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Is Calobia a real country?” → No — invented, and yours will be too.</div><div class='ccq'>“One person draws everything?” → No: three roles, everyone owns sections.</div><div class='ccq'>“Is ‘No, that's not very original’ rude?” → No — a polite team phrase from the book.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Весь язык юнита на месте (Quick review сделан в P5); вызов пары — TEAMWORK на английском. Первый настоящий проект года — пере-структурируй: роли, чек-листы, таймеры. Тестовая пара следующая — revision-игры сеют уверенность.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Ideas argument goes to Russian</td><td>Key-phrases tents on each desk; only English phrases move the decision; teamwork points for heard phrases.</td></tr><tr><td>One artist does everything</td><td>Role cards (SB ex.7): S1 flag+fun facts · S2 map+cities · S3 language+currency; each presents their own part.</td></tr><tr><td>CREATE eats all the time</td><td>Visible countdown per STEP; ‘good enough’ rule: poster is a draft, beauty is homework.</td></tr><tr><td>Presenters mumble to the poster</td><td>Rule: toes to the audience, poster held by a teammate; one rehearsal run first.</td></tr><tr><td>No project video</td><td>Backup: SB p.23 Model project page as the ‘frozen video’; voice the opening yourself (script TB p.138).</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 1 “Our world” (How are countries different?) · GIA1zero — lesson plan &amp; staging</span>
+    <span>SB pp.22–23 · Project video (Calobia; скрипт TB p.138) · Project planner p.118 · TB pp.29–30 (warmer-органайзер, Fast finishers, Reinforcement, гайд Final reflection, разбор Model project по 4 осям — рамка для учительского фидбека). КТП-Foundation пара 10: проект — ЦЕЛАЯ пара (Create без гонки) + revision-игры. Quick review сделан в P5. До урока: А2-листы, role cards, палатки, рамки, смайл-слипы.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

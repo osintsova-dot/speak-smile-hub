@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1zero · Unit 4 · Pair 5 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 4 “My time” · Pair 5 — Writing: записки и сообщения (порциями) + Quick review</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · input → guided practice → speaking, in game shells · pairs + teams of 3 · points, no dry drills</div>
+    <div class="meta"><span class='chip'>Week 07.12–13.12 · lessons 57–58 (KTP pair 29)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>SB pp.56–57</span><span class='chip'>teams of 3 · unit points board</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход + мягкий широкий повтор</td><td>вход; мягкий широкий rewind: 1 вопрос U4 + 1 have got + 1 there is — с опорами на доске</td></tr><tr><td class='gmin'>6–14′</td><td class='gname'>Модель: сообщения и ответы</td><td>ex.1–2: три сообщения ↔ ответы A–C, имена, кто-кому; читаем как «переписку из телефона»</td></tr><tr><td class='gmin'>14–20′</td><td class='gname'>Ввод: формат сообщения</td><td>ex.3 старты и финиши; формальность Dear; toolbox на доску</td></tr><tr><td class='gmin'>20–28′</td><td class='gname'>Ввод: схема because</td><td>ex.4–5 правило because по шагам + ex.6 rewrite с поддержкой (Reinforcement-матч TB)</td></tr><tr><td class='gmin'>28–34′</td><td class='gname'>Пробуем: раунд причин</td><td>ex.7 достраиваем причины по очереди в парах (RallyRobin); банк лучших на доску</td></tr><tr><td class='gmin'>34–45′</td><td class='gname'>Думаем + готовим + черновик (конец урока А)</td><td>конец урока А: план двух сообщений (кому · что · причина) + ПЕРВАЯ строка каждого — вместе; чекпойнт</td></tr><tr class='bridge'><td class='gmin'>45–47′</td><td class='gname'>Мостик: почта открывается</td><td>мостик: почта класса открывается; правила доставки на доску</td></tr><tr><td class='gmin'>47–58′</td><td class='gname'>Пишем: два сообщения порциями</td><td>сообщение №1 (6 мин) → проверка по схеме → сообщение №2 (5 мин); хожу и помогаю точечно</td></tr><tr><td class='gmin'>58–65′</td><td class='gname'>Проверяем: галочки с подписью</td><td>CHECK по шагам: обмен в паре — 3 галочки (понятно? because по схеме? present simple?) + подпись ревьюера; починка</td></tr><tr><td class='gmin'>65–74′</td><td class='gname'>Почта класса: доставка и ответы</td><td>ex.9 доставка настоящим адресатам → ответ по рамкам на обороте → возврат; ex.10 мини-ревью</td></tr><tr><td class='gmin'>74–85′</td><td class='gname'>Квик-ревью: станции со взаимопомощью</td><td>Quick review p.57 станциями: время · routines/free-time · PS-грамматика + мягкая архив-станция (be/have got/some) С ОПОРАМИ</td></tr><tr><td class='gmin'>85–90′</td><td class='gname'>Итоги + рефлексия</td><td>итоги; рефлексия; ДЗ WB p.34 + p.35 Self-evaluation (радар перед тестом)</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 4 — страница пары (звёзды по линии: 🐣 ☆/☆☆ · 🚀 ☆☆/☆☆☆) + бонус за очки (детали внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход + мягкий широкий повтор</div><div class='sub'>Opening · check-in + мягкий wide-rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вход; мягкий широкий rewind: 1 вопрос U4 + 1 have got + 1 there is — с опорами на доске</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вход: <span class='en'>One word: your weekend plan?</span></li><li>Мини-доски с ОТКРЫТЫМИ опорами: 1) собери: you / sport / do / Do? · 2) She ___ got a bike (has) · 3) There ___ some milk (is).</li><li><span class='en'>Notice: old friends! Mid-year is coming — we'll wake them up gently, no fear.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-доски · опорные таблицы be/have got/there is на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут с опорами — успех у всех. Ожидаемо: «мы это помним!». Типичная ошибка: have/has — таблица пальцем.</div></td><td class='mat'>мини-доски</td></tr><tr><td class='min'>6–14′</td><td class='stage'><div class='nm'>Модель: сообщения и ответы</div><div class='sub'>Model · messages & replies</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1–2: три сообщения ↔ ответы A–C, имена, кто-кому; читаем как «переписку из телефона»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ex.1: <span class='en'>Three messages, three replies — match them! And fill the five names. Pairs, four minutes.</span> (Reinforcement TB: сначала матч, потом имена).</li><li>Проверка с уликами: 1C (present/money) · 2B (exam/study) · 3A (pizza/order); имена: Clare · Dad · Polly · Mum · Luca · Bella.</li><li>Ex.2 блиц: <span class='en'>Who doesn't eat meat? Who has got a meeting?</span></li><li>Мини-вывод: <span class='en'>Short. Real. With a reason. That's a message.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.56 · слайд-ключ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> матчат переписку по уликам. Ожидаемо: формат «из телефона» читается охотно. Типичная ошибка: Hi Luca = от Луки? — «Hi + имя = КОМУ».</div></td><td class='mat'>SB p.56</td></tr><tr><td class='min'>14–20′</td><td class='stage'><div class='nm'>Ввод: формат сообщения</div><div class='sub'>Discover · format toolbox</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.3 старты и финиши; формальность Dear; toolbox на доску</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ex.3 охота: <span class='en'>Find three ways to START and two ways to FINISH!</span> (Hi/Hello/Dear · See you later!/Thanks).</li><li>Дополняю (TB p.67): Hey — друзьям · Dear — формальнее · Love, — семье.</li><li>Toolbox на доску столбиками (остаётся до конца): СТАРТ + имя · ТЕЛО · ФИНИШ + подпись.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: toolbox (остаётся)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> строят toolbox из живых примеров. Ожидаемо: «как в мессенджере, только с правилами». Типичная ошибка: Dear для друга — можно, но Hi роднее.</div></td><td class='mat'>SB p.56</td></tr><tr><td class='min'>20–28′</td><td class='stage'><div class='nm'>Ввод: схема because</div><div class='sub'>Discover 2 · because scheme</div><div class='zone'>board · desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.4–5 правило because по шагам + ex.6 rewrite с поддержкой (Reinforcement-матч TB)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ex.4: находим 4 предложения с because в сообщениях; читаем вслух.</li><li>Ex.5 правило по шагам: причина — ПОСЛЕ because; после because — subject + verb. Схема на доску: <b>[главное] + because + [кто + что делает]</b>.</li><li>Ex.6 с поддержкой: слабым — карточки-матч причин a–d (TB Reinforcement: I want to buy a present · I've got a football match · it's her birthday · you've got a lot of homework); сильным — без карточек.</li><li>Проверка по схеме пальцем.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: схема because (остаётся) · карточки-матч для поддержки</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выводят правило и чинят 4 предложения (с опорой по силам). Ожидаемо: схема снимает страх. Типичная ошибка: because my book green — «кто + ЧТО ДЕЛАЕТ»: because my book IS green.</div></td><td class='mat'>SB p.56 ex.4–6</td></tr><tr><td class='min'>28–34′</td><td class='stage'><div class='nm'>Пробуем: раунд причин</div><div class='sub'>Try it · reasons round</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.7 достраиваем причины по очереди в парах (RallyRobin); банк лучших на доску</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>▶ <span class='game'>RallyRobin</span>: пары по очереди: <span class='en'>I'm not free on Sunday because… · Remember to come home early because… · Don't forget to call Maria because…</span></li><li>Правило: смешно — можно; после because нет «кто+что делает» — партнёр чинит.</li><li>Собираю 4 лучших причины на доску — банк для письма.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.57 ex.7 · банк причин на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> достраивают причины по очереди — говорят оба. Ожидаемо: юмор при чистой схеме. Типичная ошибка: because is my birthday — «КТО?» it's!</div></td><td class='mat'>—</td></tr><tr><td class='min'>34–45′</td><td class='stage'><div class='nm'>Думаем + готовим + черновик (конец урока А)</div><div class='sub'>THINK + PREPARE + черновик</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> конец урока А: план двух сообщений (кому · что · причина) + ПЕРВАЯ строка каждого — вместе; чекпойнт</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>THINK: пары выбирают 2 ситуации из ex.7 (по одной на сообщение); жребий адресатов — каждому достанется настоящий одноклассник.</li><li>PREPARE: план заметками: кому · о чём · причина; старт и финиш из toolbox — РАЗНЫЕ для двух сообщений.</li><li>Первую строку каждого сообщения пишем СЕЙЧАС вместе (страх чистого листа снят).</li><li>Чекпойнт 45′: план + 2 первые строки на столе. <span class='en'>After the bridge — you write, send… and get real replies!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> toolbox + схема + банк причин на доске · жребий адресатов</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> планируют и пишут первые строки с опорой. Ожидаемо: адресность зажигает. Типичная ошибка: оба старта Hi — toolbox: разные!</div></td><td class='mat'>plan sheets</td></tr><tr class='bridge'><td class='min'>45–47′</td><td class='stage'><div class='nm'>Мостик: почта открывается</div><div class='sub'>Bridge → lesson B</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> мостик: почта класса открывается; правила доставки на доску</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Правила доставки: 3–4 предложения · because по схеме · старт/финиш из toolbox · имя адресата сверху.</li><li><span class='en'>Post office opens. Write — send — reply. Everyone gets mail today!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> правила доставки на слайде</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> готовят листки. Ожидаемо: предвкушение почты.</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–58′</td><td class='stage'><div class='nm'>Пишем: два сообщения порциями</div><div class='sub'>WRITE · порциями с таймером</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> сообщение №1 (6 мин) → проверка по схеме → сообщение №2 (5 мин); хожу и помогаю точечно</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>WRITE-1: <span class='en'>Message one: 3–4 sentences, one because. Six minutes.</span> Слабым — первая половина предложений из скелета.</li><li>Микропауза: палец по схеме because + toolbox; самопроверка 30 сек.</li><li>WRITE-2: <span class='en'>Message two — different start and finish! Five minutes.</span></li><li>Помогаю точечно: только because-позиция, формат и -s.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> листки-сообщения · таймер · опоры на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут две порции по таймеру с опорами. Ожидаемо: 3–4 предложения у всех. Типичная ошибка: забыт финиш — toolbox пальцем.</div><span class='diff'><span class='sup'>💪 Support:</span> полускелет сообщения (начала предложений). <span class='ext'>⭐ Быстрым:</span> +1 сообщение третьему адресату.</span></td><td class='mat'>message sheets</td></tr><tr><td class='min'>58–65′</td><td class='stage'><div class='nm'>Проверяем: галочки с подписью</div><div class='sub'>CHECK · галочки с подписью</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> CHECK по шагам: обмен в паре — 3 галочки (понятно? because по схеме? present simple?) + подпись ревьюера; починка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Обмен: <span class='en'>Three ticks: clear? because correct? present simple OK?</span> — ревьюер ставит галочки и ПОДПИСЬ.</li><li>Правило ревью: позитив + 1 совет, не больше.</li><li>2 мин на починку по галочкам; я подхожу к парам со спорными because.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> чек-лист на слайде</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проверяют по галочкам и подписываются — ответственность без суда. Ожидаемо: ловят пропущенные финиши. Типичная ошибка: галочки не глядя — подпись дисциплинирует.</div></td><td class='mat'>checklists</td></tr><tr><td class='min'>65–74′</td><td class='stage'><div class='nm'>Почта класса: доставка и ответы</div><div class='sub'>Share · почта класса + ответы</div><div class='zone'>class post</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.9 доставка настоящим адресатам → ответ по рамкам на обороте → возврат; ex.10 мини-ревью</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Доставка почты (2 «почтальона» из быстрых).</li><li><span class='en'>You've got mail! Reply on the back — two sentences.</span> Рамки ответов: <b>That's fine! · Great idea! · Sorry, I can't because ___ · What about ___?</b></li><li>Возврат отправителю; читают ответ; ex.10: <span class='en'>Is the reply clear? Thumbs up your postman!</span></li><li>2 диалога зачитываем на класс (+2 обоим).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> рамки ответов на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> получают настоящие письма и отвечают по рамкам — пишет каждый дважды. Ожидаемо: восторг почты. Типичная ошибка: ответ одним словом — рамка: 2 предложения.</div></td><td class='mat'>message sheets</td></tr><tr><td class='min'>74–85′</td><td class='stage'><div class='nm'>Квик-ревью: станции со взаимопомощью</div><div class='sub'>Quick review · станции со взаимопомощью</div><div class='zone'>teams rotate</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Quick review p.57 станциями: время · routines/free-time · PS-грамматика + мягкая архив-станция (be/have got/some) С ОПОРАМИ</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>4 станции по классу (листы с 4–5 заданиями): 1) время словами · 2) routines+free-time (пропуски) · 3) PS: aff/neg/вопрос · 4) АРХИВ: be/have got/some-any — с опорными таблицами прямо на листе.</li><li>Команды по кругу, 2,5 мин на станцию; взаимопомощь легальна и поощряется (<span class='en'>Team power!</span>).</li><li>Проверка ключами на обороте станции — самопроверка сразу.</li><li>Итог: <span class='en'>Strip 4 felt OK? Then Mid-year is just MORE of the same — with the same tables to revise from.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> 4 станции-листа с ключами на обороте · опорные таблицы на архив-листе · Quick review p.57</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> ходят по станциям командами, проверяют себя сами. Ожидаемо: архив со шпаргалками проходит спокойно — страх Mid-year снят. Типичная ошибка: some/any — опора на листе чинит.</div></td><td class='mat'>station sheets</td></tr><tr><td class='min'>85–90′</td><td class='stage'><div class='nm'>Итоги + рефлексия</div><div class='sub'>Share & Reflect</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> итоги; рефлексия; ДЗ WB p.34 + p.35 Self-evaluation (радар перед тестом)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Табло: очки; хвалю почту и станции.</li><li>Рефлексия: <span class='en'>I can write a message with because — 1 to 5?</span></li><li>ДЗ: WB p.34 ex.1–2 + Vocab review + p.35 Self-evaluation — <span class='en'>tick honestly: it's your radar before the test.</span></li><li>Тизер: <span class='en'>Pair 6 — poster of a star's day + the Unit 4 test. The format will be familiar — promise.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> табло · слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> фотографируют ДЗ, отмечают радар. Ожидаемо: спокойный настрой на тест.</div></td><td class='mat'>HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook (родная тетрадь, звёзды 🐣 = ☆/☆☆, ☆☆☆ — бонус):</b> WB p.34 ex.1–2 + Vocabulary review ex.1–3 (☆/☆☆) + p.35 Self-evaluation (честные галочки — твой радар перед тестом). ☆☆☆-бонус: p.34 ex.3 (два сообщения).</p><p>🔎 Bonus (+5 pts, TB p.67): сообщение школьному другу с просьбой помочь с учёбой — причина через because.</p></td><td class='mat'>WB Unit 4 (pp.28–35) · notebook · фото доски на телефон — можно</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>write two short notes/messages with because</b> (по шагам THINK→PREPARE→WRITE→CHECK, порциями, с банком фраз) and <b>reply to a classmate's message</b> from response frames.</li>
+      <li><span class="lb">Subsidiary.</span> Subskill because (позиция + subject+verb) с опорой-схемой; формат Hi…/See you!; peer review по галочкам; Quick review со взаимопомощью + мягкая архив-полоса (be·have got·some/any) с опорными таблицами — подготовка к Mid-year без страха.</li>
+      <li><span class="lb">Personal.</span> Урок А = THINK→PREPARE (модели, because, план, черновик), урок Б = WRITE→CHECK + Quick review — по КТП. Письмо порциями по 3–4 предложения; у каждого сообщения настоящий адресат — мотивация встроена.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>match messages to replies</li><li>place because correctly with the scheme</li><li>write 2 messages (3–4 sentences each) from a scaffold</li><li>do the unit Quick review with team support</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Hook</span><span>Discover</span><span>Try it</span><span>Play</span><span>Build</span><span>Share</span><span>Reflect</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>Hi / Hello / Dear / Hey …</span><span class='w'>See you later! / Thanks, / Love,</span><span class='w'>because + subject + verb</span><span class='w'>Remember to… / Please don't… / Do you want to…?</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Hi Luca, remember to come home early because you've got a maths exam. See you later! · That's fine. / Great idea! / Sorry, I can't because…</div></div>
+      <div class="r"><div class="k">Form</div><div>because в середине; после because — subject + verb; старт Hi/Hello/Dear + имя; финиш See you later!/Thanks + подпись.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>because /bɪˈkɒz/ · плавная интонация просьбы Please don't… </div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Because he's ill Rory isn't in school — OK?” → Нет: главное сначала, because с причиной после.</div><div class='ccq'>“After because: ‘because homework’?” → Нет — because I'VE GOT homework (subject + verb).</div><div class='ccq'>“Сообщение без имени сверху — кому оно?” → Никому: Hi + имя обязательно.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> PS + вопросы рабочие после P3–P4; because слышали в речи, письменная позиция и формат сообщений — новое. Первое «жанровое» письмо юнита — порции и банки фраз обязательны.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Страх чистого листа</td><td>Никогда «напиши сообщение» без опоры: скелет + банк фраз + модель перед глазами; первая строка пишется вместе.</td></tr><tr><td>because в начале</td><td>Схема [main] + because + [subject+verb] на доске; проверка пальцем по схеме перед сдачей.</td></tr><tr><td>Пишут медленно, не успевают</td><td>Порции по таймеру: одно сообщение = 6 минут, 3–4 предложения. Мало — норм: качество > длина.</td></tr><tr><td>Peer review стесняются</td><td>2 галочки максимум + правило «позитив + 1 совет»; ревьюер подписывается — это помощь, не суд.</td></tr><tr><td>Review перед Mid-year пугает</td><td>Архив-полоса С открытыми опорными таблицами: успех гарантирован; «повторить = вспомнить, не выучить заново».</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 4 “My time” (Why is it a good idea to organise your time?) · GIA1zero — lesson plan &amp; staging</span>
+    <span>SB pp.56–57 (Writing + Quick review, audio 32–34) · TB pp.66–67 (ключи, Reinforcement-матч причин, extra «почта») · WB pp.34–35. По КТП: урок А = THINK→PREPARE (+черновик), урок Б = WRITE→CHECK + Quick review — граница 45′ выдержана; архив-станция = мягкий прогрев Mid-year (Starter–U4). До урока: жребий адресатов, листки-сообщения, 4 станции с ключами, карточки-матч причин.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

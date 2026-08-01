@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1 · Unit 1 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 1 “Our world” · Pair 2 — Mission «Country Detectives»: fact-check the №1 claim</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>continuing line 🚀 after GMF4</b> · 90 min · mission-based: gate → base sprint → challenge levels → GMF4 bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Week 21.09–27.09 · lessons 11–12 (KTP pair 6)</span><span class='chip new'>🚀 continuing after GMF4</span><span class='chip'>SB pp.14–15</span><span class='chip'>unit leaderboard · streaks · gold runs</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход в урок: приветствие + повтор прошлой пары</td><td>слово о выходных + «батарейка»; блиц-повтор P1: 5 национальностей на мини-досках + микро-питч добровольца</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Завязка миссии</td><td>объявляю миссию: проверить заявление «Нидерланды — №1 для подростков»; вердикт только с доказательствами</td></tr><tr class='bridge'><td class='gmin'>8–13′</td><td class='gname'>Входной челлендж (gate): детектор лжи</td><td>6 громких утверждений — письменно T/F ДО чтения, листки лицом вниз; проверим фактами после охоты</td></tr><tr><td class='gmin'>13–20′</td><td class='gname'>Спринт: тип текста по виду</td><td>30 секунд НЕ читая: тип каждого из 4 текстов только по виду + фото-матч за 60 сек</td></tr><tr><td class='gmin'>20–33′</td><td class='gname'>Рейд за фактами по 4 станциям</td><td>каждый рейдит СВОЮ станцию-текст (3 факта, лимит 4 мин), докладывает по правилу 5 сек; вскрываем детектор лжи</td></tr><tr><td class='gmin'>33–42′</td><td class='gname'>Дуэль на 6 словах из текста</td><td>партнёры делят 6 определений пополам и гоняют друг друга по правилу 5 секунд; предложение про Россию</td></tr><tr class='bridge'><td class='gmin'>42–51′</td><td class='gname'>Бонус-уровень: допрос Томаса (Have you ever…?)</td><td>ролевая: один — Томас из текста, второй — детектив с 3 вопросами «Have you ever…?» (структуры GMF4)</td></tr><tr><td class='gmin'>51–62′</td><td class='gname'>Рейтинг счастья — боеприпасы для дебатов</td><td>команды ранжируют 8 карточек «что важнее для счастья»; их топ-3 = линия аргументации в дебатах</td></tr><tr><td class='gmin'>62–80′</td><td class='gname'>Дебаты в тройках: вердикт с фактами</td><td>тройки: обвинитель против защитника (по 90 сек), судья ждёт 3 факта; роли крутим 3 раза</td></tr><tr><td class='gmin'>80–90′</td><td class='gname'>Лидерборд + разбор дня</td><td>финальное голосование класса «заявление подтверждено?», очки, ДЗ и тизер эфира</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 1 — конкретные стр./задания по линии (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + Research-бонус); детали внизу процедуры</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор прошлой пары</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> слово о выходных + «батарейка»; блиц-повтор P1: 5 национальностей на мини-досках + микро-питч добровольца</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери: <span class='en'>One word about your weekend!</span> «Батарейка» 0–100% на пальцах.</li><li>Повтор P1: 5 вспышек стран → национальность письменно на мини-досках (эхо gate — спеллинг!), <span class='en'>Boards UP!</span> +1 за чистую.</li><li>Доброволец: <span class='en'>Your №1 place — one sentence, twenty seconds, no pause!</span> +2.</li><li>Мостик: <span class='en'>Producers, promotion: today you're DETECTIVES. A magazine made a bold claim — somebody has to check it.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-доски · мой список 5 стран (Brazil · the Netherlands · Turkey · China · New Zealand) — это и есть TB-warmer урока чтения (страна→национальность, финалом the Netherlands, TB p.20)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут национальности и поднимают одновременно, слушают микро-питч. Ожидаемо: спеллинг лучше, чем на gate P1. Типичная ошибка: Dutch забыт — «the Netherlands → ?» хором.</div></td><td class='mat'>мини-доски</td></tr><tr class='bridge'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> объявляю миссию: проверить заявление «Нидерланды — №1 для подростков»; вердикт только с доказательствами</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд <b>MISSION «COUNTRY DETECTIVES»</b>.</li><li>Говорю: <span class='en'>A magazine claims: the Netherlands is the №1 country to be a teenager. Your agency fact-checks it TODAY. Verdict at the end — with evidence, or you're fired.</span></li><li>Лидерборд на виду, экипажи те же.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии (или «NL = №1 for teens??» на доске) · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> включаются в роль агентов. Ожидаемо: скепсис «да ладно, №1?» — идеальный настрой для факт-чека.</div></td><td class='mat'>mission slide</td></tr><tr class='bridge'><td class='min'>8–13′</td><td class='stage'><div class='nm'>Входной челлендж (gate): детектор лжи</div><div class='sub'>🎯 GATE · lie detector</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 6 громких утверждений — письменно T/F ДО чтения, листки лицом вниз; проверим фактами после охоты</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вывожу 6 утверждений: Thomas is 12 · Dutch people cycle 1,000 km/year · 75% of NL is under the sea · Dutch food is bad for you · most Dutch teens are happy at school · Thomas is from Amsterdam.</li><li>Говорю: <span class='en'>Commit: T or F, in writing, NOW. You can't check yet — that's the point. A detective's guess is worthless without the file.</span> 2 мин.</li><li>Командую перевернуть листки лицом вниз до охоты. (Ключ себе: F/F/F/F/T/F.)</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд 6 утверждений (или столбиком на доске) · листки-слипы</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> письменно коммитят догадки и переворачивают листки. Ожидаемо: 3–4 «ловятся» на правдоподобные фейки. Типичная ошибка: подглядывать в учебник — «Closed books! Guessing is the point!»</div></td><td class='mat'>gate slide · slips</td></tr><tr><td class='min'>13–20′</td><td class='stage'><div class='nm'>Спринт: тип текста по виду</div><div class='sub'>⚡ Base sprint · type the texts</div><div class='zone'>desks · crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 30 секунд НЕ читая: тип каждого из 4 текстов только по виду + фото-матч за 60 сек</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Говорю: <span class='en'>Thirty seconds, DON'T read page 15 — match the four texts to a–d by LOOK only: numbers? photos? sentences?</span></li><li>Проверяю с обоснованием: +2 за матч с причиной (<span class='en'>%-signs = fun facts panel!</span>).</li><li>Добиваю ex.1: <span class='en'>Words 1–5 to photos A–E — sixty seconds!</span> Очки в банк.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник pp.14–15 · доска: 4 иконки типов (📊 · 🧑 · 📰 · 🎉)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> определяют типы текстов по виду за секунды и объясняют признак. Ожидаемо: мгновенно — их скорость. Типичная ошибка: начинают читать — «Look, don't read! Detectives scan first».</div><span class='diff'><span class='ext'>⭐ Fast finishers (TB p.20):</span> запиши, что видишь на каждой фотографии (bicycles, a pancake…).</span></td><td class='mat'>SB pp.14–15</td></tr><tr><td class='min'>20–33′</td><td class='stage'><div class='nm'>Рейд за фактами по 4 станциям</div><div class='sub'>🔥 Challenge · timed fact raid (jigsaw)</div><div class='zone'>4 stations</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> каждый рейдит СВОЮ станцию-текст (3 факта, лимит 4 мин), докладывает по правилу 5 сек; вскрываем детектор лжи</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Развешенные до урока 4 текста-станции; раздаю карты охоты (по 3 факта на члена экипажа).</li><li>ICQ: <span class='en'>Copy sentences? — No! Short answers: Amsterdam, euro, 17 million.</span></li><li>Запускаю: <span class='en'>Four minutes cap — RAID!</span></li><li>Возврат: доклад команде по правилу 5 сек (<span class='en'>What's the currency? — …five seconds!</span>), командный лист на 12 фактов.</li><li>Вскрываем слипы детектора: <span class='en'>Verify your guesses — WITH the source: False! Text 2 says Thomas is 13.</span> +1 за исправление с источником.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> 4 станции · карты охоты · командные листы · таймер · audio 10 фоном по желанию</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> рейдят станции поодиночке, докладывают под таймер, сверяют утренние догадки с фактами и цитируют источник. Ожидаемо: «My guess was wrong — text 4 says 25%!». Типичная ошибка: факт без источника — очко не даётся, evidence rule.</div><span class='diff'><span class='ext'>⭐ Быстрым:</span> конверт «Fact+» — число, имя и %, которых ещё никто не использовал.</span></td><td class='mat'>stations · hunt cards · timer</td></tr><tr><td class='min'>33–42′</td><td class='stage'><div class='nm'>Дуэль на 6 словах из текста</div><div class='sub'>Word work duel</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> партнёры делят 6 определений пополам и гоняют друг друга по правилу 5 секунд; предложение про Россию</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Делю роли: <span class='en'>Partner A owns definitions 1–3, B owns 4–6. Find your bold words in the text — two minutes.</span></li><li>Дуэль: <span class='en'>Test each other. Five-second rule! The money people use? — Currency!</span></li><li>Финал: каждая пара — предложение про Россию с любым словом; лучшее от экипажа вслух (+1 richness за прилагательное).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник p.14 ex.6 · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> владеют своей тройкой слов и гоняют партнёра на скорость; составляют предложение про Россию. Ожидаемо: «Our education is free». Типичная ошибка: is/are слип — записываю молча: топливо для gate P3.</div><span class='diff'><span class='ext'>⭐ TB Challenge (p.21):</span> ответы дуэли — ТОЛЬКО полными предложениями: <span class='en'>The currency of the Netherlands is the euro.</span></span><span class='asr'>✔ Assess: живы ли is/are-слипы после P1 — 2 примера для gate P3.</span></td><td class='mat'>SB p.14</td></tr><tr class='bridge'><td class='min'>42–51′</td><td class='stage'><div class='nm'>Бонус-уровень: допрос Томаса (Have you ever…?)</div><div class='sub'>🚀 Bonus level · interview Thomas</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ролевая: один — Томас из текста, второй — детектив с 3 вопросами «Have you ever…?» (структуры GMF4)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Поднимаю статус: <span class='en'>Beginners ask Thomas: ‘Are you Dutch?’ You can time-travel his whole LIFE. Not in this book.</span></li><li>Пишу рамки: <b>Have you ever (lived in England / cycled to school in snow)? — Yes, I have. / No, never.</b></li><li>Ролевая: A = Томас (факты текста + фантазия), B = детектив с 3 вопросами. Свап.</li><li>Лучший вопрос класса → +2 в лидерборд.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: рамки Have you ever…? · факты о Томасе на станции №2 рядом</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> допрашивают «Томаса» перфектом, отвечают в характере. Ожидаемо: «Have you ever eaten Dutch cheese? — Yes, I have!». Типичная ошибка: «Did you ever…» — принимаю (тоже верно!), хвалю обе версии.</div></td><td class='mat'>bonus frames</td></tr><tr><td class='min'>51–62′</td><td class='stage'><div class='nm'>Рейтинг счастья — боеприпасы для дебатов</div><div class='sub'>Evaluate · happiness ranking (топливо дебатов)</div><div class='zone'>desks · crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> команды ранжируют 8 карточек «что важнее для счастья»; их топ-3 = линия аргументации в дебатах</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Шаг Remember: <span class='en'>One similar + one different thing vs Russia — sixty seconds, huddle.</span></li><li>Раздаю наборы 8 карточек, запускаю Evaluate: <span class='en'>Order them 1–8 for happiness. Everyone touches at least two cards. Four minutes.</span></li><li>Заряжаю на дебаты: <span class='en'>Your top-3 = your ammunition: if NL wins on YOUR top-3 — the claim stands. If not — it falls.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> наборы 8 карточек (education·family·free time·food·health·money·people·weather)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> ранжируют карточки, зная, что рейтинг станет аргументацией. Ожидаемо: споры о money/free time — уже рамками. Типичная ошибка: русский спор — аргумент не засчитывается (правило объявлено).</div><span class='diff'><span class='ext'>⭐ TB Challenge (p.21):</span> объясни свой порядок парой с моделями: <span class='en'>(Health) is number 1 on my list — I'm not happy when I'm ill. For me, (money) isn't important, but people are.</span></span></td><td class='mat'>8-card sets</td></tr><tr><td class='min'>62–80′</td><td class='stage'><div class='nm'>Дебаты в тройках: вердикт с фактами</div><div class='sub'>🏁 PRODUCT · verdict debates in trios</div><div class='zone'>trio circles</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> тройки: обвинитель против защитника (по 90 сек), судья ждёт 3 факта; роли крутим 3 раза</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Раздаю роли и карты: Prosecutor (<span class='en'>NL isn't №1 because…</span>) · Defender (<span class='en'>It is — text 3 says…</span>) · Judge (карта: ☐ 3 факта? ☐ ответ оппоненту? вердикт).</li><li>Регламент: 90 сек сторона + 30 сек вердикт. Факты — ТОЛЬКО из листов охоты; выдуманный факт = очко сопернику.</li><li>Кручу роли ×3 — каждый побывает всеми.</li><li>Судейские очки в лидерборд, gold run-дебатёры объявлены.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> ролевые карты · судейские карты · командные листы фактов</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> дебатируют по регламенту, судят по карте, меняются ролями. Ожидаемо: цитаты «text 3 says 95%!». Типичная ошибка: эмоции вместо фактов — судья не ставит галочку, сторона проигрывает молча.</div><span class='ig'>🏆 <b>Планка продукта (рубрика судей, каждая пара):</b> Fluency — паузы не длиннее 3 сек (1–3) · Accuracy — формы чистые (1–3) · Richness — прилагательные, связки, бонус-структуры (1–3). 9/9 = «gold run», +5 в лидерборд.</span></td><td class='mat'>role cards · judge cards</td></tr><tr><td class='min'>80–90′</td><td class='stage'><div class='nm'>Лидерборд + разбор дня</div><div class='sub'>Leaderboard + debrief</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> финальное голосование класса «заявление подтверждено?», очки, ДЗ и тизер эфира</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Голосование: <span class='en'>Final verdict, whole class: is the claim CONFIRMED? Thumbs!</span></li><li>Очки в лидерборд, стрики обновлены.</li><li>Дебриф: <span class='en'>What won debates today — loud voice or sourced facts?</span></li><li>ДЗ + тизер: <span class='en'>Pair 3 — Zero-Mistake Broadcast: your be goes on air, and ONE error kills the show.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> лидерборд · слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> голосуют, сравнивают с интуицией начала урока, формулируют «факты бьют громкость». Ожидаемо: и убеждённые, и скептики — с аргументами.</div></td><td class='mat'>leaderboard · HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>🚀 Workbook Unit 1 (обязательные ☆☆–☆☆☆):</b> Workbook стр. 8: ex.2–4 ☆☆ + ex.5 ☆☆☆ (в какую секцию идёт факт) + ex.6 ☆☆☆ (<i>What would you like to do in Peru? Why?</i> — развёрнуто, 2–3 предложения).</p><p>🔎 Research bonus (+5, TB Get online): find TWO kinds of Dutch cheese OR the name of the little Dutch pancakes — report with <i>be</i>: <i>Gouda is a Dutch cheese.</i></p><p><b>🚀 Bonus level (optional, +5):</b> write 2 «Have you ever…?» questions for a celebrity you like — we'll fire them in class.</p><p style='font-size:.85rem;color:var(--muted)'>WB-аудио — в TRC; нет трека → аудио-пункты пропускаем. Фото ДЗ со слайда — ок.</p></td><td class='mat'>Workbook U1 · notebook · leaderboard points logged next lesson</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>verify claims against four informational texts and deliver a 60-sec verdict</b> supported by 3 facts.</li>
+      <li><span class="lb">Subsidiary.</span> Reading subskill (identifying types of text) applied at speed; Word work as a duel; Critical thinking Evaluate = ranked debate in trios; GMF4 bonus: interview Thomas with Have you ever…?</li>
+      <li><span class="lb">Personal.</span> Reading is where continuers actually stretch — texts are new even if grammar isn't. Keep hunts timed and competitive; verdicts get the full judging bar.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>commit predictions and verify them in texts</li><li>identify a text type in 10 seconds by look</li><li>define/use 6 Word-work items</li><li>argue a verdict with facts, win a trio debate</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Bonus level</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>great</span><span class='w'>education</span><span class='w'>diet</span><span class='w'>bike</span><span class='w'>subjects</span><span class='w'>currency</span><span class='w'>capital</span><span class='w'>population</span><span class='w'>fact file</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>That's true/false — the text says… · Fact: 95% of Dutch teens are happy. · In my opinion it is/isn't №1 because… · 🚀 bonus: Have you ever cycled 900 km?</div></div>
+      <div class="r"><div class="k">Form</div><div>text types by look: fact file (words+numbers) · personal intro · article · fun-facts panel.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>euro /ˈjʊərəʊ/ · diet /ˈdaɪət/ · per cent — stress on CENT.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Detectives read every word?” → No — they scan for THE fact.</div><div class='ccq'>“A claim without a fact — does it win a debate?” → Never.</div><div class='ccq'>“Have you ever…? — which tense, GMF4 grads?” → Present perfect. Not in this book. In you — yes.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> be is fluent; the NL content and Word-work items are genuinely new. Debate format needs training wheels: frames + judge cards. Gate is diagnosis, not humiliation: the ceiling must be REAL (spelling/speed/writing), results are private tallies, the reveal is “so THIS is our growth zone”.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>«Читать скучно» resistance</td><td>Never ‘read the text’ — always ‘verify the claim in 90 seconds’. The stopwatch reframes everything.</td></tr><tr><td>Scanning = random shouting</td><td>Answers must include WHERE: “text 4 says…” — evidence rule, +1 only with the source.</td></tr><tr><td>Debate collapses into Russian</td><td>Frame strips + rule: only English sentences count as arguments.</td></tr><tr><td>Word work done by the strongest only</td><td>Duel format: definitions split between partners, each owns three.</td></tr><tr><td>Fast crews idle after hunts</td><td>Envelope «Fact+»: find a number, a name, a % not yet used by anyone.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 1 “Our world” (How are countries different?) · GIA1 — lesson plan &amp; staging</span>
+    <span>SB pp.14–15 (audio 10) · TB p.20–22 (warmer, Fast finishers, Challenge, Culture notes о Нидерландах — сырьё для факт-пауз). КТП-Accelerated пара 6. Тексты — только на станциях (копирайт). До урока: 4 станции, hunt-карты, judge/role-карты, 8 карточек Evaluate, конверт «Fact+».</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

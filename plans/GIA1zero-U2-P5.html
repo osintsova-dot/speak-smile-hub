@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1zero · Unit 2 · Pair 5 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 2 “Family” · Pair 5 — Writing: an email that gets help (+ Quick review)</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · input → guided practice → speaking, in game shells · pairs + teams of 3 · points, no dry drills</div>
+    <div class="meta"><span class='chip'>Week 26.10–01.11 · lessons 31–32 (KTP pair 16)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>SB pp.32–33</span><span class='chip'>teams of 3 · unit points board</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход в урок: приветствие + повтор прошлой пары</td><td>«одна хорошая новость»; блиц-повтор P4: залп вопросов с этикетом + Key phrases хором; мостик к пятнице</td></tr><tr><td class='gmin'>6–10′</td><td class='gname'>Завязка: пятница, ты занят, нужна помощь</td><td>ситуация «ты занят, а помочь надо»: собираем варианты, кого просят и о чём — банк проблем</td></tr><tr><td class='gmin'>10–21′</td><td class='gname'>Читаем письмо Джошуа (модель + скелет)</td><td>читаем письмо: ex.1 (о чём оно) → ex.2 порядок абзацев = скелет 5 ходов на доску → ex.3 почини факты на мини-досках</td></tr><tr><td class='gmin'>21–30′</td><td class='gname'>Ввод: две работы апострофа</td><td>две работы апострофа: домики из P3 возвращаются; охота ex.4 (какой один — хозяин?) + ex.5 полные формы</td></tr><tr><td class='gmin'>30–38′</td><td class='gname'>Блиц контракций на мини-досках</td><td>блиц p.33 ex.6: 10 предложений → контракции на мини-досках по 10 сек; стрики ×2</td></tr><tr><td class='gmin'>38–45′</td><td class='gname'>План письма: кому и о чём</td><td>выбираю адресата и проблему из банка; заметки ключевыми словами: проблема + время/место + 3 детали о человеке</td></tr><tr><td class='gmin'>45–60′</td><td class='gname'>Пишем письмо (двумя порциями)</td><td>порция 1 (ходы ①–②, 6 мин) → порция 2 (ходы ③–⑤, 7 мин); рамки из модели на доске; support-скелеты</td></tr><tr><td class='gmin'>60–70′</td><td class='gname'>Взаимопроверка по 4 галочкам</td><td>обмен письмами: 4 галочки ex.8 + охота на апострофы обеих работ; чиним и возвращаем</td></tr><tr><td class='gmin'>70–79′</td><td class='gname'>«Рынок услуг»: голосуем фишками</td><td>письма на партах; каждый с одной фишкой: «на чью просьбу я бы согласился»; топ-письмо вслух</td></tr><tr><td class='gmin'>79–90′</td><td class='gname'>Молния-повтор юнита (разминка к тесту)</td><td>молния по Quick review p.33 — 5 раундов = карта теста; слабый раунд = план повторения; ДЗ</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 2 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор прошлой пары</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> «одна хорошая новость»; блиц-повтор P4: залп вопросов с этикетом + Key phrases хором; мостик к пятнице</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери: <span class='en'>One good thing — three seconds each!</span></li><li>Повтор P4 скорострелом: <span class='en'>Have you got any cousins? Has your dad got a beard?</span> — хором ПОЛНЫМИ краткими; зуммер этикета в игре.</li><li>Key phrases эхо: <span class='en'>Who's — …this? That's a — …great photo!</span></li><li>Мостик: <span class='en'>Friday. Basketball practice. And your friend's train arrives at 6:35. Problem? An EMAIL solves it. A boy called Joshua shows how.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> отвечают этикетно, досказывают фразы. Ожидаемо: чисто. Типичная ошибка: «Yes, I've» — класс сам зуммерит.</div></td><td class='mat'>мини-доски</td></tr><tr><td class='min'>6–10′</td><td class='stage'><div class='nm'>Завязка: пятница, ты занят, нужна помощь</div><div class='sub'>Hook · the favour</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ситуация «ты занят, а помочь надо»: собираем варианты, кого просят и о чём — банк проблем</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Спрашиваю: <span class='en'>You're busy on Friday. Somebody must meet your friend / feed your cat / bring your keys. WHO do you write to?</span></li><li>Собираю банк на доску (TB): granddad · aunt · big brother; занятость: guitar lesson · football practice · a party · drama club.</li><li>Обещаю: <span class='en'>By the end you'll write an email a granddad CAN'T refuse. The class will vote with chips!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: банк адресатов и занятости</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> накидывают ситуации — материал для своих писем готов заранее. Ожидаемо: смешные варианты («выгулять хомяка») — принимаю.</div></td><td class='mat'>board bank</td></tr><tr><td class='min'>10–21′</td><td class='stage'><div class='nm'>Читаем письмо Джошуа (модель + скелет)</div><div class='sub'>Model · Joshua's email</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> читаем письмо: ex.1 (о чём оно) → ex.2 порядок абзацев = скелет 5 ходов на доску → ex.3 почини факты на мини-досках</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ex.1 (90 сек): <span class='en'>Who writes to whom? And WHY: plans, HELP or a new friend?</span> (ключ: b — asks to help).</li><li>Ex.2 → строю скелет на доске: <b>① hello → ② favour + problem → ③ describe Ben → ④ thanks → ⑤ sign</b> (ключ TB: c·e·b·a·d).</li><li>Ex.3 на мини-досках: все 5 предложений — ложь; чиним с деталью: <span class='en'>Ben isn't from London — he's from MANCHESTER! The train is at 6:35!</span></li><li>Ритуал ход ②: три пальца — <span class='en'>WHAT exactly? WHEN? WHERE?</span> — детали решают.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник p.32 · доска: скелет 5 ходов (остаётся) · мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> вскрывают модель, чинят факты, запоминают скелет. Ожидаемо: скелет повторяют хором. Типичная ошибка: путают порядок ③/④ — цифры на доске держат.</div></td><td class='mat'>SB p.32 · mini-boards</td></tr><tr><td class='min'>21–30′</td><td class='stage'><div class='nm'>Ввод: две работы апострофа</div><div class='sub'>Discover · apostrophes (subskill)</div><div class='zone'>board → desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> две работы апострофа: домики из P3 возвращаются; охота ex.4 (какой один — хозяин?) + ex.5 полные формы</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Возвращаю 2 домика: <b>Дом 1: пропала буква (he's = he is · don't)</b> · <b>Дом 2: хозяин (Ben's train)</b>.</li><li>Охота ex.4: <span class='en'>Find EVERY apostrophe in the email. Which ONE shows the owner?</span> (ключ TB: Ben's parents; ловушка: «Ben's 13» = Ben IS!).</li><li>Ex.5 цепочкой устно: контракция → полная форма (I hope you are well · I have got · Ben is 13 · He is not very tall · He has got…).</li><li>CCQ: <span class='en'>Ben's 13 — owner? — NO! Ben IS. House one!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: 2 домика (остаются) · учебник p.32</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> расселяют каждый апостроф по домикам. Ожидаемо: ловушка «Ben's 13» ловит и учит. Типичная ошибка: «Ben's parents = Ben is parents?!» — смех + домик 2.</div></td><td class='mat'>SB p.32</td></tr><tr><td class='min'>30–38′</td><td class='stage'><div class='nm'>Блиц контракций на мини-досках</div><div class='sub'>Drill-play · contraction blitz</div><div class='zone'>desks · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> блиц p.33 ex.6: 10 предложений → контракции на мини-досках по 10 сек; стрики ×2</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Раунды по 10 сек: She is 14 → She's 14! · Do not talk → Don't talk! · I have got two cousins → I've got… — все 10 из ex.6.</li><li><span class='en'>Boards UP!</span> после каждого; +1 за чистую, стрик 3 подряд = ×2.</li><li>Раунды 6–10 — СТОЯ (двигательный перебив перед письмом): чистая доска = садишься; последним стоящим — хоровой спасательный чек.</li><li>Апостроф-чек хором на сложных: aren't · hasn't · We're.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник p.33 ex.6 · мини-доски · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут контракции на скорость всеми одновременно. Ожидаемо: 8–10 чистых у большинства. Типичная ошибка: «did'nt-стиль» дрейф — стоп-кадр: апостроф на место пропавшей буквы.</div><span class='asr'>✔ Assess: 2 частые ошибки блица — в чек-лист CHECK.</span></td><td class='mat'>SB p.33 · mini-boards</td></tr><tr><td class='min'>38–45′</td><td class='stage'><div class='nm'>План письма: кому и о чём</div><div class='sub'>THINK + PREPARE</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> выбираю адресата и проблему из банка; заметки ключевыми словами: проблема + время/место + 3 детали о человеке</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>THINK (ex.7): <span class='en'>Pick from our bank: who to write to + why you're busy. Secret is fine!</span></li><li>PREPARE: заметки СЛОВАМИ (не предложениями): problem · exact time+place · friend: age, hair (правило волос!), 1 деталь.</li><li>ICQ: <span class='en'>Sentences in notes? — No! Keywords!</span> Галочки THINK·PREPARE на трекере.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> банк на доске · листы заметок · трекер шагов</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> планируют письмо ключевыми словами. Ожидаемо: «granddad / feed cat / Friday 5 pm». Типичная ошибка: сразу пишут текст — «Notes first, email later!»</div></td><td class='mat'>notes sheets</td></tr><tr><td class='min'>45–60′</td><td class='stage'><div class='nm'>Пишем письмо (двумя порциями)</div><div class='sub'>WRITE · email in portions</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> порция 1 (ходы ①–②, 6 мин) → порция 2 (ходы ③–⑤, 7 мин); рамки из модели на доске; support-скелеты</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>WRITE порция 1 (6 мин, таймер): <span class='en'>Moves one-two: Hi…! How are you? I want to ask you a favour… I'm busy on… EXACT time and place!</span></li><li>WRITE порция 2 (7 мин): <span class='en'>Moves three-four-five: describe the person (he's got…, hair rule!), thanks, sign.</span></li><li>Рамки из модели держу на доске; support-скелеты с пропусками — отмеченным на блице.</li><li>Галочка WRITE на трекере.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: рамки (Hi… · I want to ask you a favour · He's got…) · таймеры · support-скелеты</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут конструктором двумя подходами. Ожидаемо: 5–7 предложений. Типичная ошибка: зависание на первой фразе — палец на рамку «Hi…! How are you?» — бери и дальше.</div><span class='diff'><span class='sup'>💪 Support:</span> скелет с первыми словами ходов. <span class='ext'>⭐ Быстрым:</span> +1 деталь, +1 вопрос адресату.</span></td><td class='mat'>notebooks · timers</td></tr><tr><td class='min'>60–70′</td><td class='stage'><div class='nm'>Взаимопроверка по 4 галочкам</div><div class='sub'>CHECK · peer review</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> обмен письмами: 4 галочки ex.8 + охота на апострофы обеих работ; чиним и возвращаем</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Peer review (ex.8): <span class='en'>Swap. Four boxes: have got correct? apostrophes correct — find one of EACH job! problem clear? description there?</span></li><li>Чиним подчёркиванием (автор исправляет САМ — ритуал), возвращаем, благодарим. +2 за чистую проверку.</li><li>Галочка CHECK на трекере: <span class='en'>Full pro cycle — done!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд 4 галочек · домики на доске как опора</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проверяют по конкретным боксам, охотятся на апострофы. Ожидаемо: находят 1–2 пропуска. Типичная ошибка проверяющего: «всё ок» за 10 секунд — прошу показать апостроф каждого домика пальцем.</div></td><td class='mat'>peer review slide</td></tr><tr><td class='min'>70–79′</td><td class='stage'><div class='nm'>«Рынок услуг»: голосуем фишками</div><div class='sub'>Play · «Would you do it?» market</div><div class='zone'>desks · mingling</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> письма на партах; каждый с одной фишкой: «на чью просьбу я бы согласился»; топ-письмо вслух</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>«Рынок»: письма на партах, у каждого фишка: <span class='en'>Walk, read, put your chip on the email you'd say YES to. Not your own!</span></li><li>Топ-письмо +3, автор читает вслух; класс называет ход, который сработал (<span class='en'>The exact time! The thanks!</span>).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> фишки · письма на партах</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> ходят, читают чужие письма (настоящая аудитория!), голосуют. Ожидаемо: побеждают письма с деталями. Типичная ошибка: фишка другу — «Vote the EMAIL, not the friend» (заранее, с улыбкой).</div></td><td class='mat'>voting chips</td></tr><tr><td class='min'>79–90′</td><td class='stage'><div class='nm'>Молния-повтор юнита (разминка к тесту)</div><div class='sub'>Quick review lightning (test warm-up)</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> молния по Quick review p.33 — 5 раундов = карта теста; слабый раунд = план повторения; ДЗ</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Объявляю: <span class='en'>This is EXACTLY the map of the test. Five rounds!</span></li><li>R1 семья (audio 20): определение → слово. R2 внешность (audio 21–23): опиши по правилу волос. R3 have got: гэпы на досках. R4 апострофы: owner or verb. R5 вопросы: скрэмбл + краткий ответ.</li><li>Итожу: <span class='en'>Your weak round = tonight's revision. The page is 33.</span> Очки, ДЗ (WB стр. 18).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайды раундов · audio 20–23 · мини-доски · табло</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> играют 5 раундов всеми командами, находят слабое звено. Ожидаемо: слабое — апострофы/спеллинг. Типичная ошибка: паника — «всё на одной странице 33».</div></td><td class='mat'>slides · audio 20–23</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook (родная тетрадь):</b> Workbook стр. 18, зад. 1–3 (апострофы: choose, is/has/P, расставь) + Vocabulary review зад. 1–2; дописать классный email по чек-листу CHECK.</p><p>⭐ Бонус (+5): зад. 4 — email-приглашение на свой день рождения.</p></td><td class='mat'>WB Unit 2 (стр. 12–19) · фото доски на телефон — можно</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>write a 5–7 sentence favour email by steps</b> with correct apostrophes (both jobs) and <i>have got</i> — and peer-check it by 4 boxes.</li>
+      <li><span class="lb">Subsidiary.</span> Joshua model → 5-move skeleton; subskill: apostrophes (possession vs contraction); contraction blitz; writing cycle THINK→PREPARE→WRITE→CHECK in timed portions; «market» vote; Quick review lightning = the map of the test.</li>
+      <li><span class="lb">Personal.</span> Writing pair — never 20 minutes of silence: portions with timers, market with chips. The two jobs of the apostrophe get their own visual (2 домика from P3 return!). Step tracker ritual continues.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>reproduce the 5-move email skeleton</li><li>tell apostrophe jobs apart (owner / verb)</li><li>write a favour email in portions</li><li>peer-check by 4 concrete boxes</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Hook</span><span>Model</span><span>Discover</span><span>Drill-play</span><span>Think</span><span>Write</span><span>Check</span><span>Market</span><span>Review</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>favour</span><span class='w'>busy</span><span class='w'>practice</span><span class='w'>meet</span><span class='w'>station</span><span class='w'>Hi …, / How are you?</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I want to ask you a favour. · I'm busy on Friday. · Are you free to meet him? · Ben's 13 (= Ben is!). He's got short, black hair. · Thanks!</div></div>
+      <div class="r"><div class="k">Form</div><div>email skeleton: hello → favour + problem → describe → thanks → sign; apostrophe job 1 = owner (Ben's train), job 2 = missing letter (he's, don't).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>favour /ˈfeɪvə/ · busy /ˈbɪzi/ · polite rise: Are you free…?↗</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Ben's 13 — owner or missing letter?” → missing letter: Ben IS 13.</div><div class='ccq'>“Do we write the email in one go?” → No — two portions with a timer.</div><div class='ccq'>“In peer review do we say ‘плохо’?” → No — check the 4 boxes and help fix.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> have got (all forms) + possessive 's live after P3–P4; the favour situation is real for kids (meet someone, feed a cat, bring keys). Apostrophe's two jobs met separately — today unified.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Blank page freeze</td><td>Skeleton + frames from the model on the board; first words of each move given (Hi…, I want to ask…).</td></tr><tr><td>Apostrophes drift in own writing</td><td>CHECK box №2 = apostrophes only; reviewer hunts ONE of each job; gate-домики висят.</td></tr><tr><td>Favour unclear (no time/place)</td><td>Move ② check ritual: «What EXACTLY? When? Where?» — three finger-questions.</td></tr><tr><td>Early finishers</td><td>Extension strip: +1 detail line, +1 question to the reader; then silent WB p.18 ex.1.</td></tr><tr><td>Quick review squeezed</td><td>Protect the 79′ mark: the lightning IS the test map — 5 rounds, all teams at once.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 2 “Family” (What is a family?) · GIA1zero — lesson plan &amp; staging</span>
+    <span>SB pp.32–33 (audio 20–23) · Subskill: apostrophes · Quick review p.33. КТП пара 16 (THINK→PREPARE — урок А, WRITE→CHECK + Quick review — урок Б). До урока: скелеты, фишки, слайды молнии, таймеры порций.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

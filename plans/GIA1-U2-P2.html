@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1 · Unit 2 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 2 “Family” · Pair 2 — Mission «Buy or Pass?»: fact-check the Putman show</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>continuing line 🚀 after GMF4</b> · 90 min · mission-based: gate → base sprint → challenge levels → GMF4 bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Week 12.10–18.10 · lessons 25–26 (KTP pair 13)</span><span class='chip new'>🚀 continuing after GMF4</span><span class='chip'>SB pp.26–27</span><span class='chip'>unit leaderboard · streaks · gold runs</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход в урок: приветствие + повтор прошлой пары</td><td>«батарейка»; блиц-повтор P1: 4 семейных слова на мини-досках (спеллинг!) + микро-питч добровольца; мостик к сделке</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Завязка миссии</td><td>объявляю миссию: платформа решает — покупать ли «Meet the Putmans»; вердикт только с доказательствами</td></tr><tr class='bridge'><td class='gmin'>8–13′</td><td class='gname'>Входной челлендж (gate): ставки-прогнозы</td><td>субнавык predicting как ставки: 6 громких утверждений — письменно T/F ДО чтения, листки лицом вниз</td></tr><tr><td class='gmin'>13–20′</td><td class='gname'>Спринт: тип текста + первое чтение</td><td>30 сек НЕ читая: что за страница (TV guide, вкладки, watchlist); фото ex.1: big or small family; чтение с audio 17 на скорость</td></tr><tr><td class='gmin'>20–33′</td><td class='gname'>Рейд за фактами + вскрытие ставок</td><td>гонка ex.3 (7 фактов за 4 мин) → ex.4 T/F с исправлением ДВУМЯ ходами → вскрываем ставки с источником</td></tr><tr><td class='gmin'>33–41′</td><td class='gname'>Дуэль на 6 словах из текста</td><td>партнёры делят 6 определений ex.5 пополам и гоняют друг друга по правилу 5 сек; предложение о своей семье</td></tr><tr class='bridge'><td class='gmin'>41–49′</td><td class='gname'>Бонус-уровень: интервью с Путманом (Have you ever…?)</td><td>ролевая: один — ребёнок Путманов, второй — журналист с 3 вопросами «Have you ever…?» (структуры GMF4)</td></tr><tr><td class='gmin'>49–60′</td><td class='gname'>Собираем банк аргументов (комменты + КМ)</td><td>комменты ex.8 (Eli·Clara·Toby) за 3 мин + Critical thinking: плюсы/минусы большой и маленькой семьи — боеприпасы для совета</td></tr><tr><td class='gmin'>60–80′</td><td class='gname'>Совет платформы: покупаем шоу или нет</td><td>тройки: «покупатель» против «скептика» (по 90 сек), судья ждёт 3 факта с источником; роли крутим 3 раза; финальный совет директоров</td></tr><tr><td class='gmin'>80–90′</td><td class='gname'>Лидерборд + разбор дня</td><td>очки, вывод «факты бьют громкость», ДЗ (WB p.16 — та же predicting!), тизер дела близнецов</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 2 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор прошлой пары</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> «батарейка»; блиц-повтор P1: 4 семейных слова на мини-досках (спеллинг!) + микро-питч добровольца; мостик к сделке</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери: <span class='en'>Battery check — show your charge!</span></li><li>Повтор P1: 4 вспышки определений → слово письменно: <span class='en'>My brother's son? My parents' parents? Boards UP!</span> +1 за чистую (эхо gate).</li><li>Доброволец: <span class='en'>Твой кастинг-питч — one line, from memory, no pause!</span> +2.</li><li>Мостик: <span class='en'>Agents, promotion: today you're the CHANNEL. A show about one family lands on your desk. Twenty-six people. One house. Buy it or pass?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-доски · мой список определений</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут слова одновременно, слушают питч. Ожидаемо: niece/nephew чище, чем на gate. Типичная ошибка: grandparents одним словом слитно с 's — показываю ключ.</div></td><td class='mat'>мини-доски</td></tr><tr class='bridge'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> объявляю миссию: платформа решает — покупать ли «Meet the Putmans»; вердикт только с доказательствами</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд <b>MISSION «BUY OR PASS?»</b>.</li><li>Говорю: <span class='en'>TLC sells you a reality show: «Meet the Putmans». The trailer makes BIG claims. Your board fact-checks everything and votes at the end: buy or pass. A wrong verdict costs millions — evidence only.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии (или «BUY OR PASS?» на доске) · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> включаются в роль совета платформы. Ожидаемо: скепсис «26 человек? не верю» — идеальный настрой.</div></td><td class='mat'>mission slide</td></tr><tr class='bridge'><td class='min'>8–13′</td><td class='stage'><div class='nm'>Входной челлендж (gate): ставки-прогнозы</div><div class='sub'>🎯 GATE · prediction bets</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> субнавык predicting как ставки: 6 громких утверждений — письменно T/F ДО чтения, листки лицом вниз</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вывожу 6 утверждений: 26 people live in one house · they've got three cars · each child has got a bedroom · they eat at ONE big table · the house is quiet · the grandparents' kids' names all start with «B».</li><li>Говорю: <span class='en'>Commit: T or F, in writing, NOW. Pro readers PREDICT before they read — that's the subskill. A bet without commitment is worthless.</span> 2 мин.</li><li>Листки лицом вниз. (Ключ себе: T/F/F/F/F/T.)</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд 6 утверждений · листки-слипы</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> письменно коммитят догадки. Ожидаемо: 3–4 ловятся на «three cars» и «one big table». Типичная ошибка: подглядывать — «Closed books! Betting is the point!»</div></td><td class='mat'>gate slide · slips</td></tr><tr><td class='min'>13–20′</td><td class='stage'><div class='nm'>Спринт: тип текста + первое чтение</div><div class='sub'>⚡ Base sprint · type + first read</div><div class='zone'>desks · crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 30 сек НЕ читая: что за страница (TV guide, вкладки, watchlist); фото ex.1: big or small family; чтение с audio 17 на скорость</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Говорю: <span class='en'>Thirty seconds, DON'T read page 27 — what page IS it? Tabs? Buttons? — a TV guide!</span> +2 за признак.</li><li>Ex.1 по фото: <span class='en'>Big family or small? Why unusual? One guess-sentence per crew.</span></li><li>Первое чтение с audio 17: <span class='en'>Read along and check ONLY your six bets — three minutes.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник pp.26–27 · audio 17 (бэкап: читаю сам)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> определяют тип страницы по виду, читают с прицелом на ставки. Ожидаемо: «TV guide — the tabs!». Типичная ошибка: медленное построчное чтение — «Scan for YOUR bets first!»</div></td><td class='mat'>SB pp.26–27 · audio 17</td></tr><tr><td class='min'>20–33′</td><td class='stage'><div class='nm'>Рейд за фактами + вскрытие ставок</div><div class='sub'>🔥 Challenge · timed fact raid</div><div class='zone'>desks · crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> гонка ex.3 (7 фактов за 4 мин) → ex.4 T/F с исправлением ДВУМЯ ходами → вскрываем ставки с источником</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Рейд ex.3: <span class='en'>Seven facts, four minutes — RAID! Short answers: Montana · house · grandparents · four, 16 · small · bus · six.</span> +1 за факт.</li><li>Ex.4 на мини-досках: T/F за 10 сек → ложь чиним двумя ходами: <span class='en'>They haven't got a car — they've got a BUS!</span> (ключ TB: F·T·F·T·F·F).</li><li>Вскрываем слипы ставок: <span class='en'>Verify WITH the source: False! Paragraph 4 says…</span> +1 за исправление с источником.</li><li>Молча собираю have got-слипы для клиники P3.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник p.27 · мини-доски · таймер · слипы ставок</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> рейдят текст на скорость, чинят ложь отрицаниями have got, сверяют ставки с абзацем-источником. Ожидаемо: «My bet was wrong — no car, a BUS!». Типичная ошибка: факт без источника — очко не даётся.</div><span class='diff'><span class='ext'>⭐ Быстрым:</span> конверт «Fact+» — число, имя и «B»-имя, которых ещё никто не использовал.</span></td><td class='mat'>SB p.27 · timer</td></tr><tr><td class='min'>33–41′</td><td class='stage'><div class='nm'>Дуэль на 6 словах из текста</div><div class='sub'>Word work duel</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> партнёры делят 6 определений ex.5 пополам и гоняют друг друга по правилу 5 сек; предложение о своей семье</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Роли: <span class='en'>Partner A owns definitions 1–3, B owns 4–6. Find your bold words — two minutes.</span></li><li>Дуэль: <span class='en'>Five-second rule! Sad because you aren't with people? — Lonely! Use or have with another person? — Share!</span></li><li>Финал: каждая пара — предложение о СВОЕЙ семье/классе с любым словом; лучшее от экипажа вслух (+1 richness).</li><li>Ключ ex.5: lonely · together · unusual · share · reality show · fun.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник p.26 ex.5 · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> владеют своей тройкой слов, гоняют партнёра, присваивают слова о себе. Ожидаемо: «I share a room with my brother». Типичная ошибка: lonely = alone — CCQ: «Alone = один. Lonely = грустно одному».</div></td><td class='mat'>SB p.26</td></tr><tr class='bridge'><td class='min'>41–49′</td><td class='stage'><div class='nm'>Бонус-уровень: интервью с Путманом (Have you ever…?)</div><div class='sub'>🚀 Bonus level · interview a Putman</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ролевая: один — ребёнок Путманов, второй — журналист с 3 вопросами «Have you ever…?» (структуры GMF4)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Поднимаю статус: <span class='en'>Beginners ask: ‘Have you got a bedroom?’ You can dig into his whole LIFE — not in this book.</span></li><li>Рамки: <b>Have you ever (been alone in the house / driven the school bus / eaten dinner alone)? — Yes, I have. / No, never!</b></li><li>Ролевая: A = Путман-ребёнок (факты текста + фантазия), B = журналист, 3 вопроса. Свап.</li><li>Лучший вопрос класса → +2 в лидерборд.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: рамки Have you ever…? · текст p.27 рядом</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> допрашивают «Путмана» перфектом в характере. Ожидаемо: «Have you ever been alone? — NEVER. Twenty-six people!» — юмор из фактов. Типичная ошибка: «Did you ever» — принимаю, хвалю обе версии.</div></td><td class='mat'>bonus frames</td></tr><tr><td class='min'>49–60′</td><td class='stage'><div class='nm'>Собираем банк аргументов (комменты + КМ)</div><div class='sub'>Evaluate · argument bank</div><div class='zone'>desks · crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> комменты ex.8 (Eli·Clara·Toby) за 3 мин + Critical thinking: плюсы/минусы большой и маленькой семьи — боеприпасы для совета</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Спринт ex.8: <span class='en'>Three online comments. Who's an only child? Who's happy, who's not — and WHY? Three minutes.</span> (ключ TB: Eli+Toby only children; Toby happy — cousins; Eli хочет сестру; Clara — annoying brothers).</li><li>Understand: <span class='en'>Two advantages + two disadvantages of a BIG family — from the text, with the source!</span></li><li>Apply: <span class='en'>Now two + two for a SMALL family — your own ideas.</span></li><li>Заряжаю: <span class='en'>This bank = your ammunition. The board vote is next.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник p.26 · доска: таблица adv/disadv (заполняется от команд)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> вытаскивают аргументы из комментов и текста, строят банк. Ожидаемо: «never lonely — but no own bedroom!». Типичная ошибка: аргумент по-русски — не попадает в банк (правило объявлено).</div></td><td class='mat'>SB p.26 · argument bank</td></tr><tr><td class='min'>60–80′</td><td class='stage'><div class='nm'>Совет платформы: покупаем шоу или нет</div><div class='sub'>🏁 PRODUCT · buy or pass debates</div><div class='zone'>trio circles</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> тройки: «покупатель» против «скептика» (по 90 сек), судья ждёт 3 факта с источником; роли крутим 3 раза; финальный совет директоров</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Роли и карты: Buyer (<span class='en'>Buy it! 26 people — drama every day, text says…</span>) · Skeptic (<span class='en'>Pass! It's just dinner at six…</span>) · Judge (карта: ☐ 3 факта? ☐ ответ оппоненту? вердикт).</li><li>Регламент: 90 сек сторона + 30 сек вердикт; факты ТОЛЬКО из текста/банка; выдуманный факт = очко сопернику.</li><li>Кручу роли ×3.</li><li>Финал — совет: <span class='en'>Final board vote: BUY or PASS? Thumbs! And the Evaluate question: the ideal number of people in a family — shout your number + one reason.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> ролевые карты · судейские карты · банк аргументов</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> дебатируют по регламенту, судят по карте, голосуют финально. Ожидаемо: цитаты «paragraph 5 says they eat together!». Типичная ошибка: эмоции вместо фактов — судья не ставит галочку.</div><span class='ig'>🏆 <b>Планка продукта (рубрика судей, каждая пара):</b> Fluency — паузы не длиннее 3 сек (1–3) · Accuracy — формы чистые (1–3) · Richness — прилагательные, детали, бонус-структуры (1–3). 9/9 = «gold run», +5 в лидерборд.</span></td><td class='mat'>role cards · judge cards</td></tr><tr><td class='min'>80–90′</td><td class='stage'><div class='nm'>Лидерборд + разбор дня</div><div class='sub'>Leaderboard + debrief</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> очки, вывод «факты бьют громкость», ДЗ (WB p.16 — та же predicting!), тизер дела близнецов</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Очки в лидерборд, стрики обновлены.</li><li>Дебриф: <span class='en'>What won the board today — loud voices or sourced facts?</span></li><li>ДЗ: WB стр. 16 — книжная рекомендация, ТОТ ЖЕ приём predicting: сначала фото, потом чтение. + Research: ещё одно семейное ТВ-шоу.</li><li>Тизер: <span class='en'>Pair 3 — the strangest case of the year: two sisters, same birthday… and nobody believes they're twins. Your agency opens THE TWIN FILES.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> лидерборд · слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> голосуют, забирают ДЗ с тем же субнавыком. Ожидаемо: «как это не верят, что близнецы?» — интрига на P3 посеяна.</div></td><td class='mat'>leaderboard · HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook (родная тетрадь):</b> Workbook стр. 16, зад. 2–5 (прогноз уже сделай мысленно за 10 секунд — как на уроке).</p><p>🔎 Research bonus (+5): Research из SB p.26 — найди ещё одну TV-программу о семье, принеси 2 предложения (name + who's in it).</p></td><td class='mat'>WB Unit 2 (стр. 12–19) · очки в лидерборд на следующей паре</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>verify bold claims against a TV-guide article and argue a «buy or pass» verdict</b> supported by 3 sourced facts.</li>
+      <li><span class="lb">Subsidiary.</span> Reading subskill (predicting) turned into betting; fact raid at speed; Word work as a duel; Critical thinking Understand→Apply→Evaluate = argument bank + board debate; GMF4 bonus: interview a Putman kid with Have you ever…?</li>
+      <li><span class="lb">Personal.</span> Reading is where continuers actually stretch — the text is new even if have got isn't. Keep hunts timed and competitive; verdicts get the full judging bar. Never say ‘читаем текст’ — say ‘проверяем шоу’.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>commit predictions and verify them with evidence</li><li>extract 7 facts against the clock</li><li>define/use 6 Word-work items</li><li>argue buy/pass with facts and win a board vote</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Bonus level</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>lonely</span><span class='w'>together</span><span class='w'>unusual</span><span class='w'>share</span><span class='w'>reality show</span><span class='w'>fun</span><span class='w'>big family</span><span class='w'>only child</span><span class='w'>grandchildren</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>That's false — the text says they've got a BUS. · They haven't got their own bedrooms. · In my opinion the show is/isn't a hit because… · 🚀 bonus: Have you ever been alone in the house? — Never!</div></div>
+      <div class="r"><div class="k">Form</div><div>have got in evidence sentences; text type: a TV guide page (tabs, «add to watchlist», programme blurb).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>unusual /ʌnˈjuːʒuəl/ · lonely vs alone · together — stress on GE.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Analysts read every word?” → No — they scan for THE fact.</div><div class='ccq'>“A verdict without a source — does it survive the board?” → Never.</div><div class='ccq'>“Have you ever…? — which tense, grads?” → Present perfect. Not in this book. In you — yes.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> have got is fluent orally; the Putman content and Word work are genuinely new. Debate needs frames + judge cards. Gate is diagnosis, not humiliation: the ceiling must be REAL (spelling/speed/writing), results are private tallies, the reveal is “so THIS is our growth zone”.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>«Читать скучно» resistance</td><td>Never ‘read’ — ‘verify your bets in 90 seconds’. The stopwatch reframes everything.</td></tr><tr><td>Scanning = random shouting</td><td>Evidence rule: answers include WHERE — “paragraph 4 says…”; +1 only with the source.</td></tr><tr><td>Debate collapses into Russian</td><td>Frame strips + rule: only English sentences count as arguments.</td></tr><tr><td>Word work done by the strongest only</td><td>Duel format: definitions split A/B, each owns three.</td></tr><tr><td>Fast crews idle</td><td>Envelope «Fact+»: find a number, a name and a ‘B’-name nobody used yet.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 2 “Family” (What is a family?) · GIA1 — lesson plan &amp; staging</span>
+    <span>SB pp.26–27 (audio 17) · Subskill: predicting → в ДЗ тот же subskill (WB p.16). КТП пара 13. Текст читаем из учебника (копирайт — не тиражируем). До урока: слипы ставок, judge/role-карты, конверт «Fact+».</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1 · Unit 2 · Pair 6 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 2 “Family” · Pair 6 — Mission «Inner Circle»: map your people + review rematch</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>continuing line 🚀 after GMF4</b> · 90 min · mission-based: gate → base sprint → challenge levels → GMF4 bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Week 26.10–01.11 · lessons 33–34 (KTP pair 17)</span><span class='chip new'>🚀 continuing after GMF4</span><span class='chip'>SB pp.34–35 (+ Project planner p.118)</span><span class='chip'>unit leaderboard · streaks · gold runs</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход в урок: приветствие + повтор прошлой пары</td><td>пять-в-ладошку; блиц-повтор P5: скелет письма хором + 2 апострофных «преступления»; мостик к финальной миссии</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Завязка миссии</td><td>объявляю финальную миссию (карта + презентация, каждый говорит 60 сек) и предупреждаю: в конце — реванш всех трёх gate</td></tr><tr><td class='gmin'>8–15′</td><td class='gname'>Видео-модель Алекса: укради ход</td><td>модельное видео с задачами: кто в карте · укради ход · назови, что сделаешь ЛУЧШЕ</td></tr><tr><td class='gmin'>15–24′</td><td class='gname'>Шаг 1: анатомия circle map</td><td>ex.2–3: строение карты (центр, оранжевый/синий круг, что в подписи); Super skill: «первая идея — заложник»</td></tr><tr><td class='gmin'>24–34′</td><td class='gname'>Шаг 2: список людей + планка описаний</td><td>ex.4–6: личный список 8–10 → обсуждение в парах ТОЛЬКО фразами Super skills → выбор 6 с заметками по планке</td></tr><tr><td class='gmin'>34–55′</td><td class='gname'>Шаг 3: делаем карту по таймеру</td><td>личная карта на А4/А3: 5 кругов, имена, подписи по планке; звонок-синхрон в середине; собираю 2 типа ошибок</td></tr><tr><td class='gmin'>55–71′</td><td class='gname'>Шаг 4: каждый говорит свои 60 секунд</td><td>How to p.118 → каждый презентует 60 сек в четвёрке; судьи с осями Layout/Content/Language/Visuals; peer review ex.9</td></tr><tr><td class='gmin'>71–76′</td><td class='gname'>Самооценка смайликами + галерея</td><td>честные смайлики по 3 вопросам (task · super skill · language), карты на стену</td></tr><tr class='bridge'><td class='gmin'>76–88′</td><td class='gname'>Реванш трёх входных тестов: победи себя</td><td>реванш трёх входных тестов юнита: спеллинг семьи · 60-сек have got · 6 скрэмблов вопросов; побил себя в 2 из 3 = +5</td></tr><tr><td class='gmin'>88–90′</td><td class='gname'>Два подиума: счёт и рост</td><td>предфинальные позиции: тестовая пара даст последние большие очки; ДЗ WB стр. 19</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 2 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор прошлой пары</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> пять-в-ладошку; блиц-повтор P5: скелет письма хором + 2 апострофных «преступления»; мостик к финальной миссии</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери — пять-в-ладошку + <span class='en'>one word: project mood?</span></li><li>Повтор P5: скелет хором (<span class='en'>Move one? — Hello! Move two? — The favour!</span>) + 2 «преступления» на мини-досках: <i>my grandmas glasses · shes got a dog</i>.</li><li>Доброволец: <span class='en'>Read your email's best line — the one that got chips!</span> +2.</li><li>Мостик: <span class='en'>You've cast families, checked shows, cracked twins, unlocked phones, won favours. Final mission: map the people who matter — YOURS.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-доски · строки-преступления на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> дают пять, чинят апострофы, слушают строку. Ожидаемо: разгон за 6 минут. Типичная ошибка: одна починка из двух — «TWO crimes!»</div></td><td class='mat'>мини-доски</td></tr><tr class='bridge'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> объявляю финальную миссию (карта + презентация, каждый говорит 60 сек) и предупреждаю: в конце — реванш всех трёх gate</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд <b>MISSION «INNER CIRCLE»</b>.</li><li>Говорю: <span class='en'>Five circles. You in the centre. Your people around you — with faces, facts and reasons. Everyone presents SIXTY seconds. Plus: tonight the gates REMATCH — October-you vs today-you.</span></li><li>Инклюзив вслух (TB): <span class='en'>Family, friends, teams, teachers — IMPORTANT people, your choice.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> принимают финальную рамку. Ожидаемо: «а если не побью gate?» — «Побьёшь. Данные за вас».</div></td><td class='mat'>mission slide</td></tr><tr><td class='min'>8–15′</td><td class='stage'><div class='nm'>Видео-модель Алекса: укради ход</div><div class='sub'>Model · Alex + «сделаю лучше»</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> модельное видео с задачами: кто в карте · укради ход · назови, что сделаешь ЛУЧШЕ</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Задачи ДО плей: <span class='en'>One: WHO is in Alex's map (not names — who they are)? Two: steal ONE move. Three: name ONE thing you'll do better.</span></li><li>Включаю видео (pp.34–35; ключ TB: mum, uncle, cousin, best friends, guitar teacher, basketball team).</li><li>Вопросы-стопы (TB): <span class='en'>What does Alex do with his cousin? How old are Ömer and Matthew?</span></li><li>Нет видео → SB p.35 как «замороженная презентация», озвучиваю вступление сам.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> видео проекта (бэкап: SB p.35) · доска: украденные ходы</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> смотрят с прищуром улучшателя. Ожидаемо: «команда в карте — беру!». Типичная ошибка: критика без решения — «better HOW?»</div></td><td class='mat'>project video · SB p.35</td></tr><tr><td class='min'>15–24′</td><td class='stage'><div class='nm'>Шаг 1: анатомия circle map</div><div class='sub'>THINK · анатомия карты</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.2–3: строение карты (центр, оранжевый/синий круг, что в подписи); Super skill: «первая идея — заложник»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ex.2 спринтом: <span class='en'>Who's in the centre? Which circle is ‘most important’? Who else besides family — and why?</span></li><li>Ex.3: что в подписи: имя+возраст · фото · кто он мне · внешность. Показываю подпись Uncle Daniel: <span class='en'>tall and dark and he's got a beard — the unit language works!</span></li><li>Super skill (Critical thinking): <span class='en'>Don't choose your first idea. Write it — then ask: is this true for ME? Who ELSE?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник pp.34–35 · доска: анатомия подписи (who + age + looks + why)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> вскрывают модель, фиксируют анатомию подписи. Ожидаемо: «а собака считается?» — «Alex взял команду. Твоя карта — твои правила».</div></td><td class='mat'>SB pp.34–35</td></tr><tr><td class='min'>24–34′</td><td class='stage'><div class='nm'>Шаг 2: список людей + планка описаний</div><div class='sub'>PLAN · список + планка</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.4–6: личный список 8–10 → обсуждение в парах ТОЛЬКО фразами Super skills → выбор 6 с заметками по планке</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ex.4 соло (3 мин): список 8–10 важных людей/групп — БОЛЬШЕ, чем войдёт: выбор будет осознанным.</li><li>Раздаю палатки Key phrases (<span class='en'>What do you think? · Have you got any cousins…? · Are you sure about that?</span>): обсуждение в парах — решения ТОЛЬКО по-английски.</li><li>Ex.6: выбрать 6 человек/групп + заметки по планке: <b>who + age · looks (have got!) · WHY important · 🚀 ≥1 бонус-структура на карту</b> (We've been friends since… / has never…).</li><li>ICQ: <span class='en'>Sentences in notes? — No! Keywords!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> палатки Key phrases · карты планки · листы заметок</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> торгуются фразами, выбирают осознанно, пишут заметки с прицелом на планку. Ожидаемо: «Are you sure about that?» с удовольствием. Типичная ошибка: русское решение — переигрываем по-английски за 20 сек.</div></td><td class='mat'>tents · bar cards</td></tr><tr><td class='min'>34–55′</td><td class='stage'><div class='nm'>Шаг 3: делаем карту по таймеру</div><div class='sub'>CREATE · карта (21′)</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> личная карта на А4/А3: 5 кругов, имена, подписи по планке; звонок-синхрон в середине; собираю 2 типа ошибок</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Отсчёт 21 мин: <span class='en'>CREATE! Five circles, colour code, names in, captions to the bar. Draft beauty is enough — visuals are homework.</span></li><li>10-я минута — колокольчик: <span class='en'>Sync! Centre done? Orange circle captioned? Bonus structure in?</span></li><li>Хожу с блокнотом: тихо собираю 2 типа ошибок для клиники реванша; фото — рисунками/стрелками, не тратим время.</li><li>За 3 мин: <span class='en'>Three minutes — captions FINISH now!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> листы А4/А3 · цветные маркеры · карты планки · колокольчик</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> рисуют круги, пишут подписи с have got и «почему». Ожидаемо: карты с командами, тренерами, собаками. Типичная ошибка: подпись из одного слова — карта планки на столе требует апгрейда.</div><span class='diff'><span class='ext'>⭐ Быстрым:</span> секция-сюрприз: человек, о котором класс НЕ догадается (интрига для презентации).</span> <span class='asr'>✔ Assess: 2 типа ошибок — на клинику.</span></td><td class='mat'>sheets · markers</td></tr><tr><td class='min'>55–71′</td><td class='stage'><div class='nm'>Шаг 4: каждый говорит свои 60 секунд</div><div class='sub'>🏁 PRODUCT · презентации в четвёрках</div><div class='zone'>groups of 4</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> How to p.118 → каждый презентует 60 сек в четвёрке; судьи с осями Layout/Content/Language/Visuals; peer review ex.9</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Прохожу How to-tips (p.118) за 1 мин: <span class='en'>Speak to PEOPLE, not paper. Keyword flashcards only.</span></li><li>Четвёрки: каждый — 60 сек по секундомеру; трое судят по осям TB: Layout · Content · Language · Visuals (1–3) + peer-карта ex.9: кто в карте? похожа на твою?</li><li>Бонус-структуры живьём = +1; лучший из четвёрки — 30-сек выход на класс.</li><li>Очки в лидерборд между раундами.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> секундомер · судейские карты с 4 осями · peer-карты</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> держат личные 60 секунд, судят по осям, сравнивают карты. Ожидаемо: искренние вопросы «Who's THAT?» — интрига работает. Типичная ошибка: чтение с карты — оси бьют по Language, сосед держит карту.</div><span class='ig'>🏆 <b>Планка продукта (рубрика судей, каждая пара):</b> Fluency — паузы не длиннее 3 сек (1–3) · Accuracy — формы чистые (1–3) · Richness — прилагательные, детали, бонус-структуры (1–3). 9/9 = «gold run», +5 в лидерборд.</span></td><td class='mat'>stopwatch · rubric cards</td></tr><tr><td class='min'>71–76′</td><td class='stage'><div class='nm'>Самооценка смайликами + галерея</div><div class='sub'>Final reflection + галерея</div><div class='zone'>wall</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> честные смайлики по 3 вопросам (task · super skill · language), карты на стену</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Читаю 3 вопроса Final reflection (p.35): сказал, КТО эти люди? описал? думал по-разному? язык юнита?</li><li>Команда: <span class='en'>Smileys — honest! Yellow or red? Then say what you'll change next time.</span> (гайд TB).</li><li>Вешаем карты: <span class='en'>Look at this wall. Pair 1 you couldn't spell ‘niece’. Now you present PEOPLE.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд 3 вопросов · стена/скотч</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> оценивают себя честно, вешают карты, ловят гордость. Ожидаемо: 😊 по задаче, 😐 по языку у части — план на реванш.</div></td><td class='mat'>smiley slips · wall</td></tr><tr class='bridge'><td class='min'>76–88′</td><td class='stage'><div class='nm'>Реванш трёх входных тестов: победи себя</div><div class='sub'>🎯 GATE REMATCH ×3</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> реванш трёх входных тестов юнита: спеллинг семьи · 60-сек have got · 6 скрэмблов вопросов; побил себя в 2 из 3 = +5</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Объявляю: <span class='en'>The rematch. Same three gates, same rules. October-you is waiting.</span></li><li>R1: 8 определений → слово (3 мин) → ключ. R2: 60-сек have-got лицензия → самоподсчёт. R3: 6 скрэмблов вопросов (90 сек) → ключ.</li><li>Сравнение с полями P1/P3/P4: <span class='en'>Beat yourself in 2 of 3 — growth badge, plus five!</span></li><li>2-мин клиника на 2 собранных типа ошибок. Наводка: <span class='en'>Your weakest rematch = tonight's revision. WB page 19 + Quick review p.33.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> gate-слайды всех трёх раундов + ключи · таймеры</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проходят три знакомых теста против октябрьского себя. Ожидаемо: большинство бьёт 2–3 из 3. Типичная ошибка: не побил один — «слабый раунд найден, это и есть план на вечер».</div></td><td class='mat'>gate slides · timers</td></tr><tr><td class='min'>88–90′</td><td class='stage'><div class='nm'>Два подиума: счёт и рост</div><div class='sub'>Podium · финал юнита</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> предфинальные позиции: тестовая пара даст последние большие очки; ДЗ WB стр. 19</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Показываю позиции: <span class='en'>Everything is still possible — the test pair gives the last BIG points. Revise page 33, rest, come sharp.</span> ДЗ на слайде.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> лидерборд · слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> оценивают шансы, забирают план повторения. Ожидаемо: интрига гонки жива.</div></td><td class='mat'>leaderboard</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook (родная тетрадь):</b> Workbook стр. 19 ЦЕЛИКОМ: Grammar review 1–3 + Round-up (Симпсоны, кумулятив U1–U2!) + Self-evaluation. Повторить Quick review SB p.33 — реванш-квиз и тест собраны из него.</p><p>🚀 Bonus level (+5, из TB): интервью с кем-то из семьи + мини circle map для НЕГО (4 человека).</p></td><td class='mat'>WB Unit 2 (стр. 12–19) · очки в лидерборд на следующей паре</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners <b>create and present a circle map of important people</b> (bar: 60 sec each, every description = who + looks + why) and pass the gate REMATCH ×3 proving unit growth.</li>
+      <li><span class="lb">Subsidiary.</span> Project cycle with Alex's model; Super skill Critical thinking («don't marry the first idea»); Key phrases as the negotiation currency; judging by Layout/Content/Language/Visuals (TB axes); Final reflection; rematch of all three gates.</li>
+      <li><span class="lb">Personal.</span> Continuers' project trap = coasting («my mum, my dad, the end»). The bar card forces depth: looks with have got + WHY important + a bonus structure. Creativity praise > correctness praise today. Time ruthlessly.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>choose people via critical-thinking tips, not first ideas</li><li>negotiate in English with the book's Key phrases</li><li>present their map 60 sec to the bar</li><li>beat their own three gate scores</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Model</span><span>Think</span><span>Plan</span><span>Create</span><span>Present</span><span>Reflection</span><span>Rematch</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>What do you think?</span><span class='w'>Are other people important?</span><span class='w'>What about your classmates?</span><span class='w'>Have you got any cousins/uncles/aunts…?</span><span class='w'>Is/Are your … important to you?</span><span class='w'>Are you sure about that?</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>The people in the orange circle are the most important. · My uncle's tall and dark and he's got a beard. · She's important to me because… · 🚀 bonus: We've been friends since kindergarten. · You'll meet them all one day.</div></div>
+      <div class="r"><div class="k">Form</div><div>circle map: Me! in the centre; orange = most important, blue = less; each label: who + age + have got description + why.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>presentation projection; proud stress on names; «important» — stress on POR.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Is the first idea usually the best?” → Book says no: write it, then think about other people too.</div><div class='ccq'>“Can a TEAM be in the map?” → Yes — Alex's basketball team is (SB p.35).</div><div class='ccq'>“Is ‘my mum is nice’ enough for the bar?” → No: looks + why + a real detail.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> All unit language live; the stretch = sustained English negotiation + WHY-sentences (reasons). Rematch closes the unit arc with measurable growth. Gate is diagnosis, not humiliation: the ceiling must be REAL (spelling/speed/writing), results are private tallies, the reveal is “so THIS is our growth zone”.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Coasting: «mum, dad, done»</td><td>Bar card per person: who + looks (have got) + why + 1 bonus structure per map.</td></tr><tr><td>Talking about family feels private for some</td><td>TB inclusive note out loud: the map is about IMPORTANT people — friends, teams, teachers count.</td></tr><tr><td>Discussion flips to Russian</td><td>Key-phrases tents = the only currency: a Russian decision doesn't count (redo in English, 20 sec).</td></tr><tr><td>CREATE overruns</td><td>Countdown per step + ‘draft beauty’ rule: visuals home, texts in class.</td></tr><tr><td>Presenter reads the map</td><td>Keyword flashcards only (TB Reinforcement); toes to the audience; rubric punishes reading.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 2 “Family” (What is a family?) · GIA1 — lesson plan &amp; staging</span>
+    <span>SB pp.34–35 · Project video (Alex; скрипт TB pp.138–139) · Project planner p.118 · оси судейства Layout/Content/Language/Visuals — TB p.43. КТП пара 17. Карта — индивидуальная (по книге), презентации в четвёрках. До урока: листы, палатки, карты планки, смайл-слипы, gate-слайды реванша.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

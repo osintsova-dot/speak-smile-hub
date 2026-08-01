@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1zero · Unit 2 · Pair 1 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 2 “Family” · Pair 1 — Family opens: the Canes tree, describing people + Video skills</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · input → guided practice → speaking, in game shells · pairs + teams of 3 · points, no dry drills</div>
+    <div class="meta"><span class='chip'>Week 12.10–18.10 · lessons 23–24 (KTP pair 12)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>SB pp.24–25</span><span class='chip'>teams of 3 · unit points board</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход в урок: приветствие + повтор прошлой пары</td><td>встречаю у двери; блиц-повтор U1 (национальности + be) на очки; мостик в новый юнит</td></tr><tr><td class='gmin'>6–10′</td><td class='gname'>Голосование стикерами: что такое семья?</td><td>каждый клеит стикер на «что делает семью семьёй», команды, табло очков Unit 2</td></tr><tr><td class='gmin'>10–21′</td><td class='gname'>Ввод: семейное древо Кейнов</td><td>строю древо Кейнов на доске с хоровым повтором; чант /ə/; команды закрывают ex.2 + Language note</td></tr><tr><td class='gmin'>21–30′</td><td class='gname'>Гонка пар: мужское ↔ женское слово</td><td>гонка ex.4 (8 пар мужское↔женское) + загадки ex.5 хором; сортировка «3 поколения»</td></tr><tr><td class='gmin'>30–38′</td><td class='gname'>Ввод: прилагательные о людях (с жестами)</td><td>3 пары прилагательных с жестами (ex.6) + «моя семья или сериал» (ex.7) по рамке</td></tr><tr><td class='gmin'>38–47′</td><td class='gname'>Видео Джонаса + бинго имён</td><td>видео Джонаса с бинго имён: кто он, сколько лет, зачем древо; пауза перед ответами квиза</td></tr><tr><td class='gmin'>47–57′</td><td class='gname'>Речевой круг: первые I've got… (без теории)</td><td>речевой круг с мячом: карточка родственника → «I've got a brother! I haven't got a sister!» — класс эхо; без грамматики</td></tr><tr><td class='gmin'>57–69′</td><td class='gname'>Карточная игра «Семь семей» (Have you got…?)</td><td>играем в «Семь семей» лайт: собери семью из 6 карт вопросом «Have you got the (Duffy) father?»</td></tr><tr><td class='gmin'>69–82′</td><td class='gname'>Пишем 4 предложения о своей семье</td><td>пишут по рамкам 4 предложения о семье (своей или выдуманной), взаимопроверка по 2 галочкам</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Итоги + рефлексия</td><td>каждый читает одно предложение, очки, пальцы «сколько семейных слов знаю», ДЗ</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 2 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор прошлой пары</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> встречаю у двери; блиц-повтор U1 (национальности + be) на очки; мостик в новый юнит</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери: <span class='en'>Hi! One word — how are you?</span> Пальцы-настроение 1–5.</li><li>Повтор U1 пинг-понгом: <span class='en'>Russia! — Russian! Japan! — Japanese!</span> 5 бросков хором.</li><li>2 раунда письменно на мини-досках: <span class='en'>Spell: SPANISH! Boards UP!</span> +1 за чистую.</li><li>Залп be: <span class='en'>Are you 11? Is our town big?</span> — хором полными краткими.</li><li>Мостик: <span class='en'>Unit 1 — the world. Unit 2 — the people you love. Today we meet a family with a secret… and a game that is one hundred years old.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-доски · мой список стран</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пинг-понгуют национальности, пишут спеллинг, отвечают этикетно. Ожидаемо: навыки U1 живы. Типичная ошибка: «Yes!» голое — зуммер класса из U1 работает.</div></td><td class='mat'>мини-доски</td></tr><tr><td class='min'>6–10′</td><td class='stage'><div class='nm'>Голосование стикерами: что такое семья?</div><div class='sub'>Hook · WDYT wall</div><div class='zone'>board · standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> каждый клеит стикер на «что делает семью семьёй», команды, табло очков Unit 2</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Раздаю стикеры, открываю вопрос юнита: <span class='en'>What is a family? People who live together? Love? Help? Fun?</span> — 4 колонки на доске.</li><li>Команда: <span class='en'>ONE sticky note — stick it on YOUR answer. Go!</span></li><li>Читаю колонку-победителя, обещаю: <span class='en'>We'll come back to this question at the end of the unit — with a project.</span></li><li>Показываю карточку Seven Families: <span class='en'>This game is from France. It's over 100 years old. Today — we play it in English!</span></li><li>Команды по 3 (состав продуман), новое табло очков Unit 2, переношу очки входа.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: «What is a family?» + 4 колонки-иконки · карта Seven Families (слайд/распечатка) · пустое табло</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> клеят стикеры — двигаются все; рассаживаются командами. Ожидаемо: спор «love или fun» — гашу сигналом «Eyes up in 3-2-1».</div></td><td class='mat'>sticky notes · points board</td></tr><tr><td class='min'>10–21′</td><td class='stage'><div class='nm'>Ввод: семейное древо Кейнов</div><div class='sub'>Discover · the Canes tree</div><div class='zone'>board → desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> строю древо Кейнов на доске с хоровым повтором; чант /ə/; команды закрывают ex.2 + Language note</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Черчу древо Кейнов (по SB p.25): Victor+Louise → Sandra+Paul · Anna+Pierre → Martin, Lena, Hugo. Фото-имена по ходу.</li><li>Называю слово — класс повторяет ×2; мужские пишу синим, женские зелёным: mother/father · son/daughter · grandmother/grandfather · aunt/uncle · cousin (двумя цветами!).</li><li>Чант /ə/ с пальцем у губ: <span class='en'>mo-thə, fa-thə, bro-thə, sis-tə, daugh-tə — no ‘r’!</span></li><li>Language note: <span class='en'>father + mother = PARENTS. son + daughter = CHILDREN. No brothers, no sisters = an ONLY CHILD.</span></li><li>Задание (ex.2): <span class='en'>Complete the six sentences about the Canes. Teams, three minutes!</span> Ключ: mother · sister · son · daughter · brother · father. +1 за пункт.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: древо Кейнов, строится на глазах и ОСТАЁТСЯ до конца урока; синий/зелёный цветокод · учебник pp.24–25</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> хором повторяют, чантят /ə/, в командах закрывают предложения по древу. Ожидаемо: 5–6 из 6. Типичная ошибка: «дочь» ищут как «dotter» — палец на daughter в древе: буквы хитрые, звук простой.</div></td><td class='mat'>board tree · SB pp.24–25</td></tr><tr><td class='min'>21–30′</td><td class='stage'><div class='nm'>Гонка пар: мужское ↔ женское слово</div><div class='sub'>Play · Male–Female match race</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> гонка ex.4 (8 пар мужское↔женское) + загадки ex.5 хором; сортировка «3 поколения»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Гонка ex.4: <span class='en'>Male to female — match all eight! Careful: ONE word is for both. Two minutes!</span></li><li>Проверяю хором с цветожестами (синяя рука/зелёная рука): <span class='en'>nephew — NIECE! grandson — GRANDDAUGHTER! cousin — …COUSIN!</span></li><li>Загадки ex.5 хором по правилу 5 сек: <span class='en'>My father's sister is my…? — AUNT! My aunt's son is my…? — COUSIN!</span></li><li>Твист (Fast finishers TB): <span class='en'>Sort the words into three generations: grand-level, parents-level, kids-level. Ninety seconds!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> учебник p.25 ex.4–5 · таймер · табло</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> матчат пары на скорость, отвечают хором на загадки, сортируют поколения. Ожидаемо: cousin ловит половину — смех и запоминание. Типичная ошибка: nephew↔niece — цветожест чинит.</div></td><td class='mat'>SB p.25 · timer</td></tr><tr><td class='min'>30–38′</td><td class='stage'><div class='nm'>Ввод: прилагательные о людях (с жестами)</div><div class='sub'>Discover 2 · describing people</div><div class='zone'>board → pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 3 пары прилагательных с жестами (ex.6) + «моя семья или сериал» (ex.7) по рамке</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ввожу пары с жестами: tall (рука вверх)/short (вниз) · dark/fair (показ на волосы) · old/young. Класс копирует жест + слово ×2.</li><li>Ex.6: фото A–C → пары называют прилагательные (ключ TB: A short, old · B tall, dark · C young, fair).</li><li>Рамка на доску: <b>___ : my ___ (he's/she's ___)</b>. Модель TB: <span class='en'>old: my grandfather — he's 79!</span></li><li>Ex.7 в парах: подбери человека (семья ИЛИ сериал/фильм — безопасный выбор!) к каждому прилагательному, скажи партнёру.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: 3 пары прилагательных с жестами · рамка ex.7 · учебник p.25</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> учат жесты, описывают фото, подбирают своих людей/героев по рамке. Ожидаемо: «tall: my dad!», «old: Dumbledore!». Типичная ошибка: «my grandfather is tall and old and big…» — прошу ОДНО слово на человека сегодня.</div></td><td class='mat'>SB p.25 · gesture bank</td></tr><tr><td class='min'>38–47′</td><td class='stage'><div class='nm'>Видео Джонаса + бинго имён</div><div class='sub'>Video skills · Jonas' tree</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> видео Джонаса с бинго имён: кто он, сколько лет, зачем древо; пауза перед ответами квиза</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Раздаю бинго-карты (6 клеток: mum · dad · grandparents · cousin · brother/sister · Jonas).</li><li>Задача: <span class='en'>Tick the people you SEE or HEAR. Full row — BINGO!</span></li><li>Включаю видео (ex.8; скрипт TB p.138); на квиз-вопросах Джонаса ставлю паузу: <span class='en'>Your answer first!</span></li><li>После: <span class='en'>Who's the narrator? How old is he?</span> (Jonas, 13). <span class='en'>Why is a family tree a GOOD way to show a family?</span> — принимаю простые ответы (<span class='en'>You SEE everything!</span>).</li><li>Нет видео → рисую древо Джонаса по скрипту TB p.138 и «озвучиваю» сам, бинго то же.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> видео Video skills p.25 (бэкап: скрипт TB p.138) · бинго-карты</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> смотрят с карандашом, кричат BINGO, отвечают на простые вопросы. Ожидаемо: «Jonas! Thirteen!». Типичная ошибка: молчат на «why» — подсказка-жест на древо Кейнов: видно ВСЮ семью сразу.</div></td><td class='mat'>video · bingo cards</td></tr><tr><td class='min'>47–57′</td><td class='stage'><div class='nm'>Речевой круг: первые I've got… (без теории)</div><div class='sub'>Try it · have got frames (no theory)</div><div class='zone'>standing circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> речевой круг с мячом: карточка родственника → «I've got a brother! I haven't got a sister!» — класс эхо; без грамматики</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Круг; рамки на доске: <b>I've got a ___ . / I haven't got a ___ .</b></li><li>Моделирую собой, медленно, дважды: <span class='en'>I've got a brother. I haven't got a sister.</span></li><li>Кидаю мяч + карточку слова (brother/sister/cousin/uncle…): поймал — скажи ПРАВДУ о себе по рамке (или про выдуманного героя — выбор), класс — эхо.</li><li>Каждый ловит 1–2 раза; исправляю ТОЛЬКО слово семьи, грамматику не трогаю: <span class='en'>The machine inside these frames — we open it in Pair 3!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: 2 рамки крупно · карточки семейных слов · мягкий мяч</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> ловят мяч, говорят правду по рамке, класс эхо. Ожидаемо: «I've got a cousin!» с гордостью. Типичная ошибка: «I have brother» — мягко переспрашиваю рамкой, эхо закрепляет верное.</div></td><td class='mat'>soft ball · word cards</td></tr><tr><td class='min'>57–69′</td><td class='stage'><div class='nm'>Карточная игра «Семь семей» (Have you got…?)</div><div class='sub'>Play · Seven Families</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> играем в «Семь семей» лайт: собери семью из 6 карт вопросом «Have you got the (Duffy) father?»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Раздаю колоды (готовлю до урока: 4–6 семей × 6 карт: father·mother·son·daughter·grandfather·grandmother, семьи из SB p.24: the Huangs, the Williams, the Canes, the Duffys…).</li><li>Демонстрирую с сильным учеником: <span class='en'>Have you got the Duffy father? — Yes! Here you are. / No! Take a card.</span></li><li>ICQ: <span class='en'>Do you ask in Russian? — No! No frame — no card!</span></li><li>Запускаю игру в группах по 3–4 (правила SB p.24: собери всю семью); полоски-рамки на столах.</li><li>Хожу, слушаю have got, записываю 2–3 ошибки анонимно для P3.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> колоды «Семь семей» ×4 · полоски-рамки на столах · учебник p.24 (правила)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> играют в настоящую 100-летнюю игру, гоняя рамку Have you got…? десятки раз. Ожидаемо: азарт + автоматизация рамки без «урока грамматики». Типичная ошибка: молча тянут карту — карта не считается, правило игры дожимает.</div><span class='asr'>✔ Assess: 2–3 ошибки have got из игры — топливо для «робота» в Pair 3.</span></td><td class='mat'>Seven Families packs</td></tr><tr><td class='min'>69–82′</td><td class='stage'><div class='nm'>Пишем 4 предложения о своей семье</div><div class='sub'>Build · first writing portion</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> пишут по рамкам 4 предложения о семье (своей или выдуманной), взаимопроверка по 2 галочкам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Модель на доске: <i>I've got a brother. His name is Sasha. He's 8. He's short and fair.</i></li><li>Стираю всё, кроме рамок: <i>I've got a ___ . His/Her name is ___ . He's/She's ___ . He's/She's ___ and ___ .</i></li><li>Говорю: <span class='en'>Four sentences — YOUR family or an invented one. Five minutes.</span> Таймер.</li><li>Peer check: <span class='en'>Swap. Two boxes: family word from the tree? adjective from today? Tick or underline — the author fixes.</span> +1 за чистую проверку.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: модель → рамки · слайд 2 галочек</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут 4 предложения порцией, проверяют соседа по 2 пунктам. Ожидаемо: чисто по рамкам. Типичная ошибка проверяющего: чинит сам — «подчеркни, автор чинит САМ» (ритуал U1).</div></td><td class='mat'>notebooks · 2-box slide</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Итоги + рефлексия</div><div class='sub'>Share & Reflect</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> каждый читает одно предложение, очки, пальцы «сколько семейных слов знаю», ДЗ</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Круг-молния: <span class='en'>Read ONE of your sentences.</span> — быстро, без обсуждений.</li><li>Очки на табло, аплодисменты команде дня.</li><li>Рефлексия: <span class='en'>How many family words can you say now? Fingers — five to seventeen!</span></li><li>ДЗ на слайде (Workbook стр. 12!), фотографируют.</li><li>Тизер: <span class='en'>Next lesson: a REAL family. Twenty-six people. ONE house. True or fake? We'll check.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> табло · слайд ДЗ (WB p.12)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> читают по предложению, показывают самооценку пальцами, фотографируют ДЗ. Ожидаемо: большинство 10–17.</div></td><td class='mat'>points board · HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook (родная тетрадь):</b> Workbook стр. 12, зад. 1–5 (☆–☆☆): famous families (Harry Potter / Hunger Games / Lion King), match, прилагательные и пары-антонимы, описание фото.</p><p>⭐ Бонус (☆☆☆, +5): зад. 6 — три описания людей из своей семьи.</p></td><td class='mat'>WB Unit 2 (стр. 12–19) · фото доски на телефон — можно</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>name 17 family words and describe people with 3 adjective pairs</b>: “Martin is Lena's brother. My grandfather is old — he's 79.”</li>
+      <li><span class="lb">Subsidiary.</span> Meet WDYT? <i>What is a family?</i>; the Canes family tree as the anchor visual; male↔female system; Video skills (Jonas) with an active task; first contextual contact with <i>have got</i> in frames (system lesson = Pair 3). Pronunciation /ə/ endings (SB p.116).</li>
+      <li><span class="lb">Personal.</span> Unit 2 rituals continue from U1: check-in + rewind, teams of 3, points board, timers, English-first. Family topic is personal — «расскажи о СВОЕЙ семье» always optional: the Canes and celebrities work as safe material.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>name 17 family words</li><li>solve who-am-I riddles on a family tree</li><li>describe a person with tall/short, dark/fair, old/young</li><li>say I've got… / I haven't got… in a frame</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Hook</span><span>Discover</span><span>Try it</span><span>Play</span><span>Build</span><span>Share</span><span>Reflect</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>aunt</span><span class='w'>brother</span><span class='w'>child/children</span><span class='w'>cousin</span><span class='w'>daughter</span><span class='w'>father</span><span class='w'>granddaughter</span><span class='w'>grandfather</span><span class='w'>grandmother</span><span class='w'>grandson</span><span class='w'>mother</span><span class='w'>nephew</span><span class='w'>niece</span><span class='w'>parents</span><span class='w'>sister</span><span class='w'>son</span><span class='w'>uncle</span><span class='w'>fair / dark</span><span class='w'>old / young</span><span class='w'>tall / short</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Louise is Paul's mother. · My sister's daughter is my niece. · He's tall and dark. · Frames (no theory): I've got a brother. I haven't got a sister.</div></div>
+      <div class="r"><div class="k">Form</div><div>male↔female pairs (nephew/niece…); cousin = both; father+mother = parents, son+daughter = children; only child (Language note SB p.24).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>/ə/ endings without ‘r’: mother, father, brother, sister, daughter (chant with a finger on lips); nephew /ˈnefjuː/, niece /niːs/, aunt /ɑːnt/.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Parents — how many people?” → two: mum + dad.</div><div class='ccq'>“Cousin — a boy or a girl?” → both! One word.</div><div class='ccq'>“An only child has got …?” → no brothers, no sisters.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> After U1: be (all forms), classroom routines, mini-boards, peer-review basics are in place. Basic mum/dad/brother known from school; the SYSTEM of 17 words (niece/nephew/grandson…) is new. have got is NOT presented today — only heard in frames.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>17 words feel like a mountain</td><td>Anchor everything on the Canes tree ON the board all lesson; new words only enter THROUGH the tree, never as a list.</td></tr><tr><td>nephew/niece/cousin confusion</td><td>Colour trick: male words blue, female green, cousin — both colours; gestures for each pair.</td></tr><tr><td>Family topic sensitive for some kids</td><td>Rule out loud: we describe the Canes, celebrities or invented families — «your family» is always optional.</td></tr><tr><td>Video too fast</td><td>Task is names-bingo (visual), two plays, pause before Jonas's quiz answers.</td></tr><tr><td>Answers in Russian</td><td>Accept idea, recast in English, team repeats for the point (ritual from U1).</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 2 “Family” (What is a family?) · GIA1zero — lesson plan &amp; staging</span>
+    <span>SB pp.24–25 · Video skills p.25 (скрипт TB p.138) · Pronunciation /ə/ p.116. КТП пара 12. have got — только в рамках и игре (system lesson = Pair 3). До урока: колоды Seven Families, бинго-карты, карточки слов.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>
