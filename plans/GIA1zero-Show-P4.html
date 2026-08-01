@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1zero · ★ Showcase 4/9 — Видео-гид по классу: сценарий по шаблону + съёмка с поддержкой (+догон) (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · ★ Showcase 4/9 — Видео-гид по классу: сценарий по шаблону + съёмка с поддержкой (+догон)</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · final season по силам: рамки и шаблоны · каждый выступает с опорой · очки за смелость и рост</div>
+    <div class="meta"><span class='chip'>Week 26.04–02.05 · lessons 127–128 (пара года 64)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>★ Showcase 4/9 · video по шаблону</span><span class='chip'>рамки и опоры · смелость и рост</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход: вспоминаем Talk Day</td><td>Kagan · RallyRobin: rewind Talk Day (номинации и строки); мостик к камере</td></tr><tr class='bridge'><td class='gmin'>6–14′</td><td class='gname'>Шаблон 4 сцен + демо</td><td>формат гида по шаблону: 4 сцены с готовыми опорами; живое демо-съёмка 20 сек</td></tr><tr><td class='gmin'>14–26′</td><td class='gname'>Сценарий по шаблону + гейт (NHT)</td><td>команды заполняют шаблон: свои слова в опоры, распределение фраз (у каждого минимум 1); Kagan · NHT — гейт фраз</td></tr><tr><td class='gmin'>26–34′</td><td class='gname'>Сухой прогон + хоровая сцена</td><td>репетиция без камеры: хоровая сцена 1 всей командой, личные фразы по очереди; темп и улыбка</td></tr><tr class='bridge'><td class='gmin'>34–36′</td><td class='gname'>Мостик: съёмка + станции</td><td>схема: 2 команды снимают в углах — остальные на догон-станциях; ротация по свистку</td></tr><tr><td class='gmin'>36–62′</td><td class='gname'>Съёмка + догон-станции (ротация)</td><td>съёмка с поддержкой (я рядом с камерами) параллельно с догон-станциями слабых тем; ротация ×3</td></tr><tr><td class='gmin'>62–74′</td><td class='gname'>Смотрим дубли (с похвалой)</td><td>отсмотр с поддержкой: команды выбирают лучший дубль каждой сцены; хвалим конкретно; решаем пересъёмку 1 сцены максимум</td></tr><tr><td class='gmin'>74–84′</td><td class='gname'>Трейлеры голосом + смайлики</td><td>каждая команда «озвучивает трейлер»: хором сцену 1 + по 1 личной фразе; смайлики за смелость</td></tr><tr><td class='gmin'>84–90′</td><td class='gname'>Итоги: дубли = смелость</td><td>рефлексия дублей («сколько попыток — столько смелости»), лёгкое ДЗ</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>По желанию: пересмотреть свои дубли (кто снимал на свой телефон). Реквизита не нужно.</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход: вспоминаем Talk Day</div><div class='sub'>Opening · вход + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Kagan · RallyRobin: rewind Talk Day (номинации и строки); мостик к камере</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери: <span class='en'>Your Talk Day nomination — say it!</span></li><li>▶ <span class='game'>Kagan · RallyRobin</span> (60 сек): <span class='en'>Ping-pong: I remember… (talk moments)!</span> — с опорой «I remember + имя + тема».</li><li>Мостик: <span class='en'>You talked to PEOPLE. Now — to a CAMERA. Cameras are kind: they let you try again!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: рамка I remember…</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> вспоминают Talk Day парами. Ожидаемо: номинации помнят все — гордость живёт.</div></td><td class='mat'>—</td></tr><tr class='bridge'><td class='min'>6–14′</td><td class='stage'><div class='nm'>Шаблон 4 сцен + демо</div><div class='sub'>Brief · шаблон 4 сцен + демо</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> формат гида по шаблону: 4 сцены с готовыми опорами; живое демо-съёмка 20 сек</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Шаблон на доску: <b>1 Welcome! → 2 This is… → 3 We can… here → 4 Thanks for watching!</b> — по 1–2 фразы-опоры на сцену.</li><li>Демо: доброволец снимает меня: <span class='en'>Welcome to our classroom! This is our smiley board. Here you can see our season!</span> Смотрим сразу.</li><li>Правило дублей крупно: <b>MANY TAKES IS NORMAL.</b> <span class='en'>A take is a TRY, not a mistake.</span></li><li>Опора за камерой: оператор держит карточку фраз — показываю как.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> шаблон сцен · телефон · карточки фраз</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> видят посильный шаблон и живое демо с опорой за камерой. Ожидаемо: правило дублей снимает главный страх.</div></td><td class='mat'>phone</td></tr><tr><td class='min'>14–26′</td><td class='stage'><div class='nm'>Сценарий по шаблону + гейт (NHT)</div><div class='sub'>Build · сценарий по шаблону</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> команды заполняют шаблон: свои слова в опоры, распределение фраз (у каждого минимум 1); Kagan · NHT — гейт фраз</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Заполняют шаблон: что показываем в сценах 2–3 (доска? стенд? игры?), свои слова в опоры.</li><li>Распределение: у КАЖДОГО минимум 1 фраза; сцена 1 и 4 — можно хором командой.</li><li>▶ <span class='game'>Kagan · Numbered Heads Together</span> (гейт): <span class='en'>Heads together: how do we START the video? … Number TWOS — say it! How do we END? — Number ONES!</span> — фразы знает каждый.</li><li>Мой гейт: сценарий подписан — команда допущена к камере.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> шаблоны сценария (ассет 🐣) · карточки фраз</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> собирают сценарий из опор и проходят гейт фраз — в кадре не растеряются. Ожидаемо: сцену 3 выбирают про игры класса. Типичная ошибка: одна фраза на всех — правило «1 у каждого» держу.</div></td><td class='mat'>script templates</td></tr><tr><td class='min'>26–34′</td><td class='stage'><div class='nm'>Сухой прогон + хоровая сцена</div><div class='sub'>Practise · сухой прогон + хоровая сцена</div><div class='zone'>standing · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> репетиция без камеры: хоровая сцена 1 всей командой, личные фразы по очереди; темп и улыбка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Хоровая репетиция сцены 1: команда хором <span class='en'>Welcome to our classroom!</span> — 3 раза, с энергией.</li><li>Личные фразы по кругу команды: медленно, с улыбкой, «камере как другу».</li><li>Дрилл темпа: фразу — обычно… для камеры (медленнее)… ЕЩЁ раз для камеры.</li><li>Director учится командовать: <span class='en'>Ready? Action! … Cut! Nice!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки фраз</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> прогоняют фразы на ногах до камеры — хоровая сцена делит страх на команду. Ожидаемо: Action!/Cut! кричат с удовольствием.</div></td><td class='mat'>—</td></tr><tr class='bridge'><td class='min'>34–36′</td><td class='stage'><div class='nm'>Мостик: съёмка + станции</div><div class='sub'>Bridge · порядок съёмки и станций</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> схема: 2 команды снимают в углах — остальные на догон-станциях; ротация по свистку</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Схема на доску: углы съёмки (2) + догон-станции (2–3) + моя станция.</li><li>Ротация каждые ~8 мин по сигналу; тест-дубль звука — первый кадр каждой команды.</li><li>ICQ: <span class='en'>Shooting teams — quiet corners. Station teams — radio whisper.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> схема ротации</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> разбирают маршрут. Ожидаемо: старт без толкучки — углы разведены.</div></td><td class='mat'>—</td></tr><tr><td class='min'>36–62′</td><td class='stage'><div class='nm'>Съёмка + догон-станции (ротация)</div><div class='sub'>Shoot + Catch-up · ротация</div><div class='zone'>corners + stations</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> съёмка с поддержкой (я рядом с камерами) параллельно с догон-станциями слабых тем; ротация ×3</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Съёмочные углы: помогаю у камер — звук (1 метр!), опора за телефоном, <span class='en'>Take two — no problem!</span></li><li>Догон-станции: карточки с самопроверкой по слабым темам года («повторим»-угол P1–P3) + моя станция для самых трудных.</li><li>Ротация по сигналу: снимали → на станции, станции → к камерам.</li><li>Слежу: у каждого случилась его фраза в кадре (чек-лист команд).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> телефоны · таблички TAKE · станции-карточки с ключами</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> снимают по очереди с поддержкой, между съёмками закрывают личные дыры — ни минуты простоя, ни минуты стресса. Ожидаемо: 3–4 сцены из 4 сняты у всех. Типичная ошибка: шёпот в кадре — «камера — твой друг, скажи ЕМУ».</div></td><td class='mat'>phones · stations</td></tr><tr><td class='min'>62–74′</td><td class='stage'><div class='nm'>Смотрим дубли (с похвалой)</div><div class='sub'>Dailies · смотрим дубли вместе</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> отсмотр с поддержкой: команды выбирают лучший дубль каждой сцены; хвалим конкретно; решаем пересъёмку 1 сцены максимум</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Термин: <span class='en'>‘Dailies’ — film studios watch their takes. We're a studio!</span></li><li>Команды смотрят дубли, отмечают лучший на сценарии (галочка editor'а).</li><li>Правило похвалы: за каждый дубль — 1 конкретное «что хорошо» (голос? улыбка? фраза чистая?).</li><li>Пересъёмка максимум 1 сцены — сейчас или в начале пары 65.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> телефоны · сценарии</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> смотрят себя с установкой на похвалу — камера перестаёт быть врагом. Ожидаемо: смех добрый; «а я нормально звучу!» — главная фраза дня.</div></td><td class='mat'>phones</td></tr><tr><td class='min'>74–84′</td><td class='stage'><div class='nm'>Трейлеры голосом + смайлики</div><div class='sub'>Share · «трейлер» голосом + чек фраз</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> каждая команда «озвучивает трейлер»: хором сцену 1 + по 1 личной фразе; смайлики за смелость</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Команды по очереди: хором <span class='en'>Welcome to our classroom!</span> + каждый свою фразу вслух.</li><li>Класс — киношное «ooooh» + аплодисменты.</li><li>Смайлики: каждому за фразу в кадре сегодня.</li><li><span class='en'>Next time: we CUT the film and watch the PREMIERE!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> смайлик-доска</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> озвучивают трейлеры — фразы гида звучат ещё раз, уверенность растёт. Ожидаемо: хоровое Welcome! гремит.</div></td><td class='mat'>—</td></tr><tr><td class='min'>84–90′</td><td class='stage'><div class='nm'>Итоги: дубли = смелость</div><div class='sub'>Reflect</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия дублей («сколько попыток — столько смелости»), лёгкое ДЗ</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Рефлексия: <span class='en'>How many takes did you do? THAT's how brave you are — takes are tries!</span></li><li>Пальцы: готовность фильма 1–5.</li><li>ДЗ по желанию: отметить лучшие дубли. Тизер: премьера с попкорн-настроением на паре 65!</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> переворачивают «много дублей» в гордость. Ожидаемо: считают дубли со смехом.</div></td><td class='mat'>HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Лёгкое:</b> если дубли на твоём телефоне — пересмотри и выбери лучший (просто отметь для editor'а). Больше ничего: монтаж и премьера — в классе, вместе.</p><p><b>WB — только по желанию:</b> страницы «Look what you know!» своих трудных юнитов — за бонус-смайлики.</p></td><td class='mat'>опора своего выступления · телефон для репетиций (по возможности)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, teams have <b>a 4-scene video script from the template and most scenes shot</b>; у каждого — минимум 1 фраза в кадре.</li>
+      <li><span class="lb">Subsidiary.</span> Язык гида по опорным фразам (Welcome! · This is… · Here you can see… · Thanks for watching!) — повтор there is/can see в живом деле; параллельно догон-станция слабых тем (КТП); «много дублей — это нормально».</li>
+      <li><span class="lb">Personal.</span> Камера пугает сильнее сцены — лечим дублями: правило «дубль — это попытка, а не ошибка». Съёмка только в классе/соседнем кабинете — логистика минимальная, поддержка максимальная.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>say a guide phrase to camera with support</li><li>follow the 4-scene template</li><li>work in camera roles with help</li><li>treat retakes as normal practice</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Brief</span><span>Frames</span><span>Build</span><span>Practise</span><span>Catch-up</span><span>Share</span><span>Reflect</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>Welcome to…!</span><span class='w'>This is… · Here you can see…</span><span class='w'>Follow me!</span><span class='w'>Action! · Cut! · Take two!</span><span class='w'>This is our classroom. · Here you can see…</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Сцены шаблона: 1) Welcome to our classroom! 2) This is… (доска/стенд) · Here you can see… 3) We can… here (что мы умеем делать в классе) 4) That's all — thanks for watching!</div></div>
+      <div class="r"><div class="k">Form</div><div>сцена = 1–2 фразы по опоре; у КАЖДОГО — минимум 1 фраза в кадре; this is + ед., these are + мн. (мягко чиним).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>в камеру — медленно и с улыбкой · Welcome! — энергично · камере говорим, как другу.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Дубль 5 — я плохой?” → No: у профессионалов бывает дубль 25. Дубль = попытка. Many takes is NORMAL.</div><div class='ccq'>“Можно фразу с бумажки за камерой?” → Да! Оператор держит опору за телефоном — глаза почти в камеру.</div><div class='ccq'>“Кто не хочет в кадр?” → 1 фраза в кадре — у всех (можно хором в групповой сцене); большие роли — по желанию.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Роли с P1 (по силам); телефон — 1 на команду достаточно (мой запасной есть). Съёмка в классе → без согласований маршрутов; шаблон сцен готов, опорные фразы на карточках.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Страх камеры сильнее страха сцены</td><td>Разогрев «камера-друг»: сначала снимаем ХОРОВУЮ сцену всей командой (страх делится на всех), потом личные фразы.</td></tr><tr><td>Хихиканье срывает дубли</td><td>Правило «смеёмся ДО и ПОСЛЕ дубля»: до — можно, крикнули Action! — лица гидов. Сорвался — Take two, спокойно.</td></tr><tr><td>Тихий звук</td><td>Говорим в 1 метре от телефона; тест-дубль 5 сек с прослушкой — обязателен у каждой команды.</td></tr><tr><td>Слабым не хватает языка на сцену</td><td>Их сцена — хоровая или парная; личная фраза — из 3 слов (This is our board!) тоже победа.</td></tr><tr><td>Догон-станция пустует («все снимают»)</td><td>Съёмка по очереди командами: пока 2 команды снимают в углах, остальные — на догон-станциях по ротации.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · ★ Showcase — Final projects (пары года 61–69) · GIA1zero — lesson plan &amp; staging</span>
+    <span>КТП пара 64 (🐣: «сценарий по шаблону + догон слабых тем в мини-группах · съёмка с поддержкой · много дублей — это нормально»). До урока: шаблон 4 сцен с опорными фразами, карточки фраз гида, догон-станции (2–3 темы по «повторим»-углу), запасной телефон, таблички TAKE.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

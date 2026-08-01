@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1zero · Starter “Back to school” · Pair 4 — Big Game Day & Class Contract — Big Game Day: станции-повторение, классный договор и «мы — команда» (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Starter “Back to school” · Pair 4 — Big Game Day & Class Contract</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣 from zero</b> · 90 min · safety first: input → guided practice → speaking with frames · pairs habit · TPR · «I CAN» final every pair</div>
+    <div class="meta"><span class='chip'>Week 14.09–20.09 · lessons 7–8 (KTP pair 4)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>SB pp.6–11 (review)</span><span class='chip'>confidence-check станциями, не тест</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход: калейдоскоп трёх пар</td><td>ритуалы входа; мини-rewind трёх пар по Kagan <b>Inside-Outside Circle</b> (новая структура — карусель повторения); мостик к дню игр</td></tr><tr class='bridge'><td class='gmin'>6–9′</td><td class='gname'>Хук: карта Big Game Day</td><td>карта дня: 4 станции → Fun Facts финал → договор → показ; репетиция ротации</td></tr><tr><td class='gmin'>9–41′</td><td class='gname'>Станции: четыре угла умений</td><td>4 станции по 7 мин: Hello-театр · Класс-командир · Число-охота · Спеллинг-код; каждый делает свой пункт, helper помогает</td></tr><tr><td class='gmin'>41–45′</td><td class='gname'>Круг: что было легко/сложно</td><td>круг после станций: «где было легко/сложно» по-простому; хвосты фиксирую себе для юнитов</td></tr><tr class='bridge'><td class='gmin'>45–47′</td><td class='gname'>Мостик: квиз и договор</td><td>мостик: поиграли — теперь финальный квиз и НАШИ правила</td></tr><tr><td class='gmin'>47–57′</td><td class='gname'>Квиз Fun Facts: числа в деле</td><td>p.10 ex.5 как квиз-угадайка по Kagan <b>Showdown</b> (команды пишут ставку-число СЛОВАМИ, доски вверх разом) + audio 6</td></tr><tr><td class='gmin'>57–67′</td><td class='gname'>Классный договор: правила из опыта</td><td>классный договор из ИХ опыта: «что помогало учиться 3 пары?» → правила по-английски с опорой → подписи</td></tr><tr><td class='gmin'>67–77′</td><td class='gname'>Первый peer review по опорам</td><td>первый peer review: тройки показывают друг другу мини-номер (диалог/команды/спеллинг) → «2 звезды + 1 пожелание» по полоскам-опорам</td></tr><tr><td class='gmin'>77–86′</td><td class='gname'>Starter Show: показ и фото</td><td>финал-показ: тройки по желанию показывают номер классу; аплодисменты-протокол; фото группы с карточками стены</td></tr><tr><td class='gmin'>86–90′</td><td class='gname'>Большой I CAN + прощание</td><td>большой I CAN всего Starter; ДЗ-мостик к U1; тизер Our world</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Своё ДЗ: картинка страны к U1 · рассказать про договор дома · «твоя одна вещь» по желанию</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span><b>Kagan …</b> = структура вовлечения: участвуют ВСЕ одновременно</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход: калейдоскоп трёх пар</div><div class='sub'>Opening · welcome + rewind</div><div class='zone'>door → circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ритуалы входа; мини-rewind трёх пар по Kagan <b>Inside-Outside Circle</b> (новая структура — карусель повторения); мостик к дню игр</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ритуалы: high five, <span class='en'>How are you? What day is it today?</span></li><li>Rewind по Inside-Outside Circle (учим новую структуру телом): <span class='en'>Two circles! Inside — face out, outside — face your partner.</span> Раунды по 30 сек: покажи вещь — партнёр называет! → день недели по очереди! → число пальцами, партнёр голосом! Между раундами: <span class='en'>Outside circle — rotate two steps!</span></li><li>Мостик: «Всё, что вы умеете после трёх пар — сегодня работает в играх. Это не тест. Это — Big Game Day. И в конце мы напишем НАШИ правила.»</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> календарь · мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пролетают калейдоскоп тем — разогрев без стресса. Ожидаемо: скорость приятно удивляет их самих.</div></td><td class='mat'>мини-доски</td></tr><tr class='bridge'><td class='min'>6–9′</td><td class='stage'><div class='nm'>Хук: карта Big Game Day</div><div class='sub'>Hook · день игр объявлен</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> карта дня: 4 станции → Fun Facts финал → договор → показ; репетиция ротации</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Карта дня картинками: <b>STATIONS → QUIZ → CONTRACT → SHOW</b>.</li><li>Правила станций: команда на станции 7 мин → колокольчик → ротация по стрелкам; на станции карточка с картинкой-инструкцией.</li><li>Сухой прогон ротации 60 сек БЕЗ заданий (важно для нуля!): прошли круг, вернулись.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карта дня · колокольчик · стрелки ротации на полу</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> репетируют ротацию телом. Ожидаемо: логистика ясна — хаоса не будет.</div></td><td class='mat'>—</td></tr><tr><td class='min'>9–41′</td><td class='stage'><div class='nm'>Станции: четыре угла умений</div><div class='sub'>🎲 GAME STATIONS · four corners</div><div class='zone'>stations · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 4 станции по 7 мин: Hello-театр · Класс-командир · Число-охота · Спеллинг-код; каждый делает свой пункт, helper помогает</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><b>Станция 1 «Hello-театр»:</b> вытяни карточку-ситуацию (друг/учитель/новенький) → разыграй диалог приветствия парой (рамки P1 на станции).</li><li><b>Станция 2 «Класс-командир»:</b> по очереди командуй тройке из банка (2 do + 1 don't) — команда выполняет; и наоборот.</li><li><b>Станция 3 «Число-охота»:</b> карточки-числа по столу: один называет — остальные хватают (13/30 ловушки!); потом конструктор: собери 47 из карточек-половинок.</li><li><b>Станция 4 «Quiz-Quiz-Trade»</b> (Kagan, колода GIA1-QQT-Starter): карточки по столу — <span class='en'>take a card: ask — answer — check (ответ на карточке вверх ногами!) — TRADE!</span> + бонус: раскодируй один домашний код.</li><li>Я плаваю между станциями, отмечаю СЕБЕ в грид уверенность (это и есть confidence-check — незаметный).</li><li>Ротация колокольчиком; после круга — все были везде.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> 4 станционные карточки-инструкции с картинками · реквизит станций · мой confidence-грид</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проходят 4 игровые станции командой — ретривал всего Starter через игру; каждый активен на каждой станции. Ожидаемо: любимые станции называют сами; грид заполняется без единого слова «тест». Типичная ошибка: helper делает за слабого — «help = подсказать, not сделать».</div></td><td class='mat'>station cards · bell</td></tr><tr><td class='min'>41–45′</td><td class='stage'><div class='nm'>Круг: что было легко/сложно</div><div class='sub'>Checkpoint · любимая станция</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> круг после станций: «где было легко/сложно» по-простому; хвосты фиксирую себе для юнитов</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Круг: <span class='en'>Easy station? Hard station?</span> — пальцем показывают, 3–4 комментария.</li><li>Свои наблюдения НЕ озвучиваю списком ошибок — просто: «Числа на слух дожмём в юнитах — там их море.»</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> рефлексируют по-простому. Ожидаемо: «спеллинг сложно» — честно; тревоги нет.</div></td><td class='mat'>—</td></tr><tr class='bridge'><td class='min'>45–47′</td><td class='stage'><div class='nm'>Мостик: квиз и договор</div><div class='sub'>Bridge → lesson B</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> мостик: поиграли — теперь финальный квиз и НАШИ правила</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Games — done. Now: the Fun Facts quiz (амазинг числа об английском!) and then — the most important paper of the year. OUR rules.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> переключаются. Ожидаемо: «правила пишем мы?» — да!</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–57′</td><td class='stage'><div class='nm'>Квиз Fun Facts: числа в деле</div><div class='sub'>⚡ Fun Facts quiz (хвост P3)</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> p.10 ex.5 как квиз-угадайка по Kagan <b>Showdown</b> (команды пишут ставку-число СЛОВАМИ, доски вверх разом) + audio 6</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Формат Showdown: <span class='en'>English is official in HOW many countries? Teams — write your guess in WORDS… wait… SHOWDOWN!</span> — доски вверх разом (числа словами — тренировка!).</li><li>6 фактов ex.5 по очереди; audio 6/ключ: 54 · 20 · 85 · 12 · 38 · 80. Ближайшая ставка +1.</li><li>После каждого — читаем факт хором с числом словами.</li><li>Финал: <span class='en'>80% of computer information is in English. Вот зачем мы здесь!</span> — мотивационная точка.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.10 ex.5 · audio 6 · листки ставок</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> ставят, пишут числа словами, удивляются фактам. Ожидаемо: вау-эффект + смысл «зачем английский». Типичная ошибка: fourty — хитрец №2 напоминаю с улыбкой.</div></td><td class='mat'>SB p.10 · audio 6</td></tr><tr><td class='min'>57–67′</td><td class='stage'><div class='nm'>Классный договор: правила из опыта</div><div class='sub'>Class contract · наши правила</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> классный договор из ИХ опыта: «что помогало учиться 3 пары?» → правила по-английски с опорой → подписи</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вопрос кругу (можно по-русски): «Три пары позади. Что ПОМОГАЛО учиться? Что мешало?» — собираю идеи.</li><li>Перевожу идеи в правила-опоры на доске: <span class='en'>Speak English (try!). · Don't laugh at mistakes. · Help your team. · Listen to your partner.</span> Тройки выбирают/добавляют.</li><li>Голосование стикерами за топ-5; правила на ватман; ПОДПИСИ всех + моя.</li><li>Ритуал: правило №1 (mistakes!) с плаката P1 — переезжает в договор торжественно.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> ватман · маркеры · стикеры · плакат правила №1</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> формулируют правила из своего опыта, голосуют, подписывают. Ожидаемо: «не смеяться над ошибками» — в топе у самих детей. Типичная ошибка: правило-запрет-всего — переформулируем позитивно вместе.</div></td><td class='mat'>ватман</td></tr><tr><td class='min'>67–77′</td><td class='stage'><div class='nm'>Первый peer review по опорам</div><div class='sub'>Peer review onboarding (с опорой)</div><div class='zone'>trios</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> первый peer review: тройки показывают друг другу мини-номер (диалог/команды/спеллинг) → «2 звезды + 1 пожелание» по полоскам-опорам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Тройка готовит 60-сек мини-номер НА ВЫБОР: hello-диалог / командная сессия / спеллинг-показ (всё уже умеют — выбор снимает страх).</li><li>Показ тройка→тройке (не на весь класс — безопаснее).</li><li>Peer review по полоскам: <span class='en'>⭐ I like your voice! ⭐ I like your English! · Try louder! / Try slower!</span> — выбрать и прочитать.</li><li>Меняемся ролями; проговариваю: «Взрослый навык: сначала два хорошо, потом одно посоветовать. Так работают команды.»</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> полоски-опоры peer review · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> показывают номер малой аудитории, дают первый структурный фидбек по опорам. Ожидаемо: неловко и мило; формула 2+1 усвоена. Типичная ошибка: wish без Try — полоска пальцем.</div><span class='diff'><span class='sup'>💪 Support:</span> полоски с готовыми фразами — только выбрать. <span class='ext'>⭐ Быстрым:</span> своё пожелание со своим Try…</span></td><td class='mat'>полоски</td></tr><tr><td class='min'>77–86′</td><td class='stage'><div class='nm'>Starter Show: показ и фото</div><div class='sub'>Share · Starter Show</div><div class='zone'>stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> финал-показ: тройки по желанию показывают номер классу; аплодисменты-протокол; фото группы с карточками стены</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Тройки ПО ЖЕЛАНИЮ выносят номер на класс (после репетиции тройка→тройке выходят охотнее).</li><li>Аплодисменты-протокол после каждого; звёзды от зрителей вслух (формула уже в руках).</li><li>Общее фото у стены «Our class» с карточками P1+P3 — первая летопись группы.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> стена карточек · телефон для фото</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> показывают классу (по желанию — но выходят почти все), хвалят по формуле. Ожидаемо: тёплый финальный настрой; фото — событие.</div></td><td class='mat'>—</td></tr><tr><td class='min'>86–90′</td><td class='stage'><div class='nm'>Большой I CAN + прощание</div><div class='sub'>I CAN final Starter + прощание</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> большой I CAN всего Starter; ДЗ-мостик к U1; тизер Our world</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Большой I CAN хором с жестами: <span class='en'>I can say hello! I can name my things! I can say the days! I can give commands! I can count to 100! I can spell my name!</span> — 6 сил Starter.</li><li>ДЗ-мостик (ниже).</li><li>Тизер: <span class='en'>Next week — Unit 1: OUR WORLD. Страны, флаги, «I'm from Russia» — и первый настоящий юнит вашей книги!</span></li><li>High five у двери — Starter закрыт.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проговаривают 6 сил Starter — сжатая карта прогресса. Ожидаемо: гордость; группа готова к U1 эмоционально и языково.</div></td><td class='mat'>HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Своё задание — мостик к Unit 1:</b> 1) Принеси картинку/фото любой страны (распечатка или в телефоне) — с неё начнём Our world. 2) Расскажи дома про наши правила класса — какое твоё любимое? 3) По желанию: повтори свои «сложные» точки (мой совет каждому лично на станциях — «твоя одна вещь»).</p></td><td class='mat'>notebook · фото доски на телефон — можно</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners have <b>recycled ALL Starter language through game stations (confidence-check, не тест)</b>, learned the pair/trio work routines, signed the class contract and run their first supported peer review.</li>
+      <li><span class="lb">Subsidiary.</span> Ревизия pp.6–11 в игровых оболочках; дозакрытие хвостов (Fun Facts квиз, полный Classroom Challenge, this/these ex.7 краем); ритуал peer review «2 звезды + 1 пожелание» с опорой; «I CAN»-финал Starter целиком.</li>
+      <li><span class="lb">Personal.</span> Финал Starter = праздник умений, не экзамен. Станции устроены так, что КАЖДЫЙ уходит с «я смог». Договор — их документ. Со следующей недели Unit 1 — группа должна войти в него с ощущением «мы команда и у нас получается».</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>use all Starter sets in game formats</li><li>work in pairs/trios by the routine (roles, volume, signals)</li><li>give supported peer feedback (2 stars + 1 wish)</li><li>say the class contract rules</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Hook</span><span>Game stations</span><span>Fun Facts finale</span><span>Contract</span><span>Peer review</span><span>Share</span><span>I CAN</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>Starter vocabulary (all): hello-блок · objects · colours · days · classroom · instructions · numbers · alphabet · international words</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>review всех рамок P1–P3; новые рамки ритуалов: Your turn! · Good job! · Can you repeat? · 2 stars: I like your… · 1 wish: Try…</div></div>
+      <div class="r"><div class="k">Form</div><div>лёгкая консолидация: my/your·his/her · a/an · this/these · Don't + глагол · числа-конструктор; НИЧЕГО нового не вводим.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>все мишени S1–S3 на повторе; спеллинг-диктовка букв: A /eɪ/ · E /iː/ · I /aɪ/ · G /dʒiː/ vs J /dʒeɪ/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Сегодня контрольная?” → Нет! День игр: проверяем УВЕРЕННОСТЬ, не ставим оценки.</div><div class='ccq'>“Peer review — говорим что плохо?” → Сначала ДВЕ звезды (что хорошо!), потом одно пожелание с Try…</div><div class='ccq'>“Правила класса придумывает учитель?” → Нет — мы, вместе, и подписываем все.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Три пары позади: базовые сеты в активе, ритуалы работают. Сегодня консолидация + два новых ритуала (peer review с опорой, договор) + эмоциональная точка «мы готовы к Unit 1». Правило №1 курса (проговаривается КАЖДУЮ пару Starter): mistakes are how we learn — здесь не смеются над ошибками, здесь на них растут. Учитель ошибается демонстративно и чинит себя вслух.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Слово «проверка» пугает</td><td>Слова «тест/проверка» не звучат вообще: это Big Game Day. Чек происходит внутри игр, отметки — только себе в I CAN-лист.</td></tr><tr><td>Станции = хаос у нуля</td><td>Репетиция ротации ДО старта (сухой прогон 60 сек); на каждой станции карточка-инструкция с картинкой; сигнал-колокольчик.</td></tr><tr><td>Слабые прячутся за сильных</td><td>Станционные задания по формату «каждый делает свой пункт»; helper помогает, но не делает.</td></tr><tr><td>Peer review без языка</td><td>Опоры-полоски: I like your voice/spelling/English! · Try louder / Try again! — только выбрать и прочитать.</td></tr><tr><td>Договор формален</td><td>Правила рождаются из ИХ опыта 3 пар («что помогало учиться?»); вешаем навсегда, ссылаемся постоянно.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!» / «Showdown!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Starter “Back to school” · Pair 4 — Big Game Day & Class Contract · GIA1zero — lesson plan &amp; staging</span>
+    <span>SB pp.6–11 (review; Fun Facts ex.5 + audio 6 добраны) · TB pp.12–17 (ключи — источник станционных заданий) · WB: Starter отсутствует — ДЗ своё. Confidence-check = мой грид на станциях, БЕЗ слова «тест». До урока: 4 станции с картинками-инструкциями, колокольчик, ватман, полоски peer review, стикеры, колода «готовые-планы/раздатки/GIA1-QQT-Starter.pdf» (2 листа A4 → 16 карточек) для станции 4.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

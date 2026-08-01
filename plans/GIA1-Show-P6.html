@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1 · ★ Showcase 6/9 — Project fair: стенды, интерактивы, генеральная репетиция (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · ★ Showcase 6/9 — Project fair: стенды, интерактивы, генеральная репетиция</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>continuing line 🚀</b> · 90 min · final season: продакшн-цикл «покажи, что умеешь» · роли · планка качества · season leaderboard</div>
+    <div class="meta"><span class='chip'>Week 03.05–09.05 · lessons 131–132 (пара года 66)</span><span class='chip new'>🚀 continuing line</span><span class='chip'>★ Showcase 6/9 · fair prep</span><span class='chip'>season leaderboard · роли · планка качества</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход + демо «какой стенд живой»</td><td>Kagan · Mix-Pair-Share: rewind своего юнита-темы в миксе; мостик к ярмарке через демо «скучный/живой стенд»</td></tr><tr class='bridge'><td class='gmin'>6–12′</td><td class='gname'>Формула стенда + план работы</td><td>формула стенда (постер по осям + интерактив + hosting) и тайм-боксы; источники контента — Quick review юнита</td></tr><tr><td class='gmin'>12–26′</td><td class='gname'>Спринт: контент стенда</td><td>контент-спринт: заголовок, 5 фактов/слов юнита В ГРАММАТИКЕ юнита, визуал; writer ведёт, оси на столе</td></tr><tr><td class='gmin'>26–38′</td><td class='gname'>Конструируем игру стенда</td><td>конструируем игру стенда: выбор механики из меню игр года + правило по-английски + реквизит</td></tr><tr class='bridge'><td class='gmin'>38–44′</td><td class='gname'>Питчи стендов (стоя)</td><td>hosting-тренинг: 3 фразы стенда хором и по командам, 20-сек питчи стоя</td></tr><tr class='bridge'><td class='gmin'>44–46′</td><td class='gname'>Мостик: правила генеральной</td><td>правила генеральной репетиции: половина хозяева / половина тест-гости, ротация; колода каверзных вопросов</td></tr><tr><td class='gmin'>46–62′</td><td class='gname'>Генеральная репетиция</td><td>генеральная: гости обходят стенды, играют и спрашивают; хозяева принимают; ротация ролей в середине</td></tr><tr><td class='gmin'>62–74′</td><td class='gname'>Полировка стендов</td><td>Kagan · Quiz-Quiz-Trade (колода каверзных вопросов — тренинг Q&A всем классом сразу) → команды чинят 2 слабых места по фидбеку</td></tr><tr><td class='gmin'>74–86′</td><td class='gname'>Логистика Fair Day + приглашение</td><td>логистика Fair Day: сессии, паспорта, роли; решаем, кого зовём (параллельная группа/администрация) — приглашение по-английски</td></tr><tr><td class='gmin'>86–90′</td><td class='gname'>Итоги + подготовка к Fair Day</td><td>итоги, очки за готовность, лёгкое ДЗ</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Доделать 1 элемент стенда дома (по решению команды) + повторить свою презентацию стенда 1 раз вслух.</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход + демо «какой стенд живой»</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Kagan · Mix-Pair-Share: rewind своего юнита-темы в миксе; мостик к ярмарке через демо «скучный/живой стенд»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери: <span class='en'>Your fair unit — name it!</span></li><li>▶ <span class='game'>Kagan · Mix-Pair-Share</span> (2 раунда по 30 сек): <span class='en'>MIX! PAIR! SHARE one thing you remember from your fair unit — then LISTEN to your partner's.</span> Новая пара на второй раунд — все говорят одновременно.</li><li>Мостик-демо: показываю «скучный стенд» (лист с текстом) vs «живой» (лист + «guess what's in the box»). <span class='en'>Which stand do YOU stop at? THAT's today's job.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> два демо-листа</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> вспоминают юниты и голосуют ногами за живой стенд. Ожидаемо: единогласно — принцип понят без лекции.</div></td><td class='mat'>—</td></tr><tr class='bridge'><td class='min'>6–12′</td><td class='stage'><div class='nm'>Формула стенда + план работы</div><div class='sub'>Brief · формула стенда + тайм-боксы</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> формула стенда (постер по осям + интерактив + hosting) и тайм-боксы; источники контента — Quick review юнита</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Формула на доску: <b>POSTER (title + 5 фактов/слов + visual) + GAME (гость делает!) + HOSTING (3 фразы)</b>.</li><li>Тайм-боксы: content 12′ → interactive 12′ → pitch 6′ → beauty в остаток. <span class='en'>Language before glitter!</span></li><li>Источники: <span class='en'>Your unit's Quick review page + your P1 bank. Facts in YOUR unit's grammar!</span> (U7 — прошедшее, U3 — some/any…).</li><li>Показываю fair passport (анонс пары 67): гости будут ходить со штампами — стендам нужны «испытания».</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> формула на доске · fair passport (образец) · тайм-боксы на слайде</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> разбирают формулу и источники. Ожидаемо: паспорт гостей заводит — «у нас будет штамп?» — сделает каждый стенд.</div></td><td class='mat'>passport sample</td></tr><tr><td class='min'>12–26′</td><td class='stage'><div class='nm'>Спринт: контент стенда</div><div class='sub'>Produce · контент стенда</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> контент-спринт: заголовок, 5 фактов/слов юнита В ГРАММАТИКЕ юнита, визуал; writer ведёт, оси на столе</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Запуск: <span class='en'>CONTENT sprint — twelve minutes. Title, five facts in your unit's grammar, one visual. Writer leads, everybody writes.</span></li><li>Хожу с осями: <span class='en'>Content — is it FROM your unit? Language — is the grammar right?</span> Факт вне юнита — вон.</li><li>Спеллинг-чек обменом: команды меняются черновиками на 60 сек — охота за ошибками (+1 за найденную).</li><li>Фаст-финишеры ⭐: 6-й факт-ловушка «true or false?» для гостей.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> шаблоны стендов (ассет) · SB Quick review страницы · маркеры</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> собирают языковое ядро стенда — ревью юнита превращается в продукт. Ожидаемо: 5 фактов за 12 мин у всех. Типичная ошибка: факты о юните русским — English first, это ось Language.</div></td><td class='mat'>stand templates</td></tr><tr><td class='min'>26–38′</td><td class='stage'><div class='nm'>Конструируем игру стенда</div><div class='sub'>Produce · интерактив</div><div class='zone'>desks + floor · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> конструируем игру стенда: выбор механики из меню игр года + правило по-английски + реквизит</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Меню механик (все игры года!): guess-the-word по кусочку · мини-квиз 3 вопроса · «what's in the box» · спеллинг-челлендж · mime-and-guess · true/false-ловушка.</li><li>Гейт: <span class='en'>In your game the guest READS, SPEAKS or LISTENS in English. No English — no game.</span></li><li>Правило игры письменно: <span class='en'>The rule is… You need to… You win if…</span> (это и текст для стенда).</li><li>Прототип на коленке + тест на соседней команде 2 мин.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> реквизит-крафт · карточки механик</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выбирают механику, пишут правило, тестируют прототип на соседях. Ожидаемо: каждая команда берёт свою механику — ярмарка выйдет разнообразной. Типичная ошибка: игра сложнее объяснения — упрощаем до 1 правила.</div></td><td class='mat'>craft box</td></tr><tr class='bridge'><td class='min'>38–44′</td><td class='stage'><div class='nm'>Питчи стендов (стоя)</div><div class='sub'>Pitch · 20-сек презентация стенда</div><div class='zone'>standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> hosting-тренинг: 3 фразы стенда хором и по командам, 20-сек питчи стоя</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Hosting-фразы хором с энергией зазывалы: <span class='en'>Welcome to our stand! · Try our quiz! · You win a point!</span></li><li>Каждая команда — 20-сек питч стенда классу (по таймеру), говорят двое минимум.</li><li>Класс отвечает как гости: <span class='en'>Sounds fun! / What do we win?</span></li><li>Дрилл похвалы гостю: <span class='en'>Well done! · So close! · Try again!</span> — с жестами.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> стоя дриллят зазывальные фразы и питчат — энергия ярмарки поймана. Ожидаемо: голоса включаются. Типичная ошибка: бурчат под нос — «зазывала слышен через всю ярмарку!»</div></td><td class='mat'>—</td></tr><tr class='bridge'><td class='min'>44–46′</td><td class='stage'><div class='nm'>Мостик: правила генеральной</div><div class='sub'>Bridge → генеральная</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> правила генеральной репетиции: половина хозяева / половина тест-гости, ротация; колода каверзных вопросов</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Схема: команды 1–2–3 стоят у стендов, 4–5–6 — тест-гости с колодой вопросов; через 6 мин — смена.</li><li>Тест-гость: сыграть в игру стенда + задать 1 вопрос из колоды + 1 свой.</li><li>Формула выживания хозяев на доску: <span class='en'>Good question! I think… / Let me check!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> колода каверзных вопросов (ассет)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> разбирают роли генеральной. Ожидаемо: колода интригует.</div></td><td class='mat'>question deck</td></tr><tr><td class='min'>46–62′</td><td class='stage'><div class='nm'>Генеральная репетиция</div><div class='sub'>Run-through · генеральная с тест-гостями</div><div class='zone'>stands</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> генеральная: гости обходят стенды, играют и спрашивают; хозяева принимают; ротация ролей в середине</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Запуск: <span class='en'>Guests — visit, play, ask. Hosts — welcome, run the game, answer. Six minutes!</span></li><li>Ротация: хозяева ↔ гости. Каждый побывал в обеих ролях.</li><li>Хожу гостем-инкогнито: играю на 2–3 стендах, задаю вопрос — реакция хозяев мне на заметку.</li><li>Слушаю Q&A: ступор → показываю на формулу выживания на доске.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> стенды · колода вопросов · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> все и хозяева, и гости — двойной прогон ярмарки, язык юнитов гоняется в обе стороны. Ожидаемо: игры «доигрываются» на ходу — это цель генеральной. Типичная ошибка: хозяева играют сами — «the GUEST plays!»</div></td><td class='mat'>stands</td></tr><tr><td class='min'>62–74′</td><td class='stage'><div class='nm'>Полировка стендов</div><div class='sub'>Upgrade · Quiz-Quiz-Trade + полировка</div><div class='zone'>mingle → desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Kagan · Quiz-Quiz-Trade (колода каверзных вопросов — тренинг Q&A всем классом сразу) → команды чинят 2 слабых места по фидбеку</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>▶ <span class='game'>Kagan · Quiz-Quiz-Trade</span> (4 мин): у каждого карточка-вопрос из колоды. <span class='en'>Find a partner: QUIZ them — they answer with a full sentence (or ‘Good question! I think…’). They quiz you. TRADE cards — new partner!</span> 3–4 обмена — формула выживания натренирована у всех одновременно.</li><li>Фидбек-раунд: каждая команда получает от «своих» гостей 2 конкретики (<span class='en'>The rule was not clear. · Add a picture of…</span>).</li><li>Починка: 2 слабых места, не больше; язык-ось проверяю я лично у каждого стенда.</li><li>Чек-лист готовности заполняет director: постер ✔ игра ✔ 3 фразы у каждого ✔ приз-штамп ✔.</li><li>⭐ Бонус: тизер-фраза для завтрашних гостей (<span class='en'>Only here: find out if YOU can survive Unit 8!</span>).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> чек-листы готовности · материалы</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> чинят точечно по чужому фидбеку — peer review работает на продукт. Ожидаемо: главные фиксы — правила игр. Типичная ошибка: снова украшательство — оси в руки.</div></td><td class='mat'>checklists</td></tr><tr><td class='min'>74–86′</td><td class='stage'><div class='nm'>Логистика Fair Day + приглашение</div><div class='sub'>Fair maths + приглашённые гости</div><div class='zone'>desks → circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> логистика Fair Day: сессии, паспорта, роли; решаем, кого зовём (параллельная группа/администрация) — приглашение по-английски</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Схема Fair Day на доску: 2 сессии по ~24 мин, хозяева↔гости, паспорт со штампами, финал-голосование.</li><li>Если зовём гостей (соседняя группа/администратор/свободные родители): пишем короткое приглашение хором-диктовкой: <span class='en'>Dear guests, come to our Project Fair on… You will play, win and speak English with us!</span></li><li>Роли дня: 2 добровольца-регистраторы (выдают паспорта), таймкипер.</li><li>Финальный чек хором: <span class='en'>Stands? READY. Games? READY. Hosts? READY!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> схема дня · бланк приглашения</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> планируют день и пишут приглашение — писательский мини-продукт в деле. Ожидаемо: хотят звать всех — согласуем реализм с расписанием.</div></td><td class='mat'>invite blank</td></tr><tr><td class='min'>86–90′</td><td class='stage'><div class='nm'>Итоги + подготовка к Fair Day</div><div class='sub'>Wrap</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> итоги, очки за готовность, лёгкое ДЗ</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Чек-листы готовности — очки: полный ✔-лист = +3.</li><li>ДЗ: 1 элемент доделать (по решению команды) + 3 фразы вслух.</li><li>Тизер: <span class='en'>Pair 67 — FAIR DAY. Passports, stamps, prizes. Bring your loudest ‘Welcome!’</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> лидерборд · слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> фиксируют, кто что доделывает. Ожидаемо: распределение без споров — чек-лист решает.</div></td><td class='mat'>HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Лёгкое:</b> команда решает, кто доделывает какой элемент (1 на человека максимум — это не вечер труда). Каждый: прогони свои 3 фразы презентации стенда вслух один раз.</p><p><b>WB — только по желанию:</b> Round-up-повторы юнитов (стр. «Look what you know!») — за бонус-очки сезона.</p></td><td class='mat'>материалы своего проекта · телефон для репетиций</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, teams have <b>a ready fair stand</b> (постер по осям + интерактив для гостей) and have survived a dress rehearsal with test-guests и Q&A.</li>
+      <li><span class="lb">Subsidiary.</span> Стенд = ревью юнита, вплетённое в продукт (тема+лексика+грамматика юнита на постере и в интерактиве); Q&A-тренинг: отвечаем на вопросы гостей полными предложениями; hosting-фразы ярмарки в актив.</li>
+      <li><span class="lb">Personal.</span> Стенд-день легко съедает время на вырезание-раскрашивание: жёсткое правило «язык раньше красоты» — сначала тексты и интерактив, украшение в остаток времени.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>build a stand poster with the four axes in mind</li><li>run a mini-game for guests in English</li><li>answer surprise questions about their unit</li><li>pitch their stand in 20 seconds</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Brief</span><span>Warm-up</span><span>Produce</span><span>Rehearse</span><span>Upgrade</span><span>Run-through</span><span>Wrap</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>Welcome to our stand!</span><span class='w'>Try our quiz! · Have a go!</span><span class='w'>Guess…!</span><span class='w'>You win a point!</span><span class='w'>Our stand is about… · Come and try…</span><span class='w'>You need to… · The rule is…</span><span class='w'>Well done! · So close! · Try again!</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Welcome to our stand! Our topic is Unit 3 — Eat well. · Try our quiz! The rule is: guess the food in ten seconds. · You win a point! Well done!</div></div>
+      <div class="r"><div class="k">Form</div><div>презентация стенда = 3 части: welcome + topic → правило игры → похвала гостю; правило игры = imperative + need to; факты юнита — в грамматике юнита!</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>Welcome — открытое «e», ударение на 1-й слог · энергия ярмарочного зазывалы: голос на пол-тона выше обычного.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Стенд — это красивый постер?” → No: постер + ИГРА. Гость должен что-то ДЕЛАТЬ у стенда.</div><div class='ccq'>“Факты о юните — на русском можно?” → Постер и речь — английские; русский — только если гость-родитель совсем растерялся.</div><div class='ccq'>“Q&A — это экзамен?” → No: гости спрашивают из любопытства; не знаешь — честно: Good question! I think…</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Темы-юниты розданы на P5, материалы принесены. Ревью юнита у команды в руках: SB Quick review своего юнита + банк фраз P1 — источники контента стенда.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>40 минут раскрашивают заголовок</td><td>Тайм-боксы: content 12′ → interactive 12′ → beauty в остаток. Проверяю оси: Content раньше Visuals — как судьи.</td></tr><tr><td>Интерактив без языка (просто кидание мячика)</td><td>Гейт интерактива: в игре гость ЧИТАЕТ, ГОВОРИТ или СЛУШАЕТ английский. Кидание мячика + вопрос юнита = ок.</td></tr><tr><td>Q&A ступор от неожиданных вопросов</td><td>Тренируем формулу выживания: Good question! I think… / Let me check! — ступор превращается в фразу.</td></tr><tr><td>Тест-гости «топят» друзей лёгкими вопросами</td><td>Карточки каверзных вопросов раздаю сам: тест-гость тянет вопрос из колоды, не придумывает.</td></tr><tr><td>Материалы забыты дома</td><td>Запасной набор: бумага А3, маркеры, распечатки Quick review юнитов — стенд соберётся в любом случае.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · ★ Showcase — Final projects (пары года 61–69) · GIA1 — lesson plan &amp; staging</span>
+    <span>КТП пара 66 · контент стендов = SB Quick review юнитов + банки P1 · оси TB p.30. До урока: шаблоны стендов, запасной крафт-набор, колода каверзных вопросов, карточки hosting-фраз, fair passports на пару 67 (показать анонсом).</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

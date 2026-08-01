@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1zero · Unit 9 · Pair 4 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 9 “Look what you know!” · Pair 4 — Говорим фразами года + пишем email по шаблону</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · final review unit: support-first revision · colour-coded wall · exam tips as «secret keys» · confidence over speed</div>
+    <div class="meta"><span class='chip'>Week 05.04–11.04 · lessons 117–118 (KTP pair 59)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>SB p.113 + p.114</span><span class='chip'>teams of 3 · unit points board · «look how much you know»</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Вход + повтор ключей P3</td><td>вход через Key phrase дня + Kagan Mix-Pair-Share; rewind P3: ключи хором</td></tr><tr><td class='gmin'>6–12′</td><td class='gname'>Хук: таблица фраз года</td><td>хук: 8 фраз года → 4 задачи-функции; таблица строится командами на доске</td></tr><tr><td class='gmin'>12–20′</td><td class='gname'>Модельные диалоги по ролям</td><td>диалоги-модели с пропусками: слушаем и дополняем (audio 62) → читаем по ролям хором и парами</td></tr><tr><td class='gmin'>20–35′</td><td class='gname'>Свой диалог по скелету</td><td>Skills boost по шагам с меню фраз: выбор ситуации → 4+ фразы из меню → 6–8 реплик по рамке-скелету → репетиция с суфлёром</td></tr><tr><td class='gmin'>35–45′</td><td class='gname'>Сцена: диалоги в шестёрках</td><td>выступления: параллельно в шестёрках → 2 пары на класс; peer review по 3 вопросам; чекпойнт урока А</td></tr><tr class='bridge'><td class='gmin'>45–47′</td><td class='gname'>Мостик: в письменную лабораторию</td><td>мостик: от речи к письму; 3 текста года на разворот</td></tr><tr><td class='gmin'>47–55′</td><td class='gname'>Детектив жанров</td><td>жанры-детектив через Kagan Numbered Heads: тексты A/B/C — кто есть кто по уликам; таблица-якорь времён жанров</td></tr><tr><td class='gmin'>55–62′</td><td class='gname'>Инструменты email + каркас</td><td>инструменты письма из текста B: начало/конец · апострофы · and/but · because; охота парами</td></tr><tr><td class='gmin'>62–78′</td><td class='gname'>Пишем: email о выходных</td><td>письмо по каркасу: план 3 строки → email о своих выходных ~100 слов; банк глаголов past; тихая музыка</td></tr><tr><td class='gmin'>78–86′</td><td class='gname'>Peer review в тройках</td><td>тройки читают письма друг друга: 1 плюс + 1 совет по рамке; лучшие фразы вслух</td></tr><tr><td class='gmin'>86–90′</td><td class='gname'>Итоги + рефлексия</td><td>итоги: очки; рефлексия «я написал 100 слов»; ДЗ Exam trainer p.88 + дописать email; тизер финала</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Exam trainer (WB pp.84–94) — часть пары (🐣 по шагам · 🚀 полный формат) + round-up повтор + бонус за очки (детали внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход + повтор ключей P3</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вход через Key phrase дня + Kagan Mix-Pair-Share; rewind P3: ключи хором</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вход: <span class='en'>Hi! How was your weekend?</span> — отвечает каждый входящий (сам того не зная — фразой дня!).</li><li>Mix-Pair-Share разгоном: <span class='en'>MIX — walk! …PAIR — nearest person! SHARE: ‘How was your weekend?’ — ‘It was… I…’ Thirty seconds each, then swap.</span></li><li>Rewind P3: <span class='en'>Secret keys check! Listen…? — TWICE! Pictures…? — BEFORE!</span> + 2 факта о фестивалях по рукам.</li><li>Мостик: <span class='en'>You just used TODAY'S star phrase — ‘How was your weekend? It was great!’ Today we collect ALL the year's talking phrases — and write your best email ever.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: «How was your weekend?»</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> отвечают на фразу дня и узнают её в теме урока. Ожидаемо: эффект «я уже умею».</div></td><td class='mat'>—</td></tr><tr><td class='min'>6–12′</td><td class='stage'><div class='nm'>Хук: таблица фраз года</div><div class='sub'>Hook · phrase table (ex.2)</div><div class='zone'>board · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> хук: 8 фраз года → 4 задачи-функции; таблица строится командами на доске</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>8 фраз на карточках у доски; 4 колонки: LAST WEEKEND · INFORMATION · A PHOTO · A TICKET.</li><li>Команды по очереди вешают фразу в колонку с проговариванием (ключ TB p.127).</li><li><span class='en'>Look: eight phrases — four life situations. You met them ALL this year. Today they work together.</span></li><li>Ex.1 по фото p.113: <span class='en'>BMX or balloons — which festival for you?</span> — руки.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки 8 фраз · SB p.113 ex.1–2</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> строят таблицу физически — двигаются, проговаривают. Ожидаемо: 7 из 8 вешают верно. Типичная ошибка: Take the bus → INFO — обсуждаем: это про билет/маршрут.</div></td><td class='mat'>phrase cards</td></tr><tr><td class='min'>12–20′</td><td class='stage'><div class='nm'>Модельные диалоги по ролям</div><div class='sub'>Discover · model dialogues (audio 62)</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> диалоги-модели с пропусками: слушаем и дополняем (audio 62) → читаем по ролям хором и парами</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слушаем диалог 1 (audio 62): дополняем пропуски (1 was · 2 this · 3 great). Кто говорит? (друзья, в школе).</li><li>Диалог 2: (4 get · 5 Take · 6 much · 7 Buy). Кто? (турист + tourist office).</li><li>Читка по ролям: класс пополам A/B хором → свап; потом пары.</li><li>Интонация: <span class='en'>Questions UP ↗, answers DOWN ↘. ‘It was GREAT!’ — like you mean it!</span></li><li>Нет трека — скрипт TB p.137, читаю по ролям.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.113 ex.3–4 · audio 62 (скрипт TB p.137)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> дополняют модели со слуха и оживляют их голосом. Ожидаемо: диалог 2 (£1.20!) нравится практичностью. Типичная ошибка: монотонная читка — драма-повтор с эмоцией.</div></td><td class='mat'>audio 62</td></tr><tr><td class='min'>20–35′</td><td class='stage'><div class='nm'>Свой диалог по скелету</div><div class='sub'>Try it · build your dialogue (по шагам)</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Skills boost по шагам с меню фраз: выбор ситуации → 4+ фразы из меню → 6–8 реплик по рамке-скелету → репетиция с суфлёром</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>THINK: пара выбирает A (друг + фото) или B (tourist office). Меню фраз = таблица с доски + рамки-скелеты у меня: A: How was…? → It was… → Who's this? → It's… → It's a great photo! · B: How can I get to…? → Take… → How much…? → It's… → Buy…</li><li>PREPARE 6 мин: пишут 6–8 реплик ПО СКЕЛЕТУ (скелет уже даёт половину!).</li><li>PRACTISE 5 мин: читка → партнёр-суфлёр (лист у суфлёра, спикер пробует без) → свап.</li><li>Хожу и помогаю парам B с ценами/маршрутами: <span class='en'>The bus from our school to the centre — how much?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.113 Skills boost · рамки-скелеты A/B (распечатки) · таблица фраз</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> строят диалог на готовом скелете и репетируют с поддержкой. Ожидаемо: 6–8 реплик у всех. Типичная ошибка: диалог-монолог — скелет ping-pong ведёт сам.</div></td><td class='mat'>skeleton sheets</td></tr><tr><td class='min'>35–45′</td><td class='stage'><div class='nm'>Сцена: диалоги в шестёрках</div><div class='sub'>Share · dialogues on stage (с листом можно)</div><div class='zone'>stage + groups</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> выступления: параллельно в шестёрках → 2 пары на класс; peer review по 3 вопросам; чекпойнт урока А</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Правило сцены: <span class='en'>Paper in hand is OK. Eyes UP as much as you can!</span> По памяти = +2 бонуса, но не требование.</li><li>Раунд 1: шестёрки (пара играет, четверо слушают с задачей — считают Key phrases).</li><li>Раунд 2: 2 пары-добровольца на класс.</li><li>Peer review по ex.6: Which situation? How many Key phrases? — судьи отвечают.</li><li>Чекпойнт: <span class='en'>You TALK like real people now. After the break — you WRITE like them too.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> судейские задачи на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выступает каждая пара в малом кругу, судят по конкретной задаче. Ожидаемо: 4–5 Key phrases на пару. Типичная ошибка: шёпот — «radio voice, please!»</div></td><td class='mat'>—</td></tr><tr class='bridge'><td class='min'>45–47′</td><td class='stage'><div class='nm'>Мостик: в письменную лабораторию</div><div class='sub'>Bridge → writing lab</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> мостик: от речи к письму; 3 текста года на разворот</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Говорю: <span class='en'>You asked ‘How was your weekend?’ — now you'll ANSWER it in writing. A real email, about a hundred words. Sounds big? Wait for the template.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.114 открыт</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> переключаются на письмо без страха — обещан шаблон.</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–55′</td><td class='stage'><div class='nm'>Детектив жанров</div><div class='sub'>Discover 2 · genre detective (ex.1–2)</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> жанры-детектив через Kagan Numbered Heads: тексты A/B/C — кто есть кто по уликам; таблица-якорь времён жанров</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Ex.2 = Numbered Heads Together: <span class='en'>Number off! Look at text A — heads together: what is it and WHAT'S THE CLUE? Everyone ready… number three, tell us!</span></li><li>Разбор улик: <span class='en'>Text A — New posts, Archives, a date… BLOG! B? To: Jasper, Hi Jasper… EMAIL! C? A title, I, past… STORY!</span></li><li>Ex.1 вспышкой: blog — U3 · email — U2 · story — U8 · advert — U5.</li><li>Таблица-якорь на доску: blog = present · email (выходные) = past · story = past.</li><li><span class='en'>Today we write ONE genre — the EMAIL. It has the best template of all.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.114 ex.1–2 · ключ TB p.128 · таблица-якорь</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> опознают жанры по уликам. Ожидаемо: детектив-формат держит. Типичная ошибка: blog/email путают — улика To:/Hi решает.</div></td><td class='mat'>SB p.114</td></tr><tr><td class='min'>55–62′</td><td class='stage'><div class='nm'>Инструменты email + каркас</div><div class='sub'>Discover 3 · email tools (ex.3 выборочно)</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> инструменты письма из текста B: начало/конец · апострофы · and/but · because; охота парами</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Охота в тексте B (email Луиса) парами: найди — открытие (Hi Jasper, How are you?) · закрытие · апостроф · and/but · because.</li><li>Проверка: <span class='en'>because = WHY (I'm busy because we've got exams) · and = plus · but = surprise turn.</span></li><li>Каркас email на доску (ОСТАЁТСЯ): Hi ___, / How are you? / I want to tell you about my weekend. / On Saturday I… / Then I… / It was…! / See you later, / ___</li><li>Считаем на каркасе: <span class='en'>The template gives you ~40 words free. You add your weekend — that's the hundred!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.114 текст B · доска: каркас email</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выкапывают инструменты из модели и получают каркас. Ожидаемо: «40 слов бесплатно» снимает страх. Типичная ошибка: because в начале фразы-обрывка — модель пальцем.</div></td><td class='mat'>SB p.114</td></tr><tr><td class='min'>62–78′</td><td class='stage'><div class='nm'>Пишем: email о выходных</div><div class='sub'>Build · my email (~100 words)</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> письмо по каркасу: план 3 строки → email о своих выходных ~100 слов; банк глаголов past; тихая музыка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>THINK 3 мин: план-скелет 3 строки (кому? что делал в сб? что в вс?).</li><li>Банк глаголов на доску: went · played · had · saw · watched · met · was/were.</li><li>WRITE 12 мин по каркасу, тихо: <span class='en'>Follow the template line by line. Your weekend, your words. About a hundred — not exactly!</span></li><li>Хожу с точечной помощью: past-формы, апострофы.</li><li>CHECK 2 мин по книге: grammar? punctuation? and/but/because есть?</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> каркас на доске · банк глаголов · тетради · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут самое длинное письмо года по каркасу — выполнимо для каждого. Ожидаемо: 80–110 слов у всех. Типичная ошибка: «I go to park yesterday» — банк глаголов пальцем: went!</div><span class='diff'><span class='sup'>💪 Support:</span> полу-заполненный каркас (вставить только глаголы и места). <span class='ext'>⭐ Быстрым:</span> + P.S. с вопросом другу (Do you like…?).</span></td><td class='mat'>notebooks · timer</td></tr><tr><td class='min'>78–86′</td><td class='stage'><div class='nm'>Peer review в тройках</div><div class='sub'>Share · peer review по чек-листу</div><div class='zone'>trios</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> тройки читают письма друг друга: 1 плюс + 1 совет по рамке; лучшие фразы вслух</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Тройки, обмен тетрадями; чек-лист ex.5 упрощённо: Hi и See you есть? · because/and/but есть? · Что понравилось?</li><li>Отзыв по рамке: <span class='en'>I like your sentence about… · Maybe add…</span></li><li>2–3 лучшие фразы вслух на класс: <span class='en'>Listen to this: ‘It was the best Saturday ever!’</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> чек-листы · рамка отзыва</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> читают друг друга и дарят конкретные отзывы. Ожидаемо: гордость за «настоящее письмо». Типичная ошибка: отзыв «норм» — рамка требует конкретику.</div></td><td class='mat'>checklists</td></tr><tr><td class='min'>86–90′</td><td class='stage'><div class='nm'>Итоги + рефлексия</div><div class='sub'>Reflect + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> итоги: очки; рефлексия «я написал 100 слов»; ДЗ Exam trainer p.88 + дописать email; тизер финала</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Табло, аплодисменты; <span class='en'>Hands up who wrote about a hundred words — LOOK WHAT YOU KNOW!</span></li><li>ДЗ: Exam trainer p.88 (Writing Part 1 — разбор чужого email + свой Тайрону 25+ слов по шаблону) + дописать/дополировать классный email.</li><li>Тизер: <span class='en'>Next lesson — the FINALE: the Snake Challenge board game. Everything you know, one game. Bring your best English!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> табло · слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> фиксируют достижение письма, фотографируют ДЗ. Ожидаемо: предвкушение настолки.</div></td><td class='mat'>HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Exam trainer (родная тетрадь, WB pp.84–94; 🐣 = по шагам, с опорами):</b> Exam trainer: WB p.88 Writing Part 1 ex.1–3 (разбор письма Макса и Фредди) + ex.4 email Тайрону 25+ слов по шаблону. Round-up: дочитай/дополиши свой классный текст до 100 слов по опоре.</p><p>🔎 Bonus (+5, TB): опиши одно фото с p.113 (BMX или воздушные шары) — 4+ предложения.</p></td><td class='mat'>WB Exam trainer pp.84–94 · notebook · фото доски на телефон — можно. ⚠️ Аудио-задания трейнера (треки в TRC) в ДЗ не идут.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>act out a short dialogue (6–8 реплик) for situation A or B</b> using 4+ Key phrases with the phrase menu, and <b>write an email about last weekend (~100 words по шаблону)</b> with opening/closing lines and because/and/but.</li>
+      <li><span class="lb">Subsidiary.</span> Таблица Key phrases по 4 функциям; диалоги-модели audio 62 с чтением по ролям; Skills boost по шагам с суфлёром; жанры года опознаны; письмо ОДНОГО жанра (email — самый шаблонный) вместо трёх; peer review по чек-листу.</li>
+      <li><span class="lb">Personal.</span> По заданию линии: writing по шаблону одного жанра. Выбираем email (B) — у него самая крепкая опора (Hi… / How are you? / I went… / See you!). 100 слов достигаем ШАБЛОНОМ, не гонкой. Диалоги — с листом-суфлёром, по памяти только желающие.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>sort 8 Key phrases into 4 functions with the table</li><li>act a 6–8 line dialogue with the phrase menu</li><li>name the year's text genres (blog/email/story)</li><li>write a ~100-word email from the template</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Hook</span><span>Discover</span><span>Try it</span><span>Play</span><span>Build</span><span>Share</span><span>Reflect</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>How was your weekend?</span><span class='w'>It was great!</span><span class='w'>How can I get to…?</span><span class='w'>How much does it cost?</span><span class='w'>It's a great photo!</span><span class='w'>Who's this?</span><span class='w'>Buy your ticket on the bus.</span><span class='w'>Take the bus from the station.</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>How was your weekend? — It was great. I went to… · How can I get to the festival? — Take the bus. · Hi Jasper, How are you? … See you later!</div></div>
+      <div class="r"><div class="k">Form</div><div>email-шаблон: Hi + имя, → How are you? → I want to tell you about… → 3–4 предложения past (went · played · had · saw) → It was… → See you later! + имя.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>How was = /haʊ wəz/ · вопрос вверх ↗, ответ вниз ↘ · It was GREAT — с эмоцией!</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Email о выходных — какое время?” → Past: went, played, had.</div><div class='ccq'>“Диалог сразу по памяти?” → No: сначала с листом, суфлёр помогает; по памяти — кто готов.</div><div class='ccq'>“100 слов — это сколько?” → Примерно 3 маленьких абзаца. Шаблон сам доведёт.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Key phrases встречались по юнитам; past simple свеж после P2–P3. Письмо ~100 слов — самое длинное в году для нуля: без шаблона не полетит, с шаблоном — у всех получится. Планка честная: «около 100», не «строго 100».</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Боятся длинного письма</td><td>Показ на модели B: считаем слова В ШАБЛОНЕ — половина уже написана; остаётся вставить своё.</td></tr><tr><td>Диалог читают в стол без жизни</td><td>Драма-дрилл на моделях (эмоции!), потом свой; выступление с листом легально.</td></tr><tr><td>Past simple в письме разваливается</td><td>Банк глаголов went/played/had/saw/watched/met на доске + карточка из P2.</td></tr><tr><td>Путают жанры</td><td>Табличка-якорь: blog=present · email(выходные)=past · story=past; сегодня пишем ТОЛЬКО email.</td></tr><tr><td>Peer review «всё норм»</td><td>Чек-лист из 3 конкретных вопросов; отзыв = 1 плюс + 1 совет, по рамке.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 9 “Look what you know!” (end-of-book review · A2 Key for Schools exam formats) · GIA1zero — lesson plan &amp; staging</span>
+    <span>SB p.113 (audio 62; скрипт TB p.137) + p.114 · TB pp.127–129 (ключи) · WB Exam trainer p.88 (Writing Part 1). ⚠️ КТП пары 59 указывает стр. 114 — speaking фактически на p.113; ведём по книге. Линия 🐣: письмо ОДНОГО жанра (email по каркасу) вместо выбора из трёх — по заданию линии; сильным ⭐ можно story дома. До урока: карточки 8 фраз, рамки-скелеты диалогов A/B (распечатать), каркас email, банк глаголов, чек-листы.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

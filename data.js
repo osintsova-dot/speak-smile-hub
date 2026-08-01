@@ -22824,7 +22824,7 @@ window.PROGRAMS = {
     "type": "Revision",
     "title": "Mid-year review: игры-станции Starter–Unit 4 / Mid-year review: грамматический марафон",
     "unit": "",
-    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "sec": "▶▶ MID-YEAR — Промежуточный контроль (Starter–Unit 4) · 3 пары · 6 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -22854,7 +22854,7 @@ window.PROGRAMS = {
     "type": "Midterm",
     "title": "Mid-year тест: лексика и грамматика / Mid-year тест: чтение, аудирование, письмо",
     "unit": "",
-    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "sec": "▶▶ MID-YEAR — Промежуточный контроль (Starter–Unit 4) · 3 пары · 6 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -22876,7 +22876,7 @@ window.PROGRAMS = {
     "type": "Midterm",
     "title": "Speaking checkpoint / Разбор теста. Итоги полугодия. Новогодний финал",
     "unit": "",
-    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "sec": "▶▶ MID-YEAR — Промежуточный контроль (Starter–Unit 4) · 3 пары · 6 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -23680,7 +23680,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "Showcase launch: миссии финальных проектов / Планирование проектов. Language bank года",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -23710,7 +23710,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "TED-style talks: подготовка выступления / TED-style talks: репетиции",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -23740,7 +23740,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "TED-style talks: выступления, часть 1 / TED-style talks: выступления, часть 2. Разбор",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -23770,7 +23770,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "Video guide: сценарий / Video guide: съёмка",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -23800,7 +23800,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "Video guide: монтаж и озвучка / Видео-показ + peer review",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -23830,7 +23830,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "Project fair: подготовка стендов / Project fair: генеральная репетиция",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -23860,7 +23860,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "Project fair: ярмарка проектов / Ярмарка: итоги и голосование",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -23890,7 +23890,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "My year in English: портфолио / My year in English: подготовка презентации",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -23920,7 +23920,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "My year in English: презентации / Финал showcase. Подготовка к Final review",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -24913,7 +24913,7 @@ window.PROGRAMS = {
     "type": "Revision",
     "title": "Mid-year review: игры-станции Starter–Unit 4 / Mid-year review: грамматический повтор",
     "unit": "",
-    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "sec": "▶▶ MID-YEAR — Промежуточный контроль (Starter–Unit 4) · 3 пары · 6 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -24943,7 +24943,7 @@ window.PROGRAMS = {
     "type": "Midterm",
     "title": "Mid-year тест: лексика и грамматика / Mid-year тест: чтение, аудирование, письмо",
     "unit": "",
-    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "sec": "▶▶ MID-YEAR — Промежуточный контроль (Starter–Unit 4) · 3 пары · 6 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -24965,7 +24965,7 @@ window.PROGRAMS = {
     "type": "Midterm",
     "title": "Speaking checkpoint / Разбор теста. Итоги полугодия. Новогодний финал",
     "unit": "",
-    "sec": "UNIT 4 — My time · 6 пар · 12 уроков",
+    "sec": "▶▶ MID-YEAR — Промежуточный контроль (Starter–Unit 4) · 3 пары · 6 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -25769,7 +25769,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "Финальный смотр: выбираем формат по силам / Планирование. Повтор опор",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -25799,7 +25799,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "Мини-выступление «Мой мир по-английски»: подготовка / Репетиции с опорами",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -25829,7 +25829,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "Мини-выступления, часть 1 / Мини-выступления, часть 2. Разбор",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -25859,7 +25859,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "Видео-гид по классу: сценарий по шаблону + догон / Видео-гид: съёмка с поддержкой",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -25889,7 +25889,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "Видео-гид: монтаж и озвучка / Видео-показ + дружеский peer review",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -25919,7 +25919,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "Project fair: стенд по шаблону + повтор-станции / Репетиция по опорам",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -25949,7 +25949,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "Project fair: ярмарка проектов / Ярмарка: итоги и голосование",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -25979,7 +25979,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "My year in English: портфолио / My year in English: подготовка презентации",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -26009,7 +26009,7 @@ window.PROGRAMS = {
     "type": "Комбинированный",
     "title": "My year in English: презентации / Финал смотра. Подготовка к Final review",
     "unit": "",
-    "sec": "UNIT 9 — Look what you know! · 5 пар · 10 уроков",
+    "sec": "★ SHOWCASE — Финальные проекты · повтор года · 9 пар · 18 уроков",
     "fields": [
      [
       "Урок А · 1–45 мин",
@@ -26882,7 +26882,7 @@ window.PROGRAMS = {
     "type": "Тест",
     "title": "Тест по Unit 3 / Pres.simple vs continuous. Аудирование.",
     "unit": "",
-    "sec": "UNIT 3 — Dressing up · 8 пар · 16 уроков",
+    "sec": "MIDTERM — Промежуточный контроль · 1 пара · 2 урока",
     "fields": [
      [
       "Урок А · 1–45 мин",

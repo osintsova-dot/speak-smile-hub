@@ -1,0 +1,169 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA1zero · Unit 9 · Pair 5 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A1+ · Unit 9 “Look what you know!” · Pair 5 — Snake Challenge: праздник-финал «смотри, как ты вырос»</div>
+    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · final review unit: support-first revision · colour-coded wall · exam tips as «secret keys» · confidence over speed</div>
+    <div class="meta"><span class='chip'>Week 12.04–18.04 · lessons 119–120 (KTP pair 60)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>SB p.115</span><span class='chip'>teams of 3 · unit points board · «look how much you know»</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–5′</td><td class='gname'>Праздничный вход</td><td>праздничный вход: «одно слово о твоём годе»; план финала</td></tr><tr class='bridge'><td class='gmin'>5–10′</td><td class='gname'>Правила + фразы игры</td><td>правила Snake Challenge просто и наглядно; Key phrases игры хором; опоры-карточки на столы</td></tr><tr><td class='gmin'>10–15′</td><td class='gname'>Разогрев: три клетки хором</td><td>разогрев на 3 клетках всем классом (клетки 2 и 17 — Kagan RallyRobin) — снять страх первого хода</td></tr><tr><td class='gmin'>15–45′</td><td class='gname'>Главный заезд: Snake Challenge</td><td>главный заезд: полная партия в базовой версии; помощь команды; учитель — странствующий помощник; очки за смелость</td></tr><tr class='bridge'><td class='gmin'>45–47′</td><td class='gname'>Разбор игры + мостик</td><td>TB follow-up мягко + мостик к «докручиваем трудное играя»</td></tr><tr><td class='gmin'>47–65′</td><td class='gname'>Мягкие игры: полируем трудное</td><td>спокойное закрепление по КТП: 3 мини-игры по «жёлтым зонам» чек-листов P1–P4 (время · past · спеллинг); ротация</td></tr><tr><td class='gmin'>65–77′</td><td class='gname'>Стена роста: сентябрь-я и теперь-я</td><td>рефлексия-продукт «как я вырос»: лист «September me / Now me» по рамкам → вешаем на стену роста</td></tr><tr><td class='gmin'>77–85′</td><td class='gname'>Титулы каждому + фото</td><td>титулы юнита — КАЖДОМУ; закрытие табло; общее фото у стены роста</td></tr><tr><td class='gmin'>85–90′</td><td class='gname'>Рефлексия + последнее ДЗ</td><td>финальная рефлексия одним предложением; ДЗ Exam trainer p.93 мягко + «научи дома играть»; тизер Showcase</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Exam trainer (WB pp.84–94) — часть пары (🐣 по шагам · 🚀 полный формат) + round-up повтор + бонус за очки (детали внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–5′</td><td class='stage'><div class='nm'>Праздничный вход</div><div class='sub'>Opening · festive check-in</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> праздничный вход: «одно слово о твоём годе»; план финала</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вход: <span class='en'>Today is our FINALE! One word about your English year?</span> — слова на доску.</li><li>План на доске картинками: 🎲 игра → 🎮 мягкие игры → 🌱 стена роста.</li><li><span class='en'>The unit is called ‘Look what you know’. Today — you SHOW it. And we celebrate it.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> доска: слова года + план-картинки</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> сдают слово о годе, видят праздничный план. Ожидаемо: «fun · hard · cool · better».</div></td><td class='mat'>—</td></tr><tr class='bridge'><td class='min'>5–10′</td><td class='stage'><div class='nm'>Правила + фразы игры</div><div class='sub'>Hook + rules</div><div class='zone'>board → groups</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> правила Snake Challenge просто и наглядно; Key phrases игры хором; опоры-карточки на столы</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Правила с доской-схемой: <span class='en'>Groups of three-four. Marker on START. Roll the dice — move — DO the square. First on FINISH — Snake Champion!</span> Монета: орёл = 2, решка = 1.</li><li>Спецклетки с юмором: <span class='en'>Miss a turn — rest! Go back three — oops! Go back to START — the CRUEL square, if you land there you're the hero of the day!</span></li><li>Key phrases хором с карточек: <span class='en'>You start! Whose turn is it? It's my turn! What's the question?</span></li><li>База 🐣: помощь команды легальна (первое слово, не ответ) · опоры-карточки на стол: went-глаголы · рамка сравнения · рамка времени · числа 90–100.</li><li>TB Reinforcement: 2 мин молча посмотреть клетки и подумать ответы.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.115 · кубики/монеты · фишки · карточки Key phrases · опоры-карточки</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> учат правила и фразы, раскладывают опоры, планируют ответы. Ожидаемо: опоры на столе успокаивают. Типичная ошибка: клетку не понял — What's the question? репетируем хором.</div></td><td class='mat'>SB p.115 · dice</td></tr><tr><td class='min'>10–15′</td><td class='stage'><div class='nm'>Разогрев: три клетки хором</div><div class='sub'>Warm-up · three practice squares</div><div class='zone'>standing · groups</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разогрев на 3 клетках всем классом (клетки 2 и 17 — Kagan RallyRobin) — снять страх первого хода</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Хором: <span class='en'>Count 100 to 90 backwards — all together!</span> (клетка 1 — самая страшная, сняли хором).</li><li>RallyRobin в парах: <span class='en'>Ping-pong: rooms in a house — one each, back and forth, no repeats!</span> (клетка 2).</li><li>RallyRobin второй заход: <span class='en'>Now ping-pong ‘I can… / I can't…’ — two each!</span> (клетка 17).</li><li><span class='en'>Ready! Markers on START!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.115</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> прогревают трудные механики вместе. Ожидаемо: 100→90 хором смешно и уже не страшно.</div></td><td class='mat'>—</td></tr><tr><td class='min'>15–45′</td><td class='stage'><div class='nm'>Главный заезд: Snake Challenge</div><div class='sub'>🐍 SNAKE CHALLENGE · base run</div><div class='zone'>groups of 3–4</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> главный заезд: полная партия в базовой версии; помощь команды; учитель — странствующий помощник; очки за смелость</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Старт: <span class='en'>Roll! Team, help with FIRST WORDS only!</span></li><li>Хожу и помогаю на трудных клетках: 11 (обед вчера — went-карточка) · 12 (мой день — рамка времени) · 19 (одежда — is wearing…).</li><li>+1 в табло за смелые полные ответы (услышал past чистый — отмечаю вслух: <span class='en'>‘I had soup and rice’ — beautiful past simple!</span>).</li><li>Минутные клетки (10, 20): база = 4–5 предложений; команда может задавать вопросы-помощники.</li><li>Финишировавшие группы: второй круг или роль «жюри лучших ответов» соседней группы.</li><li>За 3 мин: <span class='en'>Last rolls!</span> Чемпионы групп встают — аплодисменты.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.115 · кубики · фишки · опоры-карточки · табло</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> играют полную партию по-английски с поддержкой — говорит каждый каждые 2–3 мин. Ожидаемо: смех на клетке 16; опоры делают трудные клетки посильными. Типичная ошибка: односложные ответы — команда наводящими вопросами тянет длиннее.</div></td><td class='mat'>dice · counters</td></tr><tr class='bridge'><td class='min'>45–47′</td><td class='stage'><div class='nm'>Разбор игры + мостик</div><div class='sub'>Debrief + bridge</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> TB follow-up мягко + мостик к «докручиваем трудное играя»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>TB follow-up: <span class='en'>Who won? Which square was easy? Which was hard?</span> — руки, не допрос.</li><li>Мостик: <span class='en'>The hard squares told us what to polish. We polish them — PLAYING. Then: the grow-up wall.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> делятся лёгким/трудным. Ожидаемо: трудное = 11 (вчера) и 12 (время) — совпадает с чек-листами.</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–65′</td><td class='stage'><div class='nm'>Мягкие игры: полируем трудное</div><div class='sub'>Soft games · polish the hard spots</div><div class='zone'>teams rotate</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> спокойное закрепление по КТП: 3 мини-игры по «жёлтым зонам» чек-листов P1–P4 (время · past · спеллинг); ротация</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Игра 1 «Clock snap» (время, из P1-станции): карточки часов — пары наперегонки называют It's half past… (спокойный темп, проговаривание важнее скорости).</li><li>Игра 2 «Yesterday chain» = Kagan Timed RoundRobin (past): по кругу команды, 20 сек на игрока — <span class='en'>Yesterday I… (went/played/had/saw)</span>, повторяя предыдущего: <span class='en'>Maxim went home, and I played football.</span> Говорит каждый по очереди, пропускать нельзя; опора: банк глаголов.</li><li>Игра 3 «Spelling tiles» (спеллинг): плитки букв — собери слово категории по картинке; пары проверяют друг друга.</li><li>Игра-замена (если какая-то зона не «жёлтая»): ▶ <span class='game'>Quiz-Quiz-Trade</span> с карточками GIA1-QQT-U9.pdf — ходим-меняемся, ответ проверяем переворотом карточки.</li><li>Ротация каждые 5 мин; играем МЯГКО: без выбывания, очки только плюсовые.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки часов · банк глаголов · плитки букв · раздатка GIA1-QQT-U9.pdf · таймер-сигнал</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> докручивают личные жёлтые зоны в трёх играх без стресса. Ожидаемо: past-цепочка идёт заметно легче, чем в U8 — рост слышен. Типичная ошибка: «I goed» на цепочке — сосед показывает банк: went!</div></td><td class='mat'>game kits</td></tr><tr><td class='min'>65–77′</td><td class='stage'><div class='nm'>Стена роста: сентябрь-я и теперь-я</div><div class='sub'>🌱 Build · the grow-up wall</div><div class='zone'>desks → wall</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия-продукт «как я вырос»: лист «September me / Now me» по рамкам → вешаем на стену роста</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Лист пополам: <span class='en'>SEPTEMBER ME: I could say… (hello, my name is…) / NOW ME: I can… — THREE true sentences!</span></li><li>Рамки на доске: I can talk about… · I can write… · I can understand… · I can play a whole game in English!</li><li>Пишут 7 мин; хожу и напоминаю доказательства: <span class='en'>You wrote a 100-word email! You understood a podcast!</span></li><li>Вешаем листы на «стену роста» — каждый читает ОДНО своё предложение вслух у стены.</li><li>Аплодисменты после каждого — протокольно, всем.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> листы А5 «September/Now» · рамки · стена/доска для листов</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> фиксируют рост письменно и озвучивают у стены — кульминация года. Ожидаемо: трогательный момент; «I can understand a podcast» звучит гордо. Типичная ошибка: пустое «I can English» — рамки ведут к конкретике.</div><span class='diff'><span class='sup'>💪 Support:</span> выбрать 3 готовых рамки и дополнить. <span class='ext'>⭐ Быстрым:</span> + предложение «Next year I want to…».</span></td><td class='mat'>A5 sheets · wall</td></tr><tr><td class='min'>77–85′</td><td class='stage'><div class='nm'>Титулы каждому + фото</div><div class='sub'>🏆 Titles & celebration</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> титулы юнита — КАЖДОМУ; закрытие табло; общее фото у стены роста</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Титулы каждому (готовлю по табло и наблюдениям): Snake Champion · Best Helper · Bravest Speaker · Spelling Star · Podcast Master · Email Writer…</li><li>Каждый титул с одной фразой-доказательством: <span class='en'>Bravest Speaker — because you spoke a FULL minute about your family!</span></li><li>Общее фото у стены роста (согласия есть).</li><li><span class='en'>The book says ‘Look what you know’. I say: look who you've BECOME. Champions.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> заготовленные титулы-карточки · табло</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> получает титул каждый — с доказательством. Ожидаемо: самый тёплый момент года.</div></td><td class='mat'>title cards</td></tr><tr><td class='min'>85–90′</td><td class='stage'><div class='nm'>Рефлексия + последнее ДЗ</div><div class='sub'>Reflect + last homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> финальная рефлексия одним предложением; ДЗ Exam trainer p.93 мягко + «научи дома играть»; тизер Showcase</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Круг: <span class='en'>One sentence: ‘The best thing I can do in English now is…’</span></li><li>ДЗ мягко: Exam trainer p.93 ex.1–2 + ответить на вопросы ВСЛУХ дома (без аудио-заданий) + 5 предложений I can… + бонус «научи дома Snake Challenge».</li><li>Тизер: <span class='en'>Next — SHOWCASE: final projects! You'll choose your own mission. See you, champions!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> закрывают юнит предложением о себе. Ожидаемо: конкретные «I can write an email!»</div></td><td class='mat'>HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Exam trainer (родная тетрадь, WB pp.84–94; 🐣 = по шагам, с опорами):</b> Exam trainer: WB p.93 Speaking Part 1 ex.1–2 + ex.4 (ответь на вопросы ВСЛУХ дома, без аудио-заданий). Round-up: рефлексия «Look what I know» — 5 предложений I can… о том, что умеешь теперь.</p><p>🔎 Bonus (+5): научи кого-нибудь дома играть в Snake Challenge по-английски — Key phrases игры обязательны; отчёт одним предложением.</p></td><td class='mat'>WB Exam trainer pp.84–94 · notebook · фото доски на телефон — можно. ⚠️ Аудио-задания трейнера (треки в TRC) в ДЗ не идут.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>play the full Snake Challenge board game in English (base version)</b> — doing the squares with team support and running the game with its Key phrases (Whose turn is it? It's my turn!).</li>
+      <li><span class="lb">Subsidiary.</span> Урок Б: спокойное закрепление трудных мест года в играх (по личным чек-листам P1–P4) + рефлексия «как я вырос за год»; закрытие табло юнита с титулами для каждого.</li>
+      <li><span class="lb">Personal.</span> По КТП: «ответы по опорам, помощь команды» и «спокойное закрепление… рефлексия „как я вырос“». НИКАКИХ моков и тестов у нуля в финале — праздник мастерства и уверенности. Каждый уходит с личным «я могу…».</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>play a board game fully in English with support</li><li>do 15+ of the 21 squares (with team help)</li><li>use the game Key phrases naturally</li><li>say 3 true «I can…» sentences about their year</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Hook</span><span>Warm-up</span><span>SNAKE CHALLENGE</span><span>Bridge</span><span>Soft games</span><span>Grow-up wall</span><span>Reflect</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>You start.</span><span class='w'>Whose turn is it?</span><span class='w'>It's your/my turn.</span><span class='w'>What's the question?</span><span class='w'>Roll!</span><span class='w'>Miss a turn</span><span class='w'>Go back/forward</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>клетки в базовой версии с опорами: счёт назад (1) · комнаты (2) · spell страны (5) · сравни (8) · обед вчера (11) · мой день + время (12) · планы (15) · can/can't (17) · одежда соседа (19).</div></div>
+      <div class="r"><div class="k">Form</div><div>базовая версия: без таймера-удавки на минутных клетках (полминуты ок) · помощь команды легальна (подсказка, не ответ) · опоры-карточки лежат на столе (числа · комнаты · went-глаголы · рамки сравнений).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>dice /daɪs/ · Whose /huːz/ · победная фраза хором: We did it!</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Не знаю клетку — пропал ход?” → No: скажи What's the question? и команда подскажет первое слово.</div><div class='ccq'>“Клетка 11 — про сегодня?” → Про ВЧЕРА: I had… (past!).</div><div class='ccq'>“Кто проиграл — тот плохой?” → No: сегодня выигрывает каждый, кто играл по-английски.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> После 4 пар ревью весь год освежён; игра идёт по-английски при двух условиях: Key phrases на столе + опоры-карточки под трудные клетки. Финал эмоциональный: рефлексия роста важнее любых очков.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Игра сползает в русский</td><td>Key phrases на столе; мягкое правило: фраза игры по-русски — повтори по-английски с карточки и играй дальше.</td></tr><tr><td>Трудные клетки (8, 11, 12) стопорят игру</td><td>Опоры-карточки на столе: went-глаголы · рамка сравнения (taller than) · рамка времени (at half past…); полминуты подумать — норм.</td></tr><tr><td>Слабый стесняется говорить минуту (клетка 10)</td><td>База: 4–5 предложений вместо минуты; команда может задать наводящие вопросы (это тоже английский!).</td></tr><tr><td>Азарт → обиды на «go back to START»</td><td>Проговорить заранее со смехом: «クлетка 16 — самая злая, кто на неё попал — герой дня»; драму в юмор.</td></tr><tr><td>Финальная рефлексия комкается</td><td>Заложено 12 минут + рамки; стена роста — физический артефакт, её нельзя пропустить.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 9 “Look what you know!” (end-of-book review · A2 Key for Schools exam formats) · GIA1zero — lesson plan &amp; staging</span>
+    <span>SB p.115 (Snake Challenge; TB p.129: подготовка, монета, Reinforcement, follow-up) · WB Exam trainer p.93 (Speaking Part 1 — без аудио-заданий). По КТП пары 60: базовая версия с опорами + «спокойное закрепление и рефлексия „как я вырос“» — у нуля НЕТ мини-мока (он только в линии 🚀). До урока: кубики/монеты, фишки, карточки Key phrases, опоры-карточки (went-глаголы, рамки сравнений/времени, числа), наборы 3 мягких игр, листы September/Now, титулы-карточки.</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
+</body>

@@ -202,15 +202,21 @@ function doneKey(g,date){ return "done:"+g.name+":"+iso(date); }
 function planKeyFor(program, L){
   if (!window.PLANS) return null;
   const src = L.unit || L.sec || "";
-  // Get Involved: пары нумеруются сквозняком 1–72, план = <prog>-U<юнит>-P<№ пары внутри юнита>
+  // Get Involved: пары нумеруются сквозняком 1–72, план = <prog>-<Блок>-P<№ пары внутри блока>
   if (program==="GIA1" || program==="GIA1zero"){
+    let part = null;
     const um = /UNIT\s*(\d+)/i.exec(src);
-    if (!um) return null;
+    if (um) part = "U"+um[1];
+    else if (/STARTER/i.test(src)) part = "Starter";
+    else if (/MID-?YEAR|MIDTERM/i.test(src)) part = "Mid";
+    else if (/SHOWCASE/i.test(src)) part = "Show";
+    else if (/FINAL/i.test(src)) part = "Final";
+    if (!part) return null;
     const prog = window.PROGRAMS[program];
     const same = (prog?.lessons||[]).filter(x=>x.sec===L.sec).map(x=>x.n).sort((a,b)=>a-b);
     const idx = same.indexOf(L.n);
     if (idx < 0) return null;
-    const k = `${program}-U${um[1]}-P${idx+1}`;
+    const k = `${program}-${part}-P${idx+1}`;
     return window.PLANS[k] ? k : null;
   }
   // Genki (новый КТП): юнит = уровень + «Урок N» ИЛИ «Review» → ключ Genki-<Level>-L<N> / -Review
