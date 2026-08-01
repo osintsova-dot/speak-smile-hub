@@ -202,6 +202,17 @@ function esc(s){ return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").repla
 function doneKey(g,date){ return "done:"+g.name+":"+iso(date); }
 
 // Ключ готового плана: программа + номер юнита (из L.unit) + номер типа урока (L1..L7 из L.type).
+// Ссылка на колоду слайдов для проектора (имя файла = ключ плана в нижнем регистре)
+const SLIDES_BASE = "https://speakandsmile.ru/gia1/slides/";
+function slidesUrl(program, key){
+  if (!key || (program!=="GIA1" && program!=="GIA1zero")) return null;
+  return SLIDES_BASE + key.toLowerCase() + ".html";
+}
+function slidesBtnHtml(program, key){
+  const u = slidesUrl(program, key);
+  return u ? `<a class="slidesbtn" href="${u}" target="_blank" rel="noopener">🖥 Слайды на проектор</a>` : "";
+}
+
 // Возвращает ключ (напр. "GMF1-U2-L1"), только если такой план реально есть в window.PLANS.
 function planKeyFor(program, L){
   if (!window.PLANS) return null;
@@ -328,7 +339,8 @@ function render(){
               <div class="unit">${esc(L.sec)}</div>`;
       const fields = L.fields || [];
       const planKey = planKeyFor(g.program, L);
-      const planBtn = planKey ? `<button class="planbtn" data-plan="${esc(planKey)}">📋 Открыть план урока</button>` : "";
+      const planBtn = (planKey ? `<button class="planbtn" data-plan="${esc(planKey)}">📋 Открыть план урока</button>` : "")
+                    + slidesBtnHtml(g.program, planKey);
       const remind = reminderHtml(g.program, L);
       body = `<div class="detail">` + remind + planBtn + fields.map(([lab,val])=>`
         <div class="field">
@@ -485,9 +497,10 @@ function renderProgLessons(prog){
     const sec = L.sec || "";
     if (sec && sec !== lastSec){ html += `<div class="secrow">${esc(sec)}</div>`; lastSec = sec; }
     const key = planKeyFor(prog, L);
-    const planBtn = key
+    const planBtn = (key
       ? `<button class="planbtn" data-plan="${esc(key)}">📋 Открыть план урока</button>`
-      : `<div class="unit" style="margin-top:10px">план не создан (резерв/тест/устный)</div>`;
+      : `<div class="unit" style="margin-top:10px">план не создан (резерв/тест/устный)</div>`)
+      + slidesBtnHtml(prog, key);
     const remind = reminderHtml(prog, L);
     const fields = (L.fields||[]).map(f => `<div class="field"><div class="flabel">${esc(f[0])}</div><div class="frow"><div class="fval">${esc(f[1])}</div><button class="copy" data-copy="${esc(f[1])}">📋</button></div></div>`).join("");
     html += `<div class="card"><div class="cardhead"><div class="time">${L.n}</div><div><div class="title">${esc(L.title||"")}</div><div class="unit">${esc(L.type||"")}</div></div><div class="arrow">›</div></div><div class="detail">${remind}${fields}${planBtn}</div></div>`;
