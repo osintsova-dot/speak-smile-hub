@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 1 · Pair 3 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 1 “School life” · Pair 3 — Грамматика: Present simple (утверждение и отрицание) — ввод с нуля формата</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «новые» 🌱 со стороны</b> · 90 min · onboarding: модель → word bank → черновик в команде → продукт с опорой · командный счёт</div>
+    <div class="meta"><span class='chip'>Lessons 11–12 (KTP pair 7) · Октябрь</span><span class='chip new'>🌱 новые · онбординг в формат</span><span class='chip'>SB pp.14–15</span><span class='chip'>командный счёт · опоры</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2new-u1-p3.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u1.html" target="_blank" rel="noopener">🎮 Игры юнита 1 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u1-p3.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Opening · вход + повтор</td><td>повтор P2: routines-цепочка + 3 факта о Джеке и Аби</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u1-p3.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: полная карта Present simple, правило найдём сами</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u1-p3.html#5' target='_blank' rel='noopener' title='слайд 5'>8–22′</a></td><td class='gname'>Открытие · достраиваем таблицу</td><td>примеры из текста на доске → пары раскладывают по колонкам I/you/we/they vs he/she/it → таблица ex.1</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u1-p3.html#6' target='_blank' rel='noopener' title='слайд 6'>22–34′</a></td><td class='gname'>Спеллинг-станция · -s / -es / -ies</td><td>сортировка 12 глаголов в корзины руками → правило хором → письменный заход 6 форм с самопроверкой</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u1-p3.html#7' target='_blank' rel='noopener' title='слайд 7'>34–45′</a></td><td class='gname'>Отрицания · don't / doesn't</td><td>модель → трансформации по рамке → игра «неправда обо мне»</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u1-p3.html#8' target='_blank' rel='noopener' title='слайд 8'>45–47′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u1-p3.html#9' target='_blank' rel='noopener' title='слайд 9'>47–58′</a></td><td class='gname'>Персонализация · ex.5</td><td>«сделай правдой о себе»: 4 строки по образцу + чтение партнёру</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u1-p3.html#10' target='_blank' rel='noopener' title='слайд 10'>58–72′</a></td><td class='gname'>PRODUCT · день друга (6 строк)</td><td>интервью в паре по вопросам-опорам → 6 строк о дне партнёра в 3-м лице → самопроверка → 2–3 вслух</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u1-p3.html#11' target='_blank' rel='noopener' title='слайд 11'>72–82′</a></td><td class='gname'>Мини-тест с самопроверкой + счёт</td><td>8 заданий на всё (формы+отрицания+спеллинг) → ключ → свой счёт приватно → очки командам</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u1-p3.html#12' target='_blank' rel='noopener' title='слайд 12'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>ДЗ с образцом + тизер P4</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 1 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Для новичков грамматику МОЖНО объявлять темой — им нужна ясность, а не маскировка. Но подача через открытие: таблица достраивается из знакомых примеров текста P2, правило формулируют сами. Много коротких письменных заходов с самопроверкой — уверенность растёт от «у меня получилось», а не от объяснения.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“One small letter — s.</b> It changes everything in English. I wake up — but Jack wakeS up. Today you get the FULL map of the present simple: when -s, when -es, when don't and doesn't. By the end you'll write six sentences about a friend's day — and they'll all be correct. Let's find the rule — it's hiding in Jack and Abi's text.”<div class='pitchru'>Суть по-русски, если нужно поддержать: одна буква -s меняет всё: сегодня полная карта Present simple — когда -s, когда -es, когда don't/doesn't. Правило прячется в тексте про Джека и Аби — найдём его сами.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Opening · вход + повтор</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> повтор P2: routines-цепочка + 3 факта о Джеке и Аби</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Chain: wake up → …! Then: three facts about Jack and Abi — I start: Jack wakes up at seven…</span></li><li>Пишу на доске wakeS крупно — <span class='en'>see that S? Today it's ours.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слышат -s в знакомых фактах</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: полная карта Present simple, правило найдём сами</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>The rule is hiding in the text you read. We'll find it — then use it six times, correctly.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> план ясен</div></td><td class='mat'>слайд 4</td></tr><tr><td class='min'>8–22′</td><td class='stage'><div class='nm'>Открытие · достраиваем таблицу</div><div class='zone'>pairs → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> примеры из текста на доске → пары раскладывают по колонкам I/you/we/they vs he/she/it → таблица ex.1</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Примеры-карточки: I get up · Jack wakes up · They don't go · Abi doesn't see…</li><li><span class='en'>Two columns. Sort the cards. What's different in the RIGHT column?</span></li><li>Формулируют правило сами (по-русски можно) → сверяем с таблицей ex.1, достраиваем пропуски.</li><li>Хором: <span class='en'>he wakes, she goes, it starts — sssss!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки примеров · SB p.14 ex.1</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> открывают правило руками. Ожидаемо: «после he/she/it — s!» говорят сами</div></td><td class='mat'>слайд 5</td></tr><tr><td class='min'>22–34′</td><td class='stage'><div class='nm'>Спеллинг-станция · -s / -es / -ies</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> сортировка 12 глаголов в корзины руками → правило хором → письменный заход 6 форм с самопроверкой</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Корзины: -s · -es · -ies. <span class='en'>Twelve verbs. Sort them. Why does STUDY go to -ies?</span></li><li>Правило хором: -s обычно · -es после s/sh/ch/x/o · -ies после согласной+y · has!</li><li>Письменно 6 форм → ключ на слайде → сам проверяю свои: <span class='en'>circle your slips — nobody sees.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки глаголов · корзины · ключ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> сортируют руками до письма. Ожидаемо: studies с 2-го раза у всех</div></td><td class='mat'>слайд 6</td></tr><tr><td class='min'>34–45′</td><td class='stage'><div class='nm'>Отрицания · don't / doesn't</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> модель → трансформации по рамке → игра «неправда обо мне»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Модель: <span class='en'>I don't get up at five. Jack doesn't go to school.</span> Кто с don't, кто с doesn't?</li><li>Рамка трансформации: (+) → (−) по 6 предложений, ключ на слайде.</li><li>Игра: <span class='en'>Tell your partner a LIE about your day — partner fixes it: You don't…!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.14 ex.3 · рамка</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> переводят в отрицание с опорой. Ожидаемо: doesn't + голый глагол требует 2–3 повторов</div></td><td class='mat'>слайд 7 · таймер</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>-es verbs — jump! -ies verbs — spin! (go! study! teach! tidy!)</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> двигаются по правилу</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–58′</td><td class='stage'><div class='nm'>Персонализация · ex.5</div><div class='zone'>solo → pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> «сделай правдой о себе»: 4 строки по образцу + чтение партнёру</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.5 с опорой: <span class='en'>I don't go to an online school. I go to…</span> — 4 строки о себе.</li><li>Читаем партнёру; партнёр ловит одно: есть ли -s там, где he/she/it.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.15 ex.5 · рамка</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> персонализируют по рамке. Ожидаемо: про себя писать легче — уверенность растёт</div></td><td class='mat'>слайд 8</td></tr><tr class='True'><td class='min'>58–72′</td><td class='stage'><div class='nm'>PRODUCT · день друга (6 строк)</div><div class='zone'>pairs → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> интервью в паре по вопросам-опорам → 6 строк о дне партнёра в 3-м лице → самопроверка → 2–3 вслух</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Вопросы-опоры: <span class='en'>What time do you get up? Do you have breakfast?…</span> (на слайде).</li><li>Пишем 6 строк: <span class='en'>Dasha gets up at seven. She doesn't have breakfast…</span></li><li>Самопроверка по чек-листу (3 пункта: -s? doesn't+голый? spelling?) → добровольцы читают классу.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> вопросы-опоры · чек-лист</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проходят полный цикл: спросил → записал → проверил → прочитал. Ожидаемо: 6 строк у каждого</div></td><td class='mat'>слайды 9–10</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Мини-тест с самопроверкой + счёт</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 8 заданий на всё (формы+отрицания+спеллинг) → ключ → свой счёт приватно → очки командам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Eight quick items. Then the key. Your score is YOURS — teams get points for finishing.</span></li><li>Стикеры лёгкости 🟢🟡🔴; 🔴 — беру на заметку для P5.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-тест · ключ · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проверяют себя без страха оценки. Ожидаемо: видят прогресс за одну пару</div></td><td class='mat'>слайд 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ДЗ с образцом + тизер P4</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ДЗ: WB стр. 5, зад. 1–3 (Present simple) — образец первого задания на слайде.</li><li>Тизер: <span class='en'>Next: seventeen school subjects — and a girl from Finland in a British school.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ с образцом</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 5, зад. 1–3 (Present simple aff/neg) — образец показан на уроке.</p><p>🌱 По желанию: зад. 4.</p></td><td class='mat'>WB Unit 1 · плакат-шпаргалка -s/-es/-ies висит в классе</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>use present simple affirmative and negative</b> with correct 3rd-person spelling, checked by themselves against keys.</li>
+      <li><span class="lb">Subsidiary.</span> Guided discovery из текста P2; сортировка -s/-es/-ies; ex.5 персонализация; мини-тест с самопроверкой (не оценка!).</li>
+      <li><span class="lb">Personal.</span> Темп ниже «наших» вдвое — и это норма. Каждый этап заканчивается самопроверкой по ключу: ошибка находится приватно, до того как её увидят.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>complete the present simple table</li><li>spell 3rd person forms: -s, -es, -ies</li><li>make negative sentences with don't/doesn't</li><li>write 6 correct sentences about a friend's day</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Discover</span><span>Table</span><span>Spelling</span><span>Negatives</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>wake up</span><span class='w'>get up</span><span class='w'>get dressed</span><span class='w'>have breakfast</span><span class='w'>pack my bag</span><span class='w'>go to school</span><span class='w'>start school</span><span class='w'>have a break</span><span class='w'>have lunch</span><span class='w'>finish school</span><span class='w'>go home</span><span class='w'>do homework</span><span class='w'>have dinner</span><span class='w'>go to bed</span><span class='w'>go to sleep</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I/You/We/They get up at eight. · He/She/It gets up at seven. · I/You/We/They don't go to school. · He/She/It doesn't see her teachers.</div></div>
+      <div class="r"><div class="k">Form</div><div>большинство глаголов: + -s (read → reads, wake up → wakes up) · после -s, -sh, -ss, -ch, -x, -o: + -es (go → goes, teach → teaches, mix → mixes) · согласная + y: y → -ies (study → studies) · исключение: have → has</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>goes /ɡəʊz/ · studies /ˈstʌdiz/ · watches /ˈwɒtʃɪz/ — с голосом, не «-ес»</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«He don't like maths» — что не так? → после he/she/it всегда doesn't.</div><div class='ccq'>«She studys» — правильно? → нет: согласная + y → studies.</div><div class='ccq'>После doesn't глагол с -s или без? → без: doesn't see, а не doesn't sees.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.14–15, КТП пара 7. Для части детей 3-е лицо — реально новое; строю на примерах уже прочитанного текста (знакомый контекст).</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Правило слышали, но не применяют</td><td>Не объясняю — они достраивают таблицу из примеров и формулируют правило сами; я только подтверждаю.</td></tr><tr><td>Страх письменных ошибок</td><td>Все письменные заходы — с самопроверкой по ключу, до чужих глаз.</td></tr><tr><td>Спеллинг -es/-ies путается</td><td>Сортировка руками (карточки в корзины) до письма; плакат-шпаргалка на стене до конца юнита.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 1 “School life” (What is an ideal school?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U1 «School life» · P3 · линия «новые» 🌱</span>
+  </div>
+</div>

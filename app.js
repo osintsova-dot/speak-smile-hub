@@ -30,10 +30,19 @@ const GROUPS_FALLBACK = [
   {name:"Get Involved 1B", program:"GIA1zero", room:"Discovery", teacher:"Катя", days:[{d:3,t:"16:40"},{d:6,t:"14:30"}]},
   {name:"GMF 3C",  program:"GMF3",    room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"15:00"},{d:6,t:"12:10"}]},
   {name:"GMF 3D",  program:"GMF3",    room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"16:05"},{d:6,t:"13:20"}]},
-  {name:"Get Involved 2B", program:"GIA2", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"17:10"},{d:6,t:"14:30"}]},
+  {name:"Get Involved 2B", program:"GIA2new", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"17:10"},{d:6,t:"14:30"}]},
   {name:"GMF 1C",  program:"GMF1zero",room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"18:50"},{d:6,t:"11:00"}]},
 ];
 let GROUPS = GROUPS_FALLBACK;
+
+// GIA2new идёт по той же КТП, что GIA2 (единая сетка двух линий)
+(function(){
+  function aliasKtp(){
+    if (window.PROGRAMS && window.PROGRAMS.GIA2 && !window.PROGRAMS.GIA2new)
+      window.PROGRAMS.GIA2new = window.PROGRAMS.GIA2;
+  }
+  aliasKtp(); document.addEventListener("DOMContentLoaded", aliasKtp);
+})();
 
 // Программы, для которых КТП ещё не готов (показываем «в работе»)
 const PROGRAM_LABELS = {
@@ -41,7 +50,7 @@ const PROGRAM_LABELS = {
   GMF1zero:"Give Me Five! 1 (нулевой)", GMF2zero:"Give Me Five! 2 (нулевой)",
   Prepare3:"Prepare 3", Prepare4:"Prepare 4", Prepare5:"Prepare 5",
   GIA1:"Get Involved! A1+", GIA1zero:"Get Involved! A1+ (с нуля)",
-  GIA2:"Get Involved! A2", Gateway:"Gateway to the World B2",
+  GIA2:"Get Involved! A2 (наши)", GIA2new:"Get Involved! A2 (новые)", Gateway:"Gateway to the World B2",
   MW3:"Mimi's Wheel 3+", Genki:"Genki English", Chinese:"Китайский",
 };
 
@@ -93,6 +102,7 @@ const REPORTS = {
   GIA1:    "https://osintsova-dot.github.io/Get1report/",
   GIA1zero:"https://osintsova-dot.github.io/Get1report/",   // сетка юнитов общая с 1A
   GIA2:    "https://osintsova-dot.github.io/Get2report/",
+  GIA2new: "https://osintsova-dot.github.io/Get2report/",
   Prepare3:"https://osintsova-dot.github.io/Prepare3report/",
   Prepare4:"https://osintsova-dot.github.io/Prepare4/",
   Prepare5:"https://osintsova-dot.github.io/Prepare5report/",
@@ -110,6 +120,7 @@ const LETTERS = {  // письма родителям в начале юнита
   GIA1:    "https://docs.google.com/document/d/13gugWCBs-sekQB88k-pBK_iJm0Yv51bY-oYng7GVcl8/edit",
   GIA1zero:"https://docs.google.com/document/d/13gugWCBs-sekQB88k-pBK_iJm0Yv51bY-oYng7GVcl8/edit",
   GIA2:    "https://drive.google.com/file/d/1U-MHrJ1CtCnOR_oURK_X_FKkqIBemxhN/view",
+  GIA2new: "https://drive.google.com/file/d/1U-MHrJ1CtCnOR_oURK_X_FKkqIBemxhN/view",
   Prepare3:"https://drive.google.com/file/d/1tmihpfCkYp20qXZmXbByGEHy074rjQfQ/view",
   Prepare4:"https://drive.google.com/file/d/1uT5vmOP4DZz_Jt3w2YOJNzHAGTyraLwy/view",
   Prepare5:"https://drive.google.com/file/d/1g7_YTrHjauko9clyJJobyeuTXWLy7r5D/view",
@@ -127,6 +138,7 @@ const JOURNALS = { // журнал наблюдений (печать)
   GIA1:    "https://drive.google.com/file/d/191eWQIYlDh-0N26eKB-bW7AL_N3oi5U9/view",
   GIA1zero:"https://drive.google.com/file/d/191eWQIYlDh-0N26eKB-bW7AL_N3oi5U9/view",
   GIA2:    "https://drive.google.com/file/d/1wHdolz7eG9K4b9Ch5zkorJdfexvh3KE_/view",
+  GIA2new: "https://drive.google.com/file/d/1wHdolz7eG9K4b9Ch5zkorJdfexvh3KE_/view",
   Prepare3:"https://drive.google.com/file/d/1z9ElIruPY8EoJ5wWKjw0Z48AiTHC0FG7/view"
 };
 // первый/последний ли это урок юнита (секции ≥4 уроков, чтобы не дёргать на Genki-однострочных секциях)
@@ -153,7 +165,7 @@ const ROOM_DOT = {Discovery:"#4B89C9", Adventure:"#D58A2E", Innovation:"#45A06B"
 function roomColor(r){ return ROOM_DOT[r] || "#9aa"; }
 
 // длительность урока по программе (мин): детские 60, экзаменационные/подростковые 90
-const LESSON_MIN = {GIA1:90, GIA1zero:90, GIA2:90, Prepare3:90, Prepare4:90, Prepare5:90, Gateway:90};
+const LESSON_MIN = {GIA1:90, GIA1zero:90, GIA2:90, GIA2new:90, Prepare3:90, Prepare4:90, Prepare5:90, Gateway:90};
 function lessonEnd(program, t){
   const [h,m] = t.split(":").map(Number);
   const total = h*60 + m + (LESSON_MIN[program]||60);
@@ -203,10 +215,12 @@ function doneKey(g,date){ return "done:"+g.name+":"+iso(date); }
 
 // Ключ готового плана: программа + номер юнита (из L.unit) + номер типа урока (L1..L7 из L.type).
 // Ссылка на колоду слайдов для проектора (имя файла = ключ плана в нижнем регистре)
-const SLIDES_BASE = "https://speakandsmile.ru/gia1/slides/";
+const SLIDES_BASES = {GIA1:"https://speakandsmile.ru/gia1/slides/", GIA1zero:"https://speakandsmile.ru/gia1/slides/",
+                      GIA2:"https://speakandsmile.ru/gia2/slides/", GIA2new:"https://speakandsmile.ru/gia2/slides/"};
 function slidesUrl(program, key){
-  if (!key || (program!=="GIA1" && program!=="GIA1zero")) return null;
-  return SLIDES_BASE + key.toLowerCase() + ".html";
+  const base = SLIDES_BASES[program];
+  if (!key || !base) return null;
+  return base + key.toLowerCase() + ".html";
 }
 function slidesBtnHtml(program, key){
   const u = slidesUrl(program, key);
@@ -218,6 +232,20 @@ function planKeyFor(program, L){
   if (!window.PLANS) return null;
   const src = L.unit || L.sec || "";
   // Get Involved: пары нумеруются сквозняком 1–72, план = <prog>-<Блок>-P<№ пары внутри блока>
+  if (program==="GIA2" || program==="GIA2new"){
+    let part = null;
+    const um = /UNIT\s*(\d+)/i.exec(src);
+    if (um) part = "U"+um[1];
+    else if (/STARTER/i.test(src)) part = "Starter";
+    else if (/MIDTERM|MID-?YEAR/i.test(src)) part = "Mid";
+    if (!part) return null;
+    const prog = window.PROGRAMS[program];
+    const same = (prog?.lessons||[]).filter(x=>x.sec===L.sec).map(x=>x.n).sort((a,b)=>a-b);
+    const idx = same.indexOf(L.n);
+    if (idx < 0) return null;
+    const k = `${program}-${part}-P${idx+1}`;
+    return window.PLANS[k] ? k : null;
+  }
   if (program==="GIA1" || program==="GIA1zero"){
     let part = null;
     const um = /UNIT\s*(\d+)/i.exec(src);
