@@ -497,12 +497,29 @@ function openProg(){
   document.body.style.overflow = "hidden";
   renderProgList();
 }
+// Порядок курсов в списке — по нарастанию уровня: от дошкольников к B2
+const PROGRAM_ORDER = [
+  "Genki",                                  // дошкольники
+  "MW3",                                    // Mimi's Wheel 3+
+  "GMF1", "GMF1zero", "GMF2", "GMF2zero",   // Give Me Five 1-2 (+ нулевые линии)
+  "GMF3", "GMF4", "GMF5",
+  "GIA1", "GIA1zero",                       // Get Involved A1+ (обе линии рядом)
+  "GIA2", "GIA2new",                        // Get Involved A2 (обе линии рядом)
+  "Prepare3", "Prepare4", "Prepare5",
+  "Gateway",                                // B2
+  "Chinese",
+];
+function sortPrograms(keys){
+  const rank = k => { const i = PROGRAM_ORDER.indexOf(k); return i < 0 ? 999 : i; };
+  return keys.slice().sort((a,b) => rank(a) - rank(b) || a.localeCompare(b));
+}
+
 function renderProgList(){
   document.getElementById("progtitle").textContent = "📚 Программы";
   document.getElementById("progback").style.display = "none";
   const b = document.getElementById("progbody");
   const P = window.PROGRAMS || {};
-  const keys = Object.keys(P);
+  const keys = sortPrograms(Object.keys(P));
   b.innerHTML = keys.length
     ? keys.map(k => `<div class="progcard" data-prog="${esc(k)}"><div><b>${esc(PROGRAM_LABELS[k]||P[k].label||k)}</b></div><div class="c">${(P[k].lessons||[]).length} уроков ›</div></div>`).join("")
     : '<div class="empty">Нет программ с КТП</div>';
