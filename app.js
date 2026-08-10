@@ -50,7 +50,7 @@ const PROGRAM_LABELS = {
   GMF1zero:"Give Me Five! 1 (нулевой)", GMF2zero:"Give Me Five! 2 (нулевой)",
   Prepare3:"Prepare 3", Prepare4:"Prepare 4", Prepare5:"Prepare 5",
   GIA1:"Get Involved! A1+", GIA1zero:"Get Involved! A1+ (с нуля)",
-  GIA2:"Get Involved! A2 (наши)", GIA2new:"Get Involved! A2 (новые)", Gateway:"Gateway to the World B2",
+  GIA2:"Get Involved! A2 (продолжающие)", GIA2new:"Get Involved! A2 (с нуля)", Gateway:"Gateway to the World B2",
   MW3:"Mimi's Wheel 3+", Genki:"Genki English", Chinese:"Китайский",
 };
 
@@ -504,14 +504,14 @@ function renderProgList(){
   const P = window.PROGRAMS || {};
   const keys = Object.keys(P);
   b.innerHTML = keys.length
-    ? keys.map(k => `<div class="progcard" data-prog="${esc(k)}"><div><b>${esc(P[k].label||k)}</b></div><div class="c">${(P[k].lessons||[]).length} уроков ›</div></div>`).join("")
+    ? keys.map(k => `<div class="progcard" data-prog="${esc(k)}"><div><b>${esc(PROGRAM_LABELS[k]||P[k].label||k)}</b></div><div class="c">${(P[k].lessons||[]).length} уроков ›</div></div>`).join("")
     : '<div class="empty">Нет программ с КТП</div>';
   b.querySelectorAll(".progcard").forEach(c => c.addEventListener("click", () => renderProgLessons(c.dataset.prog)));
   b.scrollTop = 0;
 }
 function renderProgLessons(prog){
   const P = window.PROGRAMS[prog]; if(!P) return;
-  document.getElementById("progtitle").textContent = "📚 " + (P.label || prog);
+  document.getElementById("progtitle").textContent = "📚 " + (PROGRAM_LABELS[prog] || P.label || prog);
   document.getElementById("progback").style.display = "";
   const b = document.getElementById("progbody");
   let html = "", lastSec = "";
