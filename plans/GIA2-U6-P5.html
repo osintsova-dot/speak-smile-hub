@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2 · Unit 6 · Pair 5 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 6 “Animals in danger” · Pair 5 — Mission «The Chronicle»: what this crew did — and what it didn't</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «наши» 🚀 после A1+</b> · 90 min · mission-based: gate → base sprint → challenge → bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Lessons 97–98 (KTP pair 50) · Апрель</span><span class='chip new'>🚀 наши · после A1+</span><span class='chip'>SB p.78 + Pronunciation p.117</span><span class='chip'>unit leaderboard · gold runs</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2-u6-p5.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u6.html" target="_blank" rel="noopener">🎮 Игры юнита 6 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u6-p5.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>вход + повтор P4: одна строка из плана своей крю + Alphabet race (приём TB)</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u6-p5.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия хроники + два правила архива (верное написание И верный звук)</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u6-p5.html#5' target='_blank' rel='noopener' title='слайд 5'>8–13′</a></td><td class='gname'>Входной тест (gate): 60 сек форм прошедшего</td><td>60 сек: 12 инфинитивов на экране — написать формы прошедшего; спеллинг решает</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u6-p5.html#6' target='_blank' rel='noopener' title='слайд 6'>13–27′</a></td><td class='gname'>Спринт: машина орфографии -ed</td><td>ex.1 p.78 (два правила выводят сами) → правила орфографии p.81 → ex.2 восемь глаголов → командная игра на спеллинг (приём TB)</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u6-p5.html#7' target='_blank' rel='noopener' title='слайд 7'>27–38′</a></td><td class='gname'>Челлендж: конвейер «сделали / не сделали»</td><td>ex.3 шесть предложений в утв./отр. на скорость + ex.4 свои правдивые предложения конвейером по 8 секунд</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u6-p5.html#8' target='_blank' rel='noopener' title='слайд 8'>38–45′</a></td><td class='gname'>Станция звука: три чтения -ed</td><td>Pronunciation SB p.117 (треки 72–75): три корзины и правило, которое дети находят сами</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u6-p5.html#9' target='_blank' rel='noopener' title='слайд 9'>45–47′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u6-p5.html#10' target='_blank' rel='noopener' title='слайд 10'>47–58′</a></td><td class='gname'>Бонус-уровень: этого нет в учебнике</td><td>Grammar round-up «Crocodiles of the World» (ex.5) как аккредитация + рамка неправильных глаголов + Research</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u6-p5.html#11' target='_blank' rel='noopener' title='слайд 11'>58–74′</a></td><td class='gname'>Продукт: хроника команды</td><td>хроника месяца: 5 записей (минимум 2 отрицательные) с датами → 60 сек вслух</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u6-p5.html#12' target='_blank' rel='noopener' title='слайд 12'>74–82′</a></td><td class='gname'>Реванш gate + лидерборд</td><td>реванш past forms sprint (те же 12 глаголов) + очки</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u6-p5.html#13' target='_blank' rel='noopener' title='слайд 13'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>рефлексия + ДЗ + тизер P6</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 6 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Правильные глаголы прошедшего времени спрятаны в хронику: команда ведёт летопись месяца — что сделала и чего НЕ сделала. Форма становится ценой записи: неверное окончание или неверный звук (/d/ /t/ /ɪd/) — запись в хронику не принимают. Орфографические правила со стр. 81 отрабатываются как «почерк летописца», Grammar round-up про «Crocodiles of the World» — как финальная аккредитация. Тема урока — хроника, а не «-ed».</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Every serious organisation keeps a chronicle.</b> What we did. What we didn't do. With dates. Your crew writes the chronicle of the last month — five entries, at least two of them negative, all with real dates: last weekend, in March, yesterday. Two rules from the archive: the ending must be right on paper, and it must SOUND right — played is /d/, watched is /t/, visited is /ɪd/. Wrong ending, wrong sound — the entry doesn't go in. <b>Chronicles open!”</b><div class='pitchru'>Суть по-русски, если нужно поддержать: команда ведёт хронику месяца: пять записей — что сделали и чего не сделали, с датами. Запись принимают только если окончание верное И звучит верно (/d/, /t/, /ɪd/).</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вход + повтор P4: одна строка из плана своей крю + Alphabet race (приём TB)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>One line from YOUR thirty-day plan — verb plus noun, go!</span></li><li>Alphabet race (приём TB): за 2 минуты крю пишет глаголы прошедшего времени на разные буквы алфавита (asked, believed, carried, decided, entered, finished, Googled, helped, jumped, kicked, listened…).</li><li>Мостик: <span class='en'>A plan says what we WILL do. A chronicle says what we DID. Today we write the chronicle.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> разгоняются, формы всплывают сами. Ожидаемо: пишут 12–18 глаголов</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия хроники + два правила архива (верное написание И верный звук)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Five entries, at least two negative, all with dates. Wrong ending or wrong sound — the entry doesn't go in.</span></li><li><span class='ig'>🏆 <b>Планка продукта (рубрика судей):</b> Fluency — паузы ≤3 сек (1–3) · Accuracy — форма чистая, без «there were a campaign» и «didn't visited» (1–3) · Richness — детали, цифры, сравнения (1–3). 9/9 = gold run, +5.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии (запасной вариант — три колонки /d/ /t/ /ɪd/ на доске)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> принимают правила</div></td><td class='mat'>слайд 4</td></tr><tr class='True'><td class='min'>8–13′</td><td class='stage'><div class='nm'>Входной тест (gate): 60 сек форм прошедшего</div><div class='sub'>🎯 GATE · past forms sprint</div><div class='zone'>solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 60 сек: 12 инфинитивов на экране — написать формы прошедшего; спеллинг решает</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Sixty seconds. Twelve verbs, past simple, spelling counts. 'Stoped'? Zero. GO!</span> (visit · play · stop · study · travel · like · watch · finish · organise · receive · decide · carry)</li><li>Счёт приватно, реванш в конце.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут на скорость. Ожидаемо: 6–9 из 12; удвоение и -ied — главные потери</div></td><td class='mat'>слайд 5 · таймер</td></tr><tr><td class='min'>13–27′</td><td class='stage'><div class='nm'>Спринт: машина орфографии -ed</div><div class='sub'>⚡ Base sprint · the spelling machine</div><div class='zone'>crews · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1 p.78 (два правила выводят сами) → правила орфографии p.81 → ex.2 восемь глаголов → командная игра на спеллинг (приём TB)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.1: <span class='en'>Look at the four examples. How do we make the affirmative? And the negative?</span> (ключ TB: 1 -ed · 2 didn't). Правило формулируют они.</li><li>Приём TB на доске: пишу <span class='en'>She didn't visited her grandparents</span> и мелом зачёркиваю -ed. <span class='en'>The -ed turns back into an infinitive.</span></li><li>Правила орфографии p.81 разбираем как четыре ворот: + -ed · + -d · y → -ied · удвоение согласной.</li><li>ex.2 гонкой (ключ TB: finished, liked, organised, played, studied, travelled, visited, watched).</li><li>Игра TB: четыре команды, карточка с инфинитивом, одна попытка написать форму; ошибка — ход и очко следующей команде.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.78 ex.1–2 + Spelling rules p.81 · карточки глаголов · мини-доски · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> достраивают правила и соревнуются в спеллинге. Ожидаемо: travel → travelled объясняем отдельно (британский вариант)</div></td><td class='mat'>слайд 6 · таймер</td></tr><tr><td class='min'>27–38′</td><td class='stage'><div class='nm'>Челлендж: конвейер «сделали / не сделали»</div><div class='sub'>🔥 Challenge · aff/neg conveyor</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.3 шесть предложений в утв./отр. на скорость + ex.4 свои правдивые предложения конвейером по 8 секунд</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.3 гонкой, 4 минуты. Ключ TB: 1 didn't finish · 2 watched · 3 didn't play · 4 didn't visit · 5 didn't like / liked · 6 organised.</li><li>Рамка Time expressions разбирается тут же: yesterday · last night / last weekend · in August / in 2017. <span class='en'>They can stand at the beginning OR at the end.</span></li><li>ex.4 конвейером по 8 сек: <span class='en'>watch TV / last night → I watched TV last night. OR I didn't watch TV last night. Boards up!</span> Шесть раундов.</li><li>Ограничитель: сказал -ed после didn't — ход крю сгорает.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.78 ex.3–4 · таймер 8 сек</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> собирают конвейером. Ошибка: didn't played — ограничитель ловит мгновенно, и класс это слышит</div></td><td class='mat'>слайд 7 · таймер</td></tr><tr><td class='min'>38–45′</td><td class='stage'><div class='nm'>Станция звука: три чтения -ed</div><div class='sub'>Sound station · /d/ /t/ /ɪd/</div><div class='zone'>stations</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Pronunciation SB p.117 (треки 72–75): три корзины и правило, которое дети находят сами</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Трек 72: <span class='en'>played — watched — visited. Three different endings. Listen again.</span></li><li>Трек 73, ex.2: раскладываем восемь глаголов по корзинам. Ключ TB: /d/ — listened, received, travelled · /t/ — finished, helped, stopped · /ɪd/ — decided, needed, started.</li><li>ex.3: <span class='en'>Look at the /ɪd/ column. What letter comes before the ending?</span> Ключ TB: t и d. Правило формулируют они.</li><li>Трек 75, ex.5: пять предложений хором с правильным окончанием.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.117 · аудио треки 72–75 · три корзины (запасной вариант — произношу сам, дети сортируют карточки глаголов в три стопки на партах)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают и сортируют. Ожидаемо: правило «после t и d» открывают сами за 2 минуты — и больше не путают</div></td><td class='mat'>слайд 8 · audio</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>/d/ — clap once! /t/ — stamp your foot! /ɪd/ — jump!</span> (называю: played · watched · visited · listened · stopped · decided · helped · travelled)</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> телом закрепляют три окончания</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>47–58′</td><td class='stage'><div class='nm'>Бонус-уровень: этого нет в учебнике</div><div class='sub'>🚀 Bonus level · not in the book</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Grammar round-up «Crocodiles of the World» (ex.5) как аккредитация + рамка неправильных глаголов + Research</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Archive accreditation: the crocodile file. Eight choices, four minutes.</span> (ключ TB ex.5: 1 are · 2 the most · 3 It was · 4 wasn't · 5 want · 6 decided · 7 helps · 8 must). По просьбе TB после каждого ответа спрашиваю ПОЧЕМУ.</li><li>Рамка Irregular verbs: go ➞ went · see ➞ saw · have ➞ had · meet ➞ met. <span class='en'>Add two more you already know.</span> (приём Challenge из TB)</li><li>Research (SB p.78): <span class='en'>Where can you go to see animals in our area?</span> — две минуты в парах, ответы пойдут в хронику и в письмо P6.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.78 ex.5 + Research · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> закрывают round-up и спорят о зоопарках города. Ожидаемо: объяснение «почему именно этот вариант» отличает сильных</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>58–74′</td><td class='stage'><div class='nm'>Продукт: хроника команды</div><div class='sub'>PRODUCT · the crew timeline</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> хроника месяца: 5 записей (минимум 2 отрицательные) с датами → 60 сек вслух</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Письмо 6 мин: <span class='en'>Five entries. At least two negative. Every entry needs a date: last weekend, in March, yesterday.</span></li><li>Peer air-check в паре по чек-листу (окончание верное? после didn't голый глагол? звук /d/ /t/ /ɪd/ верный?) — ДО сцены.</li><li><span class='en'>Sixty seconds. The archive listens to the SOUND as well as the spelling.</span></li><li>Очки: +2 чистая запись · −1 запись отклонена (судьи держат три карточки /d/ /t/ /ɪd/ и поднимают, если звук не тот).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> чек-лист на слайде · карточки судей · таймер · рубрика</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут, проверяют друг друга, читают вслух. Ожидаемо: peer-check ловит большинство -ed после didn't до сцены</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Реванш gate + лидерборд</div><div class='sub'>Rematch + leaderboard</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> реванш past forms sprint (те же 12 глаголов) + очки</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Same twelve verbs. Beat your morning number — spelling counts!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> бьют счёт. Ожидаемо: 10–12 из 12</div></td><td class='mat'>слайд 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия + ДЗ + тизер P6</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…».</li><li>ДЗ: WB стр. 47, зад. 1–6 (past simple правильных и неправильных глаголов).</li><li>Тизер: <span class='en'>Next: the reaction test. You tell a story — and if nobody reacts for five seconds, you STOP talking. Silence is the enemy.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 47, зад. 1–6 (past simple правильных глаголов + таблица неправильных + рассказ по картинке).</p><p>🚀 Бонус (+3, задание из Teacher's Book): «The last time I went to a zoo or farm, …» — пять-шесть предложений, обязательно и утвердительных, и отрицательных.</p></td><td class='mat'>WB Unit 6 · очки в лидерборд</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, crews can <b>form and use the past simple of regular verbs</b> (affirmative with correct spelling, negative with didn't + infinitive), sort -ed endings into /d/ /t/ /ɪd/, and <b>write and deliver a five-entry chronicle</b> with past time expressions.</li>
+      <li><span class="lb">Subsidiary.</span> Правила ex.1 выводятся из примеров; орфография ex.2 по правилам p.81; ex.3 утв./отр. на скорость; ex.4 свои правдивые предложения; рамка Irregular verbs (went, saw, had, met); Grammar round-up ex.5; Pronunciation p.117 (треки 72–75).</li>
+      <li><span class="lb">Personal.</span> Грамматику не объявляю темой. Отдельно слежу за тем, что после didn't окончания НЕТ — приём TB: пишу на доске «She didn't visited» и зачёркиваю -ed мелом. Ошибки собираю в клинику следующей пары.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>spell the past simple of 8 regular verbs correctly</li><li>use didn't + infinitive without -ed</li><li>sort -ed endings into /d/, /t/ and /ɪd/</li><li>write five chronicle entries with past time expressions</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Sound station</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>finish</span><span class='w'>like</span><span class='w'>organise</span><span class='w'>play</span><span class='w'>study</span><span class='w'>travel</span><span class='w'>visit</span><span class='w'>watch</span><span class='w'>stop</span><span class='w'>receive</span><span class='w'>decide</span><span class='w'>need</span><span class='w'>listen</span><span class='w'>help</span><span class='w'>start</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>She started to sell the drink. · She visited the White House. · She didn't like bees. · She didn't stop there. · yesterday · last night, last Thursday, last weekend · in August, in 2017</div></div>
+      <div class="r"><div class="k">Form</div><div>утвердительная форма: глагол + -ed (ключ TB ex.1: -ed) · отрицательная форма: didn't + инфинитив БЕЗ -ed (ключ TB ex.1: didn't) · большинство глаголов + -ed: visit ➞ visited · на -e ➞ + -d: receive ➞ received · согласная + -y ➞ y + -ied: carry ➞ carried · согласная-гласная-согласная ➞ удвоение последней согласной + -ed: stop ➞ stopped, travel ➞ travelled · неправильные: go ➞ went · see ➞ saw · have ➞ had · meet ➞ met (рамка Irregular verbs, SB p.78)</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>SB p.117: три чтения -ed — /d/ (played, listened, received, travelled) · /t/ (watched, finished, helped, stopped) · /ɪd/ (visited, decided, needed, started). Ключ TB к ex.3: /ɪd/ идёт после букв t и d.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«She didn't visited the park» — что лишнее? → -ed: didn't VISIT (didn't уже показывает прошлое).</div><div class='ccq'>«He stoped» — сколько p? → stopped: согласная-гласная-согласная → удваиваем.</div><div class='ccq'>«I studyed» — исправь. → studied: согласная + y → -ied.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.78 + Pronunciation p.117, КТП пара 50. Present simple и правило «вспомогательный + голый глагол» знакомы из A1+; новизна — орфография -ed, три чтения окончания и скорость.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>didn't visited — самая частая ошибка юнита</td><td>Приём TB: на доске пишу «She didn't visited her grandparents» и мелом зачёркиваю -ed. Дальше — правило хроники: запись с -ed после didn't не принимается, автор чинит сам.</td></tr><tr><td>Орфография -ed (stoped, studyed, travelled)</td><td>Игра TB на команды: показываю карточку с инфинитивом, у команды одна попытка написать форму; ошиблись — ход и очко переходят следующей команде.</td></tr><tr><td>Все окончания читают как /ɪd/</td><td>Три физические корзины /d/ /t/ /ɪd/; правило открываем сами по ключу TB — /ɪd/ идёт только после t и d.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 6 “Animals in danger” (What can we do to help animals in danger?) · GIA2 — lesson plan &amp; staging</span>
+    <span>GIA2 · U6 «Animals in danger» · P5 · линия «наши» 🚀</span>
+  </div>
+</div>

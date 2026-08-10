@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 6 · Pair 3 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 6 “Animals in danger” · Pair 3 — Грамматика: Past simple глагола be (was/were, there was/were)</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «новые» 🌱 со стороны</b> · 90 min · опоры: модель → word bank → черновик → продукт с листом · командный счёт · стикеры 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 93–94 (KTP pair 48) · Апрель</span><span class='chip new'>🌱 новые · опоры и модель</span><span class='chip'>SB p.76</span><span class='chip'>командный счёт · самопроверка</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2new-u6-p3.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u6.html" target="_blank" rel="noopener">🎮 Игры юнита 6 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p3.html#3' target='_blank' rel='noopener' title='слайд 3'>0–8′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>вход + повтор P2: три факта о сайге или горилле по своим записям</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p3.html#4' target='_blank' rel='noopener' title='слайд 4'>8–10′</a></td><td class='gname'>Завязка миссии</td><td>тема пары названа прямо + продукт: табличка музейного экспоната</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p3.html#5' target='_blank' rel='noopener' title='слайд 5'>10–26′</a></td><td class='gname'>Открытие: was и were</td><td>таблица ex.1 достраивается вместе → плакат-подсказка → ex.2 письменно с проверкой</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p3.html#6' target='_blank' rel='noopener' title='слайд 6'>26–36′</a></td><td class='gname'>Правило: there was / there were</td><td>тренировка выбора there was / there were на карточках + Kagan RallyRobin</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p3.html#7' target='_blank' rel='noopener' title='слайд 7'>36–45′</a></td><td class='gname'>Мини-тест с самопроверкой</td><td>мини-тест 8 пунктов (was/were/wasn't/weren't/there was/there were) + самопроверка по ключу</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p3.html#8' target='_blank' rel='noopener' title='слайд 8'>45–47′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p3.html#9' target='_blank' rel='noopener' title='слайд 9'>47–60′</a></td><td class='gname'>Вопросы и краткие ответы</td><td>правило порядка слов ex.3 даю прямо → ex.4 сборка вопросов карточками → ex.5 матчинг → ex.6 текст</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p3.html#10' target='_blank' rel='noopener' title='слайд 10'>60–74′</a></td><td class='gname'>Продукт: табличка музейного экспоната</td><td>табличка из 4 строк об одном вымершем животном + два вопроса от зала</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p3.html#11' target='_blank' rel='noopener' title='слайд 11'>74–82′</a></td><td class='gname'>Счёт команды + рефлексия</td><td>командный счёт + «I can…» тапами + стикеры</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p3.html#12' target='_blank' rel='noopener' title='слайд 12'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>домашка с образцом + тизер P4</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 6 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Новичкам грамматику называем прямо: сегодня тема — прошедшее время глагола be. Ясность важнее интриги. Но упаковка всё равно есть: делаем таблички для музея вымерших животных — она даёт смысл каждому предложению и естественно требует и утверждений, и отрицаний, и вопросов. Порядок жёсткий: таблица → образец → письменная тренировка → мини-тест с самопроверкой → продукт с листом.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Today's topic is simple and very useful: the past of the verb 'be'.</b> Two words — WAS and WERE — and you can talk about everything that already happened. We'll build the tables together, practise in writing, check yourselves against the key, and at the end each crew writes a museum label for one animal that is gone: what it WAS, where it lived, how many there WERE. You'll have the table in front of you the whole time.”<div class='pitchru'>Суть по-русски, если нужно поддержать: тема прямо: прошедшее время глагола be. Два слова — was и were — и можно говорить обо всём, что уже было. Собираем таблицу, тренируемся письменно, проверяем себя по ключу, в конце пишем табличку для музея вымерших.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–8′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · вход + повтор</div><div class='zone'>circle → desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вход + повтор P2: три факта о сайге или горилле по своим записям</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Круг: <span class='en'>One fact about the saiga or the gorilla.</span> (по листу — можно)</li><li>Пишу на доске их же фразы: <span class='en'>There WERE more than a million saigas. · Hunting WAS a problem. · There WEREN'T any laws.</span></li><li>Мостик: <span class='en'>See these words? WAS. WERE. That's today's topic — and it's much easier than it looks.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> видят целевые формы в знакомом контексте</div></td><td class='mat'>слайды 3–4</td></tr><tr class='True'><td class='min'>8–10′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> тема пары названа прямо + продукт: табличка музейного экспоната</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Topic: the past of 'be'. Two words: was and were.</span></li><li><span class='en'>At the end: a museum label for one animal that is gone. Four lines, with the table in front of you.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии + пять карточек экспонатов (dodo · mammoth · Steller's sea cow · Tasmanian tiger · baiji dolphin) — запасной вариант: названия на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают, понимают продукт. Ожидаемо: «два слова» звучит выполнимо</div></td><td class='mat'>слайд 5</td></tr><tr><td class='min'>10–26′</td><td class='stage'><div class='nm'>Открытие: was и were</div><div class='sub'>Открытие · was и were</div><div class='zone'>crews · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> таблица ex.1 достраивается вместе → плакат-подсказка → ex.2 письменно с проверкой</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.1 p.76 вместе, по одному примеру. Ключ TB: 1 The Tasmanian tiger wasn't a tiger. · 2 Steller's sea cows were very big sea mammals. · 3 There was less forest for the gorilla. · 4 There were more than a million saigas.</li><li>Плакат-подсказка на стену: <span class='en'>I / he / she / it → WAS · you / we / they → WERE</span> и рядом <span class='en'>there WAS + one · there WERE + many</span>.</li><li>Таймлайн на доске (приём TB): линия «past — now», крестики = то, что уже случилось. <span class='en'>Everything on the left takes was or were.</span></li><li>ex.2 письменно, потом сверка по одному (ключ TB: 1 was, was · 2 weren't, were · 3 weren't, were · 4 wasn't, was, was).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.76 ex.1–2 · плакат-подсказка · две коробки «one / many» · мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> достраивают таблицу и пишут. Ожидаемо: смотрят на плакат — так и надо, он для этого</div></td><td class='mat'>слайд 6</td></tr><tr><td class='min'>26–36′</td><td class='stage'><div class='nm'>Правило: there was / there were</div><div class='sub'>Правило · there was / there were</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> тренировка выбора there was / there were на карточках + Kagan RallyRobin</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Показываю два предложения из статьи и спрашиваю: <span class='en'>Look AFTER 'there'. One forest — was. Many saigas — were.</span></li><li>Карточки на партах: <span class='en'>… a big campaign · … special exhibitions · … a saiga stamp · … any laws · … enough open space</span> — раскладываем по двум коробкам, потом произносим целым предложением.</li><li>Kagan <b>RallyRobin</b>: по очереди в паре по одному предложению про свой класс или свою комнату: <span class='en'>Yesterday there was … in my bag.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки · две коробки · плакат-подсказка</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выбирают форму по тому, что ПОСЛЕ there. Ожидаемо: коробки решают проблему за 5 минут</div></td><td class='mat'>слайд 7</td></tr><tr><td class='min'>36–45′</td><td class='stage'><div class='nm'>Мини-тест с самопроверкой</div><div class='sub'>Мини-тест с самопроверкой + счёт</div><div class='zone'>solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> мини-тест 8 пунктов (was/were/wasn't/weren't/there was/there were) + самопроверка по ключу</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Eight sentences, five minutes. You check yourselves — nobody sees your score.</span></li><li>Ключ на экране после сдачи времени; каждый обводит свои промахи.</li><li><span class='en'>Circle what you missed. That's your practice list — and it's short.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> листок мини-теста · слайд с ключом</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проверяют себя приватно. Ожидаемо: у большинства 6–8 из 8 — и это первый раз, когда они видят, что грамматика поддалась</div></td><td class='mat'>слайд 8</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>WAS — one hand up! WERE — two hands up!</span> (называю: the dodo… mammoths… there … a stamp … there … laws … you … we)</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> телом фиксируют выбор формы</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–60′</td><td class='stage'><div class='nm'>Вопросы и краткие ответы</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> правило порядка слов ex.3 даю прямо → ex.4 сборка вопросов карточками → ex.5 матчинг → ex.6 текст</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.3: показываю правило на примерах и проговариваем хором (ключ TB: 1 first · 2 after · 3 before). Формула карточками на парте: WAS/WERE — кто — остальное.</li><li>ex.4 гонкой с опорой (ключ TB: 1 How big was the rhino? · 2 Was it dangerous? · 3 What was the rhino's diet? · 4 How many rhinos were there in 2011? · 5 Were there rhinos in Cameroon?). Верные вопросы выписываю на доску (просьба TB).</li><li>ex.5 матчинг ответов (ключ TB: a 3 · b 4 · c 1 · d 5 · e 2) — потом читаем парами вопрос-ответ вслух.</li><li>ex.6 (Fun Facts Forum) первые пять пропусков вместе, остальные в парах. Ключ TB: 1 was · 2 was · 3 were · 4 wasn't · 5 Were · 6 were · 7 weren't · 8 was · 9 Was · 10 wasn't · 11 was.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.76 ex.3–6 · карточки-формула · доска</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> собирают вопросы физически. Ожидаемо: «Were there…?» даётся легче, чем ожидалось — коробки уже сработали</div></td><td class='mat'>слайд 9 · таймер</td></tr><tr class='True'><td class='min'>60–74′</td><td class='stage'><div class='nm'>Продукт: табличка музейного экспоната</div><div class='sub'>PRODUCT · табличка экспоната</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> табличка из 4 строк об одном вымершем животном + два вопроса от зала</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Рамка на экране: <span class='en'>The … was a … . It lived in … . In 19.. there were about … . There weren't any … .</span></li><li>Пишем 7 минут в крю; я хожу и проверяю первую строку у каждой команды.</li><li>Peer check в паре: <span class='en'>Was or were? Look at the subject.</span></li><li>Читаем таблички вслух с листом; зал задаёт по одному простому вопросу (<span class='en'>Was it big? Were there many?</span>), крю отвечает коротко.</li><li>Хвалю конкретно: <span class='en'>Perfect 'there were'! Nice short answer!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> листы-таблички · рамка на слайде · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут по рамке и отвечают короткими ответами. Ожидаемо: с листом и рамкой проходят все</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Счёт команды + рефлексия</div><div class='sub'>Team score + reflection</div><div class='zone'>board → solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> командный счёт + «I can…» тапами + стикеры</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Счёт: за таблицу, за мини-тест, за табличку, за чистые короткие ответы.</li><li>Слайд «I can…»: <span class='en'>Tap what is TRUE for you now.</span></li><li>Стикеры: 🟢 easy · 🟡 ok · 🔴 hard.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> лидерборд · слайд I can · стикеры</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> видят рост за пару. Ожидаемо: 🔴 у тех, кто путает there was/were — беру их в опоры P4</div></td><td class='mat'>слайд 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> домашка с образцом + тизер P4</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ДЗ: WB стр. 45, зад. 1–4 (таблица + факты + рассказы) — база; зад. 5–6 по желанию.</li><li>Показываю образец заполненной таблицы зад. 1 на слайде.</li><li>Тизер: <span class='en'>Next lesson: a girl of thirteen who sells lemonade all over America — and gives a fifth of the money to bees. And eight verbs you can use tomorrow.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ с образцом</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 45, зад. 1–4 (was/were, there was/were) — база; зад. 5–6 (свои вопросы и ответы) по желанию.</p><p>🌱 По желанию: перепиши свою табличку экспоната начисто — повесим на стену юнита.</p></td><td class='mat'>WB Unit 6 · плакат-подсказка остаётся на стене</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>use was/wasn't, were/weren't and there was/were</b> in affirmative, negative and question forms, and <b>write a 4-line museum label</b> about an extinct animal.</li>
+      <li><span class="lb">Subsidiary.</span> Таблицы ex.1 достраиваются вместе; ex.2 письменно; правило порядка слов ex.3 даю прямо и показываю на примерах; ex.4 сборка вопросов с опорой; ex.5 матчинг; ex.6 текст Fun Facts Forum; Brain teaser ex.7 по желанию.</li>
+      <li><span class="lb">Personal.</span> Грамматику называю темой — новичкам нужна ясность. Таблица висит на экране весь урок. Мини-тест с самопроверкой в середине, чтобы ошибку нашли приватно и до продукта.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>choose was or were by the subject</li><li>make negatives with wasn't and weren't</li><li>use there was with one thing and there were with many</li><li>ask Was …? / Were there …? and answer Yes, it was. / No, there weren't.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Topic</span><span>Table</span><span>Practice</span><span>Mini-test</span><span>Questions</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>parrot</span><span class='w'>peacock</span><span class='w'>penguin</span><span class='w'>shark</span><span class='w'>dolphin</span><span class='w'>goat</span><span class='w'>rhinoceros</span><span class='w'>ant</span><span class='w'>bee</span><span class='w'>crocodile</span><span class='w'>snake</span><span class='w'>turtle</span><span class='w'>campaign</span><span class='w'>population</span><span class='w'>hunting</span><span class='w'>laws</span><span class='w'>habitat</span><span class='w'>deserts</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Hunting was a serious problem. · The Tasmanian tiger wasn't a tiger. · Steller's sea cows were very big sea mammals. · There was less forest for the gorilla. · There were more than a million saigas. · There weren't any laws. · Were they dangerous? — No, they weren't. · Was the dodo a bird? — Yes, it was. · Were there any baiji dolphins in Australia? — No, there weren't. · What was the problem? · Why was there a big campaign? · How many saigas were there in 1990?</div></div>
+      <div class="r"><div class="k">Form</div><div>в Yes/No вопросе глагол идёт ПЕРВЫМ: Was the dodo a bird? (ключ TB ex.3: first) · в Wh-вопросе глагол идёт ПОСЛЕ вопросительного слова: What was the problem? (ключ TB: after) · в вопросах с there was/were глагол идёт ПЕРЕД there: Were there rhinos in Cameroon? (ключ TB: before) · there was + единственное/неисчисляемое · there were + множественное</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>was в предложении звучит коротко /wəz/, а в ответе — полно /wɒz/: <i>It was a bird</i> — <i>Yes, it WAS</i>; weren't произносим одним куском /wɜː(r)nt/, без «ве-рент»</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«There were a big campaign» — что не так? → campaign одно: There WAS a big campaign.</div><div class='ccq'>«Was they dangerous?» — исправь. → Were they dangerous? — they всегда с were.</div><div class='ccq'>«There was any laws?» — а тут? → Were there any laws? — в вопросе глагол ПЕРЕД there.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.76, КТП пара 48 (обе половины — грамматика). Present simple be знают; новизна — вторая форма и there was/were.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Путают was и were</td><td>Плакат-подсказка на стене: I/he/she/it → was · you/we/they → were. Перед каждым заданием проверяем подлежащее пальцем (приём TB).</td></tr><tr><td>There was/were — выбор по тому, что ПОСЛЕ</td><td>Две коробки на партах: «one» и «many». Карточку кладёшь в коробку, потом говоришь предложение.</td></tr><tr><td>Вопрос строят как утверждение</td><td>Даю формулу карточками: WAS / WERE — кто/что — остальное. Физически переставляем карточки на парте.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 6 “Animals in danger” (What can we do to help animals in danger?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U6 «Animals in danger» · P3 · линия «новые» 🌱</span>
+  </div>
+</div>

@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2 · Unit 5 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 5 “Must try!” · Pair 2 — Mission «Eat Like a Local»: five dishes, one goes into our town</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «наши» 🚀 после A1+</b> · 90 min · mission-based: gate → base sprint → challenge → bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Lessons 75–76 (KTP pair 39) · Март</span><span class='chip new'>🚀 наши · после A1+</span><span class='chip'>SB pp.62–63</span><span class='chip'>unit leaderboard · gold runs</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2-u5-p2.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u5.html" target="_blank" rel="noopener">🎮 Игры юнита 5 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p2.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>блиц-повтор P1: пищевые группы за 5 сек + Quiz-Quiz-Trade карточками еды</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p2.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: продовольственная разведка → вердикт крю «какое блюдо открываем у нас»</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p2.html#5' target='_blank' rel='noopener' title='слайд 5'>8–14′</a></td><td class='gname'>Входной тест (gate): пять описаний еды</td><td>трек 30: пять описаний еды — что это? Пишем письменно, спеллинг считается</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p2.html#6' target='_blank' rel='noopener' title='слайд 6'>14–28′</a></td><td class='gname'>Спринт: сканируем путеводитель</td><td>ex.3 флаги и страны (3 мин) → ex.4 быстрое чтение, назвать блюда на фото → ex.5 таблица досье по ключевым словам</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p2.html#7' target='_blank' rel='noopener' title='слайд 7'>28–40′</a></td><td class='gname'>Челлендж: досье на пять блюд</td><td>ex.6 (трек 31): пять ложных утверждений — исправить и подтвердить строкой, 8 сек на ход</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p2.html#8' target='_blank' rel='noopener' title='слайд 8'>40–46′</a></td><td class='gname'>Word raid · шесть слов</td><td>Word work ex.7–8 на скорость + ex.9 переделать предложения под себя</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p2.html#9' target='_blank' rel='noopener' title='слайд 9'>46–48′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p2.html#10' target='_blank' rel='noopener' title='слайд 10'>48–58′</a></td><td class='gname'>Бонус-уровень: этого нет в учебнике</td><td>уровень для наших: Culture notes из TB как разведданные + ex.10 про уличную еду</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p2.html#11' target='_blank' rel='noopener' title='слайд 11'>58–74′</a></td><td class='gname'>Продукт: вердикт разведчика</td><td>вердикт 60 сек: какое блюдо открываем у нас + два факта из текста + один аргумент из Critical thinking</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p2.html#12' target='_blank' rel='noopener' title='слайд 12'>74–82′</a></td><td class='gname'>Реванш gate + лидерборд</td><td>реванш gate (пять описаний заново + два новых от меня) + очки в лидерборд</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p2.html#13' target='_blank' rel='noopener' title='слайд 13'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>рефлексия + ДЗ + тизер P3</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 5 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Путеводитель читается не «потому что задали», а как досье продовольственного разведчика: крю выбирает ОДНО блюдо, которое стоит открыть в нашем городе, и обязано подтверждать каждое утверждение строкой. Subskill юнита (identifying key words) вшит в правило: сначала подчёркиваем ключевые слова в задании и думаем, какие слова искать, потом сканируем — иначе ответ не засчитан. Critical thinking из учебника («зачем вообще пробовать чужую еду») становится финалом миссии, а не довеском.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“New file: five dishes, five countries.</b> Chips with cheese and meat sauce in Canada. A cake with no chocolate in Portugal. Street chicken in Jamaica. Purple ice cream in the Philippines. Noodles the government invented in Thailand. Your crew is a food scout: read the guidebook, fill the dossier — dish, country, ingredients — and choose ONE dish to open in our town. Sixty seconds to defend it. Every claim needs a LINE from the text. No line, no point.”<div class='pitchru'>Суть по-русски, если нужно поддержать: досье на пять блюд из пяти стран: читаем путеводитель, заполняем таблицу «блюдо — страна — ингредиенты» и выбираем одно блюдо, которое стоит открыть в нашем городе. Каждое утверждение подтверждается строкой из текста.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> блиц-повтор P1: пищевые группы за 5 сек + Quiz-Quiz-Trade карточками еды</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Scout check: I say the group — you say TWO foods. Dairy? Carbs? Desserts?</span></li><li>Kagan <b>Quiz-Quiz-Trade</b> с карточками еды: вопрос → ответ → обмен карточками.</li><li>Мостик: <span class='en'>Yesterday we filmed our own dishes. Today: five dishes the world says you MUST try. One of them is purple.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки еды · слайд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> отвечают на скорость, меняются карточками. Ожидаемо: лексика P1 в тонусе</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: продовольственная разведка → вердикт крю «какое блюдо открываем у нас»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Five dishes. Five countries. Your crew opens ONE of them in our town.</span></li><li><span class='en'>Every claim needs PROOF — a line from the text. No line, no point.</span></li><li><span class='ig'>🏆 <b>Планка продукта (рубрика судей):</b> Fluency — паузы ≤3 сек (1–3) · Accuracy — форма чистая, без «there is three» и «how much museums» (1–3) · Richness — детали, цифры, прилагательные (1–3). 9/9 = gold run, +5.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии с пятью флагами (запасной вариант — рисую флаги на доске)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> принимают правила разведки. Ожидаемо: сразу спорят про страны — угадывание идёт в ex.3</div></td><td class='mat'>слайд 4</td></tr><tr class='True'><td class='min'>8–14′</td><td class='stage'><div class='nm'>Входной тест (gate): пять описаний еды</div><div class='sub'>🎯 GATE · sound round</div><div class='zone'>crews · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> трек 30: пять описаний еды — что это? Пишем письменно, спеллинг считается</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Five descriptions, five foods. Write them — no shouting. Spelling counts.</span></li><li>Второй прогон без остановок для проверки; ключ TB: 1 ice cream · 2 chips · 3 pasta · 4 herbs and spices · 5 peas.</li><li>Счёт приватно: <span class='en'>Keep the number. Rematch at the end.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> аудио трек 30 · мини-доски (запасной вариант — читаю описания сам с TB стр. 134)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают и пишут командой. Ожидаемо: 4–5 из 5; п.4 (herbs and spices) ловит половину</div></td><td class='mat'>слайд 5 · audio</td></tr><tr><td class='min'>14–28′</td><td class='stage'><div class='nm'>Спринт: сканируем путеводитель</div><div class='sub'>⚡ Base sprint · scan the guidebook</div><div class='zone'>solo → pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.3 флаги и страны (3 мин) → ex.4 быстрое чтение, назвать блюда на фото → ex.5 таблица досье по ключевым словам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.3 быстро: <span class='en'>Five flags. Which country? Any food you know from there?</span> (ключ TB: A Canada · B Portugal · C Jamaica · D Philippines · E Thailand).</li><li>ПРАВИЛО ДНЯ: <span class='en'>Underline the key words in the question FIRST. Then decide what kind of word you're looking for. THEN scan.</span></li><li>ex.4 на скорость (ключ TB: A jerk chicken · B poutine · C halo-halo · D pad Thai · E pastel de nata) — и сразу вопрос: <span class='en'>Which words helped you?</span></li><li>ex.5 гонкой, таблица досье. Ключ TB: 1 Canada · 2 chips, cheese, meat sauce · 3 pastel de nata · 4 eggs, butter · 5 jerk chicken · 6 Jamaica · 7 Philippines · 8 fruit, milk, ice cream · 9 Thailand.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.62–63 · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> подчёркивают ключевые слова, сканируют. Ожидаемо: таблица закрывается быстро — текст щедрый на ингредиенты</div></td><td class='mat'>слайд 6 · таймер</td></tr><tr><td class='min'>28–40′</td><td class='stage'><div class='nm'>Челлендж: досье на пять блюд</div><div class='sub'>🔥 Challenge · dish dossier</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.6 (трек 31): пять ложных утверждений — исправить и подтвердить строкой, 8 сек на ход</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Five statements. All five are WRONG. Fix them — and show me the line.</span></li><li>Ключ TB ex.6: 1 это зимнее блюдо · 2 в pastel de nata НЕТ шоколада (пирожное из яиц и масла) · 3 jerk chicken едят с рисом и горошком, не с чипсами · 4 halo-halo ЛУЧШЕ мороженого («there is something better») · 5 beef и chicken — добавка по желанию, а не обязательные ингредиенты.</li><li>Совет TB вслух: <span class='en'>Look at HOW the text says it — 'there isn't any chocolate', 'there aren't any chips'. The little words carry the answer.</span></li><li>Ограничитель: <span class='en'>Eight seconds per fix. No line on the page — the point burns.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.62–63 ex.6 · аудио трек 31 (запасной вариант — читаю текст гида вслух сам, дети следят пальцем по строке) · таймер 8 сек</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> чинят утверждения со строкой в руках. Ожидаемо: п.4 и п.5 сложнее всего — там смысл, а не факт; разбираем вслух</div></td><td class='mat'>слайд 7 · таймер</td></tr><tr><td class='min'>40–46′</td><td class='stage'><div class='nm'>Word raid · шесть слов</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Word work ex.7–8 на скорость + ex.9 переделать предложения под себя</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Приём TB: слова в столбик на доске, книги закрыты — <span class='en'>Define them or use them in a sentence. Then check.</span></li><li>ex.7 ключ TB: 1 delicious · 2 mix · 3 smell · 4 takeaway · 5 add · 6 food stalls.</li><li>ex.8 ключ TB: 1 delicious · 2 takeaway · 3 smell · 4 mix · 5 add · 6 food stalls.</li><li>ex.9: <span class='en'>Change the underlined words so the sentences are TRUE for you. Compare with your partner.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.62 ex.7–9 · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> берут слова через собственные примеры. Ожидаемо: smell путают с taste — CCQ «носом или языком?»</div></td><td class='mat'>слайд 8</td></tr><tr><td class='min'>46–48′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Close your eyes. I say a food — thumbs up if you'd try it, thumbs down if never. Purple ice cream! Chips with cheese sauce! Chicken with peas!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> двигаются и смеются — и незаметно повторяют лексику</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>48–58′</td><td class='stage'><div class='nm'>Бонус-уровень: этого нет в учебнике</div><div class='sub'>🚀 Bonus level · not in the book</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> уровень для наших: Culture notes из TB как разведданные + ex.10 про уличную еду</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Даю крю карточки с Culture notes (TB стр. 73): poutine придумали в 1957-м в Квебеке, когда посетитель попросил положить сырные хлопья на чипсы · halo-halo = «микс-микс», фиолетовое мороженое из батата убе · рецепт pastel de nata монах продал пекарне в Лиссабоне в 1834-м, он до сих пор секрет · pad Thai придумало правительство Таиланда, чтобы беречь рис после войны.</li><li><span class='en'>One fact per crew, twenty seconds: tell the others. This is your ammunition.</span></li><li>ex.10 быстро: <span class='en'>What can you buy at food stalls in OUR town? Do you ever eat in the street?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки Culture notes (весь текст в TB стр. 73 — печатаю или читаю)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> получают то, чего нет в учебнике. Ожидаемо: история про pad Thai заходит лучше всего</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>58–74′</td><td class='stage'><div class='nm'>Продукт: вердикт разведчика</div><div class='sub'>PRODUCT · the scout verdict</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вердикт 60 сек: какое блюдо открываем у нас + два факта из текста + один аргумент из Critical thinking</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Подготовка 6 мин: <span class='en'>Which dish opens in our town? Why? Two facts from the text — ingredients and the occasion. Then one reason from Critical thinking four.</span></li><li>Critical thinking 4 — банк аргументов (примерный ответ TB): разнообразное питание полезнее · открываешь новые вкусы · лучше понимаешь другие культуры · от одной и той же еды скучно.</li><li><span class='en'>Sixty seconds per crew. Judges: fluency, accuracy, richness.</span></li><li>Вызов зала: <span class='en'>Winter in Norilsk lasts eight months. Does that change your choice?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер 60 сек · карточки судей · рубрика</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> защищают выбор с доказательствами. Ожидаемо: poutine выигрывает по климату — и это отличный аргумент</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Реванш gate + лидерборд</div><div class='sub'>Rematch + leaderboard</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> реванш gate (пять описаний заново + два новых от меня) + очки в лидерборд</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Rematch: same five, plus two I invent. Beat your morning number!</span></li><li>Мои два: <span class='en'>You make this from milk and it's white and cold. · This is small, green and grows in a pod.</span></li><li>Очки командам: досье + исправления со строкой + вердикт.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут реванш. Ожидаемо: почти все закрывают 7/7</div></td><td class='mat'>слайд 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия + ДЗ + тизер P3</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…» тапами.</li><li>ДЗ: WB стр. 40 (Reading: блог про Мельбурн, зад. 1–5) — база; 🚀 бонус: Research из учебника — выбери страну и найди её типичное блюдо (5 строк по-английски).</li><li>Тизер: <span class='en'>Next: someone opens a lunchbox and we count what's inside. Careful — half of it doesn't count at all.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 40, зад. 1–5 (блог про Мельбурн, тот же subskill identifying key words) — база для всех.</p><p>🚀 Бонус (+3): задание Research из SB p.62 — выбери страну, найди типичное блюдо, 5 строк по-английски (блюдо · страна · ингредиенты · когда едят · почему стоит попробовать).</p></td><td class='mat'>WB Unit 5 · досье остаётся в тетради — пригодится на P7</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, crews can <b>find specific information in a guidebook by key words</b> (underline → decide what to look for → scan), use 6 new words in context, and <b>deliver a 60-second verdict</b> on which dish their town needs.</li>
+      <li><span class="lb">Subsidiary.</span> ex.1 трек 30 (пять описаний еды); ex.3 флаги и страны; ex.5 таблица досье; ex.6 исправление пяти утверждений (там прячутся there isn't/aren't any); Word work (delicious · mix · smell · takeaway · add · food stalls); Critical thinking 1–4.</li>
+      <li><span class="lb">Personal.</span> Скорость чтения у сильных глушит слабых — держу правило «ответ засчитан только со строкой-доказательством». Ошибки there is/are коплю молча на P3.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>underline key words in a question before reading</li><li>scan a guidebook and quote the line that proves an answer</li><li>use six new words (delicious, mix, smell, takeaway, add, food stalls)</li><li>give a 60-second verdict with two pieces of evidence</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Word raid</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>delicious</span><span class='w'>mix</span><span class='w'>smell</span><span class='w'>takeaway</span><span class='w'>add</span><span class='w'>food stalls</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>There is some great local food you must try. · There isn't a better snack! · There aren't any chips with this takeaway. · It's a delicious mix of fruit and milk. · The text says… — that's why the answer is 'winter'.</div></div>
+      <div class="r"><div class="k">Form</div><div>цитирование: The text says + строка; ответ на «где именно» — буква фото (A–E) или первое слово строки.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>по Wordlist: delicious /dɪˈlɪʃəs/ · takeaway /ˈteɪkəˌweɪ/ · food stalls /ˈfuːd ˌstɔːlz/ · smell /smel/ · mix /mɪks/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«Я думаю, poutine — это летнее блюдо» — засчитано? → нет: только со строкой из текста («cold and hungry in winter»).</div><div class='ccq'>takeaway — это ресторан? → нет: еда, которую покупаешь и уносишь есть в другое место.</div><div class='ccq'>Зачем подчёркивать слова в задании ДО чтения? → чтобы решить, ЧТО искать, и сканировать, а не читать всё подряд.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.62–63, КТП пара 39. Читают уверенно, но «ключевые слова сначала» — новая дисциплина. Все 6 слов Word work есть в официальном Wordlist.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Читают по диагонали и спорят «я прав»</td><td>Правило evidence line: спор решает только строка из текста, палец на строке.</td></tr><tr><td>Ключевые слова подчёркивают формально, а ищут всё подряд</td><td>Первые два задания разбираю вслух по схеме TB: «какое слово тут главное — и какое слово могло бы стоять в тексте вместо него?»</td></tr><tr><td>Вердикт превращается в «вкусно / невкусно»</td><td>Рубрика вердикта: 2 факта из текста (ингредиенты + повод) + 1 аргумент из Critical thinking 4.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 5 “Must try!” (What makes a town a good place to live in?) · GIA2 — lesson plan &amp; staging</span>
+    <span>GIA2 · U5 «Must try!» · P2 · линия «наши» 🚀</span>
+  </div>
+</div>

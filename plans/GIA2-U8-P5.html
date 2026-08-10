@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2 · Unit 8 · Pair 5 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 8 “Summer fun” · Pair 5 — Mission «Locked Week»: план — это ещё не договорённость</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «наши» 🚀 после A1+</b> · 90 min · mission-based: gate → base sprint → challenge → bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Lessons 129–130 (KTP pair 66) · Май</span><span class='chip new'>🚀 наши · после A1+</span><span class='chip'>SB p.102</span><span class='chip'>unit leaderboard · gold runs</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2-u8-p5.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u8.html" target="_blank" rel="noopener">🎮 Игры юнита 8 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p5.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>блиц-повтор P4: мотор глагола за 3 секунды + сдача бонус-диалогов с угадыванием чувства</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p5.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: запереть неделю — семь строк, три разных будущих</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p5.html#5' target='_blank' rel='noopener' title='слайд 5'>8–14′</a></td><td class='gname'>Входной тест (gate): план или договорённость</td><td>десять предложений на слух: THINK, DECIDED или AGREED? Пишем одним словом</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p5.html#6' target='_blank' rel='noopener' title='слайд 6'>14–28′</a></td><td class='gname'>Спринт: доска планов</td><td>ex.1 вывести правило going to → ex.2 пять предложений → ex.4 таблица вопросов → ex.5–6 интервью о лете</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p5.html#7' target='_blank' rel='noopener' title='слайд 7'>28–40′</a></td><td class='gname'>Челлендж: запереть неделю Марко</td><td>ex.7 правило present continuous → ex.8 календарь Марко на скорость + дуэль «запри мою субботу», 8 сек на ход</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p5.html#8' target='_blank' rel='noopener' title='слайд 8'>40–46′</a></td><td class='gname'>Разбор-микс: geocaching (Grammar round-up)</td><td>ex.9: десять выборов, где всё будущее встречается со всем прошлым года</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p5.html#9' target='_blank' rel='noopener' title='слайд 9'>46–48′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p5.html#10' target='_blank' rel='noopener' title='слайд 10'>48–58′</a></td><td class='gname'>Бонус-уровень: этого нет в учебнике</td><td>уровень для наших: going to как ПРОГНОЗ с доказательством + «gonna» на слух</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p5.html#11' target='_blank' rel='noopener' title='слайд 11'>58–74′</a></td><td class='gname'>Продукт: моя запертая неделя</td><td>семь строк недели: минимум два will, два going to, три present continuous — и защита выбора формы</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p5.html#12' target='_blank' rel='noopener' title='слайд 12'>74–82′</a></td><td class='gname'>Реванш gate + лидерборд</td><td>реванш gate (десять новых предложений THINK/DECIDED/AGREED) + очки в лидерборд</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p5.html#13' target='_blank' rel='noopener' title='слайд 13'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>рефлексия + ДЗ + тизер P6</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 8 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Здесь три способа говорить о будущем впервые встречаются в одной комнате — и различаются не правилом, а последствиями: will = я так думаю, going to = я решил, present continuous = мы договорились, и подвести уже нельзя. Материал для этого дал P4: в звонках Сэма и Нины обе формы стоят рядом. Grammar round-up про geocaching работает как финальный микс всего года — и это ровно то, что понадобится в Unit 9.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Three futures, and they are not the same.</b> ‘I think I'll go to the beach’ — you think. ‘I'm going to go to the beach’ — you decided. ‘I'm going to the beach on Saturday at nine with Dasha’ — you agreed, and now somebody is waiting for you. Sam said ‘we're meeting at the bus station at eight’ — that's locked. Nina said ‘I'm going to buy tickets tomorrow’ — that's a plan she can still drop. Today your crew locks a week: seven lines where every future is the RIGHT one. <b>Wrong future, someone gets stood up.”</b><div class='pitchru'>Суть по-русски, если нужно поддержать: три будущих — и они разные. will = я так думаю. going to = я решил. present continuous = мы договорились, есть время, место и второй человек. Крю запирает неделю: семь строк, в каждой правильное будущее. Ошибся формой — кого-то оставил ждать.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> блиц-повтор P4: мотор глагола за 3 секунды + сдача бонус-диалогов с угадыванием чувства</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Three seconds each: a bike ride? a day trip? a concert? a pizza? a bus tour? Which verb?</span></li><li>Бонус-диалоги с ДЗ: два-три читаются вслух, класс угадывает чувство.</li><li>Мостик: <span class='en'>Yesterday you heard Sam and Nina talk about the future. They used two different forms in one call. Today you find out why — and why swapping them gets you stood up.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд повтора · бонус-диалоги детей</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> отвечают на скорость, слушают диалоги. Ожидаемо: моторы держатся после трёх колонок</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: запереть неделю — семь строк, три разных будущих</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Три ящика на доску: <span class='en'>THINK (will) · DECIDED (going to) · AGREED (present continuous).</span></li><li><span class='en'>Your crew locks a week. Seven lines. Every future must be the right one — and all three must appear.</span></li><li><span class='ig'>🏆 <b>Планка продукта (рубрика судей):</b> Fluency — паузы ≤3 сек (1–3) · Accuracy — форма чистая, без «will to go» и «we meeting at 8» (1–3) · Richness — детали, время, места, цифры (1–3). 9/9 = gold run, +5.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд с тремя ящиками (запасной вариант — три коробки/области на доске, карточки предложений раскладываем руками)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> принимают сортировку. Ожидаемо: сразу спорят про пример «I'm going to the cinema tomorrow» — какой это ящик; спор полезный</div></td><td class='mat'>слайд 4</td></tr><tr class='True'><td class='min'>8–14′</td><td class='stage'><div class='nm'>Входной тест (gate): план или договорённость</div><div class='sub'>🎯 GATE · plan or arrangement</div><div class='zone'>crews · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> десять предложений на слух: THINK, DECIDED или AGREED? Пишем одним словом</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ten sentences. One word each: THINK, DECIDED or AGREED. Boards up together — no shouting.</span></li><li>Мои десять (вперемешку): <span class='en'>I think it'll rain. · We're meeting at the cinema at seven. · I'm going to learn guitar this summer. · She'll be a doctor one day. · They're flying to Sochi on Friday. · I'm going to tidy my room. · It won't be expensive. · We're having a barbecue on Saturday at my place. · He's going to look for a job. · Nobody will remember this in ten years.</span></li><li>Счёт приватно: <span class='en'>Keep the number. Rematch at the end.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки предложений · мини-доски (запасной вариант — читаю десять предложений вслух по два раза, дети пишут одно слово)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> сортируют на слух до всякой грамматики. Ожидаемо: 6–8 из 10; путают DECIDED и AGREED — ровно та разница, ради которой пара</div></td><td class='mat'>слайд 5 · таймер</td></tr><tr><td class='min'>14–28′</td><td class='stage'><div class='nm'>Спринт: доска планов</div><div class='sub'>⚡ Base sprint · the plan board</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1 вывести правило going to → ex.2 пять предложений → ex.4 таблица вопросов → ex.5–6 интервью о лете</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.1: <span class='en'>Look at the examples and finish the rule yourself: subject + … (not) + going to + … .</span> (ключ TB: be, verb (infinitive)).</li><li>ex.2 гонкой (ключ TB: 1 'm going to study · 2 isn't going to work · 3 are going to go · 4 's going to come · 5 'm not going to watch). Подсказка TB для слабых: сначала определить форму be, потом писать.</li><li>ex.3 сразу за ним — переделать под себя (примерные ответы TB: 2 My mum's going to work on Saturday. · 5 I'm going to watch TV.).</li><li>ex.4 таблица вопросов (ключ TB: 1 Is · 2 isn't · 3 Are · 4 aren't). Заметка TB: отрицательный короткий ответ сжимается двумя способами — No, she's not / No, she isn't.</li><li>ex.5 сборка вопросов (ключ TB: 1 Are you going to go on holiday this summer? · 2 Where are you going to go? · 3 Where are you going to stay? · 4 Are you going to go on any day trips?) → ex.6 интервью в парах, Kagan <b>Timed Pair Share</b>.</li><li>Доп. вопросы TB для тех, кто закончил: <span class='en'>What are you going to see there? What are you going to eat?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.102 ex.1–6 · мини-доски · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выводят правило сами, потом гоняют форму. Ожидаемо: «going to go» кажется ошибкой — CCQ «можно два go подряд?»</div></td><td class='mat'>слайд 6 · таймер</td></tr><tr><td class='min'>28–40′</td><td class='stage'><div class='nm'>Челлендж: запереть неделю Марко</div><div class='sub'>🔥 Challenge · lock the week</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.7 правило present continuous → ex.8 календарь Марко на скорость + дуэль «запри мою субботу», 8 сек на ход</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.7: <span class='en'>Possible or definite? Read the three examples and choose.</span> (ключ TB: definite). Разбор: <span class='en'>Time, place, another person — that's what makes it definite.</span></li><li>Орфография -ing заранее на доску (просьба TB): have → having · get → getting · travel → travelling.</li><li>ex.8 гонкой по календарю Марко (ключ TB: On Tuesday, he's having a guitar lesson at half past five. · On Wednesday, he's getting a bus to the water park at eight o'clock. · On Thursday, he's going to the cinema with Izan at seven o'clock. · On Friday, he's staying with Adrian. · On Saturday, he's travelling to the mountains.)</li><li>Дуэль крю: <span class='en'>I give you a day and a time — you lock it in one sentence. Eight seconds. 'Saturday, three o'clock, the skate park, with Kirill.' GO.</span> Ограничитель: нет времени или второго человека — не заперто, ход сгорает.</li><li>Extra activity TB: <span class='en'>Open your school timetable. What are you doing on Monday afternoon? — I'm studying French.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.102 ex.7–8 · таймер 8 сек · школьное расписание</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> запирают дни на скорость. Ожидаемо: без второго человека и времени предложение звучит «не запертым» — дети это слышат сами</div></td><td class='mat'>слайд 7 · таймер</td></tr><tr><td class='min'>40–46′</td><td class='stage'><div class='nm'>Разбор-микс: geocaching (Grammar round-up)</div><div class='sub'>Grammar round-up · geocaching</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.9: десять выборов, где всё будущее встречается со всем прошлым года</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Контекст сначала: <span class='en'>Geocaching. You go to a website, it gives you the GPS location of a box. You find it, take one thing, leave another. That's the whole game.</span></li><li>ex.9 гонкой (ключ TB: 1 discovered · 2 ago · 3 gives · 4 are · 5 must · 6 was · 7 took · 8 'm going to · 9 better · 10 will love).</li><li>Два вопроса TB, которые решают всё: <span class='en'>Why 'going to' in number 8?</span> (это план) · <span class='en'>Why 'will' in number 10?</span> (это прогноз).</li><li>Research из учебника коротко: <span class='en'>Where can you go geocaching in our country? Would you try it?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.102 ex.9 (запасной вариант — печатаю текст round-up на листах, десять выборов обвести карандашом)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> видят весь год в одном тексте. Ожидаемо: п.8 и п.10 рядом — лучшая иллюстрация разницы, лучше любого правила</div></td><td class='mat'>слайд 8 · таймер</td></tr><tr><td class='min'>46–48′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Stand up. I say a sentence — jump if it's AGREED, sit if it's just a PLAN. 'We're meeting at six.' 'I'm going to call her.' 'I'm flying on Tuesday.'</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> прыгают и садятся, различают телом</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>48–58′</td><td class='stage'><div class='nm'>Бонус-уровень: этого нет в учебнике</div><div class='sub'>🚀 Bonus level · not in the book</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> уровень для наших: going to как ПРОГНОЗ с доказательством + «gonna» на слух</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Here's what the book doesn't tell you. Going to can predict too — but only when you can SEE the evidence.</span></li><li>Пример из заметки TB: <span class='en'>Look at that cloud! It's going to rain tonight. · He's running with a knife — he's going to fall.</span> Сравниваем: <span class='en'>'I think it will rain' — I just think. 'It's going to rain' — look at the sky.</span></li><li>Дуэль доказательств: <span class='en'>I describe a scene, you predict with going to AND name the evidence. 'The bus is full and the driver is closing the doors.'</span></li><li>Слуховой апгрейд (ABCD-заметка TB): <span class='en'>In real speech, 'going to' becomes 'gonna' and the stress lands on the SECOND verb: I'm gonna BUY tickets.</span> Дрилл на пяти предложениях.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд с двумя прогнозами (will vs going to + evidence) (запасной вариант — рисую тучу на доске и подписываю два варианта)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> получают то, чего нет в учебнике. Ожидаемо: приём с доказательством сильные берут сразу и начинают ловить друг друга</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>58–74′</td><td class='stage'><div class='nm'>Продукт: моя запертая неделя</div><div class='sub'>PRODUCT · my locked week</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> семь строк недели: минимум два will, два going to, три present continuous — и защита выбора формы</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Подготовка 7 мин: <span class='en'>Seven lines about your next week. At least two predictions, two plans, three locked arrangements. Every locked line needs a TIME and a PERSON.</span></li><li>Правило сдачи: <span class='en'>Before you speak, put each line in a box: THINK, DECIDED or AGREED. If you can't, the line isn't ready.</span></li><li><span class='en'>Sixty seconds per crew. Judges: fluency, accuracy, richness.</span></li><li>Перекрёстный огонь: <span class='en'>You said 'I'm going to the cinema on Friday'. Plan or arrangement? Who with? What time?</span></li><li>Отдельная номинация: <span class='en'>the cleanest three-way week.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер 60 сек · карточки судей · рубрика · три ящика на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выступают и объясняют выбор формы. Ожидаемо: защита формы работает лучше любого упражнения — дети начинают слышать разницу</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Реванш gate + лидерборд</div><div class='sub'>Rematch + leaderboard</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> реванш gate (десять новых предложений THINK/DECIDED/AGREED) + очки в лидерборд</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ten new sentences. Same three words. Show me the jump.</span></li><li>Сравнение приватно: <span class='en'>Hands up if you got nine or ten.</span></li><li>Мини-клиника: -ing дня — having · getting · travelling.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки предложений · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> видят рост. Ожидаемо: DECIDED/AGREED теперь различают почти все</div></td><td class='mat'>слайд 12 · таймер</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия + ДЗ + тизер P6</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…»: <span class='en'>Which line is TRUE for you now?</span></li><li>ДЗ: WB стр. 63, зад. 1–5 (going to: формы be, картинки, вопросы и короткие ответы, диалог со школьной поездкой в Watford, календарь Лиззи в Гонконге в present continuous) — база; 🚀 бонус: задание TB Homework — расписать свою следующую неделю с точным временем и написать три утвердительных и три отрицательных предложения о планах.</li><li>Тизер: <span class='en'>Next lesson, the hardest thing in this language: saying NO to a friend without losing them. Sam does it three times in ninety seconds — and Maria still meets him at half past two.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают ДЗ. Ожидаемо: тизер про «отказать и не поссориться» цепляет подростков</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 63, зад. 1–5: формы be с going to (6), картинки → предложения (4), вопросы + короткие ответы (4), диалог о школьной поездке в Watford (11 пропусков), календарь Лиззи в Гонконге → present continuous (7).</p><p>🚀 Бонус (+3): расписать свою следующую неделю с временем и написать 3 утвердительных и 3 отрицательных предложения о планах (задание TB Homework к Grammar).</p></td><td class='mat'>WB Unit 8 · три ящика THINK/DECIDED/AGREED остаются на стене</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, crews can <b>choose between will, going to and present continuous by meaning</b> and <b>produce a locked week</b> (7 lines: predictions, plans and arrangements, each in the right form).</li>
+      <li><span class="lb">Subsidiary.</span> ex.1 вывести правило going to; ex.2–3 пять предложений и их переделка под себя; ex.4 таблица вопросов; ex.5–6 вопросы о летних планах; ex.7 правило present continuous (definite); ex.8 календарь Марко; ex.9 Grammar round-up (geocaching) — микс всего года.</li>
+      <li><span class="lb">Personal.</span> Правило дети выводят сами из примеров (ex.1 и ex.7 так и построены). Я даю только сортировку по смыслу: думаю / решил / договорился.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>say which future to use and why (think / decided / agreed)</li><li>form going to statements, negatives, questions and short answers</li><li>turn a calendar into present continuous arrangements</li><li>hold a 7-line locked week with all three futures used correctly</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Round-up</span><span>Bonus</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>going to</span><span class='w'>this Saturday</span><span class='w'>tomorrow</span><span class='w'>next weekend</span><span class='w'>at 6 pm</span><span class='w'>geocaching</span><span class='w'>key ring</span><span class='w'>GPS</span><span class='w'>location</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I'm going to buy tickets tomorrow. · She's going to look after her sister. · They're going to try the new water slide. · I'm not going to have a holiday this year. · He isn't going to see his friends. · They aren't going to be home until late. · We're meeting at the bus station at 8:00. · A band is playing in the park on Saturday. · What are you doing this afternoon?</div></div>
+      <div class="r"><div class="k">Form</div><div>subject + be (not) + going to + инфинитив · вопрос: (Question word) + be + subject + going to + инфинитив · present continuous для будущего = be + V-ing с указанием времени/места. Орфография -ing: have → having, get → getting, travel → travelling.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>в живой речи going to сжимается почти до «gonna», а to звучит слабо; ударение падает на ВТОРОЙ глагол (ABCD-заметка TB): I'm going to BUY tickets.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«I go to the cinema tomorrow» — что не так? → это расписание, а не договорённость: I'm going to the cinema tomorrow.</div><div class='ccq'>«She's going to go» — можно два go подряд? → да, это норма: going to + go.</div><div class='ccq'>«We're meeting at 8:00» — мы решили или пока думаем? → решили, время и место названы = present continuous.</div><div class='ccq'>«Look at those clouds! It will rain» — точнее сказать как? → It's going to rain: есть доказательство.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.102, КТП пара 66. Present continuous как «сейчас» дети знают с Unit 3; новое — тот же самый present continuous в значении будущего.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Смешивают going to и present continuous</td><td>Сортировка по смыслу ДО формы: три ящика на доске — THINK / DECIDED / AGREED. Сначала кладём предложение в ящик, потом выбираем форму.</td></tr><tr><td>Забывают be («She going to…», «We meeting…»)</td><td>Правило-жест: be — это ключ зажигания. Нет be — машина не заводится. Проверка руками перед каждой сдачей.</td></tr><tr><td>Орфография -ing плывёт (haveing, geting, traveling)</td><td>Три слова заранее на доске (TB просит отдельно): have → having · get → getting · travel → travelling.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 8 “Summer fun” (What's your idea of a good holiday?) · GIA2 — lesson plan &amp; staging</span>
+    <span>GIA2 · U8 «Summer fun» · P5 · линия «наши» 🚀</span>
+  </div>
+</div>

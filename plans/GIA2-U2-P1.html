@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2 · Unit 2 · Pair 1 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 2 “Me time” · Pair 1 — Mission «The 48-Hour Audit»: where do our weekend hours actually go?</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «наши» 🚀 после A1+</b> · 90 min · mission-based: gate → base sprint → challenge → bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Lessons 23–24 (KTP pair 13) · Октябрь</span><span class='chip new'>🚀 наши · после A1+</span><span class='chip'>SB pp.24–25</span><span class='chip'>unit leaderboard · gold runs</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2-u2-p1.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u2.html" target="_blank" rel="noopener">🎮 Игры юнита 2 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p1.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>Stand Up–Hand Up–Pair Up: одно предложение о выходных; блиц-повтор Unit 1 (routines)</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p1.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>объявляю миссию: аудит 48 часов выходных → вердикт крю в конце пары</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p1.html#5' target='_blank' rel='noopener' title='слайд 5'>8–13′</a></td><td class='gname'>Входной тест (gate): 90 сек — активности</td><td>90 секунд: максимум занятий в свободное время по-английски (спеллинг считается); второй заход — 3 фразы о выходных СОСЕДА</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p1.html#6' target='_blank' rel='noopener' title='слайд 6'>13–27′</a></td><td class='gname'>Спринт: четыре колонки свободного времени</td><td>ex.2 p.24 + ex.3 p.25: 4 колонки (media · sports · art and music · other) закрываем гонкой; 11 новых слов из рамки распределяем по фото 1–6 и по колонкам</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p1.html#7' target='_blank' rel='noopener' title='слайд 7'>27–39′</a></td><td class='gname'>Челлендж: гонка по тексту о близнецах</td><td>ex.4 p.25 (текст про близнецов Арчи) на скорость: 7 пропусков за 4 минуты + дуэль «наша семья vs ваша», 8 сек на ход</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p1.html#8' target='_blank' rel='noopener' title='слайд 8'>39–45′</a></td><td class='gname'>Видео: выходные влогера (считаем часы)</td><td>влог Райана «My time» смотрим как аналитики: считаем его часы и ловим, чего в его сутках нет</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p1.html#9' target='_blank' rel='noopener' title='слайд 9'>45–47′</a></td><td class='gname'>Переход-разминка</td><td>физическая перезагрузка: 90 секунд движения</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p1.html#10' target='_blank' rel='noopener' title='слайд 10'>47–59′</a></td><td class='gname'>Бонус-уровень: этого нет в учебнике</td><td>уровень для наших: язык точности аудитора — часы, доли, честность (без объявления грамматики)</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p1.html#11' target='_blank' rel='noopener' title='слайд 11'>59–74′</a></td><td class='gname'>Продукт: профиль времени команды</td><td>отчёт 60 сек: профиль времени команды (топ-3 занятия + часы + сравнение с США + вердикт «где утечка»)</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p1.html#12' target='_blank' rel='noopener' title='слайд 12'>74–82′</a></td><td class='gname'>Реванш gate + лидерборд</td><td>реванш gate (90 сек активностей) — бьём утренний счёт; очки в лидерборд юнита</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p1.html#13' target='_blank' rel='noopener' title='слайд 13'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>рефлексия «я могу…» по слайду + домашка + тизер P2</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 2 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Лексика свободного времени вводится не списком, а как инструмент аудита: у команды 48 часов выходных, и их надо разложить по статьям — как в отчёте. Американская статистика со стр. 24 даёт эталон для сравнения, влог Райана — живой кейс. Слова always/usually/hardly ever появляются как «язык точности аудитора», а не как тема «наречия частотности» — это работа на P3, где они станут инструментом.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Agents, open the file.</b> Forty-eight hours. That is your weekend — every weekend. American teenagers spend 4.3 hours a day on media and 3.8 on hobbies. Where do YOUR hours go? Each crew runs an audit: activities, hours, and one honest verdict — where the time leaks. Sixty seconds at the end, judges are watching, and 'I don't know' is not a verdict. <b>Start the clock!”</b><div class='pitchru'>Суть по-русски, если нужно поддержать: у нас 48 часов выходных; каждая команда проводит аудит: чем заняты, сколько часов, и главное — где время утекает. В конце — вердикт за 60 секунд.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Stand Up–Hand Up–Pair Up: одно предложение о выходных; блиц-повтор Unit 1 (routines)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>У двери: <span class='en'>One thing you did at the weekend — one sentence, go!</span></li><li>Kagan <b>Stand Up–Hand Up–Pair Up</b>: <span class='en'>Twenty seconds each: my Saturday in three sentences. Swap!</span></li><li>Блиц Unit 1 за 5 сек: <span class='en'>What time do you finish school? Do you do homework before dinner?</span></li><li>Мостик: <span class='en'>School time — that file is closed. Today we open the other one: your OWN time. Forty-eight hours of it.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд повтора · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> говорят все одновременно в парах. Ожидаемо: беглый small talk на знакомом. Типичная ошибка: сваливаются в русский — правило «English or it didn't happen»</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> объявляю миссию: аудит 48 часов выходных → вердикт крю в конце пары</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Forty-eight hours. Every weekend. Where do they go?</span></li><li><span class='en'>US data is on the screen: 4.3 hours a day on media, 3.8 on hobbies, 0.9 on sport. Your crew audits YOUR weekend against it.</span></li><li>Планка отчёта:</li><li><span class='ig'>🏆 <b>Планка продукта (рубрика судей):</b> Fluency — паузы ≤3 сек (1–3) · Accuracy — форма чистая, без «like play» и «often plays» не на месте (1–3) · Richness — детали, цифры, сравнения (1–3). 9/9 = gold run, +5.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии со статистикой SB p.24 (запасной вариант — цифры на доске)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают, разбирают роли в крю. Ожидаемо: спор про «я сплю больше» — уже вовлечение</div></td><td class='mat'>слайд 4 · статистика</td></tr><tr class='True'><td class='min'>8–13′</td><td class='stage'><div class='nm'>Входной тест (gate): 90 сек — активности</div><div class='sub'>🎯 GATE · activities speed-write</div><div class='zone'>solo · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 90 секунд: максимум занятий в свободное время по-английски (спеллинг считается); второй заход — 3 фразы о выходных СОСЕДА</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ninety seconds. Every free-time activity you can SPELL. 'Photos' with an f? In the bin. GO!</span></li><li>Счёт приватно на поля. Второй заход: <span class='en'>Now three TRUE sentences about your partner's weekend.</span></li><li>Фиксирую без разбора: <span class='en'>Keep your number. Rematch at the end of the lesson.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут молча на скорость. Ожидаемо: 7–12 фраз; типичное — play/go/do путаются и «I make photos». Ошибку НЕ правлю вслух — коплю</div></td><td class='mat'>слайд 5 · таймер</td></tr><tr><td class='min'>13–27′</td><td class='stage'><div class='nm'>Спринт: четыре колонки свободного времени</div><div class='sub'>⚡ Base sprint · four columns</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.2 p.24 + ex.3 p.25: 4 колонки (media · sports · art and music · other) закрываем гонкой; 11 новых слов из рамки распределяем по фото 1–6 и по колонкам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Page 24, the table. Four columns. The red words first — three minutes.</span></li><li>ex.3: <span class='en'>Photos one to six. Which activity? Then EVERY word from the box goes into the table.</span></li><li>Ключ каруселью команд (ключ TB: 1 collect things · 2 go to the gym · 3 play in a band · 4 play in a team · 5 practise the piano · 6 use social media).</li><li>Kagan <b>Numbered Heads Together</b>: <span class='en'>'Art and music' column — number twos, boards up!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.24–25 ex.2–3 · мини-доски · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> закрывают таблицу командой. Ожидаемо: быстро. Ошибка: «go to gym» без the — жест-стоп</div></td><td class='mat'>слайд 6 · таймер</td></tr><tr><td class='min'>27–39′</td><td class='stage'><div class='nm'>Челлендж: гонка по тексту о близнецах</div><div class='sub'>🔥 Challenge · twins race</div><div class='zone'>pairs → crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.4 p.25 (текст про близнецов Арчи) на скорость: 7 пропусков за 4 минуты + дуэль «наша семья vs ваша», 8 сек на ход</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Seven gaps, one text, four minutes. Watch the verb form — the Bureau counts it!</span></li><li>Ключ TB: 1 play in a team · 2 go to the gym · 3 practises · 4 plays in a band · 5 use social media · 6 make videos · 7 help at home.</li><li>Дуэль пар: <span class='en'>My family vs yours. One line each, eight seconds: My brother plays in a team. Your turn!</span></li><li>Ограничитель: повторил чужую активность — ход сгорает.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.25 ex.4 · таймер 8 сек</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> гоняют по тексту, дуэлятся фактами. Ожидаемо: 3-е лицо (practises/plays) теряется у части — фиксирую молча</div></td><td class='mat'>слайд 7 · таймер</td></tr><tr><td class='min'>39–45′</td><td class='stage'><div class='nm'>Видео: выходные влогера (считаем часы)</div><div class='sub'>Video skills · Ryan's weekend</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> влог Райана «My time» смотрим как аналитики: считаем его часы и ловим, чего в его сутках нет</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Задача до просмотра: <span class='en'>Watch like auditors. Count Ryan's activities — and find what is MISSING from his weekend.</span></li><li>Стоп-кадры; ответы — мини-доски всей командой (ключ TB: sleeps, gets dressed, eats, does sport, helps at home, vlogs, uses social media, meets Aaron, does football training, edits videos, plays video games, watches videos).</li><li><span class='en'>Would YOUR weekend survive on camera? One honest line.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> Video skills SB p.25 (запасной вариант — читаю фрагмент видеоскрипта с доски: «During the week I wake up at seven. But at the weekend, I wake up at 9:00…»)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> смотрят с задачей, отвечают на стопах. Ожидаемо: спорят, сколько часов ушло на телефон</div></td><td class='mat'>слайд 8 · видео</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> физическая перезагрузка: 90 секунд движения</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Stand up. More than three hours a day on your phone — left wall. Less — right wall. Defend your side in ONE line!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> делятся стенами и защищают позицию. Ожидаемо: смех и спор</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>47–59′</td><td class='stage'><div class='nm'>Бонус-уровень: этого нет в учебнике</div><div class='sub'>🚀 Bonus level · not in the book</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> уровень для наших: язык точности аудитора — часы, доли, честность (без объявления грамматики)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Weak audit: 'I play video games.' Useless — an auditor asks HOW OFTEN and HOW LONG.</span></li><li>Апгрейд-рамки: <span class='en'>I usually play for two hours a day. · I hardly ever go to the gym. · That's about 14 hours a week — more than American teens.</span></li><li><span class='en'>Two upgrade lines in your report = richness points.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд с апгрейд-рамками (usually · hardly ever · about … hours a week · more/less than)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> переписывают 2 строки отчёта точнее. Ожидаемо: сильные берут «about … a week» легко. Ошибка: «I play usually» — не правлю вслух, ставлю галочку в клинику P3</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>59–74′</td><td class='stage'><div class='nm'>Продукт: профиль времени команды</div><div class='sub'>PRODUCT · the time profile</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> отчёт 60 сек: профиль времени команды (топ-3 занятия + часы + сравнение с США + вердикт «где утечка»)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Подготовка 7 мин: <span class='en'>Keywords only, no scripts. Everyone owns one block: top three · hours · comparison · verdict.</span></li><li>Правило аудита: <span class='en'>Your hours must add up to forty-eight. Judges check the maths.</span></li><li><span class='en'>Sixty seconds per crew. Judges: fluency, accuracy, richness — cards up!</span></li><li>Вызов зала после каждого: <span class='en'>You said three hours of sport. Is that every weekend — or the good ones?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер 60 сек · карточки судей · рубрика</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выступают по ролям, судьи по рубрике. Ожидаемо: планка держит формат. Ошибка: чтение с листа — судьи снимают fluency</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Реванш gate + лидерборд</div><div class='sub'>Rematch + leaderboard</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> реванш gate (90 сек активностей) — бьём утренний счёт; очки в лидерборд юнита</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Same test, same rules. Beat your morning self — GO!</span></li><li>Сравнение приватно: <span class='en'>Hands up if you beat your number.</span> Очки командам в лидерборд.</li><li>Мини-клиника спеллинга (2 слова дня): photos · practise.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут реванш, видят рост за одну пару. Ожидаемо: +3–5 фраз у большинства</div></td><td class='mat'>слайд 12 · таймер</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия «я могу…» по слайду + домашка + тизер P2</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…»: тапают, что умеют. <span class='en'>Which line is TRUE for you now?</span></li><li>ДЗ: WB стр. 12, зад. 1–4 (free-time activities) — база; 🚀 бонус: аудит одного дня своей семьи (5 строк с часами).</li><li>Тизер: <span class='en'>Next file: a thirteen-year-old world champion who still does homework in the evening. Is that life worth it? You decide.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> рефлексируют и записывают ДЗ. Ожидаемо: выходят с интригой на P2</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook (родная тетрадь):</b> WB стр. 12, зад. 1–4 (free-time activities) — база для всех; зад. 5 — по желанию.</p><p>🚀 Бонус (+3 в лидерборд): аудит одного дня своей семьи — 5 строк «кто · что · сколько часов» по-английски.</p></td><td class='mat'>WB Unit 2 (стр. 12–19) · очки в лидерборд на следующей паре</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, crews can <b>name 18 free-time activities and audit their own weekend</b> (activity + hours + comparison with US teenagers) and deliver a 60-second verdict.</li>
+      <li><span class="lb">Subsidiary.</span> Gate вскрывает реальный словарный потолок; таблица p.24 ex.2 и рамка p.25 ex.3 закрываются гонкой; Video skills (влог Райана) смотрим как аналитики; первое употребление usually/hardly ever — в контексте, без объявления темы.</li>
+      <li><span class="lb">Personal.</span> Наречия частотности НЕ объявляю темой: они появляются как «точность отчёта». Ошибки позиции (she plays often) собираю молча — материал клиники в P3.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>write 12+ free-time activities in 90 seconds</li><li>sort activities into media / sport / art and music / other</li><li>say how many hours a week an activity takes</li><li>compare own weekend with US teenagers and give a verdict</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Video</span><span>Bonus</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>collect things</span><span class='w'>draw</span><span class='w'>go to a dance class</span><span class='w'>go to the gym</span><span class='w'>help at home</span><span class='w'>listen to music</span><span class='w'>make videos</span><span class='w'>meet friends</span><span class='w'>play chess</span><span class='w'>play football</span><span class='w'>play in a band</span><span class='w'>play in a team</span><span class='w'>play video games</span><span class='w'>practise the piano</span><span class='w'>sleep</span><span class='w'>take photos</span><span class='w'>use social media</span><span class='w'>watch TV series</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I play video games for two hours a day. · We usually meet friends at the weekend. · American teens sleep for almost 11 hours — we sleep less. · 🚀 bonus: The hours leak into… because…</div></div>
+      <div class="r"><div class="k">Form</div><div>устойчивые связки: play + игра, go to + место, take photos, use social media, practise the piano — глагол в связке не меняется.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>по Wordlist: use social media /ˌjuːz səʊʃ(ə)l ˈmiːdiə/ · practise the piano /ˌpræktɪs ðə piˈænəʊ/ · play chess /ˌpleɪ ˈtʃes/ (TB просит отдельно отработать collect /kəˈlekt/, chess /tʃes/, piano /piˈænəʊ/)</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«play the chess» — так можно? → нет: play chess, без артикля.</div><div class='ccq'>«I make photos» — исправь. → I TAKE photos.</div><div class='ccq'>«Ты четыре года говоришь про хобби. А 12 активностей за 90 секунд напишешь?» → gate.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.24–25, КТП пара 13. Половина слов знакома из A1+ (play football, listen to music); новые — collect things, practise the piano, play in a band/team, use social media, go to a dance class.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>«Мы это знаем» с порога</td><td>Не спорю — предъявляю gate: не узнавание, а ПИСЬМО за 90 секунд со спеллингом. Результат приватный, реванш в конце пары.</td></tr><tr><td>Часы придумывают на глаз, аудит превращается в фантазию</td><td>Правило аудита: сумма по команде должна дать 48 часов — иначе отчёт не принимается. Считают честно.</td></tr><tr><td>Сильные забирают эфир в вердикте</td><td>Роли в отчёте: цифры · сравнение с США · вердикт · самая честная строка. Судьи снимают балл за «одного солиста».</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 2 “Me time” (How important are hobbies for teenagers?) · GIA2 — lesson plan &amp; staging</span>
+    <span>GIA2 · U2 «Me time» · P1 · линия «наши» 🚀</span>
+  </div>
+</div>

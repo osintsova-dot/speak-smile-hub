@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2 · Unit 8 · Pair 3 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 8 “Summer fun” · Pair 3 — Mission «Bureau 2100»: прогноз, который переживёт проверку</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «наши» 🚀 после A1+</b> · 90 min · mission-based: gate → base sprint → challenge → bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Lessons 125–126 (KTP pair 64) · Май</span><span class='chip new'>🚀 наши · после A1+</span><span class='chip'>SB p.100 + Pronunciation p.117</span><span class='chip'>unit leaderboard · gold runs</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2-u8-p3.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u8.html" target="_blank" rel="noopener">🎮 Игры юнита 8 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p3.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>блиц-повтор P2: F или O за 5 секунд + сдача ДЗ по пляжам</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p3.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: бюро прогнозов → шесть прогнозов крю + защита под атакой зала</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p3.html#5' target='_blank' rel='noopener' title='слайд 5'>8–14′</a></td><td class='gname'>Входной тест (gate): 90 сек прогнозов</td><td>90 секунд: максимум прогнозов о своей жизни через 10 лет; спеллинг и форма считаются</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p3.html#6' target='_blank' rel='noopener' title='слайд 6'>14–28′</a></td><td class='gname'>Спринт: стол прогнозов</td><td>ex.1 достроить таблицу aff/neg → ex.2 четыре предсказания → ex.3 таблицы вопросов → ex.5 собрать вопросы</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p3.html#7' target='_blank' rel='noopener' title='слайд 7'>28–40′</a></td><td class='gname'>Челлендж: бюро прогнозов 2100</td><td>ex.7 текст «How will holidays change in the future?» на скорость + дуэль прогнозов, 8 сек на ход</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p3.html#8' target='_blank' rel='noopener' title='слайд 8'>40–46′</a></td><td class='gname'>Клиника: разбор ошибок прошлых пар</td><td>то, что я молча собирал две пары: восемь предложений с ошибками — починить на скорость</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p3.html#9' target='_blank' rel='noopener' title='слайд 9'>46–48′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p3.html#10' target='_blank' rel='noopener' title='слайд 10'>48–58′</a></td><td class='gname'>Бонус-уровень: этого нет в учебнике</td><td>уровень для наших: слух — 'll против чистого глагола + Brain teaser</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p3.html#11' target='_blank' rel='noopener' title='слайд 11'>58–74′</a></td><td class='gname'>Продукт: прогноз на 2050</td><td>шесть прогнозов крю (по два на 2030 · 2050 · 2100) + защита под вопросами зала</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p3.html#12' target='_blank' rel='noopener' title='слайд 12'>74–82′</a></td><td class='gname'>Реванш gate + лидерборд</td><td>реванш gate (90 сек прогнозов) — считаем ЧИСТЫЕ предложения; очки в лидерборд</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p3.html#13' target='_blank' rel='noopener' title='слайд 13'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>рефлексия + ДЗ + тизер P4</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 8 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Здесь will наконец получает форму — но объявляется не как «тема урока», а как рабочий язык бюро прогнозов. Дети уже видели will в блоге на P2 и спорили о телепортации, поэтому таблица p.100 закрывает уже возникший вопрос «как это устроено». Клиника ошибок P1–P2 (will to go, will goes, we staying) проводится здесь — молча собранное наконец разбирается. Brain teaser и Pronunciation p.117 работают как два разных типа челленджа: логика и слух.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Bureau of Predictions, 2100 desk.</b> A real expert from the University of Glasgow says that one day we will travel by teleportation. Underwater hotels by 2030. Planes with 360° windows by 2050. Your crew writes six predictions about holidays — and then defends them, because the room will attack every one. One tool only: will and won't. Wrong form, prediction rejected. <b>The future opens in ninety minutes.”</b><div class='pitchru'>Суть по-русски, если нужно поддержать: бюро прогнозов: настоящий учёный из Университета Глазго предсказывает путешествия телепортацией. Крю пишет шесть прогнозов об отдыхе будущего и защищает их — зал атакует каждый. Инструмент один: will и won't. Ошибка в форме — прогноз отклонён.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> блиц-повтор P2: F или O за 5 секунд + сдача ДЗ по пляжам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Fast round, five seconds each: 'Bristol has 45 sports clubs.' 'Camping is boring.' 'I'm sure it will rain tomorrow.' Fact or opinion?</span></li><li>ДЗ на столы: <span class='en'>Which city beach did you choose? One line, one reason.</span></li><li>Мостик: <span class='en'>Yesterday you caught the writer predicting the future and calling it a fact. Today you become the ones who predict — and the room checks YOU.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд повтора · ДЗ WB стр. 64</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> отвечают на скорость. Ожидаемо: ловушку «I'm sure» узнают мгновенно</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: бюро прогнозов → шесть прогнозов крю + защита под атакой зала</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>2030: underwater hotels. 2050: planes with 360° windows. 2100: teleportation — and that one comes from a real scientist.</span></li><li><span class='en'>Six predictions per crew. Year plus one concrete detail in each. Then the room attacks.</span></li><li><span class='ig'>🏆 <b>Планка продукта (рубрика судей):</b> Fluency — паузы ≤3 сек (1–3) · Accuracy — форма чистая, без «will to go» и «we meeting at 8» (1–3) · Richness — детали, время, места, цифры (1–3). 9/9 = gold run, +5.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии с тремя годами (запасной вариант — три года крупно на доске: 2030 · 2050 · 2100, под каждым пустое место для прогнозов класса)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> включаются мгновенно — тема будущего сама себя продаёт. Ожидаемо: сразу сыплют идеями по-русски, перевожу вслух</div></td><td class='mat'>слайд 4</td></tr><tr class='True'><td class='min'>8–14′</td><td class='stage'><div class='nm'>Входной тест (gate): 90 сек прогнозов</div><div class='sub'>🎯 GATE · prediction sprint</div><div class='zone'>solo · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 90 секунд: максимум прогнозов о своей жизни через 10 лет; спеллинг и форма считаются</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ninety seconds. Predictions about YOUR life in ten years. Every sentence must have will or won't. Broken form = zero. GO!</span></li><li>Счёт приватно на поля: сколько предложений и сколько ЧИСТЫХ.</li><li><span class='en'>Keep both numbers. Rematch at the end — and I bet the second number moves more.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут молча на скорость. Ожидаемо: 5–8 предложений, чистых 2–4; типовое — «I will to live», «I will lives». Не правлю — это материал клиники через 20 минут</div></td><td class='mat'>слайд 5 · таймер</td></tr><tr><td class='min'>14–28′</td><td class='stage'><div class='nm'>Спринт: стол прогнозов</div><div class='sub'>⚡ Base sprint · the prediction desk</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1 достроить таблицу aff/neg → ex.2 четыре предсказания → ex.3 таблицы вопросов → ex.5 собрать вопросы</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.1: <span class='en'>Copy the table and put these two in: 'We will eat VR food in the future' and 'It won't cost a lot of money'. Which column?</span> (ключ TB: 1 We will eat VR food in the future. · 2 It won't cost a lot of money.)</li><li>ex.2 гонкой (ключ TB: 1 will have · 2 won't need, will have · 3 won't take, will use · 4 will use). Совет TB: с менее уверенными первое утвердительное и первое отрицательное делаем вместе.</li><li>ex.3 таблицы вопросов и коротких ответов (ключ TB: 1 Will it be expensive? · 2 No, it won't. · 3 What will this cost?).</li><li>ex.5 сборка из слов (ключ TB: 1 Who will you speak to next on the phone? · 2 What will the weather be like tomorrow? · 3 What time will you go to bed tonight? · 4 What job will you have when you leave school?) — и сразу ex.6 в парах, Kagan <b>RallyRobin</b>.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.100 ex.1–3, 5–6 · мини-доски · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> достраивают таблицы сами из примеров. Ожидаемо: короткий ответ «Yes, they will» без глагола сначала кажется странным — CCQ «а что тут пропало и почему это нормально?»</div></td><td class='mat'>слайд 6 · таймер</td></tr><tr><td class='min'>28–40′</td><td class='stage'><div class='nm'>Челлендж: бюро прогнозов 2100</div><div class='sub'>🔥 Challenge · 2100 bureau</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.7 текст «How will holidays change in the future?» на скорость + дуэль прогнозов, 8 сек на ход</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Пре-тич по TB: teleportation = мгновенно перемещать людей или предметы из одного места в другое.</li><li>Перед чтением (приём TB): <span class='en'>In your crew, predict how holidays will change in 10, 30 and 80 years. Thirty seconds.</span> Потом сверяем с текстом.</li><li>ex.7 гонкой (ключ TB: 1 will become · 2 will look · 3 will have · 4 will we travel · 5 won't take · 6 how will we travel).</li><li>Дуэль крю: <span class='en'>One prediction each, eight seconds, and the next crew must answer with a SHORT answer: 'No, they won't.' Then hit back.</span> Ограничитель: повторил чужую идею — ход сгорает.</li><li>ex.4 как топливо для спора: <span class='en'>Do you agree with the predictions in exercise 2? If not — what WILL happen instead?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.100 ex.4, 7 · таймер 8 сек</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> гоняют текст и дуэлятся короткими ответами. Ожидаемо: телепортация вызывает настоящий спор — держу 60 секунд и возвращаю в формат</div></td><td class='mat'>слайд 7 · таймер</td></tr><tr class='True'><td class='min'>40–46′</td><td class='stage'><div class='nm'>Клиника: разбор ошибок прошлых пар</div><div class='sub'>Клиника ошибок P1–P2</div><div class='zone'>board · crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> то, что я молча собирал две пары: восемь предложений с ошибками — починить на скорость</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Two lessons I said nothing. Here's what I collected. No names — these are OUR sentences.</span></li><li>На доску восемь строк из реальных работ (примеры типовых): <span class='en'>People will to travel by teleportation. · She will goes to the beach. · Will you to come? · He willn't come. · I want go to the beach. · We will to stay in a hotel. · It will be maybe expensive. · Will people goes to the Moon?</span></li><li>Крю чинят на скорость, поднимают доски, объясняют ПОЧЕМУ.</li><li>Одна картинка на всё: <span class='en'>will + clean verb. No 's'. No 'to'. Ever.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд клиники (запасной вариант — пишу восемь строк на доске от руки, дети чинят в тетради и выходят исправлять маркером)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> чинят чужие ошибки и узнают свои. Ожидаемо: облегчение — «а я думал, только я так»</div></td><td class='mat'>слайд 8</td></tr><tr><td class='min'>46–48′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Stand up. I say a year — you shout ONE thing that will exist. 2030! 2050! 2100!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выкрикивают идеи стоя, разгоняют кровь</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>48–58′</td><td class='stage'><div class='nm'>Бонус-уровень: этого нет в учебнике</div><div class='sub'>🚀 Bonus level · not in the book</div><div class='zone'>crews · screen</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> уровень для наших: слух — 'll против чистого глагола + Brain teaser</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Pronunciation p.117 (треки 79–80): дрилл контракций <span class='en'>I'll · you'll · he'll · she'll · we'll · they'll</span>, потом в предложениях <span class='en'>I'll see you at 8 o'clock. · She'll be here in 10 minutes.</span></li><li>Трек 81 — слуховой челлендж: a или b? (ключ TB: 1 b · 2 a · 3 a · 4 b · 5 b). <span class='en'>'I go by bus' or 'I'll go by bus'? Boards up together.</span></li><li>Парная игра ex.5 p.117: <span class='en'>Say one sentence. Can your partner tell which one you said?</span></li><li>Капкан от TB: <span class='en'>won't or want? Listen to what comes NEXT. After 'want' there's TO. After 'won't' there isn't.</span></li><li>ex.8 Brain teaser как логическая добивка (ключ TB: последней картинкой будет только маленький квадрат в середине). Подсказка TB: сравни, какие части первой и второй фигуры остались в третьей.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> аудио треки 79–81 · SB p.117 · SB p.100 ex.8 (запасной вариант — произношу пары предложений сам, по три раза каждую, дети поднимают A или B)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают и различают. Ожидаемо: 3–5 из 5 с первого раза; после дрилла — 5 из 5. Brain teaser решают 2–3 человека, остальные догадываются с подсказкой</div></td><td class='mat'>слайд 9 · audio</td></tr><tr class='True'><td class='min'>58–74′</td><td class='stage'><div class='nm'>Продукт: прогноз на 2050</div><div class='sub'>PRODUCT · the 2050 forecast</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> шесть прогнозов крю (по два на 2030 · 2050 · 2100) + защита под вопросами зала</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Подготовка 7 мин: <span class='en'>Six predictions. Two per year. Each one: a year, will or won't, and ONE concrete detail — a number, a place, a thing.</span></li><li>Роли: два прогноза озвучивает каждый участник крю.</li><li><span class='en'>Then the room attacks. Two questions per crew — and they must start with 'Will' or a question word.</span></li><li>Правило защиты: <span class='en'>Answer short first — 'Yes, we will' — then explain.</span></li><li>Судьи по рубрике; отдельная номинация: <span class='en'>the boldest prediction the room couldn't break.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · карточки судей · рубрика</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выступают и держат оборону. Ожидаемо: вопросы зала — самая ценная часть; именно там форма вопроса встаёт на место</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Реванш gate + лидерборд</div><div class='sub'>Rematch + leaderboard</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> реванш gate (90 сек прогнозов) — считаем ЧИСТЫЕ предложения; очки в лидерборд</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Same ninety seconds. But this time I count only the CLEAN ones.</span></li><li>Сравнение приватно: <span class='en'>Hands up if your clean number doubled.</span></li><li>Очки крю: таблицы + дуэль + слух + защита.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> видят рост именно в точности, а не в количестве. Ожидаемо: чистых становится вдвое больше</div></td><td class='mat'>слайд 12 · таймер</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия + ДЗ + тизер P4</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…»: <span class='en'>Which line is TRUE for you now?</span></li><li>ДЗ: WB стр. 61, зад. 1–5 (will aff/neg, текст «What will hotels be like in the future?», вопросы и короткие ответы, диалог Amy и Stef) — база; 🚀 бонус: задание TB Homework — три прогноза о себе через 1, 5 и 10 лет по образцу <span class='en'>In one year, I will … In five years, I will … In ten years, I will …</span></li><li>Тизер: <span class='en'>Next lesson: three phone calls. One person can't wait. One is sad. One is so bored he's calling at ten in the morning to ask if you're awake. Your job — hear it before they say it.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают ДЗ. Ожидаемо: бонус про себя делают почти все — тема личная</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 61, зад. 1–5: will aff/neg (6 пропусков), текст «What will hotels be like in the future?» (7 пропусков), полные вопросы + короткие ответы, диалог Amy и Stef, три своих ответа.</p><p>🚀 Бонус (+3): три прогноза о себе через 1, 5 и 10 лет (задание TB Homework к Grammar).</p></td><td class='mat'>WB Unit 8 · клиника ошибок остаётся на стене до конца юнита</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, crews can <b>make, deny and question predictions with will/won't</b> (affirmative, negative, Yes/No and Wh-questions, short answers) and <b>defend six predictions</b> under attack from the class.</li>
+      <li><span class="lb">Subsidiary.</span> Таблицы ex.1 и ex.3; ex.2 четыре предсказания; ex.5 сборка вопросов; ex.7 текст «How will holidays change in the future?» (2030 · 2050 · 2100); ex.8 Brain teaser; Pronunciation p.117 — 'll и различение I go / I'll go (треки 79–81); клиника ошибок P1–P2.</li>
+      <li><span class="lb">Personal.</span> Слово «грамматика» не звучит: это «язык бюро». Таблицы дети достраивают сами из примеров, я не диктую. Ошибку в форме на защите отмечает ЗАЛ, а не я.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>make positive and negative predictions with will/won't</li><li>ask Yes/No and Wh-questions with will and answer them short</li><li>hear the difference between 'I go' and 'I'll go'</li><li>defend six predictions against questions from the class</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Clinic</span><span>Bonus</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>will</span><span class='w'>won't</span><span class='w'>in the future</span><span class='w'>in 2050</span><span class='w'>ten years from now</span><span class='w'>teleportation</span><span class='w'>underwater hotels</span><span class='w'>360° windows</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>People will have holidays in space. · We won't need a passport. · We will eat VR food in the future. · It won't cost a lot of money. · Will we visit the Moon? — Yes, we will. / No, we won't. · Will it be expensive? — No, it won't. · Where will we travel? · What will this cost?</div></div>
+      <div class="r"><div class="k">Form</div><div>will/won't + инфинитив БЕЗ to, форма одна на все лица · вопрос — (Question word) + will + subject + verb · короткий ответ Yes, they will. / No, they won't.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>'ll: I'll /aɪl/ · he'll /hiːl/ · she'll /ʃiːl/ · we'll /wiːl/ · they'll /ðeɪl/ · и капкан won't /wəʊnt/ vs want /wɒnt/ — различаем по тому, что идёт следом (после want инфинитив С to)</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«People will to travel by teleportation» — что лишнее? → to: will + verb без to.</div><div class='ccq'>«Will she goes?» — исправь. → Will she go? — после will всегда чистая форма.</div><div class='ccq'>«I'll go» и «I go» — на слух одно и то же? → нет: в I'll слышно /aɪl/, гласная длиннее.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.100 + Pronunciation p.117, КТП пара 64. will дети слышали и в блоге P2, и в A1+; новое — вопросительная форма, короткие ответы и слуховое различение 'll.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>«Will to go» и «will goes»</td><td>Клиника в середине пары: собранные с P1–P2 ошибки на доске без имён, чинят крю на скорость. Правило одной картинкой: will + чистый глагол.</td></tr><tr><td>Won't и want на слух сливаются</td><td>Приём TB: слушаем, что идёт СЛЕДОМ — после want инфинитив с to, после won't — без to. Плюс дрилл /wəʊnt/ vs /wɒnt/ с показом рта.</td></tr><tr><td>Прогнозы получаются скучные («it will be good»)</td><td>Ограничитель бюро: в каждом прогнозе обязательны год и одна конкретная деталь (цифра, место, предмет).</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 8 “Summer fun” (What's your idea of a good holiday?) · GIA2 — lesson plan &amp; staging</span>
+    <span>GIA2 · U8 «Summer fun» · P3 · линия «наши» 🚀</span>
+  </div>
+</div>

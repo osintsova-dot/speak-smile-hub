@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 3 · Pair 3 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 3 “Dressing up” · Pair 3 — Грамматика: Present continuous — что происходит прямо сейчас</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «новые» 🌱 со стороны</b> · 90 min · опоры: модель → word bank → черновик в команде → продукт с листом · командный счёт · самопроверка по ключу</div>
+    <div class="meta"><span class='chip'>Lessons 43–44 (KTP pair 23) · Ноябрь</span><span class='chip new'>🌱 новые · опоры и самопроверка</span><span class='chip'>SB p.40</span><span class='chip'>командный счёт · стикеры 🟢🟡🔴</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2new-u3-p3.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u3.html" target="_blank" rel="noopener">🎮 Игры юнита 3 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p3.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход: приветствие + повтор прошлой пары</td><td>повтор P2: читаем свои посты со стены + ищем в них общее</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p3.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: полная карта Present continuous, правило найдём сами</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p3.html#5' target='_blank' rel='noopener' title='слайд 5'>8–22′</a></td><td class='gname'>Открытие: сами достраиваем таблицу</td><td>примеры из ленты на карточках → раскладываем по колонкам → таблица ex.1 → правило хором</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p3.html#6' target='_blank' rel='noopener' title='слайд 6'>22–36′</a></td><td class='gname'>Станция орфографии: формы -ing</td><td>сортировка 12 глаголов в три корзины руками → правило хором → письменный заход с самопроверкой</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p3.html#7' target='_blank' rel='noopener' title='слайд 7'>36–47′</a></td><td class='gname'>Отрицания и вопросы</td><td>модель → трансформации по рамке → таблица вопросов ex.4 → краткие ответы хором</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p3.html#8' target='_blank' rel='noopener' title='слайд 8'>47–49′</a></td><td class='gname'>Переход-разминка</td><td>разминка + произношение /n/ и /ŋ/ (SB p.116)</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p3.html#9' target='_blank' rel='noopener' title='слайд 9'>49–62′</a></td><td class='gname'>Продукт: что происходит прямо сейчас</td><td>6 строк о том, что происходит в классе (по рамке ex.3) → самопроверка → читаем вслух</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p3.html#10' target='_blank' rel='noopener' title='слайд 10'>62–74′</a></td><td class='gname'>Мини-тест с самопроверкой + счёт</td><td>8 заданий на всё (формы + отрицания + вопросы + спеллинг) → ключ → свой счёт приватно</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p3.html#11' target='_blank' rel='noopener' title='слайд 11'>74–82′</a></td><td class='gname'>Счёт команды + рефлексия</td><td>«I can…» тапами + стикеры лёгкости + ещё раз ex.5 как бонус для быстрых</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p3.html#12' target='_blank' rel='noopener' title='слайд 12'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>ДЗ с образцом + тизер P4</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 3, стр. 20–27 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Для новичков грамматику МОЖНО объявлять темой — им нужна ясность, а не маскировка. Но подача через открытие: таблица достраивается из примеров ленты, которую они вчера читали, а правило они формулируют сами. Много коротких письменных заходов с самопроверкой по ключу — уверенность растёт от «у меня получилось», а не от объяснения. Орфография -ing идёт руками (карточки в корзины) ДО письма.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Yesterday you read a whole text</b> where every verb looked the same: is/are + -ing. Today we find out exactly how it works — and by the end you will describe what is happening in this room, without mistakes. Two little things decide everything: the word be, and the spelling of -ing. Let's find the rule — it's hiding in the Comic Con feed.”<div class='pitchru'>Суть по-русски, если нужно поддержать: вчера в ленте все глаголы выглядели одинаково: is/are + -ing. Сегодня разбираемся, как это устроено, и к концу описываем, что происходит в классе, без ошибок. Правило прячется в тексте — найдём сами.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход: приветствие + повтор прошлой пары</div><div class='sub'>Opening · вход + повтор</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> повтор P2: читаем свои посты со стены + ищем в них общее</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Your posts are on the wall. Read one aloud.</span></li><li><span class='en'>Now look: what do ALL the verbs have in common?</span> — принимаю ответ по-русски, пишу на доске крупно: <b>is / are + <span style='color:#6C3FC5'>-ing</span></b>.</li><li><span class='en'>Today that shape becomes yours.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> посты со стены · слайд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> перечитывают своё и сами называют форму. Ожидаемо: «везде is или are и -ing» говорят они</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: полная карта Present continuous, правило найдём сами</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>The rule is hiding in the text you read. We'll find it — then use it six times, correctly.</span></li><li>Объявляю тему открыто: <span class='en'>Present continuous: what is happening RIGHT NOW.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> план ясен, тема названа честно</div></td><td class='mat'>слайд 4</td></tr><tr><td class='min'>8–22′</td><td class='stage'><div class='nm'>Открытие: сами достраиваем таблицу</div><div class='sub'>Открытие · достраиваем таблицу</div><div class='zone'>pairs → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> примеры из ленты на карточках → раскладываем по колонкам → таблица ex.1 → правило хором</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Карточки-примеры из P2: <span class='en'>People are buying comics · He's wearing tights · The fans aren't listening · I'm sitting here.</span></li><li><span class='en'>Two columns: with 'is' and with 'are'. Sort the cards. Who goes with 'is'? Who goes with 'are'?</span></li><li>Формулируют правило сами (по-русски можно) → сверяем с таблицей ex.1 и достраиваем пропуски. Ключ: 1 'm · 2 's · 3 aren't · 4 isn't · 5 listening.</li><li>Хором с цветами: <span class='en'>I AM sitting. He IS wearing. They ARE playing. She ISN'T sitting.</span> — be красным, -ing синим.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки примеров · SB p.40 ex.1 · маркеры двух цветов</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> открывают правило руками. Ожидаемо: «после he/she/it — is» говорят сами. Ошибка: теряют be — возвращаю к цветам</div></td><td class='mat'>слайд 5</td></tr><tr><td class='min'>22–36′</td><td class='stage'><div class='nm'>Станция орфографии: формы -ing</div><div class='sub'>Спеллинг-станция · -ing</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> сортировка 12 глаголов в три корзины руками → правило хором → письменный заход с самопроверкой</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Корзины: <span class='en'>just +ing · drop the e · double the consonant.</span> 12 карточек: buy, wear, play, watch / take, come, write, dance / swim, run, sit, get.</li><li><span class='en'>Sort them. Why does TAKE lose its e? Why does SWIM double the m?</span></li><li>Правило хором + плакат на стену (Spelling rules SB p.45).</li><li>ex.2 письменно, потом ключ на слайде, проверяю САМ свои: <span class='en'>circle your slips — nobody sees.</span> Ключ: 1 're taking · 2 'm playing · 3 aren't wearing · 4 's waiting · 5 isn't sitting.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки глаголов · три корзины (запасной вариант — три колонки на доске) · SB p.40 ex.2 · ключ на слайде</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> сортируют руками до письма. Ожидаемо: swimming со второго раза у всех; takeing исчезает после корзины</div></td><td class='mat'>слайд 6</td></tr><tr><td class='min'>36–47′</td><td class='stage'><div class='nm'>Отрицания и вопросы</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> модель → трансформации по рамке → таблица вопросов ex.4 → краткие ответы хором</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Модель: <span class='en'>I'm sitting. → I'm NOT sitting. He's wearing a hat. → He ISN'T wearing a hat.</span> Кто с isn't, кто с aren't?</li><li>Рамка трансформации, 5 предложений (+) → (−), ключ на слайде.</li><li>ex.4: достраиваем таблицы вопросов. Ключ: Wh- — What's this man doing? · Yes/No — Are they having a good time? / Is he wearing a costume? · короткие ответы — Yes, they are. / No, he isn't.</li><li>Краткие ответы хором с ритмом: <span class='en'>Yes-I-AM! No-he-ISN'T!</span> И отдельно: <span class='en'>never 'Yes, I'm' — always 'Yes, I am'.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.40 ex.4 · рамка на слайде</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> переводят в отрицание и собирают вопросы с опорой. Ожидаемо: «Yes, I'm» приходится убирать 2–3 повторами — это нормально</div></td><td class='mat'>слайд 7 · таймер</td></tr><tr><td class='min'>47–49′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка + произношение /n/ и /ŋ/ (SB p.116)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>-n — sit down! -ng — stand up!</span> (thin! thing! win! wing! go in! going!) Ключ SB p.116 ex.3: 1 b · 2 b · 3 a · 4 a.</li><li>Скороговорка хором два раза: <span class='en'>Lynne is wearing thin pink leggings.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> ловят разницу /n/–/ŋ/ телом. Ожидаемо: смех, окончание -ing становится чище</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>49–62′</td><td class='stage'><div class='nm'>Продукт: что происходит прямо сейчас</div><div class='sub'>PRODUCT · что происходит прямо сейчас</div><div class='zone'>solo → pairs → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 6 строк о том, что происходит в классе (по рамке ex.3) → самопроверка → читаем вслух</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Рамка ex.3 на экране: <span class='en'>1 I … . 2 My teacher … . 3 My classmates and I … . 4 The person next to me … .</span> Плюс две своих строки — одна ОТРИЦАТЕЛЬНАЯ.</li><li><span class='en'>Six lines. Look around and write what you SEE. Word bank and the spelling poster are right there.</span></li><li>Самопроверка по чек-листу из трёх пунктов: есть be? есть -ing? спеллинг по плакату?</li><li>Kagan <b>Timed Pair Share</b>: 30 сек читаю партнёру; партнёр ловит одно — не потерялся ли be. Потом добровольцы читают классу.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> рамка · чек-лист · плакат Spelling rules · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проходят полный цикл: посмотрел → записал → проверил → прочитал. Ожидаемо: 6 строк у каждого, и они правда про этот класс</div></td><td class='mat'>слайды 8–9 · таймер</td></tr><tr><td class='min'>62–74′</td><td class='stage'><div class='nm'>Мини-тест с самопроверкой + счёт</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 8 заданий на всё (формы + отрицания + вопросы + спеллинг) → ключ → свой счёт приватно</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Eight quick items. Then the key. Your score is YOURS — teams get points for finishing, not for marks.</span></li><li>Состав мини-теста: 3 формы -ing · 2 отрицания · 2 вопроса · 1 краткий ответ.</li><li>Ключ на слайде, проверяют сами, кружком отмечают свои промахи.</li><li>Очки командам за то, что все дошли до конца.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-тест (лист) · ключ на слайде · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проверяют себя без страха оценки. Ожидаемо: видят прогресс за одну пару; самые частые кружки — спеллинг</div></td><td class='mat'>слайд 10</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Счёт команды + рефлексия</div><div class='zone'>board → solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> «I can…» тапами + стикеры лёгкости + ещё раз ex.5 как бонус для быстрых</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…»: <span class='en'>Tap what is TRUE for you now.</span></li><li>Быстрым — ex.5 (переписка Mia и Luke) как бонус. Ключ: 1 Are you doing your homework? · 2 No, I'm not. · 3 What are you doing? · 4 I'm playing a video game. · 5 Are you watching the football? · 6 Yes, I am. · 7 They are winning 3–1.</li><li>Стикеры 🟢🟡🔴 на выходе.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.40 ex.5 · стикеры</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> рефлексируют честно. Ожидаемо: 🔴 у тех, кто теряет be — беру их на опоры в P5</div></td><td class='mat'>слайд 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ДЗ с образцом + тизер P4</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ДЗ: WB стр. 21, зад. 1–3 (формы -ing · предложения · вопросы) — образец первого задания показываю на слайде.</li><li>Тизер: <span class='en'>Next: how to say clothes are baggy, smart, comfortable — and a real radio report from a school with NO uniform for one day.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ с образцом</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 21, зад. 1–3 (написать формы -ing · собрать предложения · составить вопросы) — образец показан на уроке.</p><p>🌱 По желанию: зад. 4 (ответить по картинке).</p></td><td class='mat'>WB Unit 3 · плакат Spelling rules висит в классе</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>use the present continuous</b> in affirmative, negative and question forms with correct -ing spelling, checked by themselves against keys.</li>
+      <li><span class="lb">Subsidiary.</span> Guided discovery из текста P2; Spelling rules p.45 руками (карточки в корзины); ex.2 и ex.3 с самопроверкой; ex.5 переписка Mia/Luke; произношение /n/ и /ŋ/ (SB p.116); мини-тест с самопроверкой.</li>
+      <li><span class="lb">Personal.</span> Темп вдвое ниже «наших» — и это норма. Каждый этап заканчивается самопроверкой по ключу: ошибка находится приватно, до того как её увидят другие.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>complete the present continuous table</li><li>spell -ing forms: buying, taking, swimming</li><li>make negative sentences with isn't/aren't</li><li>ask and answer with short answers (Yes, I am / No, he isn't)</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Discover</span><span>Spelling</span><span>Negatives & questions</span><span>Product</span><span>Mini-test</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>T-shirt</span><span class='w'>hoodie</span><span class='w'>jeans</span><span class='w'>trousers</span><span class='w'>trainers</span><span class='w'>boots</span><span class='w'>coat</span><span class='w'>jacket</span><span class='w'>hat</span><span class='w'>scarf</span><span class='w'>sweater</span><span class='w'>skirt</span><span class='w'>dress</span><span class='w'>shorts</span><span class='w'>sunglasses</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I'm buying comics. · You/We/They're wearing costumes. · He/She/It's drawing a comic. · I'm not listening. · You/We/They aren't listening. · He/She/It isn't listening.</div></div>
+      <div class="r"><div class="k">Form</div><div>большинство глаголов: + -ing (buy → buying, wear → wearing) · глаголы на -e: убираем e + -ing (take → taking, come → coming) · часть глаголов «согласная + гласная + согласная»: удваиваем согласную (swim → swimming, run → running, sit → sitting)</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>SB p.116 /n/ vs /ŋ/: thin–thing · win–wing · go in–going; окончание -ing не «-инг», а носовое /ŋ/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«He wearing a hat» — что потерялось? → форма be: He's wearing a hat.</div><div class='ccq'>«Yes, they're.» — так можно ответить? → нет: в кратком утвердительном ответе форма полная — Yes, they are. / Yes, I am.</div><div class='ccq'>takeing или taking? → taking: у глаголов на -e букву e убираем.</div><div class='ccq'>swiming или swimming? → swimming: согласная + гласная + согласная → удваиваем.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.40 + Spelling rules p.45 + Pronunciation p.116, КТП пара 23. Для части детей форма реально новая — строю на примерах уже прочитанного текста (знакомый контекст).</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Забывают be: «He wearing»</td><td>Цветовой код: be — красный маркер, -ing — синий; в каждом предложении на доске обе краски. Нет красного — предложение не готово.</td></tr><tr><td>Спеллинг -ing путается</td><td>Сортировка руками (карточки в три корзины) ДО письма; плакат-шпаргалка на стене до конца юнита.</td></tr><tr><td>Страх письменных ошибок</td><td>Все письменные заходы — с самопроверкой по ключу, до чужих глаз. Баллы не ставлю.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 3 “Dressing up” (Why do people dress up?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U3 «Dressing up» · P3 · линия «новые» 🌱</span>
+  </div>
+</div>

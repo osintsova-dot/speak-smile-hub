@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2 · Unit 5 · Pair 5 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 5 “Must try!” · Pair 5 — Mission «City Interrogation»: twenty questions, five seconds each</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «наши» 🚀 после A1+</b> · 90 min · mission-based: gate → base sprint → challenge → bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Lessons 81–82 (KTP pair 42) · Март</span><span class='chip new'>🚀 наши · после A1+</span><span class='chip'>SB p.66</span><span class='chip'>unit leaderboard · gold runs</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2-u5-p5.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u5.html" target="_blank" rel="noopener">🎮 Игры юнита 5 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p5.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>вход + повтор P4: три места города, которые есть у нас, и три, которых нет</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p5.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия допроса: 20 вопросов по 5 секунд, кривой вопрос сгорает</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p5.html#5' target='_blank' rel='noopener' title='слайд 5'>8–13′</a></td><td class='gname'>Входной тест (gate): 90 сек вопросов о городе</td><td>90 сек: максимум вопросов о городе (любых) — засчитываются только грамматически чистые</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p5.html#6' target='_blank' rel='noopener' title='слайд 6'>13–27′</a></td><td class='gname'>Спринт: набор вопросов следователя</td><td>ex.1 таблицу вопросов достраивают сами → ex.2–3 два захода → Showdown на 6 флипах</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p5.html#7' target='_blank' rel='noopener' title='слайд 7'>27–39′</a></td><td class='gname'>Челлендж: much или many за 5 секунд</td><td>ex.4 восстановить вопросы по ответам → ex.5 правило much/many выводят сами → ex.6–7 конвейером по 5 секунд</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p5.html#8' target='_blank' rel='noopener' title='слайд 8'>39–45′</a></td><td class='gname'>Клиника: разбор сгоревших вопросов</td><td>безымянный разбор 5 сгоревших вопросов, собранных за пару</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p5.html#9' target='_blank' rel='noopener' title='слайд 9'>45–47′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p5.html#10' target='_blank' rel='noopener' title='слайд 10'>47–58′</a></td><td class='gname'>Бонус-уровень: этого нет в учебнике</td><td>уровень для наших: Grammar round-up про Чикаго (ex.9) как «досье на самый счастливый город»</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p5.html#11' target='_blank' rel='noopener' title='слайд 11'>58–74′</a></td><td class='gname'>Продукт: допрос города</td><td>допрос: крю против крю, 20 вопросов о родном городе по 5 секунд; ответы обязательны короткие; счёт по чистым вопросам</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p5.html#12' target='_blank' rel='noopener' title='слайд 12'>74–82′</a></td><td class='gname'>Реванш gate + лидерборд</td><td>реванш question sprint (90 сек) — считаем только чистые вопросы</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u5-p5.html#13' target='_blank' rel='noopener' title='слайд 13'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>рефлексия + ДЗ + тизер P6</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 5 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Вторая грамматическая пара, но тема НЕ «Is there / How much», а «допрос города»: крю выпускает следователя, который за 5 секунд должен задать вопрос, — и кривой вопрос сгорает вместе с ходом. Это единственный способ довести Is there / Are there и How much / How many до автоматизма без объявления грамматики. Grammar round-up про Чикаго (ex.9) идёт бонус-уровнем как «отчёт по самому счастливому городу мира».</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Interrogation room.</b> A city is on trial and you are the investigators. Twenty questions, five seconds each. Is there a skate park? How many libraries are there? How much traffic is there? Get the form wrong and the question burns — the city walks free. Two traps, and I'm telling you honestly: things you can count and things you can't, and where 'are there' goes in the sentence. Then the final file: the happiest city in the world. It's not the one you think. <b>Begin.”</b><div class='pitchru'>Суть по-русски, если нужно поддержать: допрос города: двадцать вопросов, по 5 секунд на каждый. Кривой вопрос сгорает вместе с ходом. Две ловушки — что считается, а что нет, и куда уходит «are there». В финале — досье на самый счастливый город мира.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вход + повтор P4: три места города, которые есть у нас, и три, которых нет</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Warm the mic: three places our town HAS, three it HASN'T. Ten seconds each!</span></li><li>Пишу на доске крупно: <span class='en'>There IS a skate park. There AREN'T any music venues.</span></li><li>Мостик: <span class='en'>You can say what's there. Today you learn to ASK — and the asking is where people fall.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> разгоняются на вчерашней лексике</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия допроса: 20 вопросов по 5 секунд, кривой вопрос сгорает</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Twenty questions. Five seconds each. Wrong form — the question burns.</span></li><li><span class='ig'>🏆 <b>Планка продукта (рубрика судей):</b> Fluency — паузы ≤3 сек (1–3) · Accuracy — форма чистая, без «there is three» и «how much museums» (1–3) · Richness — детали, цифры, прилагательные (1–3). 9/9 = gold run, +5.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> принимают правила игры</div></td><td class='mat'>слайд 4</td></tr><tr class='True'><td class='min'>8–13′</td><td class='stage'><div class='nm'>Входной тест (gate): 90 сек вопросов о городе</div><div class='sub'>🎯 GATE · question sprint</div><div class='zone'>solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 90 сек: максимум вопросов о городе (любых) — засчитываются только грамматически чистые</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ninety seconds. Questions about a city. A broken question is not a question. GO!</span></li><li>Счёт приватно. <span class='en'>Keep the number. Rematch at the end.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · тетради</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут на скорость. Ожидаемо: 5–9 вопросов, из них чистых 3–5; «Are there a …» у половины</div></td><td class='mat'>слайд 5 · таймер</td></tr><tr><td class='min'>13–27′</td><td class='stage'><div class='nm'>Спринт: набор вопросов следователя</div><div class='sub'>⚡ Base sprint · the interrogation kit</div><div class='zone'>crews · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1 таблицу вопросов достраивают сами → ex.2–3 два захода → Showdown на 6 флипах</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.1: <span class='en'>Look at the table. Fill the four gaps yourselves — three minutes.</span> (ключ TB: 1 Is · 2 isn't · 3 Are · 4 aren't). Правило формулируют они, я подтверждаю.</li><li>Приём TB перед ex.2: <span class='en'>For each question — is the noun singular, plural, or uncountable? Point at it first.</span></li><li>ex.2 ключ TB: 1 Is there · 2 Are there · 3 Are there · 4 Is there. ex.3 — короткие ответы про себя (ключ TB: Yes, there is./No, there isn't. и Yes, there are./No, there aren't.).</li><li>Kagan <b>Showdown</b>: я называю место — все пишут вопрос — <span class='en'>Boards up!</span> 6 раундов (library · cycle lanes · street food · museums · underground · traffic).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.66 ex.1–3 · мини-доски · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> достраивают правило из примеров. Ожидаемо: к 4-му флипу «одно — Is, много — Are» проговаривают хором. Ошибка: some в вопросе — напоминаю про any</div></td><td class='mat'>слайд 6 · таймер</td></tr><tr><td class='min'>27–39′</td><td class='stage'><div class='nm'>Челлендж: much или many за 5 секунд</div><div class='sub'>🔥 Challenge · much or many</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.4 восстановить вопросы по ответам → ex.5 правило much/many выводят сами → ex.6–7 конвейером по 5 секунд</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.4 гонкой: <span class='en'>You have the answer. Build the question. Use a or any.</span> (ключ TB: 2 Is there an underground in your town? No, there isn't. · 3 Are there (any) fast-food restaurants? Yes, there are. · 4 Are there any juice bars? No, there aren't. · 5 Is there any good live music? No, there isn't). Напоминание TB: перед гласной — an.</li><li>ex.5: <span class='en'>Two sentences in the table. Which word goes with things you can count?</span> (ключ TB: 1 uncountable · 2 countable).</li><li>ex.6 конвейером по 5 сек (ключ TB: 1 How many · 2 How much · 3 How much · 4 How many · 5 How many) — и сразу отвечаем про свой город.</li><li>ex.7: пять вопросов из слов, обязателен вспомогательный глагол (ключ TB: 1 How many brothers and sisters have you got? · 2 How much homework do you do at weekends? · 3 How much time do you spend watching TV? · 4 How many comics or magazines do you read? · 5 How much fruit do you eat every day?).</li><li>Ограничитель: 5 секунд на ход; ошибка формы — ход сгорает и переходит соседней крю.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.66 ex.4–7 · таймер 5 сек</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> собирают вопросы конвейером. Ошибка: «How much time do you spend to watch TV» — CCQ «после spend идёт -ing»</div></td><td class='mat'>слайд 7 · таймер</td></tr><tr><td class='min'>39–45′</td><td class='stage'><div class='nm'>Клиника: разбор сгоревших вопросов</div><div class='sub'>Клиника сгоревших вопросов</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> безымянный разбор 5 сгоревших вопросов, собранных за пару</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Burnt questions board. Five real ones from the last thirty minutes. Fix them — five seconds each.</span></li><li>Are there a library? → Is there · How much museums? → How many · How many homework? → How much · How many are there cycle lanes? → How many cycle lanes are there? · Is there some street food? → any.</li><li>Приём TB: показываю пальцем по строке, где стоит существительное и куда уходит are there.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд клиники</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> чинят по цепочке. Ожидаемо: узнают свои — авторов не называю</div></td><td class='mat'>слайд 8</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>I say a noun. HOW MANY — jump! HOW MUCH — sit down! Cinemas! Traffic! Cycle lanes! Time! Museums! Water! Homework!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> телом закрепляют деление</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>47–58′</td><td class='stage'><div class='nm'>Бонус-уровень: этого нет в учебнике</div><div class='sub'>🚀 Bonus level · not in the book</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> уровень для наших: Grammar round-up про Чикаго (ex.9) как «досье на самый счастливый город»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Final file: the happiest city in the world. Not Melbourne. Not Madrid. Not New York. Eight gaps, five minutes — and half of them are from Unit 4.</span></li><li>Ключ TB ex.9: 1 b best · 2 c There are · 3 c doesn't · 4 a than · 5 b some · 6 c cycling · 7 b can · 8 c How many.</li><li>Follow-up вопросы TB: <span class='en'>Is the street food in Chicago expensive? Does the text say Melbourne isn't a good place to live? Which things are fun to do there at weekends?</span></li><li>Приём для сильных (Challenge TB): <span class='en'>Cover the options and complete the text from your own head first.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.66 ex.9 · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> закрывают round-up. Ожидаемо: п.3 (doesn't cost) и п.6 (cycling после like) ловят половину</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>58–74′</td><td class='stage'><div class='nm'>Продукт: допрос города</div><div class='sub'>PRODUCT · the city interrogation</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> допрос: крю против крю, 20 вопросов о родном городе по 5 секунд; ответы обязательны короткие; счёт по чистым вопросам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Подготовка 5 мин: <span class='en'>Ten questions with Is/Are there, five with How many, five with How much. Write them. Check the nouns.</span></li><li>Допрос: <span class='en'>Crew A asks, crew B answers — five seconds per question, short answers only. Then swap.</span></li><li>Судьи считают: +1 за чистый вопрос · +1 за верный короткий ответ · 0 за сгоревший.</li><li>Финал: <span class='en'>Look at your answers. So — is OUR town a good place to live in? One sentence, with a number in it.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер 5 сек · бланк счёта · рубрика</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> допрашивают друг друга. Ожидаемо: к 15-му вопросу форма встаёт сама — скорость сделала своё</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Реванш gate + лидерборд</div><div class='sub'>Rematch + leaderboard</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> реванш question sprint (90 сек) — считаем только чистые вопросы</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Same ninety seconds. Only CLEAN questions count. Beat your morning number!</span></li><li><span class='en'>Hands up if you beat yourself.</span> Очки в лидерборд.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> видят рост за пару. Ожидаемо: +3–4 чистых вопроса</div></td><td class='mat'>слайд 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия + ДЗ + тизер P6</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…» тапами.</li><li>ДЗ: WB стр. 39, зад. 1–6 (Is there/Are there + How much/many) — база; 🚀 бонус: задание TB Homework — выбери другой город региона и узнай, сколько там футбольных команд, кинотеатров, спортцентров и театров (5 строк с How many).</li><li>Тизер: <span class='en'>Next: you're standing outside a school in a town you've never seen, and someone asks you the way to the library. Can you get them there?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 39, зад. 1–6 (Is there … ? / Are there … ? + How much / How many, включая FAQ про Dubai Mall).</p><p>🚀 Бонус (+3): задание TB Homework — другой город нашего региона: сколько футбольных команд, кинотеатров, ресторанов с международной кухней, спортцентров и театров (5 строк с How many).</p></td><td class='mat'>WB Unit 5 · очки в лидерборд</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, crews can <b>ask and answer Is there…? / Are there…? questions</b> with correct short answers and <b>choose How much or How many correctly</b>, at speed (5 seconds per question).</li>
+      <li><span class="lb">Subsidiary.</span> ex.1 таблица вопросов; ex.2–4 три захода на форму; ex.5 правило much/many выводят сами; ex.6–8 свои вопросы и интервью; ex.9 Grammar round-up (Chicago); клиника сгоревших вопросов.</li>
+      <li><span class="lb">Personal.</span> Правило НЕ объясняю первым — дети достраивают таблицу из примеров ex.1. Порядок слов (are there в конце) показываю пальцем по строке, как советует TB. Разбор ошибок безымянный.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>ask Is there…? / Are there…? and give short answers</li><li>choose How much or How many by the noun</li><li>put 'is there / are there' in the right place in the question</li><li>ask 20 questions about a city in 100 seconds without a form error</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Clinic</span><span>Bonus</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>bike station</span><span class='w'>bus stop</span><span class='w'>cycle lane</span><span class='w'>department store</span><span class='w'>fast-food restaurant</span><span class='w'>juice bar</span><span class='w'>library</span><span class='w'>museum</span><span class='w'>music venue</span><span class='w'>skate park</span><span class='w'>sports centre</span><span class='w'>underground station</span><span class='w'>bus station</span><span class='w'>underground station</span><span class='w'>train station</span><span class='w'>petrol station</span><span class='w'>police station</span><span class='w'>bike station</span><span class='w'>town centre</span><span class='w'>shopping centre</span><span class='w'>sports centre</span><span class='w'>medical centre</span><span class='w'>city centre</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Is there a sports centre? — Yes, there is. / No, there isn't. · Is there any street food? · Are there five football teams? — Yes, there are. / No, there aren't. · Are there any cycle lanes? · How much traffic is there? — A lot. / Some. / Not much. · How many cycle lanes are there? — A lot. / Some. / Not many.</div></div>
+      <div class="r"><div class="k">Form</div><div>Is there … ? — с единственным исчисляемым и с неисчисляемым; Are there … ? — с множественным · в вопросе обычно any, а не some: Are there any juice bars? · How much — с неисчисляемыми (traffic, homework, time, fruit, public transport) · How many — с исчисляемыми во множественном (libraries, skate parks, cinemas) · порядок слов (TB просит показать пальцем): How many cycle lanes ARE THERE? — is there / are there идут в конец вопроса</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>Is there /ɪz ðeə/ — слитно, без паузы · в вопросе интонация ВОСХОДЯЩАЯ: Is there a skate park? ↗ · в How much/many — нисходящая: How many libraries are there? ↘</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«Are there a library?» — почему нельзя? → library одно: Is there a library?</div><div class='ccq'>«How much museums are there?» — исправь. → museums считаются: How MANY museums are there?</div><div class='ccq'>«How many homework do you do?» → homework не считается: How MUCH homework do you do?</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.66, КТП пара 42 (обе половины — грамматика). Утвердительные there is/are закрыты на P3; новизна — вопросительная форма, короткие ответы и much/many. Grammar round-up повторяет ещё и Unit 4 (сравнительные, must/can).</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>«Are there a library?» — калька с русского</td><td>Правило следователя: сначала пальцем на существительное (одно или много?), потом первое слово вопроса. Ошибка = ход сгорает.</td></tr><tr><td>«How many homework» — русская логика</td><td>Стена P3 работает и здесь: список неисчисляемых висит весь урок; в дуэли эти слова я подсовываю специально.</td></tr><tr><td>Порядок слов: «How many are there cycle lanes?»</td><td>Приём TB: показываю пальцем по строке — существительное сразу за How many, а are there уходит в конец.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 5 “Must try!” (What makes a town a good place to live in?) · GIA2 — lesson plan &amp; staging</span>
+    <span>GIA2 · U5 «Must try!» · P5 · линия «наши» 🚀</span>
+  </div>
+</div>

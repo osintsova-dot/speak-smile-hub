@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 4 · Pair 5 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 4 “Extremes” · Pair 5 — Грамматика: must / mustn't / can / can't — правила и разрешения</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «новые» 🌱 со стороны</b> · 90 min · опоры: модель → word bank → черновик → продукт с листом · командный счёт · стикеры 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 65–66 (KTP pair 34) · Февраль</span><span class='chip new'>🌱 новые · опоры и модель</span><span class='chip'>SB p.54 (+ Pronunciation p.116)</span><span class='chip'>командный счёт · самопроверка</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2new-u4-p5.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u4.html" target="_blank" rel="noopener">🎮 Игры юнита 4 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u4-p5.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>повтор P4: жест-блиц по предметам + одна строка «мой рюкзак»</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u4-p5.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: три цвета, четыре слова, свои шесть правил</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u4-p5.html#5' target='_blank' rel='noopener' title='слайд 5'>8–22′</a></td><td class='gname'>Открытие: три цвета — обязан, можно, нельзя</td><td>фразы Бретта на цветных карточках → раскладываем по трём колонкам (ex.1) → смысл колонок</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u4-p5.html#6' target='_blank' rel='noopener' title='слайд 6'>22–34′</a></td><td class='gname'>Формы: таблицы и переписывание</td><td>ex.2 две таблицы форм (утв./отр. и вопрос/краткий ответ) → ex.3 переписывание по символам с самопроверкой</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u4-p5.html#7' target='_blank' rel='noopener' title='слайд 7'>34–45′</a></td><td class='gname'>Практика: правила парка и школы</td><td>ex.4 переписать правила парка модальными (по одному, с разбором) → ex.5 школьные правила под свою школу</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u4-p5.html#8' target='_blank' rel='noopener' title='слайд 8'>45–47′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u4-p5.html#9' target='_blank' rel='noopener' title='слайд 9'>47–56′</a></td><td class='gname'>Произношение: сильное и слабое can</td><td>SB p.116: слабое /kən/ в вопросах и утверждениях, сильное /kæn/ в кратких ответах</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u4-p5.html#10' target='_blank' rel='noopener' title='слайд 10'>56–72′</a></td><td class='gname'>Продукт: шесть правил моего места</td><td>6 правил для выбранного места (моя комната · наш кабинет · парк) → самопроверка → читаем партнёру → добровольцы</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u4-p5.html#11' target='_blank' rel='noopener' title='слайд 11'>72–82′</a></td><td class='gname'>Мини-тест с самопроверкой + счёт</td><td>6 заданий (выбрать модальный + собрать вопрос) → ключ → приватный счёт → очки командам</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u4-p5.html#12' target='_blank' rel='noopener' title='слайд 12'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>ДЗ с образцом + тизер P6</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 4 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Модальные — самая полезная структура для подростка: правила окружают его весь день. Поэтому пара строится лестницей: три цвета (обязан · можно · нельзя) → таблицы форм из знакомых фраз гида → переписывание правил парка → свои правила. Цвет развожу физически, чтобы выбор был виден глазами, а не вспоминался. Слабое и сильное can (SB p.116) даю в конце как «звучать по-настоящему».</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Four little words run the whole world.</b> MUST — you have no choice. CAN — you're allowed. CAN'T and MUSTN'T — no way. Brett said them all in Yosemite: 'You can take photos, but you mustn't take flowers.' Today we sort them by colour, build the tables, and at the end each of you writes six rules for a place you choose — your room, our classroom, a park. And they will all be correct.”<div class='pitchru'>Суть по-русски, если нужно поддержать: четыре слова, которые управляют всем: must (обязан), can (можно), can't и mustn't (нельзя). Разложим по цветам, соберём таблицы и напишем шесть правил для места, которое выберешь сам.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · вход + повтор</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> повтор P4: жест-блиц по предметам + одна строка «мой рюкзак»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Gesture blitz! One word or two? Then: one line from YOUR backpack.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки предметов</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> разгоняются на знакомом</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: три цвета, четыре слова, свои шесть правил</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Three colours, four words. At the end — six rules for a place you choose.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> план ясен</div></td><td class='mat'>слайд 4</td></tr><tr><td class='min'>8–22′</td><td class='stage'><div class='nm'>Открытие: три цвета — обязан, можно, нельзя</div><div class='sub'>Открытие · три цвета</div><div class='zone'>pairs → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> фразы Бретта на цветных карточках → раскладываем по трём колонкам (ex.1) → смысл колонок</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Карточки трёх цветов из брифинга P4: <span class='en'>You can take photos (green) · All food must go in these special boxes (blue) · You mustn't take any plants (red) · You can't leave any food in your backpack (red).</span></li><li><span class='en'>Three columns: obligation, permission, prohibition. Where does each one go?</span> Ключ TB ex.1: 1 must · 2 can · 3/4 can't / mustn't.</li><li>Смысл колонок словами TB: <span class='en'>obligation — no choice · permission — you're allowed, but you can say no · prohibition — not allowed.</span></li><li>Плакат на стену в три цвета + правило снизу: <span class='en'>MODAL + verb (no 'to', no '-s')</span>.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> цветные карточки · SB p.54 ex.1 · плакат</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выводят три колонки по цветам. Ожидаемо: цвет держит выбор надёжнее правила</div></td><td class='mat'>слайд 5</td></tr><tr><td class='min'>22–34′</td><td class='stage'><div class='nm'>Формы: таблицы и переписывание</div><div class='sub'>Формы · таблицы и переписывание</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.2 две таблицы форм (утв./отр. и вопрос/краткий ответ) → ex.3 переписывание по символам с самопроверкой</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.2 копируем таблицы, оставляя место. Ключ TB: утв./отр. — 1 All food must go in these special boxes · 2 You can't leave any food in your backpack; вопрос/краткий ответ — 3 Can we give food to the animals? · 4 No, you can't.</li><li>Полоски на партах: <span class='en'>CAN | we | take | photos?</span> — физически переставляем, пока порядок не станет автоматическим.</li><li>ex.3 письменно, символы ?, − и + разбираю ДО задания (совет TB). Ключ на слайде — сверяют сами: 2 You mustn't bring a small backpack · 3 Can I phone home at weekends? · 4 You can't drink the water here · 5 We can wear shorts today · 6 You must eat here · 7 Can we wear trainers for this walk?</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.54 ex.2–3 · полоски-карточки · ключ на слайде</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> собирают формы руками и проверяют себя. Ожидаемо: вопрос с Can впереди даётся легче, чем «без to»</div></td><td class='mat'>слайд 6</td></tr><tr><td class='min'>34–45′</td><td class='stage'><div class='nm'>Практика: правила парка и школы</div><div class='sub'>Practice · правила парка и школы</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.4 переписать правила парка модальными (по одному, с разбором) → ex.5 школьные правила под свою школу</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.4 по одному пункту, перед каждым решаем вместе: обязанность, разрешение или запрет (приём TB Reinforcement). Ключ TB: 2 You can come in a group of up to eight people · 3 You must come with an adult · 4 You mustn't / can't stay in the park overnight · 5 You can visit the park from March to November · 6 You must wear shoes, not open sandals.</li><li>ex.5 в крю: шесть школьных правил переписываем ТАК, КАК У НАС (ключ-ориентир TB: You can't use your mobile phone in class · You mustn't run in the school building · You can use a ball in the playground · You must wear uniform · You must arrive before 9:00 · You can't eat and drink in the classroom).</li><li>Kagan <b>Inside-Outside Circle</b>: внешний круг называет правило, внутренний отвечает <span class='en'>TRUE for our school</span> или исправляет; шаг вправо.</li><li>Читаем по кругу: <span class='en'>TRUE for our school or not?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.54 ex.4–5 · плакат трёх цветов</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> переписывают с опорой и спорят про свою школу. Ожидаемо: тема живая, английский держится сам</div></td><td class='mat'>слайд 7</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>MUST — stand up! CAN — sit down! MUSTN'T — arms crossed!</span> Я читаю правила, дети выбирают телом.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> закрепляют три колонки телом</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–56′</td><td class='stage'><div class='nm'>Произношение: сильное и слабое can</div><div class='sub'>Произношение · can</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> SB p.116: слабое /kən/ в вопросах и утверждениях, сильное /kæn/ в кратких ответах</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Listen: 'Can I go?' — that's /kən/, quick and quiet. 'Yes, you CAN.' — that's /kæn/, loud.</span></li><li>Диалог p.116 ex.2 разбираем вместе. Ключ TB: 1 /kən/ · 2 /kæn/ · 3 /kən/ · 4 /kən/ · 5 /kæn/ · 6 /kən/.</li><li>Читаем диалог в парах, меняемся ролями. Дирижирую рукой: слабое — тихо, сильное — громко.</li><li>Плюс факт TB: в mustn't первая t не произносится — /ˈmʌs(ə)nt/.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.116 · аудио 67–68 (запасной вариант — произношу пары сама и дирижирую рукой)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> берут «взрослый» звук. Ожидаемо: слабое can заходит как трюк — просят повторить</div></td><td class='mat'>слайд 8</td></tr><tr class='True'><td class='min'>56–72′</td><td class='stage'><div class='nm'>Продукт: шесть правил моего места</div><div class='sub'>PRODUCT · правила моего места</div><div class='zone'>solo → pairs → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 6 правил для выбранного места (моя комната · наш кабинет · парк) → самопроверка → читаем партнёру → добровольцы</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Выбор места: <span class='en'>Your room, our classroom, the park, the school bus — you choose.</span></li><li>Рамка: <span class='en'>You must … . You mustn't … . You can … . You can't … . Can you … ? — Yes, you can. / No, you can't.</span></li><li>Самопроверка по чек-листу из 3 пунктов: нет ли to? нет ли -s? есть ли хотя бы один вопрос с ответом?</li><li>Читаем партнёру, потом 3–4 добровольца классу — с листом в руке. Правила вешаем на стену юнита.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> рамка · чек-лист · стена юнита</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проходят полный цикл: написал → проверил → прочитал. Ожидаемо: 6 верных правил у каждого</div></td><td class='mat'>слайды 9–10</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Мини-тест с самопроверкой + счёт</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 6 заданий (выбрать модальный + собрать вопрос) → ключ → приватный счёт → очки командам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Six items, then the key. Circle your slips — they're yours only.</span></li><li>Бонус для быстрых: Grammar round-up ex.6 (ключ TB: 1 sometimes go · 2 it · 3 best · 4 you are wearing · 5 harder · 6 more interesting · 7 can go · 8 we always go · 9 must listen).</li><li>Стикеры 🟢🟡🔴.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-тест · SB p.54 ex.6 · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проверяют себя</div></td><td class='mat'>слайд 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ДЗ с образцом + тизер P6</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ДЗ: WB стр. 31, зад. 1–3 — образец на слайде.</li><li>Тизер: <span class='en'>Next: how to agree on a day out in English — and how to write instructions so nobody packs the wrong bag.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 31, зад. 1–3 (modal verbs) — образец показан на уроке.</p><p>🌱 По желанию: зад. 4–5 (свои вопросы и ответы).</p></td><td class='mat'>WB Unit 4 · плакат трёх цветов остаётся в классе · правила крю на стене</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>use must / mustn't / can / can't correctly</b> in affirmative, negative and question forms, checked by themselves against keys.</li>
+      <li><span class="lb">Subsidiary.</span> Guided discovery из фраз брифинга P4 (ex.1); ex.2 две таблицы форм; ex.3 переписывание по символам ?, −, +; ex.4 правила парка; ex.5 школьные правила; произношение can /kən/ и /kæn/ (SB p.116); мини-тест с самопроверкой.</li>
+      <li><span class="lb">Personal.</span> Три цвета держатся весь урок (красный — нельзя, зелёный — можно, синий — обязан). Слежу за двумя вещами: нет to после must/can и нет -s в 3-м лице. Grammar round-up (ex.6) даю как бонус для быстрых.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>put a rule in the right colour (obligation / permission / prohibition)</li><li>build a question with Can and a short answer</li><li>rewrite a rule as +, − or ?</li><li>write six correct rules for a place I choose</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Colours</span><span>Forms</span><span>Practice</span><span>Pronunciation</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>must</span><span class='w'>mustn't</span><span class='w'>can</span><span class='w'>can't</span><span class='w'>rules</span><span class='w'>allowed</span><span class='w'>visitors</span><span class='w'>adult</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Obligation: All food must go in these special boxes. · Permission: You can take photos. / Can we take food into the park? — Yes, you can. · Prohibition: You can't leave any food in your backpack. / You mustn't take any plants or flowers with you.</div></div>
+      <div class="r"><div class="k">Form</div><div>subject + can / can't / must / mustn't + голый глагол (без to и без -s: She can swim, НЕ «She cans swim») · вопрос: Can + subject + verb? · краткий ответ: Yes/No, + subject + can/can't</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>SB p.116: в вопросах и утверждениях can безударное — /kən/; в кратких ответах ударное — /kæn/. can't в британском /kɑːnt/, в американском /kænt/. В mustn't первая t не произносится: /ˈmʌs(ə)nt/ (совет TB)</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«You must to wear boots» — что лишнее? → to: You must wear boots.</div><div class='ccq'>«She cans swim» — исправь. → She can swim: у модальных нет -s в 3-м лице.</div><div class='ccq'>«Can we to take photos?» — а тут? → Can we take photos? — глагол голый.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.54 + Pronunciation p.116, КТП пара 34 (в КТП указана p.55 — сдвиг на +1, настоящая страница 54). can знаком как «умею»; can как разрешение и must/mustn't — новое.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>must to / can to</td><td>Плакат «MODAL + голый глагол» на стене; при ошибке показываю на плакат и делаю жест «убрать to», не проговариваю.</td></tr><tr><td>Путают can't и mustn't</td><td>Для этой линии упрощаю (по TB): оба = нельзя; тонкость объясняю одной фразой — can't «так по правилам», mustn't «я запрещаю»; ошибкой не считаю.</td></tr><tr><td>Вопрос строят как утверждение</td><td>Цветные карточки-полоски: CAN — subject — verb; физически переставляем полоски, пока порядок не станет автоматическим.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 4 “Extremes” (How does the weather affect the way we live?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U4 «Extremes» · P5 · линия «новые» 🌱</span>
+  </div>
+</div>

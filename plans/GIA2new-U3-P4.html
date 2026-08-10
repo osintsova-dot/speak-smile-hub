@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 3 · Pair 4 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 3 “Dressing up” · Pair 4 — Описываем одежду + аудирование: репортаж с No Uniform Day</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «новые» 🌱 со стороны</b> · 90 min · опоры: модель → word bank → черновик в команде → продукт с листом · командный счёт · самопроверка по ключу</div>
+    <div class="meta"><span class='chip'>Lessons 45–46 (KTP pair 24) · Декабрь</span><span class='chip new'>🌱 новые · опоры и самопроверка</span><span class='chip'>SB p.41</span><span class='chip'>командный счёт · стикеры 🟢🟡🔴</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2new-u3-p4.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u3.html" target="_blank" rel="noopener">🎮 Игры юнита 3 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p4.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход: приветствие + повтор прошлой пары</td><td>повтор P3: три предложения о том, что происходит в классе (по записям)</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p4.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: прилагательные парами + репортаж + свой образ на день без формы</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p4.html#5' target='_blank' rel='noopener' title='слайд 5'>8–24′</a></td><td class='gname'>Прилагательные парами (антонимы)</td><td>семь пар антонимов с жестами: узнавание → называние → ex.1 матчинг с фото</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p4.html#6' target='_blank' rel='noopener' title='слайд 6'>24–32′</a></td><td class='gname'>Игра на антонимы (Quiz-Quiz-Trade)</td><td>ex.2 (семь пар) с самопроверкой + Quiz-Quiz-Trade по карточкам</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p4.html#7' target='_blank' rel='noopener' title='слайд 7'>32–47′</a></td><td class='gname'>Аудирование: репортаж с No Uniform Day</td><td>три шага: кто и где говорит → кто в чём (таблица-опора) → что думают о форме</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p4.html#8' target='_blank' rel='noopener' title='слайд 8'>47–49′</a></td><td class='gname'>Переход-разминка</td><td>разминка на антонимах</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p4.html#9' target='_blank' rel='noopener' title='слайд 9'>49–58′</a></td><td class='gname'>Сравнение по рамке</td><td>форма vs своя одежда: три предложения по рамке + ex.7 плюсы и минусы</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p4.html#10' target='_blank' rel='noopener' title='слайд 10'>58–72′</a></td><td class='gname'>Продукт: презентация своего образа</td><td>мой образ на No Uniform Day: 4–5 строк по рамке + три прилагательных; speaker с листом</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p4.html#11' target='_blank' rel='noopener' title='слайд 11'>72–82′</a></td><td class='gname'>Счёт + блиц по антонимам</td><td>очки за станции и продукт + финальный блиц по семи парам</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p4.html#12' target='_blank' rel='noopener' title='слайд 12'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>ДЗ с образцом + тизер P5</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 3, стр. 20–27 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> 14 прилагательных вводятся ПАРАМИ антонимов, а не списком: семь пар запоминаются легче четырнадцати слов. Аудирование для новичков трёхшаговое: сначала «кто говорит и где» (безопасный вопрос, ошибиться почти нельзя), потом «кто в чём» с таблицей-опорой, и только потом мнения. Продукт — описание своего образа для дня без формы, по рамке.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Baggy or tight? Smart or casual?</b> Today you learn to say not just WHAT people wear, but what it's LIKE. Then — a real radio report: one day a year this school has No Uniform Day, and a reporter is asking students what they think. Three students, three opinions. And at the end — your own outfit for a No Uniform Day, with three adjectives.”<div class='pitchru'>Суть по-русски, если нужно поддержать: учимся говорить не только ЧТО на человеке, но и КАКОЕ это: baggy, smart, comfortable. Потом слушаем настоящий репортаж с дня без формы, а в конце собираем свой образ на такой день — с тремя прилагательными.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход: приветствие + повтор прошлой пары</div><div class='sub'>Opening · вход + повтор</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> повтор P3: три предложения о том, что происходит в классе (по записям)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Open your six lines from last time. Read ONE to a new partner. Listen for the 'is' and 'are'!</span></li><li>Мостик: <span class='en'>You can say WHAT people are wearing. Today: what it's LIKE.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> тетради · слайд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> повторяют свой продукт P3. Ожидаемо: be на месте у большинства</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: прилагательные парами + репортаж + свой образ на день без формы</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Seven pairs of opposites, one radio report, and your own outfit at the end.</span></li><li>Показываю рамку продукта сразу: <span class='en'>On No Uniform Day I'm wearing … . It's … and … . I like it because …</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> план ясен, продукт видно с самого начала</div></td><td class='mat'>слайд 4</td></tr><tr><td class='min'>8–24′</td><td class='stage'><div class='nm'>Прилагательные парами (антонимы)</div><div class='sub'>Прилагательные парами</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> семь пар антонимов с жестами: узнавание → называние → ex.1 матчинг с фото</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Пара за парой (картинка → хором → жест): <span class='en'>baggy — arms wide! tight — hug yourself! long — reach down! short — hands close! thick — puff up! thin — flat hands! smart — straighten your collar! casual — shrug! comfortable — relax! uncomfortable — squirm! trendy — pose! old-fashioned — old man walk! expensive — money fingers! cheap — thumbs down!</span></li><li>Узнавание: <span class='en'>I show the gesture — you shout BOTH words of the pair.</span></li><li>ex.1 p.41 с опорой: <span class='en'>Eight descriptions, eight photos.</span> Ключ: 1 B · 2 D · 3 G · 4 F · 5 C · 6 E · 7 A · 8 H. Разбираем по одному вслух.</li><li>Спеллинг-станция по 6 частотным: smart · casual · long · short · cheap · tight.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.41 ex.1 · слайды пар (запасной вариант — семь пар на доске двумя столбиками)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> берут прилагательные парами с жестами. Ожидаемо: пары держатся лучше списка; самые новые — baggy и old-fashioned</div></td><td class='mat'>слайды 5–6</td></tr><tr><td class='min'>24–32′</td><td class='stage'><div class='nm'>Игра на антонимы (Quiz-Quiz-Trade)</div><div class='sub'>Пары-антонимы: игра</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.2 (семь пар) с самопроверкой + Quiz-Quiz-Trade по карточкам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.2 письменно, потом ключ на слайде: 1 c (smart–casual) · 2 f (thick–thin) · 3 g (long–short) · 4 a (baggy–tight) · 5 b (comfortable–uncomfortable) · 6 d (trendy–old-fashioned) · 7 e (expensive–cheap).</li><li>Kagan <b>Quiz-Quiz-Trade</b>: на карточке слово — партнёр называет антоним — меняемся. 8 обменов.</li><li>ex.3 с готовыми вопросами на карточках: <span class='en'>Do you prefer casual clothes or smart clothes? Do you like baggy jeans?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки антонимов · SB p.41 ex.2–3 · ключ на слайде</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проверяют себя, потом ходят и обмениваются. Ожидаемо: к концу игры пары держатся у всех, кроме 2–3</div></td><td class='mat'>слайд 7</td></tr><tr><td class='min'>32–47′</td><td class='stage'><div class='nm'>Аудирование: репортаж с No Uniform Day</div><div class='sub'>Listening · репортаж с No Uniform Day</div><div class='zone'>screen · desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> три шага: кто и где говорит → кто в чём (таблица-опора) → что думают о форме</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Шаг 0 (контекст): fun facts p.41 — <span class='en'>Many schools with a uniform have a 'No Uniform Day'. Students pay £1 or $1 to wear their own clothes, and the money goes to a party, a trip or charity.</span> <span class='en'>Would that work in our school?</span></li><li>Шаг 1: <span class='en'>Don't catch facts. Just: how many people? where are they? who is asking the questions?</span> → сверка: репортёр Энди у школьных ворот, три ученика.</li><li>Шаг 2 (таблица-опора Ella / Dylan / Kate): ex.5 <span class='en'>What is he or she wearing today?</span> Ключ: Ella — a long dress and boots · Dylan — jeans and a hoodie · Kate — trousers and a top.</li><li>Шаг 3: ex.4 (кому нравится день — Ella yes · Dylan no · Kate yes) и ex.6 с опорой-подсказкой из четырёх слов на доске (smart · casual · expensive · uncomfortable). Ключ: 1 smart · 2 casual · 3 expensive · 4 uncomfortable и old-fashioned.</li><li>Если тонут — третье прослушивание с паузой после каждого интервью.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> аудио трек 21 (запасной вариант — читаю скрипт по ролям с помощником) · таблица-опора · четыре слова-подсказки на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают по шагам без паники. Ожидаемо: «кто и где» берут все, одежду — со второго раза, прилагательные — с подсказкой на доске</div></td><td class='mat'>слайд 8 · аудио</td></tr><tr><td class='min'>47–49′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка на антонимах</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>I say a word — you shout the OPPOSITE and show it: BAGGY! TIGHT! THICK! THIN! SMART! CASUAL!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> антонимы закрепляются телом</div></td><td class='mat'>—</td></tr><tr><td class='min'>49–58′</td><td class='stage'><div class='nm'>Сравнение по рамке</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> форма vs своя одежда: три предложения по рамке + ex.7 плюсы и минусы</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Рамка на экране: <span class='en'>Our uniform is … . My own clothes are … . I prefer … because …</span></li><li>Пары собирают три строки письменно, потом читают друг другу.</li><li>ex.7 с опорой — таблица из двух колонок: <span class='en'>uniform: good things / not so good things.</span> Даю два примера сам, дальше их идеи.</li><li>Добровольцы читают классу.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> рамка на слайде · таблица двух колонок</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> сравнивают с опорой. Ожидаемо: мнения разные, спорят охотно — прилагательные для этого и вводились</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>58–72′</td><td class='stage'><div class='nm'>Продукт: презентация своего образа</div><div class='sub'>PRODUCT · презентация образа</div><div class='zone'>solo → crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> мой образ на No Uniform Day: 4–5 строк по рамке + три прилагательных; speaker с листом</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Черновик 6 мин по рамке: <span class='en'>On No Uniform Day I'm wearing … . My … is/are … and … . I like it because it's … .</span> Word bank и пары антонимов — на экране.</li><li>Крю слушает всех своих и выбирает один образ для сцены (или выступают все — по времени).</li><li><span class='en'>Speakers: you can hold your notes. Three adjectives minimum.</span></li><li>Зал с задачей: <span class='en'>Thumbs up when you hear an adjective YOU also used.</span></li><li>Хвалю конкретно; ошибки у доски не разбираю.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> рамка · word bank · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выступают с опорой. Ожидаемо: все проходят сцену; три прилагательных звучат у большинства</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Счёт + блиц по антонимам</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> очки за станции и продукт + финальный блиц по семи парам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Final check: seven pairs, no notebooks! I say one — you say the other.</span></li><li>Очки командам; стикеры 🟢🟡🔴 на выходе.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> лидерборд · стикеры</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> закрепляют пары. Ожидаемо: 6 из 7 пар держатся</div></td><td class='mat'>слайд 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ДЗ с образцом + тизер P5</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ДЗ: WB стр. 22, зад. 1–2 (прилагательные и антонимы) + стр. 25, зад. 1 (аудирование — то же аудио, дома спокойно).</li><li>Тизер: <span class='en'>Next: two clocks. What you USUALLY do — and what you are doing RIGHT NOW. Two tenses, one lesson.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 22, зад. 1–2 (достроить прилагательные · написать антонимы) + стр. 25, зад. 1 (аудирование).</p><p>🌱 По желанию: зад. 3 (советы по стилю) — если легко пошло.</p></td><td class='mat'>WB Unit 3 · плакат с семью парами антонимов висит в классе</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>describe clothes with 14 adjectives in 7 opposite pairs</b>, catch who wears what in a live report, and <b>present their own No-Uniform-Day outfit</b> with a frame.</li>
+      <li><span class="lb">Subsidiary.</span> Subskill: слушать вопросы интервьюера, а не только ответы (в упрощённом виде — «кто спрашивает и о чём»); ex.1–3 p.41; ex.4–6 (таблица «кто в чём» + четыре прилагательных); ex.7 плюсы и минусы формы по рамке.</li>
+      <li><span class="lb">Personal.</span> Аудио страшнее текста — проигрываю трижды, если надо; после первого раза только безопасные вопросы (сколько голосов? где происходит?). Никогда не спрашиваю факт после первого прослушивания.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>name 14 adjectives about clothes in 7 opposite pairs</li><li>say who is talking and where before catching facts</li><li>fill a who-wears-what table from a report</li><li>describe an outfit with three adjectives and a reason</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Adjectives</span><span>Pairs game</span><span>Listening</span><span>Compare</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>baggy</span><span class='w'>casual</span><span class='w'>cheap</span><span class='w'>comfortable</span><span class='w'>expensive</span><span class='w'>long</span><span class='w'>old-fashioned</span><span class='w'>short</span><span class='w'>smart</span><span class='w'>thick</span><span class='w'>thin</span><span class='w'>tight</span><span class='w'>trendy</span><span class='w'>uncomfortable</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>These jeans are baggy. · My uniform isn't comfortable. · I like casual clothes because they're comfortable.</div></div>
+      <div class="r"><div class="k">Form</div><div>прилагательное ПЕРЕД вещью: a thick jacket · с be: These boots are expensive.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>по Wordlist: comfortable /ˈkʌmftəb(ə)l/ (три слога) · expensive /ɪkˈspensɪv/ · casual /ˈkæʒuəl/ · old-fashioned /ˌəʊld ˈfæʃ(ə)nd/ · cheap /tʃiːp/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«a jacket thick» — можно? → нет: a thick jacket, прилагательное впереди.</div><div class='ccq'>smart — это «умный»? → про одежду это «нарядный, аккуратный»; наоборот — casual.</div><div class='ccq'>Первый вопрос к любому аудио? → кто говорит и где, не факты.</div><div class='ccq'>cheap — это плохое качество? → нет, просто недорогое.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.41, КТП пара 24. Часть слов знакома (long, short, cheap), новые: baggy, casual, trendy, old-fashioned, tight, smart в «одёжном» значении.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>14 слов разом не влезают</td><td>Только парами антонимов, по 2–3 пары за заход; сначала узнавание, потом называние.</td></tr><tr><td>Паника на аудировании</td><td>Таблица-опора с готовыми колонками (Ella / Dylan / Kate); три прослушивания разрешены; первый вопрос всегда безопасный.</td></tr><tr><td>Спеллинг comfortable/old-fashioned</td><td>Спеллинг-станция только по 6 частотным (smart, casual, long, short, cheap, tight); остальные — узнавание.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 3 “Dressing up” (Why do people dress up?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U3 «Dressing up» · P4 · линия «новые» 🌱</span>
+  </div>
+</div>

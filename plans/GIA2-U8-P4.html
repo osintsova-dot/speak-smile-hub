@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2 · Unit 8 · Pair 4 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 8 “Summer fun” · Pair 4 — Mission «Rescue Ed's summer»: 15 идей против скуки</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «наши» 🚀 после A1+</b> · 90 min · mission-based: gate → base sprint → challenge → bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Lessons 127–128 (KTP pair 65) · Май</span><span class='chip new'>🚀 наши · после A1+</span><span class='chip'>SB p.101</span><span class='chip'>unit leaderboard · gold runs</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2-u8-p4.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u8.html" target="_blank" rel="noopener">🎮 Игры юнита 8 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p4.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>блиц-повтор P3: прогноз про сегодня + Timed RoundRobin про летние планы</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p4.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: спасаем лето Эда → семь дней, семь бесплатных занятий</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p4.html#5' target='_blank' rel='noopener' title='слайд 5'>8–14′</a></td><td class='gname'>Входной тест (gate): 90 сек — чем заняться</td><td>90 секунд: максимум занятий на каникулах по-английски — С правильным мотором глагола</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p4.html#6' target='_blank' rel='noopener' title='слайд 6'>14–28′</a></td><td class='gname'>Спринт: меню «отдых дома»</td><td>ex.1 блог о «staycation» → ex.2 семь определений → ex.3 три мотора</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p4.html#7' target='_blank' rel='noopener' title='слайд 7'>28–40′</a></td><td class='gname'>Челлендж: расшифруй три звонка</td><td>трек 50: шесть реплик — шесть чувств; продукция интонации до узнавания</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p4.html#8' target='_blank' rel='noopener' title='слайд 8'>40–46′</a></td><td class='gname'>Аудирование: три звонка</td><td>трек 51: три звонка — сначала настроение, потом планы, потом детали</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p4.html#9' target='_blank' rel='noopener' title='слайд 9'>46–48′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p4.html#10' target='_blank' rel='noopener' title='слайд 10'>48–58′</a></td><td class='gname'>Бонус-уровень: этого нет в учебнике</td><td>уровень для наших: «бесплатное лето» — цена как ограничитель + Research по своему городу</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p4.html#11' target='_blank' rel='noopener' title='слайд 11'>58–74′</a></td><td class='gname'>Продукт: спасаем лето Эда</td><td>план на семь дней для Эда: семь занятий, разные моторы, ноль рублей + подача 60 сек</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p4.html#12' target='_blank' rel='noopener' title='слайд 12'>74–82′</a></td><td class='gname'>Реванш gate + лидерборд</td><td>реванш gate (90 сек занятий с верным мотором) + очки в лидерборд</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u8-p4.html#13' target='_blank' rel='noopener' title='слайд 13'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>рефлексия + ДЗ + тизер P5</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 8 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Пятнадцать holiday activities вводятся не списком, а как аптечка от скуки: в аудировании есть реальный герой — Эд, у которого лето отменилось (друзья разъехались, семья никуда не едет), и он звонит от тоски в десять утра. Крю собирает ему неделю. Subskill (listening for feelings) работает как рабочий навык разведчика: сначала услышать НАСТРОЕНИЕ, потом факты. Going to и present continuous звучат в каждой реплике аудио, но темой урока НЕ объявляются — это работа на P5.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Someone is having the worst summer of his life.</b> His name is Ed. Karl's at summer camp, Piet's in Scotland, and his parents just told him the family isn't going anywhere this year. He called at ten in the morning to ask if you were still asleep. That's how bored he is. Your crew builds Ed a week — seven days, seven activities, and not one of them costs real money. And here's the catch: before you can help anyone, you have to HEAR them. Three calls. Three moods. <b>Ears on.”</b><div class='pitchru'>Суть по-русски, если нужно поддержать: у Эда рухнуло лето: друзья разъехались, семья никуда не едет, и он звонит в десять утра от скуки. Крю собирает ему неделю — семь дней, семь занятий, и все бесплатные. Но сначала надо научиться СЛЫШАТЬ настроение: три звонка, три состояния.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> блиц-повтор P3: прогноз про сегодня + Timed RoundRobin про летние планы</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>One prediction about today, five seconds: 'It will snow.' 'We won't finish the test.' Go!</span></li><li>Kagan <b>Timed RoundRobin</b>: <span class='en'>Twenty seconds each — one thing you do every summer holiday.</span></li><li>Мостик: <span class='en'>You can predict the future now. But can you hear a person's mood in three seconds? Today somebody needs that from you.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд повтора · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> говорят все одновременно. Ожидаемо: will в тонусе после клиники P3</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: спасаем лето Эда → семь дней, семь бесплатных занятий</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ed's friends are gone. His family isn't going anywhere. He called at ten in the morning just to talk.</span></li><li><span class='en'>Your crew builds him a week. Seven days, seven activities, zero money. But first — learn to hear him.</span></li><li><span class='ig'>🏆 <b>Планка продукта (рубрика судей):</b> Fluency — паузы ≤3 сек (1–3) · Accuracy — форма чистая, без «will to go» и «we meeting at 8» (1–3) · Richness — детали, время, места, цифры (1–3). 9/9 = gold run, +5.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии с «календарём Эда» — семь пустых клеток (запасной вариант — рисую семь клеток на доске и подписываю дни недели)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> включаются: история про скучающего подростка бьёт точно. Ожидаемо: сразу начинают предлагать идеи по-русски</div></td><td class='mat'>слайд 4</td></tr><tr class='True'><td class='min'>8–14′</td><td class='stage'><div class='nm'>Входной тест (gate): 90 сек — чем заняться</div><div class='sub'>🎯 GATE · activity sprint</div><div class='zone'>solo · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 90 секунд: максимум занятий на каникулах по-английски — С правильным мотором глагола</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ninety seconds. Holiday activities. But the verb must be right — 'go a walk' scores zero. GO!</span></li><li>Счёт приватно: сколько фраз и сколько с ВЕРНЫМ мотором.</li><li><span class='en'>Keep both numbers. Rematch at the end.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут молча на скорость. Ожидаемо: 6–10 фраз, верных моторов половина; типовое — «go to a walk», «make a barbecue», «go on the beach»</div></td><td class='mat'>слайд 5 · таймер</td></tr><tr><td class='min'>14–28′</td><td class='stage'><div class='nm'>Спринт: меню «отдых дома»</div><div class='sub'>⚡ Base sprint · staycation menu</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1 блог о «staycation» → ex.2 семь определений → ex.3 три мотора</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Подготовка к чтению (приём TB): <span class='en'>Look at the pictures, the title and the seven headings first. Then read FAST — don't read in detail yet.</span></li><li>ex.1 (ключ TB): go on a bus tour, go for a bike ride, have a barbecue, visit an art gallery, look after pets.</li><li>Семь заголовков блога вслух как меню: <span class='en'>Be a tourist at home · Get wet! · Spend time outside · Make mealtimes special · Enjoy the arts · Help out · Organise visits.</span></li><li>ex.2 на скорость (ключ TB: 1 go for a pizza · 2 go on a day trip · 3 hang out with friends · 4 go sightseeing · 5 stay with a friend · 6 go for a walk · 7 sunbathe). Совет TB: сильным — сначала угадать значение по контексту, потом сверить.</li><li>ex.3 — три мотора на доску навсегда (ключ TB: 1 go on · 2 go to · 3 go for). Extra activity TB: достраиваем колонки своими — go for a meal · go for a jog · go to a theme park · go to a museum · go on a walking tour · go on a boat (trip) · go on an excursion.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.101 ex.1–3 · три колонки на доске · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> закрывают блог и раскладывают фразы по моторам. Ожидаемо: «go for a pizza» удивляет — «почему не eat?»; объясняю как поход, а не еду</div></td><td class='mat'>слайд 6 · таймер</td></tr><tr><td class='min'>28–40′</td><td class='stage'><div class='nm'>Челлендж: расшифруй три звонка</div><div class='sub'>🔥 Challenge · decode the calls</div><div class='zone'>crews · audio</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> трек 50: шесть реплик — шесть чувств; продукция интонации до узнавания</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Разгон по TB (сначала ПРОИЗВОДИМ, потом узнаём): фраза <span class='en'>«The concert is tomorrow»</span> — прочитать её bored · confused · excited · surprised · nervous · sad. По крю, на скорость.</li><li>Слова-маркеры вслух (подсказка TB): <span class='en'>bored = 'This really isn't interesting.' · confused = 'I don't understand.' · excited = 'I can't wait!' · nervous = 'I feel a bit scared.'</span></li><li>ex.5 трек 50, шесть коротких реплик (ключ TB: 1 confused · 2 excited · 3 surprised · 4 sad · 5 nervous · 6 bored). Мини-доски одновременно.</li><li>Разбор: <span class='en'>Which WORDS told you? Which was the intonation only?</span></li><li>Ограничитель: <span class='en'>Eight seconds per answer. No word or intonation named — the point burns.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> аудио трек 50 · мини-доски (запасной вариант — читаю шесть реплик сам с TB стр. 136, с честной интонацией, по два раза каждую)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> производят интонацию, потом узнают. Ожидаемо: №3 (surprised) и №5 (nervous) путают — разбираем по словам «You're kidding!» и «Are you sure it's safe?»</div></td><td class='mat'>слайд 7 · audio · таймер</td></tr><tr><td class='min'>40–46′</td><td class='stage'><div class='nm'>Аудирование: три звонка</div><div class='sub'>Listening · three calls</div><div class='zone'>audio · crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> трек 51: три звонка — сначала настроение, потом планы, потом детали</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Первый проход — только настроение (ex.6, ключ TB: a Sam — excited · b Nina — sad · c Ed — bored). <span class='en'>One word each. Nothing else.</span></li><li>Второй проход — ex.7, кто о чём говорит (ключ TB: 1 Extract 3 · 2 Extract 1 · 3 Extract 2 · 4 Extract 3 · 5 Extract 2).</li><li>Третий проход — ex.8, детали (ключ TB: 1 at the bus station at eight o'clock · 2 on Saturday at six o'clock · 3 tomorrow · 4 this afternoon · 5 go for a walk or play video games).</li><li>Совет TB для менее уверенных: перед третьим проходом разбираем вслух, ЧТО именно ищем в каждом вопросе — время? место? занятие?</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> аудио трек 51 (запасной вариант — читаю три звонка сам с TB стр. 137, по очереди, с разной интонацией; текст сообщения Эда — самый важный, его читаю дважды)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают трижды с разными задачами. Ожидаемо: с третьего прохода детали берут почти все</div></td><td class='mat'>слайд 8 · audio</td></tr><tr><td class='min'>46–48′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Stand up. I say a feeling — you SHOW it with your face and one sound. Bored! Excited! Nervous! Surprised!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> изображают чувства, смеются</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>48–58′</td><td class='stage'><div class='nm'>Бонус-уровень: этого нет в учебнике</div><div class='sub'>🚀 Bonus level · not in the book</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> уровень для наших: «бесплатное лето» — цена как ограничитель + Research по своему городу</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Weak plan: 'Go to a water park.' In our town, in July, with no money? Dead on arrival.</span></li><li>Ограничитель бюджета: <span class='en'>Zero roubles. Every activity must be possible HERE, this summer, for free.</span></li><li>Апгрейд-рамки: <span class='en'>You can … without spending anything. · There's a free … near the … · If it rains, you can …</span></li><li>Идеи, которых нет в блоге, — из ex.9 и своей головы: <span class='en'>How long are the school holidays in our country? Do you ever feel bored in summer? What's the ideal number of weeks?</span></li><li>Каждое крю добавляет одно занятие, которого НЕТ в списке учебника, — и кладёт его в правильный мотор.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд с ограничителем «0 ₽» + три колонки моторов (запасной вариант — пишу «0 roubles» на доске и обвожу)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> изобретают локальные бесплатные идеи. Ожидаемо: спорят, что в Норильске летом реально, а что нет — самый живой момент</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>58–74′</td><td class='stage'><div class='nm'>Продукт: спасаем лето Эда</div><div class='sub'>PRODUCT · rescue Ed's summer</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> план на семь дней для Эда: семь занятий, разные моторы, ноль рублей + подача 60 сек</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Подготовка 7 мин: <span class='en'>Seven days, seven activities. All three verbs must appear: go on, go to, go for. And one day must work in the rain.</span></li><li>Роли: каждый участник крю озвучивает свои дни.</li><li><span class='en'>Sixty seconds. Judges: fluency, accuracy, richness — cards up!</span></li><li>Зал слушает с задачей: <span class='en'>Would this actually fix Ed's week? Vote with thumbs. And name the ONE day you'd steal for yourself.</span></li><li>Вызов зала: <span class='en'>You said 'go sightseeing'. Where exactly? Name the place.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер 60 сек · карточки судей · рубрика · календарь на семь клеток</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выступают по ролям, зал голосует. Ожидаемо: дни «в дождь» получаются лучше всего — именно там появляется games room, museum, video games</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Реванш gate + лидерборд</div><div class='sub'>Rematch + leaderboard</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> реванш gate (90 сек занятий с верным мотором) + очки в лидерборд</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Same ninety seconds. This time I only count phrases with the RIGHT verb.</span></li><li>Сравнение приватно: <span class='en'>Hands up if your 'correct verb' number doubled.</span></li><li>Мини-клиника: два слова дня — sunbathe · go for a pizza.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> видят рост в точности. Ожидаемо: моторы после трёх колонок держатся у большинства</div></td><td class='mat'>слайд 12 · таймер</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия + ДЗ + тизер P5</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…»: <span class='en'>Which line is TRUE for you now?</span></li><li>ДЗ: WB стр. 62, зад. 1–5 (12 фраз с моторами, фото a–f, советы для city break, текст про Tropical Island Resort, свои предложения) + WB стр. 65 зад. 1–4 (Mini dialogues, трек 16 — чувства) — база; 🚀 бонус: задание TB Homework — выбери одно чувство и напиши короткий диалог на 4–5 реплик с туристом на отдыхе; на следующей паре класс угадает, какое это чувство.</li><li>Тизер: <span class='en'>Sam said 'we're meeting at the bus station at eight'. Nina said 'I'm going to buy tickets tomorrow'. Two different futures in one conversation — and tomorrow you'll see why they can't swap.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают ДЗ. Ожидаемо: бонус-диалог с угадыванием чувства заходит — почти все делают</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 62, зад. 1–5 (12 фраз с моторами go/go for/go on/hang out/have/look after/stay with/visit, фото a–f, советы «Five easy ways to have a great city break», текст «Tropical Island Resort», свои предложения) + WB стр. 65, зад. 1–4 (Mini dialogues, трек 16 — чувства Зои, Гарри и Мишель).</p><p>🚀 Бонус (+3): диалог на 4–5 реплик с одним заданным чувством — класс угадает каким (задание TB Homework к Vocabulary and Listening).</p></td><td class='mat'>WB Unit 8 · три колонки моторов остаются на стене до конца юнита</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, crews can <b>use 15 holiday activity phrases with the right verb</b> (go on / go to / go for) and <b>identify a speaker's feelings and plans</b> from a phone message, then <b>present a seven-day rescue plan</b>.</li>
+      <li><span class="lb">Subsidiary.</span> Блог «Awesome things to do in the holidays!» (ex.1–4); ex.3 три мотора словосочетаний; subskill listening for feelings; трек 50 (шесть реплик); трек 51 (три звонка) — ex.6, 7, 8; ex.9 про свои каникулы.</li>
+      <li><span class="lb">Personal.</span> Про going to и present continuous молчу, хотя они в каждой реплике. Ошибки «we meeting at 8» собираю — материал P5.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>say 15 holiday activities with the correct verb (go on / go to / go for)</li><li>hear a speaker's feeling from their words and intonation</li><li>catch who is planning what, when and where from a phone message</li><li>present a seven-day plan of free activities</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Listening</span><span>Bonus</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>go for a bike ride</span><span class='w'>go for a pizza</span><span class='w'>go for a walk</span><span class='w'>go on a bus tour</span><span class='w'>go on a day trip</span><span class='w'>go sightseeing</span><span class='w'>go to a concert</span><span class='w'>go to a water park</span><span class='w'>hang out with friends</span><span class='w'>have a barbecue</span><span class='w'>look after a pet</span><span class='w'>stay with a friend</span><span class='w'>sunbathe</span><span class='w'>visit a museum or art gallery</span><span class='w'>visit family</span><span class='w'>bored</span><span class='w'>confused</span><span class='w'>excited</span><span class='w'>nervous</span><span class='w'>sad</span><span class='w'>surprised</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Go on a bus tour. · Go for a bike ride. · Go to a water park. · Hang out with friends. · Have a barbecue at home. · Look after neighbours' pets. · Volunteer for a local charity.</div></div>
+      <div class="r"><div class="k">Form</div><div>три мотора решают всё: go ON a bus tour / a day trip · go TO a water park / a concert · go FOR a bike ride / a walk / a pizza. Отдельно живут hang out with, have a barbecue, look after, stay with, visit, sunbathe.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>по Wordlist: sunbathe /ˈsʌnˌbeɪð/ · go sightseeing /ˌɡəʊ ˈsaɪtsiːɪŋ/ · have a barbecue /ˌhæv ə ˈbɑː(r) bɪˌkjuː/ · go for a bike ride /ˌɡəʊ fə(r) ə ˈbaɪk raɪd/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«go to a bike ride» — так можно? → нет: go FOR a bike ride. Мотор решает всё.</div><div class='ccq'>«sunbathe» — это загорать или купаться? → лежать на солнце; купаться — swim.</div><div class='ccq'>Как понять чувство по записи, если лица не видно? → по СЛОВАМ и по ИНТОНАЦИИ (subskill юнита).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.101, КТП пара 65. Часть фраз знакома (go for a walk, hang out); новое — go on a day trip, go sightseeing, sunbathe, look after a pet, visit a museum or art gallery, have a barbecue.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Мотор глагола плывёт (go to a walk)</td><td>Три колонки go on / go to / go for висят весь урок; каждая новая фраза кладётся детьми в колонку вслух.</td></tr><tr><td>Чувство угадывают наугад</td><td>Приём TB: беру нейтральную фразу «The concert is tomorrow» и прошу прочитать её скучающе, растерянно, взволнованно, испуганно — сначала производим, потом узнаём.</td></tr><tr><td>Аудио «слишком быстрое»</td><td>Три прохода с разными задачами: 1-й — только настроение, 2-й — кто что планирует, 3-й — детали. Каждый раз задача одна, а не три сразу.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 8 “Summer fun” (What's your idea of a good holiday?) · GIA2 — lesson plan &amp; staging</span>
+    <span>GIA2 · U8 «Summer fun» · P4 · линия «наши» 🚀</span>
+  </div>
+</div>

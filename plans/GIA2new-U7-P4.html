@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 7 · Pair 4 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 7 “Heroes” · Pair 4 — Какие бывают люди: прилагательные характера + подкаст про двух подростков</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «новые» 🌱 со стороны</b> · 90 min · опоры: модель → word bank → черновик → продукт с листом · командный счёт · стикеры 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 111–112 (KTP pair 57) · Май</span><span class='chip new'>🌱 новые · опоры и модель</span><span class='chip'>SB p.89</span><span class='chip'>командный счёт · самопроверка</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2new-u7-p4.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u7.html" target="_blank" rel="noopener">🎮 Игры юнита 7 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u7-p4.html#3' target='_blank' rel='noopener' title='слайд 3'>0–8′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>проверка ДЗ + хоровой дрилл восьми форм с плаката P3</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u7-p4.html#4' target='_blank' rel='noopener' title='слайд 4'>8–10′</a></td><td class='gname'>Завязка миссии</td><td>миссия пары: тринадцать слов о характере и шесть строк о человеке, которым горжусь</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u7-p4.html#5' target='_blank' rel='noopener' title='слайд 5'>10–24′</a></td><td class='gname'>Прилагательные по модели</td><td>модель прежде задания: мой человек на доске → ex.1 три дефиниции → ex.2 пять определений</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u7-p4.html#6' target='_blank' rel='noopener' title='слайд 6'>24–36′</a></td><td class='gname'>Противоположности по таблице</td><td>ex.3 пары противоположностей + таблица «положительное / отрицательное» + приставки</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u7-p4.html#7' target='_blank' rel='noopener' title='слайд 7'>36–38′</a></td><td class='gname'>Переход-разминка</td><td>физическая перезагрузка: 90 секунд движения</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u7-p4.html#8' target='_blank' rel='noopener' title='слайд 8'>38–46′</a></td><td class='gname'>Числа до прослушивания</td><td>ex.5 описание фото + проговариваем восемь чисел вслух хором</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u7-p4.html#9' target='_blank' rel='noopener' title='слайд 9'>46–58′</a></td><td class='gname'>Аудирование: подкаст по шагам</td><td>трек 46 в три захода: кто есть кто → числа → сверка</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u7-p4.html#10' target='_blank' rel='noopener' title='слайд 10'>58–72′</a></td><td class='gname'>Продукт: человек, которым я горжусь</td><td>письменная фиксация: шесть строк о человеке по рамке, потом читаем в паре и классу</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u7-p4.html#11' target='_blank' rel='noopener' title='слайд 11'>72–82′</a></td><td class='gname'>Мини-тест с самопроверкой + счёт</td><td>мини-тест 10 пунктов: 6 прилагательных по ситуации + 4 противоположности; проверка по ключу</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u7-p4.html#12' target='_blank' rel='noopener' title='слайд 12'>82–90′</a></td><td class='gname'>Финал: счёт, стикеры, ДЗ</td><td>командный счёт + стикеры 🟢🟡🔴 + ДЗ + тизер P5</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 7 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Прилагательные характера новичкам даются тяжелее внешности: их не видно. Поэтому идём через словарные дефиниции самого учебника (ex.1), потом через таблицу «положительное — отрицательное», потом через живых людей из подкаста. Subskill (listening for numbers) отрабатываем буквально: проговариваем все восемь чисел вслух ДО прослушивания, иначе ухо их не поймает.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Two teenagers today.</b> Easton was fourteen when he built a robot hand out of Lego. Amineh was thirteen when she won a poetry prize — in a language she started speaking one year ago. To talk about them you need words that describe PEOPLE, not faces: generous, talented, lazy, kind, careful. Today we learn thirteen of them and their opposites. At the end you write six lines about a person you're proud of. <b>Let's start with MY person…”</b> (и сразу показываю модель)<div class='pitchru'>Суть по-русски, если нужно поддержать: два подростка из подкаста — Easton с роботизированной рукой и Amineh с премией за стихи. Чтобы о них говорить, нужны слова про характер: generous, talented, lazy, kind, careful. Учим тринадцать и их противоположности, в конце пишем шесть строк о человеке, которым гордимся.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–8′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · вход + повтор</div><div class='zone'>circle → desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> проверка ДЗ + хоровой дрилл восьми форм с плаката P3</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Проверка ДЗ по рядам: <span class='en'>Your Goodwill Ambassador — read one sentence.</span></li><li>Хоровой дрилл с плаката: <span class='en'>begin–began · come–came · give–gave · ring–rang · see–saw · spend–spent · take–took · wake up–woke up.</span> Три раза.</li><li>Мостик: <span class='en'>You can say what people DID. Today: what people ARE LIKE.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> плакат восьми глаголов со стены (запасной вариант — плакат и есть запасной вариант: техника не нужна)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проговаривают формы хором. Ожидаемо: формы держатся с P3 благодаря плакату</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>8–10′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия пары: тринадцать слов о характере и шесть строк о человеке, которым горжусь</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Two teenagers, one robot hand, one poetry prize. To talk about them you need words about CHARACTER.</span></li><li><span class='en'>At the end: six lines about a person YOU are proud of. You can hold your notes.</span></li><li><span class='ig'>🟢🟡🔴 <b>Лист выхода:</b> 🟢 «сделал сам и уверен» · 🟡 «сделал с листом/подсказкой» · 🔴 «нужна помощь». Стикер клеится на свою работу, не на человека. Планка продукта — не скорость, а полнота: все блоки рамки на месте.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии + шесть фото SB p.89 (запасной вариант — фото есть в бумажном учебнике: открываем p.89 и описываем их прямо там)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают, понимают продукт. Ожидаемо: сразу называют человека по-русски — принимаю и перевожу вслух</div></td><td class='mat'>слайд 4</td></tr><tr><td class='min'>10–24′</td><td class='stage'><div class='nm'>Прилагательные по модели</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> модель прежде задания: мой человек на доске → ex.1 три дефиниции → ex.2 пять определений</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>МОДЕЛЬ: рассказываю СВОЕГО человека: <span class='en'>My grandmother is very kind. She's generous — she gives her time to everybody. She isn't lazy at all.</span></li><li>ex.1 по словарным дефинициям учебника (ключ TB: A lazy · B talented · C generous). Каждое слово с жестом: lazy — сползаю по стулу; talented — «класс» двумя руками; generous — отдаю воображаемое.</li><li>ex.2 письменно, с word bank (ключ TB: 1 polite · 2 special · 3 careful · 4 friendly · 5 kind). Вопрос вслух: <span class='en'>Positive or negative? All five — positive.</span></li><li>Kagan <b>RallyRobin</b>: по очереди в паре по одному слову с примером про себя.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.89 ex.1–2 · word bank на экране (запасной вариант — word bank крупно на доске, стирать до конца пары нельзя)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> повторяют модель, вписывают слова. Ожидаемо: включаются через жесты. Ошибка: «talent» вместо talented — показываю окончание на доске</div></td><td class='mat'>слайды 5–6</td></tr><tr><td class='min'>24–36′</td><td class='stage'><div class='nm'>Противоположности по таблице</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.3 пары противоположностей + таблица «положительное / отрицательное» + приставки</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.3 с опорой (ключ TB: careless – careful · normal – special · rude – polite · unfriendly – friendly · unkind – kind).</li><li>Таблица на доске в три колонки, как в WB стр. 54: <span class='en'>Positive · Negative · Neutral.</span> Заполняем вместе.</li><li>Приставки как машина (заметка TB): <span class='en'>un- · im- · il- · ir- and the ending -less. im- before p: polite → impolite. il- before l: legal → illegal. ir- before r: regular → irregular.</span></li><li>ex.4 письменно с word bank (ключ TB: 1 talented · 2 careful · 3 generous · 4 unkind · 5 lazy · 6 careless).</li><li>Kagan <b>Quiz-Quiz-Trade</b> на 13 карточках: слово ↔ противоположность.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.89 ex.3–4 · карточки 13 прилагательных (запасной вариант — таблицу в три колонки рисую мелом, карточки — на нарезанных листах)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> собирают таблицу, ходят с карточками. Ожидаемо: normal – special вызывает вопрос («а normal — плохо?») — объясняю: нейтрально</div></td><td class='mat'>слайд 7</td></tr><tr><td class='min'>36–38′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> физическая перезагрузка: 90 секунд движения</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Stand up. Show me LAZY. Show me FRIENDLY. Show me CAREFUL. Now show me GENEROUS!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> показывают слова телом. Ожидаемо: смех и запоминание через движение</div></td><td class='mat'>—</td></tr><tr><td class='min'>38–46′</td><td class='stage'><div class='nm'>Числа до прослушивания</div><div class='sub'>Числа ДО прослушивания</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.5 описание фото + проговариваем восемь чисел вслух хором</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.5 с опорой: <span class='en'>Six photos. What can you see?</span> (примерные ответы TB: мальчик с роботизированной рукой · девочка в очках · деталь Lego · телефон с наушниками · модель самолёта · логотип поэтической премии).</li><li>Subskill вслух, хором, дважды: <span class='en'>fourteen · sixteen · seven · eighty thousand dollars · six hundred dollars · thirteen · one thousand pounds · a year ago.</span></li><li>Правило валюты (заметка TB): <span class='en'>The sign is written first, but said LAST. $600 = six hundred dollars.</span></li><li>Пишем числа цифрами в тетрадь — теперь они «свои».</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.89 ex.5 · числа на экране (запасной вариант — восемь чисел пишу крупно на доске и оставляю до конца этапа аудирования)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> описывают фото, проговаривают числа хором. Ожидаемо: $80,000 самое трудное по произношению — повторяем три раза</div></td><td class='mat'>слайд 8</td></tr><tr><td class='min'>46–58′</td><td class='stage'><div class='nm'>Аудирование: подкаст по шагам</div><div class='sub'>Listening · подкаст по шагам</div><div class='zone'>screen → desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> трек 46 в три захода: кто есть кто → числа → сверка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Проход 1, одна задача (ex.6): <span class='en'>Easton or Amineh? Just write the name.</span> (ключ TB: Easton — 1, 4, 5 · Amineh — 2, 3, 6).</li><li>Пауза на запись, потом проход 2 (ex.7): <span class='en'>Now the numbers. Two explanations are extra — leave them empty.</span> (ключ TB: 1 $80,000 · 2 16 · 3 13 · 4 не используется · 5 1 year ago · 6 не используется · 7 $600 · 8 14 · 9 £1,000 · 10 7).</li><li>Проход 3 — сверка по ключу, показываю, где именно звучит каждое число.</li><li>Доп. вопросы TB с опорой: <span class='en'>What did Easton use to make the first hand? Why was Amineh unhappy?</span> (Lego · не хотела уезжать из своей страны)</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> аудио трек 46 · числа на доске (запасной вариант — читаю скрипт подкаста сам по ролям, медленно, с паузами: «When he was 14, Easton made his first robot hand using Lego…»)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают трижды с паузами. Ожидаемо: $80,000 и $600 ловят все — они проговорены. Ошибка: путают 14 и 16 — третий проход снимает</div></td><td class='mat'>слайд 9 · аудио</td></tr><tr class='True'><td class='min'>58–72′</td><td class='stage'><div class='nm'>Продукт: человек, которым я горжусь</div><div class='sub'>PRODUCT · человек, которым горжусь</div><div class='zone'>solo → pairs → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> письменная фиксация: шесть строк о человеке по рамке, потом читаем в паре и классу</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Рамка на экране: <span class='en'>I'm proud of … . He/She is my … . He/She is … and … . He/She isn't … at all. Once, he/she … . That's why I think he/she is special.</span></li><li>Минимум три прилагательных с урока — считаем и подчёркиваем.</li><li>Пишем молча 6 минут, я хожу и помогаю точечно (спеллинг, порядок слов).</li><li>Kagan <b>Timed Pair Share</b>: 40 сек читаю партнёру → меняемся.</li><li>Выступление с листом: <span class='en'>Two lines each, out loud. You may hold your notes.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> рамка на экране (запасной вариант — шесть строк рамки пишу на доске и не стираю до конца пары)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут, читают в паре, выступают с листом. Ожидаемо: пишут про родных — тепло и охотно. Ошибка: «He is very talent» — правлю точечно по word bank</div></td><td class='mat'>слайды 10–11</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Мини-тест с самопроверкой + счёт</div><div class='zone'>solo → pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> мини-тест 10 пунктов: 6 прилагательных по ситуации + 4 противоположности; проверка по ключу</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ten items. Six minutes. Word bank is OFF for this one.</span> Убираю word bank на время теста.</li><li>Ключ на экран после: <span class='en'>Mark your own. Circle every slip.</span></li><li>Счёт в команду: сумма баллов пары идёт на общий командный счёт.</li><li>Мини-клиника спеллинга (2 слова дня): generous · unfriendly.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> бланк мини-теста · ключ на экране (запасной вариант — ключ читаю вслух по пунктам)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут молча, проверяют себя. Ожидаемо: 6–9 из 10, противоположности держатся лучше всего</div></td><td class='mat'>слайд 12 · таймер</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: счёт, стикеры, ДЗ</div><div class='sub'>Team score + reflection</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> командный счёт + стикеры 🟢🟡🔴 + ДЗ + тизер P5</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Объявляю командный счёт и номинации (warmest six lines · best gesture · sharpest ear for numbers).</li><li>Стикеры на свою работу: 🟢 сам · 🟡 с word bank · 🔴 нужна помощь.</li><li>ДЗ: WB стр. 54, зад. 1–4 (adjectives) + стр. 57, зад. 1–4 (радиопрограмма про тайскую пещеру — тот же subskill, числа); 🌱 бонус: найди в сети Easton или Amineh и опиши тремя прилагательными (задание TB Homework).</li><li>Тизер: <span class='en'>Next lesson: how to ASK about the past. Did you … ? When did you … ? And one little word that changes everything: ago.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> стикеры 🟢🟡🔴 · слайд ДЗ (запасной вариант — ДЗ диктую и пишу страницы на доске)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> клеят стикеры, записывают ДЗ. Ожидаемо: зелёных заметно больше, чем на P1–P2</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook (родная тетрадь):</b> WB стр. 54, зад. 1–4 (adjectives to describe people) — база; WB стр. 57, зад. 1–4 (радиопрограмма про тайскую пещеру: тот же subskill — числа).</p><p>🌱 Бонус: найди в сети Easton LaChapelle или Amineh Abou Kerech и опиши человека тремя прилагательными с урока (задание TB Homework).</p></td><td class='mat'>WB Unit 7 · word bank прилагательных остаётся до конца юнита</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>use 13 adjectives to describe people</b> with their opposites and <b>write six lines about a person they admire</b>.</li>
+      <li><span class="lb">Subsidiary.</span> ex.1 три словарные дефиниции; ex.2 пять определений; ex.3 таблица противоположностей; ex.4 шесть людей; ex.5 фото; ex.6–7 подкаст (трек 46) на числа; приставки un- / im- / il- / ir- как опора.</li>
+      <li><span class="lb">Personal.</span> Числа проговариваем вслух ДО прослушивания — без этого этап не начинаю. Word bank прилагательных висит весь урок и снимается только на мини-тест.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>describe a person's character, not appearance</li><li>give the opposite of an adjective (kind → unkind)</li><li>catch a number in a recording and write it down</li><li>write six lines about a person I admire</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Warm-up</span><span>Base</span><span>Practice</span><span>Media</span><span>Draft</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>careful</span><span class='w'>careless</span><span class='w'>friendly</span><span class='w'>generous</span><span class='w'>kind</span><span class='w'>lazy</span><span class='w'>normal</span><span class='w'>polite</span><span class='w'>rude</span><span class='w'>special</span><span class='w'>talented</span><span class='w'>unfriendly</span><span class='w'>unkind</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>She's talented. · He's very generous. · My granddad is careful. · She isn't lazy. · I'm proud of … because he/she is … .</div></div>
+      <div class="r"><div class="k">Form</div><div>прилагательное после be (She IS kind) или перед существительным (a kind teacher); противоположности через приставки un- / im- / ir- или через суффикс -less (careful → careless).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>по Wordlist: generous /ˈdʒenərəs/ · talented /ˈtæləntɪd/ · polite /pəˈlaɪt/ · careless /ˈkeə(r)ləs/ · unkind /ʌnˈkaɪnd/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«He is very talent» — что не так? → нужно прилагательное: TALENTED.</div><div class='ccq'>«careful» и «careless» — какой суффикс что значит? → -ful «полный», -less «без».</div><div class='ccq'>«£1,000» — как это сказать? → one thousand pounds: значок пишется до, а говорится после.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.89, КТП пара 57. Прилагательные внешности знакомы из Starter; характер — новое. Большие числа и валюты на слух даются тяжело — subskill юнита ровно про это.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>«Good» и «bad» на всё</td><td>Мягко, но твёрдо: «good» принимается только вместе с точным словом. Word bank всегда на виду, показываю пальцем.</td></tr><tr><td>Числа проскакивают мимо уха</td><td>Приём TB: проговариваем все восемь чисел ВСЛУХ до прослушивания, включая £1,000 = one thousand pounds. Ухо ловит только то, что уже произносил рот.</td></tr><tr><td>Подкаст кажется быстрым</td><td>Слушаем трижды: 1) кто есть кто, 2) числа, 3) сверка. Между проходами — пауза на запись.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 7 “Heroes” (What makes a hero?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U7 «Heroes» · P4 · линия «новые» 🌱</span>
+  </div>
+</div>

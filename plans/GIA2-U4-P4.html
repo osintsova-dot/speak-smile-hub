@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2 · Unit 4 · Pair 4 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 4 “Extremes” · Pair 4 — Mission «Yosemite Expedition»: one backpack, five hours, one bear</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «наши» 🚀 после A1+</b> · 90 min · mission-based: gate → base sprint → challenge → bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Lessons 63–64 (KTP pair 33) · Январь</span><span class='chip new'>🚀 наши · после A1+</span><span class='chip'>SB p.53</span><span class='chip'>unit leaderboard · gold runs</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2-u4-p4.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u4.html" target="_blank" rel="noopener">🎮 Игры юнита 4 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p4.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>вход + мини-бюро рекордов по бонусному ДЗ P3 (кто принёс — слушаем 2 заявки)</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p4.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: экспедиция в Йосемити + правило склада (неверно назвал — не выдали)</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p4.html#5' target='_blank' rel='noopener' title='слайд 5'>8–14′</a></td><td class='gname'>Входной тест (gate): 90 сек — что беру в дорогу</td><td>90 сек: максимум вещей, которые берут в дорогу, по-английски; неверное написание составного — предмет не считается</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p4.html#6' target='_blank' rel='noopener' title='слайд 6'>14–27′</a></td><td class='gname'>Спринт: налёт на листовку Йосемити</td><td>ex.1–3 p.53: листовка Outward Bound + список одежды + четыре вещи на фото; ex.4 сортировка по двум корзинам; ex.5 подписи к фото A–K</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p4.html#7' target='_blank' rel='noopener' title='слайд 7'>27–40′</a></td><td class='gname'>Аудирование: инструктаж гида в Йосемити</td><td>трек 27 в два захода: до звука называем картинки (subskill) → №1 порядок картинок (ex.7) → №2 шесть правил (ex.8)</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p4.html#8' target='_blank' rel='noopener' title='слайд 8'>40–45′</a></td><td class='gname'>Челлендж: обмен составными существительными</td><td>Quiz-Quiz-Trade на скорость: карточка-картинка → назвать предмет и сказать ONE WORD / TWO WORDS за 5 секунд</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p4.html#9' target='_blank' rel='noopener' title='слайд 9'>45–47′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p4.html#10' target='_blank' rel='noopener' title='слайд 10'>47–58′</a></td><td class='gname'>Бонус-уровень: этого нет в учебнике</td><td>апгрейд защиты списка: сравнение полезности предметов + плюсы и минусы поездки (ex.9)</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p4.html#11' target='_blank' rel='noopener' title='слайд 11'>58–74′</a></td><td class='gname'>Продукт: защита собранного рюкзака</td><td>сборка списка из 10 предметов (+ WHY к каждому) → питч 60 сек → закрытое голосование «какой рюкзак дойдёт до конца похода»</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p4.html#12' target='_blank' rel='noopener' title='слайд 12'>74–82′</a></td><td class='gname'>Реванш gate + лидерборд</td><td>реванш pack sprint + очки пары в лидерборд</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p4.html#13' target='_blank' rel='noopener' title='слайд 13'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>рефлексия + ДЗ + тизер P5</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 4 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Составные существительные вводятся не таблицей, а как список снаряжения: если предмет назван неверно (или написан в два слова вместо одного), его «не выдают со склада». Инструктаж гида Бретта встроен как настоящий брифинг перед выходом: из него команда достаёт правила парка, которые пригодятся уже завтра — и заодно впервые слышит must / mustn't / can't в живой речи (подготовка к P5). Subskill (использовать картинки до прослушивания) держится тем, что до звука команды называют всё, что видят, и предсказывают слова.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Outward Bound Yosemite. You're going.</b> One week, a five-hour walk in the mountains, and one backpack each — not a suitcase, a backpack. The store gives you an item only if you name it correctly in English: sleeping bag, water bottle, penknife, sun cream. And before we go, the guide has a briefing — there's a bear in this park who comes for toothpaste. Listen well. <b>Ten items, sixty seconds to defend them.”</b><div class='pitchru'>Суть по-русски, если нужно поддержать: нас берут в экспедицию в Йосемити: неделя, пятичасовой поход в горы, один рюкзак. Со склада вещь выдают, только если назвал её правильно. Перед выходом — инструктаж гида (там медведь, который любит зубную пасту). В конце — защита своих десяти предметов.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вход + мини-бюро рекордов по бонусному ДЗ P3 (кто принёс — слушаем 2 заявки)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Bureau is open: two volunteers, read your school records. Crew, check the forms — accept or reject!</span></li><li>Мостик: <span class='en'>You can compare anything now. Today you compare things you CARRY — and you carry them for five hours up a mountain.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> ДЗ детей · слайд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> играют на своём материале. Ожидаемо: ДЗ работает на урок</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: экспедиция в Йосемити + правило склада (неверно назвал — не выдали)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ten items, one backpack, five hours of walking. The store gives you an item only if you NAME it correctly.</span></li><li><span class='ig'>🏆 <b>Планка продукта (рубрика судей):</b> Fluency — паузы ≤3 сек (1–3) · Accuracy — форма чистая, без «more hotter» и «must to» (1–3) · Richness — цифры, сравнения, детали (1–3). 9/9 = gold run, +5.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии с листовкой Outward Bound (запасной вариант — читаю листовку с доски: «The Outward Bound organisation offers outdoor education programmes for young people and adults in over 30 countries…»)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> принимают правила экспедиции</div></td><td class='mat'>слайд 4</td></tr><tr class='True'><td class='min'>8–14′</td><td class='stage'><div class='nm'>Входной тест (gate): 90 сек — что беру в дорогу</div><div class='sub'>🎯 GATE · pack sprint</div><div class='zone'>solo · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 90 сек: максимум вещей, которые берут в дорогу, по-английски; неверное написание составного — предмет не считается</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ninety seconds. Things you take on a trip. 'Backpack' in two words scores zero. GO!</span></li><li>Счёт приватно, реванш в конце.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут на скорость. Ожидаемо: 6–10 чистых; «sleeping bag» и «water bottle» пишут слитно, «backpack» — раздельно</div></td><td class='mat'>слайд 5 · таймер</td></tr><tr><td class='min'>14–27′</td><td class='stage'><div class='nm'>Спринт: налёт на листовку Йосемити</div><div class='sub'>⚡ Base sprint · leaflet raid</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1–3 p.53: листовка Outward Bound + список одежды + четыре вещи на фото; ex.4 сортировка по двум корзинам; ex.5 подписи к фото A–K</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.1 быстро: <span class='en'>What is Outward Bound? What activities? What do people learn?</span> (ключ TB: организация outdoor-образования для подростков и взрослых; каноэ, скалолазание, кемпинг; работа в команде и общение).</li><li>ex.2 в парах — список одежды (варианты TB: trousers, T-shirt, hoodie, shorts, hat, boots, trainers, sunglasses, waterproof jacket). ex.3: ключ TB backpack A · sleeping bag E · water bottle H · penknife B.</li><li>ex.4 гонкой, две корзины. Ключ TB: One word — hairbrush, guidebook, penknife, suitcase, toothbrush, toothpaste · Two words — phrase book, sleeping bag, sun cream, wash bag, water bottle, waterproof jacket.</li><li>ex.5 подписи A–K (ключ TB: A backpack · B penknife · C guidebook · D suitcase · E sleeping bag · F waterproof jacket · G wash bag, toothbrush, toothpaste · H water bottle · I phrase book · J sun cream, beach towel · K hairbrush).</li><li>Kagan <b>Inside-Outside Circle</b>: круги учат друг друга своей корзиной с жестами.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.53 ex.1–5 · корзины-карточки · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> сортируют и учат друг друга. Ошибка: «waterproofjacket» слитно — корзина ловит сразу</div></td><td class='mat'>слайд 6 · таймер</td></tr><tr><td class='min'>27–40′</td><td class='stage'><div class='nm'>Аудирование: инструктаж гида в Йосемити</div><div class='sub'>Listening · the ranger's briefing</div><div class='zone'>screen · desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> трек 27 в два захода: до звука называем картинки (subskill) → №1 порядок картинок (ex.7) → №2 шесть правил (ex.8)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>До звука (subskill): <span class='en'>Look at the seven pictures. Name everything you see. What words will you HEAR? Two things are NOT allowed — which?</span> (приём TB).</li><li>Прослушивание №1 → ex.7, ключ TB: a 3 · b 5 · c 7 · d 1 · e 4 · f 6 · g 2.</li><li>Прослушивание №2 → ex.8, ключ TB: 1 times · 2 photos, plants or flowers · 3 animals · 4 backpack · 5 box · 6 hat, (full) water bottle. Приём TB: поднимают руку, как только слышат про свою картинку.</li><li><span class='en'>The bear and the toothpaste — why? Tell the story in one line.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> аудио трек 27 · картинки ex.7 (запасной вариант — читаю брифинг Бретта по ролям с помощником: «you can take photos, but you mustn't take any actual plants or flowers away with you…»)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> держат порядок «картинки → общая последовательность → детали». Ожидаемо: пункт про зубную пасту запоминается всеми — на нём и держится правило</div></td><td class='mat'>слайд 7 · audio</td></tr><tr><td class='min'>40–45′</td><td class='stage'><div class='nm'>Челлендж: обмен составными существительными</div><div class='sub'>🔥 Challenge · compound trade</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Quiz-Quiz-Trade на скорость: карточка-картинка → назвать предмет и сказать ONE WORD / TWO WORDS за 5 секунд</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Card shows a picture — you say 'sleeping bag, TWO words' in five seconds. Trade cards, move!</span></li><li>Ограничитель: ошибся в «одно/два» — карточка остаётся у партнёра до конца раунда (её надо отыграть).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки предметов · таймер 5 сек</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> меняются карточками в движении. Ожидаемо: к третьему кругу написание выбирается автоматически</div></td><td class='mat'>слайд 8 · таймер</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>I say the item — you show the gesture and shout ONE or TWO! Toothbrush! Sleeping bag! Backpack! Sun cream!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> двигаются и закрепляют написание</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>47–58′</td><td class='stage'><div class='nm'>Бонус-уровень: этого нет в учебнике</div><div class='sub'>🚀 Bonus level · not in the book</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> апгрейд защиты списка: сравнение полезности предметов + плюсы и минусы поездки (ex.9)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Weak reason: 'A penknife is useful.' Strong: 'A penknife is more useful than a suitcase because you carry everything on your back.'</span></li><li>Рамки: <span class='en'>… is more useful than … because … · The most important thing is … · We don't need … — it's the mountains, not the beach.</span></li><li>ex.9 в крю: плюсы и минусы такой поездки (совет TB — сразу думать, как минус исправить: поехать в другое время года? на меньший срок?).</li><li>ex.6 быстро: <span class='en'>What else would YOU take to Yosemite?</span> (варианты TB — брать: backpack, sleeping bag, penknife, sun cream, wash bag, water bottle, toothbrush, toothpaste, hairbrush, waterproof jacket; спорно: guidebook, phrase book; не брать: suitcase, beach towel).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд рамок · SB p.53 ex.6, 9</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> берут сравнение из P3 в защиту списка. Ожидаемо: сравнительная степень возвращается сама — это и есть накопление</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>58–74′</td><td class='stage'><div class='nm'>Продукт: защита собранного рюкзака</div><div class='sub'>PRODUCT · the packing pitch</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> сборка списка из 10 предметов (+ WHY к каждому) → питч 60 сек → закрытое голосование «какой рюкзак дойдёт до конца похода»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Сборка 7 мин: <span class='en'>Exactly ten items. One why-line each. At least one comparison and at least one rule from the guide.</span></li><li><span class='en'>Sixty seconds to sell your backpack. Then the vote: sticky dots, you can't vote for your own.</span></li><li>Судьи держат рубрику + отдельный флажок «wrong spelling» (минус балл сразу).</li><li>Побеждает один список — вешаем на стену юнита как «official kit».</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> бланк списка · стикеры · таймер · рубрика</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> строят, защищают, голосуют. Ожидаемо: спор «нож или крем» решает аргумент, а не вкус</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Реванш gate + лидерборд</div><div class='sub'>Rematch + leaderboard</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> реванш pack sprint + очки пары в лидерборд</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ninety seconds, same rules. Beat your morning list — spelling counts!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> бьют свой счёт. Ожидаемо: +3–4 и почти без ошибок в «одно/два слова»</div></td><td class='mat'>слайд 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия + ДЗ + тизер P5</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…».</li><li>ДЗ: WB стр. 30 (compound nouns) + стр. 33, зад. 1–4 (подкаст про необитаемый остров) — база.</li><li>Тизер: <span class='en'>Next: you write the rules. Your camp, your park, your law — and one of you will break it on purpose. Can, can't, must, mustn't. See you.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 30, зад. 1–5 (compound nouns) + стр. 33, зад. 1–4 (A podcast: что взять на необитаемый остров, трек 8) — перед прослушиванием обязательно назвать картинки, как на уроке.</p><p>🚀 Бонус (+3): собери список из 10 предметов для похода по нашим местам зимой — и объясни одной строкой, чем он отличается от списка для Йосемити.</p></td><td class='mat'>WB Unit 4 · очки в лидерборд</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, crews can <b>name 14 compound nouns correctly</b> (one word vs two words), catch 6 park rules from a guide's briefing, and <b>defend a 10-item packing list</b> with reasons.</li>
+      <li><span class="lb">Subsidiary.</span> Листовка Outward Bound (ex.1–3) как вход; таблица ex.4 (одно слово / два слова) выводится сортировкой; ex.5 подписи к фото A–K; subskill using pictures to help you understand; ex.7–8 (трек 27) в два захода; ex.9 плюсы и минусы такой поездки.</li>
+      <li><span class="lb">Personal.</span> Аудирование строго в два захода: №1 — порядок картинок, №2 — детали правил. До звука обязательно проговариваем картинки вслух (правило subskill). Модальные глаголы из брифинга НЕ объявляю темой — они всплывут на P5.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>name 14 things to take on a trip and write them correctly</li><li>say which compounds are one word and which are two</li><li>use pictures to predict what a recording is about</li><li>defend a 10-item packing list with reasons</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Listening</span><span>Challenge</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>backpack</span><span class='w'>beach towel</span><span class='w'>guidebook</span><span class='w'>hairbrush</span><span class='w'>penknife</span><span class='w'>phrase book</span><span class='w'>sleeping bag</span><span class='w'>suitcase</span><span class='w'>sun cream</span><span class='w'>toothbrush</span><span class='w'>toothpaste</span><span class='w'>wash bag</span><span class='w'>water bottle</span><span class='w'>waterproof jacket</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I'm taking a sleeping bag and a water bottle. · A penknife is more useful than a suitcase. · You must bring a hat and a full water bottle. · We don't need a beach towel — it's the mountains.</div></div>
+      <div class="r"><div class="k">Form</div><div>часть составных пишется в ОДНО слово: backpack, guidebook, hairbrush, penknife, suitcase, toothbrush, toothpaste · часть — в ДВА: beach towel, phrase book, sleeping bag, sun cream, wash bag, water bottle, waterproof jacket · правила «по звуку» нет — это надо запомнить и проверять по списку Quick review p.57 (трек 29)</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>по Wordlist: penknife /ˈpenˌnaɪf/ (первое k не читается) · toothpaste /ˈtuːθˌpeɪst/ · guidebook /ˈɡaɪdˌbʊk/ · suitcase /ˈsuːtˌkeɪs/ · sun cream /ˈsʌn ˌkriːm / — в составных ударение всегда на ПЕРВОМ слове</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«back pack» в два слова — можно? → нет: backpack одно слово; а sleeping bag — наоборот, два.</div><div class='ccq'>penknife — читаем «пенкнайф»? → нет, /ˈpenˌnaɪf/: k немая.</div><div class='ccq'>Зачем смотреть картинки ДО прослушивания? → чтобы назвать предметы и предугадать слова — тогда узнаёшь их в потоке (subskill юнита).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.53, КТП пара 33 (в КТП указана p.54 — сдвиг на +1, настоящая страница 53). Половина предметов узнаваема по картинке; сложность — в написании «одно слово / два слова» и в скорости.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Слушают сразу «про факты», subskill мимо</td><td>Жёстко держу порядок: до звука называем все картинки вслух и предсказываем слова; прослушивание №1 — только порядок картинок, №2 — детали.</td></tr><tr><td>14 составных разом не влезают</td><td>Две корзины физически на партах (ONE WORD / TWO WORDS); каждая крю владеет половиной и учит остальных.</td></tr><tr><td>Список превращается в «возьму всё»</td><td>Лимит: ровно 10 предметов и одна строка WHY к каждому; судьи снимают за «because it's useful».</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 4 “Extremes” (How does the weather affect the way we live?) · GIA2 — lesson plan &amp; staging</span>
+    <span>GIA2 · U4 «Extremes» · P4 · линия «наши» 🚀</span>
+  </div>
+</div>

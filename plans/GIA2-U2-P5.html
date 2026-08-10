@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2 · Unit 2 · Pair 5 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 2 “Me time” · Pair 5 — Mission «The Press Conference»: only perfect questions get an answer</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «наши» 🚀 после A1+</b> · 90 min · mission-based: gate → base sprint → challenge → bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Lessons 31–32 (KTP pair 17) · Ноябрь</span><span class='chip new'>🚀 наши · после A1+</span><span class='chip'>SB p.30</span><span class='chip'>unit leaderboard · gold runs</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2-u2-p5.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u2.html" target="_blank" rel="noopener">🎮 Игры юнита 2 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p5.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>вход + повтор P4: коллокации залпом + одна строка из своей субботней программы</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p5.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия пресс-конференции + правило сгорающих вопросов</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p5.html#5' target='_blank' rel='noopener' title='слайд 5'>8–13′</a></td><td class='gname'>Входной тест (gate): 90 сек вопросов звезде</td><td>90 сек: максимум ПИСЬМЕННЫХ вопросов спортивной звезде (только Wh-, не Yes/No)</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p5.html#6' target='_blank' rel='noopener' title='слайд 6'>13–27′</a></td><td class='gname'>Спринт: машина вопросов</td><td>ex.1 p.30: три таблицы из примеров a–c → ex.2 сборка 5 вопросов → конвейер флипов по 8 сек</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p5.html#7' target='_blank' rel='noopener' title='слайд 7'>27–38′</a></td><td class='gname'>Челлендж: дуэль спортивного квиза</td><td>ex.4 достроить вопросы квиза → ex.5 (трек 16) проверка ответов → дуэль команд на своих вопросах</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p5.html#8' target='_blank' rel='noopener' title='слайд 8'>38–45′</a></td><td class='gname'>Клиника: разбор сгоревших вопросов</td><td>разбор 4 сгоревших вопросов безымянно + произношение do you /djʊ/</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p5.html#9' target='_blank' rel='noopener' title='слайд 9'>45–47′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p5.html#10' target='_blank' rel='noopener' title='слайд 10'>47–58′</a></td><td class='gname'>Бонус-уровень: этого нет в учебнике</td><td>Grammar round-up (bike polo) как допуск к конференции + апгрейд follow-up вопросов</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p5.html#11' target='_blank' rel='noopener' title='слайд 11'>58–74′</a></td><td class='gname'>Продукт: интервью со звездой</td><td>интервью 6 вопросов (партнёр в роли спортивной звезды по карточке) → письменный отчёт → 3 отчёта вслух</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p5.html#12' target='_blank' rel='noopener' title='слайд 12'>74–82′</a></td><td class='gname'>Реванш gate + лидерборд</td><td>реванш question sprint + очки</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u2-p5.html#13' target='_blank' rel='noopener' title='слайд 13'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>рефлексия + ДЗ + тизер P6</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 2 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Wh-вопросы спрятаны в пресс-конференцию: звезда отвечает только на грамматически чистый вопрос, кривой сгорает без ответа. Три таблицы учебника (be / have got / do-does) собираются не как «правило», а как три канала связи с ответчиком. Спортивный квиз ex.4–5 работает разминкой и одновременно закрывает форму. Интонация и слитное do you /djʊ/ — «акцент профессионального журналиста».</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Press pass, agents.</b> In twenty minutes a sports star sits in that chair. You get questions — but the star answers ONLY perfect ones. 'Why she likes it?' — silence. 'How many cousins have you?' — silence. And one more thing: real journalists don't sound like robots. Wh-questions go DOWN at the end, and 'do you' sounds like one word. Six clean questions per crew. <b>Prepare!”</b><div class='pitchru'>Суть по-русски, если нужно поддержать: пресс-конференция: звезда отвечает только на безупречные вопросы, кривой сгорает без ответа. Плюс акцент профи: Wh-вопрос вниз, do you — слитно.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вход + повтор P4: коллокации залпом + одна строка из своей субботней программы</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Verb blitz: gymnastics? surfing? table tennis? Then: one line from YOUR Saturday programme.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> разгоняются на знакомом</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия пресс-конференции + правило сгорающих вопросов</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Six questions per crew. A broken question gets silence — and you lose the turn.</span></li><li><span class='ig'>🏆 <b>Планка продукта (рубрика судей):</b> Fluency — паузы ≤3 сек (1–3) · Accuracy — форма чистая, без «like play» и «often plays» не на месте (1–3) · Richness — детали, цифры, сравнения (1–3). 9/9 = gold run, +5.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> принимают правила</div></td><td class='mat'>слайд 4</td></tr><tr class='True'><td class='min'>8–13′</td><td class='stage'><div class='nm'>Входной тест (gate): 90 сек вопросов звезде</div><div class='sub'>🎯 GATE · question sprint</div><div class='zone'>solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 90 сек: максимум ПИСЬМЕННЫХ вопросов спортивной звезде (только Wh-, не Yes/No)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ninety seconds. Written questions to a sports star. Wh- only — 'Do you…' scores zero. GO!</span></li><li>Счёт приватно, реванш в конце.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут вопросы на скорость. Ожидаемо: Why she likes…? / How many you have? — материал клиники</div></td><td class='mat'>слайд 5 · таймер</td></tr><tr><td class='min'>13–27′</td><td class='stage'><div class='nm'>Спринт: машина вопросов</div><div class='sub'>⚡ Base sprint · the question machine</div><div class='zone'>crews · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1 p.30: три таблицы из примеров a–c → ex.2 сборка 5 вопросов → конвейер флипов по 8 сек</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Three tables, three channels. Which example goes where? Two minutes.</span> (ключ TB ex.1: be — c · have got — b · other verbs — a).</li><li>ex.2 гонкой. Ключ TB: 1 When have you got PE? · 2 What are your favourite sports? · 3 How do you keep fit? · 4 Where does your local football team play? · 5 Who is your favourite sports star?</li><li>Машина: <span class='en'>where / your team / play → Where does your team play? Boards up in eight seconds!</span> 8 раундов.</li><li>Дрилл интонации рукой: <span class='en'>Why do you like hockey? ↘</span> — три прогона хором.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.30 ex.1–2 · мини-доски · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> собирают вопросы конвейером. Ожидаемо: канал have got путают с do — цвет карточек спасает</div></td><td class='mat'>слайд 6 · таймер</td></tr><tr><td class='min'>27–38′</td><td class='stage'><div class='nm'>Челлендж: дуэль спортивного квиза</div><div class='sub'>🔥 Challenge · the sports quiz duel</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.4 достроить вопросы квиза → ex.5 (трек 16) проверка ответов → дуэль команд на своих вопросах</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.4: <span class='en'>Which word is missing — do, does, is, are or have? Two minutes.</span> (ключ TB: 1 do · 2 have · 3 is · 4 does · 5 are).</li><li>ex.5 (трек 16): слушаем и проверяем ответы квиза. Ключ TB: 1 b · 2 c · 3 b · 4 b · 5 a.</li><li>Дуэль: каждая крю пишет 2 своих спортивных вопроса с вариантами и «стреляет» в соседей; кривой вопрос сгорает.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.30 ex.4–5 · аудио трек 16 · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> закрывают форму на азарте квиза. Ожидаемо: спорят про deuce и All Blacks — вовлечение бесплатно</div></td><td class='mat'>слайд 7 · audio</td></tr><tr><td class='min'>38–45′</td><td class='stage'><div class='nm'>Клиника: разбор сгоревших вопросов</div><div class='sub'>Клиника сгоревших вопросов</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разбор 4 сгоревших вопросов безымянно + произношение do you /djʊ/</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>The burn list. Four questions died today. Revive them — five seconds each.</span></li><li>Why she likes…? → Why does she like…? · How many you have? → How many have you got? · What you do…? → What do you do…? · Where does your team plays? → play.</li><li>SB p.116: <span class='en'>Listen — 'do you' is ONE sound: /djʊ/. What sport d'you like?</span> Хором пять вопросов из упражнения (ключ ударений TB: What sport, like · When, play · Where, play · Who, play with · Why, like this sport).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд клиники · SB p.116</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> чинят чужие ошибки и берут «акцент профи». Ожидаемо: слитное d'you заходит как трюк</div></td><td class='mat'>слайд 8</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>I shout the question word — you shout the channel: WHO? — be! HOW MANY? — have got! WHEN? — do!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> закрепляют три канала телом</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>47–58′</td><td class='stage'><div class='nm'>Бонус-уровень: этого нет в учебнике</div><div class='sub'>🚀 Bonus level · not in the book</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Grammar round-up (bike polo) как допуск к конференции + апгрейд follow-up вопросов</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Press accreditation test: the bike polo file. Nine choices, four minutes.</span> (ключ TB ex.8: 1 do · 2 comes · 3 usually play · 4 doesn't cost · 5 has · 6 playing · 7 him · 8 does he like · 9 is sometimes).</li><li>Апгрейд: <span class='en'>Real journalists ask a FOLLOW-UP: 'You train twice a week. Why not more?'</span> Каждая крю готовит один follow-up к своему вопросу.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.30 Grammar round-up · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> закрывают round-up, придумывают дожимающие вопросы. Ожидаемо: follow-up отличает сильных</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>58–74′</td><td class='stage'><div class='nm'>Продукт: интервью со звездой</div><div class='sub'>PRODUCT · the interview</div><div class='zone'>pairs → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> интервью 6 вопросов (партнёр в роли спортивной звезды по карточке) → письменный отчёт → 3 отчёта вслух</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Интервью: <span class='en'>Six clean questions. Notes only — you write the report after.</span> (опора — ex.6, ключ TB: What do you do in your free time? · When do you do it? · How many video games have you got? · What's your favourite game? · Why do you like it?)</li><li>Отчёт 4 строки: <span class='en'>I asked Dasha about her free time. She plays volleyball twice a week. She hardly ever watches TV. Her favourite thing is…</span></li><li>Судьи считают: сколько вопросов сгорело · чистая ли интонация · есть ли слово точности в отчёте.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки ролей звезды · чек-лист отчёта · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> интервьюируют и пишут. Ожидаемо: к отчёту наречия P3 переходят сами — это и есть накопление</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Реванш gate + лидерборд</div><div class='sub'>Rematch + leaderboard</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> реванш question sprint + очки</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ninety seconds. Beat your morning questions — Wh- only!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> бьют счёт</div></td><td class='mat'>слайд 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия + ДЗ + тизер P6</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…».</li><li>ДЗ: WB стр. 15 (Wh-вопросы).</li><li>Тизер: <span class='en'>Next: the club fair. You man the desk, you sign people up — and then you answer a real message.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 15, зад. 1–5 (Present simple Wh- questions).</p><p>🚀 Бонус (+3): 5 Wh-вопросов реальному спортсмену или блогеру — найди ответы в интернете и принеси.</p></td><td class='mat'>WB Unit 2 · очки в лидерборд</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, crews can <b>build clean Wh- questions with be, have got and do/does</b> at speed, ask them with falling intonation, and <b>run a 6-question interview</b> and report it.</li>
+      <li><span class="lb">Subsidiary.</span> Три таблицы ex.1 достраиваются из примеров; ex.2 сборка вопросов; спортивный квиз ex.4–5 (трек 16); ex.6–7 свои вопросы и интервью; Grammar round-up (bike polo) как финальная проверка; произношение do you /djʊ/ (SB p.116).</li>
+      <li><span class="lb">Personal.</span> Слежу за НИСХОДЯЩЕЙ интонацией (это отличие от Yes/No вопросов P1-юнита) — дриллю хором. Сгоревшие вопросы записываю на клинику в этой же паре.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>build Wh- questions with be, have got and do/does</li><li>ask with falling intonation and linked 'do you' /djʊ/</li><li>run a 6-question interview without a broken question</li><li>report an interview in writing</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Clinic</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>who</span><span class='w'>what</span><span class='w'>where</span><span class='w'>when</span><span class='w'>why</span><span class='w'>how</span><span class='w'>how old</span><span class='w'>how many</span><span class='w'>how often</span><span class='w'>what time</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>be: Why is hockey important to you? · How old are the players? · have got: How many people have you got in your team? · Why has the team got 16 players? · other verbs: How does hockey help you? · When do you play?</div></div>
+      <div class="r"><div class="k">Form</div><div>вопросительное слово + be/have-has/do-does + подлежащее (+ got / + глагол без -s)</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>интонация Wh-вопроса — НИСХОДЯЩАЯ (в отличие от Yes/No): Why is hockey so important to you? ↘ · SB p.116: невыделенное do you в вопросе звучит слитно /djʊ/ — What sport do you like? · Where do you play?</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«Why she likes it?» — почему нельзя? → нужен does: Why does she like it? — и глагол голый.</div><div class='ccq'>«How many cousins have you?» — чего не хватает? → got: How many cousins have you got?</div><div class='ccq'>«What you do in your free time?» → What DO you do in your free time?</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.30 + Pronunciation p.116, КТП пара 17. Wh-слова знакомы из A1+; новизна — три разных канала (be / have got / do-does) и чистота под давлением игры.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Вопросы вырождаются в «Do you like…?»</td><td>Карточки-роли звезды сделаны под Wh: возраст, команда, расписание, причины — Yes/No вопросом ничего не вытащить.</td></tr><tr><td>Why she likes it? — классика</td><td>Правило конференции: кривой вопрос сгорает БЕЗ ответа. Сгоревшие разбираем в клинике этой же пары.</td></tr><tr><td>Интонация вверх, как в Yes/No</td><td>Дрилл рукой: на Wh-вопросе рука ИДЁТ ВНИЗ. Три хоровых прогона перед конференцией.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 2 “Me time” (How important are hobbies for teenagers?) · GIA2 — lesson plan &amp; staging</span>
+    <span>GIA2 · U2 «Me time» · P5 · линия «наши» 🚀</span>
+  </div>
+</div>

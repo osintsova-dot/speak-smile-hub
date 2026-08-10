@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 3 · Pair 6 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 3 “Dressing up” · Pair 6 — Речь и письмо: в магазине одежды + описание своего фото</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «новые» 🌱 со стороны</b> · 90 min · опоры: модель → word bank → черновик в команде → продукт с листом · командный счёт · самопроверка по ключу</div>
+    <div class="meta"><span class='chip'>Lessons 49–50 (KTP pair 26) · Декабрь</span><span class='chip new'>🌱 новые · опоры и самопроверка</span><span class='chip'>SB pp.43–45</span><span class='chip'>командный счёт · стикеры 🟢🟡🔴</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2new-u3-p6.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u3.html" target="_blank" rel="noopener">🎮 Игры юнита 3 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p6.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход: приветствие + повтор прошлой пары</td><td>повтор P5: одна строка «usually» и одна «right now» соседу</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p6.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: фразы магазина + первое описание фото</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p6.html#5' target='_blank' rel='noopener' title='слайд 5'>8–24′</a></td><td class='gname'>Фразы магазина: видео и повтор за диктором</td><td>видео с Арчи → кто что говорит (ex.3) → shadowing хором → достроить диалог (ex.5)</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p6.html#6' target='_blank' rel='noopener' title='слайд 6'>24–36′</a></td><td class='gname'>Разыгрываем покупку по образцу</td><td>диалог по готовому тексту → замена вещи и цены на свои → два прогона со сменой ролей</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p6.html#7' target='_blank' rel='noopener' title='слайд 7'>36–43′</a></td><td class='gname'>Мини-эфир: играют добровольцы</td><td>2–3 пары играют покупку у доски; зал ставит галочки за фразы (ex.7 peer review)</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p6.html#8' target='_blank' rel='noopener' title='слайд 8'>43–45′</a></td><td class='gname'>Переход-разминка</td><td>телесный якорь because / so</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p6.html#9' target='_blank' rel='noopener' title='слайд 9'>45–58′</a></td><td class='gname'>Модель: разбор описаний селфи</td><td>два описания A и B: почему автору нравятся (ex.2), таблица где/что (ex.3), because и so (ex.4–5)</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p6.html#10' target='_blank' rel='noopener' title='слайд 10'>58–74′</a></td><td class='gname'>Продукт: описание своего фото по шагам</td><td>6 вопросов → заметки → 4–6 предложений по скелету → чек-лист → обмен с партнёром</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p6.html#11' target='_blank' rel='noopener' title='слайд 11'>74–82′</a></td><td class='gname'>Стена класса + счёт</td><td>читаем два чужих описания + очки команд</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u3-p6.html#12' target='_blank' rel='noopener' title='слайд 12'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>ДЗ + тизер P7</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 3, стр. 20–27 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Две реальные вещи в одной паре: фразы, которые работают в настоящем магазине (их можно унести в поездку и в жизнь), и первый большой письменный продукт юнита. Для новичков диалог собирается по лестнице: видео → shadowing хором → готовый диалог с пропусками → свой по образцу. Описание фото — по такой же лестнице: вопросы → заметки → текст по скелету → чек-лист. because и so получают телесный якорь ещё на разминке.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Today you learn the sentences</b> that work in a real shop, in any country: How much is it? Can I try it on? Have you got this in a medium? First we watch Archie buy a sweater, then we say the phrases together, then you play the scene yourselves — with a script if you need one. And after that: your first photo description, step by step. Two words will hold it together: because and so.”<div class='pitchru'>Суть по-русски, если нужно поддержать: учим фразы, которые работают в настоящем магазине; смотрим, как покупает Арчи, повторяем хором, играем сцену (можно по сценарию). Во второй половине — описание своего фото по шагам, со связками because и so.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход: приветствие + повтор прошлой пары</div><div class='sub'>Opening · вход + повтор</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> повтор P5: одна строка «usually» и одна «right now» соседу</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>One line with 'usually', one line with 'right now'. Go!</span></li><li>Мостик: <span class='en'>Now the place where you really need English: a shop.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> разгоняются на двух часах</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: фразы магазина + первое описание фото</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Real shop phrases first, then your first photo description. Step by step — Archie shows the way.</span></li><li>Показываю ценники p.43 (£20 · £25 · £30 · £40 · £60): <span class='en'>you'll choose one thing to buy.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> план ясен</div></td><td class='mat'>слайд 4</td></tr><tr><td class='min'>8–24′</td><td class='stage'><div class='nm'>Фразы магазина: видео и повтор за диктором</div><div class='sub'>Фразы магазина · видео + shadowing</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> видео с Арчи → кто что говорит (ex.3) → shadowing хором → достроить диалог (ex.5)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.2: <span class='en'>Watch. What does Archie buy?</span> Ключ: свитер.</li><li>ex.3 с опорой: раздаю фразы на карточках двух цветов — синие для продавца, жёлтые для покупателя, дети раскладывают. Ключ: продавец — Do you need any help? и The changing rooms are over there; всё остальное — покупатель.</li><li>Shadowing: повторяем за видео хором с интонацией, два прогона.</li><li>ex.4: <span class='en'>Which phrases do you hear?</span> Ключ: все, кроме «I'm just looking, thanks».</li><li>ex.5 достраиваем диалог с опорой на карточки. Ключ: 1 looking for · 2 How much · 3 try it on · 4 What size · 5 in a medium · 6 I'll take it.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> видео RWS SB p.43 (запасной вариант — читаю диалог по ролям с помощником) · карточки фраз двух цветов · SB p.43</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> берут фразы с голоса и с карточек. Ожидаемо: shadowing снимает стеснение; цветовое деление держит «кто что говорит»</div></td><td class='mat'>слайд 5 · видео</td></tr><tr><td class='min'>24–36′</td><td class='stage'><div class='nm'>Разыгрываем покупку по образцу</div><div class='sub'>Разыгрываем покупку</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> диалог по готовому тексту → замена вещи и цены на свои → два прогона со сменой ролей</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Прогон 1: читаем диалог ex.5 по ролям, с карточками на партах. <span class='en'>Read it twice — then swap roles.</span></li><li>Kagan <b>Inside-Outside Circle</b>: внутренний круг — продавцы, внешний — покупатели; после раунда внешний сдвигается на одного. Текст диалога можно держать в руках.</li><li>Прогон 2: меняем только ТРИ вещи — товар, цену и размер. Всё остальное берём из текста. <span class='en'>Small changes — big confidence.</span></li><li>Хожу и подсказываю жестами (показал рукой «over there», посмотрел на бирку «hold on», подал вещь «here you go»).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.43 ex.5 · карточки фраз · ценники со слайда</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> играют по готовому — не страшно. Ожидаемо: второй прогон уже почти без листа у половины</div></td><td class='mat'>слайд 6 · таймер</td></tr><tr class='True'><td class='min'>36–43′</td><td class='stage'><div class='nm'>Мини-эфир: играют добровольцы</div><div class='sub'>Мини-эфир · добровольцы</div><div class='zone'>stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 2–3 пары играют покупку у доски; зал ставит галочки за фразы (ex.7 peer review)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Volunteers on stage! Class: tick every Key phrase you hear.</span></li><li>После каждой сцены — два вопроса ex.7: <span class='en'>What did they buy? Did they use the phrases correctly?</span></li><li>Хвалю конкретно, ошибок у доски не разбираю.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> чек-лист фраз у зала (запасной вариант — 10 фраз на доске, зал ставит палочки)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выступают добровольцы с готовым диалогом. Ожидаемо: 5–7 фраз на пару</div></td><td class='mat'>слайд 7</td></tr><tr><td class='min'>43–45′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> телесный якорь because / so</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>BECAUSE — point BACK (the reason is behind). SO — point FORWARD (the result is ahead).</span> Пробуем: «It's cold…» «I'm wearing a coat…»</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> ставят руками направление причины и результата</div></td><td class='mat'>—</td></tr><tr><td class='min'>45–58′</td><td class='stage'><div class='nm'>Модель: разбор описаний селфи</div><div class='sub'>Модель · Selfie time</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> два описания A и B: почему автору нравятся (ex.2), таблица где/что (ex.3), because и so (ex.4–5)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Читаем описание A вслух вместе, потом B. ex.2: <span class='en'>Why does the writer like each photo?</span> Ключ: A — интересное и смешное · B — им весело вместе.</li><li>ex.3 таблица с опорой, заполняем вместе на доске. Ключ: A — 1 in front of a blue door · 2 a blue shirt, a hat. B — 3 in front of my house · 4 Jack: jeans, red trainers · 5 Ali: a yellow sweater · 6 Laura: a jacket, green glasses · 7 Me: a T-shirt, trousers, a blue hat.</li><li>ex.4: находим в текстах по два because и два so, подчёркиваем цветом. Правило: 1 because — причина · 2 so — результат.</li><li>ex.5 письменно с самопроверкой. Ключ: 1 so · 2 because · 3 because · 4 so · 5 because.</li><li>Обращаю внимание: <span class='en'>the photo — present continuous; 'I always wear hats' — present simple. Both, in one text.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.44–45 · цветные карандаши · ключ на слайде</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выводят правило из модели и видят оба времени вместе. Ожидаемо: ex.5 требует якоря с разминки — напоминаю жестом, не словом</div></td><td class='mat'>слайд 8</td></tr><tr class='True'><td class='min'>58–74′</td><td class='stage'><div class='nm'>Продукт: описание своего фото по шагам</div><div class='sub'>PRODUCT · моё фото по лестнице</div><div class='zone'>solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 6 вопросов → заметки → 4–6 предложений по скелету → чек-лист → обмен с партнёром</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Шаг 1: <span class='en'>Choose ONE photo (or draw one). Answer the six questions — NOTES only: where · why there · what you're wearing · who with · what they're doing · why you like it.</span></li><li>Шаг 2: начала предложений на экране — <span class='en'>In this photo, I'm … · I'm wearing … · … is wearing … · I like this photo because …</span> Пишем 4–6 предложений. Word bank открыт.</li><li>Шаг 3: чек-лист CHECK p.45 сам себе — present continuous для фото? present simple для привычки? because и so на месте?</li><li>Шаг 4: обмен с партнёром по ex.8 (три вопроса) — партнёр подчёркивает, но НЕ переписывает.</li><li>Описания на стену класса рядом с фото.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> 6 вопросов на слайде · скелет начал · чек-лист · word bank · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут по лестнице с опорами. Ожидаемо: 4–6 предложений у всех; проверка партнёра ловит because/so</div></td><td class='mat'>слайды 9–10 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Стена класса + счёт</div><div class='sub'>Стена + счёт</div><div class='zone'>desks → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> читаем два чужих описания + очки команд</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Kagan <b>Think-Pair-Share</b>: <span class='en'>Read two descriptions. Think: which photo would you like to see? Tell your partner, then your crew.</span></li><li>Очки: фразы магазина + описания; стикеры 🟢🟡🔴 на выходе.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> стена · лидерборд · стикеры</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> читают друг друга. Ожидаемо: обсуждают содержание, а не ошибки</div></td><td class='mat'>слайд 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ДЗ + тизер P7</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…».</li><li>ДЗ: переписать описание начисто (вернётся на стену) + WB стр. 26, зад. 1–2 (по образцу урока).</li><li>Тизер: <span class='en'>Next: the project! Your crew makes a real mini-book about traditional clothes — with your own hands.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> переписать описание фото начисто (чистовик вернётся на стену) + WB стр. 26, зад. 1–2 (заголовок к фото · описание со связками so и because).</p><p>🌱 По желанию: WB стр. 25, зад. 1–2 (диалоги в магазине) — если хочется ещё потренировать фразы.</p></td><td class='mat'>WB Unit 3 · чистовик описания — на стену класса</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>play a clothes-shopping dialogue</b> using 8+ Key phrases and <b>write a photo description</b> following the model, with because and so.</li>
+      <li><span class="lb">Subsidiary.</span> Видео с Арчи (ex.2–5); распределение фраз assistant/customer; модельные описания A и B; таблица ex.3; правило because/so (ex.4–5); чек-лист CHECK p.45.</li>
+      <li><span class="lb">Personal.</span> Письмо в классе с моей поддержкой; никакого «допиши дома» — дома только переписать начисто. Диалог сначала хором за видео, потом за партой, к доске — добровольцы.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>ask for an item, a price and a size in a shop</li><li>play a shopping dialogue with a partner</li><li>write 4–6 sentences describing a photo</li><li>use because for a reason and so for a result</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Phrases</span><span>Play the scene</span><span>Model</span><span>because/so</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>Do you need any help?</span><span class='w'>The changing rooms are over there.</span><span class='w'>I'm/We're just looking, thanks.</span><span class='w'>I'm looking for (a sweater/some jeans).</span><span class='w'>How much is it/are they?</span><span class='w'>What size is it/are they?</span><span class='w'>Can I try it/them on, please?</span><span class='w'>It's/They're a bit (small/big/tight/baggy).</span><span class='w'>Have you got this/these in a (small/medium/large)?</span><span class='w'>I'll take it/them.</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I'm looking for a sweater. · How much is it? · Can I try it on, please? · In this photo, I'm standing in front of … · I like this photo because …</div></div>
+      <div class="r"><div class="k">Form</div><div>Real-world grammar: I'm looking for… · because = причина, so = результат</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>Can I try it ON, please? ↗ · How MUCH is it? — ударение на much</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«I'm just looking» и «I'm looking for» — одно и то же? → нет: первое «я просто смотрю», второе «я ищу».</div><div class='ccq'>«It's a bit small» — это грубо? → нет, обычная вежливая фраза в магазине.</div><div class='ccq'>«I like this photo so it's funny» — что не так? → нужна причина: because.</div><div class='ccq'>Фото описываем каким временем? → present continuous: I'm standing, I'm wearing.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.43–45, КТП пара 26. Скелет THINK→PERFORM из учебника; диалог у новичков идёт от готового текста к своему, не наоборот.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Стесняются играть диалог</td><td>Сначала хором за видео (shadowing), потом парой за партой по готовому тексту, к доске — только добровольцы.</td></tr><tr><td>«Не знаю, что писать» про фото</td><td>Шесть вопросов a–f p.45 дают весь материал; заметки до предложений; начала предложений на экране.</td></tr><tr><td>because и so путаются</td><td>Телесный якорь (because — рука назад, so — рука вперёд) + ex.5 с самопроверкой по ключу до собственного текста.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 3 “Dressing up” (Why do people dress up?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U3 «Dressing up» · P6 · линия «новые» 🌱</span>
+  </div>
+</div>

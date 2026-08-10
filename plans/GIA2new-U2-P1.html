@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 2 · Pair 1 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 2 “Me time” · Pair 1 — Свободное время: чем я занимаюсь и сколько времени на это уходит</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «новые» 🌱 со стороны</b> · 90 min · опоры: модель → word bank → черновик → продукт с листом · командный счёт · стикеры 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 23–24 (KTP pair 13) · Октябрь</span><span class='chip new'>🌱 новые · опоры и модель</span><span class='chip'>SB pp.24–25</span><span class='chip'>командный счёт · самопроверка</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2new-u2-p1.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u2.html" target="_blank" rel="noopener">🎮 Игры юнита 2 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p1.html#3' target='_blank' rel='noopener' title='слайд 3'>0–8′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>круг имён + напоминание, как устроен урок (команды, роли, счёт, продукт) + повтор Unit 1</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p1.html#4' target='_blank' rel='noopener' title='слайд 4'>8–10′</a></td><td class='gname'>Завязка миссии</td><td>миссия пары: узнать слова, собрать свои выходные, сравнить с американцами</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p1.html#5' target='_blank' rel='noopener' title='слайд 5'>10–24′</a></td><td class='gname'>Разгон: активности по модели</td><td>модель прежде задания: мои выходные на доске → 18 слов порциями с жестами → ex.2 таблица</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p1.html#6' target='_blank' rel='noopener' title='слайд 6'>24–36′</a></td><td class='gname'>База: четыре колонки свободного времени</td><td>ex.3 p.25: фото 1–6 + рамка из 11 новых слов → достраиваем ту же таблицу</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p1.html#7' target='_blank' rel='noopener' title='слайд 7'>36–45′</a></td><td class='gname'>Практика: мои часы по рамке</td><td>письменная фиксация: свои выходные 6 строк по рамке с часами; потом читаем партнёру</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p1.html#8' target='_blank' rel='noopener' title='слайд 8'>45–47′</a></td><td class='gname'>Переход-разминка</td><td>разминка про часы у телефона</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p1.html#9' target='_blank' rel='noopener' title='слайд 9'>47–56′</a></td><td class='gname'>Видео: выходные влогера</td><td>влог Райана с задачей ДО просмотра; после — 2 факта на мини-досках</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p1.html#10' target='_blank' rel='noopener' title='слайд 10'>56–72′</a></td><td class='gname'>Продукт: мои выходные, 6 строк</td><td>продукт: 6 строк о своих выходных + 1 сравнение с американскими подростками; speaker с листом</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p1.html#11' target='_blank' rel='noopener' title='слайд 11'>72–82′</a></td><td class='gname'>Счёт команды + рефлексия</td><td>командный счёт + «I can…» тапами + стикеры лёгкости</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p1.html#12' target='_blank' rel='noopener' title='слайд 12'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>домашка с образцом + тизер P2</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 2 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Для новичков миссия простая и «про себя»: собрать по-английски свои выходные и сравнить с американскими подростками. Это даёт безопасный продукт (говорю о себе, по рамке, с листом) и одновременно вводит 18 слов сета. Статистика со стр. 24 — не задание, а повод: цифры понятны без перевода и сразу вызывают спор.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Look at these numbers.</b> American teenagers spend 4.3 hours a day on media, 3.8 hours on hobbies and almost 11 hours sleeping. Really? Today two things: we learn to name every free-time activity in English — and each of you writes your own weekend, six lines. At the end you present with your notes in your hand. This is not a test. <b>Let's start with MY weekend…”</b> (и сразу показываю модель)<div class='pitchru'>Суть по-русски, если нужно поддержать: смотрим на американскую статистику, учимся называть занятия свободного времени по-английски и собираем свои выходные — шесть строк. В конце выступаем с листом.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–8′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · вход + повтор</div><div class='zone'>circle → desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> круг имён + напоминание, как устроен урок (команды, роли, счёт, продукт) + повтор Unit 1</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Круг: <span class='en'>I'm … and at the weekend I …</span> (можно одним словом).</li><li>Напоминание формата: команды, роли (captain · writer · timekeeper · speaker), счёт, продукт пары.</li><li>Блиц Unit 1: <span class='en'>What time do you get up? Do you do homework every day?</span></li><li>Мостик: <span class='en'>School time — done. Now: YOUR time.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд формата · карточки ролей</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> включаются на знакомом. Ожидаемо: круг разгоняет речь. Ошибка: молчат — принимаю одно слово</div></td><td class='mat'>слайды 3–4</td></tr><tr class='True'><td class='min'>8–10′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия пары: узнать слова, собрать свои выходные, сравнить с американцами</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Statistics on the screen. American teens: 4.3 hours a day on media. Is that a lot?</span></li><li><span class='en'>At the end: your weekend in six lines + one comparison. You can hold your notes.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии со статистикой SB p.24 (запасной вариант — цифры на доске)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают, понимают продукт. Ожидаемо: цифры сразу вызывают спор — это хорошо</div></td><td class='mat'>слайд 5</td></tr><tr><td class='min'>10–24′</td><td class='stage'><div class='nm'>Разгон: активности по модели</div><div class='sub'>Warm-up · активности по модели</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> модель прежде задания: мои выходные на доске → 18 слов порциями с жестами → ex.2 таблица</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>МОДЕЛЬ: рассказываю СВОИ выходные: <span class='en'>I sleep for nine hours. I meet friends. I watch TV series…</span></li><li>Четыре порции с жестами: <span class='en'>take photos — click! · practise the piano — fingers! · collect things — grab! · play in a band — guitar!</span></li><li>ex.2 p.24 в парах: красные слова в четыре колонки. Ключ TB: Media and communication — play video games, watch TV series · Sports — play football · Art and music — listen to music, take photos · Other — sleep, meet friends.</li><li>Kagan <b>RallyRobin</b>: по очереди в паре по одному занятию из своей колонки.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.24 ex.2 · word bank на экране</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> повторяют модель, сортируют, говорят по очереди. Ожидаемо: включаются через жесты. Ошибка: make photos — жест-стоп</div></td><td class='mat'>слайды 6–7</td></tr><tr><td class='min'>24–36′</td><td class='stage'><div class='nm'>База: четыре колонки свободного времени</div><div class='sub'>Base · четыре колонки</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.3 p.25: фото 1–6 + рамка из 11 новых слов → достраиваем ту же таблицу</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Page 25. Six photos. Which activity is which? Word bank is on the screen — use it!</span></li><li>Ключ TB: 1 collect things · 2 go to the gym · 3 play in a band · 4 play in a team · 5 practise the piano · 6 use social media.</li><li>Дописываем таблицу вместе (ключ TB): Media — make videos, use social media · Sport — go to a dance class, go to the gym, play in a team · Art and music — draw, play in a band, practise the piano · Other — collect things, help at home, play chess.</li><li><span class='en'>Tick every activity YOU do. How many?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.25 ex.3 · word bank</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> работают с опорой, отмечают своё. Ожидаемо: медленнее «наших» — норма</div></td><td class='mat'>слайд 8</td></tr><tr><td class='min'>36–45′</td><td class='stage'><div class='nm'>Практика: мои часы по рамке</div><div class='sub'>Practice · мои часы</div><div class='zone'>solo → pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> письменная фиксация: свои выходные 6 строк по рамке с часами; потом читаем партнёру</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Рамка на экране: <span class='en'>At the weekend I … . I usually … for … hours. I hardly ever … .</span></li><li><span class='en'>Six lines about YOUR weekend. Numbers help — how many hours?</span></li><li>Хожу и помогаю точечно (спеллинг, артикли).</li><li>Kagan <b>Timed Pair Share</b>: 40 сек читаю партнёру → меняемся.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> рамка-опора · word bank · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут по рамке, читают в паре. Ожидаемо: у всех есть текст — страх снят. Ошибка: список без часов — жест «how many hours?»</div></td><td class='mat'>слайд 9 · таймер</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка про часы у телефона</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>More than three hours a day on your phone — left wall. Less — right wall!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> двигаются, смеются</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–56′</td><td class='stage'><div class='nm'>Видео: выходные влогера</div><div class='sub'>Video skills · Ryan's weekend</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> влог Райана с задачей ДО просмотра; после — 2 факта на мини-досках</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Задача до: <span class='en'>Find TWO things Ryan does that YOU do too.</span></li><li>Смотрим; на стопах — обсуждение в командах (можно по-русски → потом по-английски).</li><li>Мини-доски: <span class='en'>Ryan … . I … too.</span> (опора на ключ TB: uses social media, meets his friend Aaron, plays in a football team, helps at home, makes videos, plays video games).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> Video skills SB p.25 (запасной вариант — читаю фрагмент видеоскрипта с доски: «During the week I wake up at seven. But at the weekend, I wake up at 9:00…») · мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> смотрят с задачей, фиксируют письменно. Ожидаемо: находят совпадения с собой — приятно</div></td><td class='mat'>слайд 10 · видео</td></tr><tr class='True'><td class='min'>56–72′</td><td class='stage'><div class='nm'>Продукт: мои выходные, 6 строк</div><div class='sub'>PRODUCT · мои выходные (6 строк)</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> продукт: 6 строк о своих выходных + 1 сравнение с американскими подростками; speaker с листом</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Сборка 8 мин: каждый дочищает свои 6 строк; крю помогает друг другу со спеллингом.</li><li>Сравнение по рамке: <span class='en'>American teens sleep for eleven hours. I sleep for … hours.</span></li><li><span class='en'>You can hold your notes. Six lines + one comparison. The crew stands together.</span></li><li>Зал слушает с задачей: <span class='en'>Thumbs up when you hear an activity you also do!</span></li><li>Хвалю конкретно: <span class='en'>Clear numbers! Nice comparison!</span> — без разбора ошибок у доски.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · заметки детей</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выступают с опорой, команда рядом — не страшно. Ожидаемо: все проходят через сцену в первую же пару</div></td><td class='mat'>слайды 11–12 · таймер</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Счёт команды + рефлексия</div><div class='sub'>Team score + reflection</div><div class='zone'>board → solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> командный счёт + «I can…» тапами + стикеры лёгкости</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Счёт: за таблицу, за 6 строк, за работу с word bank без подсказок.</li><li>Слайд «I can…»: <span class='en'>Tap what is TRUE for you now.</span></li><li>Стикеры на выходе: 🟢 easy · 🟡 ok · 🔴 hard — мне на калибровку темпа.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> лидерборд · слайд I can · стикеры</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> видят: счёт = команда, а не «кто умный». Ожидаемо: 🔴 у 2–3 — заберу их в опоры P2</div></td><td class='mat'>слайд 13</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> домашка с образцом + тизер P2</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ДЗ: WB стр. 12, зад. 1–3 (free-time activities) + переписать свои 6 строк начисто.</li><li>Показываю образец выполненного зад. 1 на слайде — «вот так выглядит сделанное».</li><li>Тизер: <span class='en'>Next lesson: a girl of thirteen who is a world champion. And she still does homework!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ с образцом</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают ДЗ, уходят с понятной задачей. Ожидаемо: образец снимает «я не понял, что делать»</div></td><td class='mat'>слайд 14</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook (родная тетрадь):</b> WB стр. 12, зад. 1–3 (free-time activities) + переписать начисто свои 6 строк «My weekend».</p><p>🌱 По желанию: зад. 4–5, если легко пошло.</p></td><td class='mat'>WB Unit 2 (стр. 12–19) · 6 строк принести на P2</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>name 18 free-time activities</b> and <b>describe their own weekend in 6 lines</b> with hours, comparing one thing with US teenagers.</li>
+      <li><span class="lb">Subsidiary.</span> Таблица из четырёх колонок (ex.2–3) с опорой; ex.4 текст про близнецов по образцу; Video skills (влог Райана) с задачей до просмотра.</li>
+      <li><span class="lb">Personal.</span> Никого не поднимаю без черновика. Каждое устное задание идёт ПОСЛЕ письменной фиксации. Word bank на экране весь урок.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>say and write 18 free-time activities</li><li>sort them into four groups</li><li>describe my weekend in 6 sentences with hours</li><li>compare one thing with US teenagers</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Warm-up</span><span>Base</span><span>Practice</span><span>Video</span><span>Draft</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>collect things</span><span class='w'>draw</span><span class='w'>go to a dance class</span><span class='w'>go to the gym</span><span class='w'>help at home</span><span class='w'>listen to music</span><span class='w'>make videos</span><span class='w'>meet friends</span><span class='w'>play chess</span><span class='w'>play football</span><span class='w'>play in a band</span><span class='w'>play in a team</span><span class='w'>play video games</span><span class='w'>practise the piano</span><span class='w'>sleep</span><span class='w'>take photos</span><span class='w'>use social media</span><span class='w'>watch TV series</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I play video games. · I usually meet friends at the weekend. · I sleep for nine hours. · American teens sleep for eleven hours — I sleep less.</div></div>
+      <div class="r"><div class="k">Form</div><div>устойчивые связки без изменений: take photos (не make), play chess (без the), go to the gym, use social media.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>по Wordlist: use social media /ˌjuːz səʊʃ(ə)l ˈmiːdiə/ · practise the piano /ˌpræktɪs ðə piˈænəʊ/ · take photos /ˌteɪk ˈfəʊtəʊz/ (TB просит отработать collect /kəˈlekt/, chess /tʃes/, piano /piˈænəʊ/)</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«take photos или make photos?» → take photos, только так.</div><div class='ccq'>«play chess или play the chess?» → без артикля: play chess.</div><div class='ccq'>«go to gym или go to the gym?» → the нужен: go to the gym.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.24–25, КТП пара 13. Часть слов знакома (play football, listen to music); новые — collect things, practise the piano, play in a band/team, use social media.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Страх говорить при чужих</td><td>Правило пары: сначала пишем, потом читаем в паре, к доске — с листом в руках.</td></tr><tr><td>18 слов разом не влезают</td><td>Даю четырьмя порциями по колонкам таблицы, с жестом на каждое; сначала узнавание (покажи), потом называние.</td></tr><tr><td>Word bank игнорируют и молчат</td><td>Word bank висит на экране весь урок; жест «look up» вместо подсказки словом.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 2 “Me time” (How important are hobbies for teenagers?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U2 «Me time» · P1 · линия «новые» 🌱</span>
+  </div>
+</div>

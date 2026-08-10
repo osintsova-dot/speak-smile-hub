@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2 · Unit 7 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 7 “Heroes” · Pair 2 — Mission «Newsroom»: four boys, one boat, and every claim needs a line</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «наши» 🚀 после A1+</b> · 90 min · mission-based: gate → base sprint → challenge → bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Lessons 107–108 (KTP pair 55) · Май</span><span class='chip new'>🚀 наши · после A1+</span><span class='chip'>SB pp.86–87</span><span class='chip'>unit leaderboard · gold runs</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2-u7-p2.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u7.html" target="_blank" rel="noopener">🎮 Игры юнита 7 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u7-p2.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>проверка ДЗ на ходу + Kagan Timed RoundRobin по профессиям P1</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u7-p2.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>объявляю миссию: 60-секундный новостной выпуск с доказательствами</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u7-p2.html#5' target='_blank' rel='noopener' title='слайд 5'>8–13′</a></td><td class='gname'>Входной тест (gate): 60 сек — кто спасает людей</td><td>60 секунд: какие профессии спасают людей + 60 секунд по фото — что случилось и какие были проблемы</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u7-p2.html#6' target='_blank' rel='noopener' title='слайд 6'>13–27′</a></td><td class='gname'>Спринт: читаем статью о шторме</td><td>ex.3 быстрое чтение на заголовок (3 мин по таймеру) + ex.4 шесть вопросов с доказательствами</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u7-p2.html#7' target='_blank' rel='noopener' title='слайд 7'>27–39′</a></td><td class='gname'>Челлендж: охота за доказательствами</td><td>ex.5 шесть достроек на скорость + Word work ex.6–8: догадка по контексту, 8 сек на защиту</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u7-p2.html#8' target='_blank' rel='noopener' title='слайд 8'>39–45′</a></td><td class='gname'>Чтение: статья о шторме (трек 45)</td><td>второе прослушивание трека 45 + Critical thinking 1: чем именно они были героями</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u7-p2.html#9' target='_blank' rel='noopener' title='слайд 9'>45–47′</a></td><td class='gname'>Переход-разминка</td><td>физическая перезагрузка: 90 секунд движения</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u7-p2.html#10' target='_blank' rel='noopener' title='слайд 10'>47–59′</a></td><td class='gname'>Бонус-уровень: этого нет в учебнике</td><td>уровень для наших: ещё четыре слова из текста только по контексту + язык бюллетеня</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u7-p2.html#11' target='_blank' rel='noopener' title='слайд 11'>59–74′</a></td><td class='gname'>Продукт: выпуск новостей за 60 секунд</td><td>выпуск 60 сек: что произошло · кто · как · цифра · цитата — и вопрос от зала с требованием строки</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u7-p2.html#12' target='_blank' rel='noopener' title='слайд 12'>74–82′</a></td><td class='gname'>Реванш gate + лидерборд</td><td>реванш gate (60 сек профессий-спасателей + 6 слов Word work) + очки в лидерборд</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u7-p2.html#13' target='_blank' rel='noopener' title='слайд 13'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>рефлексия «я могу…» + домашка + тизер P3</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 7 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Газетная статья читается не «потому что задали», а как материал редакции: крю выпускает 60-секундный новостной сюжет и обязано подтверждать каждое утверждение строкой из текста. Subskill юнита (understanding new words) вшит в правило: незнакомое слово не переводим — вычисляем по контексту и защищаем догадку. Critical thinking из учебника («можем ли мы все быть героями») становится финалом выпуска, а не довеском.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Newsroom, deadline in one hour.</b> Texas. Storm Harvey. The streets are rivers, there's no water, no electricity. Thirty thousand people left — the rest stayed. And four teenagers went out in a small fishing boat. Fifty people. Even more pets. Your crew runs the story: read the article, build the bulletin — what happened, who, how, and the line that makes it a story. Sixty seconds on air. Every claim needs a LINE from the text. No line, no point.”<div class='pitchru'>Суть по-русски, если нужно поддержать: редакция выпускает новостной сюжет о шторме Harvey и четверых подростках с лодкой: читаем статью, собираем выпуск на 60 секунд — что произошло, кто, как. Каждое утверждение подтверждается строкой из текста, иначе не засчитывается.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> проверка ДЗ на ходу + Kagan Timed RoundRobin по профессиям P1</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Проверка ДЗ на ходу: <span class='en'>Show me exercise 2. One job you'd like — why?</span></li><li>Kagan <b>Timed RoundRobin</b>, 30 сек на человека: <span class='en'>A job that helps other people — and what that person does.</span></li><li>Мостик: <span class='en'>Doctors, nurses, police officers. Now — a real story where the heroes had no job at all. They were fifteen and seventeen.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд повтора (запасной вариант — три опорных вопроса мелом на доске)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> говорят по кругу без пауз. Ожидаемо: профессии держатся с P1. Ошибка: «She's doctor» — молча отмечаю</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> объявляю миссию: 60-секундный новостной выпуск с доказательствами</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Texas. The streets were like rivers. No water, no electricity. And four boys went out in a fishing boat.</span></li><li><span class='en'>Your crew runs the bulletin: what happened · who · how · the number · one quote. Sixty seconds.</span></li><li>Железное правило: <span class='en'>Every claim needs a line from the text. No line, no point.</span></li><li><span class='ig'>🏆 <b>Планка продукта (рубрика судей):</b> Fluency — паузы ≤3 сек (1–3) · Accuracy — форма чистая, без «didn't woke» и «What did you ate» (1–3) · Richness — детали, даты, цифры, прилагательные (1–3). 9/9 = gold run, +5.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии + фото разворота SB pp.86–87 (запасной вариант — открываем учебник на pp.86–87 и разбираем фото прямо там)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают, распределяют блоки бюллетеня. Ожидаемо: сразу спрашивают, всё ли это правда — да, статья реальная</div></td><td class='mat'>слайд 4</td></tr><tr class='True'><td class='min'>8–13′</td><td class='stage'><div class='nm'>Входной тест (gate): 60 сек — кто спасает людей</div><div class='sub'>🎯 GATE · hero-jobs sprint</div><div class='zone'>solo · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 60 секунд: какие профессии спасают людей + 60 секунд по фото — что случилось и какие были проблемы</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Sixty seconds. Jobs that help people in danger. Write, don't talk. GO!</span> (примерные ответы TB ex.1: teacher, nurse, dentist, lawyer, scientist — и, конечно, rescue services).</li><li>ex.2 по фото: <span class='en'>Look at page 87. What was the weather like? What problems did people have?</span> (примерные ответы TB: было мокро, много дождя; невозможно было проехать, вода стояла в домах).</li><li>Фиксирую без разбора: <span class='en'>Keep your number. Rematch at the end.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · мини-доски · SB p.87 фото (запасной вариант — фото есть в бумажном учебнике, проектор не нужен; отсчёт веду вслух)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут молча, потом смотрят фото. Ожидаемо: 5–9 профессий. Ошибка: пишут по-русски — не засчитывается</div></td><td class='mat'>слайд 5 · таймер</td></tr><tr><td class='min'>13–27′</td><td class='stage'><div class='nm'>Спринт: читаем статью о шторме</div><div class='sub'>⚡ Base sprint · read the storm</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.3 быстрое чтение на заголовок (3 мин по таймеру) + ex.4 шесть вопросов с доказательствами</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.3: <span class='en'>Three minutes. Don't read every word — find the SHAPE of the story. Which headline fits: A, B or C?</span> (ключ TB: B — TEEN HEROES RESCUE NEIGHBOURS; A слишком узко про полицию, C слишком широко про весь Техас).</li><li>ex.4 с треком 45 (read and listen): <span class='en'>Six questions. Answer AND point at your line.</span> (ключ TB: 1 в Техасе · 2 не было питьевой воды и электричества, нельзя было выйти · 3 Thomas Edwards, друзья Richard и Liam и брат Declan · 4 на маленькой рыбацкой лодке · 5 больше 50 человек · 6 нет, ещё и животных).</li><li>Kagan <b>Numbered Heads Together</b>: <span class='en'>Question four — number ones, read your line out loud!</span></li><li>Доп. вопрос TB: <span class='en'>How did the boys know which people to rescue?</span> (по крикам о помощи и по адресам от соседей)</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.86–87 · аудио трек 45 · таймер (запасной вариант — читаю статью вслух сам в темпе диктора, дети следят по учебнику пальцем)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> сканируют, спорят о заголовке, показывают строки. Ожидаемо: половина класса берёт C — разбираем, почему шире текста</div></td><td class='mat'>слайд 6 · таймер</td></tr><tr><td class='min'>27–39′</td><td class='stage'><div class='nm'>Челлендж: охота за доказательствами</div><div class='sub'>🔥 Challenge · evidence hunt</div><div class='zone'>pairs → crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.5 шесть достроек на скорость + Word work ex.6–8: догадка по контексту, 8 сек на защиту</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.5: <span class='en'>Six sentences, six lines in the text. Four minutes.</span> (ключ TB: 1 … were under water · 2 … his car was under water, too · 3 … calls for help · 4 … alone · 5 … police officers and rescue services · 6 … took photos of the boys and posted them on social media).</li><li>Word work по алгоритму subskill: <span class='en'>Don't translate. What TYPE of word is it? Is it positive or negative? What fits?</span> (ключ TB ex.6: electricity — сущ., brave — прил., citizens — сущ. мн., safe — прил., neighbours — сущ. мн., rescue services — сущ. мн.)</li><li>Дуэль догадок, 8 сек на ход: <span class='en'>Your guess and your evidence — go!</span> Ограничитель: сказал «не знаю» — ход сгорает.</li><li>Сверка ex.7 и ex.8 (ключ TB: ex.7 — 1 safe · 2 citizens · 3 brave · 4 rescue services · 5 neighbours · 6 electricity; ex.8 — 1 electricity · 2 safe · 3 brave · 4 neighbours · 5 citizens · 6 rescue services).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.86 ex.5–8 · таймер 8 сек (запасной вариант — шесть слов пишу на доске крупно, дети выходят и защищают догадку у доски)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> дуэлятся догадками, сверяются по ключу. Ожидаемо: citizens берут через русское «цитадель» — ловим ложного друга</div></td><td class='mat'>слайд 7 · таймер</td></tr><tr><td class='min'>39–45′</td><td class='stage'><div class='nm'>Чтение: статья о шторме (трек 45)</div><div class='sub'>Reading · the storm article</div><div class='zone'>desks → circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> второе прослушивание трека 45 + Critical thinking 1: чем именно они были героями</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Второй проход трека 45: <span class='en'>Close your books for the last paragraph. Just listen. Why did the boys say they weren't heroes?</span></li><li>Critical thinking 1 (ключ TB): <span class='en'>They went out in a boat. They took people to a safe place. They worked alone for hours. They helped the police. Fifty people and even more pets. And they didn't want to be heroes.</span></li><li>Подсказка TB: просить и то, чего в тексте прямо нет — <span class='en'>They searched for extra people. They kept helping when the police arrived. They didn't want attention.</span></li><li>Culture note коротко: шторм Harvey, август 2017-го, Техас; 89 погибших, больше 200 000 повреждённых домов.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> аудио трек 45 (запасной вариант — читаю последний абзац статьи сам, дважды, в том же темпе: «Later, the boys said they didn't do it because they wanted to be heroes. They just wanted to help.»)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают без книги, потом достают доказательства. Ожидаемо: последний абзац производит впечатление — держим паузу</div></td><td class='mat'>слайд 8 · аудио</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> физическая перезагрузка: 90 секунд движения</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Stand up. 'A hero must be famous' — agree, left wall. Disagree, right wall. One line to defend it!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> делятся стенами и защищают позицию. Ожидаемо: спор выводит прямо на Critical thinking</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>47–59′</td><td class='stage'><div class='nm'>Бонус-уровень: этого нет в учебнике</div><div class='sub'>🚀 Bonus level · not in the book</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> уровень для наших: ещё четыре слова из текста только по контексту + язык бюллетеня</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Fast finishers TB, но для всех: <span class='en'>Four more words, no dictionary: destroyed, luckily, several, ordinary. Write your definition — then we check.</span></li><li><span class='en'>Weak bulletin: 'It was bad.' Useless. A reporter gives the NUMBER and the QUOTE.</span></li><li>Апгрейд-рамки: <span class='en'>In total, they saved at least fifty people. · Many ordinary citizens became local heroes. · 'We rescued families, babies, dogs, rabbits,' said Thomas.</span></li><li><span class='en'>One number and one quote in your bulletin = richness points.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд с апгрейд-рамками (запасной вариант — четыре рамки пишу на доске и оставляю до конца пары)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выводят слова из контекста, переписывают строки бюллетеня. Ожидаемо: ordinary берут через «ординарный». Ошибка: «they was» — не правлю вслух, ставлю галочку в клинику P3</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>59–74′</td><td class='stage'><div class='nm'>Продукт: выпуск новостей за 60 секунд</div><div class='sub'>PRODUCT · the 60-second bulletin</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> выпуск 60 сек: что произошло · кто · как · цифра · цитата — и вопрос от зала с требованием строки</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Подготовка 7 мин: <span class='en'>Keywords only. Everyone owns one block: what happened · who · how · the number · the quote.</span></li><li>Правило редакции: <span class='en'>I will ask 'Where is that in the text?' If you can't point, the claim is cut.</span></li><li><span class='en'>Sixty seconds per crew. Judges: fluency, accuracy, richness — cards up!</span></li><li>Финал выпуска — Critical thinking 2: <span class='en'>Can we all be heroes in daily life? At school, in free time, in the holidays — give ONE real example.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер 60 сек · карточки судей · рубрика (запасной вариант — вопрос «Where is that in the text?» задаю сам, показывая на учебник)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выступают по ролям, показывают строки. Ожидаемо: планка держит формат. Ошибка: «I think they was heroes» — судьи снимают accuracy</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Реванш gate + лидерборд</div><div class='sub'>Rematch + leaderboard</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> реванш gate (60 сек профессий-спасателей + 6 слов Word work) + очки в лидерборд</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Same test. Plus the six new words — spelling counts. GO!</span></li><li>Сравнение приватно: <span class='en'>Hands up if you beat your number.</span> Очки командам в лидерборд.</li><li>Мини-клиника спеллинга (2 слова дня): electricity · neighbours.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер · лидерборд (запасной вариант — лидерборд на ватмане у доски)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут реванш, видят рост. Ожидаемо: шесть слов Word work закрепляются письмом</div></td><td class='mat'>слайд 12 · таймер</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия «я могу…» + домашка + тизер P3</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…»: <span class='en'>Which line is TRUE for you now?</span></li><li>ДЗ: WB стр. 56, зад. 1–3 (веб-статья «Who's your hero?» — Messi, Ariana Grande, учителя) — база; 🚀 бонус: короткий абзац о человеке, которого ТЫ считаешь героем (задание TB Homework к Reading).</li><li>Тизер: <span class='en'>Next file: Thomas woke up. He saw. He rang. He had a boat. Four verbs, and not one of them plays by the rules. Come and see why.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ (запасной вариант — диктую ДЗ и пишу страницы на доске)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> рефлексируют и записывают ДЗ. Ожидаемо: тизер уводит прямо в P3</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook (родная тетрадь):</b> WB стр. 56, зад. 1–3 (Reading: веб-статья «WHO'S YOUR HERO?» — Messi, Ariana Grande, учителя; тот же subskill understanding new words).</p><p>🚀 Бонус (+3 в лидерборд): абзац о человеке, которого ты считаешь героем — кто это, что сделал, почему это герой (задание TB Homework к Reading).</p></td><td class='mat'>WB Unit 7 · очки в лидерборд на следующей паре</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, crews can <b>find and prove specific information in a newspaper article</b>, <b>guess six new words from context</b> and <b>deliver a 60-second bulletin</b> with an evidence line behind every claim.</li>
+      <li><span class="lb">Subsidiary.</span> ex.3 выбор заголовка из трёх; ex.4 (трек 45) шесть вопросов; ex.5 шесть достроек; Word work electricity · brave · citizens · safe · neighbours · rescue services; Critical thinking 1–3; Culture note про Harvey.</li>
+      <li><span class="lb">Personal.</span> Скорость чтения у сильных глушит слабых — держу правило «ответ засчитан только со строкой-доказательством». Прошедшее в тексте не разбираю: коплю примеры на P3.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>choose the right headline for a text</li><li>answer six comprehension questions and point at the proof line</li><li>guess a new word from context and say what type of word it is</li><li>deliver a 60-second news bulletin with evidence</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Media</span><span>Bonus</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>electricity</span><span class='w'>brave</span><span class='w'>citizens</span><span class='w'>safe</span><span class='w'>neighbours</span><span class='w'>rescue services</span><span class='w'>ordinary</span><span class='w'>destroyed</span><span class='w'>luckily</span><span class='w'>several</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>They didn't have drinking water or electricity. · He woke up and saw houses under water. · In total, they saved at least 50 people. · 🚀 bonus: Many ordinary citizens became local heroes.</div></div>
+      <div class="r"><div class="k">Form</div><div>статья держится на цепочке past simple + маркерах: When Storm Harvey came … · For several hours … · Later … · In total …</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>по Wordlist: brave /breɪv/ · citizens /ˈsɪtɪz(ə)n/ · electricity /ɪˌlekˈtrɪsəti/ · neighbours /ˈneɪbə(r)z/ · rescue services /ˈreskjuː ˌsɜː(r)vɪsɪz/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«brave» — какая это часть речи? → прилагательное: описывает человека.</div><div class='ccq'>«rescue services» — это люди или организации? → организации, которые помогают в опасных ситуациях.</div><div class='ccq'>«Ответ без строки из текста» — считается? → нет, это догадка, а не чтение.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.86–87, КТП пара 55. Профессии из P1 в активе. Тема шторма может быть чувствительной — держу фокус на действиях людей, а не на разрушениях.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Читают целиком и тонут</td><td>Правило редакции: сначала подчеркнуть ключевые слова в вопросе, потом сканировать. Первое чтение — только на заголовок, 3 минуты, по таймеру.</td></tr><tr><td>Незнакомое слово → рука вверх «а что это?»</td><td>Не перевожу. Отдаю алгоритм subskill: смысл предложения → соседние слова → часть речи → плюс или минус. Догадку надо защитить вслух.</td></tr><tr><td>Выпуск превращается в пересказ</td><td>Формат бюллетеня: что произошло · кто · как · цифра · одна цитата. Пять блоков, 60 секунд, судьи считают.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 7 “Heroes” (What makes a hero?) · GIA2 — lesson plan &amp; staging</span>
+    <span>GIA2 · U7 «Heroes» · P2 · линия «наши» 🚀</span>
+  </div>
+</div>

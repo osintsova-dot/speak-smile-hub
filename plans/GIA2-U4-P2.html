@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2 · Unit 4 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 4 “Extremes” · Pair 2 — Mission «The Toughest Place»: where is life harder — under the rain or in the freezer?</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «наши» 🚀 после A1+</b> · 90 min · mission-based: gate → base sprint → challenge → bonus → product with a bar · unit leaderboard</div>
+    <div class="meta"><span class='chip'>Lessons 59–60 (KTP pair 31) · Январь</span><span class='chip new'>🚀 наши · после A1+</span><span class='chip'>SB pp.50–51</span><span class='chip'>unit leaderboard · gold runs</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2-u4-p2.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u4.html" target="_blank" rel="noopener">🎮 Игры юнита 4 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p2.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>блиц-повтор P1: слова погоды за 5 сек + Quiz-Quiz-Trade карточками</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p2.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: два досье в споре → вердикт крю «где жить труднее» в конце пары</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p2.html#5' target='_blank' rel='noopener' title='слайд 5'>8–14′</a></td><td class='gname'>Входной тест (gate): 60 секунд на весь текст</td><td>60 секунд на ВЕСЬ текст (задания закрыты) → книги закрыть → написать, о чём статья, 3 строки; потом сверка с ex.3</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p2.html#6' target='_blank' rel='noopener' title='слайд 6'>14–28′</a></td><td class='gname'>Спринт: охота за фактами по двум посёлкам</td><td>ex.1 фактфайлы закрываем одной фразой (они были на брифе) + ex.2 пять слов по местам → ex.4 (трек 25) шесть вопросов гонкой, каждый ответ со строкой</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p2.html#7' target='_blank' rel='noopener' title='слайд 7'>28–38′</a></td><td class='gname'>Челлендж: эстафета M / O / Both со строкой</td><td>ex.5 эстафетой: шесть утверждений — Mawsynram, Oymyakon или Both, каждый ответ с процитированной строкой</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p2.html#8' target='_blank' rel='noopener' title='слайд 8'>38–45′</a></td><td class='gname'>Налёт на слова: шесть слов из статьи</td><td>ex.6 блиц на определения + ex.7 подстановка на скорость + фиксация в тетрадь</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p2.html#9' target='_blank' rel='noopener' title='слайд 9'>45–47′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p2.html#10' target='_blank' rel='noopener' title='слайд 10'>47–58′</a></td><td class='gname'>Бонус-уровень: этого нет в учебнике</td><td>Critical thinking Remember → Analyse → Evaluate + апгрейд-рамки уступки и сравнения</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p2.html#11' target='_blank' rel='noopener' title='слайд 11'>58–74′</a></td><td class='gname'>Продукт: вердикт «где выжить труднее»</td><td>вердикт 60 сек: два факта из текста + два довода из Critical thinking + сравнение + ответ «где жить труднее»</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p2.html#12' target='_blank' rel='noopener' title='слайд 12'>74–82′</a></td><td class='gname'>Реванш gate + лидерборд</td><td>реванш gate: новый короткий абзац из статьи, 30 сек на главную мысль + очки пары</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2-u4-p2.html#13' target='_blank' rel='noopener' title='слайд 13'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>рефлексия + ДЗ + тизер P3</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 4 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Журнальная статья читается не «потому что задали», а как два досье в споре: крю решает, где выжить труднее — в Маусинраме (дождь каждый день) или в Оймяконе (-50°C), и обязано подтверждать каждый довод строкой из текста. Subskill юнита (understanding the main idea) вшит в gate: 60 секунд на весь текст с закрытыми заданиями — и только потом детали. Critical thinking (Remember → Analyse → Evaluate) становится финалом миссии, а не довеском.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Two files on the table.</b> Mawsynram, India: the wettest place on earth, rain every single day, bridges made of living tree roots. Oymyakon, Siberia: minus fifty, dark for twenty-one hours, phones freeze in your hand. Both are real, both have schools, both have kids your age. Your crew answers ONE question in sixty seconds: which is harder to live in? Every argument needs a LINE from the text. No line, no point.”<div class='pitchru'>Суть по-русски, если нужно поддержать: два досье: Маусинрам, где дождь каждый день, и Оймякон, где -50 и телефоны замерзают. Крю решает, где жить труднее, и защищает вердикт за 60 секунд. Каждый довод подтверждается строкой из текста.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> блиц-повтор P1: слова погоды за 5 сек + Quiz-Quiz-Trade карточками</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Radar check: I say the basket — you say TWO words. Temperature? Weather?</span></li><li>Kagan <b>Quiz-Quiz-Trade</b> с карточками погоды: вопрос → ответ → обмен карточками.</li><li>Мостик: <span class='en'>Yesterday we put OUR weather on the map. Today: two places where the weather decides everything — what you eat, how you sleep, how you get to school.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки погоды · слайд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> отвечают на скорость, меняются карточками. Ожидаемо: лексика P1 в тонусе</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: два досье в споре → вердикт крю «где жить труднее» в конце пары</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Rain every day. Minus fifty. Which is harder? You decide — with proof.</span></li><li><span class='en'>Every argument needs a LINE from the text. No line, no point.</span></li><li><span class='ig'>🏆 <b>Планка продукта (рубрика судей):</b> Fluency — паузы ≤3 сек (1–3) · Accuracy — форма чистая, без «more hotter» и «must to» (1–3) · Richness — цифры, сравнения, детали (1–3). 9/9 = gold run, +5.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии с двумя фактфайлами (запасной вариант — выписываю фактфайлы на доску: MAWSYNRAM — north-west India, 237 families, average rainfall 11,871 mm || OYMYAKON — north-east Russia, population 500, lowest temperature -71.2°C)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> принимают правила разведки. Ожидаемо: цифра -71,2 сама по себе включает класс</div></td><td class='mat'>слайд 4</td></tr><tr class='True'><td class='min'>8–14′</td><td class='stage'><div class='nm'>Входной тест (gate): 60 секунд на весь текст</div><div class='sub'>🎯 GATE · 60-second skim</div><div class='zone'>solo · mini-boards</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 60 секунд на ВЕСЬ текст (задания закрыты) → книги закрыть → написать, о чём статья, 3 строки; потом сверка с ex.3</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Sixty seconds. Read the WHOLE article — fast. Don't stop at new words. Don't look at the questions. GO!</span></li><li><span class='en'>Books shut. Three lines: what is this text about?</span></li><li>Сверка с ex.3 (ключ TB: c — Living in extreme weather conditions). <span class='en'>Who got it in sixty seconds? Keep your number — rematch at the end.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.50–51 · таймер 60 сек · мини-доски</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> читают на скорость и фиксируют общую мысль. Ожидаемо: половина хватает главное с первого раза; вторая половина видит, зачем нужен subskill</div></td><td class='mat'>слайд 5 · таймер</td></tr><tr><td class='min'>14–28′</td><td class='stage'><div class='nm'>Спринт: охота за фактами по двум посёлкам</div><div class='sub'>⚡ Base sprint · fact hunt</div><div class='zone'>solo → pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1 фактфайлы закрываем одной фразой (они были на брифе) + ex.2 пять слов по местам → ex.4 (трек 25) шесть вопросов гонкой, каждый ответ со строкой</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.1 быстро, по одной фразе на посёлок: <span class='en'>What's the weather like in each place?</span> (ключ TB: Mawsynram — it's wet, it rains a lot · Oymyakon — it's very cold, there's snow and ice).</li><li>ex.2 без словаря (приём TB Challenge): <span class='en'>Five words. Which place? You've read the text once — decide from memory, then check.</span> (ключ TB: Mawsynram — bridge, roots, umbrella · Oymyakon — freeze, reindeer).</li><li>ПРАВИЛО ДНЯ: <span class='en'>First the general idea. THEN the details — with a finger on the line.</span></li><li>ex.4 (трек 25) гонкой. Ключ TB: 1 It rains every day in the monsoon season · 2 They put bamboo umbrellas over their heads · 3 Because the rain destroys normal bridges · 4 They freeze · 5 They eat meat because vegetables don't grow there · 6 When temperatures are lower than -52°C.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.50–51 · аудио трек 25 (запасной вариант — читаю статью вслух сама, дети следят пальцем) · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> ищут строки пальцем. Ожидаемо: п.3 (why bridges) требует связки «because the rain destroys…» — разбираем вслух</div></td><td class='mat'>слайд 6 · audio · таймер</td></tr><tr><td class='min'>28–38′</td><td class='stage'><div class='nm'>Челлендж: эстафета M / O / Both со строкой</div><div class='sub'>🔥 Challenge · M-O-Both relay</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.5 эстафетой: шесть утверждений — Mawsynram, Oymyakon или Both, каждый ответ с процитированной строкой</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Relay: one runner, one sentence, one PROOF LINE. Then the next runner. No line — the answer doesn't count.</span></li><li>Ключ TB: 1 Both (M — 'They stay at home most of the time in the rainy season'; O — 'People can only stay outside for a minute or two') · 2 M ('The heaviest rain is at night, so people put grass on the walls and roof…') · 3 O ('it's dark for 21 hours of the day') · 4 M ('they carry bamboo umbrellas… They use the roots of living trees to make bridges') · 5 O ('the nearest city is two days away by car') · 6 Both.</li><li>Ограничитель: строку читает ДРУГОЙ участник крю — тот, кто нашёл, только показывает пальцем.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.50 ex.5 · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> бегают эстафетой со строками. Ожидаемо: п.1 и п.6 (Both) вызывают спор — это лучший момент пары, доказывают обеими строками</div></td><td class='mat'>слайд 7 · таймер</td></tr><tr><td class='min'>38–45′</td><td class='stage'><div class='nm'>Налёт на слова: шесть слов из статьи</div><div class='sub'>Word raid · Word work</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.6 блиц на определения + ex.7 подстановка на скорость + фиксация в тетрадь</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.6 блиц: <span class='en'>Definition: 'the top part of a building' — five seconds!</span> Ключ TB: 1 noise · 2 destroys · 3 grass · 4 average · 5 last · 6 roof.</li><li>Дрилл произношения (совет TB): average /ˈæv(ə)rɪdʒ/ · noise /nɔɪz/ · grass /ɡrɑːs/ · roof /ruːf/ · destroys /dɪˈstrɔɪz/ · last /lɑːst/. Игра на слух: <span class='en'>Which two words have the SAME vowel?</span> (noise = destroys, grass = last).</li><li>ex.7 на скорость, 3 минуты. Ключ TB: 1 roof · 2 average · 3 noise · 4 last · 5 grass · 6 destroys.</li><li>Фиксация в тетрадь: 6 слов + перевод + своё предложение (сырьё для теста P8).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.50 ex.6–7 · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> блицуют и пишут словарь. Ожидаемо: last в значении «длиться» требует CCQ — «My lesson lasts 45 minutes» на доску</div></td><td class='mat'>слайд 8 · таймер</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Mawsynram — left wall! Oymyakon — right wall! Choose where you'd survive. One reason each, in English!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> голосуют ногами и защищают позицию</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>47–58′</td><td class='stage'><div class='nm'>Бонус-уровень: этого нет в учебнике</div><div class='sub'>🚀 Bonus level · not in the book</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Critical thinking Remember → Analyse → Evaluate + апгрейд-рамки уступки и сравнения</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Remember (LOT): <span class='en'>Two lists — what is difficult in Mawsynram, what is difficult in Oymyakon.</span> Подсказка TB: думайте о последствиях, которых в тексте нет прямо (ливень ночью → не выспаться; нет овощей → нет витаминов).</li><li>Analyse (HOT): <span class='en'>Order your lists: most difficult at the top.</span> Совет TB: некоторые проблемы временные или редкие — это тоже аргумент.</li><li>Апгрейд-рамки: <span class='en'>Even though it rains every day, people still… · Unlike Mawsynram, Oymyakon…</span></li><li><span class='en'>Two upgrade lines in your verdict = richness points.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.50 Critical thinking · слайд рамок</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> спорят по-настоящему и обогащают язык. Ожидаемо: even though берут сильные, остальным даю карточку-опору</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>58–74′</td><td class='stage'><div class='nm'>Продукт: вердикт «где выжить труднее»</div><div class='sub'>PRODUCT · the survival verdict</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вердикт 60 сек: два факта из текста + два довода из Critical thinking + сравнение + ответ «где жить труднее»</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Подготовка 7 мин: <span class='en'>Keywords only. Everyone owns a block: fact 1 · fact 2 · the worst problem · the verdict.</span></li><li><span class='en'>Sixty seconds. Judges: fluency · accuracy · evidence. Proof from the text or it didn't happen!</span></li><li>Вызов зала после каждого: <span class='en'>But the text says schools only close below minus fifty-two — and you still call that the harder place?</span></li><li>Culture note добавляю в конце как бонус-факт (TB): в Оймяконе около 500 жителей и три часа света зимой; в Маусинраме в сезон дождей технику не заводят до октября.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> таймер 60 сек · рубрика · Culture note</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выступают с доказательствами. Ожидаемо: вердикты расходятся — и это лучший результат</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Реванш gate + лидерборд</div><div class='sub'>Rematch + leaderboard</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> реванш gate: новый короткий абзац из статьи, 30 сек на главную мысль + очки пары</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Thirty seconds, one paragraph. What is it about? One line. GO!</span></li><li>Очки: главная мысль + строки-доказательства + вердикты.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> текст-абзац · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> бьют свой счёт. Ожидаемо: у большинства скорость выросла за одну пару</div></td><td class='mat'>слайд 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рефлексия + ДЗ + тизер P3</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Слайд «I can…»: <span class='en'>Tap what's true after today.</span></li><li>ДЗ: WB стр. 32 (блог «Living in extreme places» про Ла-Пас) — тот же приём: сначала общая мысль, потом детали.</li><li>Тизер: <span class='en'>Next: the record bureau. Highest, driest, hottest, biggest — and our region wants a record of its own. Bring your numbers.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают ДЗ</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 32, зад. 1–4 (блог Матео про Ла-Пас, трек 7) — сначала отметить два «общих» вопроса и предсказать ответы, как на уроке, и только потом читать.</p><p>🚀 Бонус (+3): найди одно экстремальное место России и принеси 3 факта о нём по-английски с цифрами.</p></td><td class='mat'>WB Unit 4 · очки в лидерборд на следующей паре</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, crews can <b>get the main idea of a magazine article in 60 seconds</b> and then find specific facts with evidence lines, use 6 new words in context, and <b>deliver a 60-second verdict</b> on which extreme place is harder to live in.</li>
+      <li><span class="lb">Subsidiary.</span> Фактфайлы и словарь до текста (ex.1–2); ex.3 главная мысль; ex.4 (трек 25) шесть вопросов; ex.5 M / O / Both со строкой; Word work (noise · destroys · grass · average · last · roof); Critical thinking Remember → Analyse → Evaluate.</li>
+      <li><span class="lb">Personal.</span> Держу порядок subskill: сначала БЫСТРО и «о чём вообще», детали — вторым заходом. Ответ засчитан только со строкой-доказательством. Ошибки сравнительной степени коплю молча на P3.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>get the main idea of a text in 60 seconds</li><li>find and quote the line that proves an answer</li><li>use six new words (noise, destroys, grass, average, last, roof)</li><li>give a 60-second verdict with two pieces of evidence</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Word raid</span><span>Product</span><span>Leaderboard</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>noise</span><span class='w'>destroys</span><span class='w'>grass</span><span class='w'>average</span><span class='w'>last</span><span class='w'>roof</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>It rains every day in the monsoon season. · People can only stay outside for a minute or two. · The text says 'the nearest city is two days away' — that's why Oymyakon is harder.</div></div>
+      <div class="r"><div class="k">Form</div><div>цитирование: The text says + строка; ответ на «где именно» — номер абзаца или первое слово строки.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>по Wordlist: average /ˈæv(ə)rɪdʒ/ · noise /nɔɪz/ · grass /ɡrɑːs/ · roof /ruːf/ · destroys /dɪˈstrɔɪz/ · last /lɑːst/ (совет TB: одинаковые гласные — noise = destroys, grass = last)</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«Я думаю, там холоднее» — засчитано? → нет: только со строкой из текста.</div><div class='ccq'>average — это «средний» в смысле «так себе»? → нет: типичное значение, среднее из всех: average rainfall 11,871 mm.</div><div class='ccq'>Зачем первый заход на 60 секунд? → чтобы поймать ОБЩУЮ мысль; детали — вторым и третьим заходом (subskill юнита).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.50–51, КТП пара 31. Читают уверенно, но «сначала быстро, потом детали» — новая дисциплина. Все 6 слов Word work есть в официальном Wordlist.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Тонут в тексте с первой строки</td><td>Gate физически ограничивает: 60 секунд, книга закрывается, пишем только «о чём». Детали разрешены лишь со второго захода.</td></tr><tr><td>Читают по диагонали и спорят «я прав»</td><td>Правило evidence line: спор решает только строка из текста, палец на строке.</td></tr><tr><td>Вердикт превращается в «там ужас / там хуже»</td><td>Рубрика вердикта: 2 факта из текста + 1 довод из Critical thinking + одно сравнение.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 4 “Extremes” (How does the weather affect the way we live?) · GIA2 — lesson plan &amp; staging</span>
+    <span>GIA2 · U4 «Extremes» · P2 · линия «наши» 🚀</span>
+  </div>
+</div>

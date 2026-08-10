@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 5 · Pair 6 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 5 “Must try!” · Pair 6 — Речь и письмо: как спросить дорогу + описание любимого места</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «новые» 🌱 со стороны</b> · 90 min · опоры: модель → word bank → черновик → продукт с листом · командный счёт · стикеры 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 83–84 (KTP pair 43) · Март</span><span class='chip new'>🌱 новые · опоры и модель</span><span class='chip'>SB pp.67–69</span><span class='chip'>командный счёт · самопроверка</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2new-u5-p6.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u5.html" target="_blank" rel="noopener">🎮 Игры юнита 5 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p6.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>повтор P5: два вопроса о городе партнёру по цветным карточкам</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p6.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: фразы дороги + описание любимого места</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p6.html#5' target='_blank' rel='noopener' title='слайд 5'>8–20′</a></td><td class='gname'>Прогулка по карте в парах</td><td>ex.1 предлоги места по карте с опорой + доп. описания из TB</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p6.html#6' target='_blank' rel='noopener' title='слайд 6'>20–34′</a></td><td class='gname'>Фразы дороги: видео + shadowing</td><td>видео с Archie → отметить фразы → shadowing хором → ex.5 пропуски</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p6.html#7' target='_blank' rel='noopener' title='слайд 7'>34–46′</a></td><td class='gname'>Мини-эфир · пары с картой</td><td>Skills boost: пишем свой диалог по образцу → тренируем → добровольцы к доске</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p6.html#8' target='_blank' rel='noopener' title='слайд 8'>46–48′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p6.html#9' target='_blank' rel='noopener' title='слайд 9'>48–60′</a></td><td class='gname'>Модель: Brighton + прилагательные</td><td>текст Jayden (ex.2–3) с опорой + прилагательные с картинками (ex.4–6)</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p6.html#10' target='_blank' rel='noopener' title='слайд 10'>60–76′</a></td><td class='gname'>Продукт: моё любимое место</td><td>лестница: выбрать место → заметки по 6 вопросам → 4 абзаца по образцу → чек-лист → обмен</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p6.html#11' target='_blank' rel='noopener' title='слайд 11'>76–84′</a></td><td class='gname'>Стена + счёт</td><td>читаем 2 чужих описания: «куда бы поехал?» + командный счёт</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p6.html#12' target='_blank' rel='noopener' title='слайд 12'>84–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>ДЗ + тизер P7</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 5 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Две реальные вещи в одной паре: фразы, с которыми можно спросить и объяснить дорогу, и первое описание места. Для новичков диалог собирается через shadowing видео (повтор за голосом снимает стеснение) и прогулку по карте пальцем, а письмо — по строгой лестнице: четыре абзаца → заметки → текст по образцу → чек-лист. Прилагательные даю с картинками до письма.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Today you learn the phrases</b> that work in any city in the world: Excuse me, can you tell me how to get to the library? Go straight ahead. Turn left. Go past the skate park. It's on your right. First we watch Archie do it — twice — then we walk the map ourselves. And then your own favourite place, on paper: four paragraphs, with a model in front of you. Step by step.”<div class='pitchru'>Суть по-русски, если нужно поддержать: фразы, с которыми можно спросить и объяснить дорогу в любом городе мира: смотрим, как это делает Archie, потом гуляем по карте сами. Потом — описание своего любимого места: четыре абзаца, с образцом перед глазами.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · вход + повтор</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> повтор P5: два вопроса о городе партнёру по цветным карточкам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Two questions to your partner — pick your colour. Is there…? How many…?</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> цветные карточки · плакат</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> разгоняются</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: фразы дороги + описание любимого места</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Real phrases first, then your own favourite place on paper. Step by step.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии + карта SB p.67 (запасной вариант — рисую карту мелом, улицы подписываю)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> план ясен</div></td><td class='mat'>слайд 4</td></tr><tr><td class='min'>8–20′</td><td class='stage'><div class='nm'>Прогулка по карте в парах</div><div class='sub'>Прогулка по карте</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1 предлоги места по карте с опорой + доп. описания из TB</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Сначала предлоги вслух с жестами: <span class='en'>opposite — face to face! · next to — shoulder to shoulder! · between — in the middle! · on the corner — here, the corner!</span></li><li>ex.1 в парах по карте. Ключ TB: 1 hotel · 2 skate park · 3 fast-food restaurant · 4 department store.</li><li>Extra activity TB с опорой: <span class='en'>Where is the petrol station? The juice bar? The bike station?</span> (ключ TB: petrol station — на West Avenue напротив автостанции · juice bar — на Well Street рядом со скейт-парком · bike station — на Park Lane напротив озера · hotel — напротив супермаркета рядом с фастфудом · sports centre — на East Street).</li><li>Прогулка пальцем: я веду голосом, весь класс идёт по карте одновременно.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.67 карта · плакат предлогов</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> читают карту с опорой. Ожидаемо: on the corner of путают с next to — показываю пальцем</div></td><td class='mat'>слайд 5</td></tr><tr><td class='min'>20–34′</td><td class='stage'><div class='nm'>Фразы дороги: видео + shadowing</div><div class='sub'>Фразы дороги · видео</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> видео с Archie → отметить фразы → shadowing хором → ex.5 пропуски</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.2: <span class='en'>Where does Archie want to go? How many people does he speak to?</span> Ключ TB: библиотека, два человека.</li><li>ex.3: смотрим второй раз и ведём маршрут пальцем ВСЕМ КЛАССОМ (ключ TB: по Station Road, налево на Well Street, направо на East Street, направо на King Street — библиотека справа).</li><li>ex.4: отмечаем услышанные фразы (ключ TB: звучат ВСЕ Key phrases).</li><li>Shadowing: повторяем за видео хором, 2 прогона. Наблюдение TB вслух: <span class='en'>They speak SLOWLY and clearly, and she uses her hands. Copy that.</span></li><li>ex.5 пропуски письменно, потом сверка по видео. Ключ TB: 1 to get to · 2 straight ahead · 3 go past · 4 turn right · 5 Is there · 6 on your right.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> видео RWS SB p.67 (запасной вариант — читаю диалог по ролям с помощником, класс ведёт пальцем по карте) · карточки Key phrases</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> берут фразы с голоса. Ожидаемо: shadowing снимает стеснение</div></td><td class='mat'>слайд 6 · видео</td></tr><tr class='True'><td class='min'>34–46′</td><td class='stage'><div class='nm'>Мини-эфир · пары с картой</div><div class='zone'>pairs → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> Skills boost: пишем свой диалог по образцу → тренируем → добровольцы к доске</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>THINK: <span class='en'>You're outside the school. Choose ONE place — a close one.</span> (совет TB: слабым — места поближе).</li><li>PREPARE 5 мин: пары пишут диалог по образцу ex.5, карточки фраз на партах.</li><li>PRACTISE: меняются ролями, читают дважды.</li><li>PERFORM: добровольцы к доске. Зал ставит галочки за услышанные Key phrases (ex.7 peer review): <span class='en'>Follow the route on the map. Are the directions clear?</span></li><li>Ограничитель мягкий: забыл фразу — берём карточку, это нормально.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки Key phrases · карта · чек-лист фраз</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> сначала пишут, потом говорят — страх снят. Ожидаемо: с карточкой в руке говорят все</div></td><td class='mat'>слайд 7 · таймер</td></tr><tr><td class='min'>46–48′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Stand up. GO STRAIGHT AHEAD — step forward! TURN LEFT! TURN RIGHT! GO PAST — two steps! IT'S ON YOUR RIGHT — point!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> телом закрепляют фразы</div></td><td class='mat'>—</td></tr><tr><td class='min'>48–60′</td><td class='stage'><div class='nm'>Модель: Brighton + прилагательные</div><div class='sub'>Модель · Brighton и прилагательные</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> текст Jayden (ex.2–3) с опорой + прилагательные с картинками (ex.4–6)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Warmer TB: <span class='en'>Look at the photos on page 68. What can you see? Use There is/are.</span></li><li>ex.2–3 по абзацам. Ключ TB ex.3: 1 его двоюродные живут там · 2 старая часть полна интересных магазинов и кафе · 3 в лавке 20+ сортов мороженого · 4 на пляж · 5 играть в волейбол и плавать · 6 красивое и волнующее место.</li><li>ex.4 находим десять прилагательных (ключ TB: favourite, small, modern, busy, old, interesting, quiet, crowded, beautiful, exciting) — выписываем на карточки с картинками.</li><li>ex.5 определения (ключ TB: 1 modern · 2 busy · 3 crowded · 4 quiet · 5 exciting).</li><li>Правило TB на плакат: <span class='en'>Adjective BEFORE the noun (an exciting place), but AFTER 'be' (The place is exciting).</span></li><li>ex.6 в парах (ключ TB: 1 busy · 2 beautiful · 3 modern · 4 small · 5 quiet · 6 exciting).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.68–69 · карточки прилагательных с картинками · плакат</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> берут прилагательные через картинки. Ожидаемо: crowded и quiet путают — показываю два фото рядом</div></td><td class='mat'>слайд 8</td></tr><tr class='True'><td class='min'>60–76′</td><td class='stage'><div class='nm'>Продукт: моё любимое место</div><div class='sub'>PRODUCT · моё любимое место</div><div class='zone'>solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> лестница: выбрать место → заметки по 6 вопросам → 4 абзаца по образцу → чек-лист → обмен</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Шаг 1 (THINK): <span class='en'>Your favourite place. Six questions on the screen — NOTES only.</span> (почему ездишь · большое или маленькое · какие места · что делаешь · что там едят · почему нравится).</li><li>Шаг 2 (PREPARE): раскладываем заметки по четырём абзацам — схема на слайде, образец Jayden рядом.</li><li>Шаг 3 (WRITE): <span class='en'>Start: 'My favourite place to visit is … . I usually go there because …' At least three adjectives and two 'there is/are'.</span> Word bank на экране.</li><li>Шаг 4 (CHECK, ex.7): лексика мест? there is/are верно? прилагательные на месте?</li><li>Шаг 5 (ex.8 peer review): обмен с партнёром — подчеркнуть непонятное, написать один комментарий снизу, потом объяснить вслух.</li><li>Описания на стену юнита!</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> 6 вопросов · схема абзацев · образец · чек-лист · word bank</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут по лестнице с опорами. Ожидаемо: четыре абзаца есть у всех; peer review ловит порядок прилагательных</div></td><td class='mat'>слайды 9–10 · таймер</td></tr><tr><td class='min'>76–84′</td><td class='stage'><div class='nm'>Стена + счёт</div><div class='zone'>desks → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> читаем 2 чужих описания: «куда бы поехал?» + командный счёт</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Read two descriptions. Choose ONE place you'd actually visit — tell your crew why.</span> (вопросы peer review учебника).</li><li>Очки командам: диалоги + описания + работа с word bank; стикеры 🟢🟡🔴.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> стена · лидерборд · стикеры</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> читают друг друга</div></td><td class='mat'>слайд 11</td></tr><tr><td class='min'>84–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ДЗ + тизер P7</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ДЗ: переписать описание начисто + WB стр. 41, зад. 1 (Asking for directions) и стр. 42, зад. 1–2 (Writing).</li><li>Тизер: <span class='en'>Next: the project! Someone your age moves here next month. We make the map that saves them.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> переписать описание начисто (чистовик вернётся на стену) + WB стр. 41, зад. 1 (Asking for directions) и стр. 42, зад. 1–2 (A description of a place).</p><p>🌱 По желанию: зад. 3 — своё мнение о лучших местах для туристов.</p></td><td class='mat'>WB Unit 5 · чистовик описания — на стену · фото своего города — к P7</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>ask for and give directions with 6 Key phrases</b> on a map and <b>write a description of a place in 4 paragraphs</b> with there is/are and at least three adjectives.</li>
+      <li><span class="lb">Subsidiary.</span> ex.1 предлоги места по карте; видео с Archie (ex.2–4) с прогулкой пальцем; ex.5 достроить диалог; Skills boost; текст Jayden (ex.2–3); subskill adjectives (ex.4–6); peer review по чек-листу.</li>
+      <li><span class="lb">Personal.</span> Диалог собираем письменно ДО игры. К доске — только добровольцы и только с готовым диалогом. Письмо в классе с моей поддержкой; дома — переписать начисто.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>ask the way with two Key phrases</li><li>give directions with four Key phrases</li><li>follow a route on a map</li><li>write a description of a place in 4 paragraphs</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Map</span><span>Phrases</span><span>Walk</span><span>Model</span><span>Adjectives</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>Excuse me. Can you tell me how to get to the (library)?</span><span class='w'>Is there a (library) near here?</span><span class='w'>Go straight ahead.</span><span class='w'>Turn left/right.</span><span class='w'>Go past the (skate park).</span><span class='w'>It's on your left/right.</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Excuse me. Can you tell me how to get to the library? · Is there a library near here? · Go straight ahead. · Turn left. · Go past the skate park. · It's on your right.</div></div>
+      <div class="r"><div class="k">Form</div><div>предлоги места: opposite · next to · between … and … · on the corner of … and … · near · прилагательное ПЕРЕД существительным (a beautiful place), но ПОСЛЕ be (The place is beautiful).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>Excuse me звучит одним словом /ɪkˈskjuːz mi/ · говорим медленно и чётко, выделяя LEFT / RIGHT (наблюдение TB)</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«Go past to the skate park» — что лишнее? → to.</div><div class='ccq'>«Is there a library near here?» — почему Is? → library одно (подсказка TB).</div><div class='ccq'>«a shop beautiful» — исправь. → a beautiful shop.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.67–69, КТП пара 43. Карта и диалог из учебника дают весь материал; все прилагательные ex.4 узнаваемы.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Стесняются играть диалог</td><td>Сначала shadowing за видео хором, потом пара за партой с готовым текстом, к доске — только добровольцы.</td></tr><tr><td>Теряются на карте</td><td>Прогулка пальцем всем классом одновременно, я веду голосом; потом в парах, потом самостоятельно.</td></tr><tr><td>«Не знаю, что писать про место»</td><td>Шесть вопросов из Skills boost — это и есть план: шесть вопросов, четыре абзаца, образец Jayden рядом.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 5 “Must try!” (What makes a town a good place to live in?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U5 «Must try!» · P6 · линия «новые» 🌱</span>
+  </div>
+</div>

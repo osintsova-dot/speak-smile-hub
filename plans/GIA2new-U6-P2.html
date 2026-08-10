@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 6 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 6 “Animals in danger” · Pair 2 — Чтение: статья о сайге и горной горилле (с опорами)</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «новые» 🌱 со стороны</b> · 90 min · опоры: модель → word bank → черновик → продукт с листом · командный счёт · стикеры 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 91–92 (KTP pair 47) · Апрель</span><span class='chip new'>🌱 новые · опоры и модель</span><span class='chip'>SB pp.74–75</span><span class='chip'>командный счёт · самопроверка</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2new-u6-p2.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u6.html" target="_blank" rel="noopener">🎮 Игры юнита 6 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p2.html#3' target='_blank' rel='noopener' title='слайд 3'>0–8′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>вход + повтор P1: своё животное одной строкой + части тела на карточках</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p2.html#4' target='_blank' rel='noopener' title='слайд 4'>8–10′</a></td><td class='gname'>Завязка миссии</td><td>миссия пары: разобрать историю двух видов и написать четыре предложения мнения</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p2.html#5' target='_blank' rel='noopener' title='слайд 5'>10–22′</a></td><td class='gname'>Слова до текста: шесть новых</td><td>шесть новых слов ДО чтения: определения → ex.7 → ex.8 с самопроверкой</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p2.html#6' target='_blank' rel='noopener' title='слайд 6'>22–30′</a></td><td class='gname'>Прогноз по заголовкам и фото</td><td>квиз ex.1 + трек 37 как контекст → ex.3 общая идея → читаем пять заголовков ex.4</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p2.html#7' target='_blank' rel='noopener' title='слайд 7'>30–44′</a></td><td class='gname'>Читаем статью по абзацам</td><td>каждой крю свой абзац (A–E): о чём он и какой заголовок подходит → собираем на доске → ex.5 сайга или горилла</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p2.html#8' target='_blank' rel='noopener' title='слайд 8'>44–46′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p2.html#9' target='_blank' rel='noopener' title='слайд 9'>46–58′</a></td><td class='gname'>Проверка понимания: факты со строкой</td><td>ex.6 true/false с указанием абзаца → Critical thinking 1 в упрощённом виде</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p2.html#10' target='_blank' rel='noopener' title='слайд 10'>58–72′</a></td><td class='gname'>Продукт: моё мнение, 4 строки</td><td>четыре предложения по рамке: два факта из текста + что помогло + что можем мы</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p2.html#11' target='_blank' rel='noopener' title='слайд 11'>72–82′</a></td><td class='gname'>Счёт команды + рефлексия</td><td>командный счёт + мини-тест по шести словам с самопроверкой + стикеры</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u6-p2.html#12' target='_blank' rel='noopener' title='слайд 12'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>домашка с образцом + тизер P3</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 6 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Новичкам большой текст страшен, поэтому вход четырёхступенчатый: слова ДО текста → квиз о вымерших (создаёт контекст без чтения) → чтение по абзацам в командах → задания с опорой «палец на строке». Subskill юнита даю прямо и просто: сначала читаем заголовок, потом абзац. Продукт скромный: 4 предложения мнения по рамке.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Two animals, two stories.</b> The saiga: more than a million, then fifty thousand. The mountain gorilla: five hundred, then two hundred. Both nearly disappeared — and both are still here. Today: six new words first, then we read the article in parts — each crew takes one part — and at the end you write four sentences: what helped these animals, and what can WE do? Your opinion, your words.”<div class='pitchru'>Суть по-русски, если нужно поддержать: сайга и горная горилла почти исчезли и вернулись: сначала шесть слов, потом читаем статью по абзацам (каждой команде свой), в конце — четыре предложения о том, что помогло и что можем сделать мы.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–8′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · вход + повтор</div><div class='zone'>circle → desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> вход + повтор P1: своё животное одной строкой + части тела на карточках</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Круг: <span class='en'>My animal is the … and it's got … .</span> (читаем по листу, это нормально)</li><li>Карточки U6: показываю часть тела → команда называет животное, у которого она есть.</li><li>Мостик: <span class='en'>You can describe animals. Today: two animals that almost stopped existing.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки Get_Involved_A2_U6_Cards · слайд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> разгоняются на знакомом. Ожидаемо: читают по своим листам — так и задумано</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>8–10′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия пары: разобрать историю двух видов и написать четыре предложения мнения</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>A million saigas. Then fifty thousand. Why? And who helped?</span></li><li><span class='en'>At the end: four sentences. What helped — and what can we do. There will be a frame on the screen.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии с цифрами (запасной вариант — четыре числа на доске)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают, понимают продукт</div></td><td class='mat'>слайд 4</td></tr><tr><td class='min'>10–22′</td><td class='stage'><div class='nm'>Слова до текста: шесть новых</div><div class='sub'>Слова ДО текста · Word work</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> шесть новых слов ДО чтения: определения → ex.7 → ex.8 с самопроверкой</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Сначала три слова от меня (просьба TB): <span class='en'>extinct — gone forever. conservation — work to stop something being destroyed. wildlife — animals and plants in nature.</span></li><li>ex.7 p.74 вместе, по одному слову: <span class='en'>'the place where an animal lives' — which word?</span> Ключ TB: 1 campaign · 2 population · 3 hunting · 4 laws · 5 habitat · 6 deserts.</li><li>ex.8 в парах, потом самопроверка по ключу на экране (ключ TB: 1 deserts · 2 habitats · 3 hunting · 4 campaign · 5 laws · 6 population).</li><li>Мини-словарь из шести слов остаётся на доске до конца урока.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.74 ex.7–8 · мини-словарь на доске</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> учат слова до текста. Ожидаемо: deserts/desserts — разбираем сразу и смеёмся</div></td><td class='mat'>слайды 5–6</td></tr><tr><td class='min'>22–30′</td><td class='stage'><div class='nm'>Прогноз по заголовкам и фото</div><div class='sub'>Прогноз по заголовкам</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> квиз ex.1 + трек 37 как контекст → ex.3 общая идея → читаем пять заголовков ex.4</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.1 квиз в командах, потом трек 37 на проверку. Ключ TB: 1 a · 2 c · 3 b · 4 c · 5 c · 6 b. (Запасной вариант — читаю скрипт сам, по одному пункту.)</li><li>ex.3 (трек 38): слушаем и следим по тексту. <span class='en'>What do the two animals have in common?</span> Ключ TB: оба были на грани вымирания, но численность растёт.</li><li>ПРАВИЛО ДНЯ на доске: <span class='en'>Read the heading FIRST. Then read the paragraph.</span> Разбираю первый вслух: заголовок 4 «What is a saiga?» → абзац A.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB pp.74–75 · аудио треки 37–38</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> получают контекст до чтения. Ожидаемо: квиз снимает страх — текст уже «про знакомое»</div></td><td class='mat'>слайд 7 · audio</td></tr><tr><td class='min'>30–44′</td><td class='stage'><div class='nm'>Читаем статью по абзацам</div><div class='sub'>Читаем по абзацам</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> каждой крю свой абзац (A–E): о чём он и какой заголовок подходит → собираем на доске → ex.5 сайга или горилла</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Crew one — paragraph A. Crew two — paragraph B… Read your paragraph. Which heading fits? Two minutes.</span></li><li>Сбор на доске по одной строке от команды. Ключ TB ex.4: 1 E · 2 B · 3 D · 4 A · 5 C.</li><li>ex.5 с подсказкой: <span class='en'>Saiga or gorilla? The answer is in your paragraph — point at the line.</span> Ключ TB: 1 S · 2 S · 3 G · 4 S · 5 G.</li><li>Мини-итог: пять строк на доске = пересказ всей статьи.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.75 · таблица на доске (запасной вариант — раздаю статью распечаткой по абзацам)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> читают маленький кусок и не тонут. Ожидаемо: каждая крю становится «экспертом» по своему абзацу — и это первый раз, когда слабые объясняют сильным</div></td><td class='mat'>слайд 8</td></tr><tr><td class='min'>44–46′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Extinct — sit down and freeze. In danger — stand up. Safe — jump!</span> (dodo · saiga · dog · mammoth · mountain gorilla · cat)</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> телом фиксируют разницу extinct / in danger</div></td><td class='mat'>—</td></tr><tr><td class='min'>46–58′</td><td class='stage'><div class='nm'>Проверка понимания: факты со строкой</div><div class='sub'>Проверка понимания</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.6 true/false с указанием абзаца → Critical thinking 1 в упрощённом виде</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.6 в парах. Приём TB для поддержки: называю абзац, в котором лежит ответ. Ключ TB: 1 False — нос ДЛИННЫЙ и странный · 2 False — шерсть ЧЁРНАЯ · 3 True · 4 True · 5 False — похожая программа помогает ещё и большой панде.</li><li>Правило: ложное предложение обязательно исправляем вслух — целым предложением.</li><li>Critical thinking 1 (Remember) упрощённо: <span class='en'>Find TWO actions in the text that helped the animals.</span> Ключ TB: деньги на охрану среды обитания и новые законы против охоты (плюс выставки и марка).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.74 ex.6 + Critical thinking 1 · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> работают с опорой на абзац. Ожидаемо: исправление ложного — самое ценное упражнение пары</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>58–72′</td><td class='stage'><div class='nm'>Продукт: моё мнение, 4 строки</div><div class='sub'>PRODUCT · моё мнение (4 строки)</div><div class='zone'>solo → crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> четыре предложения по рамке: два факта из текста + что помогло + что можем мы</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Рамка на экране: <span class='en'>In the 1990s there were … saigas. Now there are … . Hunting was a big problem. I think we can … .</span></li><li>Пишем 6 минут, я хожу и помогаю точечно.</li><li>Читаем партнёру (Kagan <b>Timed Pair Share</b>, 40 сек каждый), потом speaker от крю читает вслух с листом.</li><li>Зал слушает с задачей: <span class='en'>Thumbs up if you wrote the same idea!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> рамка-опора · word bank · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> пишут по рамке и читают. Ожидаемо: рамка снимает «не знаю, как начать»</div></td><td class='mat'>слайды 10–11 · таймер</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Счёт команды + рефлексия</div><div class='sub'>Team score + reflection</div><div class='zone'>board → solo</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> командный счёт + мини-тест по шести словам с самопроверкой + стикеры</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Мини-тест (5 вопросов, 3 минуты): определение → слово. Самопроверка по ключу на экране — баллы себе, никому не говорим.</li><li>Счёт команды: за абзац, за true/false с исправлением, за 4 строки.</li><li>Стикеры на выходе: 🟢 easy · 🟡 ok · 🔴 hard.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд мини-теста с ключом · лидерборд · стикеры</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> видят свою ошибку приватно. Ожидаемо: мини-тест снимает страх перед P8</div></td><td class='mat'>слайд 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> домашка с образцом + тизер P3</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ДЗ: WB стр. 48, зад. 1–4 (статья про заповедники) — по подсказке тетради: первое предложение абзаца обычно и есть его тема. Зад. 5 — по желанию.</li><li>Показываю на слайде, как выглядит выполненное зад. 2.</li><li>Тизер: <span class='en'>Next lesson: we open a museum of animals that are gone. And we learn the two most useful words in the past: WAS and WERE.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ с образцом</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 48, зад. 1–4 (статья «animal sanctuaries»); зад. 5 — по желанию.</p><p>🌱 По желанию: выпиши шесть новых слов с переводом в словарик — они точно будут в тесте.</p></td><td class='mat'>WB Unit 6 · мини-словарь шести слов</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>match a heading to a paragraph with support</b>, find facts in an article and point at the proof line, match 6 new words to definitions, and <b>write 4 opinion sentences</b> by frame.</li>
+      <li><span class="lb">Subsidiary.</span> Квиз ex.1–2 (трек 37) как контекст; ex.3 общая идея; ex.4 заголовки с подсказкой; ex.5–6 в парах с указанием абзаца; Word work ДО текста; Critical thinking в упрощённом виде (одно действие + плюс и минус).</li>
+      <li><span class="lb">Personal.</span> Текст режу на 5 абзацев — по абзацу на команду, потом собираем вместе. Словарь ДО чтения, не во время. Ключи проговариваю по одному, не списком. Слова extinct и conservation ставлю до начала (просьба TB).</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>read a heading and find the paragraph it fits</li><li>find an answer and point at the proof line</li><li>match 6 new words to definitions</li><li>write 4 opinion sentences with a frame</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Words first</span><span>Prediction</span><span>Reading</span><span>Check</span><span>Draft</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>campaign</span><span class='w'>population</span><span class='w'>hunting</span><span class='w'>laws</span><span class='w'>habitat</span><span class='w'>deserts</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>In the 1990s there were more than a million saigas. · There weren't any laws until 2008. · Hunting was a big problem. · I think we can protect their habitat.</div></div>
+      <div class="r"><div class="k">Form</div><div>цитирование: The text says … (палец на строке); ответ на «где» — буква абзаца A–E.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>по Wordlist: campaign /kæmˈpeɪn/ · population /ˌpɒpjʊˈleɪʃ(ə)n/ · habitat /ˈhæbɪtæt/ · deserts /ˈdezə(r)ts/ (deserts /ˈdezə(r)ts/ — пустыни, не десерты!)</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>extinct — это «мало осталось»? → нет: вида НЕТ совсем. In danger — ещё есть, но мало.</div><div class='ccq'>hunting — это «прогулка в лесу»? → нет: killing an animal for food or sport.</div><div class='ccq'>Зачем читать заголовок ДО абзаца? → заголовок говорит, о чём абзац, — и ты сразу знаешь, что искать.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.74–75, КТП пара 47. Текст длиннее всего, что было в юните; справляемся делением на абзацы и словарём до чтения.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Длинный текст пугает</td><td>Делю на пять абзацев, каждой крю — свой; общая картина собирается на доске из пяти строк.</td></tr><tr><td>Не понимают половину слов и сдаются</td><td>Word work идёт ДО текста; на доске висит мини-словарь из шести слов весь урок.</td></tr><tr><td>Ответ «наугад» вместо поиска</td><td>Приём TB: называю номер абзаца, где лежит ответ. Правило: показать строку пальцем прежде, чем сказать ответ.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 6 “Animals in danger” (What can we do to help animals in danger?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U6 «Animals in danger» · P2 · линия «новые» 🌱</span>
+  </div>
+</div>

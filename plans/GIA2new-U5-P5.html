@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 5 · Pair 5 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 5 “Must try!” · Pair 5 — Грамматика: Is there … ? / Are there … ? + How much / How many</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «новые» 🌱 со стороны</b> · 90 min · опоры: модель → word bank → черновик → продукт с листом · командный счёт · стикеры 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 81–82 (KTP pair 42) · Март</span><span class='chip new'>🌱 новые · опоры и модель</span><span class='chip'>SB p.66</span><span class='chip'>командный счёт · самопроверка</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2new-u5-p5.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u5.html" target="_blank" rel="noopener">🎮 Игры юнита 5 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p5.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>повтор P4: три места, которые есть у нас, и три, которых нет</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p5.html#4' target='_blank' rel='noopener' title='слайд 4'>6–9′</a></td><td class='gname'>Завязка миссии</td><td>тема объявляется прямо + продукт пары</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p5.html#5' target='_blank' rel='noopener' title='слайд 5'>9–24′</a></td><td class='gname'>Открытие: таблица вопросов</td><td>ex.1 таблицу собираем вместе → ex.2–3 два захода → мини-тест 1 с самопроверкой</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p5.html#6' target='_blank' rel='noopener' title='слайд 6'>24–36′</a></td><td class='gname'>Практика вопросов</td><td>ex.4 восстановить вопросы по ответам, с опорой на первый пример</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p5.html#7' target='_blank' rel='noopener' title='слайд 7'>36–38′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p5.html#8' target='_blank' rel='noopener' title='слайд 8'>38–52′</a></td><td class='gname'>Правило: How much / How many</td><td>ex.5 правило с опорой на плакат → ex.6–7 практика → мини-тест 2</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p5.html#9' target='_blank' rel='noopener' title='слайд 9'>52–68′</a></td><td class='gname'>Продукт: интервью о городе</td><td>лестница: 8 готовых вопросов на листе → задаём и записываем ответы → 3 строки вывода</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p5.html#10' target='_blank' rel='noopener' title='слайд 10'>68–80′</a></td><td class='gname'>Мини-тест с самопроверкой + счёт</td><td>мини-тест 3 (сводный, 8 позиций) + бонус Grammar round-up + командный счёт</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u5-p5.html#11' target='_blank' rel='noopener' title='слайд 11'>80–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>ДЗ с образцом + тизер P6</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 5 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> Вторая грамматическая пара, тема снова называется прямо. Вопросительная форма собирается из уже знакомой утвердительной (плакат P3 висит рядом), правило much/many получает свой цвет на том же плакате. Три мини-теста по ходу пары показывают рост внутри одного урока. Продукт — интервью о городе по готовым вопросам, безопасно и с листом.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Yesterday you could SAY what's in a town.</b> There's a skate park. There are three museums. Today you learn to ASK — and that's what you actually need when you arrive somewhere new. Is there a library near here? How many cinemas are there? How much traffic is there? Two little rules, one poster, and then you interview each other about the town you'd like to live in. Step by step — the questions are already on your sheet.”<div class='pitchru'>Суть по-русски, если нужно поддержать: вчера вы умели сказать, что есть в городе. Сегодня учимся СПРАШИВАТЬ — это и нужно, когда приезжаешь в новое место. Два правила, один плакат, а потом интервью друг у друга по готовым вопросам.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · вход + повтор</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> повтор P4: три места, которые есть у нас, и три, которых нет</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Three places our town HAS, three it HASN'T. Use the poster!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> плакат P3 · word bank</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> разгоняются на вчерашней форме</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–9′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> тема объявляется прямо + продукт пары</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Yesterday: 'There's a skate park.' Today: 'IS THERE a skate park?'</span></li><li><span class='en'>Two rules, one poster, then you interview each other. Questions are on your sheet.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд темы</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> план ясен, тема названа</div></td><td class='mat'>слайд 4</td></tr><tr><td class='min'>9–24′</td><td class='stage'><div class='nm'>Открытие: таблица вопросов</div><div class='sub'>Открытие · таблица вопросов</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1 таблицу собираем вместе → ex.2–3 два захода → мини-тест 1 с самопроверкой</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.1 по строкам вместе. Ключ TB: 1 Is · 2 isn't · 3 Are · 4 aren't. Дописываю плакат третьим блоком: <span class='en'>? one / no count → IS THERE · ? many → ARE THERE.</span></li><li>Приём TB перед ex.2: <span class='en'>For each question — is the noun singular, plural or uncountable? Point at it first.</span></li><li>ex.2 в парах. Ключ TB: 1 Is there · 2 Are there · 3 Are there · 4 Is there.</li><li>ex.3 — короткие ответы про себя (ключ TB: Yes, there is./No, there isn't. и Yes, there are./No, there aren't.). Дрилл хором с интонацией ↗ / ↘.</li><li>МИНИ-ТЕСТ 1 (6 позиций, 2 минуты): Is there / Are there. Ключ на слайде, проверяют сами.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.66 ex.1–3 · плакат · мини-тест и ключ на слайде</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> собирают правило и сразу проверяют себя. Ожидаемо: «Are there a…» ловится мини-тестом у трети — и чинится сразу</div></td><td class='mat'>слайд 5</td></tr><tr><td class='min'>24–36′</td><td class='stage'><div class='nm'>Практика вопросов</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.4 восстановить вопросы по ответам, с опорой на первый пример</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Первый вопрос разбираем вместе (он уже дан в учебнике как образец).</li><li>Напоминание TB: <span class='en'>Even if the answer is 'no', the question still starts with Is there or Are there. And use ANY, not some. And 'an' before a vowel.</span></li><li>ex.4 в парах. Ключ TB: 2 Is there an underground in your town? No, there isn't. · 3 Are there (any) fast-food restaurants? Yes, there are. · 4 Are there any juice bars? No, there aren't. · 5 Is there any good live music? No, there isn't.</li><li>Kagan <b>Quiz-Quiz-Trade</b> с карточками мест: спрашиваем — отвечаем коротко — меняемся.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.66 ex.4 · карточки мест · плакат</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> работают с опорой. Ожидаемо: короткие ответы автоматизируются через Quiz-Quiz-Trade</div></td><td class='mat'>слайд 6</td></tr><tr><td class='min'>36–38′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>I say a noun. HOW MANY — jump! HOW MUCH — sit down! Cinemas! Traffic! Cycle lanes! Time! Museums! Water!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> телом закрепляют деление</div></td><td class='mat'>—</td></tr><tr><td class='min'>38–52′</td><td class='stage'><div class='nm'>Правило: How much / How many</div><div class='sub'>Правило How much / How many</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.5 правило с опорой на плакат → ex.6–7 практика → мини-тест 2</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.5: смотрим на два примера в таблице. Ключ TB: 1 uncountable (How much) · 2 countable (How many). Дописываю плакат четвёртым блоком в цвете.</li><li>Приём TB с полосками: даю слова вопроса на карточках, дети физически ставят <span class='en'>are there</span> в конец: How many | cycle lanes | are there?</li><li>ex.6 в парах (ключ TB: 1 How many · 2 How much · 3 How much · 4 How many · 5 How many) — и сразу отвечаем про свой город.</li><li>ex.7 с подсказкой TB (нужен вспомогательный глагол!), первые два делаем на доске. Ключ TB: 1 How many brothers and sisters have you got? · 2 How much homework do you do at weekends? · 3 How much time do you spend watching TV? · 4 How many comics or magazines do you read? · 5 How much fruit do you eat every day?</li><li>МИНИ-ТЕСТ 2 (6 позиций, 2 минуты): How much / How many. Ключ на слайде.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.66 ex.5–7 · карточки-полоски · плакат · мини-тест и ключ на слайде</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выводят правило с опорой и сразу проверяют. Ожидаемо: полоски снимают проблему с порядком слов почти полностью</div></td><td class='mat'>слайд 7</td></tr><tr class='True'><td class='min'>52–68′</td><td class='stage'><div class='nm'>Продукт: интервью о городе</div><div class='sub'>PRODUCT · интервью о городе</div><div class='zone'>pairs → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> лестница: 8 готовых вопросов на листе → задаём и записываем ответы → 3 строки вывода</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Шаг 1: раздаю лист с восемью вопросами (4 с Is/Are there + 2 с How many + 2 с How much) — дети дописывают ещё один свой.</li><li>Шаг 2 (ex.8): <span class='en'>Interview your partner. Write short answers.</span></li><li>Шаг 3 — рамка вывода: <span class='en'>In my partner's town there's … . There are … . There aren't any … . I think it's a good/quiet/busy place.</span></li><li>Шаг 4: добровольцы к доске с листом, по три строки. Зал: <span class='en'>Thumbs up if your town is the same!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> лист с вопросами · рамка вывода · плакат · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> спрашивают и отвечают с листом в руках. Ожидаемо: интервью идёт живо — вопросы готовы, думать надо только над ответом</div></td><td class='mat'>слайды 8–9 · таймер</td></tr><tr><td class='min'>68–80′</td><td class='stage'><div class='nm'>Мини-тест с самопроверкой + счёт</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> мини-тест 3 (сводный, 8 позиций) + бонус Grammar round-up + командный счёт</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>МИНИ-ТЕСТ 3: 8 позиций на всё сразу (Is/Are there + короткие ответы + much/many). Ключ на слайде.</li><li><span class='en'>Compare: mini-test one, two, three. Is your number going up?</span></li><li>Бонус для закончивших — Grammar round-up ex.9 (текст про Чикаго). Совет TB: можно подглядывать в грамматические страницы. Ключ TB: 1 b · 2 c · 3 c · 4 a · 5 b · 6 c · 7 b · 8 c.</li><li>Командный счёт + стикеры 🟢🟡🔴.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-тесты и ключи на слайде · SB p.66 ex.9 · стикеры</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> видят рост по трём замерам за одну пару. Ожидаемо: round-up берут не все — и это нормально, он бонусный</div></td><td class='mat'>слайд 10</td></tr><tr><td class='min'>80–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ДЗ с образцом + тизер P6</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ДЗ: WB стр. 39, зад. 1–4 (Is there/Are there + How much/many).</li><li>Показываю образец выполненного зад. 2 на слайде.</li><li>Тизер: <span class='en'>Next lesson: someone stops you in the street and asks the way. Can you get them there? We'll practise on a real map.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ с образцом</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 11</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 39, зад. 1–4 (Is there … ? / Are there … ? + How much / How many).</p><p>🌱 По желанию: зад. 5–6 (FAQ про Dubai Mall и ответы про свой город).</p></td><td class='mat'>WB Unit 5 · плакат с четырьмя блоками остаётся висеть</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>ask Is there … ? / Are there … ? and give short answers</b>, and <b>choose How much or How many correctly</b>, in a short interview about a town.</li>
+      <li><span class="lb">Subsidiary.</span> ex.1 таблица вопросов; ex.2–4 три захода на форму; ex.5 правило much/many с опорой; ex.6–8 свои вопросы и интервью; ex.9 Grammar round-up как бонус для тех, кто закончил.</li>
+      <li><span class="lb">Personal.</span> Тема названа. Плакат P3 висит рядом — новый блок пристраиваю к нему, а не начинаю с нуля. Мини-тест после каждого блока, самопроверка по ключу.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>ask Is there … ? and Are there … ?</li><li>give short answers (Yes, there is. / No, there aren't.)</li><li>choose How much or How many by the noun</li><li>interview a partner about a town with 8 questions</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Discovery</span><span>Rule</span><span>Practice</span><span>Mini-test</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>bike station</span><span class='w'>bus stop</span><span class='w'>cycle lane</span><span class='w'>department store</span><span class='w'>fast-food restaurant</span><span class='w'>juice bar</span><span class='w'>library</span><span class='w'>museum</span><span class='w'>music venue</span><span class='w'>skate park</span><span class='w'>sports centre</span><span class='w'>underground station</span><span class='w'>bus station</span><span class='w'>underground station</span><span class='w'>train station</span><span class='w'>petrol station</span><span class='w'>police station</span><span class='w'>bike station</span><span class='w'>town centre</span><span class='w'>shopping centre</span><span class='w'>sports centre</span><span class='w'>medical centre</span><span class='w'>city centre</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Is there a sports centre? — Yes, there is. / No, there isn't. · Is there any street food? · Are there five football teams? — Yes, there are. / No, there aren't. · Are there any cycle lanes? · How much traffic is there? — A lot. / Some. / Not much. · How many cycle lanes are there? — A lot. / Some. / Not many.</div></div>
+      <div class="r"><div class="k">Form</div><div>Is there … ? — с единственным исчисляемым и с неисчисляемым; Are there … ? — с множественным · в вопросе обычно any, а не some: Are there any juice bars? · How much — с неисчисляемыми (traffic, homework, time, fruit, public transport) · How many — с исчисляемыми во множественном (libraries, skate parks, cinemas) · порядок слов (TB просит показать пальцем): How many cycle lanes ARE THERE? — is there / are there идут в конец вопроса</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>Is there /ɪz ðeə/ — слитно · в вопросе интонация ВОСХОДЯЩАЯ: Is there a skate park? ↗ · в How much/many — нисходящая ↘</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«Are there a library?» — почему нельзя? → library одно: Is there a library?</div><div class='ccq'>«How much museums are there?» — исправь. → museums считаются: How MANY museums are there?</div><div class='ccq'>«How many homework do you do?» → homework не считается: How MUCH homework do you do?</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.66, КТП пара 42 (обе половины — грамматика). Утвердительные there is/are закрыты на P3 и висят на плакате; новизна — вопрос, короткий ответ и much/many.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>«Are there a library?»</td><td>Приём: сначала пальцем на существительное (одно или много?), потом первое слово вопроса. Отрабатываем на десяти словах подряд.</td></tr><tr><td>«How many homework»</td><td>Плакат P3 работает и здесь: неисчисляемые уже в колонке. Показываю пальцем: слово оттуда → How much.</td></tr><tr><td>Порядок слов: «How many are there cinemas?»</td><td>Приём TB: показываю пальцем по строке — существительное сразу за How many, are there уходит в конец. Полоски-карточки со словами, которые дети физически переставляют.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 5 “Must try!” (What makes a town a good place to live in?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U5 «Must try!» · P5 · линия «новые» 🌱</span>
+  </div>
+</div>

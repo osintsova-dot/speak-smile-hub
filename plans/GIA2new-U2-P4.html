@@ -1,0 +1,193 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 2 · Pair 4 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* миссия: зачем и как подать */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+
+  /* ссылка на колоду слайдов */
+  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
+    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .slideslink:hover{ filter:brightness(1.05); }
+  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
+    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
+  .gameslink:hover{ filter:brightness(1.08); }
+  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
+  table.glance td.gmin a:hover{ border-bottom-style:solid; }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 2 “Me time” · Pair 4 — Спорт: do, go или play + аудирование «Бен на радио»</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>линия «новые» 🌱 со стороны</b> · 90 min · опоры: модель → word bank → черновик → продукт с листом · командный счёт · стикеры 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 29–30 (KTP pair 16) · Ноябрь</span><span class='chip new'>🌱 новые · опоры и модель</span><span class='chip'>SB p.29</span><span class='chip'>командный счёт · самопроверка</span></div>
+  </div>
+  <a class="slideslink" href="https://speakandsmile.ru/gia2/slides/gia2new-u2-p4.html" target="_blank" rel="noopener">🖥 Слайды на проектор — открыть колоду этой пары</a>
+  <a class="gameslink" href="https://speakandsmile.ru/gia2/games/u2.html" target="_blank" rel="noopener">🎮 Игры юнита 2 — класс и дом (+ боулинг на перевод)</a>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p4.html#3' target='_blank' rel='noopener' title='слайд 3'>0–6′</a></td><td class='gname'>Вход в урок: приветствие + повтор</td><td>повтор P3: два своих предложения с наречием партнёру</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p4.html#4' target='_blank' rel='noopener' title='слайд 4'>6–8′</a></td><td class='gname'>Завязка миссии</td><td>миссия: правило трёх глаголов + Бен на радио + своя суббота</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p4.html#5' target='_blank' rel='noopener' title='слайд 5'>8–24′</a></td><td class='gname'>Спорт группами: do · go · play</td><td>три корзины с жестами: do · go · play; узнавание → называние → ex.4 сортировка</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p4.html#6' target='_blank' rel='noopener' title='слайд 6'>24–32′</a></td><td class='gname'>Правило из объявления</td><td>ex.1–3: объявление LIVE WELL — кому подойдёт, кто чем займётся, правило формулируем сами</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p4.html#7' target='_blank' rel='noopener' title='слайд 7'>32–45′</a></td><td class='gname'>Аудирование: Бен на радио (по шагам)</td><td>трек 15 в три шага: о чём вообще → какие идеи → детали (с таблицей-опорой)</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p4.html#8' target='_blank' rel='noopener' title='слайд 8'>45–47′</a></td><td class='gname'>Переход-разминка</td><td>разминка</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p4.html#9' target='_blank' rel='noopener' title='слайд 9'>47–58′</a></td><td class='gname'>Моя суббота · черновик</td><td>рамка: 4 занятия + время + одна причина; каждый свой, потом крю сводит в общий</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p4.html#10' target='_blank' rel='noopener' title='слайд 10'>58–72′</a></td><td class='gname'>Продукт: моя суббота в спортцентре</td><td>speaker крю представляет субботу (можно с листом): 4 занятия + 1 причина; зал ловит своё любимое</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p4.html#11' target='_blank' rel='noopener' title='слайд 11'>72–82′</a></td><td class='gname'>Мини-тест с самопроверкой + счёт</td><td>10 коллокаций: вставить do/go/play → ключ → приватный счёт → очки командам</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia2/slides/gia2new-u2-p4.html#12' target='_blank' rel='noopener' title='слайд 12'>82–90′</a></td><td class='gname'>Финал: рефлексия + ДЗ</td><td>ДЗ с образцом + тизер P5</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Workbook Unit 2 (точные стр. и № заданий + бонус — внизу процедуры)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Миссия пары — зачем она и как её подать</div><div class='why'><b>Зачем (для учителя):</b> 19 коллокаций вводятся тремя корзинами с жестами — целый список сразу утопит. Правило выводим из объявления спортцентра, а не из воздуха. Аудирование для новичков трёхшаговое: сначала безопасный вопрос «о чём вообще» (ошибиться почти нельзя), потом идеи, потом детали — и три прослушивания, если надо.</div><div class='pitch'><b>Как представить детям (дословно, 30–40 сек):</b><br><b>“Three little verbs.</b> We DO karate, we GO swimming, we PLAY hockey. Why? There is a rule and you will find it yourselves — it's hiding in this sports centre advert. Then we listen to Ben, a real hockey player, on the radio: why does he love a team sport? And at the end, your own Saturday at the sports centre — four activities, with the right verb.”<div class='pitchru'>Суть по-русски, если нужно поддержать: три глагола do/go/play: правило спрятано в объявлении спортцентра — найдём сами. Потом слушаем настоящего хоккеиста Бена и собираем свою субботу в спортцентре из четырёх занятий.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='game'>▶</span> = игра / игровая оболочка</span><span>🎮 = проектор/медиа (в тексте есть запасной вариант)</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = поддержка / усложнение</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Вход в урок: приветствие + повтор</div><div class='sub'>Opening · вход + повтор</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> повтор P3: два своих предложения с наречием партнёру</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Open your three sentences from last time. Read TWO to a new partner. Listen for the adverb!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> тетради</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> повторяют свой продукт P3</div></td><td class='mat'>слайд 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Завязка миссии</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> миссия: правило трёх глаголов + Бен на радио + своя суббота</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Find the rule. Hear the player. Build your Saturday.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд миссии</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> план ясен</div></td><td class='mat'>слайд 4</td></tr><tr><td class='min'>8–24′</td><td class='stage'><div class='nm'>Спорт группами: do · go · play</div><div class='sub'>Слова спорта группами</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> три корзины с жестами: do · go · play; узнавание → называние → ex.4 сортировка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Корзина за корзиной: картинка → хором → жест: <span class='en'>do karate — chop! · go swimming — swim! · play hockey — stick!</span></li><li>Узнавание: <span class='en'>I show the gesture — you shout the whole phrase, with the verb.</span></li><li>ex.4 руками: 10 видов спорта из рамки раскладываем по корзинам. Ключ TB: Do — aerobics, hip-hop, athletics, gymnastics, yoga · Go — swimming, roller-skating, skateboarding, cycling, horse-riding, surfing, skiing · Play — hockey, basketball, volleyball, badminton, table tennis.</li><li>Спеллинг-станция 6 частотных: swimming · cycling · karate · yoga · hockey · basketball.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.29 ex.4 · карточки и три корзины</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> берут корзинами с жестами. Ожидаемо: gymnastics и athletics — самые новые</div></td><td class='mat'>слайды 5–6</td></tr><tr><td class='min'>24–32′</td><td class='stage'><div class='nm'>Правило из объявления</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ex.1–3: объявление LIVE WELL — кому подойдёт, кто чем займётся, правило формулируем сами</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ex.1: <span class='en'>Six people. Is this centre good for them?</span> Ключ TB: всем, кроме № 2 (зимние виды — их в центре нет).</li><li>ex.2 быстро (ключ TB): 1 hockey, basketball, volleyball · 2 ничего · 3 karate · 4 hockey, volleyball, basketball · 5 swimming · 6 hip-hop, roller-skating.</li><li>ex.3: <span class='en'>Now finish the rules — look at the verbs in the advert.</span> Ключ TB: 1 play · 2 go · 3 do. Правило вешаю на стену.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> SB p.29 ex.1–3 · плакат правила</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выводят правило из текста. Ожидаемо: формулируют по-русски → перевожу на английский и вешаю</div></td><td class='mat'>слайд 7</td></tr><tr><td class='min'>32–45′</td><td class='stage'><div class='nm'>Аудирование: Бен на радио (по шагам)</div><div class='sub'>Listening · Ben on the radio</div><div class='zone'>screen · desks</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> трек 15 в три шага: о чём вообще → какие идеи → детали (с таблицей-опорой)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Шаг 1 (безопасный): <span class='en'>Don't catch facts. Just: who is talking? Is it about rules, keeping fit, or team sports?</span> Ключ TB ex.6: c — advantages of team sports.</li><li>Шаг 2: ex.7 — какие идеи звучат (ключ TB: 1, 3, 4, 6). Слушаем ещё раз.</li><li>Шаг 3: ex.8 с таблицей-опорой (age | players | when | other sport). Ключ TB: 1 13–15 · 2 16 всего, играют 11 · 3 понедельник и среда после школы · 4 goes cycling.</li><li>Если тонут — третье прослушивание с паузами.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> аудио трек 15 · таблица-опора (запасной вариант — читаю фрагмент скрипта по ролям с помощником)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> слушают по шагам без паники. Ожидаемо: общая идея берётся всеми, детали — со 2–3 раза</div></td><td class='mat'>слайд 8 · audio</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Переход-разминка</div><div class='sub'>перерыв-переход</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разминка</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Gesture race: I name the sport — you shout DO, GO or PLAY! Faster!</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> —</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> двигаются</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–58′</td><td class='stage'><div class='nm'>Моя суббота · черновик</div><div class='zone'>solo → crews</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> рамка: 4 занятия + время + одна причина; каждый свой, потом крю сводит в общий</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Your Saturday at the sports centre: four activities and times. Frame: At ten o'clock I go swimming because…</span></li><li>Банк причин на слайде (I want to keep fit · I like being in a team · my friends do it · it's fun and easy).</li><li>Крю сводит четыре личных субботы в одну командную (голосование внутри).</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> лист-сетка · рамка · word bank</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> строят по рамке — выбор простой и свой. Ожидаемо: спорят про плавание vs баскетбол</div></td><td class='mat'>слайд 9</td></tr><tr class='True'><td class='min'>58–72′</td><td class='stage'><div class='nm'>Продукт: моя суббота в спортцентре</div><div class='sub'>PRODUCT · моя суббота</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> speaker крю представляет субботу (можно с листом): 4 занятия + 1 причина; зал ловит своё любимое</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Speakers: our Saturday starts at… We do… because… You can hold your notes!</span></li><li>Зал с задачей: <span class='en'>Thumbs up when you hear a sport YOU do.</span></li><li>Флажок точности: если глагол неверный — я молча показываю карточку с правилом, speaker чинит сам.</li><li>Хвалю конкретно; ошибки не разбираю у доски.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> листы-сетки · карточка-правило · таймер</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> выступают с опорой. Ожидаемо: все крю проходят сцену; самоисправление работает лучше моей поправки</div></td><td class='mat'>слайды 10–11</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Мини-тест с самопроверкой + счёт</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> 10 коллокаций: вставить do/go/play → ключ → приватный счёт → очки командам</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Ten items, then the key. Circle your slips — they're yours only.</span></li><li>Финальный жест-блиц по всем трём корзинам; стикеры 🟢🟡🔴.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> мини-тест · ключ · лидерборд</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> проверяют себя и закрепляют жестами</div></td><td class='mat'>слайд 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Финал: рефлексия + ДЗ</div><div class='sub'>Wrap-up + ДЗ</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> ДЗ с образцом + тизер P5</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>ДЗ: WB стр. 14, зад. 1–4 (do/go/play) + стр. 17, зад. 1–2 (аудирование — дома спокойно).</li><li>Тизер: <span class='en'>Next: the question lesson. Who? What? Where? When? Why? — and a real interview with your partner.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> слайд ДЗ</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> записывают</div></td><td class='mat'>слайд 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Workbook:</b> WB стр. 14, зад. 1–4 (collocations do/go/play) + стр. 17, зад. 1–2 (A radio programme).</p><p>🌱 По желанию: зад. 5–6 на стр. 14.</p></td><td class='mat'>WB Unit 2 · плакат правила do/go/play висит в классе</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>choose do, go or play correctly</b> for 19 activities, catch the general idea and 3–4 details of a radio interview, and <b>present their own Saturday</b> with a frame.</li>
+      <li><span class="lb">Subsidiary.</span> Правило коллокаций из объявления (ex.1–3); ex.4 сортировка руками; subskill listening for the general idea; таблица-опора для заметок; ex.8 детали.</li>
+      <li><span class="lb">Personal.</span> Аудио страшнее текста — проигрываю трижды, если надо; после первого раза только безопасный вопрос «о чём это вообще». Факт после первого прослушивания не спрашиваю никогда (правило TB).</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>choose do, go or play for 19 activities</li><li>explain the rule in my own words</li><li>say what a recording is about before catching details</li><li>present my Saturday programme with a frame</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Baskets</span><span>Rule</span><span>Listening</span><span>Compare</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>do aerobics</span><span class='w'>do athletics</span><span class='w'>do gymnastics</span><span class='w'>do hip hop</span><span class='w'>do karate</span><span class='w'>do martial arts</span><span class='w'>do yoga</span><span class='w'>go cycling</span><span class='w'>go horse-riding</span><span class='w'>go roller-skating</span><span class='w'>go skateboarding</span><span class='w'>go skiing</span><span class='w'>go surfing</span><span class='w'>go swimming</span><span class='w'>play badminton</span><span class='w'>play basketball</span><span class='w'>play hockey</span><span class='w'>play table tennis</span><span class='w'>play volleyball</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I do karate on Mondays. · I go swimming at the weekend. · We play basketball in PE. · I'd like to do yoga because…</div></div>
+      <div class="r"><div class="k">Form</div><div>play — с игровыми (мяч/ракетка) видами спорта: play hockey, play badminton · go — с формами на -ing: go swimming, go skiing, go horse-riding · do — со всем остальным: do karate, do yoga, do athletics</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>/ˌduː kəˈrɑːti/ do karate · /ˌɡəʊ ˈskeɪtˌbɔː(r)dɪŋ/ go skateboarding · /ˌpleɪ ˈbædmɪntən/ play badminton</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«I do swimming» — можно? → нет: swimming на -ing → go swimming.</div><div class='ccq'>«I play athletics» — а так? → нет: не игра с мячом → do athletics.</div><div class='ccq'>Первый вопрос к любому аудио? → о чём это вообще, а не детали.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.29, КТП пара 16. Названия видов спорта в основном узнаваемы; трудность — в выборе глагола.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>19 коллокаций разом не влезают</td><td>Три корзины физически на партах, по 5–7 карточек; сначала узнавание (положи в корзину), потом называние.</td></tr><tr><td>Паника на аудировании</td><td>Таблица-опора с готовыми колонками; три прослушивания разрешены; первый вопрос всегда безопасный.</td></tr><tr><td>Спеллинг gymnastics/athletics</td><td>Спеллинг-станция только по 6 частотным; остальные — узнавание.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 2 “Me time” (How important are hobbies for teenagers?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U2 «Me time» · P4 · линия «новые» 🌱</span>
+  </div>
+</div>
