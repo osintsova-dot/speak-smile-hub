@@ -246,6 +246,23 @@ function planKeyFor(program, L){
     const k = `${program}-${part}-P${idx+1}`;
     return window.PLANS[k] ? k : null;
   }
+  // Prepare 3/4/5: год разбит на блоки, план = <prog>-U<номер блока>-P<№ урока внутри блока>
+  if (program==="Prepare3" || program==="Prepare4" || program==="Prepare5"){
+    const sec = L.sec || "";
+    let part = null;
+    const bm = /БЛОК\s*(\d+)/i.exec(sec);
+    if (bm) part = "U"+bm[1];
+    else if (/ВВОДН/i.test(sec)) part = "Intro";
+    else if (/ПОЛУГОД|MID/i.test(sec)) part = "Mid";
+    else if (/ФИНАЛ|ИТОГ|MOCK/i.test(sec)) part = "Final";
+    if (!part) return null;
+    const prog = window.PROGRAMS[program];
+    const same = (prog?.lessons||[]).filter(x=>x.sec===L.sec).map(x=>x.n).sort((a,b)=>a-b);
+    const idx = same.indexOf(L.n);
+    if (idx < 0) return null;
+    const k = `${program}-${part}-P${idx+1}`;
+    return window.PLANS[k] ? k : null;
+  }
   if (program==="GIA1" || program==="GIA1zero"){
     let part = null;
     const um = /UNIT\s*(\d+)/i.exec(src);
