@@ -843,4 +843,10 @@ window.PLANS = {
   "GIA2new-U8-P8": 1,
   "GIA2new-U9-P1": 1,
   "GIA2new-U9-P2": 1,
+  "Prepare3-U1-P1": 1,
+  "Prepare3-U1-P2": 1,
+  "Prepare3-U1-P3": 1,
+  "Prepare3-U1-P4": 1,
+  "Prepare3-U1-P5": 1,
+  "Prepare3-U1-P6": 1,
 };

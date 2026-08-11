@@ -1,0 +1,202 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prepare3-U1-P5 · Блок 1 · Review + тест · Урок 5 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.focus{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* «Главное в уроке» — языковая рамка */
+  .examcard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .examcard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:8px; }
+  .examcard .xr{ display:flex; gap:10px; padding:5px 0; border-bottom:1px dashed var(--line); font-size:.92rem; }
+  .examcard .xr:last-of-type{ border-bottom:0; }
+  .examcard .xk{ flex:0 0 168px; font-weight:800; font-size:.72rem; text-transform:uppercase;
+    letter-spacing:.04em; color:var(--muted); }
+  .examcard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; margin-top:10px; }
+  .examcard .pitch b{ color:var(--p-ink); }
+  .examcard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* заметка «связь с ОГЭ» — только для учителя, внизу плана */
+  .ogecard{ background:var(--card); border:1px dashed var(--p); border-left:4px solid var(--honey);
+    border-radius:12px; padding:12px 16px; margin:10px 0 0; font-size:.9rem; }
+  .ogecard .mh{ font-weight:800; color:var(--p-ink); font-size:.74rem; text-transform:uppercase;
+    letter-spacing:.07em; margin-bottom:7px; }
+  .ogecard p{ margin:0 0 6px; } .ogecard p:last-child{ margin-bottom:0; }
+  .ogecard a{ color:var(--p-ink); font-weight:700; word-break:break-all; }
+  .ogecard .quiet{ color:var(--muted); font-size:.84rem; }
+
+  /* необязательная строка ДЗ (тренажёр) */
+  p.opt{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px;
+    padding:7px 10px; margin-top:7px; font-size:.9rem; }
+  p.opt a{ color:var(--p-ink); font-weight:700; word-break:break-all; }
+
+  /* «Урок одним взглядом» */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* сценарий */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .kagan{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--p);
+    border-radius:6px; padding:0 6px; font-weight:800; font-size:.86em; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* три подблока режиссуры этапа */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } .examcard .xr{ flex-direction:column; gap:2px; } .examcard .xk{ flex:none; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.focus{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,table.glance,.do,.examcard{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Prepare 3 (2nd edition, A2) · Блок 1 · Review + тест · Урок 5 — Повторение блока (45′) и тест блока 1 (45′)</div>
+    <div class="s">Подростки 13–15 (пришли после Get Involved! A2) · 90 минут · <b>языковой курс</b>: у каждого урока названа своя языковая задача. Связь с ОГЭ — справкой внизу плана, для учителя; ссылка на тренажёр в ДЗ — по желанию</div>
+    <div class="meta"><span class='chip'>Урок 8 по КТП · 28.09–04.10 · Сентябрь</span><span class='chip focus'>✅ Контроль блока</span><span class='chip'>Review + тест блока 1</span><span class='chip'>Prepare 3 · блок 1 · одна линия планов</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Урок одним взглядом — 90 минут</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Мин</th><th>Этап</th><th>Суть одной фразой</th></tr></thead><tbody><tr><td class='gmin'>0–5′</td><td class='gname'>Вход в урок: приветствие, повтор прошлого, мостик</td><td>приветствие + быстрый круг слов блока + мостик к формату дня</td></tr><tr class='bridge'><td class='gmin'>5–8′</td><td class='gname'>Рамка урока: что берём сегодня</td><td>показываю спецификацию теста заранее — тревога снимается прозрачностью</td></tr><tr><td class='gmin'>8–20′</td><td class='gname'>Станция 1: лексика блока</td><td>лексика блока: 27 слов на скорость и на написание</td></tr><tr><td class='gmin'>20–32′</td><td class='gname'>Станция 2: грамматика блока</td><td>грамматика блока: выбор времени и глаголы состояния</td></tr><tr><td class='gmin'>32–40′</td><td class='gname'>Игра «I think you're lying!»</td><td>игра «I think you're lying! (Review game Units 1–4, Cambridge, PHOTOCOPIABLE 2019)» — говорим правду и ложь о себе словами блока</td></tr><tr><td class='gmin'>40–45′</td><td class='gname'>Разбор ошибок повторения + инструктаж к тесту</td><td>разбор того, что просело на станциях, и инструктаж к тесту</td></tr><tr><td class='gmin'>45–47′</td><td class='gname'>Перерыв перед тестом</td><td>две минуты на воду и разминку перед тестом — это вторая половина занятия</td></tr><tr class='bridge'><td class='gmin'>47–85′</td><td class='gname'>Тест блока 1 (45 минут)</td><td>тест блока 1: девять частей, 72 балла, 38 минут (первые 5 минут — диктант части 8)</td></tr><tr><td class='gmin'>85–90′</td><td class='gname'>Сдали работы: рефлексия и ДЗ</td><td>сдача работ, личная рефлексия, домашнее задание</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Домашнее задание</td><td>Работа над ошибками + рабочий лист по лексике или грамматике блока</td></tr></tbody></table></div>
+
+  <div class='examcard'><div class='mh'>🎯 Главное в уроке — зачем он и как его подать</div><div class='xr'><div class='xk'>Языковая задача</div><div>Показать, что лексика и грамматика двух юнитов работают <b>без книги</b>: 27 слов, выбор настоящего времени, глаголы состояния и правильное написание.</div></div><div class='xr'><div class='xk'>Что здесь реально трудно</div><div>Не задания, а тревога перед первым тестом года. И разрыв «устно — письменно»: вслух класс знает почти всё, на бумаге проседает орфография.</div></div><div class='xr'><div class='xk'>Типичная ошибка (справочник ФИПИ)</div><div>becouse · tomorow · alot · wich · beatiful · intresting — высокочастотные орфографические ошибки; слово с ошибкой не засчитывается ни в тесте, ни потом на экзамене [эксперт] В нашем блоке это <i>dessert</i> вместо <i>desert</i>, <i>giraf</i>, <i>penguine</i>, <i>creativ</i>.<br>Плюс выбор времени по чутью, а не по маркеру (usually / at the moment).</div></div><div class='pitch'><b>Как объявить детям (дословно, 30–40 сек):</b><br><b>“Nothing new today.</b> Everything on this test you have already done in this room. First forty-five minutes — we play it back. Then forty-five minutes — you show it. Your score is not the point: the point is your own list of five mistakes to fix.”<div class='pitchru'>Суть по-русски, если нужно поддержать: сегодня ничего нового: всё, что будет в тесте, мы уже делали в этом классе. Сначала 45 минут повторяем, потом 45 минут показываем. Важен не балл, а личный список из пяти ошибок, которые надо закрыть.</div></div></div>
+
+  <div class="eyebrow">Ход урока — полная процедура</div>
+  <div class="legend"><span><span class='en'>в кавычках</span> = точные реплики учителя (англ.)</span><span><span class='kagan'>Kagan</span> = структура Кагана, называем её вслух</span><span>📺 = экран/аудио — в каждом таком этапе есть запасной вариант «на доске»</span><span>🎯 = продуктивный выход урока: ребёнок сам говорит или пишет</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Мин</th><th>Этап · где</th><th>Ход урока</th><th>Материалы</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–5′</td><td class='stage'><div class='nm'>Вход в урок: приветствие, повтор прошлого, мостик</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>у двери → парты</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> приветствие + быстрый круг слов блока + мостик к формату дня</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><b>2 минуты — welcome check-in.</b> Встречаем у двери, каждому один вопрос и короткий ответ: <span class='en'>Hi! One word — how are you today? … Good. Sit down and open your book.</span> Ответ принимаем любой, но по-английски.</li><li><b>3 минуты — Last lesson rewind.</b> Kagan <span class='kagan'>Quiz-Quiz-Trade</span> «горячий круг»: карточки всех 27 слов блока, два обмена. <span class='en'>Quiz, coach, trade — go!</span></li><li>Сажаю по хлопку и говорю честно: <span class='en'>Everything you just said is in today's test.</span></li><li><b>Мостик в урок (30 секунд):</b> <span class='en'>Two halves today: forty-five minutes to remember, forty-five to show.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> карточки слов блока — печатные (<b>запасной вариант — если карточек нет, диктую слова с листа, дети пишут перевод в паре</b>)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> обмениваются карточками. Ожидаемо: темп высокий, тревога падает. Типичная ошибка: спотыкаются на valley и creative</div></td><td class='mat'>карточки слов</td></tr><tr class='bridge'><td class='min'>5–8′</td><td class='stage'><div class='nm'>Рамка урока: что берём сегодня</div><div class='sub'>Lesson frame</div><div class='zone'>доска</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> показываю спецификацию теста заранее — тревога снимается прозрачностью</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Выписываю на доску девять частей теста по одной строке: personality · personal details · geography · animals · present tenses · выбор формы · stative verbs · произношение на слух · пять предложений о себе.</li><li><span class='en'>Look at the board. Have we done all of this in class? Yes or no?</span> Класс отвечает хором — ответ всегда yes.</li><li>Правило дня: <span class='en'>Your score goes in the register. Your five mistakes go in your notebook. The second one matters more.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> девять строк спецификации на доске (<b>запасной вариант не требуется: носитель — доска, она остаётся до конца первой половины урока; при наличии проектора — тот же слайд</b>)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> читают спецификацию и отвечают хором. Ожидаемо: видимое облегчение. Типичная ошибка — не верят, что «всё уже было»: прошу назвать урок, где делали каждый пункт</div></td><td class='mat'>доска</td></tr><tr><td class='min'>8–20′</td><td class='stage'><div class='nm'>Станция 1: лексика блока</div><div class='sub'>Review station 1 · words</div><div class='zone'>команды</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> лексика блока: 27 слов на скорость и на написание</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Раунд 1, устный: показываю фото/определение — команда называет слово. 12 позиций.</li><li>Раунд 2, письменный: Kagan <span class='kagan'>Showdown</span> — я называю слово по-русски, команда пишет по-английски и по команде поднимает доску. Считается написание.</li><li>В список раунда 2 обязательно ставлю ловушки: desert, giraffe, penguin, creative, surname.</li><li>Ошибки написания выписываю на доску отдельным столбиком «watch out» — они висят до теста.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> фото и определения на экране (<b>запасной вариант — карточки со словами в руках, определения читаю с листа; столбик «watch out» в любом случае на доске</b>)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> называют и пишут на мини-досках. Ожидаемо: устно почти всё, письменно проседает написание. Типичная ошибка: dessert вместо desert — из-за этого столбик и нужен</div></td><td class='mat'>карточки · мини-доски · доска</td></tr><tr><td class='min'>20–32′</td><td class='stage'><div class='nm'>Станция 2: грамматика блока</div><div class='sub'>Review station 2 · grammar</div><div class='zone'>пары → класс</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> грамматика блока: выбор времени и глаголы состояния</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Даю 10 предложений вперемешку (5 на выбор времени, 5 на стативные глаголы) — по образцу SB стр. 11 ex.3–4 и стр. 15 ex.3–4.</li><li>Kagan <span class='kagan'>RallyCoach</span>: партнёр требует не ответ, а объяснение — <span class='en'>Say WHY, not just the answer.</span></li><li>Сбор через Kagan <span class='kagan'>Numbered Heads Together</span>: <span class='en'>Sentence six — number fours, boards up!</span></li><li>Каждое объяснение сводим к маркеру: usually / every week → simple; at the moment / now → continuous; know, want, belong to → только simple.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> десять предложений по одному на экране (<b>запасной вариант — выписываю их на доску до урока и открываю по одному, закрывая листом</b>)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> решают в парах с объяснением, отчитываются по номеру. Ожидаемо: маркеры называют уверенно. Типичная ошибка: <i>I'm knowing</i> всё ещё проскакивает у 2–3 человек — им отдельная строка в лист ошибок</div></td><td class='mat'>доска · мини-доски</td></tr><tr><td class='min'>32–40′</td><td class='stage'><div class='nm'>Игра «I think you're lying!»</div><div class='sub'>Review game</div><div class='zone'>группы по 4–5</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> игра «I think you're lying! (Review game Units 1–4, Cambridge, PHOTOCOPIABLE 2019)» — говорим правду и ложь о себе словами блока</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Правила за минуту: Группы 2–5 человек, один игровой лист, кубик. Бросок задаёт колонку, второй бросок — строку. Игрок читает предложение из клетки как своё («I live on the ground floor») — остальные решают, правда это или ложь. Угадал — 1 балл; обманул — по баллу за каждого обманутого.</li><li>⚠️ Важно: лист покрывает Units 1–4, поэтому играем только по клеткам нашего блока. ⚠️ Лист покрывает Units 1–4, поэтому берём только клетки нашего блока (личность, география, животные): I am very creative · My best friend is an active person · I am lazy and don't like doing my homework · I am kind to everyone · My parents are polite · Everyone in my family is friendly · I sometimes go to the mountains · Someone in my family lives near a lake · I live on a hill · I swam in the sea last summer · I go running beside the river · I don't like snakes · I think monkeys are funny · I think tigers are beautiful · My favourite animal is the dolphin. Остальные клетки (holidays, homes, travel) — Units 3–4, их пропускаем.</li><li>Планка: <span class='en'>Your sentence must be a full sentence. 'Creative' is not a sentence.</span></li><li>Продолжение (по книге игры): в конце вспомнить и записать как можно больше ПРАВДИВЫХ предложений одноклассников.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> игровые листы распечатаны заранее по одному на группу (<b>запасной вариант без принтера — выписываю 15 наших предложений на доску, а «клетку» выбираем броском кубика по номеру строки</b>)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> играют, угадывают и спорят. Ожидаемо: самый живой этап повторения. Типичная ошибка: говорят одним словом вместо предложения — снимаем правилом</div></td><td class='mat'>материалы/игры-повторения/PREPARE_3_Review Games_Units 01-04.pdf · кубики</td></tr><tr><td class='min'>40–45′</td><td class='stage'><div class='nm'>Разбор ошибок повторения + инструктаж к тесту</div><div class='sub'>Test briefing</div><div class='zone'>класс</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> разбор того, что просело на станциях, и инструктаж к тесту</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Возвращаюсь к столбику «watch out» на доске: пять слов, которые писали с ошибкой. <span class='en'>Look at these five words for thirty seconds. Then I close them.</span></li><li>Инструктаж: 45 минут, девять частей, 72 балла; телефон в сумку; закончил раньше — часть 9 (пять предложений о себе). Часть 8 делаем ВМЕСТЕ в начале: я диктую, поэтому опоздать на неё нельзя.</li><li><b>Тихий режим</b> — рука ладонью вниз. С этого момента тишина.</li><li>Раздаю листы текстом вниз: <span class='en'>Do not turn the paper. Names first.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> столбик «watch out» на доске стираю перед раздачей (<b>запасной вариант не требуется: носитель — доска; проектор выключаю полностью, чтобы не было соблазна подсмотреть</b>)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> запоминают ловушки, убирают телефоны, подписывают листы. Ожидаемо: тишина устанавливается за 20 секунд, если рука поднята заранее</div></td><td class='mat'>листы теста · доска</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Перерыв перед тестом</div><div class='sub'>Break</div><div class='zone'>встали</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> две минуты на воду и разминку перед тестом — это вторая половина занятия</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Two minutes. Stand up, stretch, water. Back at your desk when I count down from ten.</span></li><li>Считаю вслух с 10 — к «1» все на местах.</li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> команды голосом (<b>запасной вариант не требуется</b>)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> встают и возвращаются по счёту. Ожидаемо: переключение даёт заметно более чистое начало теста</div></td><td class='mat'>—</td></tr><tr class='bridge'><td class='min'>47–85′</td><td class='stage'><div class='nm'>Тест блока 1 (45 минут)</div><div class='sub'>Block test</div><div class='zone'>соло, тихий режим</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> тест блока 1: девять частей, 72 балла, 38 минут (первые 5 минут — диктант части 8)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li><span class='en'>Turn the paper. You have thirty-eight minutes. Start.</span></li><li>Хожу по классу молча. На вопрос по содержанию отвечаю только <span class='en'>Read the instruction again.</span></li><li>Пишу на доске оставшееся время: 20 · 10 · 5 минут — молча, не голосом.</li><li>Часть 8 (произношение) идёт первой и под мою диктовку — 5 минут, потом дети работают сами. Кто закончил раньше — пишет часть 9 (пять предложений о себе) и сидит тихо.</li><li>За 2 минуты до конца: <span class='en'>Two minutes. Check your spelling.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> оставшееся время пишу на доске (<b>запасной вариант — если проектора нет, время всё равно на доске; никакие материалы на экране во время теста не выводятся</b>)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> работают молча 38 минут. Ожидаемо: части 1–4 закрывают быстро, часть 7 (стативные глаголы) тормозит. Типичная ошибка: пропускают часть 9, приняв её за необязательную — поэтому она в спецификации на доске</div></td><td class='mat'>листы теста · таймер</td></tr><tr><td class='min'>85–90′</td><td class='stage'><div class='nm'>Сдали работы: рефлексия и ДЗ</div><div class='sub'>Test wrap-up</div><div class='zone'>круг</div></td><td class='flow'><p class='do'><b>ЧТО ДЕЛАЕМ:</b> сдача работ, личная рефлексия, домашнее задание</p><div class='tsteps'><span class='sbh'>👩‍🏫 Учитель — по шагам:</span><ol><li>Собираю работы молча, стопкой, без комментариев.</li><li>Личная рефлексия на бумажке (не вслух): <span class='en'>Write ONE thing you are sure you got right, and ONE thing you are not sure about.</span> Бумажки собираю — это материал для разбора.</li><li>ДЗ: переписать правильно пять своих ошибок, когда работы вернутся; сейчас — Vocabulary или Grammar worksheet Unit 1–2 (Standard или Plus по решению педагога), если что-то не закрыто.</li><li>Тизер: <span class='en'>Next lesson we open page 120 for the first time — and see how the very same reading skill is asked in two different exams.</span></li></ol></div><div class='showb'><span class='sbh'>📺 Показываем:</span> два вопроса рефлексии на доске (<b>запасной вариант — диктую их голосом, дети пишут на листке</b>)</div><div class='kidsb'><span class='sbh'>👦 Дети:</span> сдают работы и пишут рефлексию. Ожидаемо: «не уверен» чаще всего про стативные глаголы — это и есть план на следующую клинику</div></td><td class='mat'>листки рефлексии · дневники</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Домашнее задание</div></td><td class='flow'><p><b>Повторение перед следующим уроком:</b> личный лист ошибок из теста — переписать пять своих ошибочных предложений правильно. Плюс Vocabulary worksheet Unit 1–2 (Standard или Plus — по решению педагога), если что-то не закрыто.</p><p class='opt'><b>✳️ По желанию — тем, кто будет сдавать ОГЭ:</b> два задания 12 ОГЭ по темам блока: ЮАР (природа, символы, редкие животные) и река Лена (экономика, экология, туризм). <a href='https://speakandsmile.online/oge.html#/hw?reading:mt_2ECDE3,mt_B94546'>https://speakandsmile.online/oge.html#/hw?reading:mt_2ECDE3,mt_B94546</a><br>по 10 минут каждое, проверяется автоматически. Ссылка открывается сразу, без пароля и регистрации. Кто не сдаёт — не делает, на оценку не влияет.</p></td><td class='mat'>материалы/лексика/Unit 1–2 · материалы/грамматика/Unit 1–2</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Справка для подготовки (читать ДО урока, не в классе)</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, students <b>have shown control of Units 1–2 vocabulary and grammar</b> in test conditions and <b>have their own list of five mistakes to fix</b>.</li>
+      <li><span class="lb">Subsidiary.</span> Повторение через станции: лексика, грамматика, игра на правду/ложь; снятие тревоги перед первым тестом года.</li>
+      <li><span class="lb">Personal.</span> Не даю новых заданий и не «дожимаю» слабых на повторении: этап повторения — для уверенности, а не для последней попытки объяснить.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>recall 27 words from Units 1–2 without the book</li><li>choose the right present tense and justify the choice</li><li>spot a stative verb used in the continuous</li><li>write five of their own mistakes in the correct form</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Ход урока крупно</div>
+      <div class="arc"><span>Вход</span><span>Рамка урока</span><span>Станция лексики</span><span>Станция грамматики</span><span>Игра</span><span>Инструктаж</span><span>Перерыв</span><span>Тест 45′</span><span>Финал</span></div>
+      <div class="eyebrow" style="margin:12px 0 6px">Структуры Кагана в этом уроке</div>
+      <div><span class='w'>Quiz-Quiz-Trade</span><span class='w'>Showdown</span><span class='w'>Numbered Heads Together</span><span class='w'>RallyCoach</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>active</span><span class='w'>creative</span><span class='w'>friendly</span><span class='w'>funny</span><span class='w'>helpful</span><span class='w'>kind</span><span class='w'>lazy</span><span class='w'>polite</span><span class='w'>popular</span><span class='w'>quiet</span><span class='w'>desert</span><span class='w'>forest</span><span class='w'>hill</span><span class='w'>lake</span><span class='w'>mountain</span><span class='w'>river</span><span class='w'>sea</span><span class='w'>valley</span><span class='w'>volcano</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>повтор: I usually … / I'm … -ing at the moment · There are mountains in … · That belongs to me. · She understands the question.</div></div>
+      <div class="r"><div class="k">Form</div><div>present simple vs present continuous · стативные глаголы · орфография слов блока.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>контроль написания на слух: desert (не dessert) · giraffe · penguin · creative · surname.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«В тесте будет что-то новое?» → нет: каждый формат встречался в классе.</div><div class='ccq'>«Можно пользоваться учебником?» → нет, но на повторении можно всё — за 45 минут до теста.</div><div class='ccq'>«Что важнее: балл или разбор?» → разбор. Балл фиксируем, работаем по листу ошибок.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> КТП урок 8. Первый тест года — тревога выше, чем сложность. Официального пака «тест блока 1» в папке курса нет: тест собирается по спецификации ниже, на базе Vocabulary и Grammar worksheets Unit 1–2, Review 1 SB стр. 30 и Workbook.</p>
+    </div>
+  </div>
+
+  <div class='eyebrow'>Ключи к заданиям урока (Teacher's Book — сверено постранично)</div><div class='cardb' style='padding:4px 8px'><table class='ap'><thead><tr><th>Задание</th><th>Ответ</th></tr></thead><tbody><tr><td>Источник заданий части 1–2</td><td>материалы/лексика/Unit 1 (Standard и Plus) — ключи внутри файла</td></tr><tr><td>Источник заданий части 3</td><td>SB стр. 30 Review 1, зад. 3 (описания природных объектов)</td></tr><tr><td>Источник заданий части 4</td><td>SB стр. 16 ex.1 — десять животных</td></tr><tr><td>Источник заданий части 5–6</td><td>материалы/грамматика/Unit 1 (Standard и Plus) — ключи внутри</td></tr><tr><td>Источник заданий части 7</td><td>SB стр. 15 ex.4 + материалы/грамматика/Unit 2</td></tr><tr><td>Источник задания части 8</td><td>SB стр. 13 трек 06 (буквы) и SB стр. 15 трек 12 (звуки th)</td></tr><tr><td>Источник задания части 9</td><td>модель письма SB стр. 11 ex.6 (образец — TB стр. 18)</td></tr><tr><td>Формат-эталон теста</td><td>материалы/тесты/Units tests/Prepare_2ed_3_Unit10_standard/PRE-UT-U10S.pdf — официальный Unit test Prepare 3: Vocabulary ×2, Grammar ×2, Pronunciation ×1</td></tr></tbody></table></div>
+  <div class='eyebrow'>Спецификация теста блока 1 (ЧЕРНОВИК: официального пака в папке курса нет)</div><div class='cardb' style='padding:4px 8px'><table class='ap'><thead><tr><th>Часть</th><th>Содержание и баллы</th></tr></thead><tbody><tr><td>Part 1 · Vocabulary: adjectives of personality</td><td>8 предложений с выбором слова — по образцу Vocabulary Standard Unit 1, зад. 2. 8 баллов.</td></tr><tr><td>Part 2 · Vocabulary: personal details</td><td>матчинг 8 подписей формы с данными (Home telephone, First name, Surname, Email address, Address, Age, Mobile, First language) — Vocabulary Standard Unit 1, зад. 3. 8 баллов.</td></tr><tr><td>Part 3 · Vocabulary: geographical features</td><td>9 определений → слово (desert, forest, hill, lake, mountain, river, sea, valley, volcano) — по образцу Review 1 SB стр. 30, зад. 3. 9 баллов.</td></tr><tr><td>Part 4 · Vocabulary: animals</td><td>10 картинок/описаний → слово из списка Unit 2. 10 баллов.</td></tr><tr><td>Part 5 · Grammar: present simple / present continuous</td><td>8 предложений: раскрыть скобки — Grammar Standard Unit 1, зад. 1–2. 8 баллов.</td></tr><tr><td>Part 6 · Grammar: выбор времени</td><td>7 предложений circle the correct option — Grammar Standard Unit 1, зад. 3. 7 баллов.</td></tr><tr><td>Part 7 · Grammar: stative verbs</td><td>6 предложений на исправление ошибки (I'm needing / She is understanding …) — SB стр. 15 ex.4 + Grammar worksheet Unit 2. 6 баллов.</td></tr><tr><td>Part 8 · Pronunciation (на слух — как в официальном Unit test)</td><td>6 позиций: диктую по буквам фамилию и email, дети записывают (SB стр. 13, трек 06) + 6 слов на распределение в колонки /θ/ earth и /ð/ weather (SB стр. 15, трек 12). 12 баллов.</td></tr><tr><td>Part 9 · Writing (мини)</td><td>4–5 предложений о себе по модели SB стр. 11 ex.6: два факта в present simple + два в present continuous. 4 балла за содержание.</td></tr></tbody></table><p style='font-size:.85rem;color:var(--muted);margin:8px 4px'>Итого 72 балла. Структура повторяет официальный Unit test Prepare 3 (Vocabulary ×2 · Grammar ×2 · Pronunciation ×1 — проверено по PRE-UT-U10S.pdf), поэтому дети встретят знакомый формат, когда пойдут официальные тесты юнитов. Смотрим не на цифру, а на личный лист ошибок: каждый формат встречался в классе. Собрано строго из того, что дети делали в классе: Vocabulary и Grammar worksheets Unit 1–2, Review 1 SB стр. 30, Workbook. Когда из Cambridge Test Generator будет выкачан официальный Unit test 1 / Unit test 2, он заменяет этот черновик.</p></div>
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Тревога перед первым тестом года</td><td>Проговариваю вслух и заранее: заданий из воздуха не будет, каждый формат уже делали. Показываю спецификацию на доске до начала.</td></tr><tr><td>Кто-то заканчивает тест за 25 минут</td><td>Правило: сдал — переворачиваешь лист и пишешь пять предложений о себе (два simple, два continuous, одно с глаголом состояния). Это часть 8, она в баллах.</td></tr><tr><td>После теста хотят «сравнить ответы» вслух</td><td>Сбор работ молча, разбор — на следующем уроке. Сегодня после сдачи только личная рефлексия.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — спокойный обратный отсчёт → на «1» все глаза на вас. Никогда не перекрикиваем класс.</div><div class='sigc'><b>Visible timer</b> — таймер на экране = работаем; таймер встал = ручки вниз. Главный не вы, а таймер.</div><div class='sigc'><b>«Boards up!»</b> — раунд на мини-досках: отвечают все и одновременно — никто не прячется и никто не выкрикивает первым.</div><div class='sigc'><b>Тихий режим</b> — рука ладонью вниз = работаем молча и в одиночку: слушаем запись или пишем. Вопросы после, а не во время.</div><div class='sigc'><b>One clap — two claps</b> — вы хлопаете один раз, класс отвечает двумя и замирает — мгновенный сброс посреди игры.</div><div class='sigc'><b>English-first</b> — идею можно сказать по-русски, БАЛЛ — только за английскую версию: переформулируем и повторяем.</div></div></div>
+    </div>
+  </div>
+
+  <div class="eyebrow" style="margin-top:22px">Куда это ведёт дальше</div>
+  <div class='ogecard'><div class='mh'>🇷🇺 Связь с ОГЭ — для учителя, на урок не выносим</div><p><b>Тот же навык проверяют:</b> <b>Задания 20–34</b> (грамматика и лексика, 15 баллов).</p><p>Механика теста блока та же: поставить форму слова и написать его без ошибок. В ОГЭ слово с орфографической ошибкой не засчитывается вообще.</p><p class='quiet'>Кому это нужно: ОГЭ по английскому сдают не все. Тем, кто сдаёт, даём ссылку в ДЗ как необязательную — «кто хочет». Остальным ничего говорить не нужно, урок работает на язык и без этого.</p><p><b>Тренажёр по теме юнита:</b> <a href='https://speakandsmile.online/oge.html#/hw?reading:mt_2ECDE3,mt_B94546'>https://speakandsmile.online/oge.html#/hw?reading:mt_2ECDE3,mt_B94546</a><br><span class='quiet'>два задания 12 ОГЭ по темам блока: ЮАР (природа, символы, редкие животные) и река Лена (экономика, экология, туризм) · по 10 минут каждое, проверяется автоматически</span></p></div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Prepare 3 (2nd edition, A2) · Блок 1: Unit 1 «It's a challenge!» + Unit 2 «Our changing planet» · Prepare3-U1-P5 — lesson plan &amp; staging</span>
+    <span>Prepare 3 · Блок 1 · P5 · Review 45′ + тест блока 45′</span>
+  </div>
+</div>
