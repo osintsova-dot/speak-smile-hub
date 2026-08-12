@@ -13287,7 +13287,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "games and activities + Unit 10: Useful websites · уроки 28–32"
+    "sec": "БЛОК 5 — Unit 9: Sports, games and activities + Unit 10: Useful websites · уроки 28–32"
    },
    {
     "n": 29,
@@ -13313,7 +13313,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "games and activities + Unit 10: Useful websites · уроки 28–32"
+    "sec": "БЛОК 5 — Unit 9: Sports, games and activities + Unit 10: Useful websites · уроки 28–32"
    },
    {
     "n": 30,
@@ -13339,7 +13339,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "games and activities + Unit 10: Useful websites · уроки 28–32"
+    "sec": "БЛОК 5 — Unit 9: Sports, games and activities + Unit 10: Useful websites · уроки 28–32"
    },
    {
     "n": 31,
@@ -13365,7 +13365,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "games and activities + Unit 10: Useful websites · уроки 28–32"
+    "sec": "БЛОК 5 — Unit 9: Sports, games and activities + Unit 10: Useful websites · уроки 28–32"
    },
    {
     "n": 32,
@@ -13391,7 +13391,7 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade · 2-я половина (45'): тест блока 5 (лексика + грамматика Units 9–10)"
      ]
     ],
-    "sec": "games and activities + Unit 10: Useful websites · уроки 28–32"
+    "sec": "БЛОК 5 — Unit 9: Sports, games and activities + Unit 10: Useful websites · уроки 28–32"
    },
    {
     "n": 33,
@@ -13417,7 +13417,7 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение полугодия — Review 1–2, командные станции · 2-я половина (45'): полугодовой тест"
      ]
     ],
-    "sec": "games and activities + Unit 10: Useful websites · уроки 28–32"
+    "sec": "БЛОК 5 — Unit 9: Sports, games and activities + Unit 10: Useful websites · уроки 28–32"
    },
    {
     "n": 34,
