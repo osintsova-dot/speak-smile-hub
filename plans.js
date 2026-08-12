@@ -915,4 +915,9 @@ window.PLANS = {
   "Prepare3-U9-P4": 1,
   "Prepare3-U9-P5": 1,
   "Prepare3-U9-P6": 1,
+  "Prepare4-U1-P1": 1,
+  "Prepare4-U1-P2": 1,
+  "Prepare4-U1-P3": 1,
+  "Prepare4-U1-P4": 1,
+  "Prepare4-U1-P5": 1,
 };
