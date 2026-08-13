@@ -967,4 +967,10 @@ window.PLANS = {
   "Prepare4-U6-P4": 1,
   "Prepare4-U6-P5": 1,
   "Prepare4-U6-P6": 1,
+  "Prepare4-U7-P1": 1,
+  "Prepare4-U7-P2": 1,
+  "Prepare4-U7-P3": 1,
+  "Prepare4-U7-P4": 1,
+  "Prepare4-U7-P5": 1,
+  "Prepare4-U7-P6": 1,
 };
