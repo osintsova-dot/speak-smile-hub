@@ -220,7 +220,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "More classroom objects: desk, chair, board, window, door, bin, shelf, computer"
+      "More classroom objects (PB p.12): shelf, cupboard, bin, desk, board, chair"
      ],
      [
       "Грамматика / Фразы",
@@ -696,7 +696,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Describing hair and eyes: long/short/curly/straight hair, blue/brown/green eyes"
+      "Describing hair (PB p.32 ex.1): long / short / blonde / brown / black / red hair; глаза (green/brown/blue) — через грамматику и песню"
      ],
      [
       "Грамматика / Фразы",
@@ -934,7 +934,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Fruit: apples, bananas, oranges, grapes, strawberries, lemons, mangoes, pears"
+      "Fruit (PB p.44 + AB p.41): mangoes, coconuts, cherries, peaches, lemons, grapes"
      ],
      [
       "Грамматика / Фразы",
@@ -1240,7 +1240,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Actions: climb, swim, run, fly, jump, sleep, eat, drink"
+      "Actions (PB p.54): fly, swim, run, walk, climb, jump"
      ],
      [
       "Грамматика / Фразы",
@@ -1478,7 +1478,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Nature: tree, flower, grass, butterfly, bird, bee, snail, ladybird + prepositions of place"
+      "Предлоги места + «Where are they?» с опорой tree / grass / flowers / bush / rocks (PB p.64)"
      ],
      [
       "Грамматика / Фразы",
@@ -1716,7 +1716,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Transport: bus, car, bike, train, taxi, plane, boat + Numbers 11–20"
+      "Transport (PB p.76): bus, boat, motorbike, train, helicopter, lorry + Numbers 11–20"
      ],
      [
       "Грамматика / Фразы",
@@ -1930,7 +1930,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Outdoor activities: riding a horse, climbing a tree, swimming, fishing, making a fire, putting up a tent"
+      "Outdoor activities (PB p.86): sail a boat, ride a horse, play the guitar, play volleyball, sing songs (+ swimming — повторение)"
      ],
      [
       "Грамматика / Фразы",
@@ -2717,7 +2717,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Story «The magic supermarket»: listen, read, act out."
+      "Story «The naughty parrot» (PB pp.20–21): listen, read, act out."
      ]
     ],
     "sec": "Unit 2 Let's go shopping!"
@@ -2839,7 +2839,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Wild animals: elephant, giraffe, lion, tiger, monkey, snake, crocodile, parrot, zebra, hippo"
+      "Wild animals: elephant, giraffe, lion, tiger, monkey, snake, crocodile, penguin, lizard, hippo"
      ],
      [
       "Грамматика / Фразы",
@@ -2899,7 +2899,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Story «A visit to the zoo»: listen, read, act out."
+      "Story «The mysterious egg» (PB pp.30–31): listen, read, act out."
      ]
     ],
     "sec": "Unit 3 At the zoo"
@@ -3081,7 +3081,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Story «The adventure»: listen, read, act out."
+      "Story «What's Toby doing?» (PB pp.42–43): listen, read, act out."
      ]
     ],
     "sec": "Unit 4 The nature trail"
@@ -3099,7 +3099,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Prepositions of movement: up, down, along, across, through, over, under, into, out of"
+      "Prepositions of movement (урок 28): up, down, along, across"
      ],
      [
       "Грамматика / Фразы",
@@ -3619,7 +3619,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Rooms in the house: hall, living room, kitchen, bathroom, bedroom, dining room, garage, garden, attic, basement"
+      "Rooms in the house: house, flat, hall, living room, kitchen, bathroom, bedroom, dining room, garage, garden"
      ],
      [
       "Грамматика / Фразы",
@@ -3801,7 +3801,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Places in a town: bank, post office, supermarket, cinema, museum, park, hospital, police station, fire station, library"
+      "Places in a town (урок 55): baker's, chemist's, car park, bus station, train station, bank, post office, museum, park, police station"
      ],
      [
       "Грамматика / Фразы",
@@ -4061,7 +4061,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Irregular plural nouns: man/men, woman/women, child/children, person/people, tooth/teeth, foot/feet"
+      "Irregular plural nouns (урок 65): man/men, woman/women, child/children + Who's that? / Who are those?"
      ],
      [
       "Грамматика / Фразы",
@@ -4898,7 +4898,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Food: cheese, flour, sugar, salt, pepper, butter, olives, onions, mushrooms, tomatoes"
+      "Pizza toppings (12 по учебнику): cheese, olives, onions, mushrooms, tomatoes, peppers, ham, sweetcorn, pineapple, chicken, tuna, spinach"
      ],
      [
       "Грамматика / Фразы",
@@ -4976,7 +4976,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Adjectives to describe food: spicy, plain, sweet, salty, sour, delicious, fresh, hot, cold"
+      "Adjectives to describe food (6): sweet, savoury, plain, spicy, soft, crunchy"
      ],
      [
       "Грамматика / Фразы",
@@ -5314,7 +5314,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Water sports equipment: kayak, paddle, raft, wetsuit, life jacket, surfboard, goggles, snorkel, flippers, helmet"
+      "Water sports equipment (12): mask, swimsuit, water-skis, gloves, wetsuit, life jacket, surfboard, snorkel, flippers, helmet, kayak, paddle"
      ],
      [
       "Грамматика / Фразы",
@@ -5496,7 +5496,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Household objects: cupboard, shelf, drawer, mirror, lamp, clock, sofa, armchair, carpet, curtains"
+      "Household objects (12): armchair, fridge, mirror, wardrobe, sink, painting, bookcase, sofa, mat, bath, cooker, cupboard"
      ],
      [
       "Грамматика / Фразы",
@@ -6229,7 +6229,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Ingredients: flour, sugar, butter, cream, nuts, honey, coconut, raisins, oats, syrup"
+      "Ingredients (12): flour, oil, nuts, biscuits, chocolate chips, sugar, salt, raisins, jam, butter, coconut, cream"
      ],
      [
       "Грамматика / Фразы",
@@ -6307,7 +6307,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Verbs for cooking: chop, mix, bake, pour, weigh, melt, slice, stir"
+      "Verbs for cooking (6): stir, mix, chop, heat, pour, add"
      ],
      [
       "Грамматика / Фразы",
@@ -6411,7 +6411,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Adjectives of character: shy, lazy, hard-working, kind, funny, naughty, cheeky, sporty, clever, friendly"
+      "Adjectives of character — оппозитные пары: tidy/untidy, confident/shy, active/lazy, friendly/unfriendly, quiet/noisy, kind/unkind"
      ],
      [
       "Грамматика / Фразы",
@@ -6489,7 +6489,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Past activities: learnt to walk, started school, got a pet, learnt to ride a bike, lost a tooth, made a friend"
+      "Past activities (6): learn to walk, start nursery school, move house, get a pet, go on a plane, write a story"
      ],
      [
       "Грамматика / Фразы",
@@ -6593,7 +6593,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Prehistoric times: cave, fire, tools, hunters, paintings, spears, skins, bones"
+      "Prehistoric times (12): cave, basket, axe, spear, knife, bones, hammer, fire, bowl, tools, fossil, fur"
      ],
      [
       "Грамматика / Фразы",
@@ -6671,7 +6671,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Animals from the past: dinosaur, mammoth, sabre-toothed tiger, woolly rhino, pterodactyl, giant deer"
+      "Animals from the past (6): sabre-toothed tiger, giant ground sloth, prehistoric armadillo, dodo, sabre-toothed squirrel, woolly mammoth"
      ],
      [
       "Грамматика / Фразы",
@@ -6853,7 +6853,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Adjectives: big, small, close, far, fast, slow, expensive, bright, heavy, light"
+      "Adjectives (6): shiny, expensive, modern, heavy, powerful, interesting"
      ],
      [
       "Грамматика / Фразы",
@@ -7009,7 +7009,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Free-time activities: go to the cinema, have a picnic, have a barbecue, play board games, fly a kite, go bowling"
+      "Free-time activities (12): go sailing, go bowling, have an ice lolly, have a picnic, go shopping, go hiking, have a barbecue, go camping, play board games, watch a film, ride a bike, go swimming"
      ],
      [
       "Грамматика / Фразы",
@@ -7087,7 +7087,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Musical instruments: drums, guitar, violin, piano, trumpet, flute, recorder, keyboard"
+      "Musical instruments (6): drums, xylophone, keyboard, cymbals, tambourine, electric guitar"
      ],
      [
       "Грамматика / Фразы",
@@ -7191,7 +7191,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Machines in our houses: fridge, microwave, washing machine, dishwasher, vacuum cleaner, kettle, toaster, hairdryer"
+      "Machines in our houses (12): washing machine, dishwasher, toaster, cooker, DVD player, blender, hairdryer, printer, microwave, fridge, tablet, hoover"
      ],
      [
       "Грамматика / Фразы",
@@ -7269,7 +7269,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Materials: wool, leather, plastic, metal, glass, wood, rubber, cotton"
+      "Materials (6): wool, cotton, leather, plastic, gold, silver"
      ],
      [
       "Грамматика / Фразы",
@@ -7451,7 +7451,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Transport: tram, underground, ferry, taxi, scooter, lorry, van, motorbike"
+      "Transport (6): submarine, helicopter, hot-air balloon, motorbike, tram, underground"
      ],
      [
       "Грамматика / Фразы",
@@ -7555,7 +7555,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Jobs: dentist, mechanic, journalist, vet, firefighter, lawyer, architect, engineer, hairdresser, farmer"
+      "Jobs (12): chef, hairdresser, driver, photographer, dentist, waiter, nurse, carpenter, mechanic, artist, lawyer, vet"
      ],
      [
       "Грамматика / Фразы",
@@ -7633,7 +7633,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Places of work: clinic, garage, office, surgery, fire station, court, studio, farm"
+      "Places of work (6): clinic, salon, garage, factory, workshop, office"
      ],
      [
       "Грамматика / Фразы",
@@ -7737,7 +7737,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Countries: Morocco, China, India, Brazil, Egypt, Japan, Mexico, Turkey, the USA, the UK"
+      "Countries (12): France, Italy, India, Morocco, Russia, Germany, China, Japan, Mexico, Portugal, Brazil, Romania"
      ],
      [
       "Грамматика / Фразы",
@@ -7815,7 +7815,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Holiday activities: eat sushi, see a whale, ride a camel, climb a mountain, visit a pyramid, swim in the ocean"
+      "Holiday activities (6): eat sushi, take a photo, see a whale, play cricket, buy a souvenir, visit a monument"
      ],
      [
       "Грамматика / Фразы",
@@ -8640,7 +8640,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "More classroom objects: desk, chair, board, window, door + prepositions"
+      "More classroom objects (PB p.12): shelf, cupboard, bin, desk, board, chair + prepositions"
      ],
      [
       "Грамматика / Фразы",
@@ -9252,7 +9252,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Fruit: apples, bananas, oranges, grapes, strawberries, lemons"
+      "Fruit (PB p.44 + AB p.41): mangoes, coconuts, cherries, peaches, lemons, grapes"
      ],
      [
       "Грамматика / Фразы",
@@ -9456,7 +9456,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Actions: run, jump, swim, climb, fly, walk + Genki actions revision"
+      "Actions (PB p.54): fly, swim, run, walk, climb, jump + Genki actions revision"
      ],
      [
       "Грамматика / Фразы",
@@ -9660,7 +9660,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Nature: tree, flower, grass, butterfly, bird, bee + prepositions of place"
+      "Предлоги места + «Where are they?» с опорой tree / grass / flowers / bush / rocks (PB p.64)"
      ],
      [
       "Грамматика / Фразы",
@@ -9852,7 +9852,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Transport: bus, car, bike, train, taxi + Numbers 11–20"
+      "Transport (PB p.76): bus, boat, motorbike, train, helicopter, lorry + Numbers 11–20"
      ],
      [
       "Грамматика / Фразы",
@@ -10032,7 +10032,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Outdoor activities: riding a horse, climbing, swimming, fishing, making a fire"
+      "Outdoor activities (PB p.86): sail a boat, ride a horse, play the guitar, play volleyball, sing songs"
      ],
      [
       "Грамматика / Фразы",
@@ -11115,7 +11115,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Story «The magic supermarket»: listen, read, act out."
+      "Story «The naughty parrot» (PB pp.20–21): listen, read, act out."
      ],
      [
       "Фокус Phonics Hero",
@@ -11227,7 +11227,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Wild animals: elephant, giraffe, lion, tiger, monkey, snake, crocodile, parrot, zebra, hippo"
+      "Wild animals: elephant, giraffe, lion, tiger, monkey, snake, crocodile, penguin, lizard, hippo"
      ],
      [
       "Грамматика / Фразы",
@@ -11295,7 +11295,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Story «A visit to the zoo»: listen, read, act out."
+      "Story «The mysterious egg» (PB pp.30–31): listen, read, act out."
      ],
      [
       "Фокус Phonics Hero",
@@ -11475,7 +11475,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Story «The adventure»: listen, read, act out."
+      "Story «What's Toby doing?» (PB pp.42–43): listen, read, act out."
      ],
      [
       "Фокус Phonics Hero",
@@ -11497,7 +11497,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Prepositions of movement: up, down, along, across, through, over, under, into, out of"
+      "Prepositions of movement (урок 28): up, down, along, across"
      ],
      [
       "Грамматика / Фразы",
@@ -11947,7 +11947,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Rooms: hall, living room, kitchen, bathroom, bedroom, dining room, garage, garden, attic, basement"
+      "Rooms in the house: house, flat, hall, living room, kitchen, bathroom, bedroom, dining room, garage, garden"
      ],
      [
       "Грамматика / Фразы",
@@ -12127,7 +12127,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Places: bank, post office, supermarket, cinema, museum, park, hospital, police station, fire station, library"
+      "Places in a town (урок 55): baker's, chemist's, car park, bus station, train station, bank, post office, museum, park, police station"
      ],
      [
       "Грамматика / Фразы",
@@ -12397,7 +12397,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Irregular plural nouns: man/men, woman/women, child/children, tooth/teeth, foot/feet"
+      "Irregular plural nouns (урок 65): man/men, woman/women, child/children + Who's that? / Who are those?"
      ],
      [
       "Грамматика / Фразы",
@@ -13397,24 +13397,24 @@ window.PROGRAMS = {
     "n": 33,
     "week": "21.12–27.12",
     "type": "Midterm Test",
-    "title": "Полугодовой тест · Units 1–10",
+    "title": "Полугодовой тест · Units 1–10: Cambridge Term Test 1 (покрывает Units 1–7) + упр. 1",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Полугодовой тест · Units 1–10"
+      "Полугодовой тест · Units 1–10: Cambridge Term Test 1 (покрывает Units 1–7) + упр. 1"
      ],
      [
       "Лексика",
-      "Лексика Units 1–10"
+      "2"
      ],
      [
       "Грамматика",
-      "Грамматика Units 1–10: Present/Past, модальные, verb patterns"
+      "5"
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): повторение полугодия — Review 1–2, командные станции · 2-я половина (45'): полугодовой тест"
+      "6 из Term Test 2 на Units 8–10"
      ]
     ],
     "sec": "БЛОК 5 — Unit 9: Sports, games and activities + Unit 10: Useful websites · уроки 28–32"
@@ -15270,12 +15270,12 @@ window.PROGRAMS = {
     "n": 33,
     "week": "21.12–27.12",
     "type": "Midterm Test",
-    "title": "Полугодовой тест · Units 1–10",
+    "title": "Полугодовой тест · Units 1–10: Cambridge Term Test 1 (покрывает Units 1–7); Units 8–10 проверены тестами блоков 4–5 неделей раньше",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Полугодовой тест · Units 1–10"
+      "Полугодовой тест · Units 1–10: Cambridge Term Test 1 (покрывает Units 1–7); Units 8–10 проверены тестами блоков 4–5 неделей раньше"
      ],
      [
       "Лексика",
@@ -23120,7 +23120,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "clothes and accessories (из текста)"
+      "Word work (SB p.75): clues, crime, emperor, lost, monster, vase; clothes & accessories — Vocabulary 2, p.77"
      ],
      [
       "Грамматика",
@@ -25209,7 +25209,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "clothes and accessories (из текста)"
+      "Word work (SB p.75): clues, crime, emperor, lost, monster, vase; clothes & accessories — Vocabulary 2, p.77"
      ],
      [
       "Грамматика",
@@ -27100,7 +27100,7 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Sequencing words: first, then, next, finally"
+      "Инструкция (жанр) + too / also; sequencing words: first, then, next, finally"
      ],
      [
       "Навыки",
