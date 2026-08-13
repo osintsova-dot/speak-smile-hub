@@ -1,0 +1,205 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prepare4-Final-P3 · Final · lesson 3 of 4 · The year out loud (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.focus{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why this lesson looks like this */
+  .examcard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .examcard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:8px; }
+  .examcard .xr{ display:flex; gap:10px; padding:5px 0; border-bottom:1px dashed var(--line); font-size:.92rem; }
+  .examcard .xr:last-of-type{ border-bottom:0; }
+  .examcard .xk{ flex:0 0 168px; font-weight:800; font-size:.72rem; text-transform:uppercase;
+    letter-spacing:.04em; color:var(--muted); }
+  .examcard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; margin-top:10px; }
+  .examcard .pitch b{ color:var(--p-ink); }
+  .examcard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* exam note: teacher only, bottom of the plan */
+  .ogecard{ background:var(--card); border:1px dashed var(--p); border-left:4px solid var(--honey);
+    border-radius:12px; padding:12px 16px; margin:10px 0 0; font-size:.9rem; }
+  .ogecard .mh{ font-weight:800; color:var(--p-ink); font-size:.74rem; text-transform:uppercase;
+    letter-spacing:.07em; margin-bottom:7px; }
+  .ogecard p{ margin:0 0 6px; } .ogecard p:last-child{ margin-bottom:0; }
+  .ogecard a{ color:var(--p-ink); font-weight:700; word-break:break-all; }
+  .ogecard .quiet{ color:var(--muted); font-size:.84rem; }
+
+  /* optional homework line (exam trainer) */
+  p.opt{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px;
+    padding:7px 10px; margin-top:7px; font-size:.9rem; }
+  p.opt a{ color:var(--p-ink); font-weight:700; word-break:break-all; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .kagan{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--p);
+    border-radius:6px; padding:0 6px; font-weight:800; font-size:.86em; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks of each stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:172px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .why{ font-size:.76rem; color:var(--muted); margin-top:5px; border-top:1px dashed var(--line); padding-top:5px; }
+  td.stage .why b{ color:var(--p-ink); font-size:.9em; text-transform:uppercase; letter-spacing:.04em; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } .examcard .xr{ flex-direction:column; gap:2px; } .examcard .xk{ flex:none; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.focus{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,table.glance,.do,.examcard{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Prepare 4 (2nd edition, A2+/B1) · Final · lesson 3 of 4 · The year out loud — carousel, the official discussion task, and the last quiz</div>
+    <div class="s">Teenagers 13–15 (continuing from Prepare 3) · 90 minutes · <b>a language course</b>: every lesson names one aim. The link to the Russian state exam sits in a note at the foot of the plan, for the teacher only; the trainer link in the homework is optional</div>
+    <div class="meta"><span class='chip'>Lesson 71 of the syllabus · 17–23 May · May</span><span class='chip focus'>🎤 The year out loud + the official discussion task</span><span class='chip'>Year revision · speaking · reserve</span><span class='chip'>Prepare 4 · end of the year (4 lessons) · single plan line</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–5′</td><td class='gname'>Opening · check-in + rewind</td><td>greeting, the fifteen sentences checked in pairs, and the promise that today covers tomorrow</td></tr><tr class='bridge'><td class='gmin'>5–8′</td><td class='gname'>How the room works today</td><td>the map of a four-part lesson, named in advance</td></tr><tr><td class='gmin'>8–20′</td><td class='gname'>Express revision · words</td><td>Quiz-Quiz-Trade across the year's card packs</td></tr><tr><td class='gmin'>20–32′</td><td class='gname'>Express revision · grammar volleys</td><td>Showdown volleys built from the paper's own task shapes</td></tr><tr><td class='gmin'>32–34′</td><td class='gname'>Move break</td><td>90 seconds: circles form</td></tr><tr><td class='gmin'>34–56′</td><td class='gname'>🎯 Speaking carousel</td><td>the year's topics, 90 seconds a face, five rotations</td></tr><tr><td class='gmin'>56–74′</td><td class='gname'>Part 3 workshop · discussing options</td><td>the official Speaking bank discussion task, model first</td></tr><tr><td class='gmin'>74–84′</td><td class='gname'>The year in ten questions</td><td>the last quiz: ten questions across twenty units</td></tr><tr><td class='gmin'>84–90′</td><td class='gname'>Wrap-up + homework</td><td>the before-paper briefing, said calmly</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>re-read the fifteen sentences · optional WB page · two pens · sleep · optional trainer set</td></tr></tbody></table></div>
+
+  <div class='examcard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='xr'><div class='xk'>Language aim</div><div>Keep the whole year <b>warm and spoken</b> one lesson before the final paper: a topic carousel across the twenty units, the official <b>Speaking bank Part 3 discussion task</b> with its agreement language, and a team quiz over the year.</div></div><div class='xr'><div class='xk'>What is genuinely hard</div><div>Retrieval at speed across ten months of language — and discussion discipline: making suggestions, disagreeing politely and actually REACHING agreement instead of talking in circles.</div></div><div class='xr'><div class='xk'>Typical error to expect</div><div>A one-word reply does not count as an answer at all: an answer needs a verb in it [national exam report]<br><i>I've known her since a long time</i> — for and since swapped after the right tense is finally chosen [A2/B1]</div></div><div class='xr'><div class='xk'>Why the lesson is built this way</div><div>The syllabus marks this lesson revision-plus-reserve, and the design honours both: the first half is retrieval (words, then grammar volleys built from the final paper's own task shapes — nothing decorative), the middle is the carousel that says every topic of the year out loud once, and the late block is the official Part 3 discussion task — chosen because it is the exam's closest cousin to the final paper's own paired task, so it warms up next lesson's finale without showing anyone the paper. The quiz ends the lesson as a group. Fifteen homework sentences from the error logs are the entry ticket to the grammar volleys.</div></div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Everything you can say now, you say today.</b> Five partners, one official Cambridge discussion, ten questions over twenty units — and then there is nothing left between you and the paper except a good night's sleep.”</div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='kagan'>Kagan</span> = a Kagan structure — name it out loud to the class</span><span>📺 = screen or audio — every such stage carries a “Backup:” line for the board</span><span>🎯 = the productive outcome: the student speaks or writes for themselves</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where · why</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–5′</td><td class='stage'><div class='nm'>Opening · check-in + rewind</div><div class='zone'>door → desks</div><div class='why'><b>Why:</b> Every teenager says one English sentence before the lesson proper starts. The rewind pulls back the one thing that is needed today rather than everything that was ever taught.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> greeting, the fifteen sentences checked in pairs, and the promise that today covers tomorrow</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><b>2 minutes — welcome check-in.</b> Meet them at the door, one question each, one short answer: <span class='en'>Hi! One word — how are you today? … Good. Sit down.</span> Any answer is accepted as long as it is in English.</li><li><b>3 minutes — fifteen-sentence check, Kagan <span class='kagan'>Quiz-Quiz-Trade</span> style in pairs:</b> partners swap notebooks and read three of each other's homework sentences aloud; one compliment, one question.</li><li>Collect the count by hands only: <span class='en'>fifteen done? ten? Honest hands.</span> No names, no scolding — the stations absorb the difference.</li><li><b>Bridge into the lesson (30 seconds):</b> frame the day: <span class='en'>today the year comes back out loud. Tomorrow's paper contains nothing we do not say today.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> notebooks in hands — paper is the medium here, so nothing can fail and no backup is needed</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> swap, read, compliment. Expect most to have twelve-plus — the log format made the homework concrete</div></td><td class='mat'>notebooks · error logs</td></tr><tr class='bridge'><td class='min'>5–8′</td><td class='stage'><div class='nm'>How the room works today</div><div class='zone'>board</div><div class='why'><b>Why:</b> Several things run in one hour, and that only survives if every student knows in advance when their turn is and what they do until then.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the map of a four-part lesson, named in advance</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The running order on the board with times: words → grammar volleys → carousel → the official discussion → the quiz.</li><li>One rule for the day: <span class='en'>English keeps coming. Rescue phrases are legal; silence is not.</span></li><li>Set the bar for Part 3 early: <span class='en'>a discussion ends with a decision SAID OUT LOUD.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the running order in chalk — the board is the medium, so no backup is needed</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> see the shape of the lesson, hear the two rules. Typical reaction — energy: this is visibly a speaking day</div></td><td class='mat'>board</td></tr><tr><td class='min'>8–20′</td><td class='stage'><div class='nm'>Express revision · words</div><div class='zone'>pairs, moving</div><div class='why'><b>Why:</b> Retrieval practice rather than re-teaching: the year's vocabulary pulled out of memory in short bursts — and it shows you, thirty minutes before the paper, which sets have gone.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Quiz-Quiz-Trade across the year's card packs</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The year's card packs shuffled into one deck: crimes, city problems, food adjectives, jobs, arts, things you read, thinking collocations.</li><li>Kagan <span class='kagan'>Quiz-Quiz-Trade</span>, 8 minutes: quiz, coach, trade, move — four trades minimum.</li><li>Close with a spelling volley on the paper's traps: <span class='en'>pedestrian crossing! departure gate! gallery!</span> — pairs spell aloud, letter by letter.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the card deck in hands — paper is the medium, so no backup is needed</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> quiz, trade, spell. Expect the oldest packs (autumn) to wobble — that is why they are in the deck</div></td><td class='mat'>year card deck</td></tr><tr><td class='min'>20–32′</td><td class='stage'><div class='nm'>Express revision · grammar volleys</div><div class='zone'>pairs → boards</div><div class='why'><b>Why:</b> Express revision · grammar volleys</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Showdown volleys built from the paper's own task shapes</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Kagan <span class='kagan'>Showdown</span>, four volleys of four, all in the final paper's shapes: (1) transformations — <span class='en'>«Sit down!» said the teacher → the teacher ordered…?</span> (2) the passive — <span class='en'>people watch YouTube everywhere → YouTube…?</span> (3) small systems — who/which, for/since, already/yet, as/than · (4) unless and the conditional.</li><li>Boards up on three every volley; pairs coach between volleys; the fifteen homework sentences are open on desks as each student's personal cheat sheet.</li><li>Anything that breaks class-wide goes on the corner of the board — it opens tomorrow's briefing.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> prompts by voice, whiteboards in hands — no backup needed</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> commit, coach, feed the briefing corner. Expect unless to wobble again — ninety seconds of repair, then move</div></td><td class='mat'>mini-whiteboards · homework sentences</td></tr><tr><td class='min'>32–34′</td><td class='stage'><div class='nm'>Move break</div><div class='zone'>standing</div><div class='why'><b>Why:</b> A stirrer between two heavy stages. Teenagers who have been staring at their own mistakes for half an hour need to stand before they look at four more.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 90 seconds: circles form</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Stand up, stretch — and while you are up: inner circle here, outer circle facing them. You are about to talk to five people.</span></li><li>The rescue frames chalked while they form: <span class='en'>Well, let me think… · Actually,… · That reminds me…</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> instructions by voice, nothing to display and no backup required</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> form the circles, read the frames, breathe</div></td><td class='mat'>space for two circles</td></tr><tr><td class='min'>34–56′</td><td class='stage'><div class='nm'>🎯 Speaking carousel</div><div class='zone'>two circles</div><div class='why'><b>Why:</b> Revision that sounds like conversation: every topic of the year comes back once, spoken rather than read — fluency kept warm one week before the paper.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the year's topics, 90 seconds a face, five rotations</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Kagan <span class='kagan'>Timed Pair Share</span> in rotation, one prompt per turn: one prompt per rotation, all from the year: describing a friend (U1–2) · the best/worst job for you (U17–18) · a crime story in four sentences (U5) · my perfect place to live (U6) · have you ever…? (U9–10) · a book worth reading, no spoilers (U19) · a fact that made you say NO WAY (U20) · if you could change one school rule… (U18)</li><li>90 seconds each way, then the outer circle steps left; the prompt changes with the step.</li><li>You orbit and enjoy; log ONLY task-7 shapes that break (the shift, the passive) — everything else is fluency and fluency is winning.</li><li>Close the carousel with a public stat: <span class='en'>five partners, ten minutes of your English each. That is the year, spoken.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> prompts called by voice between rotations — no backup needed</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> talk to five faces, survive, warm up thoroughly. Expect the NO WAY prompt to be the loudest — Unit 20 is one week old</div></td><td class='mat'>space for two circles · your small log</td></tr><tr><td class='min'>56–74′</td><td class='stage'><div class='nm'>Part 3 workshop · discussing options</div><div class='zone'>pairs</div><div class='why'><b>Why:</b> The official Speaking bank's discussion task, with its key-language box, is the exam's closest cousin to the final paper's own paired task — today's practice quietly warms up next week's finale without showing anyone the paper.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the official Speaking bank discussion task, model first</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Set the task from the bank sheet: Speaking bank Part 3 — the paired discussion task («your friend's birthday is soon; talk about the presents and agree on the most suitable»): a picture sheet of options and the key language box (What about…? · I'm not sure · I don't agree because… · It's time to decide · We'll go for that one, then). Model dialogue on audio 07.</li><li>Play the model (audio 07) once: <span class='en'>do they talk about ALL the presents? What do they agree on?</span> Tick the key-language box phrases as they land.</li><li>Drill the six agreement chunks hot, with attitude.</li><li>Pairs run the task in full, 3 minutes on the visible timer: all options touched, a decision said out loud. Then swap partners and run it again, faster, banning the phrase each pair leaned on hardest.</li><li>Why this task today, for your own notes: Part 3 is the exam's closest cousin to the final test's own paired discussion (task 13), so today's practice quietly warms up next lesson's finale without showing anybody the paper.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> audio 07 in the whiteboard app (<b>Backup: skip the model — read the two-line exchange yourself in two voices from the bank's key-language box and set the task from the printed sheet; the workshop stands on paper</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> listen for the phrases, drill, decide out loud twice. Expect round 2 to be sharply better — the ban forces range. Typical slip: deciding without discussing — the all-options rule catches it</div></td><td class='mat'>Prepare5 folder → the materials folder → Speaking worksheets → B1 Preliminary for Schools Speaking bank.pdf (+ answer key + audio 01–07) · timer</td></tr><tr><td class='min'>74–84′</td><td class='stage'><div class='nm'>The year in ten questions</div><div class='zone'>teams</div><div class='why'><b>Why:</b> The whole class back together for the finale, so the lesson ends as a group. Ten questions across twenty units is the fastest possible tour of what the year contained.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the last quiz: ten questions across twenty units</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Teams of four, Kagan <span class='kagan'>Numbered Heads Together</span>: ten questions sweeping the year — a crime word from its definition · a food adjective mimed · a reported shift · a passive fact · a for/since call · a collocation half · a jobs suffix · a No Way fact · a say/tell trap · one free brag: <span class='en'>tell us something you can say in English that is TRUE and surprising.</span></li><li>Heads together twenty seconds, then the called number answers for the team.</li><li>Score lightly, celebrate loudly; the last question's brags are the real prize — collect three of them.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> questions by voice, score in chalk — no backup needed</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> confer, answer, brag once. Expect the brags to be the moment of the lesson — write the best one down for September</div></td><td class='mat'>board</td></tr><tr><td class='min'>84–90′</td><td class='stage'><div class='nm'>Wrap-up + homework</div><div class='zone'>circle → door</div><div class='why'><b>Why:</b> Self-assessment against the aim they heard at the start, so the lesson closes the loop it opened. Homework comes out of each student's own paper.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the before-paper briefing, said calmly</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The board corner from the volleys, read once: <span class='en'>these two shapes are tomorrow's only real traps. Look at them tonight for five minutes.</span></li><li>Homework, verbatim: re-read your fifteen sentences once; one optional Workbook page if something itches; two pens; sleep.</li><li>The last teaser of the year: <span class='en'>tomorrow is one paper, 45 minutes of revision first, and everything on it has already been in this room. Come and collect what is yours.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> homework named by voice, diaries open — no backup required</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> note the two shapes, note the non-homework, leave warm. Expect calm — the mock removed the mystery two lessons ago</div></td><td class='mat'>student diaries</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Before the final paper:</b> re-read your fifteen sentences once; one unfinished Workbook page of your choice if anything still itches; two pens; sleep. The paper is next lesson and everything on it has been in this room.</p><p class='opt'><b>✳️ Optional — only for students who will sit the OGE exam:</b> OGE task 12 on the Scarlet Sails festival: six texts about the biggest school-leavers' celebration in Russia — the right reading for the last ordinary week of the year. <a href='https://speakandsmile.online/oge.html#/hw?reading:mt_1400E4'>https://speakandsmile.online/oge.html#/hw?reading:mt_1400E4</a><br>10 minutes, marked automatically; strictly optional. The link opens straight away — no password, no sign-up. Students who are not sitting the exam simply skip it; it does not affect any mark.</p></td><td class='mat'>exercise book · Workbook (optional) · two pens</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, students have <b>spoken every topic of the year at least once</b> and can <b>run a discussion to an agreement</b> with the Part 3 phrases.</li>
+      <li><span class="lb">Subsidiary.</span> The year's vocabulary and the paper's grammar shapes retrieved at speed; the fifteen homework sentences put to work.</li>
+      <li><span class="lb">Personal.</span> Keep the pace brutal and the tone light — this lesson is allowed to be FUN. Log only what threatens marks on the paper (task 7 shapes); let everything else go.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>speak for 90 seconds to five different partners without drying up</li><li>suggest, disagree politely and reach an agreement in pairs</li><li>fire the year's word sets and grammar shapes on demand</li><li>walk into the final paper knowing nothing on it is new</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Shape of the lesson</div>
+      <div class="arc"><span>Opening</span><span>How the room works</span><span>Words</span><span>Grammar volleys</span><span>Move break</span><span>🎯 Carousel</span><span>Part 3 workshop</span><span>Ten questions</span><span>Wrap-up</span></div>
+      <div class="eyebrow" style="margin:12px 0 6px">Kagan structures used today</div>
+      <div><span class='w'>Quiz-Quiz-Trade</span><span class='w'>Showdown</span><span class='w'>Timed Pair Share</span><span class='w'>Numbered Heads Together</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>What about…?</span><span class='w'>I'm not sure about that because…</span><span class='w'>…might be a better choice</span><span class='w'>It's time to decide</span><span class='w'>We'll go for that one, then</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What do you think about making a film? · I don't agree with you because it takes weeks. · A street market might be a better choice. · OK, so we've decided.</div></div>
+      <div class="r"><div class="k">Form</div><div>discussion functions as chunks; the year's systems fired in volleys: the shift, the passive, unless, for/since, comparatives, the confusable verb sets.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>the agreement phrases with attitude — a flat «I don't agree» sounds rude; the because saves it</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) &amp; ICQs · Assumptions</div>
+      <div class='ccq'>«I don't agree with you because…» — what makes this polite? → the because: disagreement with a reason is discussion, without one it is just no.</div><div class='ccq'>«It's time to decide» — who says it and when? → anyone, when two minutes are nearly gone: reaching agreement is PART of the task, not a defeat.</div><div class='ccq'>«We'll go for that one, then» — is the discussion over? → yes, and saying so out loud is what the examiner is listening for.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Syllabus lesson 71. Error logs and the fifteen sentences travel in. The Part 3 sheet (birthday present task) is printed per pair; audio 07 is the model. The final paper is NOT shown or quoted today — its discussion task stays sealed until after the papers are collected next lesson.</p>
+    </div>
+  </div>
+
+  <div class='eyebrow'>Answer keys for this lesson (Teacher's Book — checked page by page)</div><div class='cardb' style='padding:4px 8px'><table class='ap'><thead><tr><th>Task</th><th>Answer</th></tr></thead><tbody><tr><td>Carousel prompts (one per rotation)</td><td>one prompt per rotation, all from the year: describing a friend (U1–2) · the best/worst job for you (U17–18) · a crime story in four sentences (U5) · my perfect place to live (U6) · have you ever…? (U9–10) · a book worth reading, no spoilers (U19) · a fact that made you say NO WAY (U20) · if you could change one school rule… (U18)</td></tr><tr><td>Part 3 — the task and the language</td><td>Speaking bank Part 3 — the paired discussion task («your friend's birthday is soon; talk about the presents and agree on the most suitable»): a picture sheet of options and the key language box (What about…? · I'm not sure · I don't agree because… · It's time to decide · We'll go for that one, then). Model dialogue on audio 07.</td></tr><tr><td>Why Part 3 today (and not the paper's own task)</td><td>Part 3 is the exam's closest cousin to the final test's own paired discussion (task 13), so today's practice quietly warms up next lesson's finale without showing anybody the paper.</td></tr></tbody></table></div>
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Carousel answers shrink to one word by partner three</td><td>The rescue frames stay on the board (Well, let me think… · Actually,…) and the rule holds: an answer needs a verb and a detail. Partners raise a finger per detail heard.</td></tr><tr><td>Part 3 pairs agree instantly to be done («the book. OK.»)</td><td>The task's own rule from the bank: talk about ALL the options before deciding. A pair that decides in thirty seconds gets the follow-up: <span class='en'>convince me — why not the concert tickets?</span></td></tr><tr><td>Grammar volleys expose a class-wide gap the day before the paper</td><td>Good — that is the point of running them today: ninety seconds of repair on the spot, and the shape goes into tomorrow's briefing as the first named trap.</td></tr><tr><td>Energy spikes into chaos in the carousel</td><td>The bell (or a clap pattern) rotates the circle; the prompts change every rotation so momentum belongs to the structure, not to the noise.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>“Eyes up in 3-2-1”</b> — a calm countdown → on “1” every pair of eyes is on you. Never talk over the class.</div><div class='sigc'><b>Visible timer</b> — timer running = we work; timer stops = pens down. The timer is the boss, not you.</div><div class='sigc'><b>“Boards up!”</b> — a mini-whiteboard round: everyone answers at the same moment — nobody hides, nobody shouts out first.</div><div class='sigc'><b>Silent mode</b> — palm down = we work alone and in silence: listening or writing. Questions afterwards, not during.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, the class claps twice and freezes — an instant reset in the middle of a game.</div><div class='sigc'><b>English-first</b> — an idea may be started in Russian, but the POINT is only given for the English version: reformulate and repeat it.</div></div></div>
+    </div>
+  </div>
+
+  <div class="eyebrow" style="margin-top:22px">Where this goes next</div>
+  <div class='ogecard'><div class='mh'>🇷🇺 Where this lands in the OGE — teacher's note, never taken into class</div><p><b>The same skill is tested by:</b> <b>Speaking tasks 1–3</b> of the OGE: read aloud (2 marks), six interview questions (6 marks), a monologue from a plan (7 marks).</p><p>Today's carousel and the B1-format paired discussion train the OGE's real bottleneck — keeping English coming for two minutes at a time. Note the difference for the two or three who will sit it: the OGE speaking has no partner and no live examiner; the questions come from a recording. Say it to them quietly, not to the class.</p><p class='quiet'>Who needs this: not every student in the group will sit the OGE. Those who will get the trainer link in the homework as an <b>optional</b> extra. The rest are told nothing — the lesson works as language teaching without it.</p><p><b>Trainer set on this unit's topic:</b> <a href='https://speakandsmile.online/oge.html#/hw?reading:mt_1400E4'>https://speakandsmile.online/oge.html#/hw?reading:mt_1400E4</a><br><span class='quiet'>OGE task 12 on the Scarlet Sails festival: six texts about the biggest school-leavers' celebration in Russia — the right reading for the last ordinary week of the year · 10 minutes, marked automatically; strictly optional</span></p></div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Prepare 4 (2nd edition, A2+/B1) · End of the year: the B1-format mock, the review that pays for it, revision and the final test · Prepare4-Final-P3 — lesson plan &amp; staging</span>
+    <span>Prepare 4 · Final · P3 · year revision + the official Part 3 discussion</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button><style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>
