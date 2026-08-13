@@ -1,0 +1,205 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prepare4-U8-P7 · Units 15–16 · Review + block test · Lesson 7 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.focus{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why this lesson looks like this */
+  .examcard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .examcard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:8px; }
+  .examcard .xr{ display:flex; gap:10px; padding:5px 0; border-bottom:1px dashed var(--line); font-size:.92rem; }
+  .examcard .xr:last-of-type{ border-bottom:0; }
+  .examcard .xk{ flex:0 0 168px; font-weight:800; font-size:.72rem; text-transform:uppercase;
+    letter-spacing:.04em; color:var(--muted); }
+  .examcard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; margin-top:10px; }
+  .examcard .pitch b{ color:var(--p-ink); }
+  .examcard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* exam note: teacher only, bottom of the plan */
+  .ogecard{ background:var(--card); border:1px dashed var(--p); border-left:4px solid var(--honey);
+    border-radius:12px; padding:12px 16px; margin:10px 0 0; font-size:.9rem; }
+  .ogecard .mh{ font-weight:800; color:var(--p-ink); font-size:.74rem; text-transform:uppercase;
+    letter-spacing:.07em; margin-bottom:7px; }
+  .ogecard p{ margin:0 0 6px; } .ogecard p:last-child{ margin-bottom:0; }
+  .ogecard a{ color:var(--p-ink); font-weight:700; word-break:break-all; }
+  .ogecard .quiet{ color:var(--muted); font-size:.84rem; }
+
+  /* optional homework line (exam trainer) */
+  p.opt{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px;
+    padding:7px 10px; margin-top:7px; font-size:.9rem; }
+  p.opt a{ color:var(--p-ink); font-weight:700; word-break:break-all; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .kagan{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--p);
+    border-radius:6px; padding:0 6px; font-weight:800; font-size:.86em; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks of each stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:172px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .why{ font-size:.76rem; color:var(--muted); margin-top:5px; border-top:1px dashed var(--line); padding-top:5px; }
+  td.stage .why b{ color:var(--p-ink); font-size:.9em; text-transform:uppercase; letter-spacing:.04em; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } .examcard .xr{ flex-direction:column; gap:2px; } .examcard .xk{ flex:none; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.focus{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,table.glance,.do,.examcard{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Prepare 4 (2nd edition, A2+/B1) · Units 15–16 · Review + block test · Lesson 7 — Review stations, List it! and the official Units 15–16 test</div>
+    <div class="s">Teenagers 13–15 (continuing from Prepare 3) · 90 minutes · <b>a language course</b>: every lesson names one language aim. The link to the Russian state exam sits in a note at the foot of the plan, for the teacher only; the trainer link in the homework is optional</div>
+    <div class="meta"><span class='chip'>Lesson 52 of the syllabus · 15–21 Mar · March</span><span class='chip focus'>✅ End-of-block check (official Cambridge tests)</span><span class='chip'>Review + block 8 test (official)</span><span class='chip'>Prepare 4 · block 8 · single plan line</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–5′</td><td class='gname'>Opening · check-in + rewind</td><td>greeting, a 90-second retrieval flood, and the day's map</td></tr><tr><td class='gmin'>5–15′</td><td class='gname'>Review station 1 · words</td><td>Quiz-Quiz-Trade across BOTH units' vocabulary</td></tr><tr><td class='gmin'>15–25′</td><td class='gname'>Review station 2 · grammar</td><td>mini-whiteboard Showdown: name the rule, then write the form</td></tr><tr><td class='gmin'>25–37′</td><td class='gname'>Review game</td><td>List it! — the thirteen U15–16 cards from the official pack</td></tr><tr><td class='gmin'>37–42′</td><td class='gname'>Test briefing</td><td>name the ghosts, plant the recovery moves, answer questions</td></tr><tr><td class='gmin'>42–45′</td><td class='gname'>Break</td><td>a real break before a long paper</td></tr><tr><td class='gmin'>45–85′</td><td class='gname'>Block test</td><td>the two official papers, 63 items, silence</td></tr><tr><td class='gmin'>85–90′</td><td class='gname'>Test wrap-up</td><td>tension out, forward look, tiny homework</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>After hand-back: rewrite 5 wrong answers correctly + one unfinished WB page (Units 15–16) · optional trainer set</td></tr></tbody></table></div>
+
+  <div class='examcard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='xr'><div class='xk'>Language aim</div><div>Consolidate the block's language — computer collocations, both phrasal-verb sets, the present simple passive, zero/first conditional and unless — and <b>sit the official Cambridge Units 15–16 tests</b> under calm exam conditions.</div></div><div class='xr'><div class='xk'>What is genuinely hard</div><div>Not the content — the retrieval: three weeks of language must come OUT of memory today, and spelling (password, wrap, participles) is where test marks quietly leak.</div></div><div class='xr'><div class='xk'>Typical error to expect</div><div>Under time pressure the old ghosts return: <i>is call</i>, <i>if you'll</i>, <i>unless you don't</i>, <i>add up them</i>. The briefing names all four aloud BEFORE the paper.</div></div><div class='xr'><div class='xk'>Why the lesson is built this way</div><div>A two-half lesson with a fixed shape the class already knows from blocks 5–7: 45 minutes of retrieval (two stations + the official List it! game with the thirteen U15–16 cards that block 7 set aside), then briefing, a real break, and the two official papers back to back. Everything in the papers has been done in class — the test measures learning, not surprise. Delayed feedback culture holds: errors from the stations are fixed in the briefing, not mid-game.</div></div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Three weeks: your digital life, your home lab, two tenses Russian doesn't have.</b> First we play it all back — then you show it on paper. Everything in the test you have already done in this room.”</div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='kagan'>Kagan</span> = a Kagan structure — name it out loud to the class</span><span>📺 = screen or audio — every such stage carries a “Backup:” line for the board</span><span>🎯 = the productive outcome: the student speaks or writes for themselves</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where · why</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–5′</td><td class='stage'><div class='nm'>Opening · check-in + rewind</div><div class='zone'>door → desks</div><div class='why'><b>Why:</b> Every teenager says one English sentence before the lesson proper starts, and the rewind pulls the language this lesson builds on back into working memory — new input lands on something.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> greeting, a 90-second retrieval flood, and the day's map</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><b>2 minutes — welcome check-in.</b> Meet them at the door, one question each, one short answer: <span class='en'>Hi! One word — how are you today? … Good. Sit down and open your book.</span> Any answer is accepted as long as it is in English.</li><li><b>3 minutes — the block in one breath.</b> Kagan <span class='kagan'>RallyRobin</span>: pairs alternate naming ANYTHING learned in Units 15–16 — a collocation, a verb, a rule — no repeats, 90 seconds.</li><li>Frame the day: <span class='en'>Half one — we play everything back. Half two — the official test. Nothing in it will surprise you. That's a promise with evidence.</span></li><li><b>Bridge into the lesson (30 seconds):</b> into the stations: <span class='en'>Two stations, one game, one break, one paper. Go.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> voices only — the voice is the medium here, so nothing can fail and no backup is needed</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> flood the room with the block's language in 90 seconds; hear the day's shape and relax into it</div></td><td class='mat'>board</td></tr><tr><td class='min'>5–15′</td><td class='stage'><div class='nm'>Review station 1 · words</div><div class='zone'>pairs, mingling</div><div class='why'><b>Why:</b> Retrieval practice rather than re-teaching: they pull the block's vocabulary out of memory in short bursts, which is what makes it stay.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Quiz-Quiz-Trade across BOTH units' vocabulary</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The full card set out: computer collocations, tech phrasal verbs, experiment verbs, science phrasal verbs — situation or gesture on one side, answer on the other.</li><li>Kagan <span class='kagan'>Quiz-Quiz-Trade</span>, 6 minutes, maximum trades: quiz, coach if stuck, trade, move.</li><li>Close with a lightning volley from you — five situations, choral answers, pronoun inside where one belongs.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> printed card sets from lessons 1–6 — the cards are the medium; if a set is missing, call situations by voice and rows answer chorally</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> quiz, coach, trade at speed. Expect the two phrasal sets to interfere (turn up vs blow up) — that interference is exactly what surfaces best today, before the paper</div></td><td class='mat'>all four card sets</td></tr><tr><td class='min'>15–25′</td><td class='stage'><div class='nm'>Review station 2 · grammar</div><div class='zone'>solo → pairs</div><div class='why'><b>Why:</b> Same logic for grammar — and it shows you, twenty minutes before the test, exactly which form still breaks.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> mini-whiteboard Showdown: name the rule, then write the form</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Eight sentences read aloud, one at a time — gap or error, drawn from the block's own exercises (never the test items).</li><li>Kagan <span class='kagan'>Showdown</span>: everyone writes on the mini-whiteboard; on <span class='en'>three-two-one — show!</span> all boards up at once.</li><li>Every check names the machine first: <span class='en'>Which rule? Passive. Now the form: is owned.</span></li><li>You keep a public tally of which rule missed most — it heads the briefing.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> sentences by voice, answers on mini-whiteboards — the boards are the medium, so no backup is needed</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write, show, name the rule. Everyone answers every item — no hiding, and the class SEES which rule needs the briefing</div></td><td class='mat'>mini-whiteboards · your tally</td></tr><tr><td class='min'>25–37′</td><td class='stage'><div class='nm'>Review game</div><div class='zone'>teams of 2–3</div><div class='why'><b>Why:</b> The official Cambridge game hides revision inside a race to five — and its own scoring pays a point for correct spelling, which is exactly where this block's marks leak. A class that has just competed walks into a test calmer.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> List it! — the thirteen U15–16 cards from the official pack</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Set up List it! (Review game Units 13–16, Cambridge, PHOTOCOPIABLE 2019): Teams of one to three; a pile of «List 5…» cards face down. A player draws a card and reads it out. ALL teams race to write five valid items; the first to five shouts «Listed!» and everyone stops. The fast team reads its list; other teams tick off items they also have. Scoring: 1 point for finishing first + 1 per item nobody else has + 1 if the whole list is spelled correctly — so spelling wins games.</li><li>Today's deck: Block 7 played the eight U13–14 cards; TODAY'S legal deck is the thirteen U15–16 cards the last block set aside: things you switch on · things in a computer file · things people search for · passwords people use · things you tie · camera apps · things you shake · things you wrap · experiments · things people install · things people share online (×2) · things you stir. Six or seven cards at two minutes each fills the slot; keep the rest as tie-breakers.</li><li>File: course folder → материалы → Review Games Worksheets → PREPARE_4_Review_game_Units_13-16.pdf. Sharper groups: the «list unlimited» version — as many items as possible in 60 seconds, one point per unique item.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> printed game cards — paper is the medium, so no backup is needed</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> race, list, spell for the bonus point. The spelling point is the whole pedagogy: the test pays for spelling too, and everyone just felt why</div></td><td class='mat'>List it! cards (U15–16 subset) · paper · timer</td></tr><tr><td class='min'>37–42′</td><td class='stage'><div class='nm'>Test briefing</div><div class='zone'>class</div><div class='why'><b>Why:</b> The errors from the stations get named and fixed while the test is still ahead — feedback is only useful when there is still time to use it.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> name the ghosts, plant the recovery moves, answer questions</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The tally speaks first: the most-missed rule from station 2 gets 90 seconds of surgical repair on the board.</li><li>The four ghosts named aloud with their fixes: <span class='en'>is call → is callED. if you'll → if you… will waits outside. unless you don't → unless you DO. add up them → add them up.</span></li><li>Paper mechanics: two papers back to back, 63 items, 2–3-word limits are law, margins are legal for notes.</li><li>Last questions taken. <span class='en'>Break. Five minutes. Water, corridor, back.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the ghost list in chalk — the board is the medium, so no backup is needed</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> hear the repairs while there is still time to use them; ask the last questions now, not mid-paper</div></td><td class='mat'>board</td></tr><tr><td class='min'>42–45′</td><td class='stage'><div class='nm'>Break</div><div class='zone'>corridor</div><div class='why'><b>Why:</b> A real break before a long paper. Attention is a resource; spend it on the test.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a real break before a long paper</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Five minutes by the clock (the schedule absorbs it): corridor, water, movement. You reset the room meanwhile — desks apart, one paper face down per desk.</li><li>Re-entry ritual: <span class='en'>Phones in bags. Pens out. When you're ready, turn the paper over. Forty minutes. Go quietly.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> no display needed — the corridor is the medium and no backup is required</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> actually rest; re-enter to a transformed, calm room. The ritual does the classroom management</div></td><td class='mat'>printed papers · seating plan</td></tr><tr><td class='min'>45–85′</td><td class='stage'><div class='nm'>Block test</div><div class='zone'>solo, exam conditions</div><div class='why'><b>Why:</b> Exam conditions, familiar formats, official papers. Everything in them has been done in class, so the test measures learning, not surprise.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the two official papers, 63 items, silence</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Both papers run back to back (U15S then U16S); you proctor quietly, answering procedure questions only.</li><li>Time calls at 20 and 35 minutes: <span class='en'>You should be inside Unit 16 now. · Five minutes — check your trap list.</span></li><li>Early finishers: check spelling · if-sides · unless polarity against their own answers, then read quietly.</li><li>Papers collected face down at 40; keys (printed) stay in your folder for tomorrow's hand-back.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> printed papers on desks — paper is the medium, so no backup is needed</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> work alone, manage the clock with your calls, finish with a self-check. The familiar format IS the calm</div></td><td class='mat'>papers · answer keys in your folder · clock</td></tr><tr><td class='min'>85–90′</td><td class='stage'><div class='nm'>Test wrap-up</div><div class='zone'>circle → door</div><div class='why'><b>Why:</b> Papers in, tension out: they name one thing they now know they can do, and leave with the next step rather than with a mark.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> tension out, forward look, tiny homework</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Papers in, shoulders down: <span class='en'>Name ONE thing you know you got right today.</span> Quick circle, no analysis.</li><li>Forward look: <span class='en'>Tomorrow: Review 4 — the whole month in one lesson, and a game with ALL the cards. Results come back then too.</span></li><li>Homework said aloud (it's tiny): when papers return — five wrong answers rewritten right; plus one unfinished WB page of their choice from Units 15–16.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> voices only — the voice is the medium here, so nothing can fail and no backup is needed</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> leave with a success named and the next step known — not with a mark</div></td><td class='mat'>student diaries</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Before the next lesson:</b> when the papers come back, rewrite five of your own wrong answers correctly in your notebook — that list is your entry ticket into the Review 4 lesson. Plus ONE unfinished Workbook page of your choice from Units 15–16 — your own weakest one.</p><p class='opt'><b>✳️ Optional — only for students who will sit the OGE exam:</b> OGE task 12 on LEGO: how a carpenter's workshop became the world's most famous toy company — light reading for a test day, no writing. <a href='https://speakandsmile.online/oge.html#/hw?reading:mt_2DE195'>https://speakandsmile.online/oge.html#/hw?reading:mt_2DE195</a><br>10 minutes, marked automatically; strictly optional. The link opens straight away — no password, no sign-up. Students who are not sitting the exam simply skip it; it does not affect any mark.</p></td><td class='mat'>Workbook (any unfinished page, Units 15–16)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, students have <b>retrieved the block's full language actively</b> and <b>completed both official unit tests</b> (63 items) with time to check.</li>
+      <li><span class="lb">Subsidiary.</span> Spelling under pressure (the game pays for it); naming the grammar rule before applying it.</li>
+      <li><span class="lb">Personal.</span> Keep the temperature LOW after the break — no new content, no surprises, the same signals as every test day. Have both answer keys printed for tomorrow's hand-back.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>recall the block's collocations and phrasal verbs at speed</li><li>name which grammar rule a sentence is testing</li><li>spell the trap words under pressure</li><li>sit a 63-item paper calmly inside 45 minutes</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Shape of the lesson</div>
+      <div class="arc"><span>Opening</span><span>Station 1 · words</span><span>Station 2 · grammar</span><span>List it!</span><span>Briefing</span><span>Break</span><span>Block test</span><span>Wrap-up</span></div>
+      <div class="eyebrow" style="margin:12px 0 6px">Kagan structures used today</div>
+      <div><span class='w'>RallyRobin</span><span class='w'>Quiz-Quiz-Trade</span><span class='w'>Showdown</span><span class='w'>Numbered Heads Together</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>delete a file</span><span class='w'>do a search</span><span class='w'>have a virus</span><span class='w'>install an app</span><span class='w'>share links</span><span class='w'>upload photos</span><span class='w'>download a podcast</span><span class='w'>password</span><span class='w'>look up</span><span class='w'>plug in</span><span class='w'>shut down</span><span class='w'>switch on/off</span><span class='w'>turn up/down</span><span class='w'>take out</span><span class='w'>blow</span><span class='w'>boil</span><span class='w'>cover</span><span class='w'>fill</span><span class='w'>pour</span><span class='w'>rub</span><span class='w'>shake</span><span class='w'>stir</span><span class='w'>tie</span><span class='w'>wrap</span><span class='w'>add up</span><span class='w'>blow up</span><span class='w'>carry out</span><span class='w'>cut up</span><span class='w'>take away</span><span class='w'>work out</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>everything the block built — is owned by · are shared · if + present, will · unless + positive · turn it off · add them up</div></div>
+      <div class="r"><div class="k">Form</div><div>review of all block forms; today's job is retrieval and accuracy, not novelty</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>the spelling-pronunciation traps get one last drill: password · virus · wrap · stir · participles in /t/–/d/–/ɪd/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) &amp; ICQs · Assumptions</div>
+      <div class='ccq'>A List it! point for spelling — why does the game pay for it? → because the test does too: a misspelt answer scores nothing.</div><div class='ccq'>«This sentence tests… what?» — why name the rule first? → naming the machine (passive? conditional?) chooses the form for you.</div><div class='ccq'>The paper says complete with 2–3 words — may I write four? → no: the limit is part of the answer.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Syllabus lesson 52. The class knows the two-half test-day shape from three previous blocks; the papers (U15S + U16S, 63 items) fit in 35–40 minutes, leaving checking time. Print one copy of each paper per student in advance.</p>
+    </div>
+  </div>
+
+  <div class='eyebrow'>Answer keys for this lesson (Teacher's Book — checked page by page)</div><div class='cardb' style='padding:4px 8px'><table class='ap'><thead><tr><th>Task</th><th>Answer</th></tr></thead><tbody><tr><td>Unit 15 Standard — full key</td><td>U15 Standard key — ex.1: share, do, upload, download, delete, install, have · ex.2: 1b 2a 3g 4c 5h 6e 7f 8d · ex.3 (Twitter): are read, are written, are sent, isn't owned, is used, is followed, aren't deleted, are saved · ex.4: are checked · are sold · isn't allowed · Are…made · are created · Are…used · is done · aren't sent</td></tr><tr><td>Unit 16 Standard — full key</td><td>U16 Standard key — ex.1: Shake, boils, Rub, Cover, Fill, Tie, Wrap, Pour, Blow, Stir · ex.2: work, add, take, cut, carry, blow · ex.3: if, unless, If, if, Unless, unless · ex.4: 1a 2e 3f 4b 5h 6c 7d 8g · ex.5: 'll be, doesn't get, won't come, go, 'll break, won't study, don't tell, won't have</td></tr></tbody></table></div>
+  <div class='eyebrow'>Block 8 test — what is in the two official papers (Cambridge 2019, both in the course folder with answer keys)</div><div class='cardb' style='padding:4px 8px'><table class='ap'><thead><tr><th>Section</th><th>Content</th></tr></thead><tbody><tr><td>Unit 15 test · Vocabulary 1</td><td>complete with computer verbs from the box (share, do, upload, download, delete, install, have) — 7 items.</td></tr><tr><td>Unit 15 test · Vocabulary 2</td><td>match the halves — technology phrasal verbs (turn the volume up, shut down, switch on/off, look it up, take out, plug in, turn down) — 8 items.</td></tr><tr><td>Unit 15 test · Grammar 3</td><td>a text about Twitter: present simple passive forms (are read, are written, isn't owned…) — 8 items.</td></tr><tr><td>Unit 15 test · Grammar 4</td><td>rewrite active → passive in 2–3 words (are checked, are sold, isn't allowed…) — 8 items.</td></tr><tr><td>Unit 16 test · Vocabulary 1–2</td><td>choose the experiment verb (Shake, boils, Rub, Cover, Fill, Tie, Wrap, Pour, Blow, Stir) — 10 items + choose the science phrasal particle a/b/c — 6 items.</td></tr><tr><td>Unit 16 test · Grammar 3–5</td><td>if or unless — 6 items + match zero-conditional halves — 8 items + complete first-conditional sentences — 8 items.</td></tr></tbody></table><p style='font-size:.85rem;color:var(--muted);margin:8px 4px'>Two official Cambridge unit tests (Standard), 63 items in about 35–40 minutes — inside the 45-minute half with room to breathe. Answer keys: PRE-UT-U15S_AnswerKey.pdf and PRE-UT-U16S_AnswerKey.pdf in the same folders. For stronger students swap in the Plus versions — same sections, so the briefing does not change. ⚠️ One honest heads-up: the U15 vocabulary box has seven items, not eight — nobody should hunt for a missing question. Every format in both papers has been done in class — name the lesson for any line a student doubts. Print one copy of each paper per student in advance (course folder → материалы → Tests).</p></div>
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Game adrenaline crosses into the test half</td><td>The break is REAL (five minutes, corridor, water) and the room is reset: desks apart, papers face down, volume to zero with the standard signal. Ritual beats speeches.</td></tr><tr><td>A student blanks on the passive mid-test</td><td>The briefing plants the recovery move: write the two-hands note (BE + participle) in the margin and rebuild from it. Margins are legal.</td></tr><tr><td>Early finishers fidget</td><td>The rule announced with the paper: finished = check the trap list (spelling, if-side, unless) against YOUR OWN answers, then read quietly. Nobody leaves early.</td></tr><tr><td>Somebody is absent today</td><td>Standard make-up: they sit the same papers before the next lesson (both tests also exist as editable RTF); List it! owes them nothing.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>“Eyes up in 3-2-1”</b> — a calm countdown → on “1” every pair of eyes is on you. Never talk over the class.</div><div class='sigc'><b>Visible timer</b> — timer running = we work; timer stops = pens down. The timer is the boss, not you.</div><div class='sigc'><b>“Boards up!”</b> — a mini-whiteboard round: everyone answers at the same moment — nobody hides, nobody shouts out first.</div><div class='sigc'><b>Silent mode</b> — palm down = we work alone and in silence: listening or writing. Questions afterwards, not during.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, the class claps twice and freezes — an instant reset in the middle of a game.</div><div class='sigc'><b>English-first</b> — an idea may be started in Russian, but the POINT is only given for the English version: reformulate and repeat it.</div></div></div>
+    </div>
+  </div>
+
+  <div class="eyebrow" style="margin-top:22px">Where this goes next</div>
+  <div class='ogecard'><div class='mh'>🇷🇺 Where this lands in the OGE — teacher's note, never taken into class</div><p><b>The same skill is tested by:</b> <b>Tasks 20–34</b> (grammar and vocabulary, 15 marks of the written paper).</p><p>The block test works the same way: produce the form and spell it correctly — the passive with its past participles, if/unless in their slots, the phrasal particles. In the exam a misspelt word scores nothing at all.</p><p class='quiet'>Who needs this: not every student in the group will sit the OGE. Those who will get the trainer link in the homework as an <b>optional</b> extra. The rest are told nothing — the lesson works as language teaching without it.</p><p><b>Trainer set on this unit's topic:</b> <a href='https://speakandsmile.online/oge.html#/hw?reading:mt_2DE195'>https://speakandsmile.online/oge.html#/hw?reading:mt_2DE195</a><br><span class='quiet'>OGE task 12 on LEGO: how a carpenter's workshop became the world's most famous toy company — light reading for a test day, no writing · 10 minutes, marked automatically; strictly optional</span></p></div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Prepare 4 (2nd edition, A2+/B1) · Block 8: Unit 15 «Digital life» + Unit 16 «Amazing science» + Review 4 (Units 13–16) · Prepare4-U8-P7 — lesson plan &amp; staging</span>
+    <span>Prepare 4 · Units 15–16 · P7 · review + official block test</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button><style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>
