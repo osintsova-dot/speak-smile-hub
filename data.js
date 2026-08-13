@@ -12663,7 +12663,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 1 — Unit 1: It's a challenge! + Unit 2: Our changing planet · уроки 4–8"
+    "sec": "БЛОК 1 — Unit 1: It's a challenge! + Unit 2: Our changing planet · уроки 4–9"
    },
    {
     "n": 5,
@@ -12689,7 +12689,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 1 — Unit 1: It's a challenge! + Unit 2: Our changing planet · уроки 4–8"
+    "sec": "БЛОК 1 — Unit 1: It's a challenge! + Unit 2: Our changing planet · уроки 4–9"
    },
    {
     "n": 6,
@@ -12715,7 +12715,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 1 — Unit 1: It's a challenge! + Unit 2: Our changing planet · уроки 4–8"
+    "sec": "БЛОК 1 — Unit 1: It's a challenge! + Unit 2: Our changing planet · уроки 4–9"
    },
    {
     "n": 7,
@@ -12741,7 +12741,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 1 — Unit 1: It's a challenge! + Unit 2: Our changing planet · уроки 4–8"
+    "sec": "БЛОК 1 — Unit 1: It's a challenge! + Unit 2: Our changing planet · уроки 4–9"
    },
    {
     "n": 8,
@@ -12767,18 +12767,18 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade · 2-я половина (45'): тест блока 1 (лексика + грамматика Units 1–2)"
      ]
     ],
-    "sec": "БЛОК 1 — Unit 1: It's a challenge! + Unit 2: Our changing planet · уроки 4–8"
+    "sec": "БЛОК 1 — Unit 1: It's a challenge! + Unit 2: Our changing planet · уроки 4–9"
    },
    {
     "n": 9,
     "week": "28.09–04.10",
     "type": "Exam practice 1",
-    "title": "Prepare for the exam · Reading Parts 1–2 (стр. 120–121)",
+    "title": "Prepare for the exam · Reading Parts 1–2 (стр. 120–122)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Prepare for the exam · Reading Parts 1–2 (стр. 120–121)"
+      "Prepare for the exam · Reading Parts 1–2 (стр. 120–122)"
      ],
      [
       "Лексика",
@@ -12793,7 +12793,7 @@ window.PROGRAMS = {
       "Формат A2 Key for Schools: разбор задания и стратегий · Short messages and signs · Multiple-choice: three short texts · практика в экзаменационных условиях · парная проверка и разбор"
      ]
     ],
-    "sec": "БЛОК 1 — Unit 1: It's a challenge! + Unit 2: Our changing planet · уроки 4–8"
+    "sec": "БЛОК 1 — Unit 1: It's a challenge! + Unit 2: Our changing planet · уроки 4–9"
    },
    {
     "n": 10,
@@ -12819,7 +12819,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 2 — Unit 3: On holiday + Unit 4: My place · уроки 10–14"
+    "sec": "БЛОК 2 — Unit 3: On holiday + Unit 4: My place · уроки 10–15"
    },
    {
     "n": 11,
@@ -12845,7 +12845,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 2 — Unit 3: On holiday + Unit 4: My place · уроки 10–14"
+    "sec": "БЛОК 2 — Unit 3: On holiday + Unit 4: My place · уроки 10–15"
    },
    {
     "n": 12,
@@ -12871,7 +12871,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 2 — Unit 3: On holiday + Unit 4: My place · уроки 10–14"
+    "sec": "БЛОК 2 — Unit 3: On holiday + Unit 4: My place · уроки 10–15"
    },
    {
     "n": 13,
@@ -12897,7 +12897,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 2 — Unit 3: On holiday + Unit 4: My place · уроки 10–14"
+    "sec": "БЛОК 2 — Unit 3: On holiday + Unit 4: My place · уроки 10–15"
    },
    {
     "n": 14,
@@ -12923,18 +12923,18 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade + Review книги · 2-я половина (45'): тест блока 2 (лексика + грамматика Units 3–4)"
      ]
     ],
-    "sec": "БЛОК 2 — Unit 3: On holiday + Unit 4: My place · уроки 10–14"
+    "sec": "БЛОК 2 — Unit 3: On holiday + Unit 4: My place · уроки 10–15"
    },
    {
     "n": 15,
     "week": "19.10–25.10",
     "type": "Exam practice 2",
-    "title": "Prepare for the exam · Reading Parts 3–4 (стр. 122–123)",
+    "title": "Prepare for the exam · Reading Parts 3–4 (стр. 123–124)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Prepare for the exam · Reading Parts 3–4 (стр. 122–123)"
+      "Prepare for the exam · Reading Parts 3–4 (стр. 123–124)"
      ],
      [
       "Лексика",
@@ -12949,7 +12949,7 @@ window.PROGRAMS = {
       "Формат A2 Key for Schools: разбор задания и стратегий · Multiple-choice: one long text · Multiple-choice cloze · практика в экзаменационных условиях · парная проверка и разбор"
      ]
     ],
-    "sec": "БЛОК 2 — Unit 3: On holiday + Unit 4: My place · уроки 10–14"
+    "sec": "БЛОК 2 — Unit 3: On holiday + Unit 4: My place · уроки 10–15"
    },
    {
     "n": 16,
@@ -12975,7 +12975,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 3 — Unit 5: School + Unit 6: Favourite things · уроки 16–20"
+    "sec": "БЛОК 3 — Unit 5: School + Unit 6: Favourite things · уроки 16–21"
    },
    {
     "n": 17,
@@ -13001,7 +13001,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 3 — Unit 5: School + Unit 6: Favourite things · уроки 16–20"
+    "sec": "БЛОК 3 — Unit 5: School + Unit 6: Favourite things · уроки 16–21"
    },
    {
     "n": 18,
@@ -13027,7 +13027,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 3 — Unit 5: School + Unit 6: Favourite things · уроки 16–20"
+    "sec": "БЛОК 3 — Unit 5: School + Unit 6: Favourite things · уроки 16–21"
    },
    {
     "n": 19,
@@ -13053,7 +13053,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 3 — Unit 5: School + Unit 6: Favourite things · уроки 16–20"
+    "sec": "БЛОК 3 — Unit 5: School + Unit 6: Favourite things · уроки 16–21"
    },
    {
     "n": 20,
@@ -13079,18 +13079,18 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade · 2-я половина (45'): тест блока 3 (лексика + грамматика Units 5–6)"
      ]
     ],
-    "sec": "БЛОК 3 — Unit 5: School + Unit 6: Favourite things · уроки 16–20"
+    "sec": "БЛОК 3 — Unit 5: School + Unit 6: Favourite things · уроки 16–21"
    },
    {
     "n": 21,
     "week": "09.11–15.11",
     "type": "Exam practice 3",
-    "title": "Prepare for the exam · Reading Part 5 + Writing Part 6 (стр. 124–125)",
+    "title": "Prepare for the exam · Reading Part 5 + Writing Part 6 (стр. 125–126)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Prepare for the exam · Reading Part 5 + Writing Part 6 (стр. 124–125)"
+      "Prepare for the exam · Reading Part 5 + Writing Part 6 (стр. 125–126)"
      ],
      [
       "Лексика",
@@ -13105,7 +13105,7 @@ window.PROGRAMS = {
       "Формат A2 Key for Schools: разбор задания и стратегий · Open cloze email · Guided writing: email or note · практика в экзаменационных условиях · парная проверка и разбор"
      ]
     ],
-    "sec": "БЛОК 3 — Unit 5: School + Unit 6: Favourite things · уроки 16–20"
+    "sec": "БЛОК 3 — Unit 5: School + Unit 6: Favourite things · уроки 16–21"
    },
    {
     "n": 22,
@@ -13131,7 +13131,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 4 — Unit 7: Adventure holidays + Unit 8: Life in the future · уроки 22–26"
+    "sec": "БЛОК 4 — Unit 7: Adventure holidays + Unit 8: Life in the future · уроки 22–27"
    },
    {
     "n": 23,
@@ -13157,7 +13157,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 4 — Unit 7: Adventure holidays + Unit 8: Life in the future · уроки 22–26"
+    "sec": "БЛОК 4 — Unit 7: Adventure holidays + Unit 8: Life in the future · уроки 22–27"
    },
    {
     "n": 24,
@@ -13183,7 +13183,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 4 — Unit 7: Adventure holidays + Unit 8: Life in the future · уроки 22–26"
+    "sec": "БЛОК 4 — Unit 7: Adventure holidays + Unit 8: Life in the future · уроки 22–27"
    },
    {
     "n": 25,
@@ -13202,14 +13202,14 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Письмо: текст-прогноз о жизни в будущем"
+      "Письмо: текст-прогноз о будущем + языковой пункт too"
      ],
      [
       "Виды деятельности",
-      "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
+      "also"
      ]
     ],
-    "sec": "БЛОК 4 — Unit 7: Adventure holidays + Unit 8: Life in the future · уроки 22–26"
+    "sec": "БЛОК 4 — Unit 7: Adventure holidays + Unit 8: Life in the future · уроки 22–27"
    },
    {
     "n": 26,
@@ -13235,18 +13235,18 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade + Review книги · 2-я половина (45'): тест блока 4 (лексика + грамматика Units 7–8)"
      ]
     ],
-    "sec": "БЛОК 4 — Unit 7: Adventure holidays + Unit 8: Life in the future · уроки 22–26"
+    "sec": "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
    },
    {
     "n": 27,
     "week": "30.11–06.12",
     "type": "Exam practice 4",
-    "title": "Prepare for the exam · Writing Part 7 + Listening Part 1 (стр. 126–127)",
+    "title": "Prepare for the exam · Writing Part 7 + Listening Parts 1–2 (стр. 127–129)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Prepare for the exam · Writing Part 7 + Listening Part 1 (стр. 126–127)"
+      "Prepare for the exam · Writing Part 7 + Listening Parts 1–2 (стр. 127–129)"
      ],
      [
       "Лексика",
@@ -13261,7 +13261,7 @@ window.PROGRAMS = {
       "Формат A2 Key for Schools: разбор задания и стратегий · Picture story · Multiple-choice pictures · практика в экзаменационных условиях · парная проверка и разбор"
      ]
     ],
-    "sec": "БЛОК 4 — Unit 7: Adventure holidays + Unit 8: Life in the future · уроки 22–26"
+    "sec": "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
    },
    {
     "n": 28,
@@ -13276,7 +13276,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Sports and activities: badminton, board game, climbing, cricket, dance class, fishing, fitness class, golf, karate, puzzle, skateboarding, video game"
+      "Sports and activities (15): badminton, board game, card game, climbing, cricket, dance class, diving, fishing, fitness class, golf, karate, puzzle, skateboarding, skiing, video game"
      ],
      [
       "Грамматика",
@@ -13306,7 +13306,7 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Говорение: правила спорта, секций и игр"
+      "Говорение: Talking about eSports — согласие/несогласие с утверждениями (стр. 57); правила — грамматика стр. 54–55"
      ],
      [
       "Виды деятельности",
@@ -13443,7 +13443,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 6 — Unit 11: City living + Unit 12: Films · уроки 34–38"
+    "sec": "БЛОК 6 — Unit 11: City living + Unit 12: Films · уроки 34–39"
    },
    {
     "n": 35,
@@ -13462,14 +13462,14 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Говорение: экскурсия по городу, описание мест"
+      "Говорение: вежливые просьбы в разных ситуациях (Could you…? Do you mind if I…?), стр. 67"
      ],
      [
       "Виды деятельности",
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 6 — Unit 11: City living + Unit 12: Films · уроки 34–38"
+    "sec": "БЛОК 6 — Unit 11: City living + Unit 12: Films · уроки 34–39"
    },
    {
     "n": 36,
@@ -13495,7 +13495,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 6 — Unit 11: City living + Unit 12: Films · уроки 34–38"
+    "sec": "БЛОК 6 — Unit 11: City living + Unit 12: Films · уроки 34–39"
    },
    {
     "n": 37,
@@ -13521,7 +13521,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 6 — Unit 11: City living + Unit 12: Films · уроки 34–38"
+    "sec": "БЛОК 6 — Unit 11: City living + Unit 12: Films · уроки 34–39"
    },
    {
     "n": 38,
@@ -13547,18 +13547,18 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade + Review книги · 2-я половина (45'): тест блока 6 (лексика + грамматика Units 11–12)"
      ]
     ],
-    "sec": "БЛОК 6 — Unit 11: City living + Unit 12: Films · уроки 34–38"
+    "sec": "БЛОК 6 — Unit 11: City living + Unit 12: Films · уроки 34–39"
    },
    {
     "n": 39,
     "week": "25.01–31.01",
     "type": "Exam practice 5",
-    "title": "Prepare for the exam · Listening Parts 2–3 (стр. 128–129)",
+    "title": "Prepare for the exam · Listening Parts 2–3 (стр. 129 низ – 130)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Prepare for the exam · Listening Parts 2–3 (стр. 128–129)"
+      "Prepare for the exam · Listening Parts 2–3 (стр. 129 низ – 130)"
      ],
      [
       "Лексика",
@@ -13573,7 +13573,7 @@ window.PROGRAMS = {
       "Формат A2 Key for Schools: разбор задания и стратегий · Gap fill · 3-option multiple choice dialogue · практика в экзаменационных условиях · парная проверка и разбор"
      ]
     ],
-    "sec": "БЛОК 6 — Unit 11: City living + Unit 12: Films · уроки 34–38"
+    "sec": "БЛОК 6 — Unit 11: City living + Unit 12: Films · уроки 34–39"
    },
    {
     "n": 40,
@@ -13599,7 +13599,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share)"
      ]
     ],
-    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–46 · юниты по 3 урока"
+    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–47 · юниты по 3 урока"
    },
    {
     "n": 41,
@@ -13625,7 +13625,7 @@ window.PROGRAMS = {
       "Грамматика углублённо: Grammar reference + practice · Rally Coach · WB · свободная практика: персонализированные диалоги и мини-тексты"
      ]
     ],
-    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–46 · юниты по 3 урока"
+    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–47 · юниты по 3 урока"
    },
    {
     "n": 42,
@@ -13651,7 +13651,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–46 · юниты по 3 урока"
+    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–47 · юниты по 3 урока"
    },
    {
     "n": 43,
@@ -13677,7 +13677,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share)"
      ]
     ],
-    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–46 · юниты по 3 урока"
+    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–47 · юниты по 3 урока"
    },
    {
     "n": 44,
@@ -13703,7 +13703,7 @@ window.PROGRAMS = {
       "Грамматика углублённо: Grammar reference + practice · Rally Coach · WB · свободная практика: персонализированные диалоги и мини-тексты"
      ]
     ],
-    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–46 · юниты по 3 урока"
+    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–47 · юниты по 3 урока"
    },
    {
     "n": 45,
@@ -13729,7 +13729,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–46 · юниты по 3 урока"
+    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–47 · юниты по 3 урока"
    },
    {
     "n": 46,
@@ -13755,18 +13755,18 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade · 2-я половина (45'): тест блока 7 (лексика + грамматика Units 13–14)"
      ]
     ],
-    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–46 · юниты по 3 урока"
+    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–47 · юниты по 3 урока"
    },
    {
     "n": 47,
     "week": "22.02–28.02",
     "type": "Exam practice 6",
-    "title": "Prepare for the exam · Listening Parts 4–5 (стр. 130–131)",
+    "title": "Prepare for the exam · Listening Parts 4–5 (стр. 131–132)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Prepare for the exam · Listening Parts 4–5 (стр. 130–131)"
+      "Prepare for the exam · Listening Parts 4–5 (стр. 131–132)"
      ],
      [
       "Лексика",
@@ -13781,18 +13781,18 @@ window.PROGRAMS = {
       "Формат A2 Key for Schools: разбор задания и стратегий · Multiple choice: main idea, gist · Matching · практика в экзаменационных условиях · парная проверка и разбор"
      ]
     ],
-    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–46 · юниты по 3 урока"
+    "sec": "БЛОК 7 — Unit 13: Life experiences + Unit 14: Spending money · уроки 40–47 · юниты по 3 урока"
    },
    {
     "n": 48,
     "week": "01.03–07.03",
     "type": "L1 Vocab + Reading",
-    "title": "Unit 15 · Free time — лексика и чтение (стр. 86–87)",
+    "title": "Unit 15 · Free time — лексика и чтение (стр. 86 + 88)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 15 · Free time — лексика и чтение (стр. 86–87)"
+      "Unit 15 · Free time — лексика и чтение (стр. 86 + 88)"
      ],
      [
       "Лексика",
@@ -13807,7 +13807,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share)"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–54 · юниты по 3 урока"
+    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–55 · юниты по 3 урока"
    },
    {
     "n": 49,
@@ -13833,18 +13833,18 @@ window.PROGRAMS = {
       "Грамматика углублённо: Grammar reference + practice · Rally Coach · WB · свободная практика: персонализированные диалоги и мини-тексты"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–54 · юниты по 3 урока"
+    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–55 · юниты по 3 урока"
    },
    {
     "n": 50,
     "week": "08.03–14.03",
     "type": "L3 Vocab 2 + Skills",
-    "title": "Unit 15 · Free time — разворот 2 (стр. 88–89)",
+    "title": "Unit 15 · Free time — разворот 2 (стр. 89 + Talking points со стр. 88)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 15 · Free time — разворот 2 (стр. 88–89)"
+      "Unit 15 · Free time — разворот 2 (стр. 89 + Talking points со стр. 88)"
      ],
      [
       "Лексика",
@@ -13859,7 +13859,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–54 · юниты по 3 урока"
+    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–55 · юниты по 3 урока"
    },
    {
     "n": 51,
@@ -13885,7 +13885,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share)"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–54 · юниты по 3 урока"
+    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–55 · юниты по 3 урока"
    },
    {
     "n": 52,
@@ -13911,7 +13911,7 @@ window.PROGRAMS = {
       "Грамматика углублённо: Grammar reference + practice · Rally Coach · WB · свободная практика: персонализированные диалоги и мини-тексты"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–54 · юниты по 3 урока"
+    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–55 · юниты по 3 урока"
    },
    {
     "n": 53,
@@ -13926,18 +13926,18 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Large numbers: hundred, thousand, million, billion"
+      "Large numbers: hundred, thousand, million, billion — целиком (seven thousand four hundred and sixty-eight) + ударение в -teen / -ty"
      ],
      [
       "Грамматика",
-      "Письмо: информационный текст о языке"
+      "Письмо: Information about your English class — языки класса"
      ],
      [
       "Виды деятельности",
-      "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
+      "что нравится и что трудно (+ проверка заглавных букв)"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–54 · юниты по 3 урока"
+    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–55 · юниты по 3 урока"
    },
    {
     "n": 54,
@@ -13963,18 +13963,18 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade + Review книги · 2-я половина (45'): тест блока 8 (лексика + грамматика Units 15–16)"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–54 · юниты по 3 урока"
+    "sec": "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
    },
    {
     "n": 55,
     "week": "22.03–28.03",
     "type": "Exam practice 7",
-    "title": "Prepare for the exam · Speaking Parts 1–2 (стр. 132–133)",
+    "title": "Prepare for the exam · Speaking Part 1 (стр. 133)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Prepare for the exam · Speaking Parts 1–2 (стр. 132–133)"
+      "Prepare for the exam · Speaking Part 1 (стр. 133)"
      ],
      [
       "Лексика",
@@ -13989,7 +13989,7 @@ window.PROGRAMS = {
       "Формат A2 Key for Schools: разбор задания и стратегий · Personal questions · Discussion with visual stimulus · практика в экзаменационных условиях · парная проверка и разбор"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Free time + Unit 16: Languages of the world · уроки 48–54 · юниты по 3 урока"
+    "sec": "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
    },
    {
     "n": 56,
@@ -14015,7 +14015,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 9 — Unit 17: Staying healthy + Unit 18: From cover to cover · уроки 56–60"
+    "sec": "БЛОК 9 — Unit 17: Staying healthy + Unit 18: From cover to cover · уроки 56–61"
    },
    {
     "n": 57,
@@ -14041,7 +14041,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 9 — Unit 17: Staying healthy + Unit 18: From cover to cover · уроки 56–60"
+    "sec": "БЛОК 9 — Unit 17: Staying healthy + Unit 18: From cover to cover · уроки 56–61"
    },
    {
     "n": 58,
@@ -14067,7 +14067,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 9 — Unit 17: Staying healthy + Unit 18: From cover to cover · уроки 56–60"
+    "sec": "БЛОК 9 — Unit 17: Staying healthy + Unit 18: From cover to cover · уроки 56–61"
    },
    {
     "n": 59,
@@ -14082,7 +14082,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Words about books: author, chapter, cover, drawings, end, fan, opinion, pages, shelf, title"
+      "Words about books (9): author, chapter, cover, drawings, end, opinion, pages, shelf, title"
      ],
      [
       "Грамматика",
@@ -14093,7 +14093,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 9 — Unit 17: Staying healthy + Unit 18: From cover to cover · уроки 56–60"
+    "sec": "БЛОК 9 — Unit 17: Staying healthy + Unit 18: From cover to cover · уроки 56–61"
    },
    {
     "n": 60,
@@ -14119,7 +14119,7 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade · 2-я половина (45'): тест блока 9 (лексика + грамматика Units 17–18)"
      ]
     ],
-    "sec": "БЛОК 9 — Unit 17: Staying healthy + Unit 18: From cover to cover · уроки 56–60"
+    "sec": "БЛОК 9 — Unit 17: Staying healthy + Unit 18: From cover to cover · уроки 56–61"
    },
    {
     "n": 61,
@@ -14145,22 +14145,22 @@ window.PROGRAMS = {
       "Формат A2 Key for Schools: разбор задания и стратегий · Полный прогон устной части в парах · практика в экзаменационных условиях · парная проверка и разбор"
      ]
     ],
-    "sec": "БЛОК 9 — Unit 17: Staying healthy + Unit 18: From cover to cover · уроки 56–60"
+    "sec": "БЛОК 9 — Unit 17: Staying healthy + Unit 18: From cover to cover · уроки 56–61"
    },
    {
     "n": 62,
     "week": "19.04–25.04",
     "type": "L1 Vocab + Reading",
-    "title": "Unit 19 · Different ingredients — лексика и чтение (стр. 108–109)",
+    "title": "Unit 19 · Different ingredients — лексика и чтение (стр. 108 + 110)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 19 · Different ingredients — лексика и чтение (стр. 108–109)"
+      "Unit 19 · Different ingredients — лексика и чтение (стр. 108 + 110)"
      ],
      [
       "Лексика",
-      "Words to describe cooking: add, bake, boil, cover, fill, fried, grilled, mix, prepare, roast"
+      "Words to describe cooking (стр. 108 ex.2): add, bake, boil, cover, dry, fill, mix, prepare"
      ],
      [
       "Грамматика",
@@ -14203,16 +14203,16 @@ window.PROGRAMS = {
     "n": 64,
     "week": "26.04–02.05",
     "type": "L3 Vocab 2 + Skills",
-    "title": "Unit 19 · Different ingredients — разворот 2 (стр. 110–111)",
+    "title": "Unit 19 · Different ingredients — разворот 2 (стр. 111 + Talking points со стр. 110)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 19 · Different ingredients — разворот 2 (стр. 110–111)"
+      "Unit 19 · Different ingredients — разворот 2 (стр. 111 + Talking points со стр. 110)"
      ],
      [
       "Лексика",
-      "Ingredients: beans, carrots, garlic, melon, pears, potatoes, salt and pepper, steak · make и do: do the shopping, do your homework, make a cake, make a mistake, make the bed"
+      "Ingredients: beans, carrots, garlic, melon, pears, potatoes, salt and pepper, steak · способы приготовления (стр. 111 ex.3): fried, grilled, roast · make и do (11): make a cup of tea, make the bed, make a cake, make a mess, make a mistake; do the cleaning, do the dishes, do homework, do the shopping, do the washing"
      ],
      [
       "Грамматика",
@@ -14229,16 +14229,16 @@ window.PROGRAMS = {
     "n": 65,
     "week": "26.04–02.05",
     "type": "L1 Vocab + Reading",
-    "title": "Unit 20 · Life changes — лексика и чтение (стр. 112–113)",
+    "title": "Unit 20 · Life changes — лексика и чтение (стр. 112 + 114)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 20 · Life changes — лексика и чтение (стр. 112–113)"
+      "Unit 20 · Life changes — лексика и чтение (стр. 112 + 114)"
      ],
      [
       "Лексика",
-      "Life changes: be born, become a teenager, find part-time work, get married, go to high school, learn to walk and talk, move house, start school, start working or training, take exams, travel"
+      "change как глагол и существительное"
      ],
      [
       "Грамматика",
@@ -14281,24 +14281,24 @@ window.PROGRAMS = {
     "n": 67,
     "week": "03.05–09.05",
     "type": "L3 Vocab 2 + Skills",
-    "title": "Unit 20 · Life changes — разворот 2 (стр. 114–115)",
+    "title": "Unit 20 · Life changes — разворот 2 (стр. 115)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 20 · Life changes — разворот 2 (стр. 114–115)"
+      "Unit 20 · Life changes — разворот 2 (стр. 115)"
      ],
      [
       "Лексика",
-      "change как глагол и существительное"
+      "Life changes: be born"
      ],
      [
       "Грамматика",
-      "Письмо: биография"
+      "become a teenager"
      ],
      [
       "Виды деятельности",
-      "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
+      "find part-time work"
      ]
     ],
     "sec": "БЛОК 10 — Unit 19: Different ingredients + Unit 20: Life changes · уроки 62–68 · юниты по 3 урока"
@@ -14327,7 +14327,7 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — Review 5 (стр. 118–119), станции, Showdown · 2-я половина (45'): тест блока 10 (лексика + грамматика Units 19–20)"
      ]
     ],
-    "sec": "БЛОК 10 — Unit 19: Different ingredients + Unit 20: Life changes · уроки 62–68 · юниты по 3 урока"
+    "sec": "Vocabulary 2 · Reading 2 / Talking points · Listening: gist + detail · Speaking/Writing задание по модели · отложенная коррекция ошибок"
    },
    {
     "n": 69,
@@ -14516,16 +14516,16 @@ window.PROGRAMS = {
     "n": 4,
     "week": "14.09–20.09",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 1 · All about me — разворот 1 (стр. 10–11)",
+    "title": "Unit 1 · All about me — разворот 1 (стр. 10–12 верх)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 1 · All about me — разворот 1 (стр. 10–11)"
+      "Unit 1 · All about me — разворот 1 (стр. 10–12 верх)"
      ],
      [
       "Лексика",
-      "Describing people: attractive, bald, blonde, cheerful, confident, curly, elderly, handsome, miserable, shy, straight"
+      "Describing people — возраст/внешность/волосы: attractive, bald, blonde, curly, dark, elderly, fair, good-looking, handsome, middle-aged, pretty, straight, teenage, in his/her (early/late) twenties/thirties; характер: careless, cheerful, confident, friendly, funny, miserable, polite, shy + противоположности careful, rude, serious, unfriendly"
      ],
      [
       "Грамматика",
@@ -14542,12 +14542,12 @@ window.PROGRAMS = {
     "n": 5,
     "week": "14.09–20.09",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 1 · All about me — разворот 2 (стр. 12–13)",
+    "title": "Unit 1 · All about me — разворот 2 (стр. 12 низ – 13)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 1 · All about me — разворот 2 (стр. 12–13)"
+      "Unit 1 · All about me — разворот 2 (стр. 12 низ – 13)"
      ],
      [
       "Лексика",
@@ -14568,12 +14568,12 @@ window.PROGRAMS = {
     "n": 6,
     "week": "21.09–27.09",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 2 · In fashion — разворот 1 (стр. 14–15)",
+    "title": "Unit 2 · In fashion — разворот 1 (стр. 14–16 верх)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 2 · In fashion — разворот 1 (стр. 14–15)"
+      "Unit 2 · In fashion — разворот 1 (стр. 14–16 верх)"
      ],
      [
       "Лексика",
@@ -14594,16 +14594,16 @@ window.PROGRAMS = {
     "n": 7,
     "week": "21.09–27.09",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 2 · In fashion — разворот 2 (стр. 16–17)",
+    "title": "Unit 2 · In fashion — разворот 2 (стр. 16 низ – 17)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 2 · In fashion — разворот 2 (стр. 16–17)"
+      "Unit 2 · In fashion — разворот 2 (стр. 16 низ – 17)"
      ],
      [
       "Лексика",
-      "Adverbs: amazingly, carefully, fast, healthily, honestly, politely, quickly, seriously"
+      "Adverbs (от 15 прилагательных): amazing, bad, careful, early, fast, good, healthy, heavy, honest, lazy, lucky, polite, quick, rude, serious → amazingly, badly, carefully… + неправильные fast, hard, well, early"
      ],
      [
       "Грамматика",
@@ -14646,12 +14646,12 @@ window.PROGRAMS = {
     "n": 9,
     "week": "28.09–04.10",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 3 · My way of life — разворот 1 (стр. 20–21)",
+    "title": "Unit 3 · My way of life — разворот 1 (стр. 20–22 верх)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 3 · My way of life — разворот 1 (стр. 20–21)"
+      "Unit 3 · My way of life — разворот 1 (стр. 20–22 верх)"
      ],
      [
       "Лексика",
@@ -14672,12 +14672,12 @@ window.PROGRAMS = {
     "n": 10,
     "week": "05.10–11.10",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 3 · My way of life — разворот 2 (стр. 22–23)",
+    "title": "Unit 3 · My way of life — разворот 2 (стр. 22 низ – 23)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 3 · My way of life — разворот 2 (стр. 22–23)"
+      "Unit 3 · My way of life — разворот 2 (стр. 22 низ – 23)"
      ],
      [
       "Лексика",
@@ -14802,12 +14802,12 @@ window.PROGRAMS = {
     "n": 15,
     "week": "19.10–25.10",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 5 · Call the police! — разворот 1 (стр. 32–33)",
+    "title": "Unit 5 · Call the police! — разворот 1 (стр. 32–34 верх)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 5 · Call the police! — разворот 1 (стр. 32–33)"
+      "Unit 5 · Call the police! — разворот 1 (стр. 32–34 верх)"
      ],
      [
       "Лексика",
@@ -14828,12 +14828,12 @@ window.PROGRAMS = {
     "n": 16,
     "week": "26.10–01.11",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 5 · Call the police! — разворот 2 (стр. 34–35)",
+    "title": "Unit 5 · Call the police! — разворот 2 (стр. 34 низ – 35)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 5 · Call the police! — разворот 2 (стр. 34–35)"
+      "Unit 5 · Call the police! — разворот 2 (стр. 34 низ – 35)"
      ],
      [
       "Лексика",
@@ -14854,12 +14854,12 @@ window.PROGRAMS = {
     "n": 17,
     "week": "26.10–01.11",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 6 · City life — разворот 1 (стр. 36–37)",
+    "title": "Unit 6 · City life — разворот 1 (стр. 36–38 верх)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 6 · City life — разворот 1 (стр. 36–37)"
+      "Unit 6 · City life — разворот 1 (стр. 36–38 верх)"
      ],
      [
       "Лексика",
@@ -14880,12 +14880,12 @@ window.PROGRAMS = {
     "n": 18,
     "week": "02.11–08.11",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 6 · City life — разворот 2 (стр. 38–39)",
+    "title": "Unit 6 · City life — разворот 2 (стр. 38 низ – 39)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 6 · City life — разворот 2 (стр. 38–39)"
+      "Unit 6 · City life — разворот 2 (стр. 38 низ – 39)"
      ],
      [
       "Лексика",
@@ -15019,7 +15019,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Phrasal verbs — travel: check in, get back, go away, look around, pick up, set off, take off"
+      "Phrasal verbs — travel: check in, get back, get in, go away, look around, pick up, set off, take off"
      ],
      [
       "Грамматика",
@@ -15097,7 +15097,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Money and shopping: bank account, change, checkout, give away, price, receipt, save up, special offer, take back"
+      "Money and shopping: bank account, change, checkout, give away, price, receipt, save up, special offer, take back; из чтения: pay back, afford, regret, run out of, suffer from"
      ],
      [
       "Грамматика",
@@ -15108,7 +15108,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share)"
      ]
     ],
-    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–32 · расширенный"
+    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–33 · расширенный"
    },
    {
     "n": 27,
@@ -15134,7 +15134,7 @@ window.PROGRAMS = {
       "Грамматика углублённо: Grammar reference + practice · Rally Coach · WB · свободная практика: персонализированные диалоги и мини-тексты"
      ]
     ],
-    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–32 · расширенный"
+    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–33 · расширенный"
    },
    {
     "n": 28,
@@ -15160,7 +15160,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · разбор модельного текста: структура, useful language (Prepare to write) · совместное планирование · написание текста · peer check по чек-листу"
      ]
     ],
-    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–32 · расширенный"
+    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–33 · расширенный"
    },
    {
     "n": 29,
@@ -15186,7 +15186,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share)"
      ]
     ],
-    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–32 · расширенный"
+    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–33 · расширенный"
    },
    {
     "n": 30,
@@ -15212,7 +15212,7 @@ window.PROGRAMS = {
       "Грамматика углублённо: Grammar reference + practice · Rally Coach · WB · свободная практика: персонализированные диалоги и мини-тексты"
      ]
     ],
-    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–32 · расширенный"
+    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–33 · расширенный"
    },
    {
     "n": 31,
@@ -15238,7 +15238,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · аудирование: gist + detail · Prepare to speak: useful language · Timed Pair Share / ролевые диалоги · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–32 · расширенный"
+    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–33 · расширенный"
    },
    {
     "n": 32,
@@ -15264,7 +15264,7 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade · 2-я половина (45'): тест блока 5 (лексика + грамматика Units 9–10)"
      ]
     ],
-    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–32 · расширенный"
+    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–33 · расширенный"
    },
    {
     "n": 33,
@@ -15290,22 +15290,22 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение полугодия — командные станции, Numbered Heads Together · 2-я половина (45'): полугодовой тест"
      ]
     ],
-    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–32 · расширенный"
+    "sec": "БЛОК 5 — Unit 9: Shop till you drop + Unit 10: Taste this! · уроки 26–33 · расширенный"
    },
    {
     "n": 34,
     "week": "11.01–17.01",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 11 · A healthy future — разворот 1 (стр. 64–65)",
+    "title": "Unit 11 · A healthy future — разворот 1 (стр. 64–66 верх)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 11 · A healthy future — разворот 1 (стр. 64–65)"
+      "Unit 11 · A healthy future — разворот 1 (стр. 64–66 верх)"
      ],
      [
       "Лексика",
-      "Body and health: aches, broken, cough, earache, fever, flu, sore, stomach ache, toothache; elbow, forehead, shoulder, throat"
+      "Части тела (14): ankle, back, cheek, chest, chin, elbow, finger, forehead, knee, neck, shoulder, throat, thumb, toe; болезни: aches, broken, (a) cold, (a) cough, (a) cut, earache, (a) fever, flu, sore, stomach ache, toothache"
      ],
      [
       "Грамматика",
@@ -15322,16 +15322,16 @@ window.PROGRAMS = {
     "n": 35,
     "week": "11.01–17.01",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 11 · A healthy future — разворот 2 (стр. 66–67)",
+    "title": "Unit 11 · A healthy future — разворот 2 (стр. 66 низ – 67)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 11 · A healthy future — разворот 2 (стр. 66–67)"
+      "Unit 11 · A healthy future — разворот 2 (стр. 66 низ – 67)"
      ],
      [
       "Лексика",
-      "Illnesses and injuries — verbs: be sick, break, catch, feel better, get better, hurt, injure"
+      "Illnesses and injuries — verbs: be sick, break, catch, cut, feel better, get better, have, hurt, injure"
      ],
      [
       "Грамматика",
@@ -15357,7 +15357,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Animals: ant, bat, bee, butterfly, deer, donkey, eagle, fox, frog, mosquito, shark, wolf, worm"
+      "Animals (14): ant, bat, bee, butterfly, deer, donkey, eagle, fly, fox, frog, mosquito, shark, wolf, worm"
      ],
      [
       "Грамматика",
@@ -15478,12 +15478,12 @@ window.PROGRAMS = {
     "n": 41,
     "week": "01.02–07.02",
     "type": "L2 Grammar",
-    "title": "Unit 13 · Mixed feelings — грамматика углублённо (стр. 77 + Grammar reference)",
+    "title": "Unit 13 · Mixed feelings — грамматика углублённо (стр. 78 верх + Grammar reference с. 150)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 13 · Mixed feelings — грамматика углублённо (стр. 77 + Grammar reference)"
+      "Unit 13 · Mixed feelings — грамматика углублённо (стр. 78 верх + Grammar reference с. 150)"
      ],
      [
       "Лексика",
@@ -15530,16 +15530,16 @@ window.PROGRAMS = {
     "n": 43,
     "week": "08.02–14.02",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 14 · On screen — разворот 1 (стр. 80–81)",
+    "title": "Unit 14 · On screen — разворот 1 (стр. 80–82 верх)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 14 · On screen — разворот 1 (стр. 80–81)"
+      "Unit 14 · On screen — разворот 1 (стр. 80–82 верх)"
      ],
      [
       "Лексика",
-      "TV and film: action thriller, animation, chat show, crime drama, documentary, period drama, reality show, science fiction, soap opera, the news"
+      "TV and film (12 жанров): action thriller, animation, chat show, comedy, crime drama, documentary, horror film, period drama, reality show, science fiction, soap opera, the news"
      ],
      [
       "Грамматика",
@@ -15556,12 +15556,12 @@ window.PROGRAMS = {
     "n": 44,
     "week": "15.02–21.02",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 14 · On screen — разворот 2 (стр. 82–83)",
+    "title": "Unit 14 · On screen — разворот 2 (стр. 82 низ – 83)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 14 · On screen — разворот 2 (стр. 82–83)"
+      "Unit 14 · On screen — разворот 2 (стр. 82 низ – 83)"
      ],
      [
       "Лексика",
@@ -15816,12 +15816,12 @@ window.PROGRAMS = {
     "n": 54,
     "week": "22.03–28.03",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 17 · Talented — разворот 1 (стр. 98–99)",
+    "title": "Unit 17 · Talented — разворот 1 (стр. 98–100 лево)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 17 · Talented — разворот 1 (стр. 98–99)"
+      "Unit 17 · Talented — разворот 1 (стр. 98–100 лево)"
      ],
      [
       "Лексика",
@@ -15842,12 +15842,12 @@ window.PROGRAMS = {
     "n": 55,
     "week": "22.03–28.03",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 17 · Talented — разворот 2 (стр. 100–101)",
+    "title": "Unit 17 · Talented — разворот 2 (стр. 100 право – 101)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 17 · Talented — разворот 2 (стр. 100–101)"
+      "Unit 17 · Talented — разворот 2 (стр. 100 право – 101)"
      ],
      [
       "Лексика",
@@ -15894,12 +15894,12 @@ window.PROGRAMS = {
     "n": 57,
     "week": "29.03–04.04",
     "type": "L2 Grammar",
-    "title": "Unit 18 · The world of work — грамматика углублённо (стр. 103 + Grammar reference)",
+    "title": "Unit 18 · The world of work — грамматика углублённо (стр. 104 + Grammar reference)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 18 · The world of work — грамматика углублённо (стр. 103 + Grammar reference)"
+      "Unit 18 · The world of work — грамматика углублённо (стр. 104 + Grammar reference)"
      ],
      [
       "Лексика",
@@ -15929,7 +15929,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Suffixes -er / -or / -ist / -ian: actor, artist, blogger, comedian, film director, goalkeeper, guitarist, musician, novelist"
+      "Suffixes -er / -or / -ist / -ian: actor, artist, blogger, cleaner, comedian, competitor, film director, goalkeeper, guitarist, musician, novelist, receptionist, runner, scientist, supporter, vegetarian, visitor"
      ],
      [
       "Грамматика",
@@ -15998,12 +15998,12 @@ window.PROGRAMS = {
     "n": 61,
     "week": "12.04–18.04",
     "type": "L2 Grammar",
-    "title": "Unit 19 · The written word — грамматика углублённо (стр. 109 + Grammar reference)",
+    "title": "Unit 19 · The written word — грамматика углублённо (стр. 110 + Grammar reference с. 156)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 19 · The written word — грамматика углублённо (стр. 109 + Grammar reference)"
+      "Unit 19 · The written word — грамматика углублённо (стр. 110 + Grammar reference с. 156)"
      ],
      [
       "Лексика",
@@ -16076,12 +16076,12 @@ window.PROGRAMS = {
     "n": 64,
     "week": "26.04–02.05",
     "type": "L2 Grammar",
-    "title": "Unit 20 · Seeing is believing — грамматика углублённо (стр. 113 + Grammar reference)",
+    "title": "Unit 20 · Seeing is believing — грамматика углублённо (стр. 114 + Grammar reference с. 157)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 20 · Seeing is believing — грамматика углублённо (стр. 113 + Grammar reference)"
+      "Unit 20 · Seeing is believing — грамматика углублённо (стр. 114 + Grammar reference с. 157)"
      ],
      [
       "Лексика",
