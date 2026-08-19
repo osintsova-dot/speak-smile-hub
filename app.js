@@ -246,6 +246,22 @@ function planKeyFor(program, L){
     const k = `${program}-${part}-P${idx+1}`;
     return window.PLANS[k] ? k : null;
   }
+  // Gateway to the World B2: файлы называются GatewayB2-*, секции — «UNIT N» / «ВВОДНЫЕ» / «ФИНАЛ»
+  if (program==="Gateway"){
+    const sec = L.sec || "";
+    let part = null;
+    const um = /UNIT\s*(\d+)/i.exec(sec);
+    if (um) part = "U"+um[1];
+    else if (/ВВОДН/i.test(sec)) part = "Intro";
+    else if (/ФИНАЛ|ИТОГ|MOCK/i.test(sec)) part = "Final";
+    if (!part) return null;
+    const prog = window.PROGRAMS[program];
+    const same = (prog?.lessons||[]).filter(x=>x.sec===L.sec).map(x=>x.n).sort((a,b)=>a-b);
+    const idx = same.indexOf(L.n);
+    if (idx < 0) return null;
+    const k = `GatewayB2-${part}-P${idx+1}`;
+    return window.PLANS[k] ? k : null;
+  }
   // Prepare 3/4/5: год разбит на блоки, план = <prog>-U<номер блока>-P<№ урока внутри блока>
   if (program==="Prepare3" || program==="Prepare4" || program==="Prepare5"){
     const sec = L.sec || "";
