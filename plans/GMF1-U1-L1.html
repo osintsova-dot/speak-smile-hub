@@ -54,13 +54,17 @@
   tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+  .igame{ border:2px solid var(--p); border-radius:10px; background:var(--honey-soft); padding:8px 10px; margin:8px 0; }
+  .igame .ig-h{ font-weight:800; color:var(--p); font-size:.9rem; } .igame .ig-b{ font-size:.85rem; margin-top:3px; }
+  .diff{ font-size:.84rem; color:var(--muted); margin:4px 0 0; } .diff b{ color:var(--zone); }
+  a.gl{ color:var(--p); font-weight:800; text-decoration:underline; }
 
-  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; } .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.igame{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
@@ -69,23 +73,24 @@
   <div class="hd">
     <div class="t">🦝 Give Me Five! 1 · Unit 1 “Ready for school!” · Lesson 1 — Vocabulary</div>
     <div class="s">Pre-A1 young learners (~7 y.o., emergent readers) · 60 min · PPP + TPR + Phonics · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 4</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">🦸 Phonics Hero ур.10 · Заглавные A–Z</span></div>
+    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 4</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">PB p. 8 · AB p. 6</span><span class="chip">🦸 Phonics Hero ур.10 · Заглавные A–Z</span></div>
   </div>
 
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
     <div class="cardb"><ul class="a">
-      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 10 classroom objects</b> and <b>ask &amp; answer where a thing is</b> using “Where's my (pencil)? — It's here!”</li>
-      <li><span class="lb">Subsidiary.</span> Review greetings / colours / shapes (fluency mingle); phonics (recognise → blend → segment); listen for detail (sequence pictures to the song); pre-literacy &amp; fine motor (word–picture, stickers).</li>
-      <li><span class="lb">Personal.</span> Keep teacher-talk low; give an ICQ before every task; run a stirrer→settler rhythm with songs and signals.</li>
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name ten classroom objects</b> and use them in context — “What's this? — It's a (pencil).” / “Where's my (pencil)? — It's here!” — through the Unit 1 song <i>I'm ready for school!</i> (Pupil's Book p. 8).</li>
+      <li><span class="lb">Subsidiary.</span> <b>Recycle real prior learning</b> — Starter greetings, colours &amp; numbers 1–10 and the Starter L3 chunk “Where's my…? — It's here.” — <b>woven straight onto today's words</b> (“It's a <i>red</i> crayon!” · “How many <b>pencils</b>? — Five!”); phonics — <b>Phonics Hero ур.10: заглавные A–Z</b> (recognise CAPITAL ↔ small, write A·B·C, тетрадь стр.26–27); listen for detail (listen &amp; point, listen &amp; stick, PB p. 8 ex. 1–2); pre-literacy &amp; fine motor (stickers, cut-and-glue notebook page); sight words <i>me · be · my</i>.</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; give an ICQ before every task; run a stirrer→settler rhythm with songs and signals; <b>every task keeps ALL children responding</b> (own card / point &amp; say / all pairs at once) — never “2 play, 10 watch”.</li>
     </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
       <ul class="a">
-        <li>name the 10 classroom objects;</li>
-        <li>ask &amp; answer “Where's my…? — It's here!”;</li>
-        <li>blend &amp; segment target CVC words.</li>
+        <li>name the ten classroom objects: <i>pen · pencil · crayon · rubber · ruler · sharpener · book · school bag · pencil case · computer</i>;</li>
+        <li>ask &amp; answer “What's this? — It's a (ruler).” and “Where's my (pencil)? — It's here!”;</li>
+        <li>sing <i>I'm ready for school!</i> and touch the right object as they sing;</li>
+        <li>tell a CAPITAL from its small partner (same sound!) and write A · B · C.</li>
       </ul>
     </div>
   </div>
@@ -94,17 +99,18 @@
   <div class="eyebrow">Target language</div>
   <div class="grid2">
     <div class="cardb tl">
-      <div class="r"><div class="k">Lexis</div><div><span class="w">pencil</span><span class="w">book</span><span class="w">bag</span><span class="w">ruler</span><span class="w">rubber</span><span class="w">crayon</span><span class="w">pencil case</span><span class="w">sharpener</span><span class="w">glue</span><span class="w">scissors</span></div></div>
-      <div class="r"><div class="k">Structure</div><div>Where's my (object)? — It's here! &nbsp;·&nbsp; What's this? — It's a (…)</div></div>
-      <div class="r"><div class="k">Form</div><div>Where + <b>'s</b> (is) + my + noun? → It + <b>'s</b> + here. Connected “Where's” /weəz/.</div></div>
-      <div class="r"><div class="k">Pron. watch</div><div>final /g/ in <i>bag</i>; /ʃ/ in <i>sharpener</i>; stress on <b>where</b> + object.</div></div>
-      <div class="r"><div class="k">Phonics</div><div><b>Phonics Hero ур.10: заглавные буквы A–Z</b> — «звучит так же, как маленькая, просто нарядная»: имена (Sam!) и начало предложения; match CAPITAL ↔ small (тетрадь стр.26–27) · sight words: <i>me, be, my</i>.</div></div>
+      <div class="r"><div class="k">Lexis</div><div><span class="w">pen</span><span class="w">pencil</span><span class="w">crayon</span><span class="w">rubber</span><span class="w">ruler</span><span class="w">sharpener</span><span class="w">book</span><span class="w">school bag</span><span class="w">pencil case</span><span class="w">computer</span> <span style="color:var(--muted);font-size:.82rem">(bonus, from the Genki song: glue · scissors · tape)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What's this? — It's a (pencil). &nbsp;·&nbsp; Where's my (pencil)? — It's here! &nbsp;·&nbsp; I'm ready for school! <span style="color:var(--muted);font-size:.82rem">(chunk for the song: May I borrow your (glue)? — Of course!)</span></div></div>
+      <div class="r"><div class="k">Form</div><div>It's = It is; a + noun (a pen, a ruler) → <i>an</i> only with the odd one out. Where + <b>'s</b> (is) + my + noun? → It + <b>'s</b> + here. Connected “Where's” /weəz/.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>final /g/ in <i>bag</i>; /ʃ/ in <i>sharpener</i>; <i>crayon</i> = 2 syllables /ˈkreɪ.ɒn/, not “ka-ra-yon”; <i>rubber</i> ≠ <i>ruler</i> (the /b/ vs /l/); stress on the object word.</div></div>
+      <div class="r"><div class="k">Phonics</div><div><b>Phonics Hero ур.10: заглавные буквы A–Z</b> — «звучит так же, как маленькая, просто нарядная»: capitals for names (Sam!) and the start of a sentence; match CAPITAL ↔ small (тетрадь стр.26–27) · sight words: <i>me, be, my</i>.</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-      <div class="ccq">“Is the pencil near or far?” → near → <b>“It's here.”</b></div>
-      <div class="ccq" style="margin-bottom:12px">“Do I want to know where it is?” → yes.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> numbers, colours, shapes &amp; greetings are known from last year (Starter = revision). Pupils are non-/emergent readers → rely on pictures &amp; audio, not printed text. Carpet routines are known. <b>Группы:</b> команда — максимум 4; при другой численности делим на команды по 3–4 (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4).</p>
+      <div class="ccq">Hold up a pencil: “Is it a pen or a pencil?” → pencil → <b>“It's a pencil.”</b></div>
+      <div class="ccq">“Is the pencil near or far?” → near → <b>“It's here.”</b> (“Do I want to know where it is?” → yes → so I <i>ask</i>.)</div>
+      <div class="ccq" style="margin-bottom:12px">Phonics: show <b>a</b> and <b>A</b> — “Two letters — the same sound or a new sound?” → <b>the same</b>. “Which one do we use for <i>Sam</i>?” → the BIG one.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> numbers 1–10, colours, shapes &amp; greetings are known from the Starter (revision, not teaching); the classroom objects and the chunk “Where's my…? — It's here.” were <b>first met in Starter L3</b> (“The storm”) → today they are named properly and drilled; the 26 single sounds are known, capitals are new. Pupils are non-/emergent readers → they rely on pictures &amp; audio, we do not read the song text. Carpet routines are known. <b>Группы:</b> команда — максимум 4; при другой численности делим на команды по 3–4 (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4).</p>
     </div>
   </div>
 
@@ -113,11 +119,12 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-        <tr><td>Confuse <i>rubber</i> / <i>ruler</i></td><td>Present as a contrasting pair with one clear gesture each.</td></tr>
-        <tr><td>“Where's my…” said too fast</td><td>Back-chain: <i>…pencil → …my pencil → Where's my pencil?</i></td></tr>
-        <tr><td>Final /g/ in <i>bag</i> dropped</td><td>Short exaggerated choral drill.</td></tr>
-        <tr><td>Over-excitement on the carpet</td><td>Use a settle signal + follow every stirrer with a settler.</td></tr>
-        <tr><td>Teams argue over cards</td><td>Assign the 4 roles inside each team; rotate.</td></tr>
+        <tr><td>Confuse <i>rubber</i> / <i>ruler</i></td><td>Present as a contrasting pair with one clear gesture each (rub · measure); drill them back-to-back, then mixed.</td></tr>
+        <tr><td>One-word answers: “Pencil.” instead of “It's a pencil.”</td><td>No point until the full answer: model with a big pointing gesture, back-chain <i>…pencil → a pencil → It's a pencil.</i></td></tr>
+        <tr><td>Final /g/ in <i>bag</i> dropped; <i>crayon</i> stretched to three syllables</td><td>Short exaggerated choral drill; clap the syllables — <b>cray</b>·on ✋✋.</td></tr>
+        <tr><td>“Capital = a different letter / a different sound”</td><td>Hold the pair side by side: <span class="call">Same sound! Just fancy!</span> — same gesture for both; sort the cards into pairs, not into two new sets.</td></tr>
+        <tr><td>Cutting &amp; gluing the notebook page eats the lesson</td><td>Pre-cut Sheet 1 for the slowest cutters; glue the base FIRST, all together, on your countdown; late finishers glue at the end of the lesson.</td></tr>
+        <tr><td>Over-excitement on the carpet / teams argue over cards</td><td>Settle signal + a settler after every stirrer; assign the 4 roles inside each team and rotate them.</td></tr>
       </tbody></table></div>
     </div>
     <div>
@@ -139,7 +146,13 @@
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
     <span><span class="sp">🦝</span> = Speaky lines</span>
     <span><span class="game">▶</span> = game</span>
+    <span>🎮 = on-screen (projector) interactive</span>
+    <span>💪 support · ⭐ extension</span>
     <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
+
+  <div style="background:var(--honey-soft);border-left:3px solid var(--honey);border-radius:7px;padding:8px 11px;font-size:.86rem;margin:0 0 10px">
+    <b style="color:var(--honey-ink)">⏱ Pacing — honest 60 min.</b> This is the first lesson of the unit: <b>ten new words + a new song + a cut-and-glue page + the phonics block</b>. That is a full plate for seven-year-olds, so <b>pick, don't cram</b>. The <b>core</b> = presentation of the ten words (23–31′) + the song with the notebook flaps (31–41′) + one round of the memory game (46–53′). <b>Buffers to drop first if you are short:</b> the Flashcards flash round (42–46′), the second memory round, Timed Pair Share, the тетрадь стр.27 “соедини пары” (send it home). <b>If cutting runs long:</b> children glue only the BASE sheet in the lesson and finish the flaps at home — the song still works with the picture side. Better ten words said well by <b>every</b> child than twelve half-learnt.
   </div>
 
   <div class="scroll">
@@ -151,22 +164,25 @@
         <td class="min">0–3′</td>
         <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
         <td class="flow">
-          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="sp">🦝 Speaky</span> waves: <span class="en">Hello, friends! I'm Speaky!</span> Class: <span class="en">Hello!</span></p>
-          <p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call actions with the moves (jump · spin · clap · sit down · stand up); trick them by saying <span class="en">Sit down!</span> when they're already sitting.</p>
+          <p><span class="ph">Warm up.</span> Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="sp">🦝 Speaky</span> waves, hugging a fat school bag: <span class="en">Hello, friends! I'm Speaky. Look — my school bag! It's full! What's inside?</span> Class: <span class="en">Hello, Speaky!</span></p>
+          <p><b style="color:var(--honey-ink)">🧠 Curiosity:</b> shake the bag so it rattles — <span class="en">Guess! What's in my bag?</span> Take 3–4 guesses in any language, then: <span class="en">Let's find out today!</span> (Do NOT open it yet — it opens at Presentation.)</p>
+          <p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Genki Disco Warm Up</span> — call the actions with the moves (jump · spin · clap · sit down · stand up); trick them by saying <span class="en">Sit down!</span> when they are already sitting.</p>
           <p>Bring the energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p>
         </td>
-        <td class="mat"><b>Disco Warm Up</b> mp3 · Speaky · carpet</td>
+        <td class="mat"><b>Genki “Disco Warm Up”</b> mp3 · Speaky + a full school bag · carpet</td>
       </tr>
 
       <tr>
         <td class="min">3–9′</td>
-        <td class="stage"><div class="nm">Review mingle</div><div class="zone">carpet, standing</div></td>
+        <td class="stage"><div class="nm">Review → into school things</div><div class="zone">carpet, standing</div></td>
         <td class="flow">
-          <p>Revise known language (greetings, colours, shapes). <span class="game">▶ Mix–Pair–Share:</span> play music, then <span class="en">Stand up, hand up, pair up!</span></p>
-          <p>In pairs: <span class="en">A: Hello! How are you? — B: I'm fine, thank you! A: What's your name? — B: I'm [Masha].</span> Swap partners.</p>
-          <p>Round 2 <span class="ph">RallyRobin</span> (take turns): <span class="en">Tell your partner three colours.</span> Round 3: <span class="en">Now three shapes!</span> Attention signal: <span class="en">Class? — Yes!</span></p>
+          <p><span class="ph">Recycle the Starter — but ON today's topic (everyone moves, no one waits).</span> <span class="game">▶ Mix–Pair–Share:</span> music on → <span class="en">Stand up, hand up, pair up!</span> In pairs: <span class="en">A: Hello! How are you? — B: I'm fine, thank you! A: What's your name? — B: I'm [Masha].</span> Swap partners.</p>
+          <p><span class="ph">Round 2 — colours ON school things (RallyRobin, take turns).</span> <span class="en">Look at your desk. Tell your partner three colours you can see!</span> → <span class="en">Red… blue… green!</span> Then you hold up a real crayon: <span class="en">It's a…?</span> → whole class: <span class="en">It's a RED crayon!</span></p>
+          <p><span class="ph">Round 3 — numbers ON school things (show-me, all at once).</span> <span class="en">Hands up! How many pencils have you got? Show me with your fingers — count with me: one, two, three…</span> Everyone counts on their own fingers and calls the number: <span class="en">Five!</span></p>
+          <p><span class="ph">Bridge.</span> <span class="sp">🦝 Speaky</span> hugs his bag: <span class="en">My bag is FULL of things. But… what are they called in English?</span> Attention signal: <span class="en">Class? — Yes!</span></p>
+          <p class="diff"><b>💪 Support:</b> stand a shy child next to you for Mix–Pair–Share and be their first partner. <b>⭐ Extension:</b> colour + number together — <span class="en">Two red crayons!</span></p>
         </td>
-        <td class="mat">music · Speaky · <span class="game">▶ Mix-Pair-Share</span></td>
+        <td class="mat">music · Speaky + bag · real crayons/pencils on the desks · <span class="game">▶ Mix–Pair–Share · RallyRobin</span></td>
       </tr>
 
       <tr class="bridge">
@@ -177,102 +193,142 @@
       </tr>
 
       <tr>
-        <td class="min">10–22′</td>
+        <td class="min">10–21′</td>
         <td class="stage"><div class="nm">Phonics Hero — Capitals A–Z</div><div class="zone">board → desks</div></td>
         <td class="flow">
-          <p><span class="ph">Speed reading.</span> Hub «⚡ Speed reading» / letter strip: the small letters they know — <span class="en">Read with me — fast!</span> (whole class, choral, there and back).</p>
-          <p><span class="ph">Meet the CAPITALS (тетрадь стр.26).</span> Show <i>a</i> and <i>A</i>: <span class="en">Same sound! The capital is just… fancy!</span> «Заглавная звучит так же — просто нарядная»: for names — <span class="en">Sam! Pat! [Masha]!</span> — and the start of a sentence. Air-draw a few: small → BIG.</p>
-          <p><span class="game">▶ Take Off–Touch Down:</span> flash letter cards — CAPITAL → <b>stand up tall</b>; small → <b>crouch small</b>. 8–10 cards, fast — every child moves every time.</p>
-          <p><span class="ph">🎮 Phonics Hub (projector): speakandsmile.ru/gmf1/phonics/ — Station 2 «Заглавные — matching» (строчная ↔ ЗАГЛАВНАЯ):</span> a capital appears — the class calls the letter + sound, a rotating child taps its small partner. ✅ ready. Offline: card pairs on the board ledge.</p>
-          <p><span class="ph">Write — тетрадь стр.26–27 (desks).</span> №1 обведи заглавные (name the letter + sound as you trace) · №2 пишем: <i>A · B · C</i> + the word <i>SAT</i> — start at the top, capitals always go top-down! Then стр.27 №2 «Соедини пары» (G–g, R–r, D–d, Q–q, E–e, B–b). Colour the star «Я молодец!»</p>
+          <p><span class="ph">Speed reading (warm the eyes up).</span> The small letters they already know, on the strip / Hub: <span class="en">Read with me — fast!</span> Whole class, choral, there and back. 60 seconds, no more.</p>
+          <p><span class="ph">Meet the CAPITALS — тетрадь стр.26.</span> Show <i>a</i> and <i>A</i> side by side: <span class="en">Same sound! The capital is just… fancy!</span> «Заглавная звучит так же — просто нарядная». Where do we need the fancy one? — for names: <span class="en">Sam! Pat! [Masha]!</span> — and for the start of a sentence. Air-draw three: small → BIG.</p>
+          <p><span class="game">▶ Take Off–Touch Down (all move every time).</span> Flash letter cards — CAPITAL → <b>stand up tall</b>; small → <b>crouch down small</b>. 8–10 cards, fast. Then swap: you say the SOUND, they show the size with their body.</p>
+          <div class="igame">
+            <div class="ig-h">🎮 Phonics Hub (проектор): <a class="gl" href="https://speakandsmile.ru/gmf1/phonics/" target="_blank">speakandsmile.ru/gmf1/phonics/</a> — Station 2 «Заглавные — matching (строчная ↔ ЗАГЛАВНАЯ)» <span style="color:var(--good)">✅ ГОТОВ</span></div>
+            <div class="ig-b"><b>Screen:</b> a capital appears with a line of small letters underneath. <b>Mechanic:</b> tap the small partner → it links up and plays the sound. <b>Pupils:</b> BEFORE the tap the <b>whole class</b> calls the letter and its sound and points to their own hand-written pair; a rotating child comes up and taps. <b>Teacher:</b> hold the tap until you hear everybody. <b style="color:var(--honey-ink)">🧠 Predict:</b> <span class="en">Which small letter is his partner? Point first!</span> <b>Offline fallback:</b> capital/small card pairs on the board ledge, children point from their seats.</div>
+          </div>
+          <p><span class="ph">Write — тетрадь стр.26–27 (desks, settler).</span> №1 обведи заглавные — name the letter + sound as you trace · №2 write <i>A · B · C</i> and the word <b>SAT</b>: <span class="en">Start at the top — capitals always go top to bottom!</span> Then стр.27 №2 «Соедини пары» (G–g, R–r, D–d, Q–q, E–e, B–b) — everyone works, neighbour-check after: <span class="en">G? — Yes!</span> Colour the star «Я молодец!»</p>
           <p><span class="ph">Sight words.</span> Flash <b>me · be · my</b>: chorus, air-write. Tie-in: <span class="en">Where's MY pencil?</span> — today's question, now in print!</p>
+          <p>🎮 <b>Reading-game option:</b> <a class="gl" href="https://speakandsmile.ru/gmf1/phonics/read-race.html" target="_blank">read-race</a> — ⚔ battle mode, level «CVC · первые звуки»: a word pops up, <b>everyone reads it aloud</b>, the fastest correct team races ahead. Swap it in for the speed-reading strip when the screen is free.</p>
+          <p class="diff"><b>💪 Support:</b> a card with the pair <i>a A</i> on the desk as a model; trace only the first three capitals. <b>⭐ Extension:</b> write your OWN name with a capital first letter; find two capitals in the classroom (on the board, on a book).</p>
         </td>
-        <td class="mat"><b>Phonics Hero 2.0</b> тетрадь стр.26–27 (1 per pupil) · <b>Phonics Hub</b> (board) · capital/small letter cards · pencils</td>
+        <td class="mat"><b>Phonics Hero 2.0</b> тетрадь стр.26–27 (1 per pupil) · <b>Phonics Hub</b> (board) · capital/small letter cards · pencils · 🎮 <a class="gl" href="https://speakandsmile.ru/gmf1/phonics/read-race.html" target="_blank">read-race</a></td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">22–24′</td>
-        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Now — a new song! May I borrow your…?</span> Sing <span class="game">Genki «May I borrow your…?»</span>; hold up real objects (glue, sharpener) → into the school-things topic.</p></td>
-        <td class="mat"><b>Genki «May I borrow your…?»</b> mp3 · objects</td>
+        <td class="min">21–23′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the carpet</div></td>
+        <td class="flow"><p><span class="en">Now — a new song! May I borrow your…?</span> Sing <span class="game">Genki song: «May I Borrow Your…?»</span> and hold up the real things as they come (glue, sharpener, scissors). Children mime handing them over: <span class="en">Of course! — Thank you!</span> → straight into the school-things topic. (By ear + real objects; we do not read the text.)</p></td>
+        <td class="mat"><b>Genki «May I Borrow Your…?»</b> mp3 · real glue · sharpener · scissors</td>
       </tr>
 
       <tr>
-        <td class="min">24–32′</td>
+        <td class="min">23–31′</td>
         <td class="stage"><div class="nm">Presentation · Vocabulary</div><div class="zone">carpet → teams</div></td>
         <td class="flow">
-          <p><span class="ph">Presentation — school things.</span> Hold up each A4 card: <span class="en">What's this?</span> If unknown, model: <span class="en">It's a pencil. Pencil.</span> Choral drill ×3, then 2–3 children individually.</p>
-          <p>Contrast the tricky pair (hold both): <span class="en">This is a rubber. This is a ruler.</span></p>
-          <p><span class="game">▶ Fan-N-Pick</span> (teams of 4, mini-cards): ① fans the cards · ② picks &amp; asks <span class="en">What's this?</span> · ③ answers <span class="en">It's a […].</span> · ④ praises <span class="en">Well done!</span> Rotate roles each turn.</p>
+          <p><span class="ph">Presentation — out of Speaky's bag (the guess pays off).</span> Pull each thing out slowly, half-hidden: <span class="en">What's this?</span> If nobody knows, model: <span class="en">It's a pencil. Pencil.</span> Choral drill ×3, then 2–3 children individually. Cover all ten: <i>pen · pencil · crayon · rubber · ruler · sharpener · book · school bag · pencil case · computer</i>.</p>
+          <p>Contrast the tricky pair (hold both up): <span class="en">This is a rubber. This is a ruler.</span> Rub · measure — one clear gesture each, then mix them: <span class="en">Rubber? Ruler? Show me the gesture!</span></p>
+          <div class="igame">
+            <div class="ig-h">🎮 Интерактив (проектор): What's this? Spinner — school deck <span style="color:var(--good)">✅ ГОТОВ</span> · 🎮 <a class="gl" href="https://speakandsmile.ru/gmf1/games/whats-this-spinner-u1.html" target="_blank">whats-this-spinner-u1</a></div>
+            <div class="ig-b"><b>Screen:</b> a wheel of the ten school things next to Speaky. <b>Mechanic:</b> tap to spin → it lands on one object → tap it to zoom in + play the word. <b>Pupils:</b> BEFORE the reveal the whole class asks together <span class="en">What's this?</span> and <b>everyone</b> holds up their own guess-card; on reveal, chorus <span class="en">It's a (ruler)!</span> <b>Teacher:</b> spin, hold the reveal until every child has pointed, then tap. <b style="color:var(--honey-ink)">🧠 Predict:</b> <span class="en">Where will it stop? Point and guess!</span> <b>Offline fallback:</b> the A4 flashcards face-down, pull one at random.</div>
+          </div>
+          <p><span class="game">▶ Fan-N-Pick (teams of 4, mini-cards — all four are busy).</span> ① fans the cards · ② picks &amp; asks <span class="en">What's this?</span> · ③ answers <span class="en">It's a […].</span> · ④ praises <span class="en">Well done!</span> Rotate the roles after every turn so each child does each job.</p>
           <p><span class="ph">ICQ:</span> <span class="en">Do you say “What's this?” or “Where's my…?”</span> (→ What's this?)</p>
+          <p class="diff"><b>💪 Support:</b> a team-mate may whisper the first sound (<span class="en">/r/…</span>) instead of the word. <b>⭐ Extension:</b> add the colour and a number — <span class="en">It's a blue pencil case. Two blue pencils!</span></p>
+          <p class="diff"><b style="color:var(--honey-ink)">⭐ Swap (rotation):</b> if Fan-N-Pick was used last lesson, run <b>«Угадай по кусочку» (slow reveal)</b> instead — cover a flashcard and open it edge by edge; every child whispers the guess to a partner first, then the class calls it out: <span class="en">It's a… crayon!</span></p>
         </td>
-        <td class="mat">A4 flashcards · 3 mini-sets · <span class="game">▶ Fan-N-Pick</span></td>
+        <td class="mat">Speaky's bag with 10 real objects · 10 A4 flashcards · 3 mini-sets · <span class="game">▶ Fan-N-Pick</span> · 🎮 <a class="gl" href="https://speakandsmile.ru/gmf1/games/whats-this-spinner-u1.html" target="_blank">whats-this-spinner-u1</a></td>
       </tr>
 
       <tr>
-        <td class="min">32–40′</td>
-        <td class="stage"><div class="nm">Song · order it</div><div class="zone">desks</div></td>
+        <td class="min">31–41′</td>
+        <td class="stage"><div class="nm">Song “I'm ready for school!” + 📓 notebook</div><div class="zone">carpet → desks</div></td>
         <td class="flow">
-          <p><span class="en">Well done! Now — to your tables, come with me!</span> Hand out object pictures (GMF1 don't read → order <b>pictures</b>, not text).</p>
-          <p><span class="ph">Listen &amp; order.</span> Play the coursebook song: <span class="en">What do you hear first? Put the pictures in order.</span> Again: <span class="en">Now let's sing!</span></p>
-          <p><span class="game">▶ Order-by-ear</span> (board) — whole class, then in their notebooks. 🎮 <a href="https://speakandsmile.ru/gmf1/games/u1-song-tidy.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">u1-song-tidy</a> («Let's tidy up»).</p>
+          <p><span class="ph">Listen &amp; point — PB p. 8 ex. 1 (CD1 10).</span> Books open / picture on screen: the school-gate scene. Play <span class="game">“I'm ready for school!”</span>: <span class="en">A pen, a pencil, a crayon, too… I'm ready! I'm ready for school!</span> Children point at each thing in the picture as they hear it. Second play: <span class="en">Now let's sing — and stand up on “I'm ready!”</span></p>
+          <p><span class="en">Well done! Now — to your tables, come with me!</span> Hand out the notebook page and build it together (see below), then sing it once more from the page.</p>
+          <div style="border:2px solid var(--p);border-radius:10px;background:var(--honey-soft);padding:8px 10px;margin:8px 0">
+            <div style="font-weight:800;color:var(--p);font-size:.9rem">📓 Interactive notebook: «Lesson 1 — I'm ready for school!» <span style="color:var(--muted);font-weight:600;font-size:.82rem">(flaps + “Touch the…” + My Song Badge)</span></div>
+            <div style="font-size:.85rem;margin-top:3px"><b>What it is:</b> a two-sheet A5 flap page — <b>Лист 2 «ОСНОВА / BASE»</b> is glued into the notebook, <b>Лист 1 «КЛАПАНЫ / FLAPS ONLY»</b> is cut out and laid on top, so every school thing hides under its own little door: <span class="en">pen · pencil · crayon · rubber · sharpener · book · school bag · ruler</span>. <b>Teacher:</b> build it in three steps on your countdown — ① glue the BASE into the notebook all round the edge; ② cut Sheet 1 along the outline; ③ glue <b>only the outer edge</b> of each flap so it still opens. Then play the song and call the commands: <span class="en">Touch the pen! Touch the crayon! Touch the school bag!</span> <b>Pupils:</b> open the flap, touch the picture and say the word — <span class="en">It's a pen!</span> — then sing along, opening a new flap in each verse. <b>Finish:</b> colour the <b>My Song Badge ✩</b> — <span class="en">I can sing the song · I know the school words · I am ready for school!</span> (this badge is their reflection badge at 53′). <b>Time:</b> 6 min inside this stage. <b style="color:var(--honey-ink)">🖨 Prep:</b> print Drive «Lesson 1» — <b>both sheets</b> (Лист 1 «клапаны» + Лист 2 «основа»), <b>A5, 1 set per pupil</b> · scissors + glue stick per child · coloured pencils. <b>Pre-cut Sheet 1</b> for the slowest cutters. <b>⭐ Richer option (same lesson, more time):</b> Drive «L1» — a three-panel fold-out (210×148 mm: left flap 52 · centre 106, glued in · right flap 52; fold on the dotted lines, do not cut them) with the <b>whole song text</b> — children open it and follow the lines with a finger while singing; print Drive «Рюкзак» on top of it as the outer <b>backpack cover</b>, so the closed page looks like a school bag. <b>Note:</b> Drive «Lesson1» is the SAME flap page in a different cover version (“Open me!”) — print one version or the other, never both.</div>
+          </div>
+          <p>🎮 <b>Song option (projector):</b> <a class="gl" href="https://speakandsmile.ru/gmf1/games/u1-song-tidy.html" target="_blank">u1-song-tidy</a> («Let's tidy up») — the song pictures come up in a jumble; <b>the whole class calls each object aloud</b> — <span class="en">A pen! A pencil!</span> — and a rotating child drags it into place. Use it as the “listen again” round when the screen is free.</p>
+          <p class="diff"><b>💪 Support:</b> give a pre-cut Sheet 1 and glue the base for them — they still cut nothing and sing everything. <b>⭐ Extension:</b> write the first letter of each word under its flap (<i>p, c, r…</i>) with a CAPITAL — today's phonics, straight into the page.</p>
         </td>
-        <td class="mat">object pictures · coursebook song (Navio) · board · 🎮 <a href="https://speakandsmile.ru/gmf1/games/u1-song-tidy.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">u1-song-tidy</a></td>
+        <td class="mat">GMF1 PB p. 8 ex. 1 · CD1 10 (Navio) · <b>📓 Drive «Lesson 1»</b> A5 ×2 sheets per pupil · scissors · glue · coloured pencils · 🎮 <a class="gl" href="https://speakandsmile.ru/gmf1/games/u1-song-tidy.html" target="_blank">u1-song-tidy</a></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">41–42′</td>
+        <td class="stage"><div class="nm">⚡ Wiggle stir</div><div class="zone">stand at desks</div></td>
+        <td class="flow"><p><span class="en">Everybody up! Speaky says…</span> 45-second TPR between the two sitting tasks: <span class="en">Speaky says touch a pencil! · Speaky says hold up a book! · Touch your school bag!</span> (no “Speaky says” → freeze!). All move, all name: <span class="en">It's a pencil!</span> Sit down ready for the stickers.</p></td>
+        <td class="mat">— (movement only) · Speaky</td>
       </tr>
 
       <tr>
-        <td class="min">40–44′</td>
-        <td class="stage"><div class="nm">Stickers</div><div class="zone">desks</div></td>
+        <td class="min">42–46′</td>
+        <td class="stage"><div class="nm">Stickers &amp; chant</div><div class="zone">desks</div></td>
         <td class="flow">
-          <p><span class="en">Open your books. Find the stickers. Listen and stick!</span> Model one; check with a neighbour.</p>
+          <p><span class="ph">PB p. 8 ex. 2 (CD1 12).</span> <span class="en">Open your books at page eight. Find the ten stickers. Listen and stick!</span> Model the first one (book) under the camera / on the board; then <b>everyone</b> sticks their own. Play the chant again and say it together.</p>
+          <p><span class="ph">Neighbour check — RallyRobin.</span> <span class="en">Point and ask your partner: What's this? — It's a rubber.</span> Then swap. <b style="color:var(--honey-ink)">🧠 Evaluate:</b> <span class="en">Look at your partner's page — is every sticker in the right place? Thumbs up or thumbs sideways?</span></p>
+          <div class="igame">
+            <div class="ig-h">🎮 Интерактив (проектор): Flashcards — school deck <span style="color:var(--good)">✅ ГОТОВ</span> <span style="color:var(--muted);font-weight:600;font-size:.82rem">(buffer — only if the stickers finish early)</span> · 🎮 <a class="gl" href="https://speakandsmile.ru/gmf1/games/flashcards-u1.html" target="_blank">flashcards-u1</a></div>
+            <div class="ig-b"><b>Screen:</b> the ten school cards flip up one at a time (picture → word). <b>Mechanic:</b> tap a card to hear the word; flash mode shows each for 2 s. <b>Pupils:</b> chorus the word the instant it flips — hands down, voices only. <b>Teacher:</b> one 60-second flash round to lock the set. <b style="color:var(--honey-ink)">🧠 Retrieve:</b> flip to word-only → children say it before the picture appears. <b>Offline fallback:</b> the physical A4 flashcards, flashed by hand.</div>
+          </div>
           <p><span class="ph">Countdown.</span> <span class="en">Finishing in 5… 4… 3… 2… 1… pencils down.</span></p>
+          <p class="diff"><b>💪 Support:</b> peel the stickers off the sheet for a child with slow fingers — the language is the point, not the peeling. <b>⭐ Extension:</b> whisper-read the word under each sticker and find its CAPITAL first letter.</p>
         </td>
-        <td class="mat">GMF1 Pupil's Book + stickers (Navio)</td>
+        <td class="mat">GMF1 PB p. 8 ex. 2 + sticker sheet · CD1 12 (Navio) · 🎮 <a class="gl" href="https://speakandsmile.ru/gmf1/games/flashcards-u1.html" target="_blank">flashcards-u1</a></td>
       </tr>
 
       <tr>
-        <td class="min">44–53′</td>
-        <td class="stage"><div class="nm">Ask &amp; Find</div><div class="zone">carpet, in pairs</div></td>
+        <td class="min">46–53′</td>
+        <td class="stage"><div class="nm">▶ Ask &amp; Find · Where's my…?</div><div class="zone">carpet, in pairs</div></td>
         <td class="flow">
-          <p><span class="ph">Model (board).</span> <span class="game">▶ Find it!</span> (<a href="https://speakandsmile.ru/gmf1/games/find-it-u1.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">find-it-u1</a>) tap Speaky — <span class="sp">🦝</span> asks <span class="en">Where's my [crayon]?</span> the class finds it on screen → <span class="en">It's here!</span> (2–3 times, to model the phrase).</p>
-          <p><span class="ph">▶ Memory · Where's my…? — in pairs, on the carpet.</span> Each pair has 4–5 object cards. Child 1 shows a card, names it — <span class="en">It's a pen.</span> — and places it <b>face-down</b>. Repeat for all 4–5 (show → name → place).</p>
-          <p>When all are down, Child 1 asks: <span class="en">Where's my pen?</span> Child 2 tries — <b>from memory, first try</b> — to turn over the right card. Correct → <span class="en">It's here!</span> and keeps it. Then <b>swap roles</b>. (Most cards wins.)</p>
+          <div class="igame">
+            <div class="ig-h">🎮 Интерактив (проектор): Find it! — Where's my…? <span style="color:var(--good)">✅ ГОТОВ</span> <span style="color:var(--muted);font-weight:600;font-size:.82rem">(the MODEL before they play in pairs)</span> · 🎮 <a class="gl" href="https://speakandsmile.ru/gmf1/games/find-it-u1.html" target="_blank">find-it-u1</a></div>
+            <div class="ig-b"><b>Screen:</b> a drawn classroom with the school things tucked around it. <b>Mechanic:</b> tap Speaky → <span class="sp">🦝</span> asks <span class="en">Where's my [crayon]?</span>; children scan and point from the carpet; tap the object → it glows and <span class="en">It's here!</span> pops up. <b>Pupils:</b> <b>everyone</b> points at the screen from their place and answers chorally. <b>Teacher:</b> 2–3 rounds only — this is the model, then they play for real.</div>
+          </div>
+          <p><span class="game">▶ Memory “Where's my…?” — in pairs, on the carpet (every pair plays at once).</span> Each pair has 4–5 object cards. Child 1 shows a card, names it — <span class="en">It's a pen.</span> — and places it <b>face-down</b>. Repeat for all 4–5 (show → name → place).</p>
+          <p>When all are down, Child 1 asks: <span class="en">Where's my pen?</span> Child 2 tries — <b>from memory, first try</b> — to turn over the right card. Correct → <span class="en">It's here!</span> and keeps it. Then <b>swap roles</b>. (Most cards wins.) Rule: <b>find it → SAY it</b> — no card counts without <span class="en">It's here!</span></p>
+          <p><b style="color:var(--honey-ink)">🧠 Create:</b> last round — children swap one picture card for a <b>real thing of their own</b> (a real rubber, a hair-clip, a toy) and ask about it: <span class="en">Where's my [clip]? — It's here!</span> Their object, their question.</p>
           <p>Reset if it gets loud: <span class="en">Freeze!</span></p>
-        <p>🎮 <b>Digital option (projector):</b> <a href="https://speakandsmile.ru/gmf1/games/class-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">class-memo</a> — S&amp;S memory pairs on screen, 1–4 teams: a rotating child flips two cards, <b>the whole class names every picture aloud</b> — <span class="en">It's a pencil!</span> Swap it in for one round of this game when the screen is free.</p>
+          <p>🎮 <b>Digital option (projector):</b> <a class="gl" href="https://speakandsmile.ru/gmf1/games/class-memo.html" target="_blank">class-memo</a> — S&amp;S memory pairs on screen, 1–4 teams: a rotating child flips two cards, <b>the whole class names every picture aloud</b> — <span class="en">It's a pencil!</span> Swap it in for one round when the screen is free.</p>
+          <p class="diff"><b>💪 Support:</b> start with 3 cards, not 5; leave one card face-up as an anchor. <b>⭐ Extension:</b> add the colour to the question — <span class="en">Where's my red crayon?</span></p>
+          <p class="diff"><b style="color:var(--honey-ink)">⭐ Swap (rotation):</b> if Memory was played in the Starter block, run <b>«Спроси и хватай» (Karuta grab)</b> instead — the 4–5 cards face-UP between the pair; you call <span class="en">Where's my ruler?</span> and both children race to grab it and shout <span class="en">It's here!</span> Same language, more movement.</p>
         </td>
-        <td class="mat">4–5 flashcards per pair · <b>Find it!</b> (board, model) · 🎮 <a href="https://speakandsmile.ru/gmf1/games/find-it-u1.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">find-it-u1</a> · Speaky · 🎮 <a href="https://speakandsmile.ru/gmf1/games/class-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">class-memo</a></td>
+        <td class="mat">4–5 flashcards per pair · one real object per child · Speaky · 🎮 <a class="gl" href="https://speakandsmile.ru/gmf1/games/find-it-u1.html" target="_blank">find-it-u1</a> · 🎮 <a class="gl" href="https://speakandsmile.ru/gmf1/games/class-memo.html" target="_blank">class-memo</a></td>
       </tr>
 
       <tr>
-        <td class="min">53–56′</td>
+        <td class="min">53–55′</td>
         <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
         <td class="flow">
-          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">What did you learn today? Tell your partner one new word.</span> (20 sec each)</p>
-          <p>“I can…” badge: <span class="en">Colour your badge — I can say the words! I can ask and answer!</span></p>
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">What did you learn today? Tell your partner two new words.</span> (15 sec each) — <span class="en">A pen… a sharpener!</span></p>
+          <p><b style="color:var(--honey-ink)">🧠 Evaluate:</b> <span class="en">Which word is the trickiest for you? Show me: easy — thumbs up, tricky — wiggle your hand.</span> Note the two wobbliest words and start Lesson 2 with them.</p>
+          <p>Badge: <span class="en">Open your notebook — colour your My Song Badge! I can sing the song. I know the school words. I am ready for school!</span></p>
         </td>
-        <td class="mat">“I can…” badges (notebook)</td>
+        <td class="mat">📓 notebook page (My Song Badge) · coloured pencils</td>
       </tr>
 
       <tr>
-        <td class="min">56–58′</td>
+        <td class="min">55–57′</td>
         <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is on the app!</span></p></td>
+        <td class="flow"><p><span class="en">Well done today, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in the Activity Book and on the app!</span></p></td>
         <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
       </tr>
 
       <tr>
-        <td class="min">58–60′</td>
+        <td class="min">57–60′</td>
         <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. Each child gets an object/card: <span class="en">What's this?</span> or <span class="en">Where's my pencil?</span> Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
+        <td class="flow"><p>Line up at the door. Hold up an object / a card for each child: <span class="en">What's this?</span> → <span class="en">It's a ruler!</span> (or, for the quicker ones, <span class="en">Where's my pencil?</span> → <span class="en">It's here!</span>). Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
         <td class="mat">object cards · folder reward stickers</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 6 (Vocabulary)</b> + app: a self-checking micro-set on today's words (picture–word match + <span class="en">What's this?</span>), with a “listen” button. <b>🦸 Phonics Hero:</b> finish the capital writing lines on <b>стр.26</b> (<i>A · B · C · SAT</i>).</p><p>🎮 <b>Дома:</b> <a href="https://speakandsmile.ru/gmf1/games/class-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">class-memo</a> — «Мемо»: найди пары и называй каждую картинку вслух — <span class="en">It's a pencil!</span> (5 мин).</p>
+        <td class="flow">
+          <p><b>Activity Book — p. 6, exercises 1–2 (Lesson 1 Vocabulary):</b> ① <i>Read and match. Colour and say.</i> — match the five phrases to the pictures (a blue book · an orange pencil case · a brown ruler · a green school bag · a red computer), colour them in and say each one aloud · ② <i>Trace and write.</i> — trace and write the six words (<i>pencil · pen · sharpener · rubber · ruler · crayon</i>), saying each word as you write it. <b>+ app practice</b> — self-checking micro-set on today's ten words (picture–word match + <span class="en">What's this?</span>), “listen” button, 5–7 min. <b>🦸 Phonics Hero:</b> finish the capital writing lines on <b>стр.26</b> (<i>A · B · C · SAT</i>) and colour the star «Я молодец!»</p>
+          <p class="diff"><b>◆/▲ Differentiable:</b> ex. 1 (match, colour, say) is for everyone; in ex. 2 emergent writers trace the six words only, while stronger writers add a CAPITAL first letter next to each word (<i>Pencil, Pen…</i>).</p>
+          <p>🎮 <b>Дома:</b> <a class="gl" href="https://speakandsmile.ru/gmf1/games/class-memo.html" target="_blank">class-memo</a> — «Мемо»: найди пары и называй каждую картинку вслух — <span class="en">It's a pencil!</span> (5 мин).</p>
+          <p>💻 Онлайн-тренажёр юнита: <a class="gl" href="https://speakandsmile.ru/gmf1/u1.html" target="_blank">speakandsmile.ru/gmf1/u1.html</a> — Practice + Booster по Unit 1 (лексика урока).</p>
         </td>
-        <td class="mat">Activity Book · Phonics Hero стр.26 · app (homework link)</td>
+        <td class="mat">Activity Book p. 6 · Phonics Hero стр.26 · app (homework link) · тренажёр u1.html</td>
       </tr>
 
     </tbody>
@@ -280,10 +336,9 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 1 · Lesson 1 (Vocabulary) — lesson plan &amp; staging</span>
-    <span>Template for L2–L7 and every unit. · Phonics verified against Phonics Hero 2.0 стр.26–27 + КТП урок 4 (ур.10).</span>
+    <span>Speak &amp; Smile · Give Me Five! 1 · Unit 1 “Ready for school!” · Lesson 1 (Vocabulary) — lesson plan &amp; staging</span>
+    <span>Language verified against Pupil's Book p. 8 (song CD1 10 · stickers CD1 12); homework against Activity Book p. 6 · Phonics verified against Phonics Hero 2.0 стр.26–27 + КТП урок 4 (ур.10) · notebook: Drive GMF1 / Unit 1.</span>
   </div>
 </div>
 <button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
 <style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
-</body>
