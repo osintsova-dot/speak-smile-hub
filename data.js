@@ -16328,7 +16328,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Ice-breakers и знакомство группы · классный контракт: правила года · speaking line-up: «How was your summer?» · постановка целей: год ОГЭ и B1 Preliminary · карта года"
+      "Ice-breakers и знакомство группы · классный контракт: правила года · speaking line-up: «How was your summer?» · постановка целей: год ЕГЭ и B1 Preliminary · карта года"
      ]
     ],
     "sec": "ВВОДНЫЕ УРОКИ · Welcome back · уроки 1–3"
@@ -16536,7 +16536,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Signs and short texts · Matching: people to texts · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ОГЭ"
+      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Signs and short texts · Matching: people to texts · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ЕГЭ"
      ]
     ],
     "sec": "БЛОК 1 — Unit 1: Going shopping + Unit 2: Best friends forever · уроки 4–9"
@@ -16692,7 +16692,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Multiple choice: one long text · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ОГЭ"
+      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Multiple choice: one long text · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ЕГЭ"
      ]
     ],
     "sec": "БЛОК 2 — Unit 3: Fun and games + Unit 4: Extreme weather · уроки 10–15"
@@ -16848,7 +16848,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Gapped text · Multiple-choice cloze · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ОГЭ"
+      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Gapped text · Multiple-choice cloze · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ЕГЭ"
      ]
     ],
     "sec": "БЛОК 3 — Unit 5: You made it! + Unit 6: Take care of yourself · уроки 16–21"
@@ -17004,7 +17004,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Open cloze · Email + article / story · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ОГЭ"
+      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Open cloze · Email + article / story · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ЕГЭ"
      ]
     ],
     "sec": "БЛОК 4 — Unit 7: Sound check + Unit 8: Amazing architecture · уроки 22–27"
@@ -17316,7 +17316,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Multiple choice: pictures · Multiple choice: short texts · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ОГЭ"
+      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Multiple choice: pictures · Multiple choice: short texts · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ЕГЭ"
      ]
     ],
     "sec": "БЛОК 6 — Unit 11: Off to school + Unit 12: Getting around · уроки 34–39"
@@ -17524,7 +17524,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Gap fill · Multiple choice: interview · Personal questions (Speaking Part 1) · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ОГЭ"
+      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Gap fill · Multiple choice: interview · Personal questions (Speaking Part 1) · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ЕГЭ"
      ]
     ],
     "sec": "БЛОК 7 — Unit 13: #NoFilter + Unit 14: Let's cook! · уроки 40–47 · расширенный"
@@ -17732,7 +17732,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Describing a photo · Discussing options · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ОГЭ"
+      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Describing a photo · Discussing options · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ЕГЭ"
      ]
     ],
     "sec": "БЛОК 8 — Unit 15: City or country? + Unit 16: Lights · camera · action! · уроки 48–55 · расширенный"
@@ -17888,7 +17888,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Collaborative task · Discussion · полный устный прогон в парах · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ОГЭ"
+      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Collaborative task · Discussion · полный устный прогон в парах · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ЕГЭ"
      ]
     ],
     "sec": "БЛОК 9 — Unit 17: Getting the message + Unit 18: We love celebs! · уроки 56–61"
@@ -18079,12 +18079,12 @@ window.PROGRAMS = {
     "n": 69,
     "week": "10.05–16.05",
     "type": "Mock Exam",
-    "title": "Пробный экзамен · задания в формате ОГЭ (тренировочный)",
+    "title": "Пробный экзамен · задания в формате ЕГЭ (тренировочный)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Пробный экзамен · задания в формате ОГЭ (тренировочный)"
+      "Пробный экзамен · задания в формате ЕГЭ (тренировочный)"
      ],
      [
       "Лексика",
@@ -18096,7 +18096,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Пробник в формате ОГЭ: аудирование + чтение + грамматика и словообразование + электронное письмо · устная часть в парах (чтение вслух, диалог-расспрос, монолог) · хронометраж реального экзамена"
+      "Пробник в формате ЕГЭ: аудирование + чтение + грамматика и словообразование + электронное письмо · устная часть в парах (чтение вслух, диалог-расспрос, монолог) · хронометраж реального экзамена"
      ]
     ],
     "sec": "ФИНАЛ ГОДА · уроки 69–72 · Май"
