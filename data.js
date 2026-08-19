@@ -14577,7 +14577,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Clothes — adjectives: badly-dressed, brand new, casual, loose-fitting, second-hand, skinny, smart, trendy, well-dressed"
+      "Clothes — adjectives: badly-dressed, brand new, casual, comfortable / uncomfortable, loose-fitting, second-hand, skinny, smart, trendy, unfashionable, well-dressed"
      ],
      [
       "Грамматика",
@@ -14666,7 +14666,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 2 — Unit 3: My way of life + Unit 4: Champions · уроки 9–13"
+    "sec": "БЛОК 2 — Unit 3: My way of life + Unit 4: Champions · уроки 9–14"
    },
    {
     "n": 10,
@@ -14692,7 +14692,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · разбор модельного текста: структура, useful language (Prepare to write) · совместное планирование · написание текста · peer check по чек-листу"
      ]
     ],
-    "sec": "БЛОК 2 — Unit 3: My way of life + Unit 4: Champions · уроки 9–13"
+    "sec": "БЛОК 2 — Unit 3: My way of life + Unit 4: Champions · уроки 9–14"
    },
    {
     "n": 11,
@@ -14718,7 +14718,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 2 — Unit 3: My way of life + Unit 4: Champions · уроки 9–13"
+    "sec": "БЛОК 2 — Unit 3: My way of life + Unit 4: Champions · уроки 9–14"
    },
    {
     "n": 12,
@@ -14744,7 +14744,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · аудирование: gist + detail · Prepare to speak: useful language · Timed Pair Share / ролевые диалоги · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 2 — Unit 3: My way of life + Unit 4: Champions · уроки 9–13"
+    "sec": "БЛОК 2 — Unit 3: My way of life + Unit 4: Champions · уроки 9–14"
    },
    {
     "n": 13,
@@ -14770,7 +14770,7 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade · 2-я половина (45'): тест блока 2 (лексика + грамматика Units 3–4)"
      ]
     ],
-    "sec": "БЛОК 2 — Unit 3: My way of life + Unit 4: Champions · уроки 9–13"
+    "sec": "БЛОК 2 — Unit 3: My way of life + Unit 4: Champions · уроки 9–14"
    },
    {
     "n": 14,
@@ -14796,7 +14796,7 @@ window.PROGRAMS = {
       "Книжный Review 1: задания разворота в командном формате · grammar auction · видео юнитов · рефлексия: что усвоено, что повторить дома"
      ]
     ],
-    "sec": "БЛОК 2 — Unit 3: My way of life + Unit 4: Champions · уроки 9–13"
+    "sec": "БЛОК 2 — Unit 3: My way of life + Unit 4: Champions · уроки 9–14"
    },
    {
     "n": 15,
@@ -14811,7 +14811,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Crimes and criminals: burglar / burglary, hacker / hacking, pickpocket, rob, shoplifter, steal, theft, thief, vandal / vandalism"
+      "Crimes and criminals: burglar / burglary, hacker / hacking, pickpocket / pickpocketing, rob, shoplifter / shoplifting, steal, theft, thief, vandal / vandalism"
      ],
      [
       "Грамматика",
@@ -14952,7 +14952,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 4 — Unit 7: Getting on + Unit 8: Going away · уроки 20–24"
+    "sec": "БЛОК 4 — Unit 7: Getting on + Unit 8: Going away · уроки 20–25"
    },
    {
     "n": 21,
@@ -14978,7 +14978,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · разбор модельного текста: структура, useful language (Prepare to write) · совместное планирование · написание текста · peer check по чек-листу"
      ]
     ],
-    "sec": "БЛОК 4 — Unit 7: Getting on + Unit 8: Going away · уроки 20–24"
+    "sec": "БЛОК 4 — Unit 7: Getting on + Unit 8: Going away · уроки 20–25"
    },
    {
     "n": 22,
@@ -15004,7 +15004,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 4 — Unit 7: Getting on + Unit 8: Going away · уроки 20–24"
+    "sec": "БЛОК 4 — Unit 7: Getting on + Unit 8: Going away · уроки 20–25"
    },
    {
     "n": 23,
@@ -15030,7 +15030,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · аудирование: gist + detail · Prepare to speak: useful language · Timed Pair Share / ролевые диалоги · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 4 — Unit 7: Getting on + Unit 8: Going away · уроки 20–24"
+    "sec": "БЛОК 4 — Unit 7: Getting on + Unit 8: Going away · уроки 20–25"
    },
    {
     "n": 24,
@@ -15056,7 +15056,7 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade · 2-я половина (45'): тест блока 4 (лексика + грамматика Units 7–8)"
      ]
     ],
-    "sec": "БЛОК 4 — Unit 7: Getting on + Unit 8: Going away · уроки 20–24"
+    "sec": "БЛОК 4 — Unit 7: Getting on + Unit 8: Going away · уроки 20–25"
    },
    {
     "n": 25,
@@ -15082,7 +15082,7 @@ window.PROGRAMS = {
       "Книжный Review 2: задания разворота в командном формате · grammar auction · видео юнитов · рефлексия: что усвоено, что повторить дома"
      ]
     ],
-    "sec": "БЛОК 4 — Unit 7: Getting on + Unit 8: Going away · уроки 20–24"
+    "sec": "БЛОК 4 — Unit 7: Getting on + Unit 8: Going away · уроки 20–25"
    },
    {
     "n": 26,
@@ -15316,7 +15316,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 6 — Unit 11: A healthy future + Unit 12: Incredible wildlife · уроки 34–38"
+    "sec": "БЛОК 6 — Unit 11: A healthy future + Unit 12: Incredible wildlife · уроки 34–39"
    },
    {
     "n": 35,
@@ -15342,7 +15342,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · разбор модельного текста: структура, useful language (Prepare to write) · совместное планирование · написание текста · peer check по чек-листу"
      ]
     ],
-    "sec": "БЛОК 6 — Unit 11: A healthy future + Unit 12: Incredible wildlife · уроки 34–38"
+    "sec": "БЛОК 6 — Unit 11: A healthy future + Unit 12: Incredible wildlife · уроки 34–39"
    },
    {
     "n": 36,
@@ -15368,7 +15368,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share) · Grammar: guided discovery + controlled practice"
      ]
     ],
-    "sec": "БЛОК 6 — Unit 11: A healthy future + Unit 12: Incredible wildlife · уроки 34–38"
+    "sec": "БЛОК 6 — Unit 11: A healthy future + Unit 12: Incredible wildlife · уроки 34–39"
    },
    {
     "n": 37,
@@ -15394,7 +15394,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · аудирование: gist + detail · Prepare to speak: useful language · Timed Pair Share / ролевые диалоги · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 6 — Unit 11: A healthy future + Unit 12: Incredible wildlife · уроки 34–38"
+    "sec": "БЛОК 6 — Unit 11: A healthy future + Unit 12: Incredible wildlife · уроки 34–39"
    },
    {
     "n": 38,
@@ -15420,7 +15420,7 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade · 2-я половина (45'): тест блока 6 (лексика + грамматика Units 11–12)"
      ]
     ],
-    "sec": "БЛОК 6 — Unit 11: A healthy future + Unit 12: Incredible wildlife · уроки 34–38"
+    "sec": "БЛОК 6 — Unit 11: A healthy future + Unit 12: Incredible wildlife · уроки 34–39"
    },
    {
     "n": 39,
@@ -15446,7 +15446,7 @@ window.PROGRAMS = {
       "Книжный Review 3: задания разворота в командном формате · grammar auction · видео юнитов · рефлексия: что усвоено, что повторить дома"
      ]
     ],
-    "sec": "БЛОК 6 — Unit 11: A healthy future + Unit 12: Incredible wildlife · уроки 34–38"
+    "sec": "БЛОК 6 — Unit 11: A healthy future + Unit 12: Incredible wildlife · уроки 34–39"
    },
    {
     "n": 40,
@@ -15617,7 +15617,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Computer phrases: delete a file, do a search, have a virus, install an app, share links, upload photos, download a podcast"
+      "Computer phrases: delete a file, do a search, download a podcast, have a virus, install an app, password, share links, upload photos"
      ],
      [
       "Грамматика",
@@ -15628,18 +15628,18 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share)"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–52 · расширенный"
+    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–53 · расширенный"
    },
    {
     "n": 47,
     "week": "22.02–28.02",
     "type": "L2 Grammar",
-    "title": "Unit 15 · Digital life — грамматика углублённо (стр. 87 + Grammar reference)",
+    "title": "Unit 15 · Digital life — грамматика углублённо (стр. 88 верх + Grammar reference с. 152)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 15 · Digital life — грамматика углублённо (стр. 87 + Grammar reference)"
+      "Unit 15 · Digital life — грамматика углублённо (стр. 88 верх + Grammar reference с. 152)"
      ],
      [
       "Лексика",
@@ -15654,22 +15654,22 @@ window.PROGRAMS = {
       "Грамматика углублённо: Grammar reference + practice · Rally Coach · WB · свободная практика: персонализированные диалоги и мини-тексты"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–52 · расширенный"
+    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–53 · расширенный"
    },
    {
     "n": 48,
     "week": "01.03–07.03",
     "type": "L3 Vocab 2 + Skills",
-    "title": "Unit 15 · Digital life — разворот 2 (стр. 88–89)",
+    "title": "Unit 15 · Digital life — разворот 2 (стр. 88 низ – 89)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 15 · Digital life — разворот 2 (стр. 88–89)"
+      "Unit 15 · Digital life — разворот 2 (стр. 88 низ – 89)"
      ],
      [
       "Лексика",
-      "Phrasal verbs — technology: look up, plug in, shut down, switch on / off, turn up / down"
+      "Phrasal verbs — technology: look up, plug in, shut down, switch on / off, take out, turn up / down"
      ],
      [
       "Грамматика",
@@ -15680,7 +15680,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · разбор модельного текста: структура, useful language (Prepare to write) · совместное планирование · написание текста · peer check по чек-листу"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–52 · расширенный"
+    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–53 · расширенный"
    },
    {
     "n": 49,
@@ -15706,18 +15706,18 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share)"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–52 · расширенный"
+    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–53 · расширенный"
    },
    {
     "n": 50,
     "week": "08.03–14.03",
     "type": "L2 Grammar",
-    "title": "Unit 16 · Amazing science — грамматика углублённо (стр. 91 + Grammar reference)",
+    "title": "Unit 16 · Amazing science — грамматика углублённо (стр. 92 лево + Grammar reference с. 153)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 16 · Amazing science — грамматика углублённо (стр. 91 + Grammar reference)"
+      "Unit 16 · Amazing science — грамматика углублённо (стр. 92 лево + Grammar reference с. 153)"
      ],
      [
       "Лексика",
@@ -15732,18 +15732,18 @@ window.PROGRAMS = {
       "Грамматика углублённо: Grammar reference + practice · Rally Coach · WB · свободная практика: персонализированные диалоги и мини-тексты"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–52 · расширенный"
+    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–53 · расширенный"
    },
    {
     "n": 51,
     "week": "08.03–14.03",
     "type": "L3 Vocab 2 + Skills",
-    "title": "Unit 16 · Amazing science — разворот 2 (стр. 92–93)",
+    "title": "Unit 16 · Amazing science — разворот 2 (стр. 92 право – 93)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 16 · Amazing science — разворот 2 (стр. 92–93)"
+      "Unit 16 · Amazing science — разворот 2 (стр. 92 право – 93)"
      ],
      [
       "Лексика",
@@ -15758,7 +15758,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · аудирование: gist + detail · Prepare to speak: useful language · Timed Pair Share / ролевые диалоги · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–52 · расширенный"
+    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–53 · расширенный"
    },
    {
     "n": 52,
@@ -15784,7 +15784,7 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade · 2-я половина (45'): тест блока 8 (лексика + грамматика Units 15–16)"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–52 · расширенный"
+    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–53 · расширенный"
    },
    {
     "n": 53,
@@ -15810,7 +15810,7 @@ window.PROGRAMS = {
       "Книжный Review 4: задания разворота в командном формате · grammar auction · видео юнитов · рефлексия: что усвоено, что повторить дома"
      ]
     ],
-    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–52 · расширенный"
+    "sec": "БЛОК 8 — Unit 15: Digital life + Unit 16: Amazing science · уроки 46–53 · расширенный"
    },
    {
     "n": 54,
@@ -15825,7 +15825,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Arts and entertainment: audience, biography, director, gallery, novel, painter, poetry, sculpture, studio, writer"
+      "Arts and entertainment: audience, biography, director, gallery, novel, painter, painting, poet, poetry, sculpture, studio, writer"
      ],
      [
       "Грамматика",
@@ -15851,7 +15851,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Adjectives -al / -ful: central, cheerful, colourful, historical, natural, original, painful, peaceful, successful"
+      "Adjectives -al / -ful: central, cheerful, colourful, historical, natural, original, painful, peaceful, political, stressful, successful"
      ],
      [
       "Грамматика",
@@ -15877,7 +15877,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Jobs: architect, babysitter, builder, firefighter, hairdresser, journalist, lawyer, pharmacist, politician, presenter, vet"
+      "Jobs: architect, babysitter, builder, firefighter, coach, hairdresser, journalist, lawyer, pharmacist, politician, presenter, vet"
      ],
      [
       "Грамматика",
@@ -15992,7 +15992,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share)"
      ]
     ],
-    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–66 · расширенный"
+    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–68 · расширенный"
    },
    {
     "n": 61,
@@ -16018,7 +16018,7 @@ window.PROGRAMS = {
       "Грамматика углублённо: Grammar reference + practice · Rally Coach · WB · свободная практика: персонализированные диалоги и мини-тексты"
      ]
     ],
-    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–66 · расширенный"
+    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–68 · расширенный"
    },
    {
     "n": 62,
@@ -16044,7 +16044,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · разбор модельного текста: структура, useful language (Prepare to write) · совместное планирование · написание текста · peer check по чек-листу"
      ]
     ],
-    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–66 · расширенный"
+    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–68 · расширенный"
    },
    {
     "n": 63,
@@ -16070,7 +16070,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: gist → detail · About you (Think-Pair-Share)"
      ]
     ],
-    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–66 · расширенный"
+    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–68 · расширенный"
    },
    {
     "n": 64,
@@ -16096,7 +16096,7 @@ window.PROGRAMS = {
       "Грамматика углублённо: Grammar reference + practice · Rally Coach · WB · свободная практика: персонализированные диалоги и мини-тексты"
      ]
     ],
-    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–66 · расширенный"
+    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–68 · расширенный"
    },
    {
     "n": 65,
@@ -16122,7 +16122,7 @@ window.PROGRAMS = {
       "Vocabulary 2 · аудирование: gist + detail · Prepare to speak: useful language · Timed Pair Share / ролевые диалоги · отложенная коррекция ошибок"
      ]
     ],
-    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–66 · расширенный"
+    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–68 · расширенный"
    },
    {
     "n": 66,
@@ -16148,7 +16148,7 @@ window.PROGRAMS = {
       "1-я половина (45'): повторение блока — игровые станции, Showdown, Quiz-Quiz-Trade · 2-я половина (45'): тест блока 10 (лексика + грамматика Units 19–20)"
      ]
     ],
-    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–66 · расширенный"
+    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–68 · расширенный"
    },
    {
     "n": 67,
@@ -16174,7 +16174,7 @@ window.PROGRAMS = {
       "Книжный Review 5: задания разворота в командном формате · grammar auction · рефлексия"
      ]
     ],
-    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–66 · расширенный"
+    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–68 · расширенный"
    },
    {
     "n": 68,
@@ -16200,7 +16200,7 @@ window.PROGRAMS = {
       "Резерв на актированные дни · повторение тем по выбору группы · игровые форматы"
      ]
     ],
-    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–66 · расширенный"
+    "sec": "БЛОК 10 — Unit 19: The written word + Unit 20: Seeing is believing · уроки 60–68 · расширенный"
    },
    {
     "n": 69,
@@ -16389,16 +16389,16 @@ window.PROGRAMS = {
     "n": 4,
     "week": "14.09–20.09",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 1 · Going shopping — разворот 1 (стр. 10–11)",
+    "title": "Unit 1 · Going shopping — разворот 1 (стр. 10–12 верх)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 1 · Going shopping — разворот 1 (стр. 10–11)"
+      "Unit 1 · Going shopping — разворот 1 (стр. 10–12 верх)"
      ],
      [
       "Лексика",
-      "Shopping: charge, discount, exchange, online shopping, promotions, purchases, receipt, refunds, send something back, serve, service, spend"
+      "Shopping: charge, discount, exchange, online shopping, promotions, purchases, receipt, refunds, send something back, serve, service, shop (v.), spend"
      ],
      [
       "Грамматика",
@@ -16415,12 +16415,12 @@ window.PROGRAMS = {
     "n": 5,
     "week": "14.09–20.09",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 1 · Going shopping — разворот 2 (стр. 12–13)",
+    "title": "Unit 1 · Going shopping — разворот 2 (стр. 12 низ – 13)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 1 · Going shopping — разворот 2 (стр. 12–13)"
+      "Unit 1 · Going shopping — разворот 2 (стр. 12 низ – 13)"
      ],
      [
       "Лексика",
@@ -16450,7 +16450,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Personality adjectives: annoying, anxious, easygoing, jealous, loyal, reliable, sensible, silly, sociable, talented, thoughtful"
+      "Personality adjectives: annoying, anxious, easygoing, jealous, loyal, reliable, sensible, sensitive, silly, sociable, talented, thoughtful; из описаний квиза: caring, cheerful, confident, cruel, honest"
      ],
      [
       "Грамматика",
@@ -16545,16 +16545,16 @@ window.PROGRAMS = {
     "n": 10,
     "week": "05.10–11.10",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 3 · Fun and games — разворот 1 (стр. 20–21)",
+    "title": "Unit 3 · Fun and games — разворот 1 (стр. 20–22 верх)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 3 · Fun and games — разворот 1 (стр. 20–21)"
+      "Unit 3 · Fun and games — разворот 1 (стр. 20–22 верх)"
      ],
      [
       "Лексика",
-      "Sports phrases: beat the other team, enter a competition, have a go at something, join a club, lose a match, miss an opportunity, score a goal, win a prize"
+      "Sports phrases: beat the other team, enter a competition, give someone the chance, have a go at something, join a club, lose a match, miss an opportunity, score a goal, win a prize"
      ],
      [
       "Грамматика",
@@ -16571,16 +16571,16 @@ window.PROGRAMS = {
     "n": 11,
     "week": "05.10–11.10",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 3 · Fun and games — разворот 2 (стр. 22–23)",
+    "title": "Unit 3 · Fun and games — разворот 2 (стр. 22 низ – 23)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 3 · Fun and games — разворот 2 (стр. 22–23)"
+      "Unit 3 · Fun and games — разворот 2 (стр. 22 низ – 23)"
      ],
      [
       "Лексика",
-      "Suffixes -ist / -er / -or: canoeist, climber, competitor, footballer, sailor, spectator, surfer, winner"
+      "Suffixes -ist / -er / -or: canoeist, climber, competitor, cyclist, finalist, footballer, loser, medallist, player, sailor, spectator, supporter, surfer, swimmer, winner"
      ],
      [
       "Грамматика",
@@ -16597,16 +16597,16 @@ window.PROGRAMS = {
     "n": 12,
     "week": "12.10–18.10",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 4 · Extreme weather — разворот 1 (стр. 24–25)",
+    "title": "Unit 4 · Extreme weather — разворот 1 (стр. 24–26 верх)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 4 · Extreme weather — разворот 1 (стр. 24–25)"
+      "Unit 4 · Extreme weather — разворот 1 (стр. 24–26 верх)"
      ],
      [
       "Лексика",
-      "Extreme weather: blow, earthquake, flood, lightning, pour, rise, snowstorm, tornado"
+      "Extreme weather: blow, earthquake, fall down, flood, flow, lightning, pour, rise, shake, snowstorm, tornado"
      ],
      [
       "Грамматика",
@@ -16623,12 +16623,12 @@ window.PROGRAMS = {
     "n": 13,
     "week": "12.10–18.10",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 4 · Extreme weather — разворот 2 (стр. 26–27)",
+    "title": "Unit 4 · Extreme weather — разворот 2 (стр. 26 низ – 27)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 4 · Extreme weather — разворот 2 (стр. 26–27)"
+      "Unit 4 · Extreme weather — разворот 2 (стр. 26 низ – 27)"
      ],
      [
       "Лексика",
@@ -16701,12 +16701,12 @@ window.PROGRAMS = {
     "n": 16,
     "week": "26.10–01.11",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 5 · You made it! — разворот 1 (стр. 32–33)",
+    "title": "Unit 5 · You made it! — разворот 1 (стр. 32–34 верх)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 5 · You made it! — разворот 1 (стр. 32–33)"
+      "Unit 5 · You made it! — разворот 1 (стр. 32–34 верх)"
      ],
      [
       "Лексика",
@@ -16727,16 +16727,16 @@ window.PROGRAMS = {
     "n": 17,
     "week": "26.10–01.11",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 5 · You made it! — разворот 2 (стр. 34–35)",
+    "title": "Unit 5 · You made it! — разворот 2 (стр. 34 низ – 35)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 5 · You made it! — разворот 2 (стр. 34–35)"
+      "Unit 5 · You made it! — разворот 2 (стр. 34 низ – 35)"
      ],
      [
       "Лексика",
-      "Time adverbs (наречия времени)"
+      "Time adverbs: finally, first, later, next, suddenly, then"
      ],
      [
       "Грамматика",
@@ -16753,12 +16753,12 @@ window.PROGRAMS = {
     "n": 18,
     "week": "02.11–08.11",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 6 · Take care of yourself — разворот 1 (стр. 36–37)",
+    "title": "Unit 6 · Take care of yourself — разворот 1 (стр. 36–38 верх)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 6 · Take care of yourself — разворот 1 (стр. 36–37)"
+      "Unit 6 · Take care of yourself — разворот 1 (стр. 36–38 верх)"
      ],
      [
       "Лексика",
@@ -16779,12 +16779,12 @@ window.PROGRAMS = {
     "n": 19,
     "week": "02.11–08.11",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 6 · Take care of yourself — разворот 2 (стр. 38–39)",
+    "title": "Unit 6 · Take care of yourself — разворот 2 (стр. 38 низ – 39)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 6 · Take care of yourself — разворот 2 (стр. 38–39)"
+      "Unit 6 · Take care of yourself — разворот 2 (стр. 38 низ – 39)"
      ],
      [
       "Лексика",
@@ -16857,16 +16857,16 @@ window.PROGRAMS = {
     "n": 22,
     "week": "16.11–22.11",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 7 · Sound check — разворот 1 (стр. 42–43)",
+    "title": "Unit 7 · Sound check — разворот 1 (стр. 42–44 лево)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 7 · Sound check — разворот 1 (стр. 42–43)"
+      "Unit 7 · Sound check — разворот 1 (стр. 42–44 лево)"
      ],
      [
       "Лексика",
-      "Music: celebrity, concert hall, DJ, festival, gig, guitarist, live, lyrics, music video, sound technician, studio"
+      "Music: celebrity, clip, concert hall, DJ, festival, gig, guitarist, live, lyrics, music channel, music video, musicians, production, sound technician, studio"
      ],
      [
       "Грамматика",
@@ -16883,12 +16883,12 @@ window.PROGRAMS = {
     "n": 23,
     "week": "16.11–22.11",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 7 · Sound check — разворот 2 (стр. 44–45)",
+    "title": "Unit 7 · Sound check — разворот 2 (стр. 44 право – 45)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 7 · Sound check — разворот 2 (стр. 44–45)"
+      "Unit 7 · Sound check — разворот 2 (стр. 44 право – 45)"
      ],
      [
       "Лексика",
@@ -16909,12 +16909,12 @@ window.PROGRAMS = {
     "n": 24,
     "week": "23.11–29.11",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 8 · Amazing architecture — разворот 1 (стр. 46–47)",
+    "title": "Unit 8 · Amazing architecture — разворот 1 (стр. 46–48 лево)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 8 · Amazing architecture — разворот 1 (стр. 46–47)"
+      "Unit 8 · Amazing architecture — разворот 1 (стр. 46–48 лево)"
      ],
      [
       "Лексика",
@@ -16935,12 +16935,12 @@ window.PROGRAMS = {
     "n": 25,
     "week": "23.11–29.11",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 8 · Amazing architecture — разворот 2 (стр. 48–49)",
+    "title": "Unit 8 · Amazing architecture — разворот 2 (стр. 48 право – 49)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 8 · Amazing architecture — разворот 2 (стр. 48–49)"
+      "Unit 8 · Amazing architecture — разворот 2 (стр. 48 право – 49)"
      ],
      [
       "Лексика",
@@ -17013,12 +17013,12 @@ window.PROGRAMS = {
     "n": 28,
     "week": "07.12–13.12",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 9 · The future is now — разворот 1 (стр. 54–55)",
+    "title": "Unit 9 · The future is now — разворот 1 (стр. 54–56 лево)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 9 · The future is now — разворот 1 (стр. 54–55)"
+      "Unit 9 · The future is now — разворот 1 (стр. 54–56 лево)"
      ],
      [
       "Лексика",
@@ -17039,12 +17039,12 @@ window.PROGRAMS = {
     "n": 29,
     "week": "07.12–13.12",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 9 · The future is now — разворот 2 (стр. 56–57)",
+    "title": "Unit 9 · The future is now — разворот 2 (стр. 56 право – 57)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 9 · The future is now — разворот 2 (стр. 56–57)"
+      "Unit 9 · The future is now — разворот 2 (стр. 56 право – 57)"
      ],
      [
       "Лексика",
@@ -17065,12 +17065,12 @@ window.PROGRAMS = {
     "n": 30,
     "week": "14.12–20.12",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 10 · Animals in danger — разворот 1 (стр. 58–59)",
+    "title": "Unit 10 · Animals in danger — разворот 1 (стр. 58–60 лево)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 10 · Animals in danger — разворот 1 (стр. 58–59)"
+      "Unit 10 · Animals in danger — разворот 1 (стр. 58–60 лево)"
      ],
      [
       "Лексика",
@@ -17078,7 +17078,7 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Conditional sentences: Second Conditional"
+      "Conditional sentences: Zero и First Conditional + unless; затем Second Conditional"
      ],
      [
       "Виды деятельности",
@@ -17091,12 +17091,12 @@ window.PROGRAMS = {
     "n": 31,
     "week": "14.12–20.12",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 10 · Animals in danger — разворот 2 (стр. 60–61)",
+    "title": "Unit 10 · Animals in danger — разворот 2 (стр. 60 право – 61)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 10 · Animals in danger — разворот 2 (стр. 60–61)"
+      "Unit 10 · Animals in danger — разворот 2 (стр. 60 право – 61)"
      ],
      [
       "Лексика",
@@ -17143,12 +17143,12 @@ window.PROGRAMS = {
     "n": 33,
     "week": "21.12–27.12",
     "type": "Midterm Test",
-    "title": "Полугодовой тест · Units 1–10",
+    "title": "Полугодовой тест · Units 1–10: Cambridge Term Test 1 (покрывает Units 1–7); Unit 8 проверен тестом блока 4; Units 9–10 — тестом блока 5",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Полугодовой тест · Units 1–10"
+      "Полугодовой тест · Units 1–10: Cambridge Term Test 1 (покрывает Units 1–7); Unit 8 проверен тестом блока 4; Units 9–10 — тестом блока 5"
      ],
      [
       "Лексика",
@@ -17169,12 +17169,12 @@ window.PROGRAMS = {
     "n": 34,
     "week": "11.01–17.01",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 11 · Off to school — разворот 1 (стр. 64–65)",
+    "title": "Unit 11 · Off to school — разворот 1 (стр. 64–66 лево)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 11 · Off to school — разворот 1 (стр. 64–65)"
+      "Unit 11 · Off to school — разворот 1 (стр. 64–66 лево)"
      ],
      [
       "Лексика",
@@ -17195,12 +17195,12 @@ window.PROGRAMS = {
     "n": 35,
     "week": "11.01–17.01",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 11 · Off to school — разворот 2 (стр. 66–67)",
+    "title": "Unit 11 · Off to school — разворот 2 (стр. 66 право – 67)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 11 · Off to school — разворот 2 (стр. 66–67)"
+      "Unit 11 · Off to school — разворот 2 (стр. 66 право – 67)"
      ],
      [
       "Лексика",
@@ -17221,16 +17221,16 @@ window.PROGRAMS = {
     "n": 36,
     "week": "18.01–24.01",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 12 · Getting around — разворот 1 (стр. 68–69)",
+    "title": "Unit 12 · Getting around — разворот 1 (стр. 68–70 лево)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 12 · Getting around — разворот 1 (стр. 68–69)"
+      "Unit 12 · Getting around — разворот 1 (стр. 68–70 лево)"
      ],
      [
       "Лексика",
-      "Travel: abroad, be held up, check in, land, reach, sail, set off, tour, unpack"
+      "Travel: abroad, be held up, check in, go away, land, reach, sail, set off, tour, unpack"
      ],
      [
       "Грамматика",
@@ -17247,12 +17247,12 @@ window.PROGRAMS = {
     "n": 37,
     "week": "18.01–24.01",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 12 · Getting around — разворот 2 (стр. 70–71)",
+    "title": "Unit 12 · Getting around — разворот 2 (стр. 70 право – 71)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 12 · Getting around — разворот 2 (стр. 70–71)"
+      "Unit 12 · Getting around — разворот 2 (стр. 70 право – 71)"
      ],
      [
       "Лексика",
@@ -17351,12 +17351,12 @@ window.PROGRAMS = {
     "n": 41,
     "week": "01.02–07.02",
     "type": "L2 Grammar",
-    "title": "Unit 13 · #NoFilter — грамматика углублённо (стр. 77 + Grammar reference)",
+    "title": "Unit 13 · #NoFilter — грамматика углублённо (стр. 78 лево + Grammar reference с. 159)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 13 · #NoFilter — грамматика углублённо (стр. 77 + Grammar reference)"
+      "Unit 13 · #NoFilter — грамматика углублённо (стр. 78 лево + Grammar reference с. 159)"
      ],
      [
       "Лексика",
@@ -17377,12 +17377,12 @@ window.PROGRAMS = {
     "n": 42,
     "week": "08.02–14.02",
     "type": "L3 Vocab 2 + Skills",
-    "title": "Unit 13 · #NoFilter — разворот 2 (стр. 78–79)",
+    "title": "Unit 13 · #NoFilter — разворот 2 (стр. 78 право – 79)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 13 · #NoFilter — разворот 2 (стр. 78–79)"
+      "Unit 13 · #NoFilter — разворот 2 (стр. 78 право – 79)"
      ],
      [
       "Лексика",
@@ -17429,12 +17429,12 @@ window.PROGRAMS = {
     "n": 44,
     "week": "15.02–21.02",
     "type": "L2 Grammar",
-    "title": "Unit 14 · Let's cook! — грамматика углублённо (стр. 81 + Grammar reference)",
+    "title": "Unit 14 · Let's cook! — грамматика углублённо (стр. 82 лево + Grammar reference с. 160)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 14 · Let's cook! — грамматика углублённо (стр. 81 + Grammar reference)"
+      "Unit 14 · Let's cook! — грамматика углублённо (стр. 82 лево + Grammar reference с. 160)"
      ],
      [
       "Лексика",
@@ -17455,12 +17455,12 @@ window.PROGRAMS = {
     "n": 45,
     "week": "15.02–21.02",
     "type": "L3 Vocab 2 + Skills",
-    "title": "Unit 14 · Let's cook! — разворот 2 (стр. 82–83)",
+    "title": "Unit 14 · Let's cook! — разворот 2 (стр. 82 право – 83)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 14 · Let's cook! — разворот 2 (стр. 82–83)"
+      "Unit 14 · Let's cook! — разворот 2 (стр. 82 право – 83)"
      ],
      [
       "Лексика",
@@ -17507,12 +17507,12 @@ window.PROGRAMS = {
     "n": 47,
     "week": "22.02–28.02",
     "type": "Exam practice 6",
-    "title": "Prepare for the exam · Listening Parts 3–4 (стр. 130–131)",
+    "title": "Prepare for the exam · Listening Parts 3–4 + Speaking Part 1 (стр. 130–131)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Prepare for the exam · Listening Parts 3–4 (стр. 130–131)"
+      "Prepare for the exam · Listening Parts 3–4 + Speaking Part 1 (стр. 130–131)"
      ],
      [
       "Лексика",
@@ -17524,7 +17524,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Gap fill · Multiple choice: interview · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ОГЭ"
+      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Gap fill · Multiple choice: interview · Personal questions (Speaking Part 1) · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ОГЭ"
      ]
     ],
     "sec": "БЛОК 7 — Unit 13: #NoFilter + Unit 14: Let's cook! · уроки 40–47 · расширенный"
@@ -17559,12 +17559,12 @@ window.PROGRAMS = {
     "n": 49,
     "week": "01.03–07.03",
     "type": "L2 Grammar",
-    "title": "Unit 15 · City or country? — грамматика углублённо (стр. 87 + Grammar reference)",
+    "title": "Unit 15 · City or country? — грамматика углублённо (стр. 88 лево + Grammar reference с. 161)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 15 · City or country? — грамматика углублённо (стр. 87 + Grammar reference)"
+      "Unit 15 · City or country? — грамматика углублённо (стр. 88 лево + Grammar reference с. 161)"
      ],
      [
       "Лексика",
@@ -17585,12 +17585,12 @@ window.PROGRAMS = {
     "n": 50,
     "week": "08.03–14.03",
     "type": "L3 Vocab 2 + Skills",
-    "title": "Unit 15 · City or country? — разворот 2 (стр. 88–89)",
+    "title": "Unit 15 · City or country? — разворот 2 (стр. 88 право – 89)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 15 · City or country? — разворот 2 (стр. 88–89)"
+      "Unit 15 · City or country? — разворот 2 (стр. 88 право – 89)"
      ],
      [
       "Лексика",
@@ -17637,12 +17637,12 @@ window.PROGRAMS = {
     "n": 52,
     "week": "15.03–21.03",
     "type": "L2 Grammar",
-    "title": "Unit 16 · Lights, camera, action! — грамматика углублённо (стр. 91 + Grammar reference)",
+    "title": "Unit 16 · Lights, camera, action! — грамматика углублённо (стр. 92 лево + Grammar reference с. 162)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 16 · Lights, camera, action! — грамматика углублённо (стр. 91 + Grammar reference)"
+      "Unit 16 · Lights, camera, action! — грамматика углублённо (стр. 92 лево + Grammar reference с. 162)"
      ],
      [
       "Лексика",
@@ -17663,12 +17663,12 @@ window.PROGRAMS = {
     "n": 53,
     "week": "15.03–21.03",
     "type": "L3 Vocab 2 + Skills",
-    "title": "Unit 16 · Lights, camera, action! — разворот 2 (стр. 92–93)",
+    "title": "Unit 16 · Lights, camera, action! — разворот 2 (стр. 92 право – 93)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 16 · Lights, camera, action! — разворот 2 (стр. 92–93)"
+      "Unit 16 · Lights, camera, action! — разворот 2 (стр. 92 право – 93)"
      ],
      [
       "Лексика",
@@ -17715,12 +17715,12 @@ window.PROGRAMS = {
     "n": 55,
     "week": "22.03–28.03",
     "type": "Exam practice 7",
-    "title": "Prepare for the exam · Speaking Parts 1–2 (стр. 132–133)",
+    "title": "Prepare for the exam · Speaking Parts 2–3 (стр. 132–133)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Prepare for the exam · Speaking Parts 1–2 (стр. 132–133)"
+      "Prepare for the exam · Speaking Parts 2–3 (стр. 132–133)"
      ],
      [
       "Лексика",
@@ -17732,7 +17732,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Personal questions · Describing a photo · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ОГЭ"
+      "Формат B1 Preliminary for Schools: разбор задания и стратегий · Describing a photo · Discussing options · практика в экзаменационных условиях · парная проверка и разбор · параллели с заданиями ОГЭ"
      ]
     ],
     "sec": "БЛОК 8 — Unit 15: City or country? + Unit 16: Lights · camera · action! · уроки 48–55 · расширенный"
@@ -17741,12 +17741,12 @@ window.PROGRAMS = {
     "n": 56,
     "week": "29.03–04.04",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 17 · Getting the message — разворот 1 (стр. 98–99)",
+    "title": "Unit 17 · Getting the message — разворот 1 (стр. 98–100 лево)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 17 · Getting the message — разворот 1 (стр. 98–99)"
+      "Unit 17 · Getting the message — разворот 1 (стр. 98–100 лево)"
      ],
      [
       "Лексика",
@@ -17767,12 +17767,12 @@ window.PROGRAMS = {
     "n": 57,
     "week": "29.03–04.04",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 17 · Getting the message — разворот 2 (стр. 100–101)",
+    "title": "Unit 17 · Getting the message — разворот 2 (стр. 100 право – 101)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 17 · Getting the message — разворот 2 (стр. 100–101)"
+      "Unit 17 · Getting the message — разворот 2 (стр. 100 право – 101)"
      ],
      [
       "Лексика",
@@ -17793,16 +17793,16 @@ window.PROGRAMS = {
     "n": 58,
     "week": "05.04–11.04",
     "type": "L1 Vocab + Reading + Grammar",
-    "title": "Unit 18 · We love celebs! — разворот 1 (стр. 102–103)",
+    "title": "Unit 18 · We love celebs! — разворот 1 (стр. 102–104 лево)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 18 · We love celebs! — разворот 1 (стр. 102–103)"
+      "Unit 18 · We love celebs! — разворот 1 (стр. 102–104 лево)"
      ],
      [
       "Лексика",
-      "Personal feelings and qualities: annoyed, charming, curious, delighted, lonely, nasty, professional, rude, shy, stressful, unexpected"
+      "Personal feelings and qualities: annoyed, charming, curious, delighted, lonely, mad (about), nasty, professional, rude, shy, stressful, unexpected"
      ],
      [
       "Грамматика",
@@ -17819,12 +17819,12 @@ window.PROGRAMS = {
     "n": 59,
     "week": "05.04–11.04",
     "type": "L2 Vocab 2 + Skills",
-    "title": "Unit 18 · We love celebs! — разворот 2 (стр. 104–105)",
+    "title": "Unit 18 · We love celebs! — разворот 2 (стр. 104 право – 105)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 18 · We love celebs! — разворот 2 (стр. 104–105)"
+      "Unit 18 · We love celebs! — разворот 2 (стр. 104 право – 105)"
      ],
      [
       "Лексика",
@@ -17871,12 +17871,12 @@ window.PROGRAMS = {
     "n": 61,
     "week": "12.04–18.04",
     "type": "Exam practice 8",
-    "title": "Prepare for the exam · Speaking Parts 3–4 + прогон (стр. 134)",
+    "title": "Prepare for the exam · Speaking Part 4 + полный прогон (стр. 133–134)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Prepare for the exam · Speaking Parts 3–4 + прогон (стр. 134)"
+      "Prepare for the exam · Speaking Part 4 + полный прогон (стр. 133–134)"
      ],
      [
       "Лексика",
@@ -17910,7 +17910,7 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Грамматика в контексте чтения (введение)"
+      "Грамматики на этом развороте нет — although / whereas / while замечаются в объявлениях"
      ],
      [
       "Виды деятельности",
@@ -17923,12 +17923,12 @@ window.PROGRAMS = {
     "n": 63,
     "week": "19.04–25.04",
     "type": "L2 Grammar",
-    "title": "Unit 19 · The world of work — грамматика углублённо (стр. 109 + Grammar reference)",
+    "title": "Unit 19 · The world of work — грамматика углублённо (стр. 110 лево + Grammar reference с. 165)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 19 · The world of work — грамматика углублённо (стр. 109 + Grammar reference)"
+      "Unit 19 · The world of work — грамматика углублённо (стр. 110 лево + Grammar reference с. 165)"
      ],
      [
       "Лексика",
@@ -17949,12 +17949,12 @@ window.PROGRAMS = {
     "n": 64,
     "week": "26.04–02.05",
     "type": "L3 Vocab 2 + Skills",
-    "title": "Unit 19 · The world of work — разворот 2 (стр. 110–111)",
+    "title": "Unit 19 · The world of work — разворот 2 (стр. 110 право – 111)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 19 · The world of work — разворот 2 (стр. 110–111)"
+      "Unit 19 · The world of work — разворот 2 (стр. 110 право – 111)"
      ],
      [
       "Лексика",
@@ -18001,12 +18001,12 @@ window.PROGRAMS = {
     "n": 66,
     "week": "03.05–09.05",
     "type": "L2 Grammar",
-    "title": "Unit 20 · Making plans — грамматика углублённо (стр. 113 + Grammar reference)",
+    "title": "Unit 20 · Making plans — грамматика углублённо (стр. 114 лево + Grammar reference с. 166)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 20 · Making plans — грамматика углублённо (стр. 113 + Grammar reference)"
+      "Unit 20 · Making plans — грамматика углублённо (стр. 114 лево + Grammar reference с. 166)"
      ],
      [
       "Лексика",
@@ -18027,12 +18027,12 @@ window.PROGRAMS = {
     "n": 67,
     "week": "03.05–09.05",
     "type": "L3 Vocab 2 + Skills",
-    "title": "Unit 20 · Making plans — разворот 2 (стр. 114–115)",
+    "title": "Unit 20 · Making plans — разворот 2 (стр. 114 право – 115)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 20 · Making plans — разворот 2 (стр. 114–115)"
+      "Unit 20 · Making plans — разворот 2 (стр. 114 право – 115)"
      ],
      [
       "Лексика",
@@ -20148,7 +20148,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "School life · Higher education · do and make"
+      "School life · Higher education"
      ],
      [
       "Грамматика",
@@ -20174,7 +20174,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Developing vocabulary: расширение темы юнита"
+      "Developing vocabulary: do and make (кн. 9)"
      ],
      [
       "Грамматика",
@@ -20260,7 +20260,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Grammar test юнита (книжный) + лексика"
+      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
      ]
     ],
     "sec": "UNIT 1 — Make the grade · уроки 4–8"
@@ -20278,7 +20278,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Work conditions and responsibilities · Working life, hours and pay · Phrasal verbs — work"
+      "Work conditions and responsibilities · Working life, hours and pay"
      ],
      [
       "Грамматика",
@@ -20304,7 +20304,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Developing vocabulary: расширение темы юнита"
+      "Developing vocabulary: Phrasal verbs — work (кн. 21)"
      ],
      [
       "Грамматика",
@@ -20390,7 +20390,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Grammar test юнита (книжный) + лексика"
+      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
      ]
     ],
     "sec": "UNIT 2 — A job well done · уроки 9–14"
@@ -20399,12 +20399,12 @@ window.PROGRAMS = {
     "n": 14,
     "week": "19.10–25.10",
     "type": "Exam success 1",
-    "title": "Exam success 1–2 (стр. 30–31 + 144)",
+    "title": "Exam success 1–2 (стр. 30 + 144; стр. 31 = Collaborative project 1)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Exam success 1–2 (стр. 30–31 + 144)"
+      "Exam success 1–2 (стр. 30 + 144; стр. 31 = Collaborative project 1)"
      ],
      [
       "Лексика",
@@ -20434,7 +20434,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Words connected with transport and travel · Prefixes"
+      "Words connected with transport and travel"
      ],
      [
       "Грамматика",
@@ -20460,7 +20460,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Developing vocabulary: расширение темы юнита"
+      "Developing vocabulary: Prefixes (кн. 35)"
      ],
      [
       "Грамматика",
@@ -20546,7 +20546,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Grammar test юнита (книжный) + лексика"
+      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
      ]
     ],
     "sec": "UNIT 3 — Departure time · уроки 15–19"
@@ -20564,7 +20564,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Personality adjectives · Idioms — personality · Noun suffixes"
+      "Personality adjectives · Idioms — personality"
      ],
      [
       "Грамматика",
@@ -20590,7 +20590,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Developing vocabulary: расширение темы юнита"
+      "Developing vocabulary: Noun suffixes (кн. 47)"
      ],
      [
       "Грамматика",
@@ -20676,7 +20676,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Grammar test юнита (книжный) + лексика"
+      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
      ]
     ],
     "sec": "UNIT 4 — Our strengths · уроки 20–25"
@@ -20685,12 +20685,12 @@ window.PROGRAMS = {
     "n": 25,
     "week": "23.11–29.11",
     "type": "Exam success 2",
-    "title": "Exam success 3–4 (стр. 56–57 + 145)",
+    "title": "Exam success 3–4 (стр. 56 + 145; стр. 57 = Collaborative project 2)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Exam success 3–4 (стр. 56–57 + 145)"
+      "Exam success 3–4 (стр. 56 + 145; стр. 57 = Collaborative project 2)"
      ],
      [
       "Лексика",
@@ -20720,7 +20720,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Spending and saving money · Idioms — money · Phrasal verbs — money and shopping"
+      "Spending and saving money · Idioms — money"
      ],
      [
       "Грамматика",
@@ -20746,7 +20746,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Developing vocabulary: расширение темы юнита"
+      "Developing vocabulary: Phrasal verbs — money and shopping (кн. 61)"
      ],
      [
       "Грамматика",
@@ -20832,7 +20832,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Grammar test юнита (книжный) + лексика"
+      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
      ]
     ],
     "sec": "UNIT 5 — Financial advice · уроки 26–33"
@@ -20928,7 +20928,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Parts of the body · Health and medical care · Idioms — health and illness"
+      "Parts of the body · Health and medical care"
      ],
      [
       "Грамматика",
@@ -20954,7 +20954,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Developing vocabulary: расширение темы юнита"
+      "Developing vocabulary: Idioms — health and illness (кн. 73)"
      ],
      [
       "Грамматика",
@@ -21066,7 +21066,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Grammar test юнита (книжный) + лексика"
+      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
      ]
     ],
     "sec": "UNIT 6 — Get fit · stay fit! · уроки 34–40 · Writing отдельным уроком"
@@ -21075,12 +21075,12 @@ window.PROGRAMS = {
     "n": 40,
     "week": "01.02–07.02",
     "type": "Exam success 3",
-    "title": "Exam success 5–6 (стр. 82–83 + 146)",
+    "title": "Exam success 5–6 (стр. 82 + 146; стр. 83 = Collaborative project 3)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Exam success 5–6 (стр. 82–83 + 146)"
+      "Exam success 5–6 (стр. 82 + 146; стр. 83 = Collaborative project 3)"
      ],
      [
       "Лексика",
@@ -21110,7 +21110,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Words connected with film, fiction and music · Adjectives to use in reviews · Compound nouns"
+      "Words connected with film, fiction and music · Adjectives to use in reviews"
      ],
      [
       "Грамматика",
@@ -21136,7 +21136,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Developing vocabulary: расширение темы юнита"
+      "Developing vocabulary: Compound nouns (кн. 87)"
      ],
      [
       "Грамматика",
@@ -21192,7 +21192,7 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Говорение: Discussions (1): кино и адаптации"
+      "Говорение: Discussions (1): справедливость кинопремий"
      ],
      [
       "Виды деятельности",
@@ -21248,7 +21248,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Grammar test юнита (книжный) + лексика"
+      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
      ]
     ],
     "sec": "UNIT 7 — Rave reviews · уроки 41–46 · Writing отдельным уроком"
@@ -21266,7 +21266,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Natural disasters and extreme weather · Words connected with natural disasters · Prepositional verbs"
+      "Natural disasters and extreme weather · Words connected with natural disasters"
      ],
      [
       "Грамматика",
@@ -21292,7 +21292,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Developing vocabulary: расширение темы юнита"
+      "Developing vocabulary: Prepositional verbs (кн. 99)"
      ],
      [
       "Грамматика",
@@ -21404,7 +21404,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Grammar test юнита (книжный) + лексика"
+      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
      ]
     ],
     "sec": "UNIT 8 — To the rescue! · уроки 47–53 · Writing отдельным уроком"
@@ -21413,12 +21413,12 @@ window.PROGRAMS = {
     "n": 53,
     "week": "15.03–21.03",
     "type": "Exam success 4",
-    "title": "Exam success 7–8 (стр. 108–109 + 147)",
+    "title": "Exam success 7–8 (стр. 108 + 147; стр. 109 = Collaborative project 4)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Exam success 7–8 (стр. 108–109 + 147)"
+      "Exam success 7–8 (стр. 108 + 147; стр. 109 = Collaborative project 4)"
      ],
      [
       "Лексика",
@@ -21448,7 +21448,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Technology and IT · Adjectives to describe technology · Phrasal verbs — technology and computers"
+      "Technology and IT · Adjectives to describe technology"
      ],
      [
       "Грамматика",
@@ -21456,7 +21456,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Tech World — онлайн-статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
+      "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Graphene — научно-популярная статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
     "sec": "UNIT 9 — Tech talk · уроки 54–59 · Writing отдельным уроком"
@@ -21474,7 +21474,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Developing vocabulary: расширение темы юнита"
+      "Developing vocabulary: Phrasal verbs — technology and computers (кн. 113)"
      ],
      [
       "Грамматика",
@@ -21586,7 +21586,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Grammar test юнита (книжный) + лексика"
+      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
      ]
     ],
     "sec": "UNIT 9 — Tech talk · уроки 54–59 · Writing отдельным уроком"
@@ -21604,7 +21604,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "News sections · Words frequently used in news headlines · Collocations connected with the news"
+      "News sections · Words frequently used in news headlines"
      ],
      [
       "Грамматика",
@@ -21630,7 +21630,7 @@ window.PROGRAMS = {
      ],
      [
       "Лексика",
-      "Developing vocabulary: расширение темы юнита"
+      "Developing vocabulary: Collocations connected with the news (кн. 125)"
      ],
      [
       "Грамматика",
@@ -21686,7 +21686,7 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Говорение: Presentations (2): посты и реакции в соцсетях"
+      "Говорение: Presentations (2): свобода прессы"
      ],
      [
       "Виды деятельности",
@@ -21742,7 +21742,7 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Grammar test юнита (книжный) + лексика"
+      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
      ]
     ],
     "sec": "UNIT 10 — News just in! · уроки 60–68 · Writing отдельным уроком"
@@ -21751,12 +21751,12 @@ window.PROGRAMS = {
     "n": 66,
     "week": "03.05–09.05",
     "type": "Exam success 5",
-    "title": "Exam success 9–10 (стр. 134–135 + 148)",
+    "title": "Exam success 9–10 (стр. 134 + 148; стр. 135 = Collaborative project 5)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Exam success 9–10 (стр. 134–135 + 148)"
+      "Exam success 9–10 (стр. 134 + 148; стр. 135 = Collaborative project 5)"
      ],
      [
       "Лексика",
