@@ -1,5 +1,8 @@
 // АВТОГЕНЕРАЦИЯ: список готовых планов уроков (файлы в plans/*.html).
 window.PLANS = {
+  "GatewayB2-Intro-P1": 1,
+  "GatewayB2-Intro-P2": 1,
+  "GatewayB2-Intro-P3": 1,
   "GatewayB2-U1-P1": 1,
   "GatewayB2-U1-P2": 1,
   "GatewayB2-U1-P3": 1,
@@ -42,6 +45,13 @@ window.PLANS = {
   "GatewayB2-U7-P4": 1,
   "GatewayB2-U7-P5": 1,
   "GatewayB2-U7-P6": 1,
+  "GatewayB2-U8-P1": 1,
+  "GatewayB2-U8-P2": 1,
+  "GatewayB2-U8-P3": 1,
+  "GatewayB2-U8-P4": 1,
+  "GatewayB2-U8-P5": 1,
+  "GatewayB2-U8-P6": 1,
+  "GatewayB2-U8-P7": 1,
   "GatewayB2-U9-P1": 1,
   "GatewayB2-U9-P2": 1,
   "GatewayB2-U9-P3": 1,
