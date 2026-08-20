@@ -141,22 +141,34 @@ const JOURNALS = { // журнал наблюдений (печать)
   GIA2new: "https://drive.google.com/file/d/1wHdolz7eG9K4b9Ch5zkorJdfexvh3KE_/view",
   Prepare3:"https://drive.google.com/file/d/1z9ElIruPY8EoJ5wWKjw0Z48AiTHC0FG7/view"
 };
-// первый/последний ли это урок юнита (секции ≥4 уроков, чтобы не дёргать на Genki-однострочных секциях)
-function unitEdge(program, L){
-  const prog = window.PROGRAMS[program]; if(!prog || !L.sec) return {first:false,last:false};
-  const same = prog.lessons.filter(x=>x.sec===L.sec);
-  if (same.length < 4) return {first:false,last:false};
-  const ns = same.map(x=>x.n);
-  return {first: L.n===Math.min(...ns), last: L.n===Math.max(...ns)};
+// ---- границы блока, по которому строится отчёт ----
+// секция в КТП не всегда равна блоку генератора: в Genki каждая строка — «Adventure Урок 3»,
+// в GMF1zero/GMF2zero первые уроки — вводный блок Genki English. Приводим к блоку генератора.
+function unitGroup(program, L){
+  const sec = L.sec || "";
+  if (program === "Genki")    return sec.replace(/\s*(Урок\s*\d+|Review)\s*$/i, "").trim() || sec;
+  if (program === "GMF1zero" && /^Genki\s+урок/i.test(sec)) return "Genki English";
+  if (program === "GMF2zero" && !sec) return "Genki English";
+  return sec;
 }
+const NO_REPORT = /РЕЗЕРВ|SPEAKING EXAM|FINAL TEST|Повторение/i;      // отчёта по такому блоку не бывает
+const SMALL_OK  = /STARTER|MID-?YEAR|MIDTERM|FINAL|SHOWCASE|UNIT|ЮНИТ|ВВОДН|БЛОК/i; // блок есть в генераторе даже если уроков < 4
+function unitEdge(program, L){
+  const prog = window.PROGRAMS[program]; if(!prog) return {first:false,last:false};
+  const g = unitGroup(program, L); if(!g || NO_REPORT.test(g)) return {first:false,last:false};
+  const ns = prog.lessons.filter(x=>unitGroup(program,x)===g).map(x=>x.n);
+  if (ns.length < 4 && !SMALL_OK.test(g)) return {first:false,last:false};
+  return {first: L.n===Math.min(...ns), last: L.n===Math.max(...ns), group:g};
+}
+function shortSec(g){ return String(g).split("·")[0].split("—")[0].trim().slice(0,40); }
 function reminderHtml(program, L){
   const e = unitEdge(program, L); let out="";
   if (e.first){
     const btn = LETTERS[program] ? ` <a class="rembtn" href="${LETTERS[program]}" target="_blank" rel="noopener">Открыть письма ↗</a>` : "";
-    out += `<div class="remind letter">📩 Начало юнита — отправь родителям письмо «что будем учить»${btn}</div>`;
+    out += `<div class="remind letter">📩 Начало блока${e.group?" «"+esc(shortSec(e.group))+"»":""} — отправь родителям письмо «что будем учить»${btn}</div>`;
   }
   if (e.last && REPORTS[program]){
-    out += `<div class="remind report">📊 Конец юнита — сгенерируй индивидуальные отчёты <a class="rembtn" href="${REPORTS[program]}" target="_blank" rel="noopener">Генератор ↗</a></div>`;
+    out += `<div class="remind report">📊 Конец блока${e.group?" «"+esc(shortSec(e.group))+"»":""} — сгенерируй индивидуальные отчёты <a class="rembtn" href="${REPORTS[program]}" target="_blank" rel="noopener">Генератор ↗</a></div>`;
   }
   return out;
 }
