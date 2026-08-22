@@ -80,6 +80,13 @@
   .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
   .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
   .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
   .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
   .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
 
@@ -91,29 +98,6 @@
     .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
-
-  /* link to the slide deck */
-  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
-    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
-    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
-  .slideslink:hover{ filter:brightness(1.05); }
-  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
-    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
-    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
-  .gameslink:hover{ filter:brightness(1.08); }
-  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
-  table.glance td.gmin a:hover{ border-bottom-style:solid; }
-
-  /* the design in one card (added 04.08.2026) */
-  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
-    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
-  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
-    letter-spacing:.08em; margin-bottom:6px; }
-  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
-  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
-    padding:10px 13px; font-size:.95rem; }
-  .missioncard .pitch b{ color:var(--p-ink); }
-  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
 </style>
 
 <div class="wrap">
@@ -122,13 +106,9 @@
     <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · input → guided practice → speaking, in game shells · pairs + teams of 3 · points, no dry drills</div>
     <div class="meta"><span class='chip'>Week 14.09–20.09 · lessons 9–10 (KTP pair 5)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>SB pp.12–13</span><span class='chip'>teams of 3 · unit points board</span></div>
   </div>
-  <a class="slideslink" href="https://speakandsmile.ru/gia1/slides/gia1zero-u1-p1.html" target="_blank" rel="noopener">🖥 Slides for the projector — open the deck for this pair</a>
-  <a class="gameslink" href="https://speakandsmile.ru/gia1/games/u1.html" target="_blank" rel="noopener">🎮 Unit 1 games — for class and for home (+ translation bowling)</a>
 
   <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
-  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p1.html#3' target='_blank' rel='noopener' title='slide 3'>0–6′</a></td><td class='gname'>Into the lesson: greeting + rewind</td><td>greeting at the door, a lightning Starter rewind (letters · numbers · internationalisms) for points, a bridge into the topic</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p1.html#4' target='_blank' rel='noopener' title='slide 4'>6–10′</a></td><td class='gname'>Sticker vote: how are countries different?</td><td>everyone sticks a note on “the biggest difference between countries”, I split into teams, open the unit points board</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p1.html#5' target='_blank' rel='noopener' title='slide 5'>10–20′</a></td><td class='gname'>Quiz «Thank you… for…»</td><td>pairs guess where 6 world-famous things are from (SB p.12 ex.1), we check with the audio, points for correct answers</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p1.html#6' target='_blank' rel='noopener' title='slide 6'>20–31′</a></td><td class='gname'>Input: 13 countries + a suffix table</td><td>I build a -an/-ian/-ese/-ish table on the board with stress claps; teams race to fill in their own</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p1.html#7' target='_blank' rel='noopener' title='slide 7'>31–40′</a></td><td class='gname'>The “Brand Detectives” game</td><td>Showdown: a projector quiz “Sony — where from?” (ex.7): a full sentence in 10 seconds + your own question for your neighbours</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p1.html#8' target='_blank' rel='noopener' title='slide 8'>40–50′</a></td><td class='gname'>Video vlog + bingo</td><td>we watch Isabel's vlog with “what do you see” bingo cards, name her top 3 places, vote for a favourite</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p1.html#9' target='_blank' rel='noopener' title='slide 9'>50–61′</a></td><td class='gname'>Speaking circle with a globe (the first I'm from…)</td><td>we throw a ball: catch a country card — say it by the frame “I'm from Japan! I'm Japanese!”, the class echoes</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p1.html#10' target='_blank' rel='noopener' title='slide 10'>61–72′</a></td><td class='gname'>Snap card game: country–nationality</td><td>pairs slap the matching pair of cards (Spain — Spanish!) and say it aloud; 2 rounds</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p1.html#11' target='_blank' rel='noopener' title='slide 11'>72–82′</a></td><td class='gname'>Writing 4 sentences about myself</td><td>write 4 sentences about themselves by the frames, then the first peer check on 2 boxes</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p1.html#12' target='_blank' rel='noopener' title='slide 12'>82–90′</a></td><td class='gname'>Wrap-up + reflection</td><td>Timed RoundRobin: everyone reads one sentence, points, a finger vote on “how many nationalities I know”, homework</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 — the exact pages and tasks for your line (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + a Research bonus); details at the bottom of the procedure</td></tr></tbody></table></div>
-
-  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> Launch the unit rituals calmly: check-in + rewind opening, teams of 3, points board, timer on screen, English-first. Keep instructions ≤ 2 sentences + ICQ. No baby-tone: they are ‘crews’, not ‘kids’.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br>“How are countries different? Food? Money? Sport? School? ONE sticky note — stick it on the biggest difference. Go!” “Food wins! Interesting…” “This unit is OUR WORLD. By the end you'll say where anything on this planet comes from.”<div class='pitchru'>In one line: everyone sticks a note on “the biggest difference between countries”, I split into teams, open the unit points board</div></div></div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: greeting + rewind</td><td>greeting at the door, a lightning Starter rewind (letters · numbers · internationalisms) for points, a bridge into the topic</td></tr><tr><td class='gmin'>6–10′</td><td class='gname'>Sticker vote: how are countries different?</td><td>everyone sticks a note on “the biggest difference between countries”, I split into teams, open the unit points board</td></tr><tr><td class='gmin'>10–20′</td><td class='gname'>Quiz «Thank you… for…»</td><td>pairs guess where 6 world-famous things are from (SB p.12 ex.1), we check with the audio, points for correct answers</td></tr><tr><td class='gmin'>20–31′</td><td class='gname'>Input: 13 countries + a suffix table</td><td>I build a -an/-ian/-ese/-ish table on the board with stress claps; teams race to fill in their own</td></tr><tr><td class='gmin'>31–40′</td><td class='gname'>The “Brand Detectives” game</td><td>Showdown: a projector quiz “Sony — where from?” (ex.7): a full sentence in 10 seconds + your own question for your neighbours</td></tr><tr><td class='gmin'>40–50′</td><td class='gname'>Video vlog + bingo</td><td>we watch Isabel's vlog with “what do you see” bingo cards, name her top 3 places, vote for a favourite</td></tr><tr><td class='gmin'>50–61′</td><td class='gname'>Speaking circle with a globe (the first I'm from…)</td><td>we throw a ball: catch a country card — say it by the frame “I'm from Japan! I'm Japanese!”, the class echoes</td></tr><tr><td class='gmin'>61–72′</td><td class='gname'>Snap card game: country–nationality</td><td>pairs slap the matching pair of cards (Spain — Spanish!) and say it aloud; 2 rounds</td></tr><tr><td class='gmin'>72–82′</td><td class='gname'>Writing 4 sentences about myself</td><td>write 4 sentences about themselves by the frames, then the first peer check on 2 boxes</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Wrap-up + reflection</td><td>Timed RoundRobin: everyone reads one sentence, points, a finger vote on “how many nationalities I know”, homework</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 — the exact pages and tasks for your line (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + a Research bonus); details at the bottom of the procedure</td></tr></tbody></table></div>
 
   <div class="eyebrow">Procedure — full staging</div>
   <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>

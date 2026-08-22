@@ -80,6 +80,13 @@
   .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
   .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
   .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
   .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
   .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
 
@@ -91,29 +98,6 @@
     .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
-
-  /* link to the slide deck */
-  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
-    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
-    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
-  .slideslink:hover{ filter:brightness(1.05); }
-  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
-    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
-    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
-  .gameslink:hover{ filter:brightness(1.08); }
-  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
-  table.glance td.gmin a:hover{ border-bottom-style:solid; }
-
-  /* the design in one card (added 04.08.2026) */
-  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
-    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
-  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
-    letter-spacing:.08em; margin-bottom:6px; }
-  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
-  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
-    padding:10px 13px; font-size:.95rem; }
-  .missioncard .pitch b{ color:var(--p-ink); }
-  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
 </style>
 
 <div class="wrap">
@@ -122,12 +106,9 @@
     <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>continuing line 🚀 after GMF4</b> · 90 min · mission-based: gate → base sprint → challenge → product with a bar · leaderboard</div>
     <div class="meta"><span class='chip'>Week 21.12–27.12 · lessons 65–66 (KTP pair 33)</span><span class='chip new'>🚀 continuing after GMF4</span><span class='chip'>Starter–U4 (speaking)</span><span class='chip'>speaking · rematch · New Year final</span></div>
   </div>
-  <a class="slideslink" href="https://speakandsmile.ru/gia1/slides/gia1-mid-p3.html" target="_blank" rel="noopener">🖥 Slides for the projector — open the deck for this pair</a>
 
   <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
-  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-mid-p3.html#3' target='_blank' rel='noopener' title='slide 3'>0–5′</a></td><td class='gname'>Into the lesson: a run-through of “About me” in pairs</td><td>a warm meeting; rewind via Kagan <b>Timed Pair Share</b>: a 60-sec “About me” with the listener's job (the homework put to use); bridge to check day</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-mid-p3.html#4' target='_blank' rel='noopener' title='slide 4'>5–8′</a></td><td class='gname'>Setting up the mission: the finale's three missions</td><td>map of the day: carousel + individual checks → rematch quiz → results+celebration; the rules of the carousel</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-mid-p3.html#5' target='_blank' rel='noopener' title='slide 5'>8–45′</a></td><td class='gname'>Speaking checkpoint + station carousel</td><td>I check one at a time (2–3 min: About me → interview questions → follow-ups → a mini-opinion); the class — a carousel of 3 stations</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-mid-p3.html#6' target='_blank' rel='noopener' title='slide 6'>45–47′</a></td><td class='gname'>Bridge: the rematch begins</td><td>bridge: the voices are counted — time for the rematch over the test</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-mid-p3.html#7' target='_blank' rel='noopener' title='slide 7'>47–65′</a></td><td class='gname'>Rematch quiz: test mistakes → points</td><td>a rematch quiz via Kagan <b>Showdown</b>: the test's top-8 mistakes (anonymised) — EVERYONE fixes them on mini-boards, boards up on command; a personal error log in the notebook</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-mid-p3.html#8' target='_blank' rel='noopener' title='slide 8'>65–75′</a></td><td class='gname'>Half-year summary: I can + a letter to May</td><td>the half-year summary: an I-can list for Starter–U4 with checkmarks + finishing the “May-me” letter; personal goals for the 2nd half-year (2 of them)</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-mid-p3.html#9' target='_blank' rel='noopener' title='slide 9'>75–88′</a></td><td class='gname'>New Year finale + ceremony</td><td>a festive finale: a team celebration game using the half-year's language + an achievement ceremony</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-mid-p3.html#10' target='_blank' rel='noopener' title='slide 10'>88–90′</a></td><td class='gname'>Farewell until January</td><td>farewell until January; light optional holiday homework; a teaser for the 2nd half-year</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Holidays: an optional photo diary “My holidays” + 1 gadget fact for U5</td></tr></tbody></table></div>
-
-  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> The year's last meeting: three tasks — an honest record of speaking progress, going over mistakes with no gloom (a rematch!), and a warm note before the holidays. Everyone should leave saying “I really have grown” with a concrete growth sheet.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br>“The checkpoint is a chat, not a trial. Show me your December self — I met your September self, remember?”<div class='pitchru'>In one line: map of the day: carousel + individual checks → rematch quiz → results+celebration; the rules of the carousel</div></div></div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–5′</td><td class='gname'>Into the lesson: a run-through of “About me” in pairs</td><td>a warm meeting; rewind via Kagan <b>Timed Pair Share</b>: a 60-sec “About me” with the listener's job (the homework put to use); bridge to check day</td></tr><tr class='bridge'><td class='gmin'>5–8′</td><td class='gname'>Setting up the mission: the finale's three missions</td><td>map of the day: carousel + individual checks → rematch quiz → results+celebration; the rules of the carousel</td></tr><tr><td class='gmin'>8–45′</td><td class='gname'>Speaking checkpoint + station carousel</td><td>I check one at a time (2–3 min: About me → interview questions → follow-ups → a mini-opinion); the class — a carousel of 3 stations</td></tr><tr class='bridge'><td class='gmin'>45–47′</td><td class='gname'>Bridge: the rematch begins</td><td>bridge: the voices are counted — time for the rematch over the test</td></tr><tr><td class='gmin'>47–65′</td><td class='gname'>Rematch quiz: test mistakes → points</td><td>a rematch quiz via Kagan <b>Showdown</b>: the test's top-8 mistakes (anonymised) — EVERYONE fixes them on mini-boards, boards up on command; a personal error log in the notebook</td></tr><tr><td class='gmin'>65–75′</td><td class='gname'>Half-year summary: I can + a letter to May</td><td>the half-year summary: an I-can list for Starter–U4 with checkmarks + finishing the “May-me” letter; personal goals for the 2nd half-year (2 of them)</td></tr><tr><td class='gmin'>75–88′</td><td class='gname'>New Year finale + ceremony</td><td>a festive finale: a team celebration game using the half-year's language + an achievement ceremony</td></tr><tr><td class='gmin'>88–90′</td><td class='gname'>Farewell until January</td><td>farewell until January; light optional holiday homework; a teaser for the 2nd half-year</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Holidays: an optional photo diary “My holidays” + 1 gadget fact for U5</td></tr></tbody></table></div>
 
   <div class="eyebrow">Procedure — full staging</div>
   <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span><b>Kagan …</b> = an engagement structure: EVERYONE takes part at the same time</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>

@@ -80,6 +80,13 @@
   .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
   .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
   .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
   .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
   .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
 
@@ -91,29 +98,6 @@
     .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
-
-  /* link to the slide deck */
-  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
-    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
-    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
-  .slideslink:hover{ filter:brightness(1.05); }
-  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
-    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
-    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
-  .gameslink:hover{ filter:brightness(1.08); }
-  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
-  table.glance td.gmin a:hover{ border-bottom-style:solid; }
-
-  /* the design in one card (added 04.08.2026) */
-  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
-    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
-  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
-    letter-spacing:.08em; margin-bottom:6px; }
-  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
-  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
-    padding:10px 13px; font-size:.95rem; }
-  .missioncard .pitch b{ color:var(--p-ink); }
-  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
 </style>
 
 <div class="wrap">
@@ -122,13 +106,9 @@
     <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>continuing line 🚀 after GMF4</b> · 90 min · mission-based: gate → base sprint → challenge levels → GMF4 bonus → product with a bar · unit leaderboard</div>
     <div class="meta"><span class='chip'>Week 05.10–11.10 · lessons 21–22 (KTP pair 11)</span><span class='chip new'>🚀 continuing after GMF4</span><span class='chip'>spec from SB p.21 Quick review</span><span class='chip'>unit leaderboard · streaks · gold runs</span></div>
   </div>
-  <a class="slideslink" href="https://speakandsmile.ru/gia1/slides/gia1-u1-p7.html" target="_blank" rel="noopener">🖥 Slides for the projector — open the deck for this pair</a>
-  <a class="gameslink" href="https://speakandsmile.ru/gia1/games/u1.html" target="_blank" rel="noopener">🎮 Unit 1 games — for class and for home (+ translation bowling)</a>
 
   <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
-  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p7.html#3' target='_blank' rel='noopener' title='slide 3'>0–6′</a></td><td class='gname'>Into the lesson: a calm mindset</td><td>Inside-Outside Circle as a review: quiet music + “readiness 1–5”; a look at the wall of nations; the mindset “rematch first, then the test”</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p7.html#4' target='_blank' rel='noopener' title='slide 4'>6–16′</a></td><td class='gname'>Rematch of the three gates = the unit revision</td><td>the rematch of all three unit gates — this IS the revision, in the first half of the pair; beating yourself in 2 out of 3 = a growth badge, +5</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p7.html#5' target='_blank' rel='noopener' title='slide 5'>16–22′</a></td><td class='gname'>Test strategy through examples</td><td>one example from each part; the strategy card: example first → skip-and-return → two sweeps</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p7.html#6' target='_blank' rel='noopener' title='slide 6'>22–45′</a></td><td class='gname'>Test: vocabulary + grammar</td><td>parts 1–2 in writing, in silence (nationalities with spelling, opposites, be-gaps, scrambles, fix the error)</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p7.html#7' target='_blank' rel='noopener' title='slide 7'>45–53′</a></td><td class='gname'>Test: listening</td><td>the second half of the pair opens with listening: 30 sec to study the grid, a country description twice: 4 T/F + 4 notes</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p7.html#8' target='_blank' rel='noopener' title='slide 8'>53–63′</a></td><td class='gname'>Test: writing + handing in papers</td><td>6 sentences by criteria; 🚀 a bonus point for a clean line not from the book; hand in, warm-down</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p7.html#9' target='_blank' rel='noopener' title='slide 9'>63–71′</a></td><td class='gname'>Self-check + collecting “ammunition”</td><td>swap papers, check against the key; every pair drops their 2 most annoying errors into an anonymous “box”</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p7.html#10' target='_blank' rel='noopener' title='slide 10'>71–83′</a></td><td class='gname'>Revenge quiz: turning errors into points</td><td>Showdown: I reword errors from the box into questions on the fly; teams write FULL corrections; hit 80% and the test is beaten</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p7.html#11' target='_blank' rel='noopener' title='slide 11'>83–87′</a></td><td class='gname'>Error log + growth receipts</td><td>personal “2 errors to kill in Unit 2” + the growth delta (September gates against today's rematch)</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p7.html#12' target='_blank' rel='noopener' title='slide 12'>87–90′</a></td><td class='gname'>Podium: two winners — score and growth</td><td>TWO podiums (top score + top growth by deltas), the unit closing, the Unit 2 teaser</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 — the exact pages and tasks for your line (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + a Research bonus); details at the bottom of the procedure</td></tr></tbody></table></div>
-
-  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> The test is quiet and fair — no games DURING it. The rematch first lowers anxiety with DATA (“you've already beaten your September self”), the revenge quiz after is the emotional payoff: errors become ammunition, not shame.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br>“The rematch. Same three gates, same rules. September-you is waiting.” “Beat yourself in 2 of 3 — growth badge, plus five!” “That was the revision. The test asks the SAME formats on bigger paper. You've already beaten it once today.”<div class='pitchru'>In one line: the rematch of all three unit gates — this IS the revision, in the first half of the pair; beating yourself in 2 out of 3 = a growth badge, +5</div></div></div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: a calm mindset</td><td>Inside-Outside Circle as a review: quiet music + “readiness 1–5”; a look at the wall of nations; the mindset “rematch first, then the test”</td></tr><tr class='bridge'><td class='gmin'>6–16′</td><td class='gname'>Rematch of the three gates = the unit revision</td><td>the rematch of all three unit gates — this IS the revision, in the first half of the pair; beating yourself in 2 out of 3 = a growth badge, +5</td></tr><tr><td class='gmin'>16–22′</td><td class='gname'>Test strategy through examples</td><td>one example from each part; the strategy card: example first → skip-and-return → two sweeps</td></tr><tr><td class='gmin'>22–45′</td><td class='gname'>Test: vocabulary + grammar</td><td>parts 1–2 in writing, in silence (nationalities with spelling, opposites, be-gaps, scrambles, fix the error)</td></tr><tr><td class='gmin'>45–53′</td><td class='gname'>Test: listening</td><td>the second half of the pair opens with listening: 30 sec to study the grid, a country description twice: 4 T/F + 4 notes</td></tr><tr><td class='gmin'>53–63′</td><td class='gname'>Test: writing + handing in papers</td><td>6 sentences by criteria; 🚀 a bonus point for a clean line not from the book; hand in, warm-down</td></tr><tr><td class='gmin'>63–71′</td><td class='gname'>Self-check + collecting “ammunition”</td><td>swap papers, check against the key; every pair drops their 2 most annoying errors into an anonymous “box”</td></tr><tr><td class='gmin'>71–83′</td><td class='gname'>Revenge quiz: turning errors into points</td><td>Showdown: I reword errors from the box into questions on the fly; teams write FULL corrections; hit 80% and the test is beaten</td></tr><tr><td class='gmin'>83–87′</td><td class='gname'>Error log + growth receipts</td><td>personal “2 errors to kill in Unit 2” + the growth delta (September gates against today's rematch)</td></tr><tr><td class='gmin'>87–90′</td><td class='gname'>Podium: two winners — score and growth</td><td>TWO podiums (top score + top growth by deltas), the unit closing, the Unit 2 teaser</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 — the exact pages and tasks for your line (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + a Research bonus); details at the bottom of the procedure</td></tr></tbody></table></div>
 
   <div class="eyebrow">Procedure — full staging</div>
   <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>

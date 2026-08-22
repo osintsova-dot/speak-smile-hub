@@ -80,6 +80,13 @@
   .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
   .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
   .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
   .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
   .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
 
@@ -91,29 +98,6 @@
     .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
-
-  /* link to the slide deck */
-  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
-    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
-    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
-  .slideslink:hover{ filter:brightness(1.05); }
-  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
-    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
-    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
-  .gameslink:hover{ filter:brightness(1.08); }
-  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
-  table.glance td.gmin a:hover{ border-bottom-style:solid; }
-
-  /* the design in one card (added 04.08.2026) */
-  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
-    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
-  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
-    letter-spacing:.08em; margin-bottom:6px; }
-  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
-  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
-    padding:10px 13px; font-size:.95rem; }
-  .missioncard .pitch b{ color:var(--p-ink); }
-  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
 </style>
 
 <div class="wrap">
@@ -122,13 +106,9 @@
     <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>continuing line 🚀 after GMF4</b> · 90 min · mission-based: gate → base sprint → challenge levels → GMF4 bonus → product with a bar · unit leaderboard</div>
     <div class="meta"><span class='chip'>Week 21.09–27.09 · lessons 11–12 (KTP pair 6)</span><span class='chip new'>🚀 continuing after GMF4</span><span class='chip'>SB pp.14–15</span><span class='chip'>unit leaderboard · streaks · gold runs</span></div>
   </div>
-  <a class="slideslink" href="https://speakandsmile.ru/gia1/slides/gia1-u1-p2.html" target="_blank" rel="noopener">🖥 Slides for the projector — open the deck for this pair</a>
-  <a class="gameslink" href="https://speakandsmile.ru/gia1/games/u1.html" target="_blank" rel="noopener">🎮 Unit 1 games — for class and for home (+ translation bowling)</a>
 
   <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
-  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p2.html#3' target='_blank' rel='noopener' title='slide 3'>0–6′</a></td><td class='gname'>Into the lesson: greeting + rewind of the last pair</td><td>Showdown as a review: a word about the weekend + “battery level”; blitz-rewind of P1: 5 nationalities on mini-boards + a volunteer's micro-pitch</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p2.html#4' target='_blank' rel='noopener' title='slide 4'>6–8′</a></td><td class='gname'>Setting up the mission</td><td>I announce the mission: verify the claim “the Netherlands is №1 for teenagers”; a verdict only with evidence</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p2.html#5' target='_blank' rel='noopener' title='slide 5'>8–13′</a></td><td class='gname'>Gate: the lie detector</td><td>6 loud claims — T/F in writing BEFORE reading, slips face down; we'll verify with facts after the hunt</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p2.html#6' target='_blank' rel='noopener' title='slide 6'>13–20′</a></td><td class='gname'>Sprint: text type by look</td><td>30 seconds WITHOUT reading: the type of each of 4 texts by look only + a photo match in 60 sec</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p2.html#7' target='_blank' rel='noopener' title='slide 7'>20–33′</a></td><td class='gname'>Challenge: a raid for facts across 4 stations</td><td>everyone raids THEIR OWN station-text (3 facts, 4-min limit), reports under the 5-second rule; we open the lie detector</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p2.html#8' target='_blank' rel='noopener' title='slide 8'>33–42′</a></td><td class='gname'>The word-work duel: six words from the text</td><td>Numbered Heads Together: partners split 6 definitions in half and drill each other under the 5-second rule; a sentence about Russia</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p2.html#9' target='_blank' rel='noopener' title='slide 9'>42–51′</a></td><td class='gname'>Bonus level: interrogating Thomas (Have you ever…?)</td><td>role play: one is Thomas from the text, the other a detective with 3 “Have you ever…?” questions (GMF4 structures)</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p2.html#10' target='_blank' rel='noopener' title='slide 10'>51–62′</a></td><td class='gname'>The happiness ranking — ammunition for the debate</td><td>crews rank 8 cards on “what matters most for happiness”; their top-3 becomes the line of argument in the debate</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p2.html#11' target='_blank' rel='noopener' title='slide 11'>62–80′</a></td><td class='gname'>Product: trio debates — a verdict backed by facts</td><td>trios: prosecutor against defender (90 sec each), the judge expects 3 facts; we rotate roles 3 times</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1-u1-p2.html#12' target='_blank' rel='noopener' title='slide 12'>80–90′</a></td><td class='gname'>Leaderboard + debrief</td><td>final class vote — “is the claim confirmed?”, points, HW, and the broadcast teaser</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 — the exact pages and tasks for your line (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + a Research bonus); details at the bottom of the procedure</td></tr></tbody></table></div>
-
-  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> Reading is where continuers actually stretch — texts are new even if grammar isn't. Keep hunts timed and competitive; verdicts get the full judging bar.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br>“A magazine claims: the Netherlands is the №1 country to be a teenager. Your agency fact-checks it TODAY. Verdict at the end — with evidence, or you're fired.”<div class='pitchru'>In one line: I announce the mission: verify the claim “the Netherlands is №1 for teenagers”; a verdict only with evidence</div></div></div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: greeting + rewind of the last pair</td><td>Showdown as a review: a word about the weekend + “battery level”; blitz-rewind of P1: 5 nationalities on mini-boards + a volunteer's micro-pitch</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>I announce the mission: verify the claim “the Netherlands is №1 for teenagers”; a verdict only with evidence</td></tr><tr class='bridge'><td class='gmin'>8–13′</td><td class='gname'>Gate: the lie detector</td><td>6 loud claims — T/F in writing BEFORE reading, slips face down; we'll verify with facts after the hunt</td></tr><tr><td class='gmin'>13–20′</td><td class='gname'>Sprint: text type by look</td><td>30 seconds WITHOUT reading: the type of each of 4 texts by look only + a photo match in 60 sec</td></tr><tr><td class='gmin'>20–33′</td><td class='gname'>Challenge: a raid for facts across 4 stations</td><td>everyone raids THEIR OWN station-text (3 facts, 4-min limit), reports under the 5-second rule; we open the lie detector</td></tr><tr><td class='gmin'>33–42′</td><td class='gname'>The word-work duel: six words from the text</td><td>Numbered Heads Together: partners split 6 definitions in half and drill each other under the 5-second rule; a sentence about Russia</td></tr><tr class='bridge'><td class='gmin'>42–51′</td><td class='gname'>Bonus level: interrogating Thomas (Have you ever…?)</td><td>role play: one is Thomas from the text, the other a detective with 3 “Have you ever…?” questions (GMF4 structures)</td></tr><tr><td class='gmin'>51–62′</td><td class='gname'>The happiness ranking — ammunition for the debate</td><td>crews rank 8 cards on “what matters most for happiness”; their top-3 becomes the line of argument in the debate</td></tr><tr><td class='gmin'>62–80′</td><td class='gname'>Product: trio debates — a verdict backed by facts</td><td>trios: prosecutor against defender (90 sec each), the judge expects 3 facts; we rotate roles 3 times</td></tr><tr><td class='gmin'>80–90′</td><td class='gname'>Leaderboard + debrief</td><td>final class vote — “is the claim confirmed?”, points, HW, and the broadcast teaser</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 — the exact pages and tasks for your line (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + a Research bonus); details at the bottom of the procedure</td></tr></tbody></table></div>
 
   <div class="eyebrow">Procedure — full staging</div>
   <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>

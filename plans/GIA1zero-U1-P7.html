@@ -80,6 +80,13 @@
   .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
   .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
   .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
   .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
   .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
 
@@ -91,29 +98,6 @@
     .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
-
-  /* link to the slide deck */
-  .slideslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px;
-    background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842); color:#241B34; text-decoration:none;
-    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
-  .slideslink:hover{ filter:brightness(1.05); }
-  .gameslink{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
-    background:linear-gradient(93deg,#6C3FC5,#8A5FD8 55%,#2EE6FF); color:#fff; text-decoration:none;
-    border-radius:11px; padding:11px 14px; font-weight:800; font-size:.95rem; }
-  .gameslink:hover{ filter:brightness(1.08); }
-  table.glance td.gmin a{ color:var(--p-ink); text-decoration:none; border-bottom:1.5px dotted var(--p); }
-  table.glance td.gmin a:hover{ border-bottom-style:solid; }
-
-  /* the design in one card (added 04.08.2026) */
-  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
-    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
-  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
-    letter-spacing:.08em; margin-bottom:6px; }
-  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
-  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
-    padding:10px 13px; font-size:.95rem; }
-  .missioncard .pitch b{ color:var(--p-ink); }
-  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
 </style>
 
 <div class="wrap">
@@ -122,13 +106,9 @@
     <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · input → guided practice → speaking, in game shells · pairs + teams of 3 · points, no dry drills</div>
     <div class="meta"><span class='chip'>Week 05.10–11.10 · lessons 21–22 (KTP pair 11)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>spec from SB p.21 Quick review</span><span class='chip'>teams of 3 · unit points board</span></div>
   </div>
-  <a class="slideslink" href="https://speakandsmile.ru/gia1/slides/gia1zero-u1-p7.html" target="_blank" rel="noopener">🖥 Slides for the projector — open the deck for this pair</a>
-  <a class="gameslink" href="https://speakandsmile.ru/gia1/games/u1.html" target="_blank" rel="noopener">🎮 Unit 1 games — for class and for home (+ translation bowling)</a>
 
   <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
-  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p7.html#3' target='_blank' rel='noopener' title='slide 3'>0–6′</a></td><td class='gname'>Into the lesson: calm check-in</td><td>Inside-Outside Circle as a rewind: quiet music, “one word about how you feel”, a look at the wall of countries — pride instead of fear</td></tr><tr class='bridge'><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p7.html#4' target='_blank' rel='noopener' title='slide 4'>6–14′</a></td><td class='gname'>Lightning revision (first half of the pair)</td><td>5 lightning items from Quick review, solo on a draft + a self-check — “that was a mini-test, you just passed it”</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p7.html#5' target='_blank' rel='noopener' title='slide 5'>14–20′</a></td><td class='gname'>Test strategy: going over it with an example</td><td>we go through the 4 test parts with one example each; a strategy card on the board</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p7.html#6' target='_blank' rel='noopener' title='slide 6'>20–45′</a></td><td class='gname'>Test: vocabulary + grammar</td><td>parts 1–2 in writing, in silence; timings on the board</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p7.html#7' target='_blank' rel='noopener' title='slide 7'>45–53′</a></td><td class='gname'>Test: listening (lesson B)</td><td>the second half of the pair opens with listening: 30 sec studying the grid, the country description twice: 4 true/false + 4 notes</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p7.html#8' target='_blank' rel='noopener' title='slide 8'>53–63′</a></td><td class='gname'>Test: writing + handing in papers</td><td>6 sentences about yourself against the printed criteria; we hand in the papers, a warm-up break</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p7.html#9' target='_blank' rel='noopener' title='slide 9'>63–72′</a></td><td class='gname'>Self-check against the key</td><td>we swap papers, check with a coloured pen against the key; I keep the writing part for myself</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p7.html#10' target='_blank' rel='noopener' title='slide 10'>72–80′</a></td><td class='gname'>A gentle review of typical mistakes</td><td>Showdown: the unit's top-5 mistake types, anonymously; “doctor teams” treat a patient sentence</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p7.html#11' target='_blank' rel='noopener' title='slide 11'>80–86′</a></td><td class='gname'>Personal error log + a line of pride</td><td>everyone writes their own “2 mistakes to kill in Unit 2” + a line of pride “I can now…”</td></tr><tr><td class='gmin'><a href='https://speakandsmile.ru/gia1/slides/gia1zero-u1-p7.html#12' target='_blank' rel='noopener' title='slide 12'>86–90′</a></td><td class='gname'>Unit finale: two podiums</td><td>we award TWO teams (score and growth), close the unit, a teaser for “Family”</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 — the exact pages and tasks for your line (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + a Research bonus); details at the bottom of the procedure</td></tr></tbody></table></div>
-
-  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> Low-stress protocol: quiet music before start, clear timings per part, no competitive games during the test. Feedback = kind, specific, forward-looking. Revision BEFORE the test — so everyone walks in feeling “I already did this today”.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br>“That was a mini-test. You just passed it.” “Which round was hardest — one to five?” “Same formats, bigger paper. Strategy first — then calmly.”<div class='pitchru'>In one line: 5 lightning items from Quick review, solo on a draft + a self-check — “that was a mini-test, you just passed it”</div></div></div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: calm check-in</td><td>Inside-Outside Circle as a rewind: quiet music, “one word about how you feel”, a look at the wall of countries — pride instead of fear</td></tr><tr class='bridge'><td class='gmin'>6–14′</td><td class='gname'>Lightning revision (first half of the pair)</td><td>5 lightning items from Quick review, solo on a draft + a self-check — “that was a mini-test, you just passed it”</td></tr><tr><td class='gmin'>14–20′</td><td class='gname'>Test strategy: going over it with an example</td><td>we go through the 4 test parts with one example each; a strategy card on the board</td></tr><tr><td class='gmin'>20–45′</td><td class='gname'>Test: vocabulary + grammar</td><td>parts 1–2 in writing, in silence; timings on the board</td></tr><tr><td class='gmin'>45–53′</td><td class='gname'>Test: listening (lesson B)</td><td>the second half of the pair opens with listening: 30 sec studying the grid, the country description twice: 4 true/false + 4 notes</td></tr><tr><td class='gmin'>53–63′</td><td class='gname'>Test: writing + handing in papers</td><td>6 sentences about yourself against the printed criteria; we hand in the papers, a warm-up break</td></tr><tr><td class='gmin'>63–72′</td><td class='gname'>Self-check against the key</td><td>we swap papers, check with a coloured pen against the key; I keep the writing part for myself</td></tr><tr><td class='gmin'>72–80′</td><td class='gname'>A gentle review of typical mistakes</td><td>Showdown: the unit's top-5 mistake types, anonymously; “doctor teams” treat a patient sentence</td></tr><tr><td class='gmin'>80–86′</td><td class='gname'>Personal error log + a line of pride</td><td>everyone writes their own “2 mistakes to kill in Unit 2” + a line of pride “I can now…”</td></tr><tr><td class='gmin'>86–90′</td><td class='gname'>Unit finale: two podiums</td><td>we award TWO teams (score and growth), close the unit, a teaser for “Family”</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 — the exact pages and tasks for your line (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + a Research bonus); details at the bottom of the procedure</td></tr></tbody></table></div>
 
   <div class="eyebrow">Procedure — full staging</div>
   <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
