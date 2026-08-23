@@ -20138,13 +20138,13 @@ window.PROGRAMS = {
    {
     "n": 4,
     "week": "14.09–20.09",
-    "type": "L1 Vocabulary + Reading",
-    "title": "Unit 1 · Make the grade — лексика и чтение (стр. 6–7)",
+    "type": "L1 Vocabulary",
+    "title": "Unit 1 · Make the grade — лексика (стр. 6)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 1 · Make the grade — лексика и чтение (стр. 6–7)"
+      "Unit 1 · Make the grade — лексика (стр. 6)"
      ],
      [
       "Лексика",
@@ -20152,19 +20152,45 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Грамматика в контексте чтения"
+      "Лексика в речевых образцах"
      ],
      [
       "Виды деятельности",
-      "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Student life: extra-curricular activities — онлайн-форум — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
+      "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Culture exchange: чтение врезки и обсуждение · Use it, don't lose it: интервью в парах"
      ]
     ],
-    "sec": "UNIT 1 — Make the grade · уроки 4–9"
+    "sec": "UNIT 1 — Make the grade · уроки 4–10"
    },
    {
     "n": 5,
     "week": "14.09–20.09",
-    "type": "L2 Grammar 1 + Vocabulary",
+    "type": "L2 Reading",
+    "title": "Unit 1 · Make the grade — чтение (стр. 7)",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 1 · Make the grade — чтение (стр. 7)"
+     ],
+     [
+      "Лексика",
+      "Лексика юнита в тексте · незнакомые слова по контексту"
+     ],
+     [
+      "Грамматика",
+      "Грамматика в контексте чтения"
+     ],
+     [
+      "Виды деятельности",
+      "Reading: Student life: extra-curricular activities — онлайн-форум — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами · Exam tip разворота · подчёркнутые слова: значение по контексту"
+     ]
+    ],
+    "sec": "UNIT 1 — Make the grade · уроки 4–10"
+   },
+   {
+    "n": 6,
+    "week": "21.09–27.09",
+    "type": "L3 Grammar 1 + Vocabulary",
     "title": "Unit 1 · Make the grade — грамматика 1 (стр. 8–9)",
     "unit": "",
     "fields": [
@@ -20185,12 +20211,12 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 1 — Make the grade · уроки 4–9"
+    "sec": "UNIT 1 — Make the grade · уроки 4–10"
    },
    {
-    "n": 6,
+    "n": 7,
     "week": "21.09–27.09",
-    "type": "L3 Listening + Grammar 2",
+    "type": "L4 Listening + Grammar 2",
     "title": "Unit 1 · Make the grade — аудирование и грамматика 2 (стр. 12–13)",
     "unit": "",
     "fields": [
@@ -20211,12 +20237,12 @@ window.PROGRAMS = {
       "Listening: Интервью: опыт учёбы за границей — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 1 — Make the grade · уроки 4–9"
+    "sec": "UNIT 1 — Make the grade · уроки 4–10"
    },
    {
-    "n": 7,
-    "week": "21.09–27.09",
-    "type": "L4 Speaking + Writing",
+    "n": 8,
+    "week": "28.09–04.10",
+    "type": "L5 Speaking + Writing",
     "title": "Unit 1 · Make the grade — говорение и письмо (стр. 14–15)",
     "unit": "",
     "fields": [
@@ -20237,12 +20263,12 @@ window.PROGRAMS = {
       "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 1 — Make the grade · уроки 4–9"
+    "sec": "UNIT 1 — Make the grade · уроки 4–10"
    },
    {
-    "n": 8,
+    "n": 9,
     "week": "28.09–04.10",
-    "type": "L5 Повторение",
+    "type": "L6 Повторение",
     "title": "Unit 1 · Make the grade — повторение всего юнита (стр. 16–17)",
     "unit": "",
     "fields": [
@@ -20263,12 +20289,12 @@ window.PROGRAMS = {
       "Check it (стр. 16–17): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 1 — Make the grade · уроки 4–9"
+    "sec": "UNIT 1 — Make the grade · уроки 4–10"
    },
    {
-    "n": 9,
-    "week": "28.09–04.10",
-    "type": "L6 Тест юнита",
+    "n": 10,
+    "week": "05.10–11.10",
+    "type": "L7 Тест юнита",
     "title": "Unit 1 · Make the grade — тест юнита, 100 баллов",
     "unit": "",
     "fields": [
@@ -20289,18 +20315,18 @@ window.PROGRAMS = {
       "B2 Unit 1 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (informal email) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
      ]
     ],
-    "sec": "UNIT 1 — Make the grade · уроки 4–9"
+    "sec": "UNIT 1 — Make the grade · уроки 4–10"
    },
    {
-    "n": 10,
+    "n": 11,
     "week": "05.10–11.10",
-    "type": "L1 Vocabulary + Reading",
-    "title": "Unit 2 · A job well done — лексика и чтение (стр. 18–19)",
+    "type": "L1 Vocabulary",
+    "title": "Unit 2 · A job well done — лексика (стр. 18)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 2 · A job well done — лексика и чтение (стр. 18–19)"
+      "Unit 2 · A job well done — лексика (стр. 18)"
      ],
      [
       "Лексика",
@@ -20308,19 +20334,45 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
+      "Лексика в речевых образцах"
+     ],
+     [
+      "Виды деятельности",
+      "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Culture exchange: чтение врезки и обсуждение · Use it, don't lose it: интервью в парах"
+     ]
+    ],
+    "sec": "UNIT 2 — A job well done · уроки 11–17"
+   },
+   {
+    "n": 12,
+    "week": "12.10–18.10",
+    "type": "L2 Reading",
+    "title": "Unit 2 · A job well done — чтение (стр. 19)",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 2 · A job well done — чтение (стр. 19)"
+     ],
+     [
+      "Лексика",
+      "Лексика юнита в тексте · незнакомые слова по контексту"
+     ],
+     [
+      "Грамматика",
       "Грамматика в контексте чтения"
      ],
      [
       "Виды деятельности",
-      "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Climbing, not cooking — два журнальных текста — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
+      "Reading: Climbing, not cooking — два журнальных текста — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами · Exam tip разворота · подчёркнутые слова: значение по контексту"
      ]
     ],
-    "sec": "UNIT 2 — A job well done · уроки 10–15"
+    "sec": "UNIT 2 — A job well done · уроки 11–17"
    },
    {
-    "n": 11,
-    "week": "05.10–11.10",
-    "type": "L2 Grammar 1 + Vocabulary",
+    "n": 13,
+    "week": "12.10–18.10",
+    "type": "L3 Grammar 1 + Vocabulary",
     "title": "Unit 2 · A job well done — грамматика 1 (стр. 20–21)",
     "unit": "",
     "fields": [
@@ -20341,12 +20393,12 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 2 — A job well done · уроки 10–15"
+    "sec": "UNIT 2 — A job well done · уроки 11–17"
    },
    {
-    "n": 12,
-    "week": "12.10–18.10",
-    "type": "L3 Listening + Grammar 2",
+    "n": 14,
+    "week": "19.10–25.10",
+    "type": "L4 Listening + Grammar 2",
     "title": "Unit 2 · A job well done — аудирование и грамматика 2 (стр. 24–25)",
     "unit": "",
     "fields": [
@@ -20367,12 +20419,12 @@ window.PROGRAMS = {
       "Listening: Подкаст: Human computers — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 2 — A job well done · уроки 10–15"
+    "sec": "UNIT 2 — A job well done · уроки 11–17"
    },
    {
-    "n": 13,
-    "week": "12.10–18.10",
-    "type": "L4 Speaking + Writing",
+    "n": 15,
+    "week": "19.10–25.10",
+    "type": "L5 Speaking + Writing",
     "title": "Unit 2 · A job well done — говорение и письмо (стр. 26–27)",
     "unit": "",
     "fields": [
@@ -20393,12 +20445,12 @@ window.PROGRAMS = {
       "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 2 — A job well done · уроки 10–15"
+    "sec": "UNIT 2 — A job well done · уроки 11–17"
    },
    {
-    "n": 14,
-    "week": "19.10–25.10",
-    "type": "L5 Повторение",
+    "n": 16,
+    "week": "26.10–01.11",
+    "type": "L6 Повторение",
     "title": "Unit 2 · A job well done — повторение всего юнита (стр. 28–29)",
     "unit": "",
     "fields": [
@@ -20419,12 +20471,12 @@ window.PROGRAMS = {
       "Check it (стр. 28–29): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 2 — A job well done · уроки 10–15"
+    "sec": "UNIT 2 — A job well done · уроки 11–17"
    },
    {
-    "n": 15,
-    "week": "19.10–25.10",
-    "type": "L6 Тест юнита",
+    "n": 17,
+    "week": "26.10–01.11",
+    "type": "L7 Тест юнита",
     "title": "Unit 2 · A job well done — тест юнита, 100 баллов",
     "unit": "",
     "fields": [
@@ -20445,18 +20497,18 @@ window.PROGRAMS = {
       "B2 Unit 2 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (a story) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
      ]
     ],
-    "sec": "UNIT 2 — A job well done · уроки 10–15"
+    "sec": "UNIT 2 — A job well done · уроки 11–17"
    },
    {
-    "n": 16,
-    "week": "26.10–01.11",
-    "type": "L1 Vocabulary + Reading",
-    "title": "Unit 3 · Departure time — лексика и чтение (стр. 32–33)",
+    "n": 18,
+    "week": "02.11–08.11",
+    "type": "L1 Vocabulary",
+    "title": "Unit 3 · Departure time — лексика (стр. 32)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 3 · Departure time — лексика и чтение (стр. 32–33)"
+      "Unit 3 · Departure time — лексика (стр. 32)"
      ],
      [
       "Лексика",
@@ -20464,19 +20516,45 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
+      "Лексика в речевых образцах"
+     ],
+     [
+      "Виды деятельности",
+      "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Culture exchange: чтение врезки и обсуждение · Use it, don't lose it: интервью в парах"
+     ]
+    ],
+    "sec": "UNIT 3 — Departure time · уроки 18–24"
+   },
+   {
+    "n": 19,
+    "week": "02.11–08.11",
+    "type": "L2 Reading",
+    "title": "Unit 3 · Departure time — чтение (стр. 33)",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 3 · Departure time — чтение (стр. 33)"
+     ],
+     [
+      "Лексика",
+      "Лексика юнита в тексте · незнакомые слова по контексту"
+     ],
+     [
+      "Грамматика",
       "Грамматика в контексте чтения"
      ],
      [
       "Виды деятельности",
-      "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Driving — the future — статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
+      "Reading: Driving — the future — статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами · Exam tip разворота · подчёркнутые слова: значение по контексту"
      ]
     ],
-    "sec": "UNIT 3 — Departure time · уроки 16–21"
+    "sec": "UNIT 3 — Departure time · уроки 18–24"
    },
    {
-    "n": 17,
-    "week": "26.10–01.11",
-    "type": "L2 Grammar 1 + Vocabulary",
+    "n": 20,
+    "week": "09.11–15.11",
+    "type": "L3 Grammar 1 + Vocabulary",
     "title": "Unit 3 · Departure time — грамматика 1 (стр. 34–35)",
     "unit": "",
     "fields": [
@@ -20497,12 +20575,12 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 3 — Departure time · уроки 16–21"
+    "sec": "UNIT 3 — Departure time · уроки 18–24"
    },
    {
-    "n": 18,
-    "week": "02.11–08.11",
-    "type": "L3 Listening + Grammar 2",
+    "n": 21,
+    "week": "09.11–15.11",
+    "type": "L4 Listening + Grammar 2",
     "title": "Unit 3 · Departure time — аудирование и грамматика 2 (стр. 38–39)",
     "unit": "",
     "fields": [
@@ -20523,12 +20601,12 @@ window.PROGRAMS = {
       "Listening: Подкаст: транспорт будущего — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 3 — Departure time · уроки 16–21"
+    "sec": "UNIT 3 — Departure time · уроки 18–24"
    },
    {
-    "n": 19,
-    "week": "02.11–08.11",
-    "type": "L4 Speaking + Writing",
+    "n": 22,
+    "week": "16.11–22.11",
+    "type": "L5 Speaking + Writing",
     "title": "Unit 3 · Departure time — говорение и письмо (стр. 40–41)",
     "unit": "",
     "fields": [
@@ -20549,12 +20627,12 @@ window.PROGRAMS = {
       "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 3 — Departure time · уроки 16–21"
+    "sec": "UNIT 3 — Departure time · уроки 18–24"
    },
    {
-    "n": 20,
-    "week": "09.11–15.11",
-    "type": "L5 Повторение",
+    "n": 23,
+    "week": "16.11–22.11",
+    "type": "L6 Повторение",
     "title": "Unit 3 · Departure time — повторение всего юнита (стр. 42–43)",
     "unit": "",
     "fields": [
@@ -20575,12 +20653,12 @@ window.PROGRAMS = {
       "Check it (стр. 42–43): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 3 — Departure time · уроки 16–21"
+    "sec": "UNIT 3 — Departure time · уроки 18–24"
    },
    {
-    "n": 21,
-    "week": "09.11–15.11",
-    "type": "L6 Тест юнита",
+    "n": 24,
+    "week": "23.11–29.11",
+    "type": "L7 Тест юнита",
     "title": "Unit 3 · Departure time — тест юнита, 100 баллов",
     "unit": "",
     "fields": [
@@ -20601,18 +20679,18 @@ window.PROGRAMS = {
       "B2 Unit 3 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (an essay) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
      ]
     ],
-    "sec": "UNIT 3 — Departure time · уроки 16–21"
+    "sec": "UNIT 3 — Departure time · уроки 18–24"
    },
    {
-    "n": 22,
-    "week": "16.11–22.11",
-    "type": "L1 Vocabulary + Reading",
-    "title": "Unit 4 · Our strengths — лексика и чтение (стр. 44–45)",
+    "n": 25,
+    "week": "23.11–29.11",
+    "type": "L1 Vocabulary",
+    "title": "Unit 4 · Our strengths — лексика (стр. 44)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 4 · Our strengths — лексика и чтение (стр. 44–45)"
+      "Unit 4 · Our strengths — лексика (стр. 44)"
      ],
      [
       "Лексика",
@@ -20620,19 +20698,45 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
+      "Лексика в речевых образцах"
+     ],
+     [
+      "Виды деятельности",
+      "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Culture exchange: чтение врезки и обсуждение · Use it, don't lose it: интервью в парах"
+     ]
+    ],
+    "sec": "UNIT 4 — Our strengths · уроки 25–31"
+   },
+   {
+    "n": 26,
+    "week": "30.11–06.12",
+    "type": "L2 Reading",
+    "title": "Unit 4 · Our strengths — чтение (стр. 45)",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 4 · Our strengths — чтение (стр. 45)"
+     ],
+     [
+      "Лексика",
+      "Лексика юнита в тексте · незнакомые слова по контексту"
+     ],
+     [
+      "Грамматика",
       "Грамматика в контексте чтения"
      ],
      [
       "Виды деятельности",
-      "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: The Quiet Revolution — Susan Cain, статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
+      "Reading: The Quiet Revolution — Susan Cain, статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами · Exam tip разворота · подчёркнутые слова: значение по контексту"
      ]
     ],
-    "sec": "UNIT 4 — Our strengths · уроки 22–27"
+    "sec": "UNIT 4 — Our strengths · уроки 25–31"
    },
    {
-    "n": 23,
-    "week": "16.11–22.11",
-    "type": "L2 Grammar 1 + Vocabulary",
+    "n": 27,
+    "week": "30.11–06.12",
+    "type": "L3 Grammar 1 + Vocabulary",
     "title": "Unit 4 · Our strengths — грамматика 1 (стр. 46–47)",
     "unit": "",
     "fields": [
@@ -20653,12 +20757,12 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 4 — Our strengths · уроки 22–27"
+    "sec": "UNIT 4 — Our strengths · уроки 25–31"
    },
    {
-    "n": 24,
-    "week": "23.11–29.11",
-    "type": "L3 Listening + Grammar 2",
+    "n": 28,
+    "week": "07.12–13.12",
+    "type": "L4 Listening + Grammar 2",
     "title": "Unit 4 · Our strengths — аудирование и грамматика 2 (стр. 50–51)",
     "unit": "",
     "fields": [
@@ -20679,12 +20783,12 @@ window.PROGRAMS = {
       "Listening: Подкаст: Leonardo da Vinci — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 4 — Our strengths · уроки 22–27"
+    "sec": "UNIT 4 — Our strengths · уроки 25–31"
    },
    {
-    "n": 25,
-    "week": "23.11–29.11",
-    "type": "L4 Speaking + Writing",
+    "n": 29,
+    "week": "07.12–13.12",
+    "type": "L5 Speaking + Writing",
     "title": "Unit 4 · Our strengths — говорение и письмо (стр. 52–53)",
     "unit": "",
     "fields": [
@@ -20705,12 +20809,12 @@ window.PROGRAMS = {
       "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 4 — Our strengths · уроки 22–27"
+    "sec": "UNIT 4 — Our strengths · уроки 25–31"
    },
    {
-    "n": 26,
-    "week": "30.11–06.12",
-    "type": "L5 Повторение",
+    "n": 30,
+    "week": "14.12–20.12",
+    "type": "L6 Повторение",
     "title": "Unit 4 · Our strengths — повторение всего юнита (стр. 54–55)",
     "unit": "",
     "fields": [
@@ -20731,12 +20835,12 @@ window.PROGRAMS = {
       "Check it (стр. 54–55): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 4 — Our strengths · уроки 22–27"
+    "sec": "UNIT 4 — Our strengths · уроки 25–31"
    },
    {
-    "n": 27,
-    "week": "30.11–06.12",
-    "type": "L6 Тест юнита",
+    "n": 31,
+    "week": "14.12–20.12",
+    "type": "L7 Тест юнита",
     "title": "Unit 4 · Our strengths — тест юнита, 100 баллов",
     "unit": "",
     "fields": [
@@ -20757,18 +20861,18 @@ window.PROGRAMS = {
       "B2 Unit 4 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (an article) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
      ]
     ],
-    "sec": "UNIT 4 — Our strengths · уроки 22–27"
+    "sec": "UNIT 4 — Our strengths · уроки 25–31"
    },
    {
-    "n": 28,
-    "week": "07.12–13.12",
-    "type": "L1 Vocabulary + Reading",
-    "title": "Unit 5 · Financial advice — лексика и чтение (стр. 58–59)",
+    "n": 32,
+    "week": "21.12–27.12",
+    "type": "L1 Vocabulary",
+    "title": "Unit 5 · Financial advice — лексика (стр. 58)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 5 · Financial advice — лексика и чтение (стр. 58–59)"
+      "Unit 5 · Financial advice — лексика (стр. 58)"
      ],
      [
       "Лексика",
@@ -20776,19 +20880,45 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
+      "Лексика в речевых образцах"
+     ],
+     [
+      "Виды деятельности",
+      "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Culture exchange: чтение врезки и обсуждение · Use it, don't lose it: интервью в парах"
+     ]
+    ],
+    "sec": "UNIT 5 — Financial advice · уроки 32–38"
+   },
+   {
+    "n": 33,
+    "week": "21.12–27.12",
+    "type": "L2 Reading",
+    "title": "Unit 5 · Financial advice — чтение (стр. 59)",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 5 · Financial advice — чтение (стр. 59)"
+     ],
+     [
+      "Лексика",
+      "Лексика юнита в тексте · незнакомые слова по контексту"
+     ],
+     [
+      "Грамматика",
       "Грамматика в контексте чтения"
      ],
      [
       "Виды деятельности",
-      "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Without a penny in their pockets — онлайн-статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
+      "Reading: Without a penny in their pockets — онлайн-статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами · Exam tip разворота · подчёркнутые слова: значение по контексту"
      ]
     ],
-    "sec": "UNIT 5 — Financial advice · уроки 28–33"
+    "sec": "UNIT 5 — Financial advice · уроки 32–38"
    },
    {
-    "n": 29,
-    "week": "07.12–13.12",
-    "type": "L2 Grammar 1 + Vocabulary",
+    "n": 34,
+    "week": "11.01–17.01",
+    "type": "L3 Grammar 1 + Vocabulary",
     "title": "Unit 5 · Financial advice — грамматика 1 (стр. 60–61)",
     "unit": "",
     "fields": [
@@ -20809,12 +20939,12 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 5 — Financial advice · уроки 28–33"
+    "sec": "UNIT 5 — Financial advice · уроки 32–38"
    },
    {
-    "n": 30,
-    "week": "14.12–20.12",
-    "type": "L3 Listening + Grammar 2",
+    "n": 35,
+    "week": "11.01–17.01",
+    "type": "L4 Listening + Grammar 2",
     "title": "Unit 5 · Financial advice — аудирование и грамматика 2 (стр. 64–65)",
     "unit": "",
     "fields": [
@@ -20835,12 +20965,12 @@ window.PROGRAMS = {
       "Listening: Радиопрограмма: good luck stories — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 5 — Financial advice · уроки 28–33"
+    "sec": "UNIT 5 — Financial advice · уроки 32–38"
    },
    {
-    "n": 31,
-    "week": "14.12–20.12",
-    "type": "L4 Speaking + Writing",
+    "n": 36,
+    "week": "18.01–24.01",
+    "type": "L5 Speaking + Writing",
     "title": "Unit 5 · Financial advice — говорение и письмо (стр. 66–67)",
     "unit": "",
     "fields": [
@@ -20861,12 +20991,12 @@ window.PROGRAMS = {
       "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 5 — Financial advice · уроки 28–33"
+    "sec": "UNIT 5 — Financial advice · уроки 32–38"
    },
    {
-    "n": 32,
-    "week": "21.12–27.12",
-    "type": "L5 Повторение",
+    "n": 37,
+    "week": "18.01–24.01",
+    "type": "L6 Повторение",
     "title": "Unit 5 · Financial advice — повторение всего юнита (стр. 68–69)",
     "unit": "",
     "fields": [
@@ -20887,12 +21017,12 @@ window.PROGRAMS = {
       "Check it (стр. 68–69): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 5 — Financial advice · уроки 28–33"
+    "sec": "UNIT 5 — Financial advice · уроки 32–38"
    },
    {
-    "n": 33,
-    "week": "21.12–27.12",
-    "type": "L6 Тест юнита",
+    "n": 38,
+    "week": "25.01–31.01",
+    "type": "L7 Тест юнита",
     "title": "Unit 5 · Financial advice — тест юнита, 100 баллов",
     "unit": "",
     "fields": [
@@ -20913,11 +21043,11 @@ window.PROGRAMS = {
       "B2 Unit 5 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (a story) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
      ]
     ],
-    "sec": "UNIT 5 — Financial advice · уроки 28–33"
+    "sec": "UNIT 5 — Financial advice · уроки 32–38"
    },
    {
-    "n": 34,
-    "week": "11.01–17.01",
+    "n": 39,
+    "week": "25.01–31.01",
     "type": "Резерв",
     "title": "Резерв первого полугодия",
     "unit": "",
@@ -20942,8 +21072,8 @@ window.PROGRAMS = {
     "sec": "ПОЛУГОДИЕ · резерв и полугодовой тест"
    },
    {
-    "n": 35,
-    "week": "11.01–17.01",
+    "n": 40,
+    "week": "01.02–07.02",
     "type": "Полугодовой тест",
     "title": "Полугодовой тест · юниты 1–5",
     "unit": "",
@@ -20968,8 +21098,8 @@ window.PROGRAMS = {
     "sec": "ПОЛУГОДИЕ · резерв и полугодовой тест"
    },
    {
-    "n": 36,
-    "week": "18.01–24.01",
+    "n": 41,
+    "week": "01.02–07.02",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 6 · Get fit, stay fit! — лексика и чтение (стр. 70–71)",
     "unit": "",
@@ -20991,11 +21121,11 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Health and medicine in a dystopian future — статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 41–46"
    },
    {
-    "n": 37,
-    "week": "18.01–24.01",
+    "n": 42,
+    "week": "08.02–14.02",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 6 · Get fit, stay fit! — грамматика 1 (стр. 72–73)",
     "unit": "",
@@ -21017,11 +21147,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 41–46"
    },
    {
-    "n": 38,
-    "week": "25.01–31.01",
+    "n": 43,
+    "week": "08.02–14.02",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 6 · Get fit, stay fit! — аудирование и грамматика 2 (стр. 76–77)",
     "unit": "",
@@ -21043,18 +21173,18 @@ window.PROGRAMS = {
       "Listening: Пять монологов: a sport I practise — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 41–46"
    },
    {
-    "n": 39,
-    "week": "25.01–31.01",
-    "type": "L4 Speaking",
-    "title": "Unit 6 · Get fit, stay fit! — говорение (стр. 78)",
+    "n": 44,
+    "week": "15.02–21.02",
+    "type": "L4 Speaking + Writing",
+    "title": "Unit 6 · Get fit, stay fit! — говорение и письмо (стр. 78–79)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 6 · Get fit, stay fit! — говорение (стр. 78)"
+      "Unit 6 · Get fit, stay fit! — говорение и письмо (стр. 78–79)"
      ],
      [
       "Лексика",
@@ -21062,45 +21192,19 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Говорение: Negotiating and collaborating (2): повседневные активности"
+      "Говорение: Negotiating and collaborating (2): повседневные активности · Письмо: A for-and-against essay: avoiding stress"
      ],
      [
       "Виды деятельности",
-      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части"
+      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части · Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 41–46"
    },
    {
-    "n": 40,
-    "week": "01.02–07.02",
-    "type": "L5 Writing",
-    "title": "Unit 6 · Get fit, stay fit! — письмо (стр. 79)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Unit 6 · Get fit, stay fit! — письмо (стр. 79)"
-     ],
-     [
-      "Лексика",
-      "Writing bank: связки и структуры жанра"
-     ],
-     [
-      "Грамматика",
-      "Письмо: A for-and-against essay: avoiding stress"
-     ],
-     [
-      "Виды деятельности",
-      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
-     ]
-    ],
-    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
-   },
-   {
-    "n": 41,
-    "week": "01.02–07.02",
-    "type": "L6 Повторение",
+    "n": 45,
+    "week": "15.02–21.02",
+    "type": "L5 Повторение",
     "title": "Unit 6 · Get fit, stay fit! — повторение всего юнита (стр. 80–81)",
     "unit": "",
     "fields": [
@@ -21121,12 +21225,12 @@ window.PROGRAMS = {
       "Check it (стр. 80–81): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 41–46"
    },
    {
-    "n": 42,
-    "week": "08.02–14.02",
-    "type": "L7 Тест юнита",
+    "n": 46,
+    "week": "22.02–28.02",
+    "type": "L6 Тест юнита",
     "title": "Unit 6 · Get fit, stay fit! — тест юнита, 100 баллов",
     "unit": "",
     "fields": [
@@ -21147,11 +21251,11 @@ window.PROGRAMS = {
       "B2 Unit 6 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (a for-and-against essay) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
      ]
     ],
-    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 41–46"
    },
    {
-    "n": 43,
-    "week": "08.02–14.02",
+    "n": 47,
+    "week": "22.02–28.02",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 7 · Rave reviews — лексика и чтение (стр. 84–85)",
     "unit": "",
@@ -21173,11 +21277,11 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Free short story vending machines — газетная статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
+    "sec": "UNIT 7 — Rave reviews · уроки 47–52"
    },
    {
-    "n": 44,
-    "week": "15.02–21.02",
+    "n": 48,
+    "week": "01.03–07.03",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 7 · Rave reviews — грамматика 1 (стр. 86–87)",
     "unit": "",
@@ -21199,11 +21303,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
+    "sec": "UNIT 7 — Rave reviews · уроки 47–52"
    },
    {
-    "n": 45,
-    "week": "15.02–21.02",
+    "n": 49,
+    "week": "01.03–07.03",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 7 · Rave reviews — аудирование и грамматика 2 (стр. 90–91)",
     "unit": "",
@@ -21225,18 +21329,18 @@ window.PROGRAMS = {
       "Listening: Подкаст: story-sharing websites — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
+    "sec": "UNIT 7 — Rave reviews · уроки 47–52"
    },
    {
-    "n": 46,
-    "week": "22.02–28.02",
-    "type": "L4 Speaking",
-    "title": "Unit 7 · Rave reviews — говорение (стр. 92)",
+    "n": 50,
+    "week": "08.03–14.03",
+    "type": "L4 Speaking + Writing",
+    "title": "Unit 7 · Rave reviews — говорение и письмо (стр. 92–93)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 7 · Rave reviews — говорение (стр. 92)"
+      "Unit 7 · Rave reviews — говорение и письмо (стр. 92–93)"
      ],
      [
       "Лексика",
@@ -21244,45 +21348,19 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Говорение: Discussions (1): справедливость кинопремий"
+      "Говорение: Discussions (1): справедливость кинопремий · Письмо: A review: книга, которую должен прочитать каждый подросток"
      ],
      [
       "Виды деятельности",
-      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части"
+      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части · Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
+    "sec": "UNIT 7 — Rave reviews · уроки 47–52"
    },
    {
-    "n": 47,
-    "week": "22.02–28.02",
-    "type": "L5 Writing",
-    "title": "Unit 7 · Rave reviews — письмо (стр. 93)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Unit 7 · Rave reviews — письмо (стр. 93)"
-     ],
-     [
-      "Лексика",
-      "Writing bank: связки и структуры жанра"
-     ],
-     [
-      "Грамматика",
-      "Письмо: A review: книга, которую должен прочитать каждый подросток"
-     ],
-     [
-      "Виды деятельности",
-      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
-     ]
-    ],
-    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
-   },
-   {
-    "n": 48,
-    "week": "01.03–07.03",
-    "type": "L6 Повторение",
+    "n": 51,
+    "week": "08.03–14.03",
+    "type": "L5 Повторение",
     "title": "Unit 7 · Rave reviews — повторение всего юнита (стр. 94–95)",
     "unit": "",
     "fields": [
@@ -21303,12 +21381,12 @@ window.PROGRAMS = {
       "Check it (стр. 94–95): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
+    "sec": "UNIT 7 — Rave reviews · уроки 47–52"
    },
    {
-    "n": 49,
-    "week": "01.03–07.03",
-    "type": "L7 Тест юнита",
+    "n": 52,
+    "week": "15.03–21.03",
+    "type": "L6 Тест юнита",
     "title": "Unit 7 · Rave reviews — тест юнита, 100 баллов",
     "unit": "",
     "fields": [
@@ -21329,11 +21407,11 @@ window.PROGRAMS = {
       "B2 Unit 7 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (a review) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
      ]
     ],
-    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
+    "sec": "UNIT 7 — Rave reviews · уроки 47–52"
    },
    {
-    "n": 50,
-    "week": "08.03–14.03",
+    "n": 53,
+    "week": "15.03–21.03",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 8 · To the rescue! — лексика и чтение (стр. 96–97)",
     "unit": "",
@@ -21355,11 +21433,11 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Technology to the rescue! — статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
+    "sec": "UNIT 8 — To the rescue! · уроки 53–58"
    },
    {
-    "n": 51,
-    "week": "08.03–14.03",
+    "n": 54,
+    "week": "22.03–28.03",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 8 · To the rescue! — грамматика 1 (стр. 98–99)",
     "unit": "",
@@ -21381,11 +21459,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
+    "sec": "UNIT 8 — To the rescue! · уроки 53–58"
    },
    {
-    "n": 52,
-    "week": "15.03–21.03",
+    "n": 55,
+    "week": "22.03–28.03",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 8 · To the rescue! — аудирование и грамматика 2 (стр. 102–103)",
     "unit": "",
@@ -21407,18 +21485,18 @@ window.PROGRAMS = {
       "Listening: Программа: The Galveston Tragedy — The Great Storm of 1900 — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
+    "sec": "UNIT 8 — To the rescue! · уроки 53–58"
    },
    {
-    "n": 53,
-    "week": "15.03–21.03",
-    "type": "L4 Speaking",
-    "title": "Unit 8 · To the rescue! — говорение (стр. 104)",
+    "n": 56,
+    "week": "29.03–04.04",
+    "type": "L4 Speaking + Writing",
+    "title": "Unit 8 · To the rescue! — говорение и письмо (стр. 104–105)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 8 · To the rescue! — говорение (стр. 104)"
+      "Unit 8 · To the rescue! — говорение и письмо (стр. 104–105)"
      ],
      [
       "Лексика",
@@ -21426,45 +21504,19 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Говорение: Talking about statistics: природные катастрофы"
+      "Говорение: Talking about statistics: природные катастрофы · Письмо: Opinion essay (2): мир сегодня и сто лет назад"
      ],
      [
       "Виды деятельности",
-      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части"
+      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части · Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
+    "sec": "UNIT 8 — To the rescue! · уроки 53–58"
    },
    {
-    "n": 54,
-    "week": "22.03–28.03",
-    "type": "L5 Writing",
-    "title": "Unit 8 · To the rescue! — письмо (стр. 105)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Unit 8 · To the rescue! — письмо (стр. 105)"
-     ],
-     [
-      "Лексика",
-      "Writing bank: связки и структуры жанра"
-     ],
-     [
-      "Грамматика",
-      "Письмо: Opinion essay (2): мир сегодня и сто лет назад"
-     ],
-     [
-      "Виды деятельности",
-      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
-     ]
-    ],
-    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
-   },
-   {
-    "n": 55,
-    "week": "22.03–28.03",
-    "type": "L6 Повторение",
+    "n": 57,
+    "week": "29.03–04.04",
+    "type": "L5 Повторение",
     "title": "Unit 8 · To the rescue! — повторение всего юнита (стр. 106–107)",
     "unit": "",
     "fields": [
@@ -21485,12 +21537,12 @@ window.PROGRAMS = {
       "Check it (стр. 106–107): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
+    "sec": "UNIT 8 — To the rescue! · уроки 53–58"
    },
    {
-    "n": 56,
-    "week": "29.03–04.04",
-    "type": "L7 Тест юнита",
+    "n": 58,
+    "week": "05.04–11.04",
+    "type": "L6 Тест юнита",
     "title": "Unit 8 · To the rescue! — тест юнита, 100 баллов",
     "unit": "",
     "fields": [
@@ -21511,11 +21563,11 @@ window.PROGRAMS = {
       "B2 Unit 8 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (an opinion essay) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
      ]
     ],
-    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
+    "sec": "UNIT 8 — To the rescue! · уроки 53–58"
    },
    {
-    "n": 57,
-    "week": "29.03–04.04",
+    "n": 59,
+    "week": "05.04–11.04",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 9 · Tech talk — лексика и чтение (стр. 110–111)",
     "unit": "",
@@ -21537,11 +21589,11 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Graphene — научно-популярная статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 9 — Tech talk · уроки 57–63"
+    "sec": "UNIT 9 — Tech talk · уроки 59–64"
    },
    {
-    "n": 58,
-    "week": "05.04–11.04",
+    "n": 60,
+    "week": "12.04–18.04",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 9 · Tech talk — грамматика 1 (стр. 112–113)",
     "unit": "",
@@ -21563,11 +21615,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 9 — Tech talk · уроки 57–63"
+    "sec": "UNIT 9 — Tech talk · уроки 59–64"
    },
    {
-    "n": 59,
-    "week": "05.04–11.04",
+    "n": 61,
+    "week": "12.04–18.04",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 9 · Tech talk — аудирование и грамматика 2 (стр. 116–117)",
     "unit": "",
@@ -21589,18 +21641,18 @@ window.PROGRAMS = {
       "Listening: Подкаст: relying too much on technology — мнения — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 9 — Tech talk · уроки 57–63"
+    "sec": "UNIT 9 — Tech talk · уроки 59–64"
    },
    {
-    "n": 60,
-    "week": "12.04–18.04",
-    "type": "L4 Speaking",
-    "title": "Unit 9 · Tech talk — говорение (стр. 118)",
+    "n": 62,
+    "week": "19.04–25.04",
+    "type": "L4 Speaking + Writing",
+    "title": "Unit 9 · Tech talk — говорение и письмо (стр. 118–119)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 9 · Tech talk — говорение (стр. 118)"
+      "Unit 9 · Tech talk — говорение и письмо (стр. 118–119)"
      ],
      [
       "Лексика",
@@ -21608,45 +21660,19 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Говорение: Discussions (2): видеоигры"
+      "Говорение: Discussions (2): видеоигры · Письмо: A report: технологии и учёба"
      ],
      [
       "Виды деятельности",
-      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части"
+      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части · Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 9 — Tech talk · уроки 57–63"
+    "sec": "UNIT 9 — Tech talk · уроки 59–64"
    },
    {
-    "n": 61,
-    "week": "12.04–18.04",
-    "type": "L5 Writing",
-    "title": "Unit 9 · Tech talk — письмо (стр. 119)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Unit 9 · Tech talk — письмо (стр. 119)"
-     ],
-     [
-      "Лексика",
-      "Writing bank: связки и структуры жанра"
-     ],
-     [
-      "Грамматика",
-      "Письмо: A report: технологии и учёба"
-     ],
-     [
-      "Виды деятельности",
-      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
-     ]
-    ],
-    "sec": "UNIT 9 — Tech talk · уроки 57–63"
-   },
-   {
-    "n": 62,
+    "n": 63,
     "week": "19.04–25.04",
-    "type": "L6 Повторение",
+    "type": "L5 Повторение",
     "title": "Unit 9 · Tech talk — повторение всего юнита (стр. 120–121)",
     "unit": "",
     "fields": [
@@ -21667,12 +21693,12 @@ window.PROGRAMS = {
       "Check it (стр. 120–121): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 9 — Tech talk · уроки 57–63"
+    "sec": "UNIT 9 — Tech talk · уроки 59–64"
    },
    {
-    "n": 63,
-    "week": "19.04–25.04",
-    "type": "L7 Тест юнита",
+    "n": 64,
+    "week": "26.04–02.05",
+    "type": "L6 Тест юнита",
     "title": "Unit 9 · Tech talk — тест юнита, 100 баллов",
     "unit": "",
     "fields": [
@@ -21693,10 +21719,10 @@ window.PROGRAMS = {
       "B2 Unit 9 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (a report) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
      ]
     ],
-    "sec": "UNIT 9 — Tech talk · уроки 57–63"
+    "sec": "UNIT 9 — Tech talk · уроки 59–64"
    },
    {
-    "n": 64,
+    "n": 65,
     "week": "26.04–02.05",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 10 · News just in! — лексика и чтение (стр. 122–123)",
@@ -21719,11 +21745,11 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Un-news-ual news from the natural world — новостные тексты — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 10 — News just in! · уроки 64–70"
+    "sec": "UNIT 10 — News just in! · уроки 65–70"
    },
    {
-    "n": 65,
-    "week": "26.04–02.05",
+    "n": 66,
+    "week": "03.05–09.05",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 10 · News just in! — грамматика 1 (стр. 124–125)",
     "unit": "",
@@ -21745,10 +21771,10 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 10 — News just in! · уроки 64–70"
+    "sec": "UNIT 10 — News just in! · уроки 65–70"
    },
    {
-    "n": 66,
+    "n": 67,
     "week": "03.05–09.05",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 10 · News just in! — аудирование и грамматика 2 (стр. 128–129)",
@@ -21771,18 +21797,18 @@ window.PROGRAMS = {
       "Listening: Программа: analysing the news — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 10 — News just in! · уроки 64–70"
+    "sec": "UNIT 10 — News just in! · уроки 65–70"
    },
    {
-    "n": 67,
-    "week": "03.05–09.05",
-    "type": "L4 Speaking",
-    "title": "Unit 10 · News just in! — говорение (стр. 130)",
+    "n": 68,
+    "week": "10.05–16.05",
+    "type": "L4 Speaking + Writing",
+    "title": "Unit 10 · News just in! — говорение и письмо (стр. 130–131)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 10 · News just in! — говорение (стр. 130)"
+      "Unit 10 · News just in! — говорение и письмо (стр. 130–131)"
      ],
      [
       "Лексика",
@@ -21790,45 +21816,19 @@ window.PROGRAMS = {
      ],
      [
       "Грамматика",
-      "Говорение: Presentations (2): свобода прессы"
+      "Говорение: Presentations (2): свобода прессы · Письмо: An article (2): the latest crazes"
      ],
      [
       "Виды деятельности",
-      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части"
+      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части · Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 10 — News just in! · уроки 64–70"
-   },
-   {
-    "n": 68,
-    "week": "10.05–16.05",
-    "type": "L5 Writing",
-    "title": "Unit 10 · News just in! — письмо (стр. 131)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Unit 10 · News just in! — письмо (стр. 131)"
-     ],
-     [
-      "Лексика",
-      "Writing bank: связки и структуры жанра"
-     ],
-     [
-      "Грамматика",
-      "Письмо: An article (2): the latest crazes"
-     ],
-     [
-      "Виды деятельности",
-      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
-     ]
-    ],
-    "sec": "UNIT 10 — News just in! · уроки 64–70"
+    "sec": "UNIT 10 — News just in! · уроки 65–70"
    },
    {
     "n": 69,
     "week": "10.05–16.05",
-    "type": "L6 Повторение",
+    "type": "L5 Повторение",
     "title": "Unit 10 · News just in! — повторение всего юнита (стр. 132–133)",
     "unit": "",
     "fields": [
@@ -21849,12 +21849,12 @@ window.PROGRAMS = {
       "Check it (стр. 132–133): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 10 — News just in! · уроки 64–70"
+    "sec": "UNIT 10 — News just in! · уроки 65–70"
    },
    {
     "n": 70,
     "week": "17.05–23.05",
-    "type": "L7 Тест юнита",
+    "type": "L6 Тест юнита",
     "title": "Unit 10 · News just in! — тест юнита, 100 баллов",
     "unit": "",
     "fields": [
@@ -21875,7 +21875,7 @@ window.PROGRAMS = {
       "B2 Unit 10 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (an article) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
      ]
     ],
-    "sec": "UNIT 10 — News just in! · уроки 64–70"
+    "sec": "UNIT 10 — News just in! · уроки 65–70"
    },
    {
     "n": 71,
