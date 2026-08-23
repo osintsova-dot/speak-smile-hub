@@ -1,34 +1,42 @@
-// Service worker: офлайн-кэш оболочки приложения
-const CACHE = "ss-hub-v113";
-const ASSETS = ["./", "./index.html", "./app.js", "./data.js", "./plans.js", "./manifest.webmanifest", "./icon.svg"];
+// Service worker: офлайн-кэш оболочки приложения.
+//
+// ⚠️ Оболочка (app.js, data.js, plans.js, index.html) отдаётся ПО СЕТИ, а кэш —
+// только запасной аэродром на случай офлайна. Раньше было наоборот, и если при
+// обновлении один файл не докачался (data.js весит под мегабайт — на мобильной
+// сети это обычное дело), приложение оставалось с разъехавшимися версиями и
+// не рисовало ни фильтров, ни карточек.
+const CACHE = "ss-hub-v114";
+const ASSETS = ["./", "./index.html", "./app.js", "./data.js", "./plans.js",
+                "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
+  // по одному и без падения всей установки, если что-то не доехало
+  e.waitUntil(
+    caches.open(CACHE)
+      .then(c => Promise.allSettled(ASSETS.map(a => c.add(a))))
+      .then(() => self.skipWaiting())
+  );
 });
+
 self.addEventListener("activate", e => {
   e.waitUntil(caches.keys()
     .then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k))))
     .then(() => self.clients.claim()));
 });
+
+function networkFirst(req) {
+  return fetch(req).then(resp => {
+    if (resp && resp.ok) {
+      const cp = resp.clone();
+      caches.open(CACHE).then(c => c.put(req, cp));
+    }
+    return resp;
+  }).catch(() => caches.match(req).then(r => r || caches.match("./index.html")));
+}
+
 self.addEventListener("fetch", e => {
   if (e.request.method !== "GET") return;
-  const isPlan = new URL(e.request.url).pathname.includes("/plans/");
-  if (isPlan) {
-    // Планы уроков: сеть в приоритете (правки доезжают сразу), кэш — офлайн-запас.
-    e.respondWith(
-      fetch(e.request).then(resp => {
-        const cp = resp.clone();
-        caches.open(CACHE).then(c => c.put(e.request, cp));
-        return resp;
-      }).catch(() => caches.match(e.request))
-    );
-    return;
-  }
-  e.respondWith(
-    caches.match(e.request).then(r => r || fetch(e.request).then(resp => {
-      const cp = resp.clone();
-      caches.open(CACHE).then(c => c.put(e.request, cp));
-      return resp;
-    }).catch(() => caches.match("./index.html")))
-  );
+  const url = new URL(e.request.url);
+  if (url.origin !== self.location.origin) return;   // чужие домены не трогаем
+  e.respondWith(networkFirst(e.request));            // и планы, и оболочка — сеть вперёд
 });
