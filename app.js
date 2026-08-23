@@ -124,7 +124,7 @@ const LETTERS = {  // письма родителям в начале юнита
   Prepare3:"https://drive.google.com/file/d/1tmihpfCkYp20qXZmXbByGEHy074rjQfQ/view",
   Prepare4:"https://drive.google.com/file/d/1uT5vmOP4DZz_Jt3w2YOJNzHAGTyraLwy/view",
   Prepare5:"https://drive.google.com/file/d/1g7_YTrHjauko9clyJJobyeuTXWLy7r5D/view",
-  Gateway: "https://docs.google.com/document/d/1SUl_Pffk3uTLYrORjcJ1RJp1e6fY4aVnCdv3uyEfxMw/edit"
+  Gateway: "https://docs.google.com/document/d/1HZylS_6oT3H3v_sOhCR90j9U7qQn7W8ZKaAooD5Lg0I/edit"
 };
 const JOURNALS = { // журнал наблюдений (печать)
   Genki:   "https://drive.google.com/file/d/1YLKF5n37RotvlRt0SGJZ2YqdMO-xtJYw/view",
