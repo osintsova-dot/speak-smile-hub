@@ -20159,7 +20159,7 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Student life: extra-curricular activities — онлайн-форум — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 1 — Make the grade · уроки 4–8"
+    "sec": "UNIT 1 — Make the grade · уроки 4–9"
    },
    {
     "n": 5,
@@ -20185,7 +20185,7 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 1 — Make the grade · уроки 4–8"
+    "sec": "UNIT 1 — Make the grade · уроки 4–9"
    },
    {
     "n": 6,
@@ -20211,7 +20211,7 @@ window.PROGRAMS = {
       "Listening: Интервью: опыт учёбы за границей — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 1 — Make the grade · уроки 4–8"
+    "sec": "UNIT 1 — Make the grade · уроки 4–9"
    },
    {
     "n": 7,
@@ -20234,40 +20234,66 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check"
+      "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 1 — Make the grade · уроки 4–8"
+    "sec": "UNIT 1 — Make the grade · уроки 4–9"
    },
    {
     "n": 8,
     "week": "28.09–04.10",
-    "type": "L5 Review + Тест юнита",
-    "title": "Unit 1 · Make the grade — повторение и тест (стр. 16–17)",
+    "type": "L5 Повторение",
+    "title": "Unit 1 · Make the grade — повторение всего юнита (стр. 16–17)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 1 · Make the grade — повторение и тест (стр. 16–17)"
+      "Unit 1 · Make the grade — повторение всего юнита (стр. 16–17)"
      ],
      [
       "Лексика",
-      "Повторение: лексика Unit 1"
+      "Вся лексика юнита"
      ],
      [
       "Грамматика",
-      "Grammar reference: Present Simple, Present Continuous и present habits; Gerunds and infinitives (1)"
+      "Grammar reference разворота Check it — вся грамматика юнита"
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
+      "Check it (стр. 16–17): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 1 — Make the grade · уроки 4–8"
+    "sec": "UNIT 1 — Make the grade · уроки 4–9"
    },
    {
     "n": 9,
     "week": "28.09–04.10",
+    "type": "L6 Тест юнита",
+    "title": "Unit 1 · Make the grade — тест юнита, 100 баллов",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 1 · Make the grade — тест юнита, 100 баллов"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "B2 Unit 1 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (informal email) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
+     ]
+    ],
+    "sec": "UNIT 1 — Make the grade · уроки 4–9"
+   },
+   {
+    "n": 10,
+    "week": "05.10–11.10",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 2 · A job well done — лексика и чтение (стр. 18–19)",
     "unit": "",
@@ -20289,10 +20315,10 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Climbing, not cooking — два журнальных текста — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 2 — A job well done · уроки 9–14"
+    "sec": "UNIT 2 — A job well done · уроки 10–15"
    },
    {
-    "n": 10,
+    "n": 11,
     "week": "05.10–11.10",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 2 · A job well done — грамматика 1 (стр. 20–21)",
@@ -20315,11 +20341,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 2 — A job well done · уроки 9–14"
+    "sec": "UNIT 2 — A job well done · уроки 10–15"
    },
    {
-    "n": 11,
-    "week": "05.10–11.10",
+    "n": 12,
+    "week": "12.10–18.10",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 2 · A job well done — аудирование и грамматика 2 (стр. 24–25)",
     "unit": "",
@@ -20341,10 +20367,10 @@ window.PROGRAMS = {
       "Listening: Подкаст: Human computers — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 2 — A job well done · уроки 9–14"
+    "sec": "UNIT 2 — A job well done · уроки 10–15"
    },
    {
-    "n": 12,
+    "n": 13,
     "week": "12.10–18.10",
     "type": "L4 Speaking + Writing",
     "title": "Unit 2 · A job well done — говорение и письмо (стр. 26–27)",
@@ -20364,66 +20390,66 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check"
+      "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 2 — A job well done · уроки 9–14"
-   },
-   {
-    "n": 13,
-    "week": "12.10–18.10",
-    "type": "L5 Review + Тест юнита",
-    "title": "Unit 2 · A job well done — повторение и тест (стр. 28–29)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Unit 2 · A job well done — повторение и тест (стр. 28–29)"
-     ],
-     [
-      "Лексика",
-      "Повторение: лексика Unit 2"
-     ],
-     [
-      "Грамматика",
-      "Grammar reference: Past Simple и Past Continuous; Past Perfect Simple и Continuous"
-     ],
-     [
-      "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
-     ]
-    ],
-    "sec": "UNIT 2 — A job well done · уроки 9–14"
+    "sec": "UNIT 2 — A job well done · уроки 10–15"
    },
    {
     "n": 14,
     "week": "19.10–25.10",
-    "type": "Exam success 1",
-    "title": "Exam success 1–2 (стр. 30 + 144; стр. 31 = Collaborative project 1)",
+    "type": "L5 Повторение",
+    "title": "Unit 2 · A job well done — повторение всего юнита (стр. 28–29)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Exam success 1–2 (стр. 30 + 144; стр. 31 = Collaborative project 1)"
+      "Unit 2 · A job well done — повторение всего юнита (стр. 28–29)"
      ],
      [
       "Лексика",
-      "Экзаменационная лексика юнитов 1–2"
+      "Вся лексика юнита"
      ],
      [
       "Грамматика",
-      "Формат и стратегии экзаменационных заданий"
+      "Grammar reference разворота Check it — вся грамматика юнита"
      ],
      [
       "Виды деятельности",
-      "Exam success (книжный раздел): разбор заданий и стратегий · Reading: 4-option multiple choice · Speaking: questions · Listening: 3-option MC · Writing: guided essay · практика в экзаменационных условиях · парная проверка · параллели с заданиями ЕГЭ"
+      "Check it (стр. 28–29): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 2 — A job well done · уроки 9–14"
+    "sec": "UNIT 2 — A job well done · уроки 10–15"
    },
    {
     "n": 15,
     "week": "19.10–25.10",
+    "type": "L6 Тест юнита",
+    "title": "Unit 2 · A job well done — тест юнита, 100 баллов",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 2 · A job well done — тест юнита, 100 баллов"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "B2 Unit 2 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (a story) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
+     ]
+    ],
+    "sec": "UNIT 2 — A job well done · уроки 10–15"
+   },
+   {
+    "n": 16,
+    "week": "26.10–01.11",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 3 · Departure time — лексика и чтение (стр. 32–33)",
     "unit": "",
@@ -20445,10 +20471,10 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Driving — the future — статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 3 — Departure time · уроки 15–19"
+    "sec": "UNIT 3 — Departure time · уроки 16–21"
    },
    {
-    "n": 16,
+    "n": 17,
     "week": "26.10–01.11",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 3 · Departure time — грамматика 1 (стр. 34–35)",
@@ -20471,11 +20497,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 3 — Departure time · уроки 15–19"
+    "sec": "UNIT 3 — Departure time · уроки 16–21"
    },
    {
-    "n": 17,
-    "week": "26.10–01.11",
+    "n": 18,
+    "week": "02.11–08.11",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 3 · Departure time — аудирование и грамматика 2 (стр. 38–39)",
     "unit": "",
@@ -20497,10 +20523,10 @@ window.PROGRAMS = {
       "Listening: Подкаст: транспорт будущего — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 3 — Departure time · уроки 15–19"
+    "sec": "UNIT 3 — Departure time · уроки 16–21"
    },
    {
-    "n": 18,
+    "n": 19,
     "week": "02.11–08.11",
     "type": "L4 Speaking + Writing",
     "title": "Unit 3 · Departure time — говорение и письмо (стр. 40–41)",
@@ -20520,40 +20546,66 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check"
+      "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 3 — Departure time · уроки 15–19"
-   },
-   {
-    "n": 19,
-    "week": "02.11–08.11",
-    "type": "L5 Review + Тест юнита",
-    "title": "Unit 3 · Departure time — повторение и тест (стр. 42–43)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Unit 3 · Departure time — повторение и тест (стр. 42–43)"
-     ],
-     [
-      "Лексика",
-      "Повторение: лексика Unit 3"
-     ],
-     [
-      "Грамматика",
-      "Grammar reference: Future forms; Future Continuous"
-     ],
-     [
-      "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
-     ]
-    ],
-    "sec": "UNIT 3 — Departure time · уроки 15–19"
+    "sec": "UNIT 3 — Departure time · уроки 16–21"
    },
    {
     "n": 20,
     "week": "09.11–15.11",
+    "type": "L5 Повторение",
+    "title": "Unit 3 · Departure time — повторение всего юнита (стр. 42–43)",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 3 · Departure time — повторение всего юнита (стр. 42–43)"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Grammar reference разворота Check it — вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "Check it (стр. 42–43): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
+     ]
+    ],
+    "sec": "UNIT 3 — Departure time · уроки 16–21"
+   },
+   {
+    "n": 21,
+    "week": "09.11–15.11",
+    "type": "L6 Тест юнита",
+    "title": "Unit 3 · Departure time — тест юнита, 100 баллов",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 3 · Departure time — тест юнита, 100 баллов"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "B2 Unit 3 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (an essay) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
+     ]
+    ],
+    "sec": "UNIT 3 — Departure time · уроки 16–21"
+   },
+   {
+    "n": 22,
+    "week": "16.11–22.11",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 4 · Our strengths — лексика и чтение (стр. 44–45)",
     "unit": "",
@@ -20575,11 +20627,11 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: The Quiet Revolution — Susan Cain, статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 4 — Our strengths · уроки 20–25"
+    "sec": "UNIT 4 — Our strengths · уроки 22–27"
    },
    {
-    "n": 21,
-    "week": "09.11–15.11",
+    "n": 23,
+    "week": "16.11–22.11",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 4 · Our strengths — грамматика 1 (стр. 46–47)",
     "unit": "",
@@ -20601,11 +20653,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 4 — Our strengths · уроки 20–25"
+    "sec": "UNIT 4 — Our strengths · уроки 22–27"
    },
    {
-    "n": 22,
-    "week": "16.11–22.11",
+    "n": 24,
+    "week": "23.11–29.11",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 4 · Our strengths — аудирование и грамматика 2 (стр. 50–51)",
     "unit": "",
@@ -20627,11 +20679,11 @@ window.PROGRAMS = {
       "Listening: Подкаст: Leonardo da Vinci — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 4 — Our strengths · уроки 20–25"
+    "sec": "UNIT 4 — Our strengths · уроки 22–27"
    },
    {
-    "n": 23,
-    "week": "16.11–22.11",
+    "n": 25,
+    "week": "23.11–29.11",
     "type": "L4 Speaking + Writing",
     "title": "Unit 4 · Our strengths — говорение и письмо (стр. 52–53)",
     "unit": "",
@@ -20650,66 +20702,66 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check"
+      "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 4 — Our strengths · уроки 20–25"
-   },
-   {
-    "n": 24,
-    "week": "23.11–29.11",
-    "type": "L5 Review + Тест юнита",
-    "title": "Unit 4 · Our strengths — повторение и тест (стр. 54–55)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Unit 4 · Our strengths — повторение и тест (стр. 54–55)"
-     ],
-     [
-      "Лексика",
-      "Повторение: лексика Unit 4"
-     ],
-     [
-      "Грамматика",
-      "Grammar reference: Comparatives and superlatives; Articles"
-     ],
-     [
-      "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
-     ]
-    ],
-    "sec": "UNIT 4 — Our strengths · уроки 20–25"
-   },
-   {
-    "n": 25,
-    "week": "23.11–29.11",
-    "type": "Exam success 2",
-    "title": "Exam success 3–4 (стр. 56 + 145; стр. 57 = Collaborative project 2)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Exam success 3–4 (стр. 56 + 145; стр. 57 = Collaborative project 2)"
-     ],
-     [
-      "Лексика",
-      "Экзаменационная лексика юнитов 3–4"
-     ],
-     [
-      "Грамматика",
-      "Формат и стратегии экзаменационных заданий"
-     ],
-     [
-      "Виды деятельности",
-      "Exam success (книжный раздел): разбор заданий и стратегий · Reading: sentence transformation · Speaking: comparing photographs · Listening: note-taking · Writing: guided essay · практика в экзаменационных условиях · парная проверка · параллели с заданиями ЕГЭ"
-     ]
-    ],
-    "sec": "UNIT 4 — Our strengths · уроки 20–25"
+    "sec": "UNIT 4 — Our strengths · уроки 22–27"
    },
    {
     "n": 26,
     "week": "30.11–06.12",
+    "type": "L5 Повторение",
+    "title": "Unit 4 · Our strengths — повторение всего юнита (стр. 54–55)",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 4 · Our strengths — повторение всего юнита (стр. 54–55)"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Grammar reference разворота Check it — вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "Check it (стр. 54–55): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
+     ]
+    ],
+    "sec": "UNIT 4 — Our strengths · уроки 22–27"
+   },
+   {
+    "n": 27,
+    "week": "30.11–06.12",
+    "type": "L6 Тест юнита",
+    "title": "Unit 4 · Our strengths — тест юнита, 100 баллов",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 4 · Our strengths — тест юнита, 100 баллов"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "B2 Unit 4 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (an article) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
+     ]
+    ],
+    "sec": "UNIT 4 — Our strengths · уроки 22–27"
+   },
+   {
+    "n": 28,
+    "week": "07.12–13.12",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 5 · Financial advice — лексика и чтение (стр. 58–59)",
     "unit": "",
@@ -20731,11 +20783,11 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Without a penny in their pockets — онлайн-статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 5 — Financial advice · уроки 26–33"
+    "sec": "UNIT 5 — Financial advice · уроки 28–33"
    },
    {
-    "n": 27,
-    "week": "30.11–06.12",
+    "n": 29,
+    "week": "07.12–13.12",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 5 · Financial advice — грамматика 1 (стр. 60–61)",
     "unit": "",
@@ -20757,11 +20809,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 5 — Financial advice · уроки 26–33"
+    "sec": "UNIT 5 — Financial advice · уроки 28–33"
    },
    {
-    "n": 28,
-    "week": "07.12–13.12",
+    "n": 30,
+    "week": "14.12–20.12",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 5 · Financial advice — аудирование и грамматика 2 (стр. 64–65)",
     "unit": "",
@@ -20783,11 +20835,11 @@ window.PROGRAMS = {
       "Listening: Радиопрограмма: good luck stories — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 5 — Financial advice · уроки 26–33"
+    "sec": "UNIT 5 — Financial advice · уроки 28–33"
    },
    {
-    "n": 29,
-    "week": "07.12–13.12",
+    "n": 31,
+    "week": "14.12–20.12",
     "type": "L4 Speaking + Writing",
     "title": "Unit 5 · Financial advice — говорение и письмо (стр. 66–67)",
     "unit": "",
@@ -20806,73 +20858,73 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check"
+      "Developing speaking: модель → Speaking bank → подготовка → выступление/диалог · Developing writing: разбор модели, Writing bank, план и текст · peer check · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 5 — Financial advice · уроки 26–33"
-   },
-   {
-    "n": 30,
-    "week": "14.12–20.12",
-    "type": "L5 Review + Тест юнита",
-    "title": "Unit 5 · Financial advice — повторение и тест (стр. 68–69)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Unit 5 · Financial advice — повторение и тест (стр. 68–69)"
-     ],
-     [
-      "Лексика",
-      "Повторение: лексика Unit 5"
-     ],
-     [
-      "Грамматика",
-      "Grammar reference: Modal verbs: obligation, prohibition, advice — present and past; Modal verbs: speculation and deduction — present, future and past"
-     ],
-     [
-      "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
-     ]
-    ],
-    "sec": "UNIT 5 — Financial advice · уроки 26–33"
-   },
-   {
-    "n": 31,
-    "week": "14.12–20.12",
-    "type": "Повторение / Резерв",
-    "title": "Повторение полугодия · резерв 1",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Повторение полугодия · резерв 1"
-     ],
-     [
-      "Лексика",
-      "Лексика юнитов 1–5"
-     ],
-     [
-      "Грамматика",
-      "Грамматика юнитов 1–5"
-     ],
-     [
-      "Виды деятельности",
-      "Командные станции по полугодию · grammar auction · Numbered Heads Together · резерв на актированные дни"
-     ]
-    ],
-    "sec": "UNIT 5 — Financial advice · уроки 26–33"
+    "sec": "UNIT 5 — Financial advice · уроки 28–33"
    },
    {
     "n": 32,
     "week": "21.12–27.12",
-    "type": "Повторение / Резерв",
-    "title": "Повторение полугодия · резерв 2",
+    "type": "L5 Повторение",
+    "title": "Unit 5 · Financial advice — повторение всего юнита (стр. 68–69)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Повторение полугодия · резерв 2"
+      "Unit 5 · Financial advice — повторение всего юнита (стр. 68–69)"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Grammar reference разворота Check it — вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "Check it (стр. 68–69): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
+     ]
+    ],
+    "sec": "UNIT 5 — Financial advice · уроки 28–33"
+   },
+   {
+    "n": 33,
+    "week": "21.12–27.12",
+    "type": "L6 Тест юнита",
+    "title": "Unit 5 · Financial advice — тест юнита, 100 баллов",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 5 · Financial advice — тест юнита, 100 баллов"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "B2 Unit 5 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (a story) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
+     ]
+    ],
+    "sec": "UNIT 5 — Financial advice · уроки 28–33"
+   },
+   {
+    "n": 34,
+    "week": "11.01–17.01",
+    "type": "Резерв",
+    "title": "Резерв первого полугодия",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Резерв первого полугодия"
      ],
      [
       "Лексика",
@@ -20884,40 +20936,40 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Speaking carousel по темам полугодия · экзаменационные мини-форматы · резерв на актированные дни"
+      "Добор отставания · пересдача теста · доснять говорение · резерв на актированные дни"
      ]
     ],
-    "sec": "UNIT 5 — Financial advice · уроки 26–33"
+    "sec": "ПОЛУГОДИЕ · резерв и полугодовой тест"
    },
    {
-    "n": 33,
-    "week": "21.12–27.12",
-    "type": "Midterm Test",
-    "title": "Полугодовой тест · Units 1–5",
+    "n": 35,
+    "week": "11.01–17.01",
+    "type": "Полугодовой тест",
+    "title": "Полугодовой тест · юниты 1–5",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Полугодовой тест · Units 1–5"
+      "Полугодовой тест · юниты 1–5"
      ],
      [
       "Лексика",
-      "Лексика Units 1–5"
+      "Лексика юнитов 1–5"
      ],
      [
       "Грамматика",
-      "Грамматика Units 1–5: времена, future forms, сравнения, модальные"
+      "Грамматика юнитов 1–5: времена, future forms, сравнения, модальные"
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): экспресс-повторение · 2-я половина (45'): полугодовой тест"
+      "Комбинированная работа на 100 баллов из разделов юнит-тестов 1–5: аудирование · лексика · грамматика · Use of English · чтение · письмо · говорение парами под видеозапись"
      ]
     ],
-    "sec": "UNIT 5 — Financial advice · уроки 26–33"
+    "sec": "ПОЛУГОДИЕ · резерв и полугодовой тест"
    },
    {
-    "n": 34,
-    "week": "11.01–17.01",
+    "n": 36,
+    "week": "18.01–24.01",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 6 · Get fit, stay fit! — лексика и чтение (стр. 70–71)",
     "unit": "",
@@ -20939,11 +20991,11 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Health and medicine in a dystopian future — статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 6 — Get fit · stay fit! · уроки 34–40 · Writing отдельным уроком"
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
    },
    {
-    "n": 35,
-    "week": "11.01–17.01",
+    "n": 37,
+    "week": "18.01–24.01",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 6 · Get fit, stay fit! — грамматика 1 (стр. 72–73)",
     "unit": "",
@@ -20965,11 +21017,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 6 — Get fit · stay fit! · уроки 34–40 · Writing отдельным уроком"
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
    },
    {
-    "n": 36,
-    "week": "18.01–24.01",
+    "n": 38,
+    "week": "25.01–31.01",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 6 · Get fit, stay fit! — аудирование и грамматика 2 (стр. 76–77)",
     "unit": "",
@@ -20991,11 +21043,11 @@ window.PROGRAMS = {
       "Listening: Пять монологов: a sport I practise — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 6 — Get fit · stay fit! · уроки 34–40 · Writing отдельным уроком"
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
    },
    {
-    "n": 37,
-    "week": "18.01–24.01",
+    "n": 39,
+    "week": "25.01–31.01",
     "type": "L4 Speaking",
     "title": "Unit 6 · Get fit, stay fit! — говорение (стр. 78)",
     "unit": "",
@@ -21014,14 +21066,14 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части"
+      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части · отложенная коррекция · экзаменационный формат устной части"
      ]
     ],
-    "sec": "UNIT 6 — Get fit · stay fit! · уроки 34–40 · Writing отдельным уроком"
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
    },
    {
-    "n": 38,
-    "week": "25.01–31.01",
+    "n": 40,
+    "week": "01.02–07.02",
     "type": "L5 Writing",
     "title": "Unit 6 · Get fit, stay fit! — письмо (стр. 79)",
     "unit": "",
@@ -21040,66 +21092,66 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ"
+      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 6 — Get fit · stay fit! · уроки 34–40 · Writing отдельным уроком"
-   },
-   {
-    "n": 39,
-    "week": "25.01–31.01",
-    "type": "L6 Review + Тест юнита",
-    "title": "Unit 6 · Get fit, stay fit! — повторение и тест (стр. 80–81)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Unit 6 · Get fit, stay fit! — повторение и тест (стр. 80–81)"
-     ],
-     [
-      "Лексика",
-      "Повторение: лексика Unit 6"
-     ],
-     [
-      "Грамматика",
-      "Grammar reference: Zero, First и Second Conditionals; Third Conditional"
-     ],
-     [
-      "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
-     ]
-    ],
-    "sec": "UNIT 6 — Get fit · stay fit! · уроки 34–40 · Writing отдельным уроком"
-   },
-   {
-    "n": 40,
-    "week": "01.02–07.02",
-    "type": "Exam success 3",
-    "title": "Exam success 5–6 (стр. 82 + 146; стр. 83 = Collaborative project 3)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Exam success 5–6 (стр. 82 + 146; стр. 83 = Collaborative project 3)"
-     ],
-     [
-      "Лексика",
-      "Экзаменационная лексика юнитов 5–6"
-     ],
-     [
-      "Грамматика",
-      "Формат и стратегии экзаменационных заданий"
-     ],
-     [
-      "Виды деятельности",
-      "Exam success (книжный раздел): разбор заданий и стратегий · Reading: 4-option multiple choice · Speaking: extended turn · Listening: matching · Writing: an email · практика в экзаменационных условиях · парная проверка · параллели с заданиями ЕГЭ"
-     ]
-    ],
-    "sec": "UNIT 6 — Get fit · stay fit! · уроки 34–40 · Writing отдельным уроком"
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
    },
    {
     "n": 41,
     "week": "01.02–07.02",
+    "type": "L6 Повторение",
+    "title": "Unit 6 · Get fit, stay fit! — повторение всего юнита (стр. 80–81)",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 6 · Get fit, stay fit! — повторение всего юнита (стр. 80–81)"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Grammar reference разворота Check it — вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "Check it (стр. 80–81): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
+     ]
+    ],
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
+   },
+   {
+    "n": 42,
+    "week": "08.02–14.02",
+    "type": "L7 Тест юнита",
+    "title": "Unit 6 · Get fit, stay fit! — тест юнита, 100 баллов",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 6 · Get fit, stay fit! — тест юнита, 100 баллов"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "B2 Unit 6 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (a for-and-against essay) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
+     ]
+    ],
+    "sec": "UNIT 6 — Get fit, stay fit! · уроки 36–42"
+   },
+   {
+    "n": 43,
+    "week": "08.02–14.02",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 7 · Rave reviews — лексика и чтение (стр. 84–85)",
     "unit": "",
@@ -21121,11 +21173,11 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Free short story vending machines — газетная статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 7 — Rave reviews · уроки 41–46 · Writing отдельным уроком"
+    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
    },
    {
-    "n": 42,
-    "week": "08.02–14.02",
+    "n": 44,
+    "week": "15.02–21.02",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 7 · Rave reviews — грамматика 1 (стр. 86–87)",
     "unit": "",
@@ -21147,11 +21199,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 7 — Rave reviews · уроки 41–46 · Writing отдельным уроком"
+    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
    },
    {
-    "n": 43,
-    "week": "08.02–14.02",
+    "n": 45,
+    "week": "15.02–21.02",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 7 · Rave reviews — аудирование и грамматика 2 (стр. 90–91)",
     "unit": "",
@@ -21173,11 +21225,11 @@ window.PROGRAMS = {
       "Listening: Подкаст: story-sharing websites — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 7 — Rave reviews · уроки 41–46 · Writing отдельным уроком"
+    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
    },
    {
-    "n": 44,
-    "week": "15.02–21.02",
+    "n": 46,
+    "week": "22.02–28.02",
     "type": "L4 Speaking",
     "title": "Unit 7 · Rave reviews — говорение (стр. 92)",
     "unit": "",
@@ -21196,14 +21248,14 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части"
+      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части · отложенная коррекция · экзаменационный формат устной части"
      ]
     ],
-    "sec": "UNIT 7 — Rave reviews · уроки 41–46 · Writing отдельным уроком"
+    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
    },
    {
-    "n": 45,
-    "week": "15.02–21.02",
+    "n": 47,
+    "week": "22.02–28.02",
     "type": "L5 Writing",
     "title": "Unit 7 · Rave reviews — письмо (стр. 93)",
     "unit": "",
@@ -21222,40 +21274,66 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ"
+      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 7 — Rave reviews · уроки 41–46 · Writing отдельным уроком"
+    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
    },
    {
-    "n": 46,
-    "week": "22.02–28.02",
-    "type": "L6 Review + Тест юнита",
-    "title": "Unit 7 · Rave reviews — повторение и тест (стр. 94–95)",
+    "n": 48,
+    "week": "01.03–07.03",
+    "type": "L6 Повторение",
+    "title": "Unit 7 · Rave reviews — повторение всего юнита (стр. 94–95)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 7 · Rave reviews — повторение и тест (стр. 94–95)"
+      "Unit 7 · Rave reviews — повторение всего юнита (стр. 94–95)"
      ],
      [
       "Лексика",
-      "Повторение: лексика Unit 7"
+      "Вся лексика юнита"
      ],
      [
       "Грамматика",
-      "Grammar reference: Reported speech: statements and questions; Other reporting verbs and structures"
+      "Grammar reference разворота Check it — вся грамматика юнита"
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
+      "Check it (стр. 94–95): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 7 — Rave reviews · уроки 41–46 · Writing отдельным уроком"
+    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
    },
    {
-    "n": 47,
-    "week": "22.02–28.02",
+    "n": 49,
+    "week": "01.03–07.03",
+    "type": "L7 Тест юнита",
+    "title": "Unit 7 · Rave reviews — тест юнита, 100 баллов",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 7 · Rave reviews — тест юнита, 100 баллов"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "B2 Unit 7 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (a review) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
+     ]
+    ],
+    "sec": "UNIT 7 — Rave reviews · уроки 43–49"
+   },
+   {
+    "n": 50,
+    "week": "08.03–14.03",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 8 · To the rescue! — лексика и чтение (стр. 96–97)",
     "unit": "",
@@ -21277,11 +21355,11 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Technology to the rescue! — статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 8 — To the rescue! · уроки 47–53 · Writing отдельным уроком"
+    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
    },
    {
-    "n": 48,
-    "week": "01.03–07.03",
+    "n": 51,
+    "week": "08.03–14.03",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 8 · To the rescue! — грамматика 1 (стр. 98–99)",
     "unit": "",
@@ -21303,11 +21381,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 8 — To the rescue! · уроки 47–53 · Writing отдельным уроком"
+    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
    },
    {
-    "n": 49,
-    "week": "01.03–07.03",
+    "n": 52,
+    "week": "15.03–21.03",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 8 · To the rescue! — аудирование и грамматика 2 (стр. 102–103)",
     "unit": "",
@@ -21329,11 +21407,11 @@ window.PROGRAMS = {
       "Listening: Программа: The Galveston Tragedy — The Great Storm of 1900 — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 8 — To the rescue! · уроки 47–53 · Writing отдельным уроком"
+    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
    },
    {
-    "n": 50,
-    "week": "08.03–14.03",
+    "n": 53,
+    "week": "15.03–21.03",
     "type": "L4 Speaking",
     "title": "Unit 8 · To the rescue! — говорение (стр. 104)",
     "unit": "",
@@ -21352,14 +21430,14 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части"
+      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части · отложенная коррекция · экзаменационный формат устной части"
      ]
     ],
-    "sec": "UNIT 8 — To the rescue! · уроки 47–53 · Writing отдельным уроком"
+    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
    },
    {
-    "n": 51,
-    "week": "08.03–14.03",
+    "n": 54,
+    "week": "22.03–28.03",
     "type": "L5 Writing",
     "title": "Unit 8 · To the rescue! — письмо (стр. 105)",
     "unit": "",
@@ -21378,66 +21456,66 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ"
+      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 8 — To the rescue! · уроки 47–53 · Writing отдельным уроком"
+    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
    },
    {
-    "n": 52,
-    "week": "15.03–21.03",
-    "type": "L6 Review + Тест юнита",
-    "title": "Unit 8 · To the rescue! — повторение и тест (стр. 106–107)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Unit 8 · To the rescue! — повторение и тест (стр. 106–107)"
-     ],
-     [
-      "Лексика",
-      "Повторение: лексика Unit 8"
-     ],
-     [
-      "Грамматика",
-      "Grammar reference: The Passive; The Passive with say, know, believe"
-     ],
-     [
-      "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
-     ]
-    ],
-    "sec": "UNIT 8 — To the rescue! · уроки 47–53 · Writing отдельным уроком"
-   },
-   {
-    "n": 53,
-    "week": "15.03–21.03",
-    "type": "Exam success 4",
-    "title": "Exam success 7–8 (стр. 108 + 147; стр. 109 = Collaborative project 4)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Exam success 7–8 (стр. 108 + 147; стр. 109 = Collaborative project 4)"
-     ],
-     [
-      "Лексика",
-      "Экзаменационная лексика юнитов 7–8"
-     ],
-     [
-      "Грамматика",
-      "Формат и стратегии экзаменационных заданий"
-     ],
-     [
-      "Виды деятельности",
-      "Exam success (книжный раздел): разбор заданий и стратегий · Reading: open cloze · Speaking: discussion · Writing: a review · практика в экзаменационных условиях · парная проверка · параллели с заданиями ЕГЭ"
-     ]
-    ],
-    "sec": "UNIT 8 — To the rescue! · уроки 47–53 · Writing отдельным уроком"
-   },
-   {
-    "n": 54,
+    "n": 55,
     "week": "22.03–28.03",
+    "type": "L6 Повторение",
+    "title": "Unit 8 · To the rescue! — повторение всего юнита (стр. 106–107)",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 8 · To the rescue! — повторение всего юнита (стр. 106–107)"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Grammar reference разворота Check it — вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "Check it (стр. 106–107): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
+     ]
+    ],
+    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
+   },
+   {
+    "n": 56,
+    "week": "29.03–04.04",
+    "type": "L7 Тест юнита",
+    "title": "Unit 8 · To the rescue! — тест юнита, 100 баллов",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 8 · To the rescue! — тест юнита, 100 баллов"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "B2 Unit 8 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (an opinion essay) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
+     ]
+    ],
+    "sec": "UNIT 8 — To the rescue! · уроки 50–56"
+   },
+   {
+    "n": 57,
+    "week": "29.03–04.04",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 9 · Tech talk — лексика и чтение (стр. 110–111)",
     "unit": "",
@@ -21459,11 +21537,11 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Graphene — научно-популярная статья — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 9 — Tech talk · уроки 54–59 · Writing отдельным уроком"
+    "sec": "UNIT 9 — Tech talk · уроки 57–63"
    },
    {
-    "n": 55,
-    "week": "22.03–28.03",
+    "n": 58,
+    "week": "05.04–11.04",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 9 · Tech talk — грамматика 1 (стр. 112–113)",
     "unit": "",
@@ -21485,11 +21563,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 9 — Tech talk · уроки 54–59 · Writing отдельным уроком"
+    "sec": "UNIT 9 — Tech talk · уроки 57–63"
    },
    {
-    "n": 56,
-    "week": "29.03–04.04",
+    "n": 59,
+    "week": "05.04–11.04",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 9 · Tech talk — аудирование и грамматика 2 (стр. 116–117)",
     "unit": "",
@@ -21511,11 +21589,11 @@ window.PROGRAMS = {
       "Listening: Подкаст: relying too much on technology — мнения — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 9 — Tech talk · уроки 54–59 · Writing отдельным уроком"
+    "sec": "UNIT 9 — Tech talk · уроки 57–63"
    },
    {
-    "n": 57,
-    "week": "29.03–04.04",
+    "n": 60,
+    "week": "12.04–18.04",
     "type": "L4 Speaking",
     "title": "Unit 9 · Tech talk — говорение (стр. 118)",
     "unit": "",
@@ -21534,14 +21612,14 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части"
+      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части · отложенная коррекция · экзаменационный формат устной части"
      ]
     ],
-    "sec": "UNIT 9 — Tech talk · уроки 54–59 · Writing отдельным уроком"
+    "sec": "UNIT 9 — Tech talk · уроки 57–63"
    },
    {
-    "n": 58,
-    "week": "05.04–11.04",
+    "n": 61,
+    "week": "12.04–18.04",
     "type": "L5 Writing",
     "title": "Unit 9 · Tech talk — письмо (стр. 119)",
     "unit": "",
@@ -21560,40 +21638,66 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ"
+      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 9 — Tech talk · уроки 54–59 · Writing отдельным уроком"
+    "sec": "UNIT 9 — Tech talk · уроки 57–63"
    },
    {
-    "n": 59,
-    "week": "05.04–11.04",
-    "type": "L6 Review + Тест юнита",
-    "title": "Unit 9 · Tech talk — повторение и тест (стр. 120–121)",
+    "n": 62,
+    "week": "19.04–25.04",
+    "type": "L6 Повторение",
+    "title": "Unit 9 · Tech talk — повторение всего юнита (стр. 120–121)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Unit 9 · Tech talk — повторение и тест (стр. 120–121)"
+      "Unit 9 · Tech talk — повторение всего юнита (стр. 120–121)"
      ],
      [
       "Лексика",
-      "Повторение: лексика Unit 9"
+      "Вся лексика юнита"
      ],
      [
       "Грамматика",
-      "Grammar reference: Relative clauses; Gerunds and infinitives (2)"
+      "Grammar reference разворота Check it — вся грамматика юнита"
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
+      "Check it (стр. 120–121): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "UNIT 9 — Tech talk · уроки 54–59 · Writing отдельным уроком"
+    "sec": "UNIT 9 — Tech talk · уроки 57–63"
    },
    {
-    "n": 60,
-    "week": "12.04–18.04",
+    "n": 63,
+    "week": "19.04–25.04",
+    "type": "L7 Тест юнита",
+    "title": "Unit 9 · Tech talk — тест юнита, 100 баллов",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Unit 9 · Tech talk — тест юнита, 100 баллов"
+     ],
+     [
+      "Лексика",
+      "Вся лексика юнита"
+     ],
+     [
+      "Грамматика",
+      "Вся грамматика юнита"
+     ],
+     [
+      "Виды деятельности",
+      "B2 Unit 9 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (a report) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
+     ]
+    ],
+    "sec": "UNIT 9 — Tech talk · уроки 57–63"
+   },
+   {
+    "n": 64,
+    "week": "26.04–02.05",
     "type": "L1 Vocabulary + Reading",
     "title": "Unit 10 · News just in! — лексика и чтение (стр. 122–123)",
     "unit": "",
@@ -21615,11 +21719,11 @@ window.PROGRAMS = {
       "Lead-in · Vocabulary: введение, Quiz-Quiz-Trade · Reading: Un-news-ual news from the natural world — новостные тексты — gist → detail · обсуждение текста (Think-Pair-Share) · Critical thinkers: мнение с аргументами"
      ]
     ],
-    "sec": "UNIT 10 — News just in! · уроки 60–68 · Writing отдельным уроком"
+    "sec": "UNIT 10 — News just in! · уроки 64–70"
    },
    {
-    "n": 61,
-    "week": "12.04–18.04",
+    "n": 65,
+    "week": "26.04–02.05",
     "type": "L2 Grammar 1 + Vocabulary",
     "title": "Unit 10 · News just in! — грамматика 1 (стр. 124–125)",
     "unit": "",
@@ -21641,11 +21745,11 @@ window.PROGRAMS = {
       "Grammar in context 1: guided discovery из текста · controlled practice · Developing vocabulary: расширение темы · Rally Coach · персонализированная практика"
      ]
     ],
-    "sec": "UNIT 10 — News just in! · уроки 60–68 · Writing отдельным уроком"
+    "sec": "UNIT 10 — News just in! · уроки 64–70"
    },
    {
-    "n": 62,
-    "week": "19.04–25.04",
+    "n": 66,
+    "week": "03.05–09.05",
     "type": "L3 Listening + Grammar 2",
     "title": "Unit 10 · News just in! — аудирование и грамматика 2 (стр. 128–129)",
     "unit": "",
@@ -21667,11 +21771,11 @@ window.PROGRAMS = {
       "Listening: Программа: analysing the news — gist + detail (экзаменационный формат) · Grammar in context 2: discovery + practice · Flipped classroom video · свободная практика в парах"
      ]
     ],
-    "sec": "UNIT 10 — News just in! · уроки 60–68 · Writing отдельным уроком"
+    "sec": "UNIT 10 — News just in! · уроки 64–70"
    },
    {
-    "n": 63,
-    "week": "19.04–25.04",
+    "n": 67,
+    "week": "03.05–09.05",
     "type": "L4 Speaking",
     "title": "Unit 10 · News just in! — говорение (стр. 130)",
     "unit": "",
@@ -21690,14 +21794,14 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части"
+      "Developing speaking (полный урок): разбор модели и стратегий · Speaking bank: useful language · подготовка · выступление / диалог в парах · отложенная коррекция · экзаменационный формат устной части · отложенная коррекция · экзаменационный формат устной части"
      ]
     ],
-    "sec": "UNIT 10 — News just in! · уроки 60–68 · Writing отдельным уроком"
+    "sec": "UNIT 10 — News just in! · уроки 64–70"
    },
    {
-    "n": 64,
-    "week": "26.04–02.05",
+    "n": 68,
+    "week": "10.05–16.05",
     "type": "L5 Writing",
     "title": "Unit 10 · News just in! — письмо (стр. 131)",
     "unit": "",
@@ -21716,203 +21820,73 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ"
+      "Developing writing (полный урок): анализ модельного текста и критериев · Writing bank: структура и связки · совместное планирование · написание полного текста · peer check по критериям ЕГЭ · письмо разбирается в классе, чистовик пишется дома"
      ]
     ],
-    "sec": "UNIT 10 — News just in! · уроки 60–68 · Writing отдельным уроком"
-   },
-   {
-    "n": 65,
-    "week": "26.04–02.05",
-    "type": "L6 Review + Тест юнита",
-    "title": "Unit 10 · News just in! — повторение и тест (стр. 132–133)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Unit 10 · News just in! — повторение и тест (стр. 132–133)"
-     ],
-     [
-      "Лексика",
-      "Повторение: лексика Unit 10"
-     ],
-     [
-      "Грамматика",
-      "Grammar reference: Future in the past; Question tags"
-     ],
-     [
-      "Виды деятельности",
-      "1-я половина (45'): Grammar reference — систематизация грамматики юнита, игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · 2-я половина (45'): Test yourself (книжный): Grammar test /20 + Vocabulary test /20 = 40 баллов"
-     ]
-    ],
-    "sec": "UNIT 10 — News just in! · уроки 60–68 · Writing отдельным уроком"
-   },
-   {
-    "n": 66,
-    "week": "03.05–09.05",
-    "type": "Exam success 5",
-    "title": "Exam success 9–10 (стр. 134 + 148; стр. 135 = Collaborative project 5)",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Exam success 9–10 (стр. 134 + 148; стр. 135 = Collaborative project 5)"
-     ],
-     [
-      "Лексика",
-      "Экзаменационная лексика юнитов 9–10"
-     ],
-     [
-      "Грамматика",
-      "Формат и стратегии экзаменационных заданий"
-     ],
-     [
-      "Виды деятельности",
-      "Exam success (книжный раздел): разбор заданий и стратегий · Reading: word transformation + matching · Listening: 3-option MC · Writing: a story · практика в экзаменационных условиях · парная проверка · параллели с заданиями ЕГЭ"
-     ]
-    ],
-    "sec": "UNIT 10 — News just in! · уроки 60–68 · Writing отдельным уроком"
-   },
-   {
-    "n": 67,
-    "week": "03.05–09.05",
-    "type": "Reach higher / Резерв",
-    "title": "Reach higher · повторение · резерв",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Reach higher · повторение · резерв"
-     ],
-     [
-      "Лексика",
-      "Зоны роста группы (Reach higher, стр. 136–140)"
-     ],
-     [
-      "Грамматика",
-      "Зоны роста группы по году"
-     ],
-     [
-      "Виды деятельности",
-      "Материалы Reach higher по выбору группы · повторение по запросу · резерв на актированные дни"
-     ]
-    ],
-    "sec": "UNIT 10 — News just in! · уроки 60–68 · Writing отдельным уроком"
-   },
-   {
-    "n": 68,
-    "week": "10.05–16.05",
-    "type": "Reach higher / Резерв",
-    "title": "Reach higher · повторение · резерв",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Reach higher · повторение · резерв"
-     ],
-     [
-      "Лексика",
-      "Зоны роста группы"
-     ],
-     [
-      "Грамматика",
-      "Зоны роста группы по году"
-     ],
-     [
-      "Виды деятельности",
-      "Командные квизы по году · speaking carousel · резерв на актированные дни"
-     ]
-    ],
-    "sec": "UNIT 10 — News just in! · уроки 60–68 · Writing отдельным уроком"
+    "sec": "UNIT 10 — News just in! · уроки 64–70"
    },
    {
     "n": 69,
     "week": "10.05–16.05",
-    "type": "Mock Exam",
-    "title": "Пробный экзамен · задания в формате ЕГЭ (тренировочный)",
+    "type": "L6 Повторение",
+    "title": "Unit 10 · News just in! — повторение всего юнита (стр. 132–133)",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Пробный экзамен · задания в формате ЕГЭ (тренировочный)"
+      "Unit 10 · News just in! — повторение всего юнита (стр. 132–133)"
      ],
      [
       "Лексика",
-      "Экзаменационная лексика года"
+      "Вся лексика юнита"
      ],
      [
       "Грамматика",
-      "Весь грамматический объём года"
+      "Grammar reference разворота Check it — вся грамматика юнита"
      ],
      [
       "Виды деятельности",
-      "Пробник в формате ЕГЭ: аудирование + чтение + грамматика и словообразование + email и эссе · хронометраж реального экзамена"
+      "Check it (стр. 132–133): Grammar reference — систематизация грамматики юнита своими словами · игровое повторение лексики (Showdown, Quiz-Quiz-Trade) · разбор двух самых дорогих ошибок юнита · Test yourself как тренировка на время с самопроверкой · вопросы перед тестом · объявляется формат работы и выбор Standard / Higher"
      ]
     ],
-    "sec": "ФИНАЛ ГОДА · уроки 69–72 · Май"
+    "sec": "UNIT 10 — News just in! · уроки 64–70"
    },
    {
     "n": 70,
     "week": "17.05–23.05",
-    "type": "Mock Review",
-    "title": "Разбор пробника · устная часть · работа над ошибками",
+    "type": "L7 Тест юнита",
+    "title": "Unit 10 · News just in! — тест юнита, 100 баллов",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Разбор пробника · устная часть · работа над ошибками"
+      "Unit 10 · News just in! — тест юнита, 100 баллов"
      ],
      [
       "Лексика",
-      "Лексика из зон ошибок"
+      "Вся лексика юнита"
      ],
      [
       "Грамматика",
-      "Грамматика из зон ошибок"
+      "Вся грамматика юнита"
      ],
      [
       "Виды деятельности",
-      "Разбор результатов по частям · устная часть в парах (чтение вслух, вопросы, описание фото, монолог) · персональные зоны роста · стратегии"
+      "B2 Unit 10 Test (Standard или Higher — по выбору ученика или учителя), 100 баллов: аудирование 12 · лексика 20 · грамматика 25 · Use of English 8 · чтение 15 · письмо 10 (an article) · говорение 10 · порядок: аудирование → лексика и грамматика → чтение → письмо · говорение принимается парами в углу класса под видеозапись · ключи и аудио в папке курса"
      ]
     ],
-    "sec": "ФИНАЛ ГОДА · уроки 69–72 · Май"
+    "sec": "UNIT 10 — News just in! · уроки 64–70"
    },
    {
     "n": 71,
     "week": "17.05–23.05",
-    "type": "Review / Резерв",
-    "title": "Повторение года · резерв",
+    "type": "Резерв",
+    "title": "Резерв второго полугодия",
     "unit": "",
     "fields": [
      [
       "Тема урока",
-      "Повторение года · резерв"
-     ],
-     [
-      "Лексика",
-      "Ключевая лексика года"
-     ],
-     [
-      "Грамматика",
-      "Ключевая грамматика года: conditionals, passive, reported speech, future forms"
-     ],
-     [
-      "Виды деятельности",
-      "Командные квизы по всему году · speaking carousel · резерв на актированные дни"
-     ]
-    ],
-    "sec": "ФИНАЛ ГОДА · уроки 69–72 · Май"
-   },
-   {
-    "n": 72,
-    "week": "24.05–26.05",
-    "type": "Final Test",
-    "title": "Финальный тест года · Units 1–10",
-    "unit": "",
-    "fields": [
-     [
-      "Тема урока",
-      "Финальный тест года · Units 1–10"
+      "Резерв второго полугодия"
      ],
      [
       "Лексика",
@@ -21924,10 +21898,36 @@ window.PROGRAMS = {
      ],
      [
       "Виды деятельности",
-      "1-я половина (45'): экспресс-повторение · 2-я половина (45'): финальный тест года"
+      "Добор отставания · пересдача теста · доснять говорение · резерв на актированные дни"
      ]
     ],
-    "sec": "ФИНАЛ ГОДА · уроки 69–72 · Май"
+    "sec": "ФИНАЛ ГОДА · резерв и годовой тест"
+   },
+   {
+    "n": 72,
+    "week": "24.05–26.05",
+    "type": "Годовой тест",
+    "title": "Годовой тест · B2 End of Year Test",
+    "unit": "",
+    "fields": [
+     [
+      "Тема урока",
+      "Годовой тест · B2 End of Year Test"
+     ],
+     [
+      "Лексика",
+      "Ключевая лексика года"
+     ],
+     [
+      "Грамматика",
+      "Ключевая грамматика года"
+     ],
+     [
+      "Виды деятельности",
+      "B2 End of Year Test (Standard или Higher — по выбору), аудио, аудиоскрипт и ключи в папке курса · говорение парами под видеозапись · разбор результатов в тот же урок"
+     ]
+    ],
+    "sec": "ФИНАЛ ГОДА · резерв и годовой тест"
    }
   ]
  },

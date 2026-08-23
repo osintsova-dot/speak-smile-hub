@@ -265,6 +265,7 @@ function planKeyFor(program, L){
     const um = /UNIT\s*(\d+)/i.exec(sec);
     if (um) part = "U"+um[1];
     else if (/ВВОДН/i.test(sec)) part = "Intro";
+    else if (/ПОЛУГОД|MID-?YEAR/i.test(sec)) part = "Mid";
     else if (/ФИНАЛ|ИТОГ|MOCK/i.test(sec)) part = "Final";
     if (!part) return null;
     const prog = window.PROGRAMS[program];
@@ -282,7 +283,7 @@ function planKeyFor(program, L){
     if (bm) part = "U"+bm[1];
     else if (/ВВОДН/i.test(sec)) part = "Intro";
     else if (/ПОЛУГОД|MID/i.test(sec)) part = "Mid";
-    else if (/ФИНАЛ|ИТОГ|MOCK/i.test(sec)) part = "Final";
+    X
     if (!part) return null;
     const prog = window.PROGRAMS[program];
     const same = (prog?.lessons||[]).filter(x=>x.sec===L.sec).map(x=>x.n).sort((a,b)=>a-b);

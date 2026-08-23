@@ -1,0 +1,205 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GatewayB2-U9-P7 · Unit 9 «Tech talk» · Lesson 7 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.focus{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why this lesson looks like this */
+  .examcard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .examcard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:8px; }
+  .examcard .xr{ display:flex; gap:10px; padding:5px 0; border-bottom:1px dashed var(--line); font-size:.92rem; }
+  .examcard .xr:last-of-type{ border-bottom:0; }
+  .examcard .xk{ flex:0 0 168px; font-weight:800; font-size:.72rem; text-transform:uppercase;
+    letter-spacing:.04em; color:var(--muted); }
+  .examcard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; margin-top:10px; }
+  .examcard .pitch b{ color:var(--p-ink); }
+  .examcard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* exam note: teacher only, bottom of the plan */
+  .ogecard{ background:var(--card); border:1px dashed var(--p); border-left:4px solid var(--honey);
+    border-radius:12px; padding:12px 16px; margin:10px 0 0; font-size:.9rem; }
+  .ogecard .mh{ font-weight:800; color:var(--p-ink); font-size:.74rem; text-transform:uppercase;
+    letter-spacing:.07em; margin-bottom:7px; }
+  .ogecard p{ margin:0 0 6px; } .ogecard p:last-child{ margin-bottom:0; }
+  .ogecard a{ color:var(--p-ink); font-weight:700; word-break:break-all; }
+  .ogecard .quiet{ color:var(--muted); font-size:.84rem; }
+
+  /* optional homework line (exam trainer) */
+  p.opt{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px;
+    padding:7px 10px; margin-top:7px; font-size:.9rem; }
+  p.opt a{ color:var(--p-ink); font-weight:700; word-break:break-all; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .kagan{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--p);
+    border-radius:6px; padding:0 6px; font-weight:800; font-size:.86em; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks of each stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:172px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .why{ font-size:.76rem; color:var(--muted); margin-top:5px; border-top:1px dashed var(--line); padding-top:5px; }
+  td.stage .why b{ color:var(--p-ink); font-size:.9em; text-transform:uppercase; letter-spacing:.04em; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } .examcard .xr{ flex-direction:column; gap:2px; } .examcard .xk{ flex:none; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.focus{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,table.glance,.do,.examcard{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Gateway to the World B2 · Unit 9 «Tech talk» · Lesson 7 — The unit test: five skills, one hundred points, ninety minutes</div>
+    <div class="s">Students 16–17 (grades 10–11, B2) · 90 minutes · <b>a language course</b>: every lesson names one language aim. The link to the Russian state exam sits in a note at the foot of the plan, for the teacher only, and in one optional line of the homework</div>
+    <div class="meta"><span class='chip'>Lesson 63 of the syllabus · 19.04–25.04 · April</span><span class='chip focus'>📝 Unit 9 Test · 100 points, all five skills</span><span class='chip'>Unit 9 · B2 Unit 9 Test — Standard / Higher</span><span class='chip'>Gateway B2 · unit 9 · single plan line</span></div>
+  </div>
+
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–5′</td><td class='gname'>Opening · the room set for a test</td><td>papers, pens and the video corner ready before anyone sits down</td></tr><tr><td class='gmin'>5–12′</td><td class='gname'>The paper explained · Standard or Higher</td><td>the whole paper on the board, then each student takes the version they want</td></tr><tr><td class='gmin'>12–26′</td><td class='gname'>Listening · five people talking about technology (12 points)</td><td>one recording, played twice, twelve points</td></tr><tr><td class='gmin'>26–54′</td><td class='gname'>Vocabulary, Grammar and Use of English (53 points) · speaking pairs start</td><td>fifty-three points in silence, while the first pairs are filmed in the corner</td></tr><tr><td class='gmin'>54–70′</td><td class='gname'>Reading (15 points) · speaking pairs continue</td><td>sixteen minutes, fifteen points, and the last pairs filmed</td></tr><tr><td class='gmin'>70–86′</td><td class='gname'>Writing · a report for a local organisation, 140–190 words (10 points)</td><td>one task, sixteen minutes, every bullet point answered</td></tr><tr><td class='gmin'>86–90′</td><td class='gname'>Papers in · what happens next</td><td>collected in silence, and the marking promise made out loud</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Language checkpoint, only the parts you lost points on</td></tr></tbody></table></div>
+
+  <div class='examcard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='xr'><div class='xk'>Language aim</div><div><b>Measure the unit honestly across all five skills</b> — the photocopiable Unit 9 Test, 100 points: vocabulary, grammar, use of English, listening, reading, writing and speaking — and leave the room with every student knowing the paper was fair.</div></div><div class='xr'><div class='xk'>What is genuinely hard</div><div>Not the content — the format. This is the first time in the unit that seven sections sit on one paper with nothing labelled, that listening is marked, and that speaking is filmed. The second difficulty is the writing: 140–190 words with every bullet answered, produced in sixteen minutes at the end of a demanding lesson.</div></div><div class='xr'><div class='xk'>Typical error to expect</div><div><b>«USB-port», «touchscreen», «drop down menu»</b> — the compound nouns of this unit are spelled in a fixed way and the Test yourself page counts letters. A right word written wrong scores nothing.<br><b>«Alexa, that is a smart speaker, was launched in 2014»</b> — that is impossible in a non-defining clause. Only who, which, whose, where and when survive after a comma.</div></div><div class='xr'><div class='xk'>Why the lesson is built this way</div><div>The order of the paper is set by physiology, not by the page: listening while the ears are fresh, writing last, and the speaking test run in the corner in pairs while the room writes — the only honest way to fit five skills into ninety minutes. The version is a choice, because a student who picks Higher has already decided to be measured seriously. Every speaking answer is filmed: the mark is for today, the video is for December.</div></div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Everything from this unit, on one paper, in ninety minutes. You choose which version measures you. You will get the score by skill, not one number — and your speaking answer will be on video, so in December you will hear for yourself how far you have come.”</b></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='kagan'>Kagan</span> = a Kagan structure — name it out loud to the class</span><span>📺 = screen or audio — every such stage carries a “Backup:” line for the board</span><span>🎯 = the productive outcome: the student speaks or writes for themselves</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where · why</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–5′</td><td class='stage'><div class='nm'>Opening · the room set for a test</div><div class='zone'>door → desks</div><div class='why'><b>Why:</b> A test lesson is won or lost in these five minutes: a room that is already quiet, already spaced and already filmed does not need a single word about discipline for the next eighty-five.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> papers, pens and the video corner ready before anyone sits down</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><b>2 minutes — welcome check-in at the door.</b> One question each, one full sentence back in English. Keep the ritual: it is the last easy thing in the lesson.</li><li><b>2 minutes — the room.</b> Desks apart, bags on the floor, phones in the box. On the desk: pen, spare pen, water. Nothing else.</li><li><b>1 minute — the corner.</b> Your phone on its stand in the far corner, two chairs facing away from the room. Check the battery and the free space now, not at minute thirty.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> nothing on screen yet — the board is for the test map. <b>Backup:</b> if your phone has no space, use the second phone or the school tablet and rename the files the same evening.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> settle at separate desks with a pen and nothing else</div></td><td class='mat'>printed papers · phone on a stand · mark sheet</td></tr><tr><td class='min'>5–12′</td><td class='stage'><div class='nm'>The paper explained · Standard or Higher</div><div class='zone'>board</div><div class='why'><b>Why:</b> Anxiety in a test comes from not knowing the shape of the paper. Publishing it costs nothing, and letting them choose the version turns the test from something done to them into something they signed up for.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the whole paper on the board, then each student takes the version they want</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Board the map and leave it up all lesson: <span class='en'>VOCABULARY 20 · GRAMMAR 25 · USE OF ENGLISH 8 · LISTENING 12 · READING 15 · WRITING 10 · SPEAKING 10 = 100.</span></li><li>Both versions go on the front desk. Say it plainly: <span class='en'>Standard and Higher are the same paper — same skills, same hundred points, same time. Higher asks the same things in harder words. Take the one you want to be measured by.</span> The choice is the student's; if a student cannot choose, you choose for them and say so without ceremony.</li><li>Say the order of the day: <span class='en'>Listening first, while your ears are fresh. Then vocabulary, grammar and use of English. Then reading. Writing last, and I collect at eighty-six minutes.</span></li><li>Say the speaking rule once, now, so nobody is surprised later: <span class='en'>While you write, I take you two at a time to the corner. Four minutes, three questions each. I film the answer — the camera is for me, so that in December we can hear how you sounded today.</span></li><li>ICQ before anything opens: <span class='en'>How long is the writing? — 140 to 190 words. What do you do if you finish early? — check the word count and the tenses. Nobody leaves.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the test map on the board. <b>Backup:</b> dictate it — it is seven lines.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> choose Standard or Higher, write name and date, and keep the paper closed</div></td><td class='mat'>B2_U9_Test_Standard.pdf and _Higher.pdf, printed for everyone with two spare of each</td></tr><tr><td class='min'>12–26′</td><td class='stage'><div class='nm'>Listening · five people talking about technology (12 points)</div><div class='zone'>desks</div><div class='why'><b>Why:</b> Listening goes first because it is the only section that needs the whole room silent at the same moment, and because ears at minute seventy score lower than the student actually is.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> one recording, played twice, twelve points</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Play <span class='en'>B2_U9_Test.mp3</span> twice with thirty seconds between the playings. Do not pause mid-track and do not take questions while the audio runs.</li><li>Before the first playing: <span class='en'>Read the questions now. Thirty seconds.</span> Before the second: <span class='en'>Now fill the gaps you left and check the ones you guessed.</span></li><li>Stand at the back with the volume in your hand. If a corridor noise ruins a stretch, note the time and replay that stretch a third time — that is fair, and it is your call, not a favour.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> audio only, nothing on the screen. <b>Backup:</b> if the sound fails, read <span class='en'>B2_U9_Test_audioscript.pdf</span> aloud twice at natural speed — do not slow down, and do not explain a single word.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> listen twice and answer twelve points</div></td><td class='mat'>B2_U9_Test.mp3 · speaker · audioscript as backup</td></tr><tr><td class='min'>26–54′</td><td class='stage'><div class='nm'>Vocabulary, Grammar and Use of English (53 points) · speaking pairs start</div><div class='zone'>desks + the corner</div><div class='why'><b>Why:</b> Speaking is ten points of the same paper and cannot be quietly dropped; running it in the corner during the written work is the only honest way to fit five skills into ninety minutes. Video turns a one-off mark into a record: the same student, the same kind of question, three months apart.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> fifty-three points in silence, while the first pairs are filmed in the corner</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Announce once and write the finishing time on the board: <span class='en'>Fifty-three points, twenty-eight minutes. If you are stuck, move on and come back.</span></li><li>At minute thirty take the first pair to the corner. Four minutes: <span class='en'>Student A asks the three questions, Student B answers with a reason and a personal detail. Then swap.</span> The topic today is technology, screens and what you would not give up.</li><li><b>Film every pair — this is not optional.</b> Start recording before the first question and have each student say into the camera: <span class='en'>Name, Unit 9, today's date.</span> Without that line the file is worthless in three months.</li><li>Mark the pair out of ten the moment they sit down again, while you still remember the interaction. The video is not for marking — it is for comparing with the next one.</li><li>Walk back through the room between pairs. A teacher who never leaves the corner is a teacher who is not invigilating.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> nothing on screen; the phone in the corner is recording. <b>Backup:</b> if the recording drops, mark the pair live, write «no video» on the mark sheet and film them at the start of the next lesson.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> work in silence; go to the corner in pairs when called</div></td><td class='mat'>phone on a stand · the speaking page · mark sheet</td></tr><tr><td class='min'>54–70′</td><td class='stage'><div class='nm'>Reading (15 points) · speaking pairs continue</div><div class='zone'>desks + the corner</div><div class='why'><b>Why:</b> Reading in the middle keeps the room busy while the corner works, and it is the section where a tired student can still score if the timing is announced.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> sixteen minutes, fifteen points, and the last pairs filmed</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Say it once and write the second finishing time under the first: <span class='en'>Sixteen minutes, fifteen points. The answers are in the text.</span></li><li>Keep calling pairs until everyone has spoken. At minute sixty-eight the corner closes whatever is left — the rest speak at the start of the next lesson, filmed the same way.</li><li>At minute sixty-two write <span class='en'>8 minutes left</span> on the board without saying anything.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the finishing time on the board; the phone still recording in the corner. <b>Backup:</b> a wall clock if the board is needed for anything else.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> read and answer fifteen points; speak in the corner when called</div></td><td class='mat'>the paper · phone on a stand</td></tr><tr><td class='min'>70–86′</td><td class='stage'><div class='nm'>Writing · a report for a local organisation, 140–190 words (10 points)</div><div class='zone'>desks</div><div class='why'><b>Why:</b> Writing goes last because it is the only section where thinking time cannot be shared with anything else, and because a student who has already spoken and read has the language of the unit warm.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> one task, sixteen minutes, every bullet point answered</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Say the shape of the task in one sentence: <span class='en'>A report, not an essay: headings, facts, and a recommendation at the end. Write what you would actually tell them.</span></li><li>Name the two things that cost marks here and nowhere else: <span class='en'>Every bullet point answered, and the word count. Under 140 or over 190 loses marks even if the English is beautiful.</span></li><li>No more pairs now — you are in the room. Walk the room twice, then sit down and stop moving.</li><li>At minute eighty-four: <span class='en'>Count your words. Write the number at the bottom of the page.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the word limit and the finishing time on the board. <b>Backup:</b> write them on paper and put it on the front desk if the board is full.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write 140–190 words and count them</div></td><td class='mat'>the paper · board (time)</td></tr><tr><td class='min'>86–90′</td><td class='stage'><div class='nm'>Papers in · what happens next</div><div class='zone'>desks → door</div><div class='why'><b>Why:</b> The promise of a score by section is what makes a test formative instead of final, and the video filing rule is the difference between a record of progress and a phone full of unnamed clips.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> collected in silence, and the marking promise made out loud</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Collect at eighty-six exactly, in one pile, Standard and Higher separated.</li><li>Say what happens next: <span class='en'>I mark this by the next lesson. You get the paper back with the score by section — seven numbers, not one — so you can see which skill to work on.</span></li><li>Homework aloud and on the board — and say why it is selective: <span class='en'>The Language checkpoint, but only the parts where you lost points. Doing the parts you already know is not homework, it is decoration.</span></li><li>File the videos the same evening: one folder per group, file name <span class='en'>Gateway_B2_U9_Test_Surname_date</span>.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> homework on the board. <b>Backup:</b> dictate it — it is two lines.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> hand in the paper and write the homework down</div></td><td class='mat'>the collected papers · the mark sheet</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Language checkpoint of the unit — selectively.</b> Do only the sections where you lost points today. You will know which ones when the paper comes back; if one skill already felt wrong as you handed it in, start there tonight without waiting for the mark. Bring the corrections to the next lesson on paper.</p><p class='opt'><b>✳️ Optional — only for students who will sit the EGE exam:</b> EGE tasks 32–38 — three lexical-choice items, four options each. Light work for a test day, and exactly the kind of near-synonym decision the Test yourself vocabulary section makes you take. <a href='https://speakandsmile.online/ege.html#/hw?lexis:3FB987,1F5B70,D4942A'>https://speakandsmile.online/ege.html#/hw?lexis:3FB987,1F5B70,D4942A</a><br>ten minutes, marked automatically; strictly optional. The link opens straight away — no password, no sign-up. Students who are not sitting the exam simply skip it; it does not affect any mark.</p></td><td class='mat'>Student's Book — the Language checkpoint pages of this unit</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, every student has <b>completed the Unit 9 Test (100 points, all five skills)</b> and has spoken on camera for four minutes.</li>
+      <li><span class="lb">Subsidiary.</span> Managing time across seven sections; choosing the level to be measured by; writing to a word count under pressure.</li>
+      <li><span class="lb">Personal.</span> Mark each pair the moment they leave the corner and file the videos the same evening. A video without a name and a date is lost work, and next term you will want exactly this one.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>sit a seven-section paper without running out of time</li><li>answer three exam questions with a reason and a personal detail</li><li>write 140–190 words to a set task</li><li>choose the level they want to be measured by</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Shape of the lesson</div>
+      <div class="arc"><span>Opening</span><span>The paper explained</span><span>Listening</span><span>Vocabulary, Grammar, Use of English</span><span>Reading</span><span>Writing</span><span>Papers in</span></div>
+      <div class="eyebrow" style="margin:12px 0 6px">Kagan structures used today</div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>cloud</span><span class='w'>earbud</span><span class='w'>firewall</span><span class='w'>freeze</span><span class='w'>net</span><span class='w'>storage</span><span class='w'>stream</span><span class='w'>tweet</span><span class='w'>virus</span><span class='w'>back up</span><span class='w'>go off</span><span class='w'>key in</span><span class='w'>log on</span><span class='w'>pick up</span><span class='w'>pop up</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>everything from Unit 9: defining and non-defining relative clauses · pronoun omission · stop / remember / forget / like + gerund or infinitive · gerunds after prepositions · the unit's compound nouns and phrasal verbs</div></div>
+      <div class="r"><div class="k">Form</div><div>no new form today — the unit's forms are retrieved, repaired and then produced under test conditions.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>spelling is today's currency, so the drills are written, not spoken: headphones · touch screen · clickbait · firewall · operating system · cutting edge</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) &amp; ICQs · Assumptions</div>
+      <div class='ccq'>ICQ before the paper: how many sections? → seven. Which comes first? → listening. When do I collect? → minute eighty-six.</div><div class='ccq'>ICQ for the writing: how many words? → 140 to 190, counted and written at the bottom.</div><div class='ccq'>ICQ for the corner: how long do you speak? → four minutes, three questions each way, with a reason and a detail every time.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> The paper is the photocopiable <b>B2 Unit 9 Test</b> from the course folder — <b>Standard and Higher</b>, both 100 points, with answer keys, audioscript and <span class='en'>B2_U9_Test.mp3</span>. Print both versions for everyone plus two spare of each, and test the speaker before the lesson. The Student's Book «Test yourself» is <b>not</b> used today — it stays as revision. Parental consent for filming children is on file at the school; if a family has refused, that student's speaking is marked live and simply not recorded.</p>
+    </div>
+  </div>
+
+  <div class='eyebrow'>Answer keys for this lesson (Teacher's Book — checked page by page)</div><div class='cardb' style='padding:4px 8px'><table class='ap'><thead><tr><th>Task</th><th>Answer</th></tr></thead><tbody><tr><td>Standard — answer key</td><td>тесты/progress Tests/B2_U9_Test_Standard_answer_key.pdf</td></tr><tr><td>Higher — answer key</td><td>тесты/progress Tests/B2_U9_Test_Higher_answer_key.pdf</td></tr><tr><td>Audio</td><td>тесты/progress Tests/B2_U9_Test.mp3</td></tr><tr><td>Audioscript</td><td>тесты/progress Tests/B2_U9_Test_audioscript.pdf</td></tr><tr><td>Speaking — 10 points</td><td>criteria in the Teacher's Guide; mark it as the pair leaves the corner, not from the video</td></tr></tbody></table></div>
+  <div class='eyebrow'>Unit 9 test — what is on the paper (photocopiable B2 Unit Test, Standard and Higher)</div><div class='cardb' style='padding:4px 8px'><table class='ap'><thead><tr><th>Section</th><th>Content</th></tr></thead><tbody><tr><td>Vocabulary — 20 points</td><td>three exercises on the word list of the unit: gapped sentences, definitions and collocations. Spelling counts.</td></tr><tr><td>Grammar — 25 points</td><td>the structures of the unit with nothing labelled. The biggest single section of the paper.</td></tr><tr><td>Use of English — 8 points</td><td>word formation and key-word transformations — the two formats the EGE also uses.</td></tr><tr><td>Listening — 12 points</td><td>one recording, played twice: true / false and multiple choice.</td></tr><tr><td>Reading — 15 points</td><td>one long text with comprehension questions; the answers are in the text, not in memory.</td></tr><tr><td>Writing — 10 points</td><td>one task, 140–190 words, every bullet point answered.</td></tr><tr><td>Speaking — 10 points</td><td>in pairs, in the corner, while the room writes: three questions each way, with reasons and personal details.</td></tr></tbody></table><p style='font-size:.85rem;color:var(--muted);margin:8px 4px'>Both versions are printed from <span class='en'>Методбаза/курсы/GatewayB2/тесты/progress Tests</span>. Standard and Higher carry the same seven sections and the same hundred points — the difference is the wording, not the workload, and the choice belongs to the student. Speaking is run in pairs in the corner during the written sections and <b>filmed</b>: name, unit and date said into the camera before the first question.</p></div>
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>A student refuses to be filmed</td><td>Mark the answer live, write «no video» on the mark sheet and move on. Never argue about the camera during a test — the mark is the same either way.</td></tr><tr><td>The room goes noisy when a pair leaves for the corner</td><td>Take the first pair only when everyone is already writing, use the corner furthest from the door, and put the two chairs facing away from the room.</td></tr><tr><td>A student finishes the whole paper at minute seventy</td><td>The rule was announced at minute five: nobody leaves. Word count first, then the tenses, then the spelling in the vocabulary section.</td></tr><tr><td>Not every pair has spoken by minute sixty-eight</td><td>The corner closes anyway — the written sections cannot be cut. The rest speak at the start of the next lesson, filmed the same way; write their names on the mark sheet before you forget.</td></tr><tr><td>Two students take different versions and compare afterwards</td><td>Expected, and harmless: the sections and the totals are identical. Say so once and do not let it become a conversation about fairness.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>“Eyes up in 3-2-1”</b> — a calm countdown → on “1” every pair of eyes is on you. Never talk over the class.</div><div class='sigc'><b>Visible timer</b> — timer running = we work; timer stops = pens down. The timer is the boss, not you.</div><div class='sigc'><b>“Boards up!”</b> — a mini-whiteboard round: everyone answers at the same moment — nobody hides, nobody shouts out first.</div><div class='sigc'><b>Silent mode</b> — palm down = we work alone and in silence: listening or writing. Questions afterwards, not during.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, the class claps twice and freezes — an instant reset in the middle of a game.</div><div class='sigc'><b>English-first</b> — an idea may be started in Russian, but the POINT is only given for the English version: reformulate and repeat it.</div></div></div>
+    </div>
+  </div>
+
+  <div class="eyebrow" style="margin-top:22px">Where this goes next</div>
+  <div class='ogecard'><div class='mh'>🇷🇺 Where this lands in the EGE (Russian state exam, grades 10–11) — teacher's note, never taken into class</div><p><b>The same skill is tested by:</b> <b>Tasks 19–31</b> (grammar, word formation and lexis — thirteen marks of the written paper).</p><p>The Test yourself page is a production paper: no options in the second half, the word has to come out of the student's own head and be spelled correctly. That is the shape of tasks 26–31, where a correct word in the wrong form and a correct form spelled wrong score exactly the same — nothing. Naming that aloud before the papers turn over is worth more than another ten minutes of revision.</p><p class='quiet'>Who needs this: not every student in the group will sit the EGE. Those who will get the trainer link in the homework as an <b>optional</b> extra. The rest are told nothing — the lesson works as language teaching without it.</p><p><b>Trainer set on this unit's topic:</b> <a href='https://speakandsmile.online/ege.html#/hw?lexis:3FB987,1F5B70,D4942A'>https://speakandsmile.online/ege.html#/hw?lexis:3FB987,1F5B70,D4942A</a><br><span class='quiet'>EGE tasks 32–38 — three lexical-choice items, four options each. Light work for a test day, and exactly the kind of near-synonym decision the Test yourself vocabulary section makes you take · ten minutes, marked automatically; strictly optional</span></p></div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Gateway to the World B2 · Block 9: Unit 9 «Tech talk» · GatewayB2-U9-P7 — lesson plan &amp; staging</span>
+    <span>Unit 9 · the unit test · five skills, 100 points, 90 minutes</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button><style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>
