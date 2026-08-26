@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 7 · Pair 5 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why + how to pitch it */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks of each stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 7 “Heroes” · Pair 5 — Questions about the past: Did you … ? What did you … ? and the word ago</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>new students 🌱 who joined from outside</b> · 90 min · scaffolding: model → word bank → draft → product with notes in hand · team score · stickers 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 115–116 (syllabus pair 58) · May</span><span class='chip new'>🌱 new students · scaffolding and a model</span><span class='chip'>SB p.90</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u7.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u7-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–8′</td><td class='gname'>Into the lesson: welcome + rewind</td><td>homework check + Kagan RallyRobin on the P4 adjectives + naming the topic</td></tr><tr class='bridge'><td class='gmin'>8–10′</td><td class='gname'>Setting up the mission</td><td>the mission of these lessons: build the questions in writing and interview a partner</td></tr><tr><td class='gmin'>10–24′</td><td class='gname'>Discovery: the question table</td><td>ex.1: we fill in the two tables TOGETHER + the four-cube formula poster</td></tr><tr><td class='gmin'>24–38′</td><td class='gname'>Question machine with support</td><td>ex.2 on the familiar podcast + ex.3 rewriting five sentences — with the cube cards</td></tr><tr><td class='gmin'>38–46′</td><td class='gname'>Rule: ago after a period of time</td><td>ex.5 time words in ascending order + the ago frame + a mini-drill</td></tr><tr><td class='gmin'>46–48′</td><td class='gname'>Transition stretch</td><td>physical reset: 90 seconds of movement</td></tr><tr><td class='gmin'>48–58′</td><td class='gname'>Practice · Grammar round-up with support</td><td>ex.7, the Yash Gupta text: eight items, the first two done together</td></tr><tr class='bridge'><td class='gmin'>58–72′</td><td class='gname'>Product: pair interview about the past</td><td>written first: five questions of their own, then the interview and reporting one answer to the class</td></tr><tr><td class='gmin'>72–82′</td><td class='gname'>Mini-test with self-check + score</td><td>a 10-item mini-test: 6 questions to build + 4 sentences with ago; checked against the key</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Wrap-up: score, stickers, homework</td><td>team score + stickers 🟢🟡🔴 + homework + teaser for P6</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 7 — exact pages and exercise numbers (plus the bonus) at the end of the procedure</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why (for the teacher):</b> The topic is named openly again: questions in the past simple, and ago. The discovery goes through the book's tables, which we fill in together, and through the podcast from the last two lessons — the ex.2 questions are built on it, so the content is already familiar and the brain is busy with the form only. Everything is written before it is spoken: first we build the questions on paper, then we go and interview.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Today's topic is on the board:</b> questions about the past. You already know how to SAY what happened. Now you learn to ASK. There's one rule and it saves you every time: the past sits in DID, so the verb stays clean. 'What did you eat?' — not 'ate'. And one small word for time: ago. Ten minutes ago. A year ago. At the end you interview your partner about their real yesterday — with your questions written down first.”<div class='pitchru'>The gist, if you need to restate it: the topic is announced openly: questions in the past simple and the word ago. One rule: the past sits in did, so the verb stays clean. First we write the questions on paper, then we interview a partner.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or a game wrapper — name it out loud</span><span>🎮 = screen or audio — every such stage carries a “Backup:” line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–8′</td><td class='stage'><div class='nm'>Into the lesson: welcome + rewind</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>circle → desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework check + Kagan RallyRobin on the P4 adjectives + naming the topic</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework check down the rows: <span class='en'>One adjective you found for Easton or Amineh.</span></li><li>Kagan <b>RallyRobin</b>, 20 seconds: <span class='en'>Adjective and its opposite. Take turns.</span> The word bank stays on screen.</li><li>I write the topic straight onto the board: <span class='en'>Today: QUESTIONS in the past simple. And the word AGO.</span></li><li>Bridge: <span class='en'>You can describe people. Now — can you ASK them questions?</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the adjectives word bank (Backup: the word bank is still on the board from the last two lessons — no technology needed)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they say the word pairs. Expect: the opposites have held since P4</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>8–10′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission of these lessons: build the questions in writing and interview a partner</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>One rule: the past sits in DID, so the verb stays clean.</span></li><li><span class='en'>At the end: you interview your partner about their real yesterday — with your five questions written down first.</span></li><li><span class='ig'>🟢🟡🔴 <b>Exit sticker:</b> 🟢 “did it on my own and I'm sure” · 🟡 “did it with the notes/a prompt” · 🔴 “I need help”. The sticker goes on the work, not on the person. The bar for the product is not speed but completeness: every part of the frame is there.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mission slide (Backup: I draw the question formula on the board as four cubes: [question word] [did] [who] [verb])</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they listen and see what the product is. Expect: “can we ask about anything?” — yes, within reason</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>10–24′</td><td class='stage'><div class='nm'>Discovery: the question table</div><div class='sub'>Discovery · the question table</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.1: we fill in the two tables TOGETHER + the four-cube formula poster</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.1 built on the board line by line (TB key: 1 Did · 2 verb · 3 Yes/No · 4 question word · 5 did).</li><li>The formula poster: <span class='en'>[question word] + DID + [who] + [verb]. When did they move?</span> It goes up next to the verb poster.</li><li>A choral drill of the short answers: <span class='en'>Did it cost a lot? — Yes, it did. Did she speak English? — No, she didn't.</span> Three times.</li><li>TB reminder: <span class='en'>How is a Wh- question too, even without the wh.</span></li><li>The mistake goes on the board in advance (TB prevention): <span class='en'>What did you ATE yesterday? ❌ → What did you EAT yesterday? ✅</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.90 ex.1 · the formula poster (Backup: I draw the formula and the table in chalk, they stay there all lesson; no projector needed)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they build the table together and drill the answers chorally. Expect: the short answers settle quickly</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit7_Grammar2_Past_Simple_Questions_And_Ago_Visual_Takeaway_A5</b><div class="nbk">A5 grammar card — ASK ABOUT THE PAST: two question formulas (DID + subject + base verb? and question word + DID + subject + base verb?) with short answers, the crossed-out Did she wrote? and the AGO scale (ten minutes · an hour · two days · three months · five years ago)</div><ul><li>Glue the card in; circle the base verb in both formulas.</li><li>Ask four questions about your partner's past — two yes/no, two Wh.</li><li>Answer with ago, not with a date — that is what is being trained.</li><li>The card stays open through the question machine.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the “Discovery: the question table” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slides 5–6</td></tr><tr><td class='min'>24–38′</td><td class='stage'><div class='nm'>Question machine with support</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.2 on the familiar podcast + ex.3 rewriting five sentences — with the cube cards</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.2 on the podcast from P4 (the content is already familiar): <span class='en'>Five questions from the words. Use the four cubes.</span> (TB key: 1 What did Easton design? · 2 Did Amineh write a poem? · 3 How did Easton feel? · 4 How much did Momo's hand cost? · 5 Did Amineh speak English in Syria?).</li><li>The first question is built physically: I hand out the cube cards and students line up at the board in the right order.</li><li>ex.3 in writing with support (TB key: 1 What time did you get up? · 2 Did you watch TV at breakfast? · 3 How did you go to school? · 4 What did you have for lunch? · 5 Who did you see after school?).</li><li>Kagan <b>Numbered Heads Together</b>: <span class='en'>Question three — number ones, read it out!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.90 ex.2–3 · the cube cards (Backup: I cut the cubes out of paper in advance; if there are none, students write the parts of the question on four sticky notes)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they build the questions physically, then in writing. Expect: “How much did cost it” — we move the cubes by hand and the order sticks</div></td><td class='mat'>slide 7</td></tr><tr><td class='min'>38–46′</td><td class='stage'><div class='nm'>Rule: ago after a period of time</div><div class='sub'>Rule · ago</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.5 time words in ascending order + the ago frame + a mini-drill</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.5 together (TB key: second · minute · hour · day · week · month · year). I show the length of each period with my fingers.</li><li>The frame goes on the board: <span class='en'>[a period of time] + AGO. Ten minutes ago. An hour ago. Two days ago.</span> And separately: <span class='en'>never 'agos'!</span> (TB ABCD note)</li><li>A written mini-drill: <span class='en'>Write four things: what you did an hour ago, a week ago, a month ago, a year ago.</span> (TB Extra activity)</li><li>Kagan <b>Timed Pair Share</b>: we read our four lines to a partner.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the ago frame on the board (Backup: the frame IS the backup: I write it in chalk and don't rub it off)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they order the words and write their own four lines. Expect: ago sticks fast — it is the verb that breaks, and I point at the poster</div></td><td class='mat'>slide 8</td></tr><tr><td class='min'>46–48′</td><td class='stage'><div class='nm'>Transition stretch</div><div class='sub'>Break · switch</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> physical reset: 90 seconds of movement</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Stand up. Find someone who woke up earlier than you today. One question each — go!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they move around asking one question each. Expect: every student says a question out loud</div></td><td class='mat'>—</td></tr><tr><td class='min'>48–58′</td><td class='stage'><div class='nm'>Practice · Grammar round-up with support</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.7, the Yash Gupta text: eight items, the first two done together</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Before the task: <span class='en'>Yash Gupta broke his glasses and couldn't see for a week. Then he found out that twelve million children have no glasses at all.</span></li><li>The first two items are done aloud together, the rest in crews (TB key: 1 c lives · 2 a was · 3 b can't · 4 b any · 5 b read · 6 a was · 7 b them · 8 c poorer).</li><li>Support: a label next to each item as a prompt (tense? pronoun? comparison?).</li><li>The final number as a hook: <span class='en'>48,000 children can see better because of one boy's idea.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.90 ex.7 (Backup: I write the eight round-up lines on the board one at a time and the crews hold up a/b/c cards)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they close the round-up with the prompts. Expect: items 6 and 8 are the hardest — we take them calmly, this is a review of the whole course</div></td><td class='mat'>slide 9</td></tr><tr class='True'><td class='min'>58–72′</td><td class='stage'><div class='nm'>Product: pair interview about the past</div><div class='sub'>PRODUCT · pair interview</div><div class='zone'>solo → pairs → stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> written first: five questions of their own, then the interview and reporting one answer to the class</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>In writing first: <span class='en'>Write FIVE questions about yesterday. Five different question words: What · When · How · Who · Did.</span> I check them against the formula poster.</li><li>ex.4 the interview: <span class='en'>Ask your partner. Write ONE-word notes on their answers.</span></li><li>I add ago: <span class='en'>And one more: 'How long ago was that?'</span></li><li>Kagan <b>Timed Pair Share</b>: swap roles.</li><li>Reporting: <span class='en'>Tell the class ONE thing you learnt about your partner. Full sentence, with ago if you can.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the formula poster · question sheets (Backup: the formula on the board and students write the questions in their notebooks; nothing else is needed)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write the questions, interview and report. Expect: writing first takes the fear away. Typical problem: “Did you went?” — the partner points at the poster</div></td><td class='mat'>slides 10–11</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Mini-test with self-check + score</div><div class='zone'>solo → pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a 10-item mini-test: 6 questions to build + 4 sentences with ago; checked against the key</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Ten items. Six minutes. Poster covered for this one.</span> I cover the formula poster with a sheet.</li><li>Key on screen afterwards: <span class='en'>Mark your own. Circle every slip.</span></li><li>Score to the team: the pair's points go into the team total.</li><li>Mini spelling clinic (2 words of the day): minute · year (plus the frame two years ago).</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mini-test sheet · key on screen (Backup: I read the key aloud item by item)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write in silence and mark themselves. Expect: 6–9 out of 10; ago holds better than word order</div></td><td class='mat'>slide 12 · timer</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Wrap-up: score, stickers, homework</div><div class='sub'>Team score + reflection</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> team score + stickers 🟢🟡🔴 + homework + teaser for P6</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I announce the team score and the nominations (cleanest question · best follow-up · best use of ago).</li><li>Stickers on your own work: 🟢 on my own · 🟡 with the poster · 🔴 I need help.</li><li>Homework: WB p. 55, ex. 1–5 (questions + ago, the interview about Neil Armstrong); 🌱 bonus: interview an adult at home — what they did at your age — and write down 4–5 sentences with ago (the TB Homework task).</li><li>Teaser: <span class='en'>Next lesson: how to disagree in English without a fight. 'No way!' 'You've got a point.' And then we write a life story.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> stickers 🟢🟡🔴 · homework slide (Backup: I dictate the homework and write the pages on the board)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they stick their stickers and write down the homework. Expect: most of them hold the questions</div></td><td class='mat'>slide 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook (their own book):</b> WB p. 55, ex. 1–5 — questions in the past simple, the TeenMag interview about Neil Armstrong, ago.</p><p>🌱 Bonus: interview an adult at home — what they did at your age — and write down 4–5 sentences with ago (the TB Homework task for Grammar).</p></td><td class='mat'>WB Unit 7 · the question-formula poster stays on the wall</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>build Yes/No and Wh- questions in the past simple</b> with short answers and <b>use ago</b> correctly in questions and answers.</li>
+      <li><span class="lb">Subsidiary.</span> ex.1 the two tables; ex.2 questions on the P4 podcast; ex.3 rewriting five sentences; ex.4 pair interview; ex.5 time words; ex.6 the ago circles; ex.7 Grammar round-up with support.</li>
+      <li><span class="lb">Personal.</span> The switch gesture from P3 works here too: one hand on did — “the past is here”, the other opens — “the verb is clean”. The question-formula poster goes up next to the verb poster.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>build a Yes/No question with Did and answer it short</li><li>build a Wh- question with a question word + did</li><li>keep the verb clean after did</li><li>use ago after a period of time (two days ago)</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Warm-up</span><span>Base</span><span>Practice</span><span>Media</span><span>Draft</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>Did … ?</span><span class='w'>What did … ?</span><span class='w'>When did … ?</span><span class='w'>How did … ?</span><span class='w'>How much did … ?</span><span class='w'>Who did … ?</span><span class='w'>ago</span><span class='w'>second</span><span class='w'>minute</span><span class='w'>hour</span><span class='w'>day</span><span class='w'>week</span><span class='w'>month</span><span class='w'>year</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Did it cost a lot? — Yes, it did. · Did she speak English? — No, she didn't. · What did Easton design? · When did they move? — A year ago.</div></div>
+      <div class="r"><div class="k">Form</div><div>(question word) + did + who + the infinitive of the verb. The past sits in did. ago always comes AFTER a period of time and has no plural.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>did in a question is unstressed and runs together: “What-d-you say?”; in a short answer it is the opposite, stressed: “Yes, I DID.” We drill both chorally.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“What did you ate?” — where is the mistake? → did is already past: What did you EAT?</div><div class='ccq'>“When did you born?” → this one takes be: When WERE you born?</div><div class='ccq'>“ago ten minutes” — is that right? → no: ten minutes AGO.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.90, syllabus pair 58. The irregular forms were set in P3 (poster on the wall), the P4 podcast is fresh — the ex.2 questions are built on it.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>“Did you saw?” — a double past</td><td>The switch gesture from P3 + the question-formula poster on the wall. I correct with the gesture, not with a word.</td></tr><tr><td>Word order falls apart</td><td>The formula on the poster is broken into four cubes: [question word] [did] [who] [verb]. Students build the question by physically moving the cube cards.</td></tr><tr><td>ago is stuck anywhere</td><td>Support on the board: [a period of time] + ago. I check with my finger: ago is always on the right. And no “agos”.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 7 “Heroes” (What makes a hero?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U7 “Heroes” · P5 · new students 🌱</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>

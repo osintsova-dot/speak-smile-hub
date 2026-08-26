@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 2 · Pair 5 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why the lesson looks like this */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks inside one stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 2 “Me time” · Pair 5 — Grammar: Wh- questions in the present simple (with supports)</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the “new students” line 🌱, coming from outside</b> · 90 min · supports: model → word bank → draft → product with the sheet in hand · team score · stickers 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 33–34 (KTP pair 17) · November</span><span class='chip new'>🌱 new students · supports and a model</span><span class='chip'>SB p.30</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u2.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u2-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: greeting + rewind</td><td>do/go/play gesture blitz + one line “my Saturday”, taking turns in the pair</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>the mission: three ways to ask a question, three colours</td></tr><tr><td class='gmin'>8–22′</td><td class='gname'>Discovery: three question tables</td><td>we sort examples a–c from ex.1 into the three tables → finish the tables → chorus</td></tr><tr><td class='gmin'>22–34′</td><td class='gname'>Question machine with a prompt sheet</td><td>ex.2 assembling 5 questions from the words → a conveyor on mini-boards with self-check, 8 rounds</td></tr><tr><td class='gmin'>34–45′</td><td class='gname'>Quiz · sports quiz</td><td>ex.4 finish the quiz questions → ex.5 (track 16) we listen and check the answers</td></tr><tr><td class='gmin'>45–47′</td><td class='gname'>Transition stirrer</td><td>stirrer</td></tr><tr><td class='gmin'>47–56′</td><td class='gname'>Pronunciation · do you /djʊ/</td><td>SB p.116: the linked do you + falling intonation, in chorus and in pairs</td></tr><tr class='bridge'><td class='gmin'>56–72′</td><td class='gname'>Product: interview with a prompt sheet</td><td>ex.6 their own 5 questions (or the cards) → interview → a 3-line report → volunteers read out loud</td></tr><tr><td class='gmin'>72–82′</td><td class='gname'>Mini-test with self-check + score</td><td>6 items (assemble a question / find the mistake) → key → private score → points to the crews</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Ending: reflection + homework</td><td>homework with a worked example + a teaser for P6</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 2 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> Questions are the structure a new student needs most: without them there is no talking. So the pair is built as a staircase: three tables from examples → the question machine with prompt cards → a quiz with ready-made questions → their own interview. I separate the three “channels” (be / have got / do-does) by colour, so the choice is visible to the eye instead of being something you have to remember.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“How do you make friends?</b> You ask questions. Where do you play? Why do you like it? Who is your favourite player? Today — the full question map: three ways, three colours. Blue for IS and ARE, yellow for HAVE GOT, green for everything else. We build questions together, play a sports quiz, and then you interview a partner for real. Ready to ask?”<div class='pitchru'>In simpler words, if the class needs support: questions are the key to a conversation: three ways to ask one (be / have got / do-does), three colours. We build them together, play a sports quiz and take a real interview from a partner.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Into the lesson: greeting + rewind</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> do/go/play gesture blitz + one line “my Saturday”, taking turns in the pair</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Gesture blitz! Then: one line — my Saturday at the sports centre.</span></li><li>First my own line as the model (<span class='en'>On Saturday I go swimming at ten.</span>), then Kagan <b>RallyRobin</b>: A — one activity from their Saturday, B — theirs, A again. Three rounds, all the pairs talking at the same time.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> slide (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they get going</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission: three ways to ask a question, three colours</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Three ways to ask. Three colours. Then a real interview.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mission slide (Backup: the mission title and the bar go on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the plan is clear</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>8–22′</td><td class='stage'><div class='nm'>Discovery: three question tables</div><div class='sub'>Discovery · three question tables</div><div class='zone'>pairs → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> we sort examples a–c from ex.1 into the three tables → finish the tables → chorus</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Cards in three colours: <span class='en'>Who is the team captain? (blue) · When have you got your next match? (yellow) · Why do you like hockey? (green)</span></li><li>I sort the first card myself and explain out loud (“I see IS — so it's the blue table”), then Kagan <b>Think-Pair-Share</b>: <span class='en'>Which example goes in which table? And WHY?</span> — 30 seconds alone in silence, a minute with a neighbour (they must say the “why” out loud), then the class answers. TB key ex.1: be — c · have got — b · other verbs — a.</li><li>We finish the tables in the notebook (copied from the book, leaving space).</li><li>Chorus with rhythm: <span class='en'>Where DO you play? Where DOES he play?</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> coloured cards · SB p.30 ex.1</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they work the rule out through the colours. Expect: the colour holds the choice better than the rule does</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit2_Grammar2_Wh_Questions_Visual_Takeaway_A5</b><div class="nbk">A5 grammar card — BUILD A WH-QUESTION: six question words (who · what · where · when · why · how / how many) and three helper branches: BE (Who is the team captain?), HAVE GOT (What have you got in your bag?) and other verbs through do/does (Why does he like hockey?), with the rule “choose the helper first”</div><ul><li>Glue the card in; label each branch with its helper.</li><li>Build one question on each branch — out loud.</li><li>The trap: after does — base verb; mark it on the card.</li><li>The card stays open through the question machine.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the “Discovery: three question tables” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slide 5</td></tr><tr><td class='min'>22–34′</td><td class='stage'><div class='nm'>Question machine with a prompt sheet</div><div class='sub'>Question machine</div><div class='zone'>pairs · mini-boards</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.2 assembling 5 questions from the words → a conveyor on mini-boards with self-check, 8 rounds</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.2 in writing, key one at a time (TB): 1 When have you got PE? · 2 What are your favourite sports? · 3 How do you keep fit? · 4 Where does your local football team play? · 5 Who is your favourite sports star?</li><li>The machine through Kagan <b>Showdown</b>: I do the first round at the board myself, saying the choice of colour out loud. Then <span class='en'>Card: where / your friend / play → Where does your friend play? Boards up!</span> — EVERYBODY writes silently, the boards go up together on my call, so nobody's mistake is visible before that.</li><li>The weaker ones get cards with the beginning ready (Where does… / What are… / How many have…).</li><li>The key after each round; hand down at the end of the question.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> cards · mini-boards · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they assemble questions on a conveyor, with support. Expect: by round 6 they stop peeking</div></td><td class='mat'>slide 6 · timer</td></tr><tr><td class='min'>34–45′</td><td class='stage'><div class='nm'>Quiz · sports quiz</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.4 finish the quiz questions → ex.5 (track 16) we listen and check the answers</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.4: <span class='en'>Which word is missing? Look at the colour: is it be, have got, or do/does?</span> TB key: 1 do · 2 have · 3 is · 4 does · 5 are.</li><li>We answer the quiz through Kagan <b>Numbered Heads Together</b>: I demonstrate the first question with one crew (“heads together — agree — number two answers”), then they do it themselves: heads together, one shared answer, I call a random number — <span class='en'>Number threes, answer!</span> Guessing is allowed, it is a game — but the crew has ONE answer. Then we listen to track 16. TB key ex.5: 1 b · 2 c · 3 b · 4 b · 5 a.</li><li><span class='en'>Which answer surprised you?</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.30 ex.4–5 · audio track 16 (Backup: I read the script aloud twice, at the same pace)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they play with ready-made questions → then dare to make their own. Expect: excitement without fear</div></td><td class='mat'>slide 7 · audio</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Transition stirrer</div><div class='sub'>break · transition</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> stirrer</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>I shout the question word — you shout the colour: WHO? — BLUE! HOW MANY? — YELLOW! WHEN? — GREEN!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they fix the three channels with their bodies</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–56′</td><td class='stage'><div class='nm'>Pronunciation · do you /djʊ/</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> SB p.116: the linked do you + falling intonation, in chorus and in pairs</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Listen: 'What sport d'you like?' Two words, one sound: /djʊ/.</span></li><li>TB stress key: 1 What sport, like · 2 When, play · 3 Where, play · 4 Who, play with · 5 Why, like this sport.</li><li>Five questions in chorus, then Kagan <b>RallyRobin</b> in pairs: A asks question 1 with the hand going down, B — question 2, A again — question 3. The partner listens not for the meaning but for the end of the phrase: hand goes down — I nod, hand goes up — I show “lower” with my palm.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.116 · audio 61–62 (Backup: I read the script aloud twice, at the same pace)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they get the “grown-up” sound. Expect: the linked d'you lands as a trick — they ask you to say it again</div></td><td class='mat'>slide 8</td></tr><tr class='True'><td class='min'>56–72′</td><td class='stage'><div class='nm'>Product: interview with a prompt sheet</div><div class='sub'>PRODUCT · interview with a prompt sheet</div><div class='zone'>pairs → stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.6 their own 5 questions (or the cards) → interview → a 3-line report → volunteers read out loud</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.6 in writing, key as a prompt (TB): What do you do in your free time? · When do you do it? · How many video games have you got? · What's your favourite game? · Why do you like it?</li><li>The interview through Kagan <b>Timed Pair Share</b>: first I interview one student in front of the class as the model, then A asks for 2 minutes (B answers), bell — B asks for 2 minutes. <span class='en'>Five questions. Cards if you need them. Notes, not sentences.</span></li><li>A 3-line report: <span class='en'>I asked Misha about his free time. He plays football twice a week. He hardly ever watches TV.</span></li><li>Checklist: the right channel? the adverb in the right place? -s in the third person?</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> question cards · checklist</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the full cycle question → answer → report, with supports. Expect: everybody has their 3 lines</div></td><td class='mat'>slides 9–10</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Mini-test with self-check + score</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 6 items (assemble a question / find the mistake) → key → private score → points to the crews</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Six items, then the key. Circle your slips — they're yours only.</span></li><li>Stickers 🟢🟡🔴.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mini-test · leaderboard</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they check themselves</div></td><td class='mat'>slide 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Ending: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework with a worked example + a teaser for P6</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: WB p.15, ex.1–3 — the worked example is on the slide.</li><li>Teaser: <span class='en'>Next: how to sign up for a course in English — and your first real message to a stranger.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> homework slide (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write it down</div></td><td class='mat'>slide 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> WB p.15, ex.1–3 (Wh- questions).</p><p>🌱 If you want: ex.4–5 (your own questions for a friend).</p></td><td class='mat'>WB Unit 2 · the coloured channel cards stay in the classroom</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>build Wh- questions with be, have got and do/does</b> using colour support, and <b>interview a partner with 5 questions</b>.</li>
+      <li><span class="lb">Subsidiary.</span> The three tables in ex.1, built from examples; ex.2 assembling questions; the sports quiz ex.4–5 (track 16) as safe practice; ex.6 their own questions; pronunciation of do you /djʊ/.</li>
+      <li><span class="lb">Personal.</span> I drill the intonation of a Wh- question with my hand going DOWN (unlike Yes/No). The weaker ones get cards with ready-made questions; the stronger ones make their own questions without cards.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>choose the right question channel (be / have got / do-does)</li><li>build a Wh- question with a card support</li><li>ask with falling intonation</li><li>interview a partner with 5 questions and write 3 lines</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Discover</span><span>Machine</span><span>Quiz</span><span>Pronunciation</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>who</span><span class='w'>what</span><span class='w'>where</span><span class='w'>when</span><span class='w'>why</span><span class='w'>how</span><span class='w'>how old</span><span class='w'>how many</span><span class='w'>how often</span><span class='w'>what time</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>be: Why is hockey important to you? · How old are the players? · have got: How many people have you got in your team? · Why has the team got 16 players? · other verbs: How does hockey help you? · When do you play?</div></div>
+      <div class="r"><div class="k">Form</div><div>question word + be/have-has/do-does + subject (+ got / + bare verb, no -s)</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>the intonation of a Wh- question FALLS (unlike Yes/No): Why is hockey so important to you? ↘ · SB p.116: an unstressed do you in a question sounds like one word /djʊ/ — What sport do you like? · Where do you play?</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«Why she likes it?» — why doesn't that work? → you need does: Why does she like it? — and the verb is bare.</div><div class='ccq'>«How many cousins have you?» — what is missing? → got: How many cousins have you got?</div><div class='ccq'>«What you do in your free time?» → What DO you do in your free time?</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.30 + Pronunciation p.116, KTP pair 17. The Wh- words are familiar, but choosing the channel and the word order are new. A staircase from cards to their own questions.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>do and does get mixed up</td><td>Colour code: blue cards — be, yellow — have got, green — do/does; the green ones carry an extra note he/she/it → does. The colour holds all lesson.</td></tr><tr><td>They answer off the point because they did not understand the question</td><td>The first rounds use questions whose answer is in the book (the quiz): understanding is checked by the answer, not by translation.</td></tr><tr><td>Rising intonation, as in Yes/No questions</td><td>Hand drill: on a Wh- question the hand GOES DOWN. Three runs in chorus.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 2 “Me time” (How important are hobbies for teenagers?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U2 “Me time” · P5 · the “new students” line 🌱</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>

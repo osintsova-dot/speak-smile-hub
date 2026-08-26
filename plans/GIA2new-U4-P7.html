@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 4 · Pair 7 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why the lesson looks like this */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks inside one stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 4 “Extremes” · Pair 7 — Project: a video tip for tourists about our region's weather + unit review</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the 🌱 «new students» line, joining from outside</b> · 90 min · support: model → word bank → draft → product with the sheet in hand · team score · stickers 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 71–72 (KTP pair 36) · February</span><span class='chip new'>🌱 new students · support and a model</span><span class='chip'>SB pp.57–59</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u4.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u4-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: welcome + rewind</td><td>rewind of P6: one line from their own instructions, out loud</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>the mission: a video about the four seasons + four checks + going on air</td></tr><tr><td class='gmin'>8–22′</td><td class='gname'>Unpacking the model project (Finland)</td><td>ex.1, the video about Finland → ex.2, unpacking the Model project → the note frame on the board</td></tr><tr class='bridge'><td class='gmin'>22–32′</td><td class='gname'>Notes on the four seasons</td><td>ex.3, active-listening phrases on cards → ex.4, notes on the three remaining seasons</td></tr><tr><td class='gmin'>32–50′</td><td class='gname'>Four checks: review stations</td><td>4-minute stations with support: weather · one word/two words · than and the …est · modals (SB p.57)</td></tr><tr><td class='gmin'>50–52′</td><td class='gname'>Transition warm-up</td><td>warm-up through Take Off–Touch Down</td></tr><tr><td class='gmin'>52–66′</td><td class='gname'>Rehearsal from the notes</td><td>ex.5, who says what → ex.6, rehearsal from the note card → ex.7, filming (or a live run)</td></tr><tr class='bridge'><td class='gmin'>66–78′</td><td class='gname'>On air: we show the video to the class</td><td>showing the videos + peer review (ex.8) + answering the WDYT question</td></tr><tr><td class='gmin'>78–84′</td><td class='gname'>Score + a personal superpower list</td><td>points: the stations + the notes + going on air; a superpower list into everyone's notebook</td></tr><tr><td class='gmin'>84–90′</td><td class='gname'>Finish: reflection + homework</td><td>homework: WB «Look what you know» + the superpower list</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 4 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> The first project of the unit for new students follows the coursebook steps strictly (THINK→PLAN→CREATE→PRESENT), with a note-taking frame and active-listening phrases on cards. The unit review is built in as stations, framed as «the check before you go on air» — test preparation without the word «test». The presentation is the whole crew at the board, the speaker holding a card.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Today we tell the world about our home.</b> A visitor from another country wants to know: when should I come, and what should I bring? Your pair makes a short video — four seasons, real numbers, real advice, just like the girl from Finland. One studio rule: while your partner speaks, you listen and then repeat it back. After that, four quick checks — you'll see, you know all of it — and then we go on air.”<div class='pitchru'>In simpler words, if the class needs support: We tell the world about our region: when to come and what to bring. Each pair makes a short video about the four seasons, like the girl from Finland. Studio rule: listen to your partner and say it back. Then four checks — and we go on air.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Into the lesson: welcome + rewind</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> rewind of P6: one line from their own instructions, out loud</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>One line from YOUR instructions — read it to a new partner.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the homework instructions</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they recall their own writing</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission: a video about the four seasons + four checks + going on air</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Four seasons. Real numbers. Four checks. Then we go on air.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the mission slide (Backup: the mission title and the bar go on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the plan is clear</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>8–22′</td><td class='stage'><div class='nm'>Unpacking the model project (Finland)</div><div class='sub'>Design · unpacking the model project</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.1, the video about Finland → ex.2, unpacking the Model project → the note frame on the board</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.1: <span class='en'>Which seasons does she talk about?</span> TB key: all four. TB follow-up: <span class='en'>How cold in winter? (-30°) How hot in summer? (32°) When is the best time to come? (spring or autumn)</span></li><li>ex.2 on the Model project p.59: <span class='en'>What information do you see for each season?</span> TB key: months, temperatures, what people do, what to bring; and all of it written as NOTES, not sentences.</li><li>The frame on the board (five lines per season): <span class='en'>MONTHS · TEMPERATURE · WEATHER WORDS · ACTIVITIES · BRING</span>. I fill in the first block (winter) myself, as a sample.</li><li>TB note: spring and autumn can be combined if the weather is similar.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB pp.58–59 · the project video (backup — I read the Finland script from the board) · Project planner p.119</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they unpack the model and see the frame. Expected: the sample I filled in kills the «I don't know what to write»</div></td><td class='mat'>slide 5 · video</td></tr><tr class='True'><td class='min'>22–32′</td><td class='stage'><div class='nm'>Notes on the four seasons</div><div class='sub'>Research · notes on the four seasons</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.3, active-listening phrases on cards → ex.4, notes on the three remaining seasons</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.3: we practise the phrases in pairs from the cards: <span class='en'>You go first. · OK, let me check I understand. · So you think… · Sorry, can you say that bit again?</span></li><li>Studio rule (TB tip): we show that we are listening — a nod, eye contact, saying it back in our own words. The word interrupt I explain by acting it out.</li><li>ex.4: <span class='en'>Your region. Notes, NOT sentences. Use the word bank.</span> The word bank on screen: weather words + compounds + activities (skiing, skating, walking, swimming, fishing).</li><li>Kagan <b>Timed RoundRobin</b> in pairs: 40 seconds per season — first we speak, then we write the notes.</li><li>I walk round and help pinpoint by pinpoint — especially with the numbers.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.58 Super skills · the phrase cards · the note sheet · word bank</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they make notes with support. Expected: the phrase «So you think…» sticks faster than the others</div></td><td class='mat'>slide 6 · timer</td></tr><tr><td class='min'>32–50′</td><td class='stage'><div class='nm'>Four checks: review stations</div><div class='sub'>Four checks · review stations</div><div class='zone'>stations</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 4-minute stations with support: weather · one word/two words · than and the …est · modals (SB p.57)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Four checks. Four minutes each. The posters on the wall help you!</span></li><li>At every station there is a prompt card and the poster from its own pair (NOUN/ADJECTIVE, the ONE/TWO baskets, TWO→than / THREE+→the …est, the three colours of the modals).</li><li>The stations: a weather-word blitz (track 28) · the compound baskets (track 29) · the comparison forms · choose the modal and build the question.</li><li>Each station finishes with Kagan <b>Numbered Heads Together</b>: <span class='en'>Number ones — answer for your team!</span></li><li>A personal «superpower list»: whatever did not work, I write down for myself.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.57 Quick review · the station cards · the class posters · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they revise the unit with support. Expected: they recognise their own materials and cope faster than they expect to</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit4_Translation_Match_It_2up_A4 + Get_Involved_A2_Unit4_Translation_Translate_It_2up_A4</b><div class="nbk">two 2-up sheets (one A4 = 2 pupils each): MATCH IT! — 12 Russian sentences to English A–L (weather by season, comparatives and superlatives, can/must/mustn't, packing, suggestions and agreement), then TRANSLATE IT! — the same 12 from memory</div><ul><li>Glue MATCH IT! in and join the pairs in pencil — first alone, then check with a partner.</li><li>Glue TRANSLATE IT! on the next page and write the English without looking back.</li><li>Self-check against the matched sheet; every mistake is rewritten as a full sentence.</li><li>Write your score out of 12 in the margin — that is the unit's exit line.</li></ul><span class="nbp"><b>When:</b> ~8 min at the start of the “Four checks: review stations” stage</span><span class="nbp"><b>Prep:</b> 1 × A4 = 2 pupils (pre-cut, one of each sheet per pair). Glue sticks, pencils.</span></div></td><td class='mat'>slides 7–8 · timer</td></tr><tr><td class='min'>50–52′</td><td class='stage'><div class='nm'>Transition warm-up</div><div class='sub'>break · transition</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> warm-up through Take Off–Touch Down</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I do the first command myself so that nobody has to guess what to do. Then Kagan <b>Take Off–Touch Down</b>: <span class='en'>Stand up if you'd come here in summer. Sit down if winter. Jump if you'd never come!</span></li><li>There is no need to answer in words — only with the body, so absolutely everyone joins in.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> a breather on live material</div></td><td class='mat'>—</td></tr><tr><td class='min'>52–66′</td><td class='stage'><div class='nm'>Rehearsal from the notes</div><div class='sub'>Create · rehearsal</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.5, who says what → ex.6, rehearsal from the note card → ex.7, filming (or a live run)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.5: <span class='en'>Divide the seasons. Everyone says roughly the same amount.</span></li><li>ex.6, rehearsal strictly from the card: <span class='en'>Five words on the card — no sentences on paper. Try it twice.</span></li><li>ex.7, filming: <span class='en'>Record it. If it goes wrong, record again — the second take is always better.</span> Backup (TB): if there is nothing to film with, we present live to another pair.</li><li>Delivery: look at the camera, speak slowly, pause between the seasons.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> phones/camera · the note cards · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they rehearse and film. Expected: the second take is noticeably cleaner — that is visible growth</div></td><td class='mat'>slide 9 · timer</td></tr><tr class='True'><td class='min'>66–78′</td><td class='stage'><div class='nm'>On air: we show the video to the class</div><div class='sub'>PRESENT · on air</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> showing the videos + peer review (ex.8) + answering the WDYT question</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Pair together, speaker with the card: our region, our four seasons, our best number.</span></li><li>The audience: <span class='en'>Thumbs up if you'd come in that season.</span></li><li>Peer review (ex.8): <span class='en'>Is the information clear and helpful? When would YOU visit?</span></li><li>WDYT: <span class='en'>So — how does the weather affect the way we live?</span> We answer with examples from our own videos.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> a screen for the showing · stickers · timer (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they take the stage as a whole pair. Expected: the card and a partner beside them take the fear away</div></td><td class='mat'>slides 10–11</td></tr><tr><td class='min'>78–84′</td><td class='stage'><div class='nm'>Score + a personal superpower list</div><div class='sub'>Score + superpower list</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> points: the stations + the notes + going on air; a superpower list into everyone's notebook</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Your power list = what to practise. Twenty minutes at home beats two hours!</span></li><li>Only now do I say it: <span class='en'>Next lesson we show what we know — a friendly check.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> leaderboard</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they leave with a list, and the test has been introduced gently</div></td><td class='mat'>slide 12</td></tr><tr><td class='min'>84–90′</td><td class='stage'><div class='nm'>Finish: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework: WB «Look what you know» + the superpower list</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: WB p.35 «Look what you know! 4» (unit self-check) + 20 min on the superpower list.</li><li><span class='en'>You made a real video today. A test is smaller than a video. See you!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the homework slide (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write it down</div></td><td class='mat'>slide 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> WB p.35 «Look what you know! 4» (Grammar review + Round-up + Self-evaluation) + 20 minutes on your personal superpower list (not everything at once).</p><p>🌱 Optional: WB p.34 Super skills (communication), ex.1–2.</p></td><td class='mat'>WB Unit 4 · the test is next pair (introduced gently)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>make notes about four seasons and present them in a short video</b> with a frame, and revise the whole unit at four stations.</li>
+      <li><span class="lb">Subsidiary.</span> The model video about Finland (ex.1) and the analysis of the Model project (ex.2); Super skills communication with phrase cards (ex.3); ex.4, the notes; ex.5–7, sharing out the parts, rehearsal, filming; ex.8, peer review; Quick review p.57 as stations with support; the unit's WDYT question.</li>
+      <li><span class="lb">Personal.</span> The project follows the coursebook steps, I do not cut it. At the stations there are prompt cards and the posters from the previous pairs. I call the gap list «the superpower list»; the word «test» comes only at the very end of the pair. If there is nothing to film with, we present live to another pair (TB backup).</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>make notes (not sentences) about four seasons</li><li>use active-listening phrases with a partner</li><li>present one season from a note card</li><li>pass four revision stations</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Model</span><span>Notes</span><span>Stations</span><span>Rehearse</span><span>On air</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>spring</span><span class='w'>summer</span><span class='w'>autumn</span><span class='w'>winter</span><span class='w'>cold</span><span class='w'>cool</span><span class='w'>freezing</span><span class='w'>hot</span><span class='w'>warm</span><span class='w'>cloud</span><span class='w'>cloudy</span><span class='w'>dry</span><span class='w'>fog</span><span class='w'>foggy</span><span class='w'>frost</span><span class='w'>frosty</span><span class='w'>ice</span><span class='w'>icy</span><span class='w'>rain</span><span class='w'>showers</span><span class='w'>snow</span><span class='w'>sun</span><span class='w'>sunny</span><span class='w'>thunderstorms</span><span class='w'>wet</span><span class='w'>wind</span><span class='w'>windy</span><span class='w'>backpack</span><span class='w'>beach towel</span><span class='w'>guidebook</span><span class='w'>hairbrush</span><span class='w'>penknife</span><span class='w'>phrase book</span><span class='w'>sleeping bag</span><span class='w'>suitcase</span><span class='w'>sun cream</span><span class='w'>toothbrush</span><span class='w'>toothpaste</span><span class='w'>wash bag</span><span class='w'>water bottle</span><span class='w'>waterproof jacket</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>In winter it's freezing and there's a lot of snow. · People go skating and skiing. · You must bring a warm coat and boots. · Summer is warmer than spring.</div></div>
+      <div class="r"><div class="k">Form</div><div>notes, not sentences: months · temperature · weather · activities · what to bring (the structure of the Model project p.59).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>numbers on air: thirteen /ˌθɜːˈtiːn/ vs thirty /ˈθɜːti/ — we listen for the difference</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>Are there full sentences in the Model project? → no, only notes.</div><div class='ccq'>Does active listening mean keeping quiet? → no: nodding and saying it back, «So you think…».</div><div class='ccq'>Are the stations a test? → no, they are the check before we go on air.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.57–59, KTP pair 36. The first full project of the unit for this line; success = they went through all the steps, not «the best video».</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>The discussion slides into Russian</td><td>Phrase cards on the table; the rule: every turn to your partner starts with a phrase from the card.</td></tr><tr><td>They do not understand what to write in the notes</td><td>A five-line frame per season (MONTHS · TEMPERATURE · WEATHER · ACTIVITIES · BRING) + a sample filled in by me for winter.</td></tr><tr><td>The stations get squeezed out by the project</td><td>The stations sit firmly in the middle of the pair, on a timer, with the posters and the cards — they earn as many points as the project does.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 4 “Extremes” (How does the weather affect the way we live?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U4 «Extremes» · P7 · the 🌱 «new students» line</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>

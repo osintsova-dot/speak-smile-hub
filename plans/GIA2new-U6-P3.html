@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 6 · Pair 3 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why + how to pitch it */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks of each stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 6 “Animals in danger” · Pair 3 — Grammar: past simple of be (was/were, there was/were)</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the 🌱 new-students line, joined from outside</b> · 90 min · scaffolding: model → word bank → draft → product read from notes · team score · stickers 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 95–96 (syllabus pair 48) · April</span><span class='chip new'>🌱 new students · scaffolding and a model</span><span class='chip'>SB p.76</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u6.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u6-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–8′</td><td class='gname'>Opening: welcome and rewind</td><td>welcome + P2 rewind: three facts about the saiga or the gorilla from their own notes</td></tr><tr class='bridge'><td class='gmin'>8–10′</td><td class='gname'>Mission brief</td><td>the topic of the lesson named openly + the product: a museum exhibit label</td></tr><tr><td class='gmin'>10–26′</td><td class='gname'>Discovery: was and were</td><td>the ex.1 table is completed together → the prompt poster → ex.2 in writing with a check</td></tr><tr><td class='gmin'>26–36′</td><td class='gname'>Rule: there was / there were</td><td>practising the there was / there were choice on cards + Kagan RallyRobin</td></tr><tr><td class='gmin'>36–45′</td><td class='gname'>Mini-test with self-check</td><td>an 8-item mini-test (was/were/wasn't/weren't/there was/there were) + self-check against the key</td></tr><tr><td class='gmin'>45–47′</td><td class='gname'>Move break · stirrer</td><td>a Kinesthetic Symbols stirrer on was / were</td></tr><tr><td class='gmin'>47–60′</td><td class='gname'>Questions and short answers</td><td>the ex.3 word-order rule given straight → ex.4 building questions with cards → ex.5 matching → ex.6 the text</td></tr><tr class='bridge'><td class='gmin'>60–74′</td><td class='gname'>Product: a museum exhibit label</td><td>a 4-line label about one extinct animal + two questions from the class</td></tr><tr><td class='gmin'>74–82′</td><td class='gname'>Team score + reflection</td><td>team score + an “I can…” tap slide + stickers</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Closing: reflection + homework</td><td>homework with a worked example + a teaser for P4</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 6 — exact pages and exercise numbers (plus the bonus) at the end of the procedure</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why (for the teacher):</b> With new students you name the grammar openly: today's topic is the past of the verb be. Clarity beats intrigue. There is still a wrapper, though: we make labels for a museum of extinct animals — it gives every sentence a purpose and naturally calls for affirmatives, negatives and questions. The order is strict: table → model → written practice → mini-test with self-check → product read from notes.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Today's topic is simple and very useful: the past of the verb 'be'.</b> Two words — WAS and WERE — and you can talk about everything that already happened. We'll build the tables together, practise in writing, check yourselves against the key, and at the end each crew writes a museum label for one animal that is gone: what it WAS, where it lived, how many there WERE. You'll have the table in front of you the whole time.”<div class='pitchru'>The gist, if you need to restate it: the topic is stated openly: the past of the verb be. Two words — was and were — and you can talk about everything that has already happened. We build the table, practise in writing, check ourselves against the key, and at the end write a label for the museum of extinct animals.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or a game wrapper — name it out loud</span><span>🎮 = screen or audio — every such stage carries a “Backup:” line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–8′</td><td class='stage'><div class='nm'>Opening: welcome and rewind</div><div class='sub'>Opening · welcome + rewind</div><div class='zone'>circle → desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> welcome + P2 rewind: three facts about the saiga or the gorilla from their own notes</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Circle: <span class='en'>One fact about the saiga or the gorilla.</span> (from the notes — that's fine)</li><li>Write their own sentences on the board: <span class='en'>There WERE more than a million saigas. · Hunting WAS a problem. · There WEREN'T any laws.</span></li><li>Bridge: <span class='en'>See these words? WAS. WERE. That's today's topic — and it's much easier than it looks.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> slide (<b>Backup: the three sentences in chalk on the board</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> see the target forms in a familiar context</div></td><td class='mat'>slides 3–4</td></tr><tr class='True'><td class='min'>8–10′</td><td class='stage'><div class='nm'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the topic of the lesson named openly + the product: a museum exhibit label</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Topic: the past of 'be'. Two words: was and were.</span></li><li><span class='en'>At the end: a museum label for one animal that is gone. Four lines, with the table in front of you.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the mission slide + five exhibit cards (dodo · mammoth · Steller's sea cow · Tasmanian tiger · baiji dolphin) — <b>Backup: the five names on the board</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> listen and understand the product. Expect: “two words” sounds doable</div></td><td class='mat'>slide 5</td></tr><tr><td class='min'>10–26′</td><td class='stage'><div class='nm'>Discovery: was and were</div><div class='sub'>Discovery · was and were</div><div class='zone'>crews · mini-boards</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the ex.1 table is completed together → the prompt poster → ex.2 in writing with a check</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.1 p.76 together, one example at a time. TB key: 1 The Tasmanian tiger wasn't a tiger. · 2 Steller's sea cows were very big sea mammals. · 3 There was less forest for the gorilla. · 4 There were more than a million saigas.</li><li>Prompt poster on the wall: <span class='en'>I / he / she / it → WAS · you / we / they → WERE</span> and next to it <span class='en'>there WAS + one · there WERE + many</span>.</li><li>A timeline on the board (TB routine): a “past — now” line, crosses = things that already happened. <span class='en'>Everything on the left takes was or were.</span></li><li>ex.2 in writing, then check it one item at a time (TB key: 1 was, was · 2 weren't, were · 3 weren't, were · 4 wasn't, was, was).</li><li>Consolidation: do the first example on your own board (say out loud where you are looking — at the subject), then Kagan <b>Showdown</b>: you name a subject, everyone writes was or were silently on their mini-whiteboard and on <span class='en'>Boards up!</span> they show together. The prompt poster is on the wall — looking at it is allowed and expected.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.76 ex.1–2 · the prompt poster · two “one / many” boxes · mini-whiteboards</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> complete the table and write. Expect: they keep looking at the poster — that is what it is there for</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit6_Grammar1_Past_Simple_Be_Visual_Takeaway_A5</b><div class="nbk">A5 grammar card — WHAT WAS IT LIKE?: was/wasn't and were/weren't by person, the structures There was + singular / There were + plural, the question flip with short answers and Wh-questions (What was the problem? · How many saigas were there?), on examples of extinct animals</div><ul><li>Glue the card in; mark in red that did is not needed here.</li><li>Say four sentences about the past: two was, two were.</li><li>Flip two of them into questions and answer in short form.</li><li>The card stays open at the museum exhibit label.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the “Discovery: was and were” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slide 6</td></tr><tr><td class='min'>26–36′</td><td class='stage'><div class='nm'>Rule: there was / there were</div><div class='sub'>Rule · there was / there were</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> practising the there was / there were choice on cards + Kagan RallyRobin</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Show two sentences from the article and ask: <span class='en'>Look AFTER 'there'. One forest — was. Many saigas — were.</span></li><li>Cards on the desks: <span class='en'>… a big campaign · … special exhibitions · … a saiga stamp · … any laws · … enough open space</span> — sort them into the two boxes, then say the whole sentence.</li><li>Kagan <b>RallyRobin</b>: partners take turns, one sentence each about their own classroom or bedroom: <span class='en'>Yesterday there was … in my bag.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> cards · the two boxes · the prompt poster</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> choose the form by what comes AFTER there. Expect: the boxes solve the problem in 5 minutes</div></td><td class='mat'>slide 7</td></tr><tr><td class='min'>36–45′</td><td class='stage'><div class='nm'>Mini-test with self-check</div><div class='sub'>Mini-test with self-check + score</div><div class='zone'>solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> an 8-item mini-test (was/were/wasn't/weren't/there was/there were) + self-check against the key</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Eight sentences, five minutes. You check yourselves — nobody sees your score.</span></li><li>The key goes on screen when the time is up; everyone circles their own slips.</li><li><span class='en'>Circle what you missed. That's your practice list — and it's short.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the mini-test slip · the key slide (<b>Backup: the key written on the board</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> check themselves privately. Expect: most get 6–8 out of 8 — and it is the first time they see that grammar gave in</div></td><td class='mat'>slide 8</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Move break · stirrer</div><div class='sub'>Move break</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a Kinesthetic Symbols stirrer on was / were</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>First show both gestures yourself and run four words slowly together with the class. Then Kagan <b>Kinesthetic Symbols</b>: you name a subject and everyone answers with their hands at the same time — nobody is left watching. <span class='en'>WAS — one hand up! WERE — two hands up!</span> (call out: the dodo… mammoths… there … a stamp … there … laws … you … we)</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> fix the choice of form with their bodies</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–60′</td><td class='stage'><div class='nm'>Questions and short answers</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the ex.3 word-order rule given straight → ex.4 building questions with cards → ex.5 matching → ex.6 the text</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.3: show the rule on examples and say it chorally (TB key: 1 first · 2 after · 3 before). The formula on cards on the desk: WAS/WERE — who — the rest.</li><li>ex.4 as a race with support (TB key: 1 How big was the rhino? · 2 Was it dangerous? · 3 What was the rhino's diet? · 4 How many rhinos were there in 2011? · 5 Were there rhinos in Cameroon?). Write the correct questions on the board (the TB asks for this).</li><li>ex.5 matching the answers (TB key: a 3 · b 4 · c 1 · d 5 · e 2) — then read the question-and-answer pairs aloud.</li><li>ex.6 (Fun Facts Forum): do the first five gaps together on the board as a model, the rest through Kagan <b>RallyCoach</b>: in the pair, the first student chooses the form aloud and says WHY (I look at the subject / I look at what comes after there), the second is the coach: holds the prompt poster, checks and praises; on the next gap they swap roles. TB key: 1 was · 2 was · 3 were · 4 wasn't · 5 Were · 6 were · 7 weren't · 8 was · 9 Was · 10 wasn't · 11 was.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.76 ex.3–6 · the formula cards · the board</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> build the questions physically. Expect: “Were there…?” comes more easily than expected — the boxes have already done their work</div></td><td class='mat'>slide 9 · timer</td></tr><tr class='True'><td class='min'>60–74′</td><td class='stage'><div class='nm'>Product: a museum exhibit label</div><div class='sub'>PRODUCT · a museum label</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a 4-line label about one extinct animal + two questions from the class</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The frame on screen: <span class='en'>The … was a … . It lived in … . In 19.. there were about … . There weren't any … .</span></li><li>Write for 7 minutes in crews; go round and check the first line of every crew.</li><li>Peer check in pairs: <span class='en'>Was or were? Look at the subject.</span></li><li>Read the labels aloud from the notes; the class asks one simple question each (<span class='en'>Was it big? Were there many?</span>) and the crew gives a short answer.</li><li>Praise something specific: <span class='en'>Perfect 'there were'! Nice short answer!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> label sheets · the frame on the slide · timer (<b>Backup: the frame in chalk on the board</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write to the frame and reply with short answers. Expect: with notes and a frame, everyone gets through</div></td><td class='mat'>slides 10–11 · timer</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Team score + reflection</div><div class='zone'>board → solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> team score + an “I can…” tap slide + stickers</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Score: for the table, for the mini-test, for the label, for clean short answers.</li><li>The “I can…” slide: <span class='en'>Tap what is TRUE for you now.</span></li><li>Stickers: 🟢 easy · 🟡 ok · 🔴 hard.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> leaderboard · the I can slide · stickers (<b>Backup: the I can list read out from the board</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> see how far they came in one lesson. Expect: 🔴 from those who mix up there was/were — take them into the support work in P4</div></td><td class='mat'>slide 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Closing: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework with a worked example + a teaser for P4</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: WB p.45, ex.1–4 (table + facts + stories) — the core; ex.5–6 optional.</li><li>Show a completed ex.1 table on the slide.</li><li>Teaser: <span class='en'>Next lesson: a girl of thirteen who sells lemonade all over America — and gives a fifth of the money to bees. And eight verbs you can use tomorrow.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the homework slide with the worked example (<b>Backup: page and exercise numbers on the board</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write it down</div></td><td class='mat'>slide 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> WB p.45, ex.1–4 (was/were, there was/were) — the core; ex.5–6 (your own questions and answers) optional.</p><p>🌱 Optional: write your museum label out neatly — we will put it on the unit wall.</p></td><td class='mat'>WB Unit 6 · the prompt poster stays on the wall</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>use was/wasn't, were/weren't and there was/were</b> in affirmative, negative and question forms, and <b>write a 4-line museum label</b> about an extinct animal.</li>
+      <li><span class="lb">Subsidiary.</span> The ex.1 tables are completed together; ex.2 in writing; the word-order rule in ex.3 is given straight and shown on examples; ex.4 building questions with support; ex.5 matching; ex.6 the Fun Facts Forum text; Brain teaser ex.7 optional.</li>
+      <li><span class="lb">Personal.</span> Name the grammar as the topic — new students need clarity. The table stays on screen all lesson. The mini-test with self-check sits in the middle, so the mistake is found privately and before the product.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>choose was or were by the subject</li><li>make negatives with wasn't and weren't</li><li>use there was with one thing and there were with many</li><li>ask Was …? / Were there …? and answer Yes, it was. / No, there weren't.</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Topic</span><span>Table</span><span>Practice</span><span>Mini-test</span><span>Questions</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>parrot</span><span class='w'>peacock</span><span class='w'>penguin</span><span class='w'>shark</span><span class='w'>dolphin</span><span class='w'>goat</span><span class='w'>rhinoceros</span><span class='w'>ant</span><span class='w'>bee</span><span class='w'>crocodile</span><span class='w'>snake</span><span class='w'>turtle</span><span class='w'>campaign</span><span class='w'>population</span><span class='w'>hunting</span><span class='w'>laws</span><span class='w'>habitat</span><span class='w'>deserts</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Hunting was a serious problem. · The Tasmanian tiger wasn't a tiger. · Steller's sea cows were very big sea mammals. · There was less forest for the gorilla. · There were more than a million saigas. · There weren't any laws. · Were they dangerous? — No, they weren't. · Was the dodo a bird? — Yes, it was. · Were there any baiji dolphins in Australia? — No, there weren't. · What was the problem? · Why was there a big campaign? · How many saigas were there in 1990?</div></div>
+      <div class="r"><div class="k">Form</div><div>in a Yes/No question the verb comes FIRST: Was the dodo a bird? (TB key ex.3: first) · in a Wh- question the verb comes AFTER the question word: What was the problem? (TB key: after) · in questions with there was/were the verb comes BEFORE there: Were there rhinos in Cameroon? (TB key: before) · there was + singular/uncountable · there were + plural</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>in a sentence was is short /wəz/, in a short answer it is full /wɒz/: <i>It was a bird</i> — <i>Yes, it WAS</i>; weren't is said in one piece /wɜː(r)nt/, not as two syllables</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«There were a big campaign» — what is wrong? → one campaign: There WAS a big campaign.</div><div class='ccq'>«Was they dangerous?» — correct it. → Were they dangerous? — they always takes were.</div><div class='ccq'>«There was any laws?» — and here? → Were there any laws? — in a question the verb comes BEFORE there.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.76, syllabus pair 48 (both halves are grammar). They know the present simple of be; what is new is the second form and there was/were.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>They mix up was and were</td><td>A prompt poster on the wall: I/he/she/it → was · you/we/they → were. Before every task, check the subject with a finger (TB routine).</td></tr><tr><td>There was/were — the choice depends on what comes AFTER</td><td>Two boxes on the desks: “one” and “many”. You put the card in a box, then you say the sentence.</td></tr><tr><td>They build a question like a statement</td><td>Give them the formula on cards: WAS / WERE — who/what — the rest. Physically move the cards around on the desk.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 6 “Animals in danger” (What can we do to help animals in danger?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U6 “Animals in danger” · P3 · the new-students line 🌱</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>

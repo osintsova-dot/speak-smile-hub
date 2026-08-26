@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 8 · Pair 3 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why + how to pitch it */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks of each stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 8 “Summer fun” · Pair 3 — Grammar: will for predictions. What holidays will be like in the future</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the 🌱 new-students line, joined from outside</b> · 90 min · scaffolding: model → word bank → draft → product with notes in hand · team score · 🟢🟡🔴 stickers</div>
+    <div class="meta"><span class='chip'>Lessons 127–128 (syllabus pair 64) · May</span><span class='chip new'>🌱 new students · scaffolding and a model</span><span class='chip'>SB p.100 + Pronunciation p.117</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u8.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u8-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–8′</td><td class='gname'>Into the lesson: welcome + rewind</td><td>circle + P2 rewind: fact or opinion on five sentences + homework in</td></tr><tr class='bridge'><td class='gmin'>8–10′</td><td class='gname'>Setting up the mission</td><td>the topic is named out loud: will for predictions + the product of the lesson</td></tr><tr><td class='gmin'>10–24′</td><td class='gname'>Discovery: will for the future</td><td>model on the board → ex.1 the table → ex.2 four predictions with support</td></tr><tr><td class='gmin'>24–36′</td><td class='gname'>Rule: questions with will</td><td>ex.3 the tables of questions and short answers → ex.5 building them → ex.6 in pairs</td></tr><tr><td class='gmin'>36–46′</td><td class='gname'>Mini-test with self-check + score</td><td>10 items: 4 will/won't forms + 3 questions + 3 short answers; self-checked against the key</td></tr><tr><td class='gmin'>46–48′</td><td class='gname'>Transition stretch</td><td>a stretch</td></tr><tr><td class='gmin'>48–58′</td><td class='gname'>Ear training: I go or I'll go</td><td>Pronunciation p.117 as a game: contractions, then telling them apart</td></tr><tr class='bridge'><td class='gmin'>58–72′</td><td class='gname'>Product: five predictions about the future</td><td>product: five predictions about the future from the frame; the speaker holds notes</td></tr><tr><td class='gmin'>72–82′</td><td class='gname'>Team score + reflection</td><td>team score + “I can…” + stickers</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Wrap-up: reflection + homework</td><td>homework with a worked sample + teaser for P4</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 8 — exact pages and exercise numbers (plus the bonus) at the end of the procedure</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why (for the teacher):</b> With new students grammar CAN and should be named as the topic — clarity takes the anxiety away. The lesson is built as a discovery with the table on the screen: examples first, then the rule, then drilling, then their own sentences. Five predictions about the future are a safe personal product: I talk about myself from a frame and it is almost impossible to get it wrong. The listening part (I go / I'll go) is given as a game, not as an exam.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Today we learn one word that opens the whole future: will.</b> Underwater hotels in 2030. Planes with 360° windows in 2050. And a real scientist says that by 2100 we will travel by teleportation. One word, one form, no changes for he, she or they — this is the easiest tense in English, I promise. At the end each of you gives five predictions about the future. Five lines, with your notes. <b>Let's open 2100.”</b><div class='pitchru'>The gist, if you need to restate it: today we learn one word that opens the whole future — will. Underwater hotels in 2030, planes with 360° windows in 2050, teleportation by 2100. One form for every person — the easiest tense in English. At the end everyone gives five predictions about the future.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or a game wrapper — name it out loud</span><span>🎮 = screen or audio — every such stage carries a “Backup:” line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–8′</td><td class='stage'><div class='nm'>Into the lesson: welcome + rewind</div><div class='sub'>Opening · welcome + rewind</div><div class='zone'>circle → desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> circle + P2 rewind: fact or opinion on five sentences + homework in</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Circle: <span class='en'>One thing you'd like to try in VR.</span></li><li>Five fact/opinion sentences (fast, with the signals on the board): <span class='en'>Our school has three floors. · Camping is boring. · The flight to Moscow takes four hours. · I think summer will be hot. · Bristol has 45 sports clubs.</span></li><li>Homework on the desks: <span class='en'>Which city beach would you visit? One line.</span></li><li>Bridge: <span class='en'>'I think summer WILL be hot.' That little word — will — is today's whole lesson.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> rewind slide · homework WB p. 64</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> join in on familiar ground. Expect: they already recognise the opinion signals</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>8–10′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the topic is named out loud: will for predictions + the product of the lesson</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Write on the board: <span class='en'>WILL — predictions about the future.</span></li><li><span class='en'>At the end: five predictions from you. Five lines, with notes. And I promise — this is the easiest tense in English.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> topic slide (<b>Backup: the topic and the formula WILL + verb large on the board — do not rub it off</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> see the topic and the product. Expect: the promise “the easiest tense” takes the tension off</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>10–24′</td><td class='stage'><div class='nm'>Discovery: will for the future</div><div class='sub'>Discovery · will for the future</div><div class='zone'>desks · crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> model on the board → ex.1 the table → ex.2 four predictions with support</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>MODEL: three predictions of your own on the board: <span class='en'>I think it will rain tomorrow. · I'm sure we'll finish this unit on time. · This lesson won't be boring.</span></li><li>Three questions so that students work out the rule themselves (TB routine): <span class='en'>1 Are these about the past, the present or the future? (future) · 2 Do I know for certain? (no) · 3 What word is in every sentence? (will)</span></li><li>The formula on the screen for good: <span class='en'>WILL + verb. No 'to'. No '-s'. WON'T = will not.</span></li><li>ex.1 together (TB key: 1 We will eat VR food in the future. · 2 It won't cost a lot of money.).</li><li>ex.2 — do the first affirmative and the first negative TOGETHER (TB advice), the rest in crews (TB key: 1 will have · 2 won't need, will have · 3 won't take, will use · 4 will use).</li><li>The crew closes the remaining items with Kagan <b>RoundTable</b>: one sheet per crew, and it goes round — you get the sheet, write ONE sentence, pass it on. Before you start the round, model it yourself: take the sheet, say <span class='en'>will + verb</span> out loud, write the first line and pass it. The formula is on the screen — copying from it is allowed and expected.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.100 ex.1–2 · the formula on screen · one sheet per crew for RoundTable (<b>Backup: the formula and the table on the board — do not rub them off before the end of the lesson</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> work the rule out from the three questions. Expect: “one form for every person” is met with relief</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit8_Grammar1_Will_For_Predictions_Visual_Takeaway_A5</b><div class="nbk">A5 grammar card — WHAT WILL HOLIDAYS BE LIKE?: will / won't + base verb for predictions, questions Will + subject + base verb? with short answers, Wh-questions (What will this cost? · Where will we travel?) and the crossed-out will travels</div><ul><li>Glue the card in; circle the base verb after will.</li><li>Write three predictions about 2050: two with will, one with won't.</li><li>Flip one into a question and answer in short form.</li><li>The card stays open at the prediction desk.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the “Discovery: will for the future” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slides 5–6</td></tr><tr><td class='min'>24–36′</td><td class='stage'><div class='nm'>Rule: questions with will</div><div class='sub'>Rule · questions with will</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.3 the tables of questions and short answers → ex.5 building them → ex.6 in pairs</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.3 with support (TB key: 1 Will it be expensive? · 2 No, it won't. · 3 What will this cost?).</li><li>Drill the short answers with ten questions chorally: <span class='en'>Will it rain tomorrow? — Yes, it will. / No, it won't.</span> Show them: we do NOT repeat the verb.</li><li>ex.5 building questions from words, do the first one together on the board (TB key: 1 Who will you speak to next on the phone? · 2 What will the weather be like tomorrow? · 3 What time will you go to bed tonight? · 4 What job will you have when you leave school?).</li><li>The remaining three go in pairs as Kagan <b>RallyCoach</b>. Explain the roles on your fingers: ONE pen per pair. The first student builds the question out loud, saying the order — <span class='en'>question word, will, person, verb</span> — and writes it. The second is the coach at that moment: writes nothing, just looks at the table on the screen and checks two things — no stray to and no -s. Question built — hand the pen over and swap roles.</li><li>ex.6 in pairs — WRITE your answers down first, then ask each other. Kagan <b>RallyRobin</b>.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.100 ex.3, 5–6 · the table on screen · timer (<b>Backup: write the table of questions and short answers on the board in two columns and do not rub it off before the end of the lesson</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write first, speak after. Expect: the question “What job will you have” gets the liveliest answers</div></td><td class='mat'>slide 7</td></tr><tr><td class='min'>36–46′</td><td class='stage'><div class='nm'>Mini-test with self-check + score</div><div class='zone'>solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 10 items: 4 will/won't forms + 3 questions + 3 short answers; self-checked against the key</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Ten items. Alone, quietly, six minutes. The table is still on the screen — use it.</span></li><li>Self-check against the key: <span class='en'>Mark your own. Circle what you missed — it's private.</span></li><li>Team score: a point for everyone with 7+, no names read out.</li><li>Two typical errors on the board, anonymously: <span class='en'>will TO go · will goES.</span> Fix them together in 60 seconds.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mini-test sheet · key on the screen (<b>Backup: read the key out loud</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> find their mistake before the stage. Expect: 7–9 out of 10; the stray to is the commonest</div></td><td class='mat'>slide 8 · timer</td></tr><tr><td class='min'>46–48′</td><td class='stage'><div class='nm'>Transition stretch</div><div class='sub'>transition break</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a stretch</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Stand up. I say a year — you say ONE thing that will exist. 2030! 2050! 2100!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> shout out ideas standing up</div></td><td class='mat'>—</td></tr><tr><td class='min'>48–58′</td><td class='stage'><div class='nm'>Ear training: I go or I'll go</div><div class='sub'>Ear training · I go or I'll go</div><div class='zone'>screen · pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Pronunciation p.117 as a game: contractions, then telling them apart</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Tracks 79–80: drill <span class='en'>I'll · you'll · he'll · she'll · we'll · they'll</span>, then in sentences <span class='en'>I'll see you at 8 o'clock. · She'll be here in 10 minutes.</span> Chorally, then crew by crew.</li><li>Track 81 as a game — listen TOGETHER first, work one example through, then on their own (TB key: 1 b · 2 a · 3 a · 4 b · 5 b). Mini-whiteboards: A or B — this is Kagan <b>Showdown</b>: write the letter, hold the board with the text facing you, lift together on the command <span class='en'>Showdown!</span> That way nobody looks at their neighbour and changes the answer at the last second — and you can see in a second who still cannot hear the 'll.</li><li>Pair game ex.5 p.117: <span class='en'>Say one sentence. Can your partner tell which one you said?</span> — three goes each.</li><li>Bridge into ex.7: read the text “How will holidays change in the future?” with support (TB key: 1 will become · 2 will look · 3 will have · 4 will we travel · 5 won't take · 6 how will we travel). Pre-teach: teleportation = moving a person from one place to another instantly.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> audio tracks 79–81 · SB p.117 and p.100 ex.7 · mini-whiteboards (<b>Backup: say the pairs of sentences yourself, three times each, and students hold up A or B</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> play at telling them apart. Expect: 2–3 out of 5 the first time, 4–5 after the drill. They like the pair game more than the audio</div></td><td class='mat'>slide 9 · audio</td></tr><tr class='True'><td class='min'>58–72′</td><td class='stage'><div class='nm'>Product: five predictions about the future</div><div class='sub'>PRODUCT · five predictions</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> product: five predictions about the future from the frame; the speaker holds notes</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Frame on the screen: <span class='en'>In 2030, … will … . In 2050, people won't … . I think I will … . I'm sure my town will … . In 2100, we will … .</span></li><li>Support — the ideas from the ex.7 text: underwater hotels, planes with 360° windows, space flights, teleportation. Plus their own: school, town, sport, phones.</li><li>Write for 6 minutes in silence, then read it in pairs, then the crew comes out with notes.</li><li>The class listens with a task: <span class='en'>Thumbs up if you AGREE with the prediction.</span></li><li>Praise something specific: <span class='en'>Clean will! Good year! Nice detail!</span> — no error feedback at the board.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the frame as support · timer · the formula WILL + verb on screen (<b>Backup: write the five-line frame and the formula on the board; students copy the frame into their notebooks before they start</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> speak with notes. Expect: the predictions about school and phones are the funniest and the cleanest in form</div></td><td class='mat'>slides 10–11 · timer</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Team score + reflection</div><div class='zone'>board → solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> team score + “I can…” + stickers</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Score: for the tables, for the mini-test, for the listening game, for the five predictions.</li><li>The “I can…” slide: <span class='en'>Tap what is TRUE for you now.</span></li><li>Stickers: 🟢 easy · 🟡 ok · 🔴 hard.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> leaderboard · I can slide · stickers</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> see the team result. Expect: many give will a green — a rare case of easy grammar, say so out loud</div></td><td class='mat'>slide 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Wrap-up: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework with a worked sample + teaser for P4</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: WB p. 61, ex. 1–4 (will forms, the text “What will hotels be like in the future?”, full questions + short answers, the Amy and Stef dialogue).</li><li>Show a worked sample of ex. 1 on the slide.</li><li>🌱 Optional: ex. 5 (their own answers to Amy's three questions).</li><li>Teaser: <span class='en'>Next lesson: three phone calls. One person can't wait, one is sad, and one is so bored he calls at ten in the morning to ask if you're awake.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> homework slide with the sample</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write the homework down. Expect: the workbook goes easily after the lesson — the forms are already in their hands</div></td><td class='mat'>slide 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> WB p. 61, ex. 1–4: will forms (6 gaps), the text “What will hotels be like in the future?” (7 gaps), full questions with short answers (6), the Amy and Stef dialogue (5).</p><p>🌱 Optional: ex. 5 — their own answers to Amy's three questions.</p></td><td class='mat'>WB Unit 8 · the formula WILL + verb stays on the wall until the end of the unit</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>make predictions with will and won't</b>, ask a question with will and answer it short, and <b>give five predictions about the future</b> from notes.</li>
+      <li><span class="lb">Subsidiary.</span> The tables in ex.1 and ex.3 with support; ex.2 four predictions; ex.5 building questions; ex.6 in pairs; ex.7 the text about the future of holidays; Pronunciation p.117 (tracks 79–81) as a game.</li>
+      <li><span class="lb">Personal.</span> The topic is named out loud and written on the board. The table stays on the screen all lesson. The self-checked mini-test sits in the middle — before the product, so the mistake is found before the stage.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>make a prediction with will and with won't</li><li>ask a question with will and give a short answer</li><li>hear the difference between 'I go' and 'I'll go'</li><li>give five predictions about the future from notes</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Discovery</span><span>Rule</span><span>Drill</span><span>Mini-test</span><span>Listening game</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>will</span><span class='w'>won't</span><span class='w'>in the future</span><span class='w'>in 2050</span><span class='w'>ten years from now</span><span class='w'>teleportation</span><span class='w'>underwater hotels</span><span class='w'>360° windows</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>People will have holidays in space. · We won't need a passport. · We will eat VR food in the future. · It won't cost a lot of money. · Will we visit the Moon? — Yes, we will. / No, we won't. · Will it be expensive? — No, it won't. · Where will we travel? · What will this cost?</div></div>
+      <div class="r"><div class="k">Form</div><div>will/won't + the verb with NO to and NO -s, one form for every person · question: (Question word) + will + subject + verb · short answer: Yes, they will. / No, they won't.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>'ll: I'll /aɪl/ · he'll /hiːl/ · she'll /ʃiːl/ · we'll /wiːl/ · they'll /ðeɪl/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“People will to travel” — what is one word too many? → to.</div><div class='ccq'>“She will goes” — what is one letter too many? → -s.</div><div class='ccq'>“will not” in one word? → won't.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.100 + Pronunciation p.117, syllabus pair 64. They saw will in the blog in P2; new are the question, the short answer and hearing the contraction 'll.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>“will to go” and “will goes”</td><td>One picture for the whole lesson: WILL + a bare verb. It stays on the screen and you point at it instead of explaining.</td></tr><tr><td>A short answer with no verb feels incomplete</td><td>Show it in pairs: Will people go? — Yes, they will (not “Yes, they will go”). Drill it with ten questions.</td></tr><tr><td>The listening task frightens them</td><td>Give it as a pair game AFTER the drilling and after the mini-test, not at the start; listen together first, then on their own.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 8 “Summer fun” (What's your idea of a good holiday?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U8 “Summer fun” · P3 · the 🌱 new-students line</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>

@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 4 · Pair 6 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why the lesson looks like this */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks inside one stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 4 “Extremes” · Pair 6 — Speaking and writing: agreeing on a day out + instructions «how to pack a bag»</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the 🌱 «new students» line, joining from outside</b> · 90 min · support: model → word bank → draft → product with the sheet in hand · team score · stickers 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 69–70 (KTP pair 35) · February</span><span class='chip new'>🌱 new students · support and a model</span><span class='chip'>SB pp.55–57</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u4.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u4-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: welcome + rewind</td><td>rewind of P5: RallyCoach — two of their own rules to a neighbour, from the coloured cards</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>the mission: suggestion phrases + the first set of instructions</td></tr><tr><td class='gmin'>8–22′</td><td class='gname'>Suggestion phrases: video + shadowing</td><td>photo of the park → the Kirsty and Sam video → tick the phrases → shadowing in chorus → ex.4 gaps</td></tr><tr class='bridge'><td class='gmin'>22–38′</td><td class='gname'>Planning meeting: agreeing on a trip</td><td>we write our own mini-dialogue on the ex.4 model → the planning meeting: agree with a partner, then swap</td></tr><tr class='bridge'><td class='gmin'>38–45′</td><td class='gname'>Mini-broadcast: volunteers at the board</td><td>2–3 pairs act out the dialogue at the board; the audience ticks the phrases they hear</td></tr><tr><td class='gmin'>45–47′</td><td class='gname'>Transition warm-up</td><td>warm-up: Kinesthetic Symbols on too and also</td></tr><tr><td class='gmin'>47–58′</td><td class='gname'>Model: instructions + too and also</td><td>ex.1–2 p.56, the order of the paragraphs and the «what and why» table → ex.3–4 too and also</td></tr><tr class='bridge'><td class='gmin'>58–74′</td><td class='gname'>Product: instructions for the stairs</td><td>the staircase: two columns of things → compare with a partner → three sentences → three paragraphs → checklist → swap</td></tr><tr><td class='gmin'>74–82′</td><td class='gname'>Wall of work + score</td><td>we read 2 other people's instructions: «what would I add?» + points</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Finish: reflection + homework</td><td>homework + a teaser for P7</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 4 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> Two real-life things in one pair: the phrases you use to propose a plan and to object politely, and their first written instructions. For new students the dialogue is built through shadowing the video (repeating after a voice takes the shyness away) and a written draft, and the instructions come on a strict staircase: two groups of things → three paragraphs → a checklist. too and also I anchor in the body as early as the warm-up.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Today you learn the phrases</b> that work in real life: Why don't we…? How about…? OK, fine. Really? That's too early. First we watch Kirsty and Sam plan their day out, then we do it — our own planning floor right here. And then your first instructions: what goes in the suitcase, what goes in your hand luggage, and why. Step by step. The model shows the way.”<div class='pitchru'>In simpler words, if the class needs support: The phrases people really use to agree on things: we watch how Kirsty and Sam do it, then we hold our own planning meeting. Then the first instructions: what goes in the suitcase, what goes in the hand luggage and why. Step by step, with a model.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Into the lesson: welcome + rewind</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> rewind of P5: RallyCoach — two of their own rules to a neighbour, from the coloured cards</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I use one rule to show what the coach checks: no to, no -s. Then Kagan <b>RallyCoach</b>: <span class='en'>Two rules to your partner — one green, one red. Partner: is the form clean?</span></li><li>One reads — the other keeps the «MODAL + verb» poster in front of their eyes and says «clean» or «there's an extra to»; then they swap.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the coloured cards · the students' own rules</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they warm up</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission: suggestion phrases + the first set of instructions</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Real phrases first, then your first instructions. Step by step.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the mission slide (Backup: the mission title and the bar go on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the plan is clear</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>8–22′</td><td class='stage'><div class='nm'>Suggestion phrases: video + shadowing</div><div class='sub'>Suggestion phrases · video</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> photo of the park → the Kirsty and Sam video → tick the phrases → shadowing in chorus → ex.4 gaps</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.1: <span class='en'>Look at the photo. What can you do there?</span> (TB key: ride the zip lines, walk between the trees). One word each.</li><li>The video: <span class='en'>Is it a school trip, or are the friends organising it?</span> TB key: they organise it themselves.</li><li>ex.3: we mark which two phrases were NOT used (TB key: Let's… and I'm not sure. I don't like…).</li><li>Shadowing: we repeat after the video in chorus, 2 runs. Then ex.4, TB key: 1 should · 2 about getting · 3 fine · 4 don't we · 5 good idea.</li><li>Follow-up on the details (TB): <span class='en'>What time does the zip line open? (8:00) Which bus? (the 9:00) What shoes can't you wear? (sandals)</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the RWS video SB p.55 (backup — I read the dialogue in parts with a helper) · the Key phrases on screen</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they take the phrases off a voice. Expected: shadowing takes the shyness away</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit4_Speaking_Making_Suggestions_A5</b><div class="nbk">A5 dialogue map — LET'S PLAN A DAY OUT (Sam and Kirsty plan a trip) with the suggestion block (We should… · Let's… · Why don't we…? · How about + -ing?), agreement (OK, fine. · Good idea.) and polite refusal (Really? That's too early. · I'm not sure.)</div><ul><li>Glue the map in — a shared day out gets negotiated by it.</li><li>Each writes two busy slots in their own week.</li><li>Agree in pairs: at least one suggestion and one refusal with a reason.</li><li>The ending is compulsory: time, place and what to bring.</li></ul><span class="nbp"><b>When:</b> ~6 min at the start of the “Suggestion phrases: video + shadowing” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slide 5 · video</td></tr><tr class='True'><td class='min'>22–38′</td><td class='stage'><div class='nm'>Planning meeting: agreeing on a trip</div><div class='sub'>Planning meeting from a model</div><div class='zone'>pairs → stations</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> we write our own mini-dialogue on the ex.4 model → the planning meeting: agree with a partner, then swap</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Pairs write a dialogue on the model (their own version of the outing: the ice rink, the cinema, the park) — 6 minutes, phrase cards on the desks.</li><li>Everyone gets a card with one constraint: <span class='en'>You've got 500 roubles · You're busy until 11:00 · You hate picnics · You haven't got a waterproof jacket.</span></li><li><span class='en'>Now plan for real: where, what time, what you wear, what you eat. You must agree at the end.</span></li><li>The constraint is soft: if a phrase is forgotten, pick up the card, that is fine. Change partners after 5 minutes.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> phrase cards · constraint cards · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write first and speak after — the fear is gone. Expected: with a card in hand everybody speaks</div></td><td class='mat'>slide 6 · timer</td></tr><tr class='True'><td class='min'>38–45′</td><td class='stage'><div class='nm'>Mini-broadcast: volunteers at the board</div><div class='sub'>Mini-broadcast · volunteers</div><div class='zone'>stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 2–3 pairs act out the dialogue at the board; the audience ticks the phrases they hear</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Volunteers on air! Class: tick every Key phrase you hear — and put a star on the disagreement.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the phrase checklist</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> volunteers perform with a finished dialogue</div></td><td class='mat'>slide 7</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Transition warm-up</div><div class='sub'>break · transition</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> warm-up: Kinesthetic Symbols on too and also</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Twice I show it myself and say where the connector goes. Then Kagan <b>Kinesthetic Symbols</b>: <span class='en'>TOO — point behind you (it goes at the END)! ALSO — point at your chest (it goes in the MIDDLE)!</span> I read out pairs of ideas, the students show the position.</li><li>That same gesture later replaces my red pen during the writing stage.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> a body anchor for the position of the connector</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–58′</td><td class='stage'><div class='nm'>Model: instructions + too and also</div><div class='sub'>Model · instructions with too/also</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.1–2 p.56, the order of the paragraphs and the «what and why» table → ex.3–4 too and also</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.1 together: <span class='en'>Three paragraphs, wrong order. Fix it.</span> TB key: 1 b — the introduction · 2 c — the bottom of the backpack · 3 a — the top of the backpack.</li><li>ex.2, the table. TB key: top — water bottle and waterproof jacket, «because you use these things during the journey»; bottom — sleeping bag, clothes and cooking equipment, «because the sleeping bag is big but light», «because you don't need these things during the day».</li><li>ex.3: we find too and also in the text and finish the rule. TB key: 1 too · 2 also. The poster: <span class='en'>too → at the END · also → after BE, before other verbs</span>.</li><li>Kagan <b>Think-Pair-Share</b> before ex.4: <span class='en'>Where does 'also' go — before or after the verb? Think — pair — share.</span></li><li>ex.4 in writing, the first two sentences we do together (TB technique). TB key: 1 …waterproof trousers too · 2 I also like going on zip lines · 3 …to see my grandparents too · 4 It's also very heavy · 5 I also take photos with it · 6 …a hat and sun cream too.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.56 ex.1–4 · the too/also poster</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they work the rule out from the model. Expected: they put also after the verb out of habit — the poster and the gesture fix it faster than an explanation</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit4_Writing_Packing_Instructions_A5</b><div class="nbk">A5 writing template — PACK SMART!: a two-column plan — HAND LUGGAGE (what you need on the journey) and SUITCASE (what you need later), with the questions what · where · why, a beach-holiday model and the rule also before the main verb, too at the end of the sentence, plus a CHECK list</div><ul><li>Glue the template on a clean page — the text is written beside it.</li><li>Sort ten things into the two columns and note why.</li><li>Find also and too in the model — they sit in different places, and that is what is tested.</li><li>Write the instructions and check against the list.</li></ul><span class="nbp"><b>When:</b> ~6 min at the start of the “Model: instructions + too and also” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slide 8</td></tr><tr class='True'><td class='min'>58–74′</td><td class='stage'><div class='nm'>Product: instructions for the stairs</div><div class='sub'>PRODUCT · my instructions</div><div class='zone'>solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the staircase: two columns of things → compare with a partner → three sentences → three paragraphs → checklist → swap</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Step 1 (ex.5 THINK): <span class='en'>Beach holiday. Hand luggage and suitcase — three or four things in each column.</span> (TB options: hand luggage — snack, water bottle, book, tickets, money; suitcase — T-shirts, sandals, sun hat, beach towel, wash bag).</li><li>Step 2 through Kagan <b>RallyRobin</b>: first I show a turn on my own column («I say snack — you say sun hat»), then in pairs, one item per turn, back and forth — <span class='en'>Is anything missing?</span> Whatever you haven't got and your partner has, you add to your own list.</li><li>Step 3: three sentences from ready-made openings: <span class='en'>It's important to … · It's a good idea to … · Your hand luggage is a good place for …</span></li><li>Step 4 (PREPARE + WRITE): three paragraphs — the introduction (a ready-made line from the coursebook) · the suitcase · the hand luggage.</li><li>Step 5 (CHECK + ex.6): the checklist on their own (three paragraphs? too and also in place? is there a modal or a comparison?) → swap with a partner. The instructions go up on the unit wall!</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the staircase on the slide · the checklist · word bank · the unit wall (Backup: the word bank written on the board and uncovered before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write down the staircase with support. Expected: everybody manages three paragraphs, and the swap catches the connectors</div></td><td class='mat'>slides 9–10 · timer</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Wall of work + score</div><div class='zone'>desks → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> we read 2 other people's instructions: «what would I add?» + points</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Read two instructions. One thing you would ADD — tell your crew.</span></li><li>Points to the teams; stickers 🟢🟡🔴.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the wall · leaderboard</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they read each other's work</div></td><td class='mat'>slide 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Finish: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework + a teaser for P7</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: copy the instructions out neatly + WB p.34, ex.1–2 (too and also).</li><li>Teaser: <span class='en'>Next: the project! We make a video and tell the world when to come to our region.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the homework slide (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write it down</div></td><td class='mat'>slide 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> copy the instructions out neatly (the fair copy comes back onto the wall) + WB p.34, ex.1–2 (Writing: instructions, too and also).</p><p>🌱 Optional: WB p.33 (Speaking: suggestions), ex.1–2.</p></td><td class='mat'>WB Unit 4 · the fair copy of the instructions — onto the wall</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>make and answer suggestions with 6 Key phrases</b> in a short dialogue and <b>write a 3-paragraph set of instructions</b> using too and also correctly.</li>
+      <li><span class="lb">Subsidiary.</span> The Kirsty and Sam video + shadowing; ex.3–4, the phrases and the gaps; the model «How to pack for a camping trip» (ex.1–2); the subskill too / also (ex.3–4); ex.5, their own instructions on the staircase; ex.6, peer review.</li>
+      <li><span class="lb">Personal.</span> The writing happens in class with my support; at home they only copy it out neatly. To the board only volunteers, and only with a finished dialogue.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>make a suggestion in three different ways</li><li>agree and disagree politely</li><li>write instructions in three paragraphs</li><li>put too and also in the right position</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Phrases</span><span>Planning</span><span>On air</span><span>Connectors</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>We should (go by train).</span><span class='w'>Let's (get the bus).</span><span class='w'>Why don't we (take a picnic)?</span><span class='w'>How about (getting the 9:00 bus)?</span><span class='w'>OK, fine.</span><span class='w'>Good idea.</span><span class='w'>Really? That's too early.</span><span class='w'>I'm not sure. I don't like (picnics).</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Why don't we take a picnic? · How about getting the 9:00 bus? · We should go by train. · OK, fine. / Good idea. / Really? That's too early. · It's important to put your phone in your hand luggage.</div></div>
+      <div class="r"><div class="k">Form</div><div>too — at the end of the sentence, usually after a list · also — after the verb be and BEFORE all other verbs ('Our friends also came', not 'Our friends came also')</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>should — the l is silent: /ʃʊd/ · Let's is said as one piece, /lets/ · polite falling intonation: How about the 9:00 bus? ↘</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«Why don't we take a picnic?» — is that a reproach? → no, it is a suggestion: «let's…».</div><div class='ccq'>«I like also…» — is that allowed? → no: I also like… (also goes before the main verb).</div><div class='ccq'>How many paragraphs are there in the instructions? → three: introduction, suitcase, hand luggage.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.55–57, KTP pair 35 (the KTP says pp.56–58 and a different writing genre — in fact it is Real-world speaking p.55 + Writing pp.56–57, the genre is INSTRUCTIONS, the subskill is too/also). The dialogue and the model text are simple and short.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>They are shy about acting out the dialogue</td><td>First shadowing the video in chorus, then the pair writes its own dialogue, then acts it out at the desk; to the board only volunteers.</td></tr><tr><td>They agree to everything</td><td>The partner's card carries one hard constraint (no money / busy until 11:00) — so they have to object, and the phrase for that is right in front of their eyes.</td></tr><tr><td>«I don't know what to write» in the instructions</td><td>The staircase: two columns of things → three paragraphs → a checklist; the introduction I hand them as a ready-made line from the coursebook.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 4 “Extremes” (How does the weather affect the way we live?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U4 «Extremes» · P6 · the 🌱 «new students» line</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>

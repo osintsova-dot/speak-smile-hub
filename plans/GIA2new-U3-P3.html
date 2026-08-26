@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 3 · Pair 3 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why the lesson looks like this */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks inside one stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 3 “Dressing up” · Pair 3 — Grammar: present continuous — what is happening right now</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the “new students” track 🌱, coming in from outside</b> · 90 min · support: model → word bank → draft in the crew → product with the sheet in hand · team score · self-check against the key</div>
+    <div class="meta"><span class='chip'>Lessons 45–46 (KTP pair 23) · November</span><span class='chip new'>🌱 new students · support and self-check</span><span class='chip'>SB p.40</span><span class='chip'>team score · stickers 🟢🟡🔴</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u3.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u3-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Opening: greeting + rewind of the last pair</td><td>rewind of P2: we read our posts off the wall + look for what they have in common</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>the mission: the full map of the present continuous, and we find the rule ourselves</td></tr><tr><td class='gmin'>8–22′</td><td class='gname'>Discovery: we finish the table ourselves</td><td>examples from the feed on cards → sort them into columns → the ex.1 table → the rule chorally</td></tr><tr><td class='gmin'>22–36′</td><td class='gname'>Spelling station: the -ing forms</td><td>sorting 12 verbs into three baskets by hand → the rule chorally → a written run with a self-check</td></tr><tr><td class='gmin'>36–47′</td><td class='gname'>Negatives and questions</td><td>model → transformations on the frame → the question table ex.4 → short answers chorally</td></tr><tr><td class='gmin'>47–49′</td><td class='gname'>Transition warm-up</td><td>a Take Off–Touch Down stretch + the /n/ and /ŋ/ sounds (SB p.116)</td></tr><tr class='bridge'><td class='gmin'>49–62′</td><td class='gname'>Product: what is happening right now</td><td>6 lines about what is happening in this room (on the ex.3 frame) → self-check → read aloud</td></tr><tr><td class='gmin'>62–74′</td><td class='gname'>Mini-test with self-check + score</td><td>8 items across everything (forms + negatives + questions + spelling) → the key → your score, privately</td></tr><tr><td class='gmin'>74–82′</td><td class='gname'>Team score + reflection</td><td>“I can…” by tapping + easiness stickers + ex.5 once more as a bonus for the fast finishers</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Closing: reflection + homework</td><td>homework with a worked example + the teaser for P4</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 3, pp.20–27 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> With new students you MAY announce the grammar as the topic — they need clarity, not camouflage. But the delivery is discovery: the table is completed from examples in the feed they read last lesson, and they formulate the rule themselves. Lots of short written runs with a self-check against the key — confidence grows out of “I got it right”, not out of an explanation. The -ing spelling is done with hands (cards into baskets) BEFORE any writing.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Yesterday you read a whole text</b> where every verb looked the same: is/are + -ing. Today we find out exactly how it works — and by the end you will describe what is happening in this room, without mistakes. Two little things decide everything: the word be, and the spelling of -ing. Let's find the rule — it's hiding in the Comic Con feed.”<div class='pitchru'>In simpler words, if the class needs support: Yesterday every verb in the feed looked the same: is/are + -ing. Today we work out how it is built, and by the end we describe what is happening in this room, with no mistakes. The rule is hiding in the text — we will find it ourselves.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Opening: greeting + rewind of the last pair</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> rewind of P2: we read our posts off the wall + look for what they have in common</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Your posts are on the wall. Read one aloud.</span></li><li><span class='en'>Now look: what do ALL the verbs have in common?</span> — I accept the answer in Russian and write it big on the board: <b>is / are + <span style='color:#6C3FC5'>-ing</span></b>.</li><li><span class='en'>Today that shape becomes yours.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the posts off the wall · slide (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they reread their own work and name the form themselves. Expect: “there's is or are everywhere and -ing” comes from them</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission: the full map of the present continuous, and we find the rule ourselves</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>The rule is hiding in the text you read. We'll find it — then use it six times, correctly.</span></li><li>I announce the topic openly: <span class='en'>Present continuous: what is happening RIGHT NOW.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the mission slide (Backup: the mission title and the bar go on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the plan is clear and the topic is named honestly</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>8–22′</td><td class='stage'><div class='nm'>Discovery: we finish the table ourselves</div><div class='sub'>Discovery · finishing the table</div><div class='zone'>pairs → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> examples from the feed on cards → sort them into columns → the ex.1 table → the rule chorally</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Example cards from P2: <span class='en'>People are buying comics · He's wearing tights · The fans aren't listening · I'm sitting here.</span></li><li><span class='en'>Two columns: with 'is' and with 'are'. Sort the cards. Who goes with 'is'? Who goes with 'are'?</span></li><li>They formulate the rule themselves (Russian is allowed) → we check it against the ex.1 table and fill the gaps. Key: 1 'm · 2 's · 3 aren't · 4 isn't · 5 listening.</li><li>Chorally, in colour: <span class='en'>I AM sitting. He IS wearing. They ARE playing. She ISN'T sitting.</span> — be in red, -ing in blue.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the example cards · SB p.40 ex.1 · markers in two colours</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they discover the rule with their hands. Expect: “after he/she/it it's is” comes from them. Error: they lose be — I send them back to the colours</div></td><td class='mat'>slide 5</td></tr><tr><td class='min'>22–36′</td><td class='stage'><div class='nm'>Spelling station: the -ing forms</div><div class='sub'>Spelling station · -ing</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> sorting 12 verbs into three baskets by hand → the rule chorally → a written run with a self-check</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The baskets: <span class='en'>just +ing · drop the e · double the consonant.</span> 12 cards: buy, wear, play, watch / take, come, write, dance / swim, run, sit, get.</li><li><span class='en'>Sort them. Why does TAKE lose its e? Why does SWIM double the m?</span></li><li>Checking through Kagan <b>Numbered Heads Together</b>: we do one basket together on the board as the model, then the crew agrees on the rest and makes sure every member could explain it; I call a number — <span class='en'>Number twos: 'run' — which basket?</span> That student answers, but the crew has already prepared them — that is the whole protection.</li><li>The rule chorally + the poster on the wall (Spelling rules SB p.45).</li><li>ex.2 in writing, then the key on the slide, and I check my OWN work: <span class='en'>circle your slips — nobody sees.</span> Key: 1 're taking · 2 'm playing · 3 aren't wearing · 4 's waiting · 5 isn't sitting.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the verb cards · three baskets (backup — three columns on the board) · SB p.40 ex.2 · the key on the slide</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they sort with their hands before writing. Expect: swimming works for everyone from the second go; takeing disappears once the baskets have been done</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit3_Grammar1_Present_Continuous_Visual_Takeaway_A5</b><div class="nbk">A5 grammar card — WHAT'S HAPPENING NOW?: SUBJECT + BE + VERB-ING in all three forms, the question flip, Wh-questions and the SPELLING CORNER (buy → buying · take → taking · swim → swimming) with the markers now · right now · at the moment</div><ul><li>Glue the card in; add one verb of your own to each spelling route.</li><li>Freeze frame: describe in three sentences what the class is doing right now.</li><li>Flip one of them into a question and answer in short form.</li><li>The card stays open while the broadcast table is built.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the “Spelling station: the -ing forms” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slide 6</td></tr><tr><td class='min'>36–47′</td><td class='stage'><div class='nm'>Negatives and questions</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> model → transformations on the frame → the question table ex.4 → short answers chorally</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The model: <span class='en'>I'm sitting. → I'm NOT sitting. He's wearing a hat. → He ISN'T wearing a hat.</span> Who takes isn't, who takes aren't?</li><li>The transformation frame, 5 sentences (+) → (−): I flip the first one on the board myself, then Kagan <b>RallyCoach</b> — the first says the negative out loud, the second looks at the key on the slide and checks one thing: is be still there; after two sentences they swap.</li><li>ex.4: we complete the question tables. Key: Wh- — What's this man doing? · Yes/No — Are they having a good time? / Is he wearing a costume? · short answers — Yes, they are. / No, he isn't.</li><li>Short answers chorally with a rhythm: <span class='en'>Yes-I-AM! No-he-ISN'T!</span> And separately: <span class='en'>never 'Yes, I'm' — always 'Yes, I am'.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.40 ex.4 · the frame on the slide (Backup: the frames written on the board in chalk)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they turn sentences negative and build questions with support. Expect: “Yes, I'm” takes 2–3 repetitions to remove — that is normal</div></td><td class='mat'>slide 7 · timer</td></tr><tr><td class='min'>47–49′</td><td class='stage'><div class='nm'>Transition warm-up</div><div class='sub'>break · gear change</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a Take Off–Touch Down stretch + the /n/ and /ŋ/ sounds (SB p.116)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Kagan <b>Take Off–Touch Down</b>: I show and say the first two words myself, then <span class='en'>-n — sit down! -ng — stand up!</span> (thin! thing! win! wing! go in! going!) Everyone stands and sits at once — getting it wrong is not scary, nobody is watching one person. Key SB p.116 ex.3: 1 b · 2 b · 3 a · 4 a.</li><li>The tongue twister chorally, twice: <span class='en'>Lynne is wearing thin pink leggings.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they catch the /n/–/ŋ/ difference with their bodies. Expect: laughter, and the -ing ending gets cleaner</div></td><td class='mat'>—</td></tr><tr class='True'><td class='min'>49–62′</td><td class='stage'><div class='nm'>Product: what is happening right now</div><div class='sub'>PRODUCT · what is happening right now</div><div class='zone'>solo → pairs → stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 6 lines about what is happening in this room (on the ex.3 frame) → self-check → read aloud</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The ex.3 frame on screen: <span class='en'>1 I … . 2 My teacher … . 3 My classmates and I … . 4 The person next to me … .</span> Plus two lines of your own — one of them NEGATIVE.</li><li><span class='en'>Six lines. Look around and write what you SEE. Word bank and the spelling poster are right there.</span></li><li>Self-check against a three-point checklist: is be there? is -ing there? does the spelling match the poster?</li><li>Kagan <b>Timed Pair Share</b>: 30 seconds reading to your partner; the partner catches one thing — whether be got lost. Then volunteers read to the class.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the frame · the checklist · the Spelling rules poster · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they go through the full cycle: looked → wrote → checked → read out. Expect: 6 lines from everyone, and they really are about this room</div></td><td class='mat'>slides 8–9 · timer</td></tr><tr><td class='min'>62–74′</td><td class='stage'><div class='nm'>Mini-test with self-check + score</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 8 items across everything (forms + negatives + questions + spelling) → the key → your score, privately</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Eight quick items. Then the key. Your score is YOURS — teams get points for finishing, not for marks.</span></li><li>What is in the mini-test: 3 -ing forms · 2 negatives · 2 questions · 1 short answer.</li><li>The key on the slide, they check it themselves and circle their own slips.</li><li>Points to the crews for everybody reaching the end.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the mini-test (sheet) · the key on the slide · leaderboard (Backup: I read the keys out and write the tricky ones on the board)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they check themselves with no fear of a mark. Expect: they can see the progress made in one pair; the most frequent circles are spelling</div></td><td class='mat'>slide 10</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Team score + reflection</div><div class='zone'>board → solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> “I can…” by tapping + easiness stickers + ex.5 once more as a bonus for the fast finishers</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The “I can…” slide: <span class='en'>Tap what is TRUE for you now.</span></li><li>For the fast ones — ex.5 (the Mia and Luke messages) as a bonus. Key: 1 Are you doing your homework? · 2 No, I'm not. · 3 What are you doing? · 4 I'm playing a video game. · 5 Are you watching the football? · 6 Yes, I am. · 7 They are winning 3–1.</li><li>Stickers 🟢🟡🔴 on the way out.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.40 ex.5 · stickers</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they reflect honestly. Expect: 🔴 from the ones who lose be — I take them into extra support in P5</div></td><td class='mat'>slide 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Closing: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework with a worked example + the teaser for P4</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: WB p. 21, ex. 1–3 (-ing forms · sentences · questions) — I show the worked example of the first task on the slide.</li><li>Teaser: <span class='en'>Next: how to say clothes are baggy, smart, comfortable — and a real radio report from a school with NO uniform for one day.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the homework slide with the worked example (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write it down</div></td><td class='mat'>slide 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> WB p. 21, ex. 1–3 (write the -ing forms · build the sentences · make the questions) — the worked example was shown in class.</p><p>🌱 Optional: ex. 4 (answer from the picture).</p></td><td class='mat'>WB Unit 3 · the Spelling rules poster stays up in the classroom</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>use the present continuous</b> in affirmative, negative and question forms with correct -ing spelling, checked by themselves against keys.</li>
+      <li><span class="lb">Subsidiary.</span> Guided discovery from the P2 text; Spelling rules p.45 with hands (cards into baskets); ex.2 and ex.3 with self-check; ex.5 the Mia/Luke messages; the /n/ and /ŋ/ sounds (SB p.116); a mini-test with self-check.</li>
+      <li><span class="lb">Personal.</span> The pace is half that of “ours” — and that is normal. Every stage ends with a self-check against the key: the mistake is found privately, before anyone else sees it.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>complete the present continuous table</li><li>spell -ing forms: buying, taking, swimming</li><li>make negative sentences with isn't/aren't</li><li>ask and answer with short answers (Yes, I am / No, he isn't)</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Discover</span><span>Spelling</span><span>Negatives & questions</span><span>Product</span><span>Mini-test</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>T-shirt</span><span class='w'>hoodie</span><span class='w'>jeans</span><span class='w'>trousers</span><span class='w'>trainers</span><span class='w'>boots</span><span class='w'>coat</span><span class='w'>jacket</span><span class='w'>hat</span><span class='w'>scarf</span><span class='w'>sweater</span><span class='w'>skirt</span><span class='w'>dress</span><span class='w'>shorts</span><span class='w'>sunglasses</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I'm buying comics. · You/We/They're wearing costumes. · He/She/It's drawing a comic. · I'm not listening. · You/We/They aren't listening. · He/She/It isn't listening.</div></div>
+      <div class="r"><div class="k">Form</div><div>most verbs: + -ing (buy → buying, wear → wearing) · verbs ending in -e: drop the e + -ing (take → taking, come → coming) · some verbs with “consonant + vowel + consonant”: double the consonant (swim → swimming, run → running, sit → sitting)</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>SB p.116 /n/ vs /ŋ/: thin–thing · win–wing · go in–going; the -ing ending is not “-ing” with a hard g, it is the nasal /ŋ/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“He wearing a hat” — what is missing? → the form of be: He's wearing a hat.</div><div class='ccq'>“Yes, they're.” — can you answer like that? → no: a short affirmative answer keeps the full form — Yes, they are. / Yes, I am.</div><div class='ccq'>takeing or taking? → taking: verbs ending in -e drop the e.</div><div class='ccq'>swiming or swimming? → swimming: consonant + vowel + consonant → double it.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.40 + Spelling rules p.45 + Pronunciation p.116, KTP pair 23. For some of them the form is genuinely new — I build on examples from a text they have already read (familiar context).</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>They drop be: “He wearing”</td><td>Colour code: be — red marker, -ing — blue; every sentence on the board has both colours. No red — the sentence is not finished.</td></tr><tr><td>The -ing spelling gets muddled</td><td>Sorting with hands (cards into three baskets) BEFORE writing; a cheat-sheet poster on the wall until the end of the unit.</td></tr><tr><td>Fear of making written mistakes</td><td>Every written run comes with a self-check against the key, before anyone else sees it. I give no marks.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 3 “Dressing up” (Why do people dress up?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U3 “Dressing up” · P3 · the “new students” track 🌱</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>

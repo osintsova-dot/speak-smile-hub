@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 2 · Pair 1 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why the lesson looks like this */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks inside one stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 2 “Me time” · Pair 1 — Free time: what I do and how many hours it takes</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the “new students” line 🌱, coming from outside</b> · 90 min · supports: model → word bank → draft → product with the sheet in hand · team score · stickers 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 25–26 (KTP pair 13) · October</span><span class='chip new'>🌱 new students · supports and a model</span><span class='chip'>SB pp.24–25</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u2.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u2-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–8′</td><td class='gname'>Into the lesson: greeting + rewind</td><td>a round of names (RoundRobin) + a reminder of how the lesson works (crews, roles, score, product) + Unit 1 rewind</td></tr><tr class='bridge'><td class='gmin'>8–10′</td><td class='gname'>Setting up the mission</td><td>the mission of the pair: learn the words, build your own weekend, compare it with the Americans</td></tr><tr><td class='gmin'>10–24′</td><td class='gname'>Warm-up: activities from a model</td><td>model before the task: my weekend on the board → 18 words in portions with gestures → ex.2 table</td></tr><tr><td class='gmin'>24–36′</td><td class='gname'>Base: four columns of free time</td><td>ex.3 p.25: photos 1–6 + the box of 11 new words → we finish the same table</td></tr><tr><td class='gmin'>36–45′</td><td class='gname'>Practice: my hours, from the frame</td><td>writing it down first: your own weekend, 6 lines from the frame, with hours; then we read it to a partner</td></tr><tr><td class='gmin'>45–47′</td><td class='gname'>Transition stirrer</td><td>a stirrer about hours on the phone</td></tr><tr><td class='gmin'>47–56′</td><td class='gname'>Video: a vlogger's weekend</td><td>Ryan's vlog with a task set BEFORE they watch; after it — 2 facts on mini-boards through Showdown</td></tr><tr class='bridge'><td class='gmin'>56–72′</td><td class='gname'>Product: my weekend, 6 lines</td><td>the product: 6 lines about your own weekend + 1 comparison with American teenagers; the speaker holds the sheet</td></tr><tr><td class='gmin'>72–82′</td><td class='gname'>Team score + reflection</td><td>team score + “I can…” by tapping + easiness stickers</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Ending: reflection + homework</td><td>homework with a worked example + a teaser for P2</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 2 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> For students new to us the mission is simple and about themselves: put your own weekend together in English and compare it with American teenagers. That gives a safe product (I talk about myself, from a frame, with the sheet in my hand) and at the same time feeds in the 18 words of the set. The statistics on p.24 are not a task but an excuse: the numbers are clear without translation and start an argument straight away.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Look at these numbers.</b> American teenagers spend 4.3 hours a day on media, 3.8 hours on hobbies and almost 11 hours sleeping. Really? Today two things: we learn to name every free-time activity in English — and each of you writes your own weekend, six lines. At the end you present with your notes in your hand. This is not a test. <b>Let's start with MY weekend…”</b> (and I show the model straight away)<div class='pitchru'>In simpler words, if the class needs support: we look at the American numbers, learn to name free-time activities in English and build our own weekend — six lines. At the end we present, sheet in hand.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–8′</td><td class='stage'><div class='nm'>Into the lesson: greeting + rewind</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>circle → desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a round of names (RoundRobin) + a reminder of how the lesson works (crews, roles, score, product) + Unit 1 rewind</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>MODEL FIRST: I speak for myself first — <span class='en'>I'm Oksana and at the weekend I read.</span> — and I leave the sentence on the board as a support.</li><li>Kagan <b>RoundRobin</b>: then round the circle, one person at a time, nobody interrupts — <span class='en'>I'm … and at the weekend I …</span> (one word is fine; “pass” is allowed, but on the second round they answer anyway).</li><li>Reminder of the format: crews, roles (captain · writer · timekeeper · speaker), score, the product of the pair.</li><li>Unit 1 quick fire: <span class='en'>What time do you get up? Do you do homework every day?</span></li><li>Bridge: <span class='en'>School time — done. Now: YOUR time.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> format slide · role cards (Backup: the roles and the scoring written on the board)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they start on something familiar. Expect: the circle gets speech going. Error: they go quiet — I accept one word</div></td><td class='mat'>slides 3–4</td></tr><tr class='True'><td class='min'>8–10′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission of the pair: learn the words, build your own weekend, compare it with the Americans</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Statistics on the screen. American teens: 4.3 hours a day on media. Is that a lot?</span></li><li><span class='en'>At the end: your weekend in six lines + one comparison. You can hold your notes.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mission slide with the statistics from SB p.24 (backup — the numbers on the board)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they listen and understand the product. Expect: the numbers start an argument at once — that is good</div></td><td class='mat'>slide 5</td></tr><tr><td class='min'>10–24′</td><td class='stage'><div class='nm'>Warm-up: activities from a model</div><div class='sub'>Warm-up · activities from a model</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> model before the task: my weekend on the board → 18 words in portions with gestures → ex.2 table</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>MODEL: I tell them MY weekend: <span class='en'>I sleep for nine hours. I meet friends. I watch TV series…</span></li><li>Four portions with gestures: <span class='en'>take photos — click! · practise the piano — fingers! · collect things — grab! · play in a band — guitar!</span></li><li>ex.2 p.24 in pairs: the red words into four columns. TB key: Media and communication — play video games, watch TV series · Sports — play football · Art and music — listen to music, take photos · Other — sleep, meet friends.</li><li>Kagan <b>RallyRobin</b>: taking turns in the pair, one activity from your own column each time.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.24 ex.2 · word bank on screen (Backup: the word bank written on the board and uncovered before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they repeat the model, sort, speak in turn. Expect: the gestures pull them in. Error: make photos — stop gesture</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit2_Vocabulary1_Free_Time_Activities_Visual_Takeaway_A5</b><div class="nbk">A5 glue-in sheet — MY FREE TIME in four moods: ACTIVE (go to a dance class · go to the gym · play football · play in a team) · CHILL (watch TV series · listen to music · play video games · sleep) · CREATE (draw · make videos · play in a band · practise the piano · take photos) · SOCIAL & OTHER (meet friends · collect things · help at home · play chess · use social media), with the frame In my free time, I usually…</div><ul><li>Glue the sheet in — it is the word bank for the whole unit.</li><li>Tick five activities that are really in your week.</li><li>Say three of them by the frame with usually.</li><li>Add one activity of your own if it is not on the sheet.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the “Warm-up: activities from a model” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slides 6–7</td></tr><tr><td class='min'>24–36′</td><td class='stage'><div class='nm'>Base: four columns of free time</div><div class='sub'>Base · four columns</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.3 p.25: photos 1–6 + the box of 11 new words → we finish the same table</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Page 25. Six photos. Which activity is which? Word bank is on the screen — use it!</span></li><li>TB key: 1 collect things · 2 go to the gym · 3 play in a band · 4 play in a team · 5 practise the piano · 6 use social media.</li><li>We finish the table together (TB key): Media — make videos, use social media · Sport — go to a dance class, go to the gym, play in a team · Art and music — draw, play in a band, practise the piano · Other — collect things, help at home, play chess.</li><li><span class='en'>Tick every activity YOU do. How many?</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.25 ex.3 · word bank</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they work with support and tick their own. Expect: slower than the “ours” line — that is normal</div></td><td class='mat'>slide 8</td></tr><tr><td class='min'>36–45′</td><td class='stage'><div class='nm'>Practice: my hours, from the frame</div><div class='sub'>Practice · my hours</div><div class='zone'>solo → pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> writing it down first: your own weekend, 6 lines from the frame, with hours; then we read it to a partner</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Frame on screen: <span class='en'>At the weekend I … . I usually … for … hours. I hardly ever … .</span></li><li><span class='en'>Six lines about YOUR weekend. Numbers help — how many hours?</span></li><li>I walk round and help pinpoint by pinpoint (spelling, articles).</li><li>Kagan <b>Timed Pair Share</b>: 40 sec reading to my partner → swap.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> frame prompt sheet · word bank · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write from the frame and read it in the pair. Expect: everybody has a text — the fear is gone. Error: a list with no hours — “how many hours?” gesture</div></td><td class='mat'>slide 9 · timer</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Transition stirrer</div><div class='sub'>break · transition</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a stirrer about hours on the phone</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>More than three hours a day on your phone — left wall. Less — right wall!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they move and laugh</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–56′</td><td class='stage'><div class='nm'>Video: a vlogger's weekend</div><div class='sub'>Video skills · Ryan's weekend</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Ryan's vlog with a task set BEFORE they watch; after it — 2 facts on mini-boards through Showdown</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Task before: <span class='en'>Find TWO things Ryan does that YOU do too.</span></li><li>We watch; at the stops — discussion in crews (Russian is allowed → then in English).</li><li>MODEL FIRST: I write my own two lines on the big board — <span class='en'>Ryan makes videos. I make videos too.</span> — and leave them as the model.</li><li>Kagan <b>Showdown</b>: everybody writes their own two lines silently on a mini-board, on the call <span class='en'>Showdown!</span> they all hold them up at the same time — that way the whole class answers, not the two brave ones (backed by the TB key: uses social media, meets his friend Aaron, plays in a football team, helps at home, makes videos, plays video games).</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> Video skills SB p.25 (backup — I read a chunk of the video script off the board: “During the week I wake up at seven. But at the weekend, I wake up at 9:00…”) · mini-boards</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they watch with a task and write it down. Expect: they find things they do too — that feels good</div></td><td class='mat'>slide 10 · video</td></tr><tr class='True'><td class='min'>56–72′</td><td class='stage'><div class='nm'>Product: my weekend, 6 lines</div><div class='sub'>PRODUCT · my weekend (6 lines)</div><div class='zone'>crews → stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the product: 6 lines about your own weekend + 1 comparison with American teenagers; the speaker holds the sheet</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>8 min to put it together: everybody tidies up their own 6 lines; the crew helps each other with spelling.</li><li>Comparison from the frame: <span class='en'>American teens sleep for eleven hours. I sleep for … hours.</span></li><li><span class='en'>You can hold your notes. Six lines + one comparison. The crew stands together.</span></li><li>The audience listens with a task: <span class='en'>Thumbs up when you hear an activity you also do!</span></li><li>I praise specifically: <span class='en'>Clear numbers! Nice comparison!</span> — no error correction at the board.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> timer · the students' notes</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they present with support, the crew is next to them — not frightening. Expect: everybody goes on stage in the very first pair</div></td><td class='mat'>slides 11–12 · timer</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Team score + reflection</div><div class='zone'>board → solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> team score + “I can…” by tapping + easiness stickers</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Score: for the table, for the 6 lines, for using the word bank without being prompted.</li><li>“I can…” slide: <span class='en'>Tap what is TRUE for you now.</span></li><li>Stickers on the way out: 🟢 easy · 🟡 ok · 🔴 hard — for me, to calibrate the pace.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> leaderboard · I can slide · stickers (Backup: I draw the leaderboard in the corner of the board and write the list up)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they see: the score belongs to the crew, not to “who is clever”. Expect: 2–3 give 🔴 — I will take them into the supports in P2</div></td><td class='mat'>slide 13</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Ending: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework with a worked example + a teaser for P2</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: WB p.12, ex.1–3 (free-time activities) + write your own 6 lines out neatly.</li><li>I show a worked example of ex.1 on the slide — “this is what a finished one looks like”.</li><li>Teaser: <span class='en'>Next lesson: a girl of thirteen who is a world champion. And she still does homework!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> homework slide with the worked example (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write the homework down and leave with a task they understand. Expect: the example kills “I didn't get what to do”</div></td><td class='mat'>slide 14</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook (their own workbook):</b> WB p.12, ex.1–3 (free-time activities) + write out your 6 lines “My weekend” neatly.</p><p>🌱 If you want: ex.4–5, if it went easily.</p></td><td class='mat'>WB Unit 2 (pp.12–19) · bring the 6 lines to P2</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>name 18 free-time activities</b> and <b>describe their own weekend in 6 lines</b> with hours, comparing one thing with US teenagers.</li>
+      <li><span class="lb">Subsidiary.</span> The four-column table (ex.2–3) with a prompt sheet; ex.4, the text about the twins, done from a model; Video skills (Ryan's vlog) with a task set before they watch.</li>
+      <li><span class="lb">Personal.</span> I never put anybody on the spot without a draft. Every speaking task comes AFTER it has been written down. The word bank stays on screen the whole lesson.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>say and write 18 free-time activities</li><li>sort them into four groups</li><li>describe my weekend in 6 sentences with hours</li><li>compare one thing with US teenagers</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Warm-up</span><span>Base</span><span>Practice</span><span>Video</span><span>Draft</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>collect things</span><span class='w'>draw</span><span class='w'>go to a dance class</span><span class='w'>go to the gym</span><span class='w'>help at home</span><span class='w'>listen to music</span><span class='w'>make videos</span><span class='w'>meet friends</span><span class='w'>play chess</span><span class='w'>play football</span><span class='w'>play in a band</span><span class='w'>play in a team</span><span class='w'>play video games</span><span class='w'>practise the piano</span><span class='w'>sleep</span><span class='w'>take photos</span><span class='w'>use social media</span><span class='w'>watch TV series</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I play video games. · I usually meet friends at the weekend. · I sleep for nine hours. · American teens sleep for eleven hours — I sleep less.</div></div>
+      <div class="r"><div class="k">Form</div><div>fixed collocations, no substitutions: take photos (not make), play chess (no the), go to the gym, use social media.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>from the Wordlist: use social media /ˌjuːz səʊʃ(ə)l ˈmiːdiə/ · practise the piano /ˌpræktɪs ðə piˈænəʊ/ · take photos /ˌteɪk ˈfəʊtəʊz/ (the TB asks you to drill collect /kəˈlekt/, chess /tʃes/, piano /piˈænəʊ/)</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“take photos or make photos?” → take photos, and nothing else.</div><div class='ccq'>“play chess or play the chess?” → no article: play chess.</div><div class='ccq'>“go to gym or go to the gym?” → the is needed: go to the gym.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.24–25, KTP pair 13. Some of the words are familiar (play football, listen to music); new — collect things, practise the piano, play in a band/team, use social media.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Afraid to speak in front of people they don't know</td><td>Rule of the pair: first we write, then we read it to a partner, and we come to the board with the sheet in our hands.</td></tr><tr><td>18 words at once will not fit</td><td>I feed them in four portions, by the columns of the table, with a gesture for each; recognition first (point at it), naming second.</td></tr><tr><td>They ignore the word bank and go quiet</td><td>The word bank stays on screen the whole lesson; a “look up” gesture instead of feeding them the word.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 2 “Me time” (How important are hobbies for teenagers?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U2 “Me time” · P1 · the “new students” line 🌱</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>

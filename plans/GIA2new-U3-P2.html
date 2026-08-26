@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 3 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why the lesson looks like this */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks inside one stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 3 “Dressing up” · Pair 2 — Reading: the live feed from Comic Con (with support)</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the “new students” track 🌱, coming in from outside</b> · 90 min · support: model → word bank → draft in the crew → product with the sheet in hand · team score · self-check against the key</div>
+    <div class="meta"><span class='chip'>Lessons 43–44 (KTP pair 22) · November</span><span class='chip new'>🌱 new students · support and self-check</span><span class='chip'>SB pp.38–39</span><span class='chip'>team score · stickers 🟢🟡🔴</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u3.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u3-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Opening: greeting + rewind of the last pair</td><td>rewind of P1: a clothes chain round the circle + one line out of your six</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>the mission: words → what kind of text → read it in chunks → your own post</td></tr><tr><td class='gmin'>8–20′</td><td class='gname'>Words before the reading (Word work)</td><td>the 6 words of the text with pictures: artists · hero · costumes · autographs · enormous · excited</td></tr><tr><td class='gmin'>20–30′</td><td class='gname'>What kind of text it is (text type)</td><td>subskill: working out the text type from the layout, BEFORE reading (ex.2–3)</td></tr><tr><td class='gmin'>30–45′</td><td class='gname'>Reading the feed in chunks</td><td>the text in 3 chunks by crew → 2 facts per chunk → we build the feed together on the board</td></tr><tr><td class='gmin'>45–47′</td><td class='gname'>Transition warm-up</td><td>a costume stretch</td></tr><tr><td class='gmin'>47–60′</td><td class='gname'>Check: True/False with the line</td><td>ex.5 in pairs with the “finger on the line” support + ex.7 (the words have been swapped round)</td></tr><tr class='bridge'><td class='gmin'>60–74′</td><td class='gname'>Product: my post for the feed (4 lines)</td><td>written, on the frame: one post for our shared feed (4 lines) + read it to your partner</td></tr><tr><td class='gmin'>74–82′</td><td class='gname'>Team score + vocabulary notebook check</td><td>points for the text chunks and the posts + a blitz on the mini-glossary</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Closing: reflection + homework</td><td>homework with a worked example + the teaser for P3</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 3, pp.20–27 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> A live feed frightens a new student with its layout: timestamps, reverse order, a lot of short chunks. So the way in has three steps: the words first (6 of them, with pictures), then “what kind of text is this at all” (a safe question — you can reason rather than read), and only then the reading — in chunks, one per crew. The product is modest and reachable: one post of your own for the feed, on a frame.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Look at the photos.</b> A green man. A man with orange hair and blue tights. Hundreds of people. This is Comic Con — a festival where fans dress up as their heroes. And here is a strange text about it: it has TIMES, and it reads from the BOTTOM. Today we learn to read it — and at the end, each of you writes ONE post for our own feed. Four lines, with a frame. Ready?”<div class='pitchru'>In simpler words, if the class needs support: Comic Con is a festival where fans dress up as their heroes. The text about it is unusual: it has times and it reads from the bottom up. We learn to read it, and at the end everyone writes their own post on a frame.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Opening: greeting + rewind of the last pair</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>circle → desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> rewind of P1: a clothes chain round the circle + one line out of your six</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Kagan <b>RoundRobin</b>: I start the chain (<span class='en'>hat…</span>), then round the circle — one word per turn, no repeats; if you are stuck you say <span class='en'>pass</span> and the circle moves on. <span class='en'>Clothes chain: hat → hoodie → … Don't break the chain!</span></li><li><span class='en'>Now read ONE line from your six to a new partner.</span></li><li>Bridge: <span class='en'>Normal clothes… and now a place where people wear COSTUMES on purpose.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> notebooks · slide (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they warm up on a familiar chain. Expect: the P1 lexis is holding</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission: words → what kind of text → read it in chunks → your own post</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Four steps today: words first, then WHAT this text is, then we read it together in parts, and at the end — your own post.</span></li><li>I show a finished example post on the slide — it is immediately clear that the product is small.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the mission slide (Backup: the mission title and the bar go on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the plan is clear and the product looks doable</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>8–20′</td><td class='stage'><div class='nm'>Words before the reading (Word work)</div><div class='sub'>Words BEFORE the text · Word work</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the 6 words of the text with pictures: artists · hero · costumes · autographs · enormous · excited</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Every word: picture → chorus → gesture → example. <span class='en'>artists — draw in the air! hero — arms like Superman! costumes — spin around! autographs — sign your hand! enormous — arms WIDE! excited — jump!</span></li><li>A mini-glossary in the notebook margin: word + translation + an anchor drawing.</li><li>ex.6 in pairs — match the definitions to the words. Key: 1 artists · 2 hero · 3 costumes · 4 autographs · 5 enormous · 6 excited.</li><li>Blitz: <span class='en'>Definition: very big? — ENORMOUS!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the word slide with pictures · SB p.38 ex.6 (backup — cards with the words and hand-drawn pictures)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they start the glossary before the reading. Expect: the gestures hold the words better than the translation does</div></td><td class='mat'>slide 5</td></tr><tr><td class='min'>20–30′</td><td class='stage'><div class='nm'>What kind of text it is (text type)</div><div class='sub'>What kind of text is this?</div><div class='zone'>pairs → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> subskill: working out the text type from the layout, BEFORE reading (ex.2–3)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The subskill rule goes on the board: <span class='en'>Look at the LAYOUT, the title, the pictures. Are there times? days? prices? comments?</span></li><li>Practice on three examples from the slide: a menu · a chat message · a feed with timestamps. <span class='en'>What type? And WHAT shows it?</span></li><li>Now the book. ex.2: <span class='en'>What event is this? What happens there? Who goes?</span> Key: a festival for comic fans · they dress up as heroes, play video games, watch the artists · fans, young people, people who love comics and films.</li><li>ex.3: <span class='en'>What type of text? Where do you START reading?</span> Key: a live feed (a feed, tweets) · people read it on a computer and on a phone (b and c) · start at the bottom. We draw the bottom-to-top arrow in pencil in the book.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the slide with the three sample texts · SB p.38 ex.2–3 (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they reason about the text type without reading it — you can hardly get it wrong, so there is no fear. Expect: the bottom-to-top arrow clears up the main confusion</div></td><td class='mat'>slide 6</td></tr><tr><td class='min'>30–45′</td><td class='stage'><div class='nm'>Reading the feed in chunks</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the text in 3 chunks by crew → 2 facts per chunk → we build the feed together on the board</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Split through Kagan <b>Jigsaw</b>: crew 1 — the 11:25 and 12:01 posts · crew 2 — 12:15 and 12:32 · crew 3 — 1:54, 2:47 and 3:31. I work through one post on the board myself — there is the model for how to find two facts — and only then do the crews take their chunks.</li><li><span class='en'>Your crew owns these posts. Find TWO facts. You will teach the class.</span> Word bank and glossary — open. Only your crew knows your chunk: without you the class cannot put the whole day together.</li><li>Assembly: the crews report in time order and I build the timeline of the day on the board (11:25 → 3:31).</li><li>Track 20 (ex.4) against the timeline: <span class='en'>Match each message with a photo.</span> Key: A 3:31 · B 2:47 · C 12:15 · D 12:32 · E 11:25 · F 1:54 · G 12:01.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB pp.38–39 (the text in 3 chunks) · the timeline board · audio track 20 (backup — I read the posts out loud in time order)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they own their chunk and listen to the others. Expect: the assembly gives the whole picture without the fear of the length. Error: retelling in Russian — I accept it but ask for one sentence in English</div></td><td class='mat'>slide 7</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Transition warm-up</div><div class='sub'>break · gear change</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a costume stretch</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Show me: the Hulk! The Mad Hatter! A superhero landing! And now — freeze and say: I'm wearing an enormous green top!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they move and repeat the lesson's words with their bodies</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–60′</td><td class='stage'><div class='nm'>Check: True/False with the line</div><div class='sub'>Comprehension check · True/False with evidence</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.5 in pairs with the “finger on the line” support + ex.7 (the words have been swapped round)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>True or false — and put your finger on the line that proves it. No line, no answer.</span></li><li>We go through the key one by one, reading the line out loud: 1 F (“The day's just starting but already a lot of people are waiting to get in”) · 2 F (“the fans aren't listening”) · 3 T · 4 T · 5 F (there are autographs and photos, but the text never says “meet”) · 6 T.</li><li>ex.7 through Kagan <b>RallyCoach</b>: I repair the first sentence on the board myself as the model, then in pairs — the first one says which word is wrong here and which one is needed, the second holds the key and confirms it (does not rewrite it!); after three items they swap roles. Key: 1 enormous animal · 2 famous artist · 3 comic book hero · 4 special costumes · 5 really excited · 6 collecting autographs.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.38 ex.5 and ex.7 · the key on the slide (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they hunt for the lines with a finger, then repair the mixed-up sentences. Expect: slow but unaided; ex.7 goes cheerfully</div></td><td class='mat'>slide 8</td></tr><tr class='True'><td class='min'>60–74′</td><td class='stage'><div class='nm'>Product: my post for the feed (4 lines)</div><div class='sub'>PRODUCT · my post for the feed</div><div class='zone'>solo → pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> written, on the frame: one post for our shared feed (4 lines) + read it to your partner</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>We choose the event as a class: break time at school · a match · a concert · the first snow.</li><li>The frame on screen: <span class='en'>[time] I'm at … . People are … . Someone is wearing … . It's … !</span> The verb bank next to it: coming, playing, buying, wearing, waiting, talking.</li><li><span class='en'>Four lines. Use the frame. The word bank is open.</span> I walk round and help.</li><li>Kagan <b>Timed Pair Share</b>: 30 seconds reading to your partner → swap; 2–3 volunteers read to the class.</li><li>We hang the posts on the wall by time — bottom to top, like a real feed.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the frame on the slide · the verb bank · strips of paper · the class wall (Backup: the frames written on the board in chalk)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> everyone has 4 lines of their own text. Expect: the frame produces a result for everyone, the weakest included</div></td><td class='mat'>slides 9–10 · timer</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Team score + vocabulary notebook check</div><div class='sub'>Team score + vocab-book check</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> points for the text chunks and the posts + a blitz on the mini-glossary</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Blitz: <span class='en'>Close your notebooks! Definition → word. Five seconds each.</span></li><li>Points to the crews; easiness stickers 🟢🟡🔴 on the way out.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> leaderboard · stickers</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they consolidate the 6 words and I can see the pace. Expect: 5 out of the 6 words are holding for most of them</div></td><td class='mat'>slide 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Closing: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework with a worked example + the teaser for P3</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: WB p. 24, ex. 1–2 (reading about markets) — I show the worked example: the text type first, then the evidence line.</li><li>Teaser: <span class='en'>Did you notice? Every verb in that feed looked the same: is/are + -ing. Next lesson we learn exactly how it works.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the homework slide with the worked example (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write it down. Expect: the teaser is honest — they really did notice</div></td><td class='mat'>slide 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> WB p. 24, ex. 1–2 (reading an article about markets): ex. 1 — first work out the text type from the headline and the photos, the way we did in class; then hunt for the evidence line.</p><p>🌱 Optional: ex. 3, if it went easily.</p></td><td class='mat'>WB Unit 3 · the mini-glossary of 6 words will be needed in P8</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>identify a text type before reading</b>, read a live feed with support, answer True/False with the proof line, and <b>write one live-feed post</b> of their own using a frame.</li>
+      <li><span class="lb">Subsidiary.</span> The unit subskill: identifying the text type; Word work (6 words with pictures); ex.7 (the words have been swapped round); Critical thinking in a simplified form.</li>
+      <li><span class="lb">Personal.</span> I cut the text into 3 chunks — one per crew, then we put it back together. All of it at once is frightening. Vocabulary BEFORE the reading, not during it.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>say what type a text is and what shows it</li><li>read a short part of a live feed and retell two facts</li><li>find the proof line for a True/False answer</li><li>write one live-feed post with a frame</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Words first</span><span>Text type</span><span>Read</span><span>Check</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>artists</span><span class='w'>hero</span><span class='w'>costumes</span><span class='w'>autographs</span><span class='w'>enormous</span><span class='w'>excited</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>People are buying comics. · Fans are getting autographs. · The text says… — that's why it's true.</div></div>
+      <div class="r"><div class="k">Form</div><div>reading in chunks · True/False with support: The text says…</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>from the Wordlist: artists /ˈɑː(r)tɪsts/ · hero /ˈhɪərəʊ/ · costumes /ˈkɒstjuːmz/ · autographs /ˈɔːtəˌɡrɑːfs/ · enormous /ɪˈnɔː(r)məs/ · excited /ɪkˈsaɪtɪd/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>hero — is that the hero of a book? → here: someone you admire, an idol.</div><div class='ccq'>costume — is that a two-piece suit? → no: an outfit that makes you look like another character.</div><div class='ccq'>Why is a feed read from the bottom? → because a new post goes on top, so the very first one is at the bottom.</div><div class='ccq'>“True, I think so” — does that count? → you need the line from the text.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.38–39, KTP pair 22. They read more slowly than “ours” — the text in chunks, tasks with frames, and I say the keys out loud.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>The length and the layout frighten them</td><td>The text in 3 chunks, one per crew; each crew owns its own and tells the others about it. We draw the bottom-to-top arrow in pencil in the book itself.</td></tr><tr><td>New words stall the reading</td><td>Word work BEFORE the text, with pictures; a mini-glossary in the margin of the notebook.</td></tr><tr><td>“I don't know what to write” in the product</td><td>The post frame + a verb bank on the slide (is/are + coming, playing, buying, wearing, waiting).</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 3 “Dressing up” (Why do people dress up?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U3 “Dressing up” · P2 · the “new students” track 🌱</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>

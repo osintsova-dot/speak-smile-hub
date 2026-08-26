@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 1 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why the lesson looks like this */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks inside one stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 1 “School life” · Pair 2 — Reading: one day of an online schoolchild (with support)</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the 🌱 new-students line, joining from outside</b> · 90 min · onboarding: model → word bank → draft in the crew → product with a prompt sheet · team score</div>
+    <div class="meta"><span class='chip'>Lessons 11–12 (KTP pair 6) · September</span><span class='chip new'>🌱 new students · onboarding into the format</span><span class='chip'>SB pp.14–15</span><span class='chip'>team score · prompt sheets</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u1-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Opening · entry + review</td><td>greeting by name + review of P1: a chain of routines round the circle through RoundRobin</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>the mission: guess → read → check → say what you think</td></tr><tr><td class='gmin'>8–18′</td><td class='gname'>Words BEFORE the text · Word work</td><td>the 5 words of the text with pictures: grades · subjects · library · log on · classmates; chorally + gestures + mini-glossary</td></tr><tr><td class='gmin'>18–26′</td><td class='gname'>Prediction from the pictures</td><td>headline + photos: 3 guesses per pair (from a frame), we put them up on the board</td></tr><tr><td class='gmin'>26–45′</td><td class='gname'>Reading part by part</td><td>the text in 3 parts through Jigsaw: each crew prepares 2 facts from its part and teaches the class → we assemble the text together → we check the sticky notes</td></tr><tr><td class='gmin'>45–47′</td><td class='gname'>Transition stirrer</td><td>a stirrer</td></tr><tr><td class='gmin'>47–60′</td><td class='gname'>Checking understanding · True/False with evidence</td><td>ex.5 in pairs through RallyCoach with the «finger on the line» support; we correct the false ones with the frame No — they…</td></tr><tr class='bridge'><td class='gmin'>60–74′</td><td class='gname'>PRODUCT · my opinion (4 lines)</td><td>in writing, from a frame: online school suits me / does not + 2 reasons from the text; we read it to a partner</td></tr><tr><td class='gmin'>74–82′</td><td class='gname'>Team score + glossary check</td><td>points for the parts of the text and for the product + a quick-fire round on the mini-glossary</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Finish: reflection + homework</td><td>homework with a worked example + a teaser for P3</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> A long text frightens newcomers, so the way in has three steps: predicting from the pictures (safe — you cannot be wrong), skimming with one question, scanning in pairs with a line of evidence. The product is modest and reachable: 4 sentences about online school, from a frame.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Look at the pictures.</b> A boy with a laptop. No school building anywhere. This school has no classrooms — it lives on the Internet. Guess three things about a day in this school. Then we read — and check YOUR guesses. At the end: four sentences — is online school good or bad for you?”<div class='pitchru'>In simpler words, if the class needs support: A school with no building, it lives on the Internet: we guess three things about it from the pictures, then read and check our guesses; at the end — 4 sentences, «online school suits me / does not suit me».</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Opening · entry + review</div><div class='zone'>circle → desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> greeting by name + review of P1: a chain of routines round the circle through RoundRobin</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I do the first three links myself so that the model is heard, then Kagan <b>RoundRobin</b>: round the circle, each student adds one phrase and passes the turn to the neighbour on the left; if you forget, say <span class='en'>pass</span> and the chain moves on. <span class='en'>Morning chain: wake up → get up → … Don't break the chain!</span></li><li>Bridge: <span class='en'>All your routines need a SCHOOL. But this school has no building…</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> slide (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they join in through a familiar chain</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission: guess → read → check → say what you think</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Guess three things. Read. Check your guesses. Tell us: online school — yes or no for YOU?</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mission slide (Backup: the mission title and the bar go on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the plan is clear</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>8–18′</td><td class='stage'><div class='nm'>Words BEFORE the text · Word work</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the 5 words of the text with pictures: grades · subjects · library · log on · classmates; chorally + gestures + mini-glossary</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Every word: picture → chorally → gesture → example: <span class='en'>I log on — tap-tap! My classmates — point around!</span></li><li>A mini-glossary in the margin of the notebook: word + translation + an anchor drawing.</li><li>Quick-fire check: <span class='en'>Definition: students in your class? — CLASSMATES!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> slide of words with pictures (Backup: the words written on the board with a quick sketch next to each)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they start a glossary before reading. Expect: the gestures hold the words</div></td><td class='mat'>slide 5</td></tr><tr><td class='min'>18–26′</td><td class='stage'><div class='nm'>Prediction from the pictures</div><div class='zone'>pairs → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> headline + photos: 3 guesses per pair (from a frame), we put them up on the board</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Title and pictures only! Three guesses: I think students… I think they don't… I think the school…</span></li><li>The guesses go on sticky notes and up on the board: we will check them by reading.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.12 (headline/photos) · sticky notes</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they build guesses from a frame — you cannot be wrong, so there is no fear</div></td><td class='mat'>slide 6</td></tr><tr><td class='min'>26–45′</td><td class='stage'><div class='nm'>Reading part by part</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the text in 3 parts through Jigsaw: each crew prepares 2 facts from its part and teaches the class → we assemble the text together → we check the sticky notes</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I show how it is done on the opening paragraph: I read it aloud and name my two facts — that is the model answer.</li><li>Then Kagan <b>Jigsaw</b>: <span class='en'>Your crew owns ONE part. Find two facts. You will teach the class.</span> Only they read their own part — which means the class cannot assemble the text without their report.</li><li>Assembly: the crews report in order, and I build the timeline of the day on the board.</li><li>Checking the sticky notes: <span class='en'>Which guesses came TRUE?</span> — we circle the ones that matched.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB pp.12–13 (the text in 3 parts) · timeline on the board</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they own a part and listen to the others. Expect: the assembly gives the whole picture without the fear of length</div></td><td class='mat'>slide 7</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Transition stirrer</div><div class='sub'>break — transition</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a stirrer</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Online school fans — left! Real school fans — right! One word why!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they vote with their feet</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–60′</td><td class='stage'><div class='nm'>Checking understanding · True/False with evidence</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.5 in pairs through RallyCoach with the «finger on the line» support; we correct the false ones with the frame No — they…</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I go through the first statement aloud myself: I read it, run my finger along the line, say the answer — that is what it sounds like.</li><li>Then Kagan <b>RallyCoach</b>: the first student answers aloud and keeps a finger on the line of evidence, the second is the coach: checks the line and praises (<span class='en'>Yes! Good line!</span>), and after each item they swap. <span class='en'>True or false — finger on the proof line! No line, no answer.</span></li><li>We check the key one by one: 1 F · 2 T · 3 T · 4 F · 5 T · 6 F — the false ones we correct chorally, using the frame.</li><li>ex.6 (finish the sentences) — together on the board, the students dictate.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.13 ex.5–6</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they hunt for the lines with a finger. Expect: slow, but on their own</div></td><td class='mat'>slide 8</td></tr><tr class='True'><td class='min'>60–74′</td><td class='stage'><div class='nm'>PRODUCT · my opinion (4 lines)</div><div class='zone'>solo → pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> in writing, from a frame: online school suits me / does not + 2 reasons from the text; we read it to a partner</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The frame: <span class='en'>I think online school is (good/not good) for me. Students… (a fact). They don't… (a fact). For me…</span></li><li>A bank of reasons on the slide (stay at home · see friends only in clubs · study when you want…).</li><li>Kagan <b>Timed Pair Share</b>: 30 sec reading to my partner → swap; 2–3 volunteers read to the class.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the frame on the slide · bank of reasons (Backup: the frames written on the board in chalk)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> everybody has 4 lines of their own opinion. Expect: the opinions differ — they listen with interest</div></td><td class='mat'>slides 9–10 · timer</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Team score + glossary check</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> points for the parts of the text and for the product + a quick-fire round on the mini-glossary</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Quick-fire: <span class='en'>Close your notebooks! Definition → word. Five seconds.</span></li><li>Points to the crews; the 🟢🟡🔴 difficulty stickers on the way out.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> leaderboard · stickers</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they fix the 5 words, and I can see the pace</div></td><td class='mat'>slide 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Finish: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework with a worked example + a teaser for P3</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: WB p. 8, ex. 1–2 (reading «Three cool schools») — I show the model of «how to hunt for the line».</li><li>Teaser: <span class='en'>Next lesson: the grammar of your day — small word, big power: -s.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> homework slide with a worked example (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write it down</div></td><td class='mat'>slide 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> WB p. 8, ex. 1–2 (reading) — hunt for the line of evidence, the way we did in class.</p><p>🌱 Optional: ex. 3, if it goes easily.</p></td><td class='mat'>WB Unit 1 · the mini-glossary will come in useful in P8</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>read a real article with support</b> (predict → skim → scan), answer True/False with the line that proves it, and <b>write 4 opinion sentences</b> by frame.</li>
+      <li><span class="lb">Subsidiary.</span> Subskill: prediction from the headline and the photos; Word work (5 words) with pictures; an oral comparison with our own school, from a frame.</li>
+      <li><span class="lb">Personal.</span> I cut the text into 3 parts — one part per crew, then we put it together. The whole thing at once is frightening. Vocabulary BEFORE the reading, not during it.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>predict article content from pictures</li><li>find an answer and point at the proof line</li><li>match 5 new words to definitions</li><li>write 4 sentences about online school with a frame</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Words first</span><span>Predict</span><span>Read</span><span>Check</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>grades</span><span class='w'>subjects</span><span class='w'>library</span><span class='w'>log on</span><span class='w'>classmates</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Online students stay at home. · They don't go to school. · I think online school is… because…</div></div>
+      <div class="r"><div class="k">Form</div><div>True/False with support: The text says… · reading part by part.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>library /ˈlaɪbrəri/ · subjects /ˈsʌbdʒɪkts/ · classmates /ˈklɑːsˌmeɪts/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«log on» — do you connect to the network or leave it? → you connect, you start working.</div><div class='ccq'>Your prediction was wrong — is that bad? → no! A prediction exists precisely so that you can check it.</div><div class='ccq'>grades — is it the class or the marks? → the marks (5, 4, A, B…).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.12–13, KTP pair 6. They read more slowly than «ours» — the text goes part by part, and the tasks come with frames.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>The length of the text scares them</td><td>The text is cut into 3 parts, one per crew; each crew owns its own part and tells the others about it.</td></tr><tr><td>New words stall the reading</td><td>Word work BEFORE the text, with pictures; a mini-glossary in the margin.</td></tr><tr><td>«I don't know what to think» at the product stage</td><td>An opinion frame: I think… because… + a bank of reasons on the slide.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 1 “School life” (What is an ideal school?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U1 «School life» · P2 · the 🌱 new-students line</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>

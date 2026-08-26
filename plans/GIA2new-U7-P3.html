@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 7 · Pair 3 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why + how to pitch it */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks of each stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 7 “Heroes” · Pair 3 — The past simple: verbs that break (affirmative and negative)</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>new students 🌱 who joined from outside</b> · 90 min · scaffolding: model → word bank → draft → product with notes in hand · team score · stickers 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 111–112 (syllabus pair 56) · May</span><span class='chip new'>🌱 new students · scaffolding and a model</span><span class='chip'>SB p.88</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u7.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u7-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–8′</td><td class='gname'>Into the lesson: welcome + rewind</td><td>homework check + Kagan RallyRobin: the P2 words with their gestures + naming the topic of the lesson</td></tr><tr class='bridge'><td class='gmin'>8–10′</td><td class='gname'>Setting up the mission</td><td>the mission of these lessons: eight forms and one rule about didn't</td></tr><tr><td class='gmin'>10–24′</td><td class='gname'>Discovery: verbs that break</td><td>ex.1–2 on the familiar text: which verbs took -ed and which broke</td></tr><tr><td class='gmin'>24–38′</td><td class='gname'>Rule: didn't + infinitive</td><td>ex.3 eight forms checked against pp.126–127 + ex.4 four sentences + a choral drill in rhymes</td></tr><tr><td class='gmin'>38–45′</td><td class='gname'>Practising the forms step by step</td><td>ex.5, turning the pilot text round: the first two lines together, the rest in pairs</td></tr><tr><td class='gmin'>45–47′</td><td class='gname'>Transition stretch + riddle</td><td>physical reset + the ex.9 riddle on our feet</td></tr><tr><td class='gmin'>47–58′</td><td class='gname'>Practice · the Emma Watson text</td><td>ex.8 with support: regular and irregular mixed, two negatives set as a trap</td></tr><tr class='bridge'><td class='gmin'>58–72′</td><td class='gname'>Product: my yesterday, 6 lines</td><td>written first: six sentences about yesterday (three true, three not), then the partner guesses</td></tr><tr><td class='gmin'>72–82′</td><td class='gname'>Mini-test with self-check + score</td><td>a 10-item mini-test: 6 verb forms + 4 negatives; checked against the key</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Wrap-up: score, stickers, homework</td><td>team score + stickers 🟢🟡🔴 + homework + teaser for P4</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 7 — exact pages and exercise numbers (plus the bonus) at the end of the procedure</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why (for the teacher):</b> With new students the grammar is named openly: the topic of the lesson is written on the board, and that takes the anxiety away. The discovery starts from the text they already read in P2 (Thomas woke up, saw, had), then we word the rule together and put it up as a poster. The key distinction: the past lives EITHER in the verb OR in didn't. Everything is written before it is spoken, and a self-checked mini-test closes the lesson.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Today's topic is on the board:</b> the past simple of irregular verbs. Look at the story we read: Thomas WOKE UP. He SAW houses under water. He RANG his friends. Not one of those verbs takes -ed — they change completely. There are eight of them in this unit and by the end of today you'll have all eight. And one rule that saves you every time: after DIDN'T the verb goes back to normal. <b>Let's build the table together.”</b><div class='pitchru'>The gist, if you need to restate it: the topic is announced openly: the past simple of irregular verbs. We discover it in the familiar P2 text, build the table together and put up the poster. The main rule: after didn't the verb goes back to the infinitive.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or a game wrapper — name it out loud</span><span>🎮 = screen or audio — every such stage carries a “Backup:” line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–8′</td><td class='stage'><div class='nm'>Into the lesson: welcome + rewind</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>circle → desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework check + Kagan RallyRobin: the P2 words with their gestures + naming the topic of the lesson</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework check down the rows: <span class='en'>Your hero sentences — read one.</span></li><li>Kagan <b>RallyRobin</b>: <span class='en'>Six words from last lesson, with the gesture. Take turns.</span> (electricity · brave · citizens · safe · neighbours · rescue services)</li><li>I write the topic straight onto the board: <span class='en'>Today: PAST SIMPLE — irregular verbs. Affirmative and negative.</span></li><li>Bridge: <span class='en'>You already used these verbs last lesson without noticing. Today we look at them properly.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the P2 word cards (Backup: the six words and their gestures on the board)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they say the words with the gestures and see the topic. Expect: naming the topic takes the anxiety away</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>8–10′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission of these lessons: eight forms and one rule about didn't</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Eight verbs. One rule. At the end you write six sentences about YOUR yesterday — three true, three not true — and your partner guesses.</span></li><li><span class='ig'>🟢🟡🔴 <b>Exit sticker:</b> 🟢 “did it on my own and I'm sure” · 🟡 “did it with the notes/a prompt” · 🔴 “I need help”. The sticker goes on the work, not on the person. The bar for the product is not speed but completeness: every part of the frame is there.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mission slide (Backup: I write the eight verbs and the rule on the board — that is the poster of the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they listen and see what the product is. Expect: “how many irregular verbs are there altogether?” — my answer: today only eight</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>10–24′</td><td class='stage'><div class='nm'>Discovery: verbs that break</div><div class='sub'>Discovery · verbs that break</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.1–2 on the familiar text: which verbs took -ed and which broke</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.1 with the P2 text as support: <span class='en'>Look at the blue verbs. Which took -ed? Which changed completely?</span> (TB key: woke up, saw, had broke; decided took -ed honestly).</li><li>ex.2: we build the table TOGETHER on the board, line by line (TB key: 1 woke up · 2 didn't have · 3 saw).</li><li>The switch gesture comes in here and is repeated all lesson: <span class='en'>Past is in the VERB — or in the DIDN'T. Never both.</span></li><li>Three choral repetitions: <span class='en'>He woke up. He didn't wake up.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.88 ex.1–2 · the table on the board (Backup: I draw the whole table in chalk, it stays there all lesson; no projector needed)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they find the broken verbs and build the table together. Expect: “had” is recognised easily, “woke up” is not. Typical problem: “didn't had” — the switch gesture, no words</div></td><td class='mat'>slides 5–6</td></tr><tr><td class='min'>24–38′</td><td class='stage'><div class='nm'>Rule: didn't + infinitive</div><div class='sub'>Rule · didn't + infinitive</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.3 eight forms checked against pp.126–127 + ex.4 four sentences + a choral drill in rhymes</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.3 with the book open at pp.126–127: <span class='en'>Find each verb in the list. Write the past form. Then check yourself.</span> (TB key: began · came · gave · rang · saw · spent · took · woke up).</li><li>The poster goes on the wall: eight pairs in two columns, large. It stays to the end of the unit.</li><li>A choral drill in rhymes, three times each: <span class='en'>begin–began · come–came · give–gave · ring–rang · see–saw · spend–spent · take–took · wake up–woke up.</span></li><li>ex.4 in writing (TB key: 1 began · 2 saw · 3 rang · 4 came, took).</li><li>Kagan <b>Quiz-Quiz-Trade</b> on the eight cards: infinitive ↔ past form.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.88 ex.3–4 + pp.126–127 · cards with the eight verbs (Backup: I draw the poster with a marker on a sheet of paper and cut the cards out of plain paper)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they dig out the forms, say them chorally and move around with the cards. Expect: rang and began are the weakest — they get an extra round</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit7_Grammar1_Past_Simple_Irregular_Verbs_Visual_Takeaway_A5</b><div class="nbk">A5 grammar card — THEY DID SOMETHING AMAZING!: fourteen irregular verbs in pairs (wake up → woke up · see → saw · have → had · ring → rang · come → came · give → gave · take → took · go → went · begin → began · spend → spent · leave → left · meet → met · become → became · know → knew) on a rescue story, with the negative rule didn't + base verb and two wrong lines to cross out</div><ul><li>Glue the card in; cover the right column and rebuild the forms aloud.</li><li>Cross out the two wrong lines in red: didn't went, didn't saw.</li><li>Write three sentences about your own past with irregular verbs.</li><li>The card stays open at the irregular verb vault.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the “Rule: didn't + infinitive” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slide 7</td></tr><tr><td class='min'>38–45′</td><td class='stage'><div class='nm'>Practising the forms step by step</div><div class='zone'>solo → pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.5, turning the pilot text round: the first two lines together, the rest in pairs</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The first two lines on the board together: <span class='en'>'didn't meet' becomes 'met'. 'didn't go' becomes 'went'.</span></li><li>The other four in pairs with the poster in front of them (TB key: 3 became · 4 didn't know · 5 heard · 6 took).</li><li>The punchline (TB questions): <span class='en'>Did the pilot fly a plane? And who WAS the pilot?</span> (no, a helicopter · Harrison Ford!)</li><li>Kagan <b>RallyRobin</b>: partners take turns reading the corrected lines aloud.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.88 ex.5 · the poster of eight verbs (Backup: I write the six lines of the text on the board and students turn them round right there)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they turn the lines round in pairs with support. Expect: the Harrison Ford punchline gets a reaction — 30 seconds for it is fine</div></td><td class='mat'>slide 8</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Transition stretch + riddle</div><div class='sub'>Break · switch + Brain teaser</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> physical reset + the ex.9 riddle on our feet</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Stand up, stretch. Brain teaser: a father, ninety kilos. Two children, forty-five each. The boat carries ninety. How do they cross?</span> (TB key: first both children cross, one comes back; then the father crosses, the second child comes back; then both children together)</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.88 Brain teaser (Backup: I draw the river and the boat on the board and students move magnets)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they stretch and solve the riddle out loud. Expect: solved in 90 seconds, helping each other</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–58′</td><td class='stage'><div class='nm'>Practice · the Emma Watson text</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.8 with support: regular and irregular mixed, two negatives set as a trap</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Before the task: <span class='en'>Ten gaps. Two of them are NEGATIVE — find them first.</span> (they are 4 and 10)</li><li>We do the first two gaps together, the rest in crews (TB key: 1 came · 2 was · 3 decided · 4 didn't want · 5 went · 6 studied · 7 spent · 8 became · 9 gave · 10 didn't stop).</li><li>Support: the poster of eight verbs + a “regular or broken?” prompt in the margin.</li><li>TB question: <span class='en'>Why is Emma a hero in real life?</span> (she went back to study and she helps other people)</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.88 ex.8 · the poster of eight verbs (Backup: I read the text aloud sentence by sentence and students write in the forms from the poster on the board)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they close the gaps with support. Expect: negatives 4 and 10 are the main trap, and we named it in advance</div></td><td class='mat'>slide 9</td></tr><tr class='True'><td class='min'>58–72′</td><td class='stage'><div class='nm'>Product: my yesterday, 6 lines</div><div class='sub'>PRODUCT · my yesterday</div><div class='zone'>solo → pairs → stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> written first: six sentences about yesterday (three true, three not), then the partner guesses</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The frame on screen (ex.6): <span class='en'>I met / didn't meet friends yesterday. · I saw / didn't see a film. · I woke up / didn't wake up before nine. · We had / didn't have pizza. · I spent / didn't spend two hours on homework. · I rang / didn't ring my friend.</span> (TB key ex.6 — the same models)</li><li>The TB request: <span class='en'>Add ONE extra detail to each true sentence.</span> (for example: I met my friends. We played football in the park.)</li><li>Six minutes of silent writing; I monitor and help individually.</li><li>Kagan <b>Timed Pair Share</b>: the partner listens and guesses which three are false.</li><li>Speaking with the page in hand: two sentences each, out loud to the class.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the frame on screen (Backup: I write the six frame lines on the board and leave them to the end of these two lessons)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write, read in pairs and guess. Expect: the true/false game takes the fear of speaking away. Typical problem: “I didn't saw” — the partner catches it off the poster</div></td><td class='mat'>slides 10–11</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Mini-test with self-check + score</div><div class='zone'>solo → pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a 10-item mini-test: 6 verb forms + 4 negatives; checked against the key</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Ten items. Six minutes. Poster covered for this one.</span> I cover the poster with a sheet for the test.</li><li>Key on screen afterwards: <span class='en'>Mark your own. Circle every slip.</span></li><li>Score to the team: the pair's points go into the team total.</li><li>Mini spelling clinic (2 words of the day): began · woke up.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mini-test sheet · key on screen (Backup: I read the key aloud item by item)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write in silence and mark themselves. Expect: 6–9 out of 10. A mistake is found privately</div></td><td class='mat'>slide 12 · timer</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Wrap-up: score, stickers, homework</div><div class='sub'>Team score + reflection</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> team score + stickers 🟢🟡🔴 + homework + teaser for P4</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I announce the team score and the nominations (cleanest negative · best extra detail · fastest form).</li><li>Stickers on your own work: 🟢 on my own · 🟡 with the poster · 🔴 I need help.</li><li>Homework: WB p. 53, ex. 1–5 (the table of forms, Florence Nightingale, Madi's letter); 🌱 bonus: find one more Goodwill Ambassador and write 5–6 sentences about them (the TB Homework task).</li><li>Teaser: <span class='en'>Next lesson: words to describe PEOPLE. Not tall or blonde — what they're really like. And two teenagers you'll have to choose between.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> stickers 🟢🟡🔴 · homework slide (Backup: I dictate the homework and write the pages on the board)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they stick their stickers and write down the homework. Expect: most of them still have the eight forms by the end of these two lessons</div></td><td class='mat'>slide 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook (their own book):</b> WB p. 53, ex. 1–5 — the table of regular/irregular verbs, the text about Florence Nightingale, Madi's letter.</p><p>🌱 Bonus: find one more Goodwill Ambassador and write 5–6 sentences about them in the past simple (the TB Homework task for Grammar).</p></td><td class='mat'>WB Unit 7 · the poster of eight verbs stays on the wall to the end of the unit</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>give the past form of eight irregular verbs</b> (began · came · gave · rang · saw · spent · took · woke up) and <b>build negatives with didn't + infinitive</b>.</li>
+      <li><span class="lb">Subsidiary.</span> ex.1 find the irregular ones; ex.2 the table; ex.3 eight forms checked against pp.126–127; ex.4 four sentences; ex.5 turning the text round; ex.6 about yourself; ex.8 Emma Watson; ex.9 Brain teaser; the memory techniques from the TB.</li>
+      <li><span class="lb">Personal.</span> The poster with the eight verbs goes up at the start and stays to the end of the unit. The switch gesture (didn't ↔ clean verb) is repeated instead of a spoken correction.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>say the past form of eight irregular verbs</li><li>tell a regular verb from an irregular one</li><li>make a negative: didn't + infinitive</li><li>write six sentences about yesterday</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Warm-up</span><span>Base</span><span>Practice</span><span>Media</span><span>Draft</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>begin/began</span><span class='w'>come/came</span><span class='w'>give/gave</span><span class='w'>ring/rang</span><span class='w'>see/saw</span><span class='w'>spend/spent</span><span class='w'>take/took</span><span class='w'>wake up/woke up</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Thomas woke up early. · He didn't wake up late. · He saw houses under water. · They didn't have electricity. · I didn't spend two hours doing homework.</div></div>
+      <div class="r"><div class="k">Form</div><div>affirmative — the past form of the verb (woke up, saw, had). Negative — didn't + infinitive (didn't wake up, didn't see, didn't have). The past lives EITHER in the verb OR in didn't — never in both.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>rhyme chains: began–ran · came–became · rang–sang · took–shook · spent–went. Three choral repetitions each — that is how the form gets into the muscles.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“He didn't woke up” — what is wrong? → after didn't comes the infinitive: didn't wake up.</div><div class='ccq'>“She goed” — correct it. → went.</div><div class='ccq'>“decided” — does it break? → no, ordinary -ed.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.88, syllabus pair 56. The past simple of regular verbs is familiar; was/were came in Unit 6. The irregular forms are recognised but not produced — today is when we set them.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>The eight forms don't stay</td><td>Poster on the wall + choral repetition in rhymes three times each + Quiz-Quiz-Trade cards. The form settles through the mouth, not the eye.</td></tr><tr><td>didn't + past form (“didn't saw”)</td><td>The switch gesture: one hand on didn't — “the past is already here”, the other opens — “the verb is clean”. I repeat the gesture all lesson.</td></tr><tr><td>The list on pp.126–127 frightens them by its size</td><td>I use the TB technique: today we work with eight only, and six of them are in the most-frequent list. The rest comes later.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 7 “Heroes” (What makes a hero?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U7 “Heroes” · P3 · new students 🌱</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>

@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 5 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why the lesson looks like this */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks inside one stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 5 “Must try!” · Pair 2 — Reading: the “Eat like a local” guidebook. Five dishes, five countries</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the “new students” track 🌱 (they come from elsewhere)</b> · 90 min · supports: model → word bank → draft → product with the sheet in hand · team score · stickers 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 77–78 (KTP pair 39) · March</span><span class='chip new'>🌱 new students · supports and a model</span><span class='chip'>SB pp.62–63</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u5.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u5-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Lesson opening: greeting + review</td><td>P1 rewind: the food groups + reading your own 6 lines to a new partner</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>the mission: five dishes, and at the end four lines of your own opinion</td></tr><tr><td class='gmin'>8–20′</td><td class='gname'>Words before the text: six new ones</td><td>six new words before reading: the definitions of ex.7 + the examples of ex.8</td></tr><tr><td class='gmin'>20–28′</td><td class='gname'>Predicting from the photos and the flags</td><td>ex.2 describe a photo to your partner + ex.3 flags and countries + ex.1 track 30</td></tr><tr><td class='gmin'>28–44′</td><td class='gname'>Reading the guide in chunks</td><td>ex.4 fast reading (which dish is in which photo) → ex.5 the table, one dish at a time</td></tr><tr><td class='gmin'>44–46′</td><td class='gname'>Transition warm-up</td><td>a warm-up</td></tr><tr><td class='gmin'>46–58′</td><td class='gname'>Comprehension check: facts with the line</td><td>ex.6 (track 31): five statements, all of them false — we correct them with a hint</td></tr><tr class='bridge'><td class='gmin'>58–72′</td><td class='gname'>Product: my opinion about a dish</td><td>the ladder: choose a dish → notes → 4 lines from the frame → read it in the crew → volunteers at the board</td></tr><tr><td class='gmin'>72–82′</td><td class='gname'>Mini-test with self-check + score</td><td>6 items on the Word work words + 3 on the table of dishes, self-checked against the key</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Closing: reflection + homework</td><td>homework with a worked example + the P3 teaser</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 5 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> The first long text of the unit. For newcomers it is taken apart in chunks: first six new words BEFORE the text (otherwise they drown in it), then prediction from the photos and the flags, then the text one dish per paragraph, and only after that the questions. The subskill (identifying key words) is taught as a physical action: underline it in the task → find it in the text. The product is four lines of opinion from a frame — safe and doable.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Five dishes you must try before you die.</b> Chips with cheese and hot sauce. A cake with no chocolate in it. Chicken from the street in Jamaica. Purple ice cream. Noodles a government invented. We read about all five — one at a time, step by step — and at the end each of you says which one you'd try and which one you'd never touch. Four lines. The frame is on the screen. <b>First, six words you'll need…”</b><div class='pitchru'>In simpler words, if the class needs support: five dishes you “must try”: chips with cheese, a cake with no chocolate, street chicken, purple ice cream, and noodles invented by a government. We read one dish at a time, and at the end everyone says four lines: what they would try and what they never would.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Lesson opening: greeting + review</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> P1 rewind: the food groups + reading your own 6 lines to a new partner</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>I say the group — you say TWO foods. Dairy? Carbs? Desserts?</span></li><li>First I read MY six lines as the model — slowly, with the sheet in my hand.</li><li>Then Kagan <b>Timed Pair Share</b>: 40 seconds for the first one (sheet in hand — that is how it should be), on the signal they swap, 40 seconds for the second. The listener stays silent and at the end says one thing: <span class='en'>My favourite bit was …</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> food cards · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they recall their own work, the vocabulary stays in tone</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission: five dishes, and at the end four lines of your own opinion</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Five dishes. Five countries. At the end: which one would YOU try? Four lines, with a frame.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the mission slide with the five flags (backup — I draw the flags on the board)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the plan is clear. Expect: the purple ice cream hooks them</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>8–20′</td><td class='stage'><div class='nm'>Words before the text: six new ones</div><div class='sub'>Words BEFORE the text · Word work</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> six new words before reading: the definitions of ex.7 + the examples of ex.8</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The TB technique the other way round (for newcomers): first I show the word + a picture/gesture, then the definition. <span class='en'>delicious — mmm! · mix — stir! · smell — nose! · takeaway — box in your hand! · add — one more spoon! · food stalls — street market!</span></li><li>ex.7 in pairs, the definitions are already familiar. TB key: 1 delicious · 2 mix · 3 smell · 4 takeaway · 5 add · 6 food stalls.</li><li>ex.8 in writing, then checked. TB key: 1 delicious · 2 takeaway · 3 smell · 4 mix · 5 add · 6 food stalls.</li><li>TB hint: <span class='en'>What TYPE of word fits in each gap — a thing, an action, or a describing word?</span></li><li>Consolidation: first I demonstrate the move myself with one card (I ask a student, answer for them, swap), then Kagan <b>Quiz-Quiz-Trade</b>: everyone holds a “word — picture” card, quiz your partner — answer theirs — trade cards — move on. You may peek at the definition on the back, there is no shame in that.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.62 ex.7–8 · word cards · word bank</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they take the words before the text — inside the text the words are already theirs. Expect: takeaway and food stalls stick through the gesture</div></td><td class='mat'>slide 5</td></tr><tr><td class='min'>20–28′</td><td class='stage'><div class='nm'>Predicting from the photos and the flags</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.2 describe a photo to your partner + ex.3 flags and countries + ex.1 track 30</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>TB pre-teaching: <span class='en'>sweet = like sugar · savoury = like salt and spices · colourful = a lot of colours.</span></li><li>ex.2: first I describe one photo myself — two phrases, no more: <span class='en'>It's colourful. There's some ice cream in it.</span> Then Kagan <b>RallyRobin</b>: in pairs, taking turns — one describes a photo in two phrases, the other finds it on the page and points at it, then they swap. Four rounds.</li><li>ex.3 as matching (TB technique: I write the countries on the board). TB key: A Canada · B Portugal · C Jamaica · D Philippines · E Thailand.</li><li>ex.1 (track 30) with the word bank as support: <span class='en'>Five descriptions. Which food?</span> TB key: 1 ice cream · 2 chips · 3 pasta · 4 herbs and spices · 5 peas.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB pp.62–63 · audio track 30 (backup — I read the descriptions myself from TB p.134) · word bank</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they look, guess and listen. Expect: they get the flags via the food clue</div></td><td class='mat'>slide 6</td></tr><tr><td class='min'>28–44′</td><td class='stage'><div class='nm'>Reading the guide in chunks</div><div class='sub'>Reading in chunks</div><div class='zone'>solo → crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.4 fast reading (which dish is in which photo) → ex.5 the table, one dish at a time</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>RULE OF THE DAY: <span class='en'>Underline the key words in the task FIRST. Then look for them in the text.</span> We underline the first line together.</li><li>ex.4 (TB key): A jerk chicken · B poutine · C halo-halo · D pad Thai · E pastel de nata. And immediately: <span class='en'>Which word helped you?</span></li><li>ex.5 one dish at a time: read the paragraph → fill in one row of the table → check. TB key: 1 Canada · 2 chips, cheese, meat sauce · 3 pastel de nata · 4 eggs, butter · 5 jerk chicken · 6 Jamaica · 7 Philippines · 8 fruit, milk, ice cream · 9 Thailand.</li><li>After each dish — one line out loud: <span class='en'>Poutine is from Canada. There's cheese in it.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB pp.62–63 · the table prompt sheet on the slide · timer (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they read in small chunks with a quick win after each one. Expect: by the third dish the pace picks up noticeably</div></td><td class='mat'>slide 7 · timer</td></tr><tr><td class='min'>44–46′</td><td class='stage'><div class='nm'>Transition warm-up</div><div class='sub'>break · transition</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a warm-up</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>I say a food — thumbs up if you'd try it, thumbs down if never. Purple ice cream! Chips with cheese sauce! Chicken with peas!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they move and revise without noticing</div></td><td class='mat'>—</td></tr><tr><td class='min'>46–58′</td><td class='stage'><div class='nm'>Comprehension check: facts with the line</div><div class='sub'>Comprehension check</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.6 (track 31): five statements, all of them false — we correct them with a hint</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I do the first correction out loud myself, finger on the line: <span class='en'>'Poutine is good in summer' — find the word 'winter'. There it is.</span></li><li>TB hint: <span class='en'>Look at the little words: 'there isn't any chocolate', 'there aren't any chips'. They carry the answer.</span></li><li>The other four in crews via Kagan <b>Numbered Heads Together</b>: the crew hunts for the line of evidence and agrees on the correction, everyone puts a finger on that line — the number I call answers. The rule: if the whole table is not ready, nobody is ready. TB key: 1 it is a winter dish · 2 there is NO chocolate in pastel de nata (a cake made of eggs and butter) · 3 jerk chicken is eaten with rice and peas, not with chips · 4 halo-halo is BETTER than ice cream · 5 beef and chicken are an optional extra.</li><li>ex.9 quickly: <span class='en'>Change the underlined words so the sentences are TRUE for you.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB pp.62–63 ex.6, 9 · audio track 31 (backup — I read the guide's text aloud myself and the students follow the line with a finger)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they correct with the line in front of them. Expect: no.4 and no.5 are hard — we do them together, and that is fine</div></td><td class='mat'>slide 8</td></tr><tr class='True'><td class='min'>58–72′</td><td class='stage'><div class='nm'>Product: my opinion about a dish</div><div class='sub'>PRODUCT · my opinion about a dish</div><div class='zone'>solo → crews → stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the ladder: choose a dish → notes → 4 lines from the frame → read it in the crew → volunteers at the board</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Step 1: <span class='en'>Which dish would you try? Which one never? Notes only.</span></li><li>Step 2 — the frame on the screen: <span class='en'>I'd like to try … . It's from … . There's … in it. I'd never try … because …</span></li><li>Step 3 — Kagan <b>RoundRobin</b>: round the crew clockwise, everyone reads their four lines off the sheet, no interrupting. Once the circle is done the crew ticks each other for clarity.</li><li>Step 4: volunteers to the board with the sheet. The audience: <span class='en'>Thumbs up if you agree!</span></li><li>Critical thinking 1–2 briefly: <span class='en'>Put the five dishes in order — favourite to least favourite.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the frame · word bank · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write from the frame and then speak — the fear is gone. Expect: everyone has 4 lines</div></td><td class='mat'>slides 9–10 · timer</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Mini-test with self-check + score</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 6 items on the Word work words + 3 on the table of dishes, self-checked against the key</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Nine items. Two minutes. Then YOU mark it — the key is on the screen.</span></li><li>The items: six definitions (delicious · mix · smell · takeaway · add · food stalls) + three “dish → country”.</li><li><span class='en'>Circle what you missed. That's YOUR list — nobody else needs to see it.</span></li><li>Team score + the 🟢🟡🔴 stickers.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the mini-test on a slide · the key on a slide · stickers (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they check themselves privately. Expect: 7–9 out of 9; the errors go into a personal list</div></td><td class='mat'>slide 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Closing: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework with a worked example + the P3 teaser</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: WB p. 40, ex. 1–4 (the Melbourne blog — the same key-words technique).</li><li>I show a worked example of ex. 1 on the slide.</li><li>Teaser: <span class='en'>Next lesson: we open a lunchbox and count what's inside. Careful — half of it can't be counted at all!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the homework slide with the example (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write it down</div></td><td class='mat'>slide 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> WB p. 40, ex. 1–4 (the Melbourne blog, the same subskill identifying key words).</p><p>🌱 Optional: ex. 5 (three questions about the text) and the Research task from SB p.62 — one country, one dish, three lines.</p></td><td class='mat'>WB Unit 5 · the table of dishes stays in the workbook — it will be needed in P7</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>find specific information in a guidebook using key words</b>, use 6 new words (delicious, mix, smell, takeaway, add, food stalls), and <b>say in 4 lines</b> which dish they'd try and why.</li>
+      <li><span class="lb">Subsidiary.</span> ex.1 track 30 (five food descriptions) with a prompt sheet; ex.3 flags and countries; ex.5 the “dish — country — ingredients” table in chunks; ex.6 correcting statements with a hint; ex.7–9 Word work; Critical thinking 1–2.</li>
+      <li><span class="lb">Personal.</span> I give the words BEFORE the text, not after. Every paragraph is read with a concrete task — “read in order to find”, not “read”.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>underline key words in a task before reading</li><li>fill a table with dish, country and ingredients</li><li>use six new words in a sentence</li><li>say in 4 lines which dish I'd try and why</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Words</span><span>Prediction</span><span>Reading</span><span>Check</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>delicious</span><span class='w'>mix</span><span class='w'>smell</span><span class='w'>takeaway</span><span class='w'>add</span><span class='w'>food stalls</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>It's a mix of fruit and milk. · I love the smell of it. · You can buy it at food stalls. · I'd like to try halo-halo because it looks …</div></div>
+      <div class="r"><div class="k">Form</div><div>I'd like to try … because … · I wouldn't try … because …</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>from the Wordlist: delicious /dɪˈlɪʃəs/ · takeaway /ˈteɪkəˌweɪ/ · food stalls /ˈfuːd ˌstɔːlz/ · smell /smel/ · mix /mɪks/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>smell — with your nose or with your tongue? → with your nose.</div><div class='ccq'>takeaway — is it a restaurant? → no: food you carry away to eat somewhere else.</div><div class='ccq'>food stalls — is it a shop? → no: a stand in the street or at a market.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.62–63, KTP pair 39. The text is long, but it splits into five independent chunks — one per dish. All 6 Word work items are in the official Wordlist.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>“The text is too long”</td><td>We read one dish at a time; after each one, one line goes into the table. Five small wins instead of one big task.</td></tr><tr><td>The new words drown in the text</td><td>The six Word work items are dealt with BEFORE reading, through pictures and definitions — in the text they are already recognisable.</td></tr><tr><td>They do not get ex.6 (“every sentence is false”)</td><td>I do the first correction out loud myself and put my finger on the line that proves it. TB hint: look for the negatives there isn't / there aren't.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 5 “Must try!” (What makes a town a good place to live in?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U5 “Must try!” · P2 · the “new students” track 🌱</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>

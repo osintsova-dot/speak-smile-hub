@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 2 · Pair 3 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why the lesson looks like this */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks inside one stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 2 “Me time” · Pair 3 — Grammar: adverbs of frequency + like/love/hate + -ing</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the “new students” line 🌱, coming from outside</b> · 90 min · supports: model → word bank → draft → product with the sheet in hand · team score · stickers 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 29–30 (KTP pair 15) · November</span><span class='chip new'>🌱 new students · supports and a model</span><span class='chip'>SB p.28</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u2.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u2-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: greeting + rewind</td><td>P2 rewind: 3 facts about Brighton from their own notes — my model first, then taking turns in pairs</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>the mission: the full map of the six frequency words + the attitude line</td></tr><tr><td class='gmin'>8–20′</td><td class='gname'>Discovery: the always → never line</td><td>four sentences from the P2 text → the “often → rarely” line (ex.1) → percentages to hold on to</td></tr><tr><td class='gmin'>20–32′</td><td class='gname'>Rule: where the adverb goes</td><td>ex.2 they work the rule out themselves → ex.3 rewriting 7 sentences in pairs with support and self-check</td></tr><tr><td class='gmin'>32–45′</td><td class='gname'>Attitude line: love → hate + -ing</td><td>ex.4–5: love → hate along the line + the -ing/noun rule → ex.6 the builder with a self-check</td></tr><tr><td class='gmin'>45–47′</td><td class='gname'>Transition stirrer</td><td>stirrer</td></tr><tr><td class='gmin'>47–58′</td><td class='gname'>Practice · the text about the chess player</td><td>ex.7 (Carissa Yip) in pairs with support + going over it one item at a time</td></tr><tr class='bridge'><td class='gmin'>58–72′</td><td class='gname'>Product: three sentences about myself</td><td>3 sentences about yourself (frequency + attitude) → self-check against the checklist → read it to a partner → volunteers</td></tr><tr><td class='gmin'>72–82′</td><td class='gname'>Mini-test with self-check + score</td><td>8 items (adverb position + -ing) → key → your own score, privately → points to the crews</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Ending: reflection + homework</td><td>homework with a worked example + a teaser for P4</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 2 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> With new students you CAN announce grammar as the topic — they need clarity, not camouflage. But it is delivered through discovery: they build the line and the position rule out of sentences they already know from the P2 text. After that — many short written runs with a self-check against a key: confidence grows out of “I got it right”, not out of an explanation.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Six little words.</b> Always, usually, often, sometimes, hardly ever, never. They tell people HOW OFTEN — and English puts them in a strange place: after 'is', but before all other verbs. Today you get the full map. And the second half: love, like, don't mind, don't like, hate — and the -ing that always follows them. By the end you write three sentences about yourself, and they'll all be correct.”<div class='pitchru'>In simpler words, if the class needs support: six frequency words + the attitude line love → hate and the -ing that follows them. We find the rule ourselves in the sentences about Brighton, and then we write three correct sentences about ourselves.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Into the lesson: greeting + rewind</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> P2 rewind: 3 facts about Brighton from their own notes — my model first, then taking turns in pairs</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Three facts about Brighton — read from your notes. I start: She trains every morning…</span></li><li>My model first (two facts out loud), then Kagan <b>RallyRobin</b>: A reads their fact — B reads theirs — A again. One fact per turn, and reading off your notes IS allowed. Three rounds.</li><li>I write on the board in big letters: <span class='en'>she USUALLY does homework · she HARDLY EVER has free time.</span> <span class='en'>See those words? Today they're ours.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> slide · notebooks (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they hear the target words in a familiar context</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission: the full map of the six frequency words + the attitude line</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Six words for HOW OFTEN, five words for HOW MUCH you like it. Full map today.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mission slide (Backup: the mission title and the bar go on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the plan is clear</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>8–20′</td><td class='stage'><div class='nm'>Discovery: the always → never line</div><div class='sub'>Discovery · the frequency line</div><div class='zone'>pairs → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> four sentences from the P2 text → the “often → rarely” line (ex.1) → percentages to hold on to</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Sentence cards from the blog: <span class='en'>she usually does homework · she always practises · she is sometimes nervous · she hardly ever has free time.</span></li><li><span class='en'>Put them on a line: most often on the left, least often on the right.</span> TB key ex.1: 1 always · 2 usually · 3 sometimes · 4 hardly ever.</li><li>Percentages onto the poster (the TB suggests it): always 100% · usually 80% · often 70% · sometimes 50% · hardly ever · never 0%.</li><li>Chorus with a gesture (hand up — often, hand down — rarely). First I show the gesture for each word myself, then Kagan <b>Kinesthetic Symbols</b>: I say the word — the class silently shows the height of the hand, and only then we say it in chorus. always — hand above the head, never — hand to the floor.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> sentence cards · SB p.28 ex.1 · the line poster</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they discover the line with their hands. Expect: hardly ever needs its own explanation — “almost never”</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit2_Grammar1_Frequency_Likes_Dislikes_Visual_Takeaway_A5</b><div class="nbk">A5 grammar card — MY HOBBY PROFILE: the frequency scale (always · usually · often · sometimes · hardly ever · never) with the two position rules (after BE, before any other verb) and the attitude scale (love → like → don't mind → don't like → hate) with the compulsory -ing after them</div><ul><li>Glue the card in; mark rule 1 and rule 2 in two colours.</li><li>Place your activities from P1 along the frequency scale.</li><li>Say five sentences: the adverb in its place, the verb after like with -ing.</li><li>The card stays open through the precision-scale duel.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the “Discovery: the always → never line” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slide 5</td></tr><tr><td class='min'>20–32′</td><td class='stage'><div class='nm'>Rule: where the adverb goes</div><div class='sub'>The position rule</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.2 they work the rule out themselves → ex.3 rewriting 7 sentences in pairs with support and self-check</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Look again. Where is the word with IS? Where is it with the other verbs?</span> TB key ex.2: 1 after · 2 before.</li><li>Poster on the wall: <span class='en'>BE + adverb · adverb + OTHER VERBS.</span></li><li>ex.3 in writing, 7 sentences. I do the first sentence at the board out loud as the model (“I see is → the adverb goes AFTER”), then Kagan <b>RallyCoach</b>: one says their sentence out loud and points a finger at the rule poster, the other is the coach: checks and praises (“right, that's be — so it goes after”); on the next item they swap roles. The key goes on the slide — they check themselves: <span class='en'>circle your slips, nobody sees.</span> (TB key: 2 Frankie often practises… · 3 Ahmed usually does… · 4 They are sometimes very tired… · 5 My sister always takes… · 6 Lily hardly ever helps… · 7 My best friend is always hungry…)</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.28 ex.2–3 · poster · key on the slide (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they rewrite with support and check themselves. Expect: be trips them up on the first 2–3 sentences, then it flows</div></td><td class='mat'>slide 6</td></tr><tr><td class='min'>32–45′</td><td class='stage'><div class='nm'>Attitude line: love → hate + -ing</div><div class='sub'>Attitude line · like + -ing</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.4–5: love → hate along the line + the -ing/noun rule → ex.6 the builder with a self-check</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The line on the board: <span class='en'>love — like — don't mind — don't like — hate.</span> First I put two words on the line myself, saying out loud why, then Kagan <b>Think-Pair-Share</b>: <span class='en'>Where do you put 'don't mind'?</span> — 20 seconds thinking silently, 30 seconds discussing with a neighbour, then the class answers. <span class='en'>In the middle: it's OK, I don't care.</span> TB key ex.4: 1 love · 2 don't mind · 3 don't like · 4 hate.</li><li>ex.5 the table (TB key): 1 we · 2 love · 3 verb -ing · 4 she · 5 doesn't mind.</li><li>Two routes onto the poster: <span class='en'>I love sports. / I love skateboarding.</span></li><li>ex.6 in writing, key on the slide (TB): 1 They hate playing chess · 2 She loves drawing manga comics · 3 I like Barcelona · 4 We don't mind helping our parents · 5 He doesn't like playing video games.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.28 ex.4–6 · the two-routes poster</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they build from the model and check themselves. Error: I like Barcelona-ing — CCQ “is Barcelona a verb?”</div></td><td class='mat'>slide 7</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Transition stirrer</div><div class='sub'>break · transition</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> stirrer</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>ALWAYS — jump! NEVER — freeze! SOMETIMES — one step!</span> (I call it out: I … play football / … sleep in class)</li><li>Then, with the same bodies — Kagan <b>Take Off–Touch Down</b>: I model it on myself, then read a sentence (<span class='en'>I always do my homework</span>) — everybody it is true for stands up, the rest sit down. Six sentences, one for each frequency word.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they move along the line</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–58′</td><td class='stage'><div class='nm'>Practice · the text about the chess player</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.7 (Carissa Yip) in pairs with support + going over it one item at a time</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>An American girl your age — a chess grandmaster. Eight gaps. Word bank helps.</span></li><li>TB key one at a time, saying why out loud: 1 often plays · 2 are sometimes · 3 hardly ever loses · 4 loves playing · 5 likes sushi · 6 loves playing · 7 likes making · 8 often posts.</li><li><span class='en'>Number 5 — why NOT -ing? Because sushi is a noun!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.28 ex.7 · the posters on the wall</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they close the text leaning on the two posters. Expect: no.5 is the best moment for the two-routes rule</div></td><td class='mat'>slide 8</td></tr><tr class='True'><td class='min'>58–72′</td><td class='stage'><div class='nm'>Product: three sentences about myself</div><div class='sub'>PRODUCT · three sentences about myself</div><div class='zone'>solo → pairs → stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 3 sentences about yourself (frequency + attitude) → self-check against the checklist → read it to a partner → volunteers</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Frame: <span class='en'>I usually … at the weekend. I hardly ever … . I love … -ing, but I don't like … -ing.</span></li><li>Self-check against a 3-point checklist: is the adverb in the right place? -ing after like/love/hate? third person -s if it is about a friend?</li><li>We read to a partner through Kagan <b>Timed Pair Share</b>: first I read MY three sentences as the model, then A speaks for 60 seconds (B only listens and at the end says “I liked that you…”), bell — B speaks for 60 seconds. The sheet in your hand is allowed.</li><li>Then 3–4 volunteers read to the class — also with the sheet in hand.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> frame · checklist</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they go through the full cycle: wrote it → checked it → read it. Expect: 3 correct sentences from everybody</div></td><td class='mat'>slides 9–10</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Mini-test with self-check + score</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 8 items (adverb position + -ing) → key → your own score, privately → points to the crews</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Eight quick items. Then the key. Your score is YOURS — teams get points for finishing.</span></li><li>Easiness stickers 🟢🟡🔴; the 🔴 ones I note down for P5.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mini-test · key · leaderboard</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they check themselves with no fear of a mark. Expect: they see progress within one pair</div></td><td class='mat'>slide 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Ending: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework with a worked example + a teaser for P4</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: WB p.13, ex.1–5 — a worked example of the first task on the slide.</li><li>Teaser: <span class='en'>Next: do, go or play? Three little verbs — and a real hockey player on the radio.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> homework slide with the worked example (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write it down</div></td><td class='mat'>slide 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> WB p.13, ex.1–5 (adverbs of frequency + likes and dislikes) — the worked example was shown in class.</p><p>🌱 If you want: ex.6.</p></td><td class='mat'>WB Unit 2 · the “BE + adverb” and “two routes” posters stay up until the end of the unit</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>place adverbs of frequency correctly</b> (after be, before other verbs) and <b>use love/like/don't mind/don't like/hate + -ing or noun</b>, checked by themselves against keys.</li>
+      <li><span class="lb">Subsidiary.</span> Guided discovery from the P2 text (ex.1–2); ex.3 rewriting with a prompt sheet; ex.4–5 the attitude line; ex.6 the sentence builder; ex.7 the text about Carissa Yip; a mini-test with self-check.</li>
+      <li><span class="lb">Personal.</span> The pace is half that of the “ours” line — and that is normal. Every stage ends with a self-check against the key: the error is found privately, before anyone sees it.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>put the six adverbs in the right order (always → never)</li><li>place the adverb correctly with be and other verbs</li><li>use like/love/hate + -ing and + noun</li><li>write three correct sentences about myself</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Discover</span><span>Position</span><span>Feelings</span><span>Practice</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>collect things</span><span class='w'>draw</span><span class='w'>go to a dance class</span><span class='w'>go to the gym</span><span class='w'>help at home</span><span class='w'>listen to music</span><span class='w'>make videos</span><span class='w'>meet friends</span><span class='w'>play chess</span><span class='w'>play football</span><span class='w'>play in a band</span><span class='w'>play in a team</span><span class='w'>play video games</span><span class='w'>practise the piano</span><span class='w'>sleep</span><span class='w'>take photos</span><span class='w'>use social media</span><span class='w'>watch TV series</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>We're never late for class. · I'm sometimes nervous before exams. · We usually watch TV in the evenings. · My brother hardly ever does sports. · I love skateboarding. / I love sports. · He likes practising the piano. / He likes music. · I don't mind drawing. / I don't mind art. · We don't like playing chess. · They hate watching TV.</div></div>
+      <div class="r"><div class="k">Form</div><div>with the verb be the adverb goes AFTER the verb: She is sometimes nervous. · with all other verbs — BEFORE the verb: She always practises in the skate park. · after love/like/don't mind/don't like/hate comes either a noun or a verb with -ing; don't mind = «it's OK with me», love/hate = strong feelings</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>often — both /ˈɒfən/ and /ˈɒftən/ are fine · hardly ever runs together, no pause</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>«She plays often chess» — what's wrong? → often goes BEFORE the main verb: She often plays chess.</div><div class='ccq'>«He always is late» — and here? → with be it's the other way round, AFTER: He is always late.</div><div class='ccq'>«I like play football» — correct it. → I like playing football: after like comes -ing.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.28, KTP pair 15. For some of them the position of the adverb and the -ing after like really is new; I build it on sentences from the text they have read.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>They have heard the rule but do not apply it</td><td>I do not explain first — they build the line out of examples and formulate the rule themselves; I confirm it and put the poster up.</td></tr><tr><td>Fear of making mistakes in writing</td><td>Every written run has a self-check against the key, before anyone else sees it.</td></tr><tr><td>They mix up like + -ing and like + noun</td><td>I give it as “two legal routes” on the poster: I love sports / I love skateboarding. The only illegal one is I love skateboard.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 2 “Me time” (How important are hobbies for teenagers?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U2 “Me time” · P3 · the “new students” line 🌱</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>

@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 8 · Pair 8 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why + how to pitch it */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks of each stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 8 “Summer fun” · Pair 8 — Unit 8 Test (handled gently) + feedback and the celebration of the year</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the 🌱 new-students line, joined from outside</b> · 90 min · scaffolding: model → word bank → draft → product with notes in hand · team score · 🟢🟡🔴 stickers</div>
+    <div class="meta"><span class='chip'>Lessons 137–138 (syllabus pair 69) · May</span><span class='chip new'>🌱 new students · scaffolding and a model</span><span class='chip'>SB p.105 (Quick review) + WB pp. 66–67</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u8.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u8-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–8′</td><td class='gname'>Opening: a calm settling-in</td><td>a calm settling-in + 5 minutes with their own list</td></tr><tr><td class='gmin'>8–15′</td><td class='gname'>Practice run + strategy</td><td>3 test-format items together + the “easy first” rule</td></tr><tr><td class='gmin'>15–45′</td><td class='gname'>Test: vocabulary + grammar + Use of English</td><td>Vocabulary (3 tasks) + Grammar (4 tasks) + Use of English</td></tr><tr><td class='gmin'>45–47′</td><td class='gname'>Break</td><td>a quiet pause</td></tr><tr><td class='gmin'>47–67′</td><td class='gname'>Test: listening + reading + writing</td><td>listening (with pauses) + reading (fact/opinion) + writing (an invitation)</td></tr><tr><td class='gmin'>67–80′</td><td class='gname'>Feedback straight away, gently</td><td>self-check against the key → circles on their own slips → 3 typical errors on the board, anonymously</td></tr><tr><td class='gmin'>80–90′</td><td class='gname'>Ceremony of the year</td><td>growth since P1 + an award for everyone + the wall of work + the way into Unit 9</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 8 — exact pages and exercise numbers (plus the bonus) at the end of the procedure</td></tr></tbody></table></div>
+
+  
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or a game wrapper — name it out loud</span><span>🎮 = screen or audio — every such stage carries a “Backup:” line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–8′</td><td class='stage'><div class='nm'>Opening: a calm settling-in</div><div class='sub'>Opening · a warm start</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a calm settling-in + 5 minutes with their own list</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Quiet five minutes with your list. You built a three-day trip and presented it. This is smaller than that.</span></li><li><span class='en'>And remember: after this there's Unit 9 — the whole year comes back anyway. Nothing ends today.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the students' lists · the unit posters on the walls</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> settle in. Expect: the line about Unit 9 takes half the anxiety away</div></td><td class='mat'>slide 3</td></tr><tr><td class='min'>8–15′</td><td class='stage'><div class='nm'>Practice run + strategy</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 3 test-format items together + the “easy first” rule</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Three practice items together — same format as the test. See? You know this.</span></li><li>Strategy: <span class='en'>easy first · mark the hard · come back.</span></li><li>Three reminders: will + a bare verb · going to = I decided, present continuous = we agreed (there is a time and a person) · the apostrophe: contraction or possession.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> strategy slide</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the format is familiar before the start</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>15–45′</td><td class='stage'><div class='nm'>Test: vocabulary + grammar + Use of English</div><div class='sub'>Test · part 1</div><div class='zone'>solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Vocabulary (3 tasks) + Grammar (4 tasks) + Use of English</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Thirty minutes. Your list is done. Show yourself.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the test from TEST_SPEC (Vocabulary + Grammar + Use of English) · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> work at their own pace. For the fast ones a quiet bonus task on the back: three predictions about their own summer</div></td><td class='mat'>—</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Break</div><div class='sub'>break</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a quiet pause</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Water, stretch, no test talk.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> breathe out</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–67′</td><td class='stage'><div class='nm'>Test: listening + reading + writing</div><div class='sub'>Test · part 2</div><div class='zone'>solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> listening (with pauses) + reading (fact/opinion) + writing (an invitation)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Audio twice with pauses (the format of tracks 50 and 51: the speaker's feeling first, then the details — who, when, where).</li><li>Reading — a short text: fact or opinion with the signal underlined + true/false.</li><li>Writing — the invitation exchange following the familiar seven steps (they are printed on the paper as support).</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> test audio · papers with the seven steps · timer (<b>Backup: read the test lines and the dialogue yourself, twice, with pauses and honest intonation</b>)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> finish writing. Expect: the seven-step writing goes easily — it was practised in P6</div></td><td class='mat'>—</td></tr><tr><td class='min'>67–80′</td><td class='stage'><div class='nm'>Feedback straight away, gently</div><div class='sub'>Gentle feedback</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> self-check against the key → circles on their own slips → 3 typical errors on the board, anonymously</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Keys out. Circle your slips — they're private.</span></li><li>The typical ones: will + to · going to without be · present continuous with no time and no person. <span class='en'>Everyone's circles look alike — you're not alone.</span></li><li>Speaking (10 marks) — in pairs, one pair at a time, with the Key phrases cards, while the rest check the written part.</li><li><span class='en'>Keep that paper. It's your Unit 9 list.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> keys · feedback slide · Key phrases cards</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> see their mistakes privately. Expect: allowing the cards in the speaking takes the fear away and lets everyone get through it</div></td><td class='mat'>slide 5</td></tr><tr><td class='min'>80–90′</td><td class='stage'><div class='nm'>Ceremony of the year</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> growth since P1 + an award for everyone + the wall of work + the way into Unit 9</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Pair 1: six lines about a dream holiday, with notes in your hand. Today: a full test in English, seven parts. THAT is the distance.</span></li><li>An award for everyone: bravest speaker · best three-day plan · cleanest going to · best refusal · word master · best week for Ed.</li><li>The ribbon of eight units on the board: <span class='en'>Eight units this year. All of them come back in Unit 9 — and your circled paper is the plan.</span></li><li>Unit 9 teaser: <span class='en'>Nine pictures, nine words, and the letters spell a school subject. Bring your brain.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> leaderboard · the awards · the unit wall of work · the ribbon of eight units</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> leave with an award, not with a mark. Expect: an award for everyone is what makes these ten minutes worth holding on to</div></td><td class='mat'>slide 6</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p>No homework after the test. 🌱 Optional: look at the nine pictures on p.108 and try to name each one in a single word — that is how Unit 9 “Look what you know!”, the final revision of the year, begins.</p><p><b>For the teacher:</b> take the circled slips into the Unit 9 plan — the two revision lessons are built on exactly those.</p></td><td class='mat'>the tests are handed in · the keys stay with the teacher · ⚠️ do NOT use the files tests/A2_U8_Test_* — they are from a different course</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> The unit check: vocabulary (types of holiday · places to stay · facilities · holiday activities), will for predictions, going to, present continuous for arrangements, Use of English, listening (feelings + details), reading (fact/opinion), writing (an invitation), speaking (arranging to meet).</li>
+      <li><span class="lb">Subsidiary.</span> The “easy first” strategy; a practice run before the test (to take the fear of the format away); feedback the same day; the mistakes turn into a personal list for Unit 9; the celebration of the year.</li>
+      <li><span class="lb">Personal.</span> ⚠️ The files tests/A2_U8_Test_Standard.pdf and A2_U8_Test_Higher.pdf are FROM A DIFFERENT COURSE (personality adjectives, social problems, comparatives, articles — not a single “Summer fun” topic). Do not give them to the students. The test is built from the specification: the format and the marks are the genuine Macmillan ones, the content comes from Quick review SB p.105 and WB pp. 66–67. The tone is gentle, the marks are private, and the comparison is only with themselves (the P2–P6 mini-tests).</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>start with easy items and mark hard ones</li><li>apply the unit language in test format</li><li>check against the key and sort own slips</li><li>see their own growth across the year</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Warm-up</span><span>Strategy</span><span>Test 1</span><span>Break</span><span>Test 2</span><span>Debrief</span><span>Celebration</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>go camping</span><span class='w'>go on a city break</span><span class='w'>go on a walking holiday</span><span class='w'>go on a water sports holiday</span><span class='w'>go skiing</span><span class='w'>go to a theme park resort</span><span class='w'>go to the beach</span><span class='w'>apartment</span><span class='w'>B & B</span><span class='w'>campsite</span><span class='w'>country cottage</span><span class='w'>hotel</span><span class='w'>youth hostel</span><span class='w'>bike hire</span><span class='w'>car park</span><span class='w'>games room</span><span class='w'>garden</span><span class='w'>gym</span><span class='w'>picnic area</span><span class='w'>swimming pool</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>the whole language of the unit: will · going to · present continuous</div></div>
+      <div class="r"><div class="k">Form</div><div>—</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>—</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>Stuck — what do we do? → mark it, move on, come back.</div><div class='ccq'>Forgotten whether it is going to or present continuous? → did I decide it or did we agree it? If there is a time and a person — we agreed.</div><div class='ccq'>Who does the test compare you with? → only with yourself from Pair 1.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> The test is put together by the teacher from TEST_SPEC; all the formats are familiar from the P2–P6 mini-tests. Syllabus pair 69.</p>
+    </div>
+  </div>
+
+  <div class='eyebrow'>Unit 8 “Summer fun” test — specification (OUR DRAFT)</div><div class='cardb' style='padding:4px 8px'><p style='font-size:.88rem;margin:8px 4px 12px;padding:9px 12px;border-left:3px solid var(--honey);background:var(--honey-soft);border-radius:7px'><b>⚠️ Important — check this before you print anything.</b> The files <code>tests/A2_U8_Test_Standard.pdf</code> and <code>A2_U8_Test_Higher.pdf</code> belong to <b>a different Macmillan course</b>, not to Get Involved! A2. They test personality adjectives, social problems (crime · poverty · unemployment), comparative and superlative adjectives, the articles a/an/the and a text about homeless people — not one topic from “Summer fun”. Do not hand them out. <b>There is no official Macmillan test for Unit 8 in the folder — replace this draft as soon as you download it from the Teacher's Resource Centre.</b> The specification below is ours: a genuine Macmillan unit-test format, filled with Get Involved! A2 Unit 8 content (Quick review SB p.105 + “Look what you know! 8”, WB pp.66–67).<br>For reference: of everything in <code>tests/</code>, only <code>A2_U1_Test_*</code> belongs to our course (and even that mixes in vocabulary from neighbouring units). <code>A2 Progress Test 1</code>, <code>A2 Mid-Year Test</code>, <code>A2 End-of-Year Test</code> and <code>A2_U8_Test_*</code> are from other courses.</p><table class='ap'><thead><tr><th>Part</th><th>Contents &amp; marking</th></tr></thead><tbody><tr><td>Vocabulary 1 · 7 marks</td><td>types of holiday and places to stay: label seven photos + six «where did I stay» riddles (format of SB p.96 ex.1 and ex.3, WB p. 60 tasks 1 and 3)</td></tr><tr><td>Vocabulary 2 · 7 marks</td><td>facilities and holiday activities: seven icons + seven phrases with go on / go to / go for (format of SB p.97 ex.6, SB p.101 ex.3, WB p. 62 tasks 1 and 3)</td></tr><tr><td>Vocabulary 3 · 6 marks</td><td>a holiday description text with six gaps (format of SB p.96 ex.7 and WB p. 60 task 5) — vocabulary in context, not as a list</td></tr><tr><td>Grammar 1 · 7 marks</td><td>will for predictions: aff/neg + questions and short answers (format of SB p.100 ex.2 and ex.5, WB p. 61 tasks 1 and 3)</td></tr><tr><td>Grammar 2 · 6 marks</td><td>going to: affirmative, negative, question + short answer (format of SB p.102 ex.2 and ex.5, WB p. 63 tasks 1 and 3)</td></tr><tr><td>Grammar 3 · 6 marks</td><td>present continuous for arrangements: a diary → six sentences (format of SB p.102 ex.8, WB p. 63 task 5)</td></tr><tr><td>Grammar 4 · 6 marks</td><td>correct the mistake: will / going to / present continuous mixed up (format of Grammar round-up SB p.102 ex.9)</td></tr><tr><td>Use of English · 8 marks</td><td>a connected text about the future of travel with eight gaps and an A/B/C choice (format of SB p.100 ex.7 and WB Round-up p. 67)</td></tr><tr><td>Listening · 12 marks</td><td>two tasks on one recording: 6 — how the speaker feels (format of track 50), 6 — details of the plans: who, when, where, what they decided (format of track 51)</td></tr><tr><td>Reading · 15 marks</td><td>a short travel text: 6 — fact or opinion with the signal underlined (format of SB p.98 ex.6 and WB p. 64 task 3), 6 — true/false with evidence, 3 — Word work from context</td></tr><tr><td>Writing · 10 marks</td><td>an invitation exchange of 6–8 messages: an invitation + a refusal with a reason + a second invitation + agreement + where and when (format of SB p.104 ex.8). Criteria: content 4 · going to and present continuous 3 · phrases for inviting and replying 2 · apostrophes 1</td></tr><tr><td>Speaking · 10 marks</td><td>a pair arranges something to do together from their own diaries: at least five Key phrases, one failed attempt, and an ending — where and at what time (format of SB p.103 ex.5)</td></tr></tbody></table><p style='font-size:.85rem;color:var(--muted);margin:8px 4px'><b>100 marks · Vocabulary 20 · Grammar 25 · Use of English 8 · Listening 12 · Reading 15 · Writing 10 · Speaking 10</b>. The bar for this lesson is not the score but the personal error log: it becomes the plan for Unit 9 (end-of-year review). Every format was met in class during the unit. When the official Get Involved! A2 U8 pack is downloaded from the Teacher's Resource Centre, it replaces this draft.</p></div>
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Fear of “a real test”</td><td>A practice run of three items BEFORE the test — the format is familiar and the fear drops.</td></tr><tr><td>The slower students don't finish</td><td>The volume is set with room to spare; the listening has pauses; the writing follows the familiar seven-step scheme from P6.</td></tr><tr><td>Emptiness after the test</td><td>The ceremony of the year: an award for everyone, the wall of work, the way into Unit 9.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 8 “Summer fun” (What's your idea of a good holiday?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U8 “Summer fun” · P8 · the 🌱 new-students line</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>

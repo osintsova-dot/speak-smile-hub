@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 2 · Pair 6 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why the lesson looks like this */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks inside one stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 2 “Me time” · Pair 6 — Speaking and writing: how to sign up for a course + an informal message</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the “new students” line 🌱, coming from outside</b> · 90 min · supports: model → word bank → draft → product with the sheet in hand · team score · stickers 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 35–36 (KTP pair 18) · November</span><span class='chip new'>🌱 new students · supports and a model</span><span class='chip'>SB pp.31–33</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u2.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u2-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: greeting + rewind</td><td>P5 rewind: two Wh- questions to your neighbour, using the coloured cards</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>the mission: the phrases at the desk + your first message</td></tr><tr><td class='gmin'>8–22′</td><td class='gname'>Phrases at the desk: video + shadowing</td><td>leaflet → the video with Maria → tick the phrases → shadowing in chorus → ex.4 gaps</td></tr><tr class='bridge'><td class='gmin'>22–38′</td><td class='gname'>Club fair: signing up for a course</td><td>we prepare our own mini-dialogue from the model → the fair: half behind the desks, half hunting for their course with a form</td></tr><tr class='bridge'><td class='gmin'>38–45′</td><td class='gname'>Mini broadcast · volunteers</td><td>2–3 pairs act out the dialogue at the board; the audience ticks the phrases they hear</td></tr><tr><td class='gmin'>45–47′</td><td class='gname'>Transition stirrer</td><td>stirrer</td></tr><tr><td class='gmin'>47–58′</td><td class='gname'>Model: a message + and/or/but</td><td>three messages A/B/C + the model reply → ex.4–5 on and/or/but</td></tr><tr class='bridge'><td class='gmin'>58–74′</td><td class='gname'>Product: my message, step by step</td><td>the staircase: choose A or B → write out the 3 questions → notes → 5 lines → checklist → swap</td></tr><tr><td class='gmin'>74–82′</td><td class='gname'>Wall + score</td><td>we read 2 other people's messages: “what new thing did you learn about them?” + points</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Ending: reflection + homework</td><td>homework + a teaser for P7</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 2 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> Two real-world things in one pair: the phrases you can walk into any club with and sign up, and a first informal message. For new students the dialogue is built through shadowing the video (repeating after a voice takes the embarrassment away), and the writing follows a strict staircase: three questions → notes → the text from a model → checklist. I give and/or/but a physical anchor back in the warm-up.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Today you learn the phrases</b> that work in real life: I'd like to find out about your courses. What time does it start? How much is it? Can I sign up for it? First we watch Maria do it, then we do it — our own club fair right here. And then your first message: someone asks you three questions, and you answer. Step by step. The model shows the way.”<div class='pitchru'>In simpler words, if the class needs support: the phrases people really use to sign up for a course: we watch Maria do it, then we run our own club fair. After that — a first message: somebody asks you three questions and you answer them. Step by step, with a model.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Into the lesson: greeting + rewind</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> P5 rewind: two Wh- questions to your neighbour, using the coloured cards</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Two questions to your partner — pick your colour. Falling intonation!</span></li><li>First I ask two questions myself (showing the hand going down at the end), then Kagan <b>RallyRobin</b>: A — a question, B — an answer plus their own question, A again. Two rounds; the card stays in your hand.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> coloured cards</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they get going</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission: the phrases at the desk + your first message</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Real phrases first, then your first message. Step by step.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mission slide (Backup: the mission title and the bar go on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the plan is clear</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>8–22′</td><td class='stage'><div class='nm'>Phrases at the desk: video + shadowing</div><div class='sub'>Phrases at the desk · video</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> leaflet → the video with Maria → tick the phrases → shadowing in chorus → ex.4 gaps</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.1: <span class='en'>Look at the leaflet. Which course would YOU like to do?</span> (one word each).</li><li>Video: <span class='en'>Which course does Maria choose?</span> TB key: movie-making.</li><li>ex.3: we tick the phrases we heard (TB key: I'd like to find out about your courses, please · How much is it? · Do you have a … course? · Can I sign up for it?).</li><li>Shadowing: we repeat after the video in chorus, 2 runs. Then ex.4, TB key: 1 find out about · 2 Do you have · 3 How much · 4 sign up for it.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the RWS video SB p.31 (backup — I read the dialogue in role with a helper) · leaflet</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they take the phrases off a voice. Expect: shadowing takes the embarrassment away</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit2_Speaking_Ask_For_Information_A5</b><div class="nbk">A5 dialogue map — ASK FOR INFORMATION (signing up for a course): opening (I'd like to find out about…, please. · Have you got a … course?), details (What day is it on? · What time does it start? · How much is it?) and closing (Can I sign up for it? · Thanks anyway.)</div><ul><li>Glue the map in — it is the script for the reception desk.</li><li>Invent your own course and fill in the day, time and price.</li><li>Run it in pairs: one asks three questions, the other answers.</li><li>Compulsory ending: either sign up or refuse politely.</li></ul><span class="nbp"><b>When:</b> ~6 min at the start of the “Phrases at the desk: video + shadowing” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slide 5 · video</td></tr><tr class='True'><td class='min'>22–38′</td><td class='stage'><div class='nm'>Club fair: signing up for a course</div><div class='sub'>Club fair</div><div class='zone'>stations</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> we prepare our own mini-dialogue from the model → the fair: half behind the desks, half hunting for their course with a form</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The pairs write a dialogue from the ex.4 model (their own course from the leaflet) — 5 minutes, phrase cards on the desks.</li><li>The fair: <span class='en'>Desks: photography, yoga, chess, movie-making. Visitors: sign up for ONE course!</span></li><li>First I go round one desk myself, out loud, as a visitor — that is the model. Then Kagan <b>Find Someone Who</b>: each visitor has a form with four lines (course · day · time · price) and goes round the desks filling them in with questions. <span class='en'>Two desks minimum — then choose.</span></li><li>The constraint is soft: if you forget a phrase, take the card, that is fine.</li><li>Roles swap after 5 minutes.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> desk cards · phrase cards</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write first and speak after — the fear is gone. Expect: with a card in hand everybody speaks</div></td><td class='mat'>slide 6 · timer</td></tr><tr class='True'><td class='min'>38–45′</td><td class='stage'><div class='nm'>Mini broadcast · volunteers</div><div class='zone'>stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 2–3 pairs act out the dialogue at the board; the audience ticks the phrases they hear</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Volunteers on air! Class: tick every Key phrase you hear.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> phrase checklist</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> volunteers perform with a finished dialogue</div></td><td class='mat'>slide 7</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Transition stirrer</div><div class='sub'>break · transition</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> stirrer</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>AND — hands together! OR — hands apart! BUT — cross your arms!</span> (I read out pairs of ideas)</li><li>Kagan <b>Kinesthetic Symbols</b>: first I show and name the three gestures, then I read a pair of ideas — the class silently shows the gesture and only then says the word in chorus. I use the same gestures with my hand later, while they are writing: a prompt without words.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> a physical anchor for the linkers</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–58′</td><td class='stage'><div class='nm'>Model: a message + and/or/but</div><div class='sub'>Model · a message and linkers</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> three messages A/B/C + the model reply → ex.4–5 on and/or/but</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.1 together (TB key): A to everybody from Akio — looking for a pen friend · B to everybody from Nick and Ava — data for a project · C to Ed from Ciara — about the Tech Club.</li><li>ex.2 through Kagan <b>Think-Pair-Share</b>: first I demonstrate on message A how you look for the match (“this one asks about a pen friend — is there anything about that in the reply? no”), then <span class='en'>Which message does the reply answer?</span> — 20 seconds in silence, 30 seconds with a neighbour, then the class. → C. We look at how the reply follows the ORDER of the questions — that is our writing plan.</li><li>ex.4 (TB key): 1 but · 2 or · 3 and. ex.5 in pairs, TB key: 1 or · 2 but · 3 and · 4 and · 5 or · 6 but.</li><li>The linker checklist goes on the wall, with an example for each.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB pp.32–33 · linker checklist</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they work the rule out from the model. Expect: they confuse but with and — we sort it by ear, “do these ideas argue?”</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit2_Writing_Informal_Message_A5</b><div class="nbk">A5 writing template — AN INFORMAL MESSAGE: a four-step PLAN (who to · why · answer their questions · ask one back), the model message from Maya to Akio and the linker box and — add, or — choice, but — contrast, plus a CHECK list</div><ul><li>Glue the template on a clean page — the message is written beside it.</li><li>Fill the PLAN in key words; the closing question is compulsory.</li><li>Find one and, one or and one but in the model.</li><li>Write the message and check it against the partner's CHECK list.</li></ul><span class="nbp"><b>When:</b> ~6 min at the start of the “Model: a message + and/or/but” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slide 8</td></tr><tr class='True'><td class='min'>58–74′</td><td class='stage'><div class='nm'>Product: my message, step by step</div><div class='sub'>PRODUCT · my message</div><div class='zone'>solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the staircase: choose A or B → write out the 3 questions → notes → 5 lines → checklist → swap</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Step 1: <span class='en'>Message A or B. Write down the three questions — NOTES only.</span></li><li>Step 2: <span class='en'>Five lines. Answer all three questions. Word bank is on the screen.</span> Prompts from the book: <span class='en'>Hi Akio, … I usually … in my free time. I like … but I don't like …</span></li><li>Step 3: checklist on your own (three answers? adverb? -ing after like? and/or/but?) → swap with a partner (ex.7) through Kagan <b>RallyCoach</b>: first I check one message at the board against the checklist out loud as the model, then in the pair one reads their message out loud and the other is the coach: goes through the checklist point by point and praises each one that is there. Then they swap.</li><li>The messages go on the unit wall!</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> 3 questions · frame · checklist · word bank</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write down the staircase with supports. Expect: 5 lines from everybody, the swap catches the linkers</div></td><td class='mat'>slides 9–10 · timer</td></tr><tr><td class='min'>74–82′</td><td class='stage'><div class='nm'>Wall + score</div><div class='zone'>desks → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> we read 2 other people's messages: “what new thing did you learn about them?” + points</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Read two messages. One NEW thing about a classmate — tell your crew.</span></li><li>In the crew — Kagan <b>RoundRobin</b>: I put a frame on the board (<span class='en'>I didn't know that … likes …</span>) and speak first myself, then one line each round the circle. Nobody skips a turn: if you found nothing new — you say what you liked.</li><li>Points to the crews; stickers 🟢🟡🔴.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> wall · leaderboard</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they read each other</div></td><td class='mat'>slide 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Ending: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework + a teaser for P7</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: copy the message out neatly + WB p.18, ex.1–2 (and/or/but).</li><li>Teaser: <span class='en'>Next: the project! We do a real survey — the whole class is our data.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> homework slide (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write it down</div></td><td class='mat'>slide 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> copy the message out neatly (the fair copy goes back on the wall) + WB p.18, ex.1–2 (and, or, but).</p><p>🌱 If you want: ex.3 — a message of your own.</p></td><td class='mat'>WB Unit 2 · the fair copy of the message — onto the wall</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>ask for information about a course with 5 Key phrases</b> and <b>write a 5-line reply</b> answering three questions, using and, or and but.</li>
+      <li><span class="lb">Subsidiary.</span> The video with Maria + shadowing; ex.4 completing the dialogue; the model messages A/B/C and the model reply; ex.4–5 the linkers; checklist and peer review.</li>
+      <li><span class="lb">Personal.</span> The writing happens in class with my support; at home they only copy it out neatly. To the board — volunteers only, and only with a finished dialogue.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>use 5 Key phrases to ask about a course</li><li>act out a short sign-up dialogue</li><li>write a 5-line reply answering three questions</li><li>join ideas with and, or and but</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Phrases</span><span>Fair</span><span>Model</span><span>Connectors</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>I'd like to find out about your courses, please.</span><span class='w'>Can you tell me about your photography course?</span><span class='w'>Do you have a … course?</span><span class='w'>What time does it start?</span><span class='w'>What day is it on?</span><span class='w'>How much is it?</span><span class='w'>Can I sign up for it?</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I'd like to find out about your courses, please. · Do you have a chess course? · What time does it start? · How much is it? · Can I sign up for it?</div></div>
+      <div class="r"><div class="k">Form</div><div>and — adds a similar idea · or — adds an alternative · but — adds a different (contrasting) idea · US: Do you have…? / UK: Have you got…?</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>the silent letter in sign /saɪn/ · stress in photography /fəˈtɒɡrəfi/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>“Can I sign up for it?” — is that about a signature? → no, about enrolling on a course.</div><div class='ccq'>and, or, but — which of them argues with the first idea? → but.</div><div class='ccq'>How many questions must the reply close? → all three, otherwise the message is not finished.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.31–33, KTP pair 18. The course leaflet gives you all the material; messages A/B are simple and short.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>They are shy about acting out the dialogue</td><td>Shadowing the video in chorus first, then in a pair at their desk, and to the board — volunteers only.</td></tr><tr><td>“I don't know what to write” in the message</td><td>The three questions in the original message are the plan: three questions, three answers, plus a greeting and a sign-off.</td></tr><tr><td>They stick the linkers in at random</td><td>The stand-up-sit-down stirrer gives a physical anchor + a checklist with an example for each linker.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 2 “Me time” (How important are hobbies for teenagers?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U2 “Me time” · P6 · the “new students” line 🌱</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>

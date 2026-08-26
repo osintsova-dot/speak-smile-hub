@@ -38,7 +38,8 @@ let GROUPS = GROUPS_FALLBACK;
 // GIA2new идёт по той же КТП, что GIA2 (единая сетка двух линий)
 (function(){
   function aliasKtp(){
-    // GIA2new (линия с нуля) с 26.08.2026 в архиве: обе группы идут по КТП продолжающих
+    if (window.PROGRAMS && window.PROGRAMS.GIA2 && !window.PROGRAMS.GIA2new)
+      window.PROGRAMS.GIA2new = window.PROGRAMS.GIA2;
   }
   aliasKtp(); document.addEventListener("DOMContentLoaded", aliasKtp);
 })();
@@ -239,6 +240,35 @@ function slidesBtnHtml(program, key){
 }
 
 // Возвращает ключ (напр. "GMF1-U2-L1"), только если такой план реально есть в window.PLANS.
+// Парные линии одного курса: слева — посильнее, справа — с нуля.
+// Группы часто набираются смешанными, поэтому учитель выбирает вариант плана сам.
+const PROGRAM_PAIRS = { GIA2:"GIA2new", GIA1:"GIA1zero", GMF1:"GMF1zero", GMF2:"GMF2zero" };
+
+function pairedPrograms(program) {
+  for (const strong in PROGRAM_PAIRS) {
+    const weak = PROGRAM_PAIRS[strong];
+    if (program === strong || program === weak) return { strong, weak };
+  }
+  return null;
+}
+
+// Две кнопки, если у урока есть план и в сильной, и в слабой линии
+function planButtonsHtml(program, L) {
+  const key = planKeyFor(program, L);
+  const pair = pairedPrograms(program);
+  if (!pair) return key ? `<button class="planbtn" data-plan="${esc(key)}">📋 Открыть план урока</button>` : "";
+  const strongKey = planKeyFor(pair.strong, L);
+  const weakKey = planKeyFor(pair.weak, L);
+  if (strongKey && weakKey) {
+    return `<div class="planpair">
+      <button class="planbtn" data-plan="${esc(strongKey)}" title="Линия для продолжающих">🚀 План · посильнее</button>
+      <button class="planbtn alt" data-plan="${esc(weakKey)}" title="Линия с нуля">🐣 План · послабее</button>
+    </div>`;
+  }
+  const only = strongKey || weakKey;
+  return only ? `<button class="planbtn" data-plan="${esc(only)}">📋 Открыть план урока</button>` : "";
+}
+
 function planKeyFor(program, L){
   if (!window.PLANS) return null;
   const src = L.unit || L.sec || "";
@@ -412,8 +442,7 @@ function render(){
               <div class="unit">${esc(L.sec)}</div>`;
       const fields = L.fields || [];
       const planKey = planKeyFor(g.program, L);
-      const planBtn = (planKey ? `<button class="planbtn" data-plan="${esc(planKey)}">📋 Открыть план урока</button>` : "")
-                    + slidesBtnHtml(g.program, planKey);
+      const planBtn = planButtonsHtml(g.program, L) + slidesBtnHtml(g.program, planKey);
       const remind = reminderHtml(g.program, L);
       body = `<div class="detail">` + remind + planBtn + fields.map(([lab,val])=>`
         <div class="field">
@@ -588,7 +617,7 @@ function renderProgLessons(prog){
     if (sec && sec !== lastSec){ html += `<div class="secrow">${esc(sec)}</div>`; lastSec = sec; }
     const key = planKeyFor(prog, L);
     const planBtn = (key
-      ? `<button class="planbtn" data-plan="${esc(key)}">📋 Открыть план урока</button>`
+      ? planButtonsHtml(prog, L)
       : `<div class="unit" style="margin-top:10px">план не создан (резерв/тест/устный)</div>`)
       + slidesBtnHtml(prog, key);
     const remind = reminderHtml(prog, L);

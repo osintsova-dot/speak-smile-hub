@@ -1,0 +1,188 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIA2new · Unit 5 · Pair 4 (Lesson Plan &amp; Staging)</title>
+<style>
+  :root{
+    --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
+    --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey:#F5C842; --honey-ink:#8A6400; --honey-soft:#FDF5DA;
+    --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
+    --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
+  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
+  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+  html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
+
+  .hd{ background:linear-gradient(135deg,#6C3FC5,#8A5FD8); color:#fff; border-radius:14px; padding:16px 18px; }
+  .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
+  .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
+  .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+
+  .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
+  .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cardb{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  ul.a{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  ul.a li{ padding-left:20px; position:relative; font-size:.93rem; }
+  ul.a li::before{ content:""; position:absolute; left:2px; top:.55em; width:8px; height:8px; border-radius:2px; background:var(--p); transform:rotate(45deg); }
+  .lb{ font-weight:800; color:var(--p-ink); }
+  .tl .r{ display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed var(--line); font-size:.92rem; } .tl .r:last-child{ border-bottom:0; }
+  .tl .k{ flex:0 0 118px; font-weight:800; font-size:.74rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .w{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--line); border-radius:6px; padding:0 6px; margin:2px 3px 2px 0; font-size:.85rem; font-weight:600; }
+  .ccq{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.9rem; margin-bottom:8px; }
+  table.ap{ width:100%; border-collapse:collapse; font-size:.9rem; } table.ap th,table.ap td{ text-align:left; padding:8px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.ap th{ font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); } table.ap td:first-child{ font-weight:600; width:46%; }
+  .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
+  .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
+
+  /* design card: why the lesson looks like this */
+  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
+    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
+  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
+    letter-spacing:.08em; margin-bottom:6px; }
+  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
+  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
+    padding:10px 13px; font-size:.95rem; }
+  .missioncard .pitch b{ color:var(--p-ink); }
+  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
+
+  /* lesson at a glance */
+  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
+  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
+  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
+  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
+  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
+  table.glance tr.bridge td{ background:var(--honey-soft); }
+  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
+
+  /* staging */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .game{ color:var(--p); font-weight:800; }
+  .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
+  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
+  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
+  /* three sub-blocks inside one stage */
+  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
+  .tsteps{ margin:7px 0; }
+  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
+  .tsteps li{ margin:3px 0; font-size:.92rem; }
+  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .showb .sbh{ color:var(--zone); }
+  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
+  .kidsb .sbh{ color:var(--honey-ink); }
+  .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
+  table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
+  table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
+  td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
+  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
+  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
+  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
+  .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
+
+  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
+  .ig b{ color:var(--zone); }
+  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
+  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
+  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  /* interactive-notebook (вклейки в тетрадь) */
+  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
+  .nb>b{ color:var(--honey-ink); }
+  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
+  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
+  .nb .nbp b{ color:var(--p-ink); }
+  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
+  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+
+  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media print{
+    @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    body{ background:#fff; } .wrap{ max-width:none; padding:0; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="hd">
+    <div class="t">Get Involved! A2 · Unit 5 “Must try!” · Pair 4 — Places in a town + listening: a conversation about Buenos Aires</div>
+    <div class="s">Teens 12–14 (grade 6–8) · <b>the “new students” track 🌱 (they come from elsewhere)</b> · 90 min · supports: model → word bank → draft → product with the sheet in hand · team score · stickers 🟢🟡🔴</div>
+    <div class="meta"><span class='chip'>Lessons 81–82 (KTP pair 41) · March</span><span class='chip new'>🌱 new students · supports and a model</span><span class='chip'>SB p.65</span><span class='chip'>team score · self-check</span></div>
+  </div>
+  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u5.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u5-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
+  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Lesson opening: greeting + review</td><td>P3 rewind: three lines about your own fridge, to a new partner</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>the mission: 12 places + the call to Buenos Aires + six lines about their own town</td></tr><tr><td class='gmin'>8–22′</td><td class='gname'>Town places in groups</td><td>12 places in three portions by function (ex.2) → then the whole map (ex.1)</td></tr><tr><td class='gmin'>22–32′</td><td class='gname'>Sentence builders and a guessing game</td><td>ex.3 the two word-builders with the poster → ex.4 we describe a place and the partner guesses</td></tr><tr><td class='gmin'>32–38′</td><td class='gname'>Predicting the words before the recording</td><td>ex.5: we write out the expected words for the four topics BEFORE listening</td></tr><tr><td class='gmin'>38–40′</td><td class='gname'>Transition warm-up</td><td>a warm-up</td></tr><tr><td class='gmin'>40–56′</td><td class='gname'>Listening: Mia and Ethan (step by step)</td><td>track 33 in three runs with pauses: the order of the topics → notes → six details</td></tr><tr class='bridge'><td class='gmin'>56–72′</td><td class='gname'>Product: my town, 6 lines</td><td>the ladder: notes on the four topics → 6 lines from the frame → reading in the crew → the stage with the sheet</td></tr><tr><td class='gmin'>72–82′</td><td class='gname'>Mini-test with self-check + score</td><td>10 items on the town places, self-checked against the key + the team score</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Closing: reflection + homework</td><td>homework with a worked example + the P5 teaser</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 5 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
+
+  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> The place vocabulary is given in groups by function (where you eat / where you do sport / where the arts are) — twelve words go in more easily that way than as a list. For newcomers the listening is broken into three runs with a different task each time, and the compulsory step is predicting the words BEFORE the recording (that is the subskill of the unit, and it genuinely saves them). The product is six lines about their own town from a frame, with the sheet in hand.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Mia is moving to Buenos Aires for a year.</b> She's never been. She has one phone call with her cousin Ethan to find out if the city is any good. We'll listen to that call — but first we learn the twelve places she asks about, and then we do the trick that makes listening easy: we write down the words we EXPECT to hear. At the end, each of you describes our town in six lines. <b>First, the map on page 65…”</b><div class='pitchru'>In simpler words, if the class needs support: Mia is moving to Buenos Aires and rings her cousin to find out whether it is a good city. First we learn the 12 places, then we use the trick that saves you in a listening: we write down the words we expect to hear. At the end — six lines about our own town.</div></div></div>
+
+  <div class="eyebrow">Procedure — full staging</div>
+  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+
+  <div class="scroll">
+  <table class="proc">
+    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <tbody>
+<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Lesson opening: greeting + review</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> P3 rewind: three lines about your own fridge, to a new partner</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The model: I read three lines about my own fridge, pointing at the P3 poster.</li><li>Kagan <b>Timed Pair Share</b>: 30 seconds for the first one, on the signal they swap — 30 seconds for the second. <span class='en'>Three lines about your fridge — to a NEW partner.</span> The notebook is in their hands; it is a support, not a cheat sheet.</li><li>The bridge: <span class='en'>You can describe a fridge. Today: a whole city.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the P3 poster · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they warm up on yesterday's form</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission: 12 places + the call to Buenos Aires + six lines about their own town</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Mia is moving to Buenos Aires. One phone call to find out if it's a good city.</span></li><li><span class='en'>At the end: OUR town in six lines. You can hold your notes.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the mission slide + the map on SB p.65 (backup — I draw a town grid on the board)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the plan is clear</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>8–22′</td><td class='stage'><div class='nm'>Town places in groups</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 12 places in three portions by function (ex.2) → then the whole map (ex.1)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Kagan <b>Kinesthetic Symbols</b>: every place gets its own gesture. I show the gesture, the class repeats it chorally with the word, then I show only the gesture — they say the word.</li><li>Portion 1 — where you eat: <span class='en'>fast-food restaurant — burger! · juice bar — shake it! · department store — many floors!</span></li><li>Portion 2 — where you do sport: <span class='en'>skate park — roll! · sports centre — jump! · cycle lane — pedal!</span></li><li>Portion 3 — where the arts are: <span class='en'>library — shh! · museum — look! · music venue — loud!</span> And transport: bus stop · underground station · bike station.</li><li>ex.1 on the map (TB key: 1 bike station · 2 skate park · 3 library · 4 cycle lane · 5 fast-food restaurant · 6 underground station · 7 music venue · 8 sports centre · 9 bus stop · 10 juice bar · 11 department store · 12 museum).</li><li>ex.2 for consolidation (TB key: 1 fast-food restaurant, juice bar, (department store) · 2 skate park, sports centre, (cycle lane) · 3 library, music venue, museum). TB tip: some places fit into more than one group.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.65 ex.1–2 · the word bank on the screen (backup — the word bank in big letters on the board, not to be wiped until the end of the pair)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they take the words in through gestures and groups. Expect: cycle lane and music venue need a second pass</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit5_Vocabulary2_Places_In_A_Town_Visual_Takeaway_A5</b><div class="nbk">A5 glue-in sheet — YOUR TOWN, YOUR PLACES by purpose: MOVE (bus stop · bike station · cycle lane · underground station) · EAT & DRINK (fast-food restaurant · juice bar) · LEARN & CULTURE (library · museum · music venue) · SHOP & PLAY (department store · skate park · sports centre), plus the word families STATION (bus · petrol · police · train · underground) and CENTRE (city · medical · shopping · sports · town)</div><ul><li>Glue the town map in opposite the food sheet.</li><li>Mark what exists in Norilsk and what does not.</li><li>Build two sentences by the model: Where do you go to…? — I go to…</li><li>Say the station and centre families aloud — they come up in the test.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the “Town places in groups” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slides 5–6</td></tr><tr><td class='min'>22–32′</td><td class='stage'><div class='nm'>Sentence builders and a guessing game</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.3 the two word-builders with the poster → ex.4 we describe a place and the partner guesses</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.3 with the builder poster. TB key: 1 station · 2 centre.</li><li>The TB note out loud: <span class='en'>bus STOP is the little one on your street. Bus STATION is the big one.</span> TB follow-up questions: <span class='en'>Where do I go if someone stole my purse? To put petrol in my car? If I feel ill?</span></li><li>ex.4 on the coursebook model (the model stays on screen for the whole game): <span class='en'>This is a place to do aerobics. — I know, it's a sports centre. My turn!</span> First we write the definition, then Kagan <b>RallyRobin</b>: in the pair, strictly in turn — one reads their definition, the other guesses the place and reads theirs straight away. Whoever guessed right says <span class='en'>My turn!</span> Six rounds.</li><li>TB tip: I feed in the words they may be short of — underground train, band, report crime.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.65 ex.3–4 · the builder poster</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they build compounds and guess. Expect: with the poster everybody manages</div></td><td class='mat'>slide 7</td></tr><tr><td class='min'>32–38′</td><td class='stage'><div class='nm'>Predicting the words before the recording</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> ex.5: we write out the expected words for the four topics BEFORE listening</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Read the task in exercise six. Four topics: food, music, sports, transport.</span></li><li><span class='en'>For each one: which places from our list might you hear? Write them down. Thirty seconds per topic.</span></li><li>TB hint: <span class='en'>What TYPE of information do you need? A number? A kind of transport? Underline it in the notes.</span></li><li>The lists stay on the desks — later we check who guessed right.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.65 ex.5 · word bank · mini-whiteboards</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write the prediction. Expect: almost everyone gets sports, almost nobody gets music; that is the perfect moment to show what the technique is for</div></td><td class='mat'>slide 8</td></tr><tr><td class='min'>38–40′</td><td class='stage'><div class='nm'>Transition warm-up</div><div class='sub'>break · transition</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a warm-up</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Four corners! Sports centre — corner one. Museum — two. Juice bar — three. Skate park — four. Where do you go on Saturday? RUN!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they move and choose their places</div></td><td class='mat'>—</td></tr><tr><td class='min'>40–56′</td><td class='stage'><div class='nm'>Listening: Mia and Ethan (step by step)</div><div class='sub'>Listening · Mia and Ethan</div><div class='zone'>screen · crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> track 33 in three runs with pauses: the order of the topics → notes → six details</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Run 1 (ex.6) — the order of the topics only: <span class='en'>What do they talk about first?</span> TB key: a food — 2 · b music — 4 · c sports — 1 · d transport — 3.</li><li>Run 2 (ex.7) — eight gaps, I pause after each answer. TB key: 1 yes · 2 three · 3 yes · 4 no (only in the centre) · 5 underground / bus / cycle · 6 no (only in the centre) · 7 shorts · 8 sunglasses.</li><li>Run 3 (ex.8) — six questions: first everyone writes their own answer, then Kagan <b>Numbered Heads Together</b> — the crew compares its six answers and settles on one, and the number I call answers. Support: notes and word bank stay open. TB key: 1 a skate park · 2 some nice cafés and juice bars · 3 meat sandwiches · 4 by underground · 5 No, there are a lot of cycle lanes. · 6 in the city centre.</li><li>Checking the prediction: <span class='en'>Look at your list from before. Tick every word you actually heard!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> audio track 33 · the notes on SB p.65 (backup — I read the TB p.134 script in roles with a helper and make the pauses with my voice) · word bank</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they listen in three runs with pauses. Expect: the third run comes easily — the recording is already familiar</div></td><td class='mat'>slide 9 · audio</td></tr><tr class='True'><td class='min'>56–72′</td><td class='stage'><div class='nm'>Product: my town, 6 lines</div><div class='sub'>PRODUCT · my town (6 lines)</div><div class='zone'>solo → crews → stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the ladder: notes on the four topics → 6 lines from the frame → reading in the crew → the stage with the sheet</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Step 1 (ex.9): four topics — <span class='en'>places to do sports · transport · places to eat · places to go out.</span> Notes, single words.</li><li>Step 2 — the frame: <span class='en'>In our town there's a … . There are two … . There aren't any … . The best way to get around is by … . I like … because it's … .</span></li><li>Step 3 — Kagan <b>RoundRobin</b>: round the crew clockwise, everyone reads their six lines off the sheet; the crew helps with spelling only once the circle is closed.</li><li>Step 4: the crew comes out together, the speaker holds the sheet. The audience: <span class='en'>Thumbs up if it's true for you too!</span></li><li>I praise concretely: <span class='en'>Clear numbers! Nice place!</span> — no error correction at the board.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the frame · word bank · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write and then speak — the fear is gone. Expect: everyone has 6 lines</div></td><td class='mat'>slides 10–11 · timer</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Mini-test with self-check + score</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 10 items on the town places, self-checked against the key + the team score</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Ten items. Two minutes. Then YOU mark it — the key is on the screen.</span></li><li>The items: six pictures of places + four compound names (… station / … centre).</li><li><span class='en'>Circle what you missed. That's YOUR list.</span></li><li>Team score + the 🟢🟡🔴 stickers.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the mini-test on a slide · the key on a slide · stickers (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they check themselves privately. Expect: 7–10 out of 10</div></td><td class='mat'>slide 12</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Closing: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework with a worked example + the P5 teaser</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: WB p. 38, ex. 1–3 (places in a town) + write the six lines about the town out neatly.</li><li>I show a completed crossword on the slide as the example.</li><li>Teaser: <span class='en'>Next lesson: how to ASK about a town — Is there…? How many…? Two little words that change everything.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the homework slide with the example (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write it down</div></td><td class='mat'>slide 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> WB p. 38, ex. 1–3 (the crossword, the station/centre builders, “where do you go if…”) + write the six “My town” lines out neatly.</p><p>🌱 Optional: WB p. 41, ex. 1–4 (the Mel and Scott listening, track 10).</p></td><td class='mat'>WB Unit 5 · the builder poster stays on the wall</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
+
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>name 12 places in a town, build compound names</b> (… station / … centre) and <b>describe their own town in 6 lines</b>; they can predict vocabulary before a listening.</li>
+      <li><span class="lb">Subsidiary.</span> ex.1 the map with the 12 places, with a prompt sheet; ex.2 three groups by function; ex.3 two word-builders; ex.4 guess the place from the description; ex.5 word prediction; track 33 in three runs (ex.6, 7, 8); ex.9 the pros and cons of their own town.</li>
+      <li><span class="lb">Personal.</span> I give the words in groups, not as a list. I only press play once the word prediction is written. Every answer goes down in writing first, then out loud.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a"><li>name 12 places in a town</li><li>build compound names with station and centre</li><li>write down words I expect to hear before listening</li><li>describe my town in 6 sentences</li></ul>
+      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
+      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Base</span><span>Groups</span><span>Prediction</span><span>Listening</span><span>Product</span><span>Score</span></div>
+    </div>
+  </div>
+
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class='w'>bike station</span><span class='w'>bus stop</span><span class='w'>cycle lane</span><span class='w'>department store</span><span class='w'>fast-food restaurant</span><span class='w'>juice bar</span><span class='w'>library</span><span class='w'>museum</span><span class='w'>music venue</span><span class='w'>skate park</span><span class='w'>sports centre</span><span class='w'>underground station</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>There's a sports centre near my home. · There are three skate parks. · There aren't any music venues. · The best way to get there is by bus.</div></div>
+      <div class="r"><div class="k">Form</div><div>compound names: bus/underground/train/petrol/police/bike + station · town/shopping/sports/medical/city + centre; the stress falls on the first word.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>from the Wordlist: museum /mjuːˈziːəm/ · library /ˈlaɪbrəri/ · juice bar /ˈdʒuːs ˌbɑː(r)/ · music venue /ˈmjuːzɪk ˌvenjuː/ · department store /dɪˈpɑː(r)tmənt ˌstɔː(r)/</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class='ccq'>are bus stop and bus station the same thing? → no (TB note): a stop is the little one, a station is the big one.</div><div class='ccq'>Where do you go if you are ill? → medical centre. To fill up the car? → petrol station.</div><div class='ccq'>Why write the words down BEFORE listening? → so you recognise them in the flow.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB p.65, KTP pair 41. Museum and library are familiar; new ones — juice bar, music venue, cycle lane, bike station, department store, underground station.</p>
+    </div>
+  </div>
+
+  
+
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>12 words at once will not fit</td><td>I give them in three portions by function (food / sport / the arts), with a gesture for each, and only then the whole map.</td></tr><tr><td>“I understood nothing in the listening”</td><td>The word prediction in ex.5 is a compulsory step; without it I do not press play. Plus three runs with a different task each, and pauses.</td></tr><tr><td>The compound names turn to mush</td><td>The builder poster: six words on the left, STATION on the right; below, five words and CENTRE. It stays up until the end of the unit.</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Speak &amp; Smile · Get Involved! A2 · Unit 5 “Must try!” (What makes a town a good place to live in?) · GIA2new — lesson plan &amp; staging</span>
+    <span>GIA2new · U5 “Must try!” · P4 · the “new students” track 🌱</span>
+  </div>
+</div>
+<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
+<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>
