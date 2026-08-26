@@ -16,7 +16,7 @@ const GROUPS_FALLBACK = [
   // Вт/Чт
   {name:"GMF 3A",  program:"GMF3",    room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"15:00"},{d:4,t:"15:00"}]},
   {name:"GMF 2C",  program:"GMF2zero",room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"16:05"},{d:4,t:"16:05"}]},
-  {name:"GMF 2D",  program:"GMF2zero",room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"17:10"},{d:4,t:"17:10"}]},
+  {name:"GMF 3D",  program:"GMF3",    room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"17:10"},{d:4,t:"17:10"}]},
   {name:"Mimi 3",  program:"MW3",     room:"Discovery", teacher:"Оксана",    days:[{d:2,t:"18:20"},{d:4,t:"18:20"}]},
   {name:"GMF 1A",  program:"GMF1",    room:"Discovery", teacher:"Оксана",    days:[{d:2,t:"19:30"},{d:4,t:"19:30"}]},
   {name:"Get Involved 1A", program:"GIA1", room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"15:00"},{d:4,t:"15:00"}]},
@@ -29,7 +29,7 @@ const GROUPS_FALLBACK = [
   {name:"Genki 1B", program:"Genki",  room:"Discovery", teacher:"Оксана",    days:[{d:3,t:"19:30"},{d:6,t:"13:20"}]},
   {name:"Get Involved 1B", program:"GIA1zero", room:"Discovery", teacher:"Катя", days:[{d:3,t:"16:40"},{d:6,t:"14:30"}]},
   {name:"GMF 3C",  program:"GMF3",    room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"15:00"},{d:6,t:"12:10"}]},
-  {name:"GMF 3D",  program:"GMF3",    room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"16:05"},{d:6,t:"13:20"}]},
+  {name:"GMF 2D",  program:"GMF2zero",room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"16:05"},{d:6,t:"13:20"}]},
   {name:"Get Involved 2B", program:"GIA2new", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"17:10"},{d:6,t:"14:30"}]},
   {name:"GMF 1C",  program:"GMF1zero",room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"18:50"},{d:6,t:"11:00"}]},
 ];
