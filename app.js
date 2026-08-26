@@ -11,7 +11,7 @@ const GROUPS_FALLBACK = [
   {name:"Prepare 5A", program:"Prepare5", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"18:45"},{d:5,t:"18:45"}]},
   {name:"GMF 4B",  program:"GMF4",    room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"15:00"},{d:5,t:"15:00"}]},
   {name:"GMF 3B",  program:"GMF3",    room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"16:05"},{d:5,t:"16:05"}]},
-  {name:"Get Involved 2A", program:"GIA2", room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"17:10"},{d:5,t:"17:10"}]},
+  {name:"Get Involved 2B", program:"GIA2", room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"17:10"},{d:5,t:"17:10"}]},
   {name:"Gateway B2", program:"Gateway", room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"18:45"},{d:5,t:"18:45"}]},
   // Вт/Чт
   {name:"GMF 3A",  program:"GMF3",    room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"15:00"},{d:4,t:"15:00"}]},
@@ -30,7 +30,7 @@ const GROUPS_FALLBACK = [
   {name:"Get Involved 1B", program:"GIA1zero", room:"Discovery", teacher:"Катя", days:[{d:3,t:"16:40"},{d:6,t:"14:30"}]},
   {name:"GMF 3C",  program:"GMF3",    room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"15:00"},{d:6,t:"12:10"}]},
   {name:"GMF 2D",  program:"GMF2zero",room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"16:05"},{d:6,t:"13:20"}]},
-  {name:"Get Involved 2B", program:"GIA2new", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"17:10"},{d:6,t:"14:30"}]},
+  {name:"Get Involved 2A", program:"GIA2", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"17:10"},{d:6,t:"14:30"}]},
   {name:"GMF 1C",  program:"GMF1zero",room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"18:50"},{d:6,t:"11:00"}]},
 ];
 let GROUPS = GROUPS_FALLBACK;
@@ -38,8 +38,7 @@ let GROUPS = GROUPS_FALLBACK;
 // GIA2new идёт по той же КТП, что GIA2 (единая сетка двух линий)
 (function(){
   function aliasKtp(){
-    if (window.PROGRAMS && window.PROGRAMS.GIA2 && !window.PROGRAMS.GIA2new)
-      window.PROGRAMS.GIA2new = window.PROGRAMS.GIA2;
+    // GIA2new (линия с нуля) с 26.08.2026 в архиве: обе группы идут по КТП продолжающих
   }
   aliasKtp(); document.addEventListener("DOMContentLoaded", aliasKtp);
 })();
