@@ -387,7 +387,7 @@ window.JOURNAL_GROUPS = [
  }
 ];
 window.JOURNAL_ROSTERS = {
- "at": "2026-08-27T06:52:46.983Z",
+ "at": "2026-08-27T08:07:36.611Z",
  "groups": {
   "Give me five 3B": [
    "Воробьев Максим",
