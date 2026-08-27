@@ -117,8 +117,8 @@ thead .test{background:var(--y)}
 <div class="hint" id="hint"></div>
 <div id="out"></div>
 
-<script src="data.js?v=128"></script>
-<script src="journal-data.js?v=128"></script>
+<script src="data.js?v=129"></script>
+<script src="journal-data.js?v=129"></script>
 <script>
 "use strict";
 
@@ -406,8 +406,6 @@ async function refresh() {
   btn.disabled = true;
   const was = btn.textContent;
   $("msg").className = "msg";
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 180000);
   const groups = {};
   let at = null;
   try {
@@ -418,13 +416,22 @@ async function refresh() {
       $("msg").textContent = total
         ? `Собираю составы: ${Math.min(from, total)} из ${total} групп…`
         : "Захожу в BigBen…";
-      const r = await fetch(WORKER + "/roster?from=" + from + "&count=4&t=" + encodeURIComponent(token), { signal: ctrl.signal });
-      const d = await r.json();
+      // таймаут на каждую порцию отдельно: раньше он стоял на весь цикл
+      // и обрывал загрузку на предпоследней порции
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 90000);
+      let d;
+      try {
+        const r = await fetch(WORKER + "/roster?from=" + from + "&count=4&t=" + encodeURIComponent(token), { signal: ctrl.signal });
+        d = await r.json();
+      } finally { clearTimeout(timer); }
       if (!d.ok) throw new Error(d.error || "CRM не ответила");
       (d.groups || []).forEach((g) => { groups[g.name] = g.pupils || []; });
       at = d.at || at;
       total = d.total;
       from += 4;
+      // складываем по ходу — если связь оборвётся, уже полученное не пропадёт
+      localStorage.setItem(LS_ROSTERS, JSON.stringify({ at: at || new Date().toISOString(), groups }));
     } while (total && from < total);
 
     ROSTERS = { at: at || new Date().toISOString(), groups };
@@ -436,15 +443,17 @@ async function refresh() {
   } catch (e) {
     const aborted = e && e.name === "AbortError";
     $("msg").className = "msg err";
-    $("msg").textContent = aborted
-      ? "CRM не ответила за три минуты. Если ты без VPN — включи его и повтори: Cloudflare из России часто не пускает."
-      : "Не вышло: " + ((e && e.message) || e);
+    const got = Object.keys(groups).length;
+    $("msg").textContent = (aborted
+      ? "CRM не ответила за полторы минуты. Если ты без VPN — включи его и нажми ещё раз."
+      : "Не вышло: " + ((e && e.message) || e)) +
+      (got ? ` Успели получить ${got} групп — они сохранены, можно просто нажать «Обновить» ещё раз.` : "");
+    if (got) { ROSTERS = { at: at || new Date().toISOString(), groups }; setNote(); render(); }
     if (!aborted && /код не совпал/i.test(String(e && e.message))) {
       localStorage.removeItem(LS_TOKEN);
       $("msg").textContent += " — код доступа стёрт, при следующем нажатии введи заново.";
     }
   } finally {
-    clearTimeout(timer);
     btn.disabled = false;
     btn.textContent = was;
   }
