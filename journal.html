@@ -117,8 +117,8 @@ thead .test{background:var(--y)}
 <div class="hint" id="hint"></div>
 <div id="out"></div>
 
-<script src="data.js?v=131"></script>
-<script src="journal-data.js?v=131"></script>
+<script src="data.js?v=132"></script>
+<script src="journal-data.js?v=132"></script>
 <script>
 "use strict";
 
@@ -431,7 +431,7 @@ async function refresh() {
       if (!r.ok) throw new Error(r.error || "сервер не ответил");
       step++;
       const p = r.total ? " " + r.done + " из " + r.total : "";
-      $("msg").textContent = "Собираю составы групп" + p + "… BigBen отдаёт по группе за пару секунд, это займёт около полутора минут.";
+      $("msg").textContent = "Собираю составы групп" + p + "… BigBen отдаёт карточки медленно, обычно уходит две-пять минут. Вкладку можно оставить открытой и заняться другим.";
       btn.textContent = "↻ Собираю…" + p;
     } while (r.status === "run" && step < 30);
 
@@ -442,7 +442,12 @@ async function refresh() {
     ROSTERS = { at: r.at || new Date().toISOString(), groups };
     localStorage.setItem(LS_ROSTERS, JSON.stringify(ROSTERS));
     const cnt = Object.values(groups).reduce((s, v) => s + v.length, 0);
-    $("msg").textContent = "Готово: " + Object.keys(groups).length + " групп, " + cnt + " учеников. Списки обновлены.";
+    // CRM в списке групп сама пишет, сколько в них человек — сверяем,
+    // чтобы недогруженная карточка не превратилась в молча пустой список
+    const miss = r.expected && r.expected !== cnt ? r.expected - cnt : 0;
+    $("msg").className = miss ? "msg err" : "msg";
+    $("msg").textContent = "Готово: " + Object.keys(groups).length + " групп, " + cnt + " учеников." +
+      (miss ? ` Но CRM насчитала ${r.expected} — не хватает ${miss}. Нажми «Обновить» ещё раз.` : " Списки обновлены.");
     setNote();
     render();
   } catch (e) {
