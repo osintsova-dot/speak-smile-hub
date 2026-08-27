@@ -117,8 +117,8 @@ thead .test{background:var(--y)}
 <div class="hint" id="hint"></div>
 <div id="out"></div>
 
-<script src="data.js?v=129"></script>
-<script src="journal-data.js?v=129"></script>
+<script src="data.js?v=130"></script>
+<script src="journal-data.js?v=130"></script>
 <script>
 "use strict";
 
@@ -394,7 +394,10 @@ function setNote() {
   $("rosterNote").textContent = ROSTERS.at ? "списки от " + fmtDate(ROSTERS.at) : "списки не обновлялись";
 }
 
-/* --- обновление из CRM --- */
+/* --- обновление из CRM ---
+   Сбор идёт на сервере: вход в BigBen занимает под сотню секунд, и держать
+   всё это время открытое соединение с телефона или ноутбука ненадёжно.
+   Мы просим воркер начать, а потом спрашиваем, как продвигается. */
 async function refresh() {
   const btn = $("refresh");
   let token = localStorage.getItem(LS_TOKEN) || "";
@@ -403,55 +406,57 @@ async function refresh() {
     if (!token) return;
     localStorage.setItem(LS_TOKEN, token);
   }
-  btn.disabled = true;
   const was = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = "↻ Собираю…";
   $("msg").className = "msg";
-  const groups = {};
-  let at = null;
-  try {
-    // карточки групп в CRM тяжёлые, поэтому забираем составы порциями по 4
-    let from = 0, total = null;
-    do {
-      btn.textContent = "↻ Загружаю…" + (total ? " " + Math.min(from, total) + "/" + total : "");
-      $("msg").textContent = total
-        ? `Собираю составы: ${Math.min(from, total)} из ${total} групп…`
-        : "Захожу в BigBen…";
-      // таймаут на каждую порцию отдельно: раньше он стоял на весь цикл
-      // и обрывал загрузку на предпоследней порции
-      const ctrl = new AbortController();
-      const timer = setTimeout(() => ctrl.abort(), 90000);
-      let d;
-      try {
-        const r = await fetch(WORKER + "/roster?from=" + from + "&count=4&t=" + encodeURIComponent(token), { signal: ctrl.signal });
-        d = await r.json();
-      } finally { clearTimeout(timer); }
-      if (!d.ok) throw new Error(d.error || "CRM не ответила");
-      (d.groups || []).forEach((g) => { groups[g.name] = g.pupils || []; });
-      at = d.at || at;
-      total = d.total;
-      from += 4;
-      // складываем по ходу — если связь оборвётся, уже полученное не пропадёт
-      localStorage.setItem(LS_ROSTERS, JSON.stringify({ at: at || new Date().toISOString(), groups }));
-    } while (total && from < total);
+  $("msg").textContent = "Прошу сервер сходить в BigBen…";
 
-    ROSTERS = { at: at || new Date().toISOString(), groups };
+  const ask = async (path) => {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 30000);
+    try {
+      const r = await fetch(WORKER + path + "?t=" + encodeURIComponent(token), { signal: ctrl.signal });
+      return await r.json();
+    } finally { clearTimeout(timer); }
+  };
+
+  try {
+    const started = await ask("/roster/refresh");
+    if (!started.ok) throw new Error(started.error || "сервер не принял запрос");
+
+    let d = null;
+    for (let i = 0; i < 90; i++) {
+      await new Promise((r) => setTimeout(r, 4000));
+      d = await ask("/roster");
+      if (!d.ok) throw new Error(d.error || "сервер не ответил");
+      const st = d.state || {};
+      if (st.status === "run") {
+        const p = st.total ? " " + (st.done || 0) + " из " + st.total : "";
+        $("msg").textContent = "Собираю составы групп" + p + "… вкладку можно свернуть, сбор идёт на сервере.";
+        btn.textContent = "↻ Собираю…" + p;
+        continue;
+      }
+      if (st.status === "error") throw new Error(st.error || "сбор не удался");
+      if (d.groups) break;
+    }
+    if (!d || !d.groups) throw new Error("сервер не успел собрать составы — нажми ещё раз");
+
+    const groups = {};
+    d.groups.forEach((g) => { groups[g.name] = g.pupils || []; });
+    ROSTERS = { at: d.at || new Date().toISOString(), groups };
     localStorage.setItem(LS_ROSTERS, JSON.stringify(ROSTERS));
     const cnt = Object.values(groups).reduce((s, v) => s + v.length, 0);
-    $("msg").textContent = `Готово: ${Object.keys(groups).length} групп, ${cnt} учеников. Списки обновлены.`;
+    $("msg").textContent = "Готово: " + Object.keys(groups).length + " групп, " + cnt + " учеников. Списки обновлены.";
     setNote();
     render();
   } catch (e) {
-    const aborted = e && e.name === "AbortError";
+    const msg = String((e && e.message) || e);
     $("msg").className = "msg err";
-    const got = Object.keys(groups).length;
-    $("msg").textContent = (aborted
-      ? "CRM не ответила за полторы минуты. Если ты без VPN — включи его и нажми ещё раз."
-      : "Не вышло: " + ((e && e.message) || e)) +
-      (got ? ` Успели получить ${got} групп — они сохранены, можно просто нажать «Обновить» ещё раз.` : "");
-    if (got) { ROSTERS = { at: at || new Date().toISOString(), groups }; setNote(); render(); }
-    if (!aborted && /код не совпал/i.test(String(e && e.message))) {
+    $("msg").textContent = "Не вышло: " + msg + ". Сбор мог продолжиться на сервере — нажми «Обновить» ещё раз через минуту.";
+    if (/код не совпал/i.test(msg)) {
       localStorage.removeItem(LS_TOKEN);
-      $("msg").textContent += " — код доступа стёрт, при следующем нажатии введи заново.";
+      $("msg").textContent += " Код доступа стёрт, введи заново.";
     }
   } finally {
     btn.disabled = false;
