@@ -117,8 +117,8 @@ thead .test{background:var(--y)}
 <div class="hint" id="hint"></div>
 <div id="out"></div>
 
-<script src="data.js?v=125"></script>
-<script src="journal-data.js?v=125"></script>
+<script src="data.js?v=128"></script>
+<script src="journal-data.js?v=128"></script>
 <script>
 "use strict";
 
@@ -162,6 +162,67 @@ function pupilsFor(group) {
 /* --- структура курса --- */
 const MONTHS = ["","Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
 const monthOf = (week) => { const m = String(week || "").match(/\d{2}\.(\d{2})/); return m ? +m[1] : 0; };
+/* Страница журнала = блок КТП. Но у нулевых линий и Genki каждый урок — свой
+   «юнит», и лист на один урок бессмысленен: такие мелкие блоки склеиваем
+   в лист на месяц (не больше 9 колонок, месяц не смешиваем). */
+function pagesOf(program) {
+  const blocks = blocksOf(program);
+  const out = [];
+  for (const b of blocks) {
+    const m = monthOf(b.lessons[0].week);
+    const mEnd = monthOf(b.lessons[b.lessons.length - 1].week);
+    const small = b.lessons.length <= 2;
+    const last = out[out.length - 1];
+    const fits = last && last.month === m && m === mEnd &&
+                 last.lessons.length + b.lessons.length <= 9 &&
+                 (last.small || small);
+    // мелкий блок пускаем на предыдущий лист даже через границу месяца —
+    // лист ради одного урока не нужен
+    if (fits || (last && small && last.lessons.length + b.lessons.length <= 9)) {
+      last.lessons = last.lessons.concat(b.lessons);
+      last.secs.push(b.sec);
+      last.small = last.small && small;
+    } else {
+      out.push({ lessons: b.lessons.slice(), secs: [b.sec], month: m, small });
+    }
+  }
+  // блок длиннее 9 уроков (например Genki-часть GMF2 с нуля — 12 подряд)
+  // режем по месяцам, а если и месяц длинный — по 8 уроков
+  const cut = [];
+  for (const p of out) {
+    if (p.lessons.length <= 9) { cut.push(p); continue; }
+    const byMonth = [];
+    for (const l of p.lessons) {
+      const m = monthOf(l.week);
+      const last = byMonth[byMonth.length - 1];
+      if (!last || last.m !== m) byMonth.push({ m, ls: [l] }); else last.ls.push(l);
+    }
+    for (const grp of byMonth) {
+      // делим поровну, а не «8 и хвостик»: лист ради одного урока не нужен
+      const parts = Math.ceil(grp.ls.length / 9);
+      const size = Math.ceil(grp.ls.length / parts);
+      for (let i = 0; i < grp.ls.length; i += size) cut.push({ ...p, lessons: grp.ls.slice(i, i + size) });
+    }
+  }
+  return cut.map((p) => {
+    const months = [...new Set(p.lessons.map((l) => monthOf(l.week)).filter(Boolean))];
+    const monthLabel = months.map((x) => MONTHS[x]).join("–");
+    const span = "уроки " + p.lessons[0].n + "–" + p.lessons[p.lessons.length - 1].n;
+    const named = p.secs.filter(Boolean);
+    let sec;
+    if (!named.length) {
+      // в КТП у раздела нет названия (так у Genki-части GMF2 с нуля) — берём тему уроков
+      const tag = String(p.lessons[0].type || "").replace(/\s*\d+\s*$/, "").trim();
+      sec = (tag ? tag + " · " : "") + monthLabel + " · " + span;
+    } else if (named.length <= 2 && p.lessons.length <= 9 && named.join(" · ").length < 70) {
+      sec = named.join(" · ");
+    } else {
+      sec = monthLabel + " · " + span;
+    }
+    return { sec, lessons: p.lessons, monthLabel, secs: named };
+  });
+}
+
 function blocksOf(program) {
   const lessons = (window.PROGRAMS[program] || {}).lessons || [];
   const out = [];
@@ -287,7 +348,7 @@ function currentGroup() { return GROUPS[+$("group").value] || GROUPS[0]; }
 
 function fillBlocks() {
   const g = currentGroup();
-  const blocks = blocksOf(g.program);
+  const blocks = pagesOf(g.program);
   const sel = $("block");
   const keep = sel.value;
   sel.innerHTML = `<option value="all">Весь журнал (${blocks.length + 1} стр.)</option>` +
@@ -301,7 +362,7 @@ function render() {
   const prog = window.PROGRAMS[g.program];
   if (!prog) { $("out").innerHTML = ""; $("hint").textContent = "Нет программы " + g.program; return; }
   const pupils = pupilsFor(g);
-  const blocks = blocksOf(g.program);
+  const blocks = pagesOf(g.program);
   const which = $("block").value;
   let html = "";
   const dates = lessonDates(g);
@@ -391,8 +452,13 @@ async function refresh() {
 
 /* --- старт --- */
 $("group").innerHTML = GROUPS.map((g, i) => `<option value="${i}">${esc(g.name)} · ${esc(g.teacher)}</option>`).join("");
-const last = localStorage.getItem("ss_journal_last");
-if (last) { const i = GROUPS.findIndex((g) => g.name === last); if (i >= 0) $("group").value = i; }
+// ?g=GMF 2C — прямая ссылка на журнал группы; иначе последняя открытая
+const asked = new URLSearchParams(location.search).get("g");
+const want = asked || localStorage.getItem("ss_journal_last");
+if (want) {
+  const i = GROUPS.findIndex((g) => key(g.name) === key(want));
+  if (i >= 0) $("group").value = i;
+}
 fillBlocks();
 setNote();
 render();
