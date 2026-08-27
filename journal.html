@@ -117,8 +117,8 @@ thead .test{background:var(--y)}
 <div class="hint" id="hint"></div>
 <div id="out"></div>
 
-<script src="data.js?v=130"></script>
-<script src="journal-data.js?v=130"></script>
+<script src="data.js?v=131"></script>
+<script src="journal-data.js?v=131"></script>
 <script>
 "use strict";
 
@@ -414,37 +414,32 @@ async function refresh() {
 
   const ask = async (path) => {
     const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), 30000);
+    const timer = setTimeout(() => ctrl.abort(), 60000);
     try {
-      const r = await fetch(WORKER + path + "?t=" + encodeURIComponent(token), { signal: ctrl.signal });
+      const sep = path.includes("?") ? "&" : "?";
+      const r = await fetch(WORKER + path + sep + "t=" + encodeURIComponent(token), { signal: ctrl.signal });
       return await r.json();
     } finally { clearTimeout(timer); }
   };
 
   try {
-    const started = await ask("/roster/refresh");
-    if (!started.ok) throw new Error(started.error || "сервер не принял запрос");
+    // шаг = несколько групп (~15 секунд). Прогресс воркер держит у себя,
+    // поэтому обрыв не обнуляет работу: следующий заход продолжит с места
+    let r = null, step = 0;
+    do {
+      r = await ask("/roster/step" + (step === 0 ? "?restart=1" : ""));
+      if (!r.ok) throw new Error(r.error || "сервер не ответил");
+      step++;
+      const p = r.total ? " " + r.done + " из " + r.total : "";
+      $("msg").textContent = "Собираю составы групп" + p + "… BigBen отдаёт по группе за пару секунд, это займёт около полутора минут.";
+      btn.textContent = "↻ Собираю…" + p;
+    } while (r.status === "run" && step < 30);
 
-    let d = null;
-    for (let i = 0; i < 90; i++) {
-      await new Promise((r) => setTimeout(r, 4000));
-      d = await ask("/roster");
-      if (!d.ok) throw new Error(d.error || "сервер не ответил");
-      const st = d.state || {};
-      if (st.status === "run") {
-        const p = st.total ? " " + (st.done || 0) + " из " + st.total : "";
-        $("msg").textContent = "Собираю составы групп" + p + "… вкладку можно свернуть, сбор идёт на сервере.";
-        btn.textContent = "↻ Собираю…" + p;
-        continue;
-      }
-      if (st.status === "error") throw new Error(st.error || "сбор не удался");
-      if (d.groups) break;
-    }
-    if (!d || !d.groups) throw new Error("сервер не успел собрать составы — нажми ещё раз");
+    if (!r.groups) throw new Error("сбор не завершился — нажми «Обновить» ещё раз, он продолжит с места");
 
     const groups = {};
-    d.groups.forEach((g) => { groups[g.name] = g.pupils || []; });
-    ROSTERS = { at: d.at || new Date().toISOString(), groups };
+    r.groups.forEach((g) => { groups[g.name] = g.pupils || []; });
+    ROSTERS = { at: r.at || new Date().toISOString(), groups };
     localStorage.setItem(LS_ROSTERS, JSON.stringify(ROSTERS));
     const cnt = Object.values(groups).reduce((s, v) => s + v.length, 0);
     $("msg").textContent = "Готово: " + Object.keys(groups).length + " групп, " + cnt + " учеников. Списки обновлены.";
@@ -453,7 +448,7 @@ async function refresh() {
   } catch (e) {
     const msg = String((e && e.message) || e);
     $("msg").className = "msg err";
-    $("msg").textContent = "Не вышло: " + msg + ". Сбор мог продолжиться на сервере — нажми «Обновить» ещё раз через минуту.";
+    $("msg").textContent = "Не вышло: " + msg + ". Нажми «Обновить» ещё раз — сбор продолжится с того места, где остановился.";
     if (/код не совпал/i.test(msg)) {
       localStorage.removeItem(LS_TOKEN);
       $("msg").textContent += " Код доступа стёрт, введи заново.";
