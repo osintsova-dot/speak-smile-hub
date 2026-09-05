@@ -309,7 +309,7 @@ window.JOURNAL_GROUPS = [
   "name": "Get Involved 1B",
   "program": "GIA1zero",
   "room": "Discovery",
-  "teacher": "Катя",
+  "teacher": "Екатерина",
   "days": [
    {
     "d": 3,
