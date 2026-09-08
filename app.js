@@ -3,35 +3,36 @@
 // Дни недели: 1=Пн 2=Вт 3=Ср 4=Чт 5=Пт 6=Сб 0=Вс
 // Живой источник расписания (Google-таблица, gviz CSV). Если недоступен — берётся встроенное GROUPS_FALLBACK.
 const SCHEDULE_URL = "https://docs.google.com/spreadsheets/d/1_WRow7pefA4iF7SOQkkWIxjGU69TcpMjQv_wMS0Rb3A/gviz/tq?tqx=out:csv";
+// Синхронизировано с CRM 08.09.2026. Genki 1A/1B и GMF 2D стартуют с октября (since:"01.10").
 const GROUPS_FALLBACK = [
   // Пн/Пт
   {name:"GMF 4A",  program:"GMF4",    room:"Discovery", teacher:"Ксения",    days:[{d:1,t:"15:00"},{d:5,t:"15:00"}]},
-  {name:"GMF 2B",  program:"GMF2",    room:"Discovery", teacher:"Ксения",    days:[{d:1,t:"16:05"},{d:5,t:"16:05"}]},
-  {name:"Prepare 4A", program:"Prepare4", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"17:10"},{d:5,t:"17:10"}]},
-  {name:"Prepare 5A", program:"Prepare5", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"18:45"},{d:5,t:"18:45"}]},
   {name:"GMF 4B",  program:"GMF4",    room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"15:00"},{d:5,t:"15:00"}]},
   {name:"GMF 3B",  program:"GMF3",    room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"16:05"},{d:5,t:"16:05"}]},
+  {name:"GMF 2B",  program:"GMF2",    room:"Discovery", teacher:"Ксения",    days:[{d:1,t:"16:05"},{d:5,t:"16:05"}]},
   {name:"Get Involved 2B", program:"GIA2", room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"17:10"},{d:5,t:"17:10"}]},
-  {name:"Gateway B2", program:"Gateway", room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"18:45"},{d:5,t:"18:45"}]},
+  {name:"Prepare 4A", program:"Prepare4", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"17:10"},{d:5,t:"17:10"}]},
+  {name:"Prepare 5A", program:"Prepare5", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"18:45"},{d:5,t:"18:45"}]},
+  {name:"Gateway B2", program:"Gateway", room:"Innovation", teacher:"Екатерина", days:[{d:1,t:"18:45"},{d:5,t:"18:45"}]},
   // Вт/Чт
-  {name:"GMF 3A",  program:"GMF3",    room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"15:00"},{d:4,t:"15:00"}]},
-  {name:"GMF 2C",  program:"GMF2zero",room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"16:05"},{d:4,t:"16:05"}]},
-  {name:"GMF 3D",  program:"GMF3",    room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"17:10"},{d:4,t:"17:10"}]},
-  {name:"Mimi 3",  program:"MW3",     room:"Discovery", teacher:"Оксана",    days:[{d:2,t:"18:20"},{d:4,t:"18:20"}]},
-  {name:"GMF 1A",  program:"GMF1",    room:"Discovery", teacher:"Оксана",    days:[{d:2,t:"19:30"},{d:4,t:"19:30"}]},
   {name:"Get Involved 1A", program:"GIA1", room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"15:00"},{d:4,t:"15:00"}]},
   {name:"Prepare 3A", program:"Prepare3", room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"16:35"},{d:4,t:"16:35"}]},
+  {name:"GMF 3D",  program:"GMF3",    room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"17:10"},{d:4,t:"17:10"}]},
   {name:"GMF 1B",  program:"GMF1zero",room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"18:10"},{d:4,t:"18:10"}]},
+  {name:"Mimi 3",  program:"MW3",     room:"Discovery", teacher:"Оксана",    days:[{d:2,t:"18:20"},{d:4,t:"18:20"}]},
+  {name:"GMF 3A",  program:"GMF3",    room:"Innovation",teacher:"Ксения",    days:[{d:2,t:"18:40"},{d:4,t:"18:40"}]},
   {name:"GMF 2A",  program:"GMF2",    room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"19:15"},{d:4,t:"19:15"}]},
-  // Китайский временно отключён (нет КТП и не нужен на этом этапе)
+  {name:"GMF 1A",  program:"GMF1",    room:"Discovery", teacher:"Оксана",    days:[{d:2,t:"19:30"},{d:4,t:"19:30"}]},
   // Ср/Сб
-  {name:"Genki 1A", program:"Genki",  room:"Discovery", teacher:"Оксана",    days:[{d:3,t:"18:20"},{d:6,t:"12:10"}]},
-  {name:"Genki 1B", program:"Genki",  room:"Discovery", teacher:"Оксана",    days:[{d:3,t:"19:30"},{d:6,t:"13:20"}]},
-  {name:"Get Involved 1B", program:"GIA1zero", room:"Discovery", teacher:"Екатерина", days:[{d:3,t:"16:40"},{d:6,t:"14:30"}]},
-  {name:"GMF 3C",  program:"GMF3",    room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"15:00"},{d:6,t:"12:10"}]},
-  {name:"GMF 2D",  program:"GMF2zero",room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"16:05"},{d:6,t:"13:20"}]},
-  {name:"Get Involved 2A", program:"GIA2", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"17:10"},{d:6,t:"14:30"}]},
-  {name:"GMF 1C",  program:"GMF1zero",room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"18:50"},{d:6,t:"11:00"}]},
+  {name:"GMF 3C",  program:"GMF3",    room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"15:00"},{d:6,t:"12:40"}]},
+  {name:"GMF 2C",  program:"GMF2zero",room:"Discovery", teacher:"Ксения",    days:[{d:3,t:"16:05"},{d:6,t:"13:50"}]},
+  {name:"Get Involved 2A", program:"GIA2", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"17:10"},{d:6,t:"11:00"}]},
+  {name:"Get Involved 1B", program:"GIA1", room:"Innovation", teacher:"Екатерина", days:[{d:3,t:"18:30"},{d:6,t:"14:30"}]},
+  {name:"GMF 1C",  program:"GMF1zero",room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"18:50"},{d:6,t:"15:00"}]},
+  // с октября
+  {name:"Genki 1A", program:"Genki",  room:"Discovery", teacher:"Оксана", since:"01.10", days:[{d:3,t:"18:20"},{d:6,t:"12:10"}]},
+  {name:"Genki 1B", program:"Genki",  room:"Discovery", teacher:"Оксана", since:"01.10", days:[{d:3,t:"19:30"},{d:6,t:"13:20"}]},
+  {name:"GMF 2D",  program:"GMF2zero",room:"Discovery", teacher:"Ксения", since:"01.10", days:[{d:3,t:"16:05"},{d:6,t:"13:20"}]},
 ];
 let GROUPS = GROUPS_FALLBACK;
 
@@ -69,6 +70,8 @@ function startDate(){
 }
 function inHoliday(d){ return d >= HOL_A && d <= HOL_B; }
 function mkDate(dm){ const [d,m]=dm.split(".").map(Number); const y=(m>=9)?2026:2027; return new Date(y,m-1,d); }
+// группа показывается только с даты старта (поле since, «ДД.ММ»); без него — весь год
+function activeOn(g,date){ return !g.since || date >= mkDate(g.since); }
 function weekRange(w){ const [a,b]=w.split(/[–-]/); const s=mkDate(a),e=mkDate(b); e.setHours(23,59,59); return {start:s,end:e}; }
 function iso(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
 function fmtDate(d){ return WD_FULL[d.getDay()]+" · "+d.getDate()+" "+MONTHS_GEN[d.getMonth()]; }
@@ -202,7 +205,7 @@ function renderWeek(root, headHtml, matchF){
   for(let i=0;i<7;i++){
     const d=new Date(mon); d.setDate(mon.getDate()+i);
     if (d < SCHOOL_START || d > YEAR_END || inHoliday(d)) continue; // вне года/каникулы — не показываем
-    const rows=GROUPS.map(g=>{const s=g.days.find(x=>x.d===d.getDay());return s?{g,t:s.t}:null}).filter(Boolean)
+    const rows=GROUPS.map(g=>{const s=g.days.find(x=>x.d===d.getDay());return s&&activeOn(g,d)?{g,t:s.t}:null}).filter(Boolean)
       .filter(x=>matchF(x.g)).sort((a,b)=>a.t.localeCompare(b.t));
     if(!rows.length) continue;
     any=true;
@@ -418,7 +421,7 @@ function render(){
   const todays = GROUPS
     .map(g=>{ const slot=g.days.find(x=>x.d===wd); return slot?{g,t:slot.t}:null; })
     .filter(Boolean)
-    .filter(x=>matchF(x.g))
+    .filter(x=>matchF(x.g) && activeOn(x.g,current))
     .sort((a,b)=>a.t.localeCompare(b.t));
 
   if (!todays.length){
@@ -545,11 +548,15 @@ function parseSchedule(csv){
   for(const ln of lines){
     const c=ln.split(",").map(s=>s.trim().replace(/^"|"$/g,""));
     if(c.length<6 || !c[0]) continue;
-    const [name,program,room,teacher,d1,t1,d2,t2]=c;
+    const [name,program,room,teacher,d1,t1,d2,t2,start]=c;
     const days=[];
     if(DAYNUM[d1]!==undefined && normTime(t1)) days.push({d:DAYNUM[d1], t:normTime(t1)});
     if(DAYNUM[d2]!==undefined && normTime(t2)) days.push({d:DAYNUM[d2], t:normTime(t2)});
-    if(name && days.length) gs.push({name,program,room:room||"",teacher:teacher||"",days});
+    if(name && days.length){
+      const g={name,program,room:room||"",teacher:teacher||"",days};
+      if(start && /^\d{1,2}\.\d{1,2}$/.test(start)) g.since=start; // «Старт» ДД.ММ — группа с этой даты
+      gs.push(g);
+    }
   }
   return gs;
 }

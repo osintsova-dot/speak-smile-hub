@@ -18,6 +18,38 @@ window.JOURNAL_GROUPS = [
   ]
  },
  {
+  "name": "GMF 4B",
+  "program": "GMF4",
+  "room": "Adventure",
+  "teacher": "Екатерина",
+  "days": [
+   {
+    "d": 1,
+    "t": "15:00"
+   },
+   {
+    "d": 5,
+    "t": "15:00"
+   }
+  ]
+ },
+ {
+  "name": "GMF 3B",
+  "program": "GMF3",
+  "room": "Adventure",
+  "teacher": "Екатерина",
+  "days": [
+   {
+    "d": 1,
+    "t": "16:05"
+   },
+   {
+    "d": 5,
+    "t": "16:05"
+   }
+  ]
+ },
+ {
   "name": "GMF 2B",
   "program": "GMF2",
   "room": "Discovery",
@@ -30,6 +62,22 @@ window.JOURNAL_GROUPS = [
    {
     "d": 5,
     "t": "16:05"
+   }
+  ]
+ },
+ {
+  "name": "Get Involved 2B",
+  "program": "GIA2",
+  "room": "Adventure",
+  "teacher": "Екатерина",
+  "days": [
+   {
+    "d": 1,
+    "t": "17:10"
+   },
+   {
+    "d": 5,
+    "t": "17:10"
    }
   ]
  },
@@ -66,57 +114,9 @@ window.JOURNAL_GROUPS = [
   ]
  },
  {
-  "name": "GMF 4B",
-  "program": "GMF4",
-  "room": "Adventure",
-  "teacher": "Екатерина",
-  "days": [
-   {
-    "d": 1,
-    "t": "15:00"
-   },
-   {
-    "d": 5,
-    "t": "15:00"
-   }
-  ]
- },
- {
-  "name": "GMF 3B",
-  "program": "GMF3",
-  "room": "Adventure",
-  "teacher": "Екатерина",
-  "days": [
-   {
-    "d": 1,
-    "t": "16:05"
-   },
-   {
-    "d": 5,
-    "t": "16:05"
-   }
-  ]
- },
- {
-  "name": "Get Involved 2B",
-  "program": "GIA2",
-  "room": "Adventure",
-  "teacher": "Екатерина",
-  "days": [
-   {
-    "d": 1,
-    "t": "17:10"
-   },
-   {
-    "d": 5,
-    "t": "17:10"
-   }
-  ]
- },
- {
   "name": "Gateway B2",
   "program": "Gateway",
-  "room": "Adventure",
+  "room": "Innovation",
   "teacher": "Екатерина",
   "days": [
    {
@@ -126,86 +126,6 @@ window.JOURNAL_GROUPS = [
    {
     "d": 5,
     "t": "18:45"
-   }
-  ]
- },
- {
-  "name": "GMF 3A",
-  "program": "GMF3",
-  "room": "Discovery",
-  "teacher": "Ксения",
-  "days": [
-   {
-    "d": 2,
-    "t": "15:00"
-   },
-   {
-    "d": 4,
-    "t": "15:00"
-   }
-  ]
- },
- {
-  "name": "GMF 2C",
-  "program": "GMF2zero",
-  "room": "Discovery",
-  "teacher": "Ксения",
-  "days": [
-   {
-    "d": 2,
-    "t": "16:05"
-   },
-   {
-    "d": 4,
-    "t": "16:05"
-   }
-  ]
- },
- {
-  "name": "GMF 3D",
-  "program": "GMF3",
-  "room": "Discovery",
-  "teacher": "Ксения",
-  "days": [
-   {
-    "d": 2,
-    "t": "17:10"
-   },
-   {
-    "d": 4,
-    "t": "17:10"
-   }
-  ]
- },
- {
-  "name": "Mimi 3",
-  "program": "MW3",
-  "room": "Discovery",
-  "teacher": "Оксана",
-  "days": [
-   {
-    "d": 2,
-    "t": "18:20"
-   },
-   {
-    "d": 4,
-    "t": "18:20"
-   }
-  ]
- },
- {
-  "name": "GMF 1A",
-  "program": "GMF1",
-  "room": "Discovery",
-  "teacher": "Оксана",
-  "days": [
-   {
-    "d": 2,
-    "t": "19:30"
-   },
-   {
-    "d": 4,
-    "t": "19:30"
    }
   ]
  },
@@ -242,6 +162,22 @@ window.JOURNAL_GROUPS = [
   ]
  },
  {
+  "name": "GMF 3D",
+  "program": "GMF3",
+  "room": "Discovery",
+  "teacher": "Ксения",
+  "days": [
+   {
+    "d": 2,
+    "t": "17:10"
+   },
+   {
+    "d": 4,
+    "t": "17:10"
+   }
+  ]
+ },
+ {
   "name": "GMF 1B",
   "program": "GMF1zero",
   "room": "Adventure",
@@ -254,6 +190,38 @@ window.JOURNAL_GROUPS = [
    {
     "d": 4,
     "t": "18:10"
+   }
+  ]
+ },
+ {
+  "name": "Mimi 3",
+  "program": "MW3",
+  "room": "Discovery",
+  "teacher": "Оксана",
+  "days": [
+   {
+    "d": 2,
+    "t": "18:20"
+   },
+   {
+    "d": 4,
+    "t": "18:20"
+   }
+  ]
+ },
+ {
+  "name": "GMF 3A",
+  "program": "GMF3",
+  "room": "Innovation",
+  "teacher": "Ксения",
+  "days": [
+   {
+    "d": 2,
+    "t": "18:40"
+   },
+   {
+    "d": 4,
+    "t": "18:40"
    }
   ]
  },
@@ -274,50 +242,18 @@ window.JOURNAL_GROUPS = [
   ]
  },
  {
-  "name": "Genki 1A",
-  "program": "Genki",
+  "name": "GMF 1A",
+  "program": "GMF1",
   "room": "Discovery",
   "teacher": "Оксана",
   "days": [
    {
-    "d": 3,
-    "t": "18:20"
-   },
-   {
-    "d": 6,
-    "t": "12:10"
-   }
-  ]
- },
- {
-  "name": "Genki 1B",
-  "program": "Genki",
-  "room": "Discovery",
-  "teacher": "Оксана",
-  "days": [
-   {
-    "d": 3,
+    "d": 2,
     "t": "19:30"
    },
    {
-    "d": 6,
-    "t": "13:20"
-   }
-  ]
- },
- {
-  "name": "Get Involved 1B",
-  "program": "GIA1zero",
-  "room": "Discovery",
-  "teacher": "Екатерина",
-  "days": [
-   {
-    "d": 3,
-    "t": "16:40"
-   },
-   {
-    "d": 6,
-    "t": "14:30"
+    "d": 4,
+    "t": "19:30"
    }
   ]
  },
@@ -333,14 +269,14 @@ window.JOURNAL_GROUPS = [
    },
    {
     "d": 6,
-    "t": "12:10"
+    "t": "12:40"
    }
   ]
  },
  {
-  "name": "GMF 2D",
+  "name": "GMF 2C",
   "program": "GMF2zero",
-  "room": "Adventure",
+  "room": "Discovery",
   "teacher": "Ксения",
   "days": [
    {
@@ -349,7 +285,7 @@ window.JOURNAL_GROUPS = [
    },
    {
     "d": 6,
-    "t": "13:20"
+    "t": "13:50"
    }
   ]
  },
@@ -362,6 +298,22 @@ window.JOURNAL_GROUPS = [
    {
     "d": 3,
     "t": "17:10"
+   },
+   {
+    "d": 6,
+    "t": "11:00"
+   }
+  ]
+ },
+ {
+  "name": "Get Involved 1B",
+  "program": "GIA1",
+  "room": "Innovation",
+  "teacher": "Екатерина",
+  "days": [
+   {
+    "d": 3,
+    "t": "18:30"
    },
    {
     "d": 6,
@@ -381,13 +333,64 @@ window.JOURNAL_GROUPS = [
    },
    {
     "d": 6,
-    "t": "11:00"
+    "t": "15:00"
+   }
+  ]
+ },
+ {
+  "name": "Genki 1A",
+  "program": "Genki",
+  "room": "Discovery",
+  "teacher": "Оксана",
+  "since": "01.10",
+  "days": [
+   {
+    "d": 3,
+    "t": "18:20"
+   },
+   {
+    "d": 6,
+    "t": "12:10"
+   }
+  ]
+ },
+ {
+  "name": "Genki 1B",
+  "program": "Genki",
+  "room": "Discovery",
+  "teacher": "Оксана",
+  "since": "01.10",
+  "days": [
+   {
+    "d": 3,
+    "t": "19:30"
+   },
+   {
+    "d": 6,
+    "t": "13:20"
+   }
+  ]
+ },
+ {
+  "name": "GMF 2D",
+  "program": "GMF2zero",
+  "room": "Discovery",
+  "teacher": "Ксения",
+  "since": "01.10",
+  "days": [
+   {
+    "d": 3,
+    "t": "16:05"
+   },
+   {
+    "d": 6,
+    "t": "13:20"
    }
   ]
  }
 ];
 window.JOURNAL_ROSTERS = {
- "at": "2026-09-05T06:03:28.507Z",
+ "at": "2026-09-08T02:57:00.338Z",
  "groups": {
   "Give me five 3B": [
    "Воробьев Максим",
