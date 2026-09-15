@@ -69,7 +69,7 @@ window.JOURNAL_GROUPS = [
   "name": "Get Involved 2B",
   "program": "GIA2",
   "room": "Adventure",
-  "teacher": "Екатерина",
+  "teacher": "Ксения",
   "days": [
    {
     "d": 1,
@@ -293,7 +293,7 @@ window.JOURNAL_GROUPS = [
   "name": "Get Involved 2A",
   "program": "GIA2",
   "room": "Adventure",
-  "teacher": "Ксения",
+  "teacher": "Екатерина",
   "days": [
    {
     "d": 3,
