@@ -712,6 +712,7 @@ window.PLANS = {
   "GatewayB2-U1-P4": 1,
   "GatewayB2-U1-P5": 1,
   "GatewayB2-U1-P6": 1,
+  "GatewayB2-U1-P7": 1,
   "GatewayB2-U10-P1": 1,
   "GatewayB2-U10-P2": 1,
   "GatewayB2-U10-P3": 1,

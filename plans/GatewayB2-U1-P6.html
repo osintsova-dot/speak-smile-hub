@@ -1,6 +1,5 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GatewayB2-U1-P6 · Unit 1 «Make the grade» · Lesson 6 (Lesson Plan &amp; Staging)</title>
+<title>Gateway B2 · Unit 1 · Lesson 6 — Review (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
     --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -18,7 +15,7 @@
   .hd .t{ font-size:1.32rem; font-weight:800; } .hd .s{ opacity:.92; font-size:.9rem; margin-top:2px; }
   .hd .meta{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }
   .chip{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:4px 10px; font-size:.8rem; font-weight:600; }
-  .chip.focus{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
+  .chip.new{ background:var(--honey); color:#5a2ea6; border-color:transparent; }
 
   .eyebrow{ font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--p); display:flex; align-items:center; gap:8px; margin:22px 0 8px; }
   .eyebrow::before{ content:""; width:20px; height:3px; border-radius:3px; background:var(--honey); }
@@ -37,174 +34,222 @@
   .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
-  /* design card: why this lesson looks like this */
-  .examcard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
-    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
-  .examcard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
-    letter-spacing:.08em; margin-bottom:8px; }
-  .examcard .xr{ display:flex; gap:10px; padding:5px 0; border-bottom:1px dashed var(--line); font-size:.92rem; }
-  .examcard .xr:last-of-type{ border-bottom:0; }
-  .examcard .xk{ flex:0 0 168px; font-weight:800; font-size:.72rem; text-transform:uppercase;
-    letter-spacing:.04em; color:var(--muted); }
-  .examcard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
-    padding:10px 13px; font-size:.95rem; margin-top:10px; }
-  .examcard .pitch b{ color:var(--p-ink); }
-  .examcard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
-
-  /* exam note: teacher only, bottom of the plan */
-  .ogecard{ background:var(--card); border:1px dashed var(--p); border-left:4px solid var(--honey);
-    border-radius:12px; padding:12px 16px; margin:10px 0 0; font-size:.9rem; }
-  .ogecard .mh{ font-weight:800; color:var(--p-ink); font-size:.74rem; text-transform:uppercase;
-    letter-spacing:.07em; margin-bottom:7px; }
-  .ogecard p{ margin:0 0 6px; } .ogecard p:last-child{ margin-bottom:0; }
-  .ogecard a{ color:var(--p-ink); font-weight:700; word-break:break-all; }
-  .ogecard .quiet{ color:var(--muted); font-size:.84rem; }
-
-  /* optional homework line (exam trainer) */
-  p.opt{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px;
-    padding:7px 10px; margin-top:7px; font-size:.9rem; }
-  p.opt a{ color:var(--p-ink); font-weight:700; word-break:break-all; }
-
-  /* lesson at a glance */
-  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
-  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
-  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
-  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
-  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
-  table.glance tr.bridge td{ background:var(--honey-soft); }
-  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
-
-  /* staging */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
-  .game{ color:var(--p); font-weight:800; }
-  .kagan{ display:inline-block; background:var(--p-soft); color:var(--p-ink); border:1px solid var(--p);
-    border-radius:6px; padding:0 6px; font-weight:800; font-size:.86em; }
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
-  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
-  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
-  /* three sub-blocks of each stage */
-  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
-  .tsteps{ margin:7px 0; }
-  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
-  .tsteps li{ margin:3px 0; font-size:.92rem; }
-  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
-  .showb .sbh{ color:var(--zone); }
-  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
-  .kidsb .sbh{ color:var(--honey-ink); }
+  .slot{ color:var(--muted); font-weight:700; }
   .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
   table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
   table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
   table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
   td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
-  td.stage{ width:172px; } td.stage .nm{ font-weight:800; color:var(--p); }
-  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
-.nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-.nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-.nb ul{ margin:0; padding-left:17px; }
-.nb li{ margin:3px 0; }
-.nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  td.stage .why{ font-size:.76rem; color:var(--muted); margin-top:5px; border-top:1px dashed var(--line); padding-top:5px; }
-  td.stage .why b{ color:var(--p-ink); font-size:.9em; text-transform:uppercase; letter-spacing:.04em; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
   td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
-  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
   .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
   tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } .examcard .xr{ flex-direction:column; gap:2px; } .examcard .xk{ flex:none; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
-    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.focus{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,table.glance,.do,.examcard{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
-    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+    .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">Gateway to the World B2 · Unit 1 «Make the grade» · Lesson 6 — Revision: the whole unit in one room, and the paper explained</div>
-    <div class="s">Teenagers 16–17 (grades 10–11, B2) · 90 minutes · <b>a language course</b>: every lesson names one language aim. The link to the Russian state exam (EGE) sits in a note at the foot of the plan, for the teacher only; the trainer link in the homework is optional</div>
-    <div class="meta"><span class='chip'>Lesson 9 of the syllabus · 28.09–04.10 · September</span><span class='chip focus'>✅ Unit revision · Check it, a timed practice run, the paper explained</span><span class='chip'>Unit 1 · SB p.16–17</span><span class='chip'>Gateway B2 · unit 1 · single plan line</span></div>
+    <div class="t">Gateway to the World B2 · Unit 1 “Make the grade” · Lesson 6 — Review (Check it, pp. 16–17)</div>
+    <div class="s">B2 teens (~15–16, EGE track) · 90 min · Consolidation &amp; retrieval before the unit test · CELTA staging</div>
+    <div class="meta"><span class="chip">Week 28.09–04.10 · Lesson 9 of the year</span><span class="chip new">✦ REVIEW</span><span class="chip">~10–12 students · pairs / teams of 3–4</span><span class="chip">Next lesson = Unit 1 Test (Standard / Higher)</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gateway/lex/u1voc1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📚 Лексика 1</a><a href="https://speakandsmile.ru/gateway/lex/u1voc2.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📚 Лексика 2</a><a href="https://speakandsmile.ru/gateway/lex/u1gram.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">✏️ Грамматика</a><a href="https://speakandsmile.ru/gateway/lex/u1read.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📖 Чтение</a><a href="https://speakandsmile.ru/gateway/lex/u1speak.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🗣 Речевые опоры</a><a href="https://drive.google.com/drive/folders/1oc1dpbf3bwmy3RtTUwxskbdx1EFi-Wyo" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
-  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
-  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–5′</td><td class='gname'>Opening · check-in + rewind</td><td>greeting, error logs collected, and one mistake said aloud before the revision starts</td></tr><tr><td class='gmin'>5–10′</td><td class='gname'>Lesson frame · today collects, tomorrow measures</td><td>name what this lesson is, and what it is not</td></tr><tr><td class='gmin'>10–22′</td><td class='gname'>Check it · the three presents and the two perfects</td><td>SB p.16: the reference page used as questions, not as reading</td></tr><tr><td class='gmin'>22–32′</td><td class='gname'>Check it · gerunds and infinitives</td><td>SB p.16 table + a fast transformation drill</td></tr><tr><td class='gmin'>32–40′</td><td class='gname'>Vocabulary Showdown</td><td>the twenty-nine words of the unit, everybody writing at once</td></tr><tr class='bridge'><td class='gmin'>40–43′</td><td class='gname'>Move break · shake it out</td><td>three minutes standing between two long sitting stages</td></tr><tr><td class='gmin'>43–51′</td><td class='gname'>Doubt clinic · their questions, not yours</td><td>the last honest questions before the paper — asked by the students</td></tr><tr><td class='gmin'>51–70′</td><td class='gname'>🎯 Test yourself · against the clock, for practice</td><td>SB p.17 — the book's own Test yourself page, done to the clock — done to time, but the mark belongs to nobody</td></tr><tr><td class='gmin'>70–79′</td><td class='gname'>Self-check and the error map</td><td>keys go to the students; every wrong answer becomes a line to work on</td></tr><tr><td class='gmin'>79–86′</td><td class='gname'>The test explained · format, level, camera</td><td>exactly what happens next lesson, so nobody is surprised by the paper</td></tr><tr><td class='gmin'>86–90′</td><td class='gname'>Wrap-up + homework</td><td>self-check against today's aim, then the homework said once and written on the board</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>your own three weakest sections + the words you spell wrongly; decide Standard or Higher</td></tr></tbody></table></div>
 
-  <div class='examcard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='xr'><div class='xk'>Language aim</div><div><b>Put the whole of Unit 1 in one place</b> — the grammar reference in their own words, the word list in their mouths — and then <b>find out what is still missing</b> while there is still a night to fix it.</div></div><div class='xr'><div class='xk'>What is genuinely hard</div><div>Not the content: the transfer. A student who can do each exercise when it is labelled falls apart when six exercises sit on one page with no labels. The second difficulty is honesty — a practice paper only works if nobody hides the score from themselves.</div></div><div class='xr'><div class='xk'>Typical error to expect</div><div><b>«I am studying English for five years»</b> — Russian uses the present for an action that started in the past and is still going on; English uses the present perfect continuous: <i>I have been studying English for five years</i>. This is the single most common B2 error in Russian written work.<br><b>«make homework», «make a mistake in the exam» for «do badly»</b> — Russian has one verb (делать) where English has two, and the split is not logical: you DO a course, an assignment, an exam, your best; you MAKE a decision, a mistake, progress, an effort. It is learned as pairs, not as a rule.<br><b>«I suggest to go», «I managed finishing», «I avoid to eat»</b> — the pattern belongs to the verb, not to the meaning, and Russian gives no clue at all: suggest + -ing, manage + to, avoid + -ing, decide + to.</div></div><div class='xr'><div class='xk'>Why the lesson is built this way</div><div>The first half is revision that looks nothing like a test: the Check it page is answered, not read, and the vocabulary comes back through games where everybody writes at once. Then the room turns quiet for a timed run of the book's own Test yourself — <b>for practice, with the marks belonging to nobody</b> — and the students mark their own papers and write the reason for every error. The lesson ends on the real test: seven sections, a hundred points, the camera and the choice of version, all named a day early so that the paper measures the language and not the surprise.</div></div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Everything from this unit, on your desk, in one lesson — and one run against the clock that costs you nothing. Tomorrow it counts; today it only tells you where to look.”</b></div></div>
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will have <b>consolidated and self-tested the whole of Unit 1</b> — <i>school life / higher education</i> lexis, <i>do &amp; make</i> collocations, and the three grammar areas (present habits · present perfect simple vs continuous · gerunds &amp; infinitives) — through retrieval and interleaved practice, and will know exactly what to revise for the test.</li>
+      <li><span class="lb">Subsidiary.</span> Systematise the Grammar reference “in their own words”; interweave lexis + grammar in mixed practice; rehearse the exam-format tasks (word transformation, gap-fill, definitions, informal email); diagnose and fix the two costliest unit errors.</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; make every retrieval task low-stakes; ensure every student writes/answers on every item (Showdown); give clear ICQs and a self-check band after each test-yourself block.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
+      <ul class="a">
+        <li>retrieve Unit 1 lexis and <i>do/make</i> collocations from memory;</li>
+        <li>state and apply the three grammar rules and their signal words;</li>
+        <li>complete the p.17 “Test yourself” (40 pts) and self-mark it;</li>
+        <li>plan an informal email and name the exam-day test format.</li>
+      </ul>
+    </div>
+  </div>
 
-  <div class="eyebrow">Procedure — full staging</div>
-  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='kagan'>Kagan</span> = a Kagan structure — name it out loud to the class</span><span>📺 = screen or audio — every such stage carries a “Backup:” line for the board</span><span>🎯 = the productive outcome: the student speaks or writes for themselves</span></div>
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language (reactivated — whole unit)</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis · school life</div><div><span class="w">abroad</span><span class="w">continuous assessment</span><span class="w">coursework</span><span class="w">grade/mark</span><span class="w">assignment</span><span class="w">subject</span><span class="w">term</span><span class="w">timetable</span><span class="w">break</span><span class="w">notes</span></div></div>
+      <div class="r"><div class="k">Lexis · higher ed.</div><div><span class="w">campus</span><span class="w">degree</span><span class="w">lecture / lecturer</span><span class="w">lecture hall</span><span class="w">tutorial</span><span class="w">tutor</span><span class="w">undergraduate</span><span class="w">postgraduate</span><span class="w">scholarship</span><span class="w">student loan / finance</span><span class="w">induction week</span><span class="w">extra-curricular</span></div></div>
+      <div class="r"><div class="k">Collocations</div><div><b>do</b> an assignment · coursework · your best · a favour &nbsp;|&nbsp; <b>make</b> a decision · a mistake · progress · an effort · a plan</div></div>
+      <div class="r"><div class="k">Grammar</div><div>① present habits (present simple / continuous + <i>always, constantly</i> / <i>will</i>) · ② present perfect <b>simple vs continuous</b> (result vs process; <i>for/since</i>) · ③ <b>gerunds &amp; infinitives</b> (after prepositions, verbs of liking, <i>go</i>+activity / to explain purpose, after adjectives, <i>too/enough</i>).</div></div>
+      <div class="r"><div class="k">Exam link</div><div>Use of English (word transformation, gap-fill) · informal email (120–150 w.) · vocab in definitions — mirrors <b>EGE</b> lexico-grammar + personal letter.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq"><b>“I’ve read that book” vs “I’ve been reading that book”</b> — which one is finished? (→ the first: result). Which stresses the process/duration? (→ the second).</div>
+      <div class="ccq"><b>“I enjoy <u>studying</u>” vs “I want <u>to study</u>”</b> — after <i>enjoy</i>: gerund or infinitive? (→ gerund). After <i>want</i>? (→ infinitive).</div>
+      <div class="ccq" style="margin-bottom:12px"><b>“…… a decision”</b> — do or make? (→ make). Why? (→ create/produce something new → <i>make</i>).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> all Unit 1 language has been met across Lessons 1–5; students can self-mark against a key; they are motivated by the imminent test and can choose Standard / Higher. <b>Teams:</b> 3–4 per team; pairs for Quiz-Quiz-Trade &amp; RallyCoach.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Present perfect <i>simple</i> vs <i>continuous</i> overused/confused</td><td>Anchor on result vs process with the two CCQ sentences; drill <i>for/since</i> as a signal-word pair.</td></tr>
+        <tr><td><i>do</i>/<i>make</i> collocations guessed randomly</td><td>Group by logic (make = create a new thing/result) + a fast Showdown so every error surfaces at once.</td></tr>
+        <tr><td>Gerund/infinitive rule known but not applied</td><td>Give the “decision path”: preposition → -ing; after <i>want/decide</i> → to; verbs of liking → -ing.</td></tr>
+        <tr><td>Review feels passive (“we already did this”)</td><td>Make it retrieval, not re-reading: books closed on the brain-dump; competitive Showdown; timed self-test.</td></tr>
+        <tr><td>Test anxiety about format</td><td>Walk through the exact test parts &amp; points; Standard/Higher choice; short Q&amp;A slot.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Pens down, eyes up.”</b> — end of a timed block → attention to front.</div>
+        <div class="sigc"><b>Countdown</b> — “Two minutes… 30 seconds… time.” for every timed task.</div>
+        <div class="sigc"><b>Showdown call</b> — <span class="call">“Show me!”</span> → all whiteboards up together.</div>
+        <div class="sigc"><b>Traffic-light self-check</b> — after self-marking: 🟢 got it / 🟡 shaky / 🔴 revise tonight.</div>
+        <div class="sigc"><b>“Stand up, pair up.”</b> — moves the class into the mingle without fuss.</div>
+        <div class="sigc"><b>Noise dial</b> — hand raised/lowered = quieter/louder during pair work.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game / Kagan structure</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+    <span>📓 = interactive-notebook insert</span>
+  </div>
 
   <div class="scroll">
   <table class="proc">
-    <thead><tr><th>Time</th><th>Stage · where · why</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
     <tbody>
-<tr><td class='min'>0–5′</td><td class='stage'><div class='nm'>Opening · check-in + rewind</div><div class='zone'>door → desks</div><div class='why'><b>Why:</b> Every student says one English sentence before the lesson proper starts, and the rewind pulls the previous lesson's language back into working memory — today's input lands on something.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> greeting, error logs collected, and one mistake said aloud before the revision starts</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><b>2 minutes — welcome check-in.</b> Meet them at the door, one question each, one full sentence back: <span class='en'>One sentence — what is the best thing that has happened this week?</span> Any content counts as long as it is in English.</li><li><b>2 minutes — the error logs come in.</b> Collect them by name at the door and look at each for five seconds. That is enough to know who has been working.</li><li><b>1 minute — one line each, aloud.</b> <span class='kagan'>Think-Pair-Share</span>: read your partner ONE line from your log — the mistake and the correction. No comment, no discussion.</li><li><b>Bridge into the lesson (30 seconds):</b> <span class='en'>Page sixteen. Everything from three weeks is on this page — and in forty minutes it is on page seventeen, with your name on it.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> nothing on screen — paper only, and the paper is theirs. <b>Backup:</b> if a student has no log, they write one line now, from memory.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> hand over the error log and read one line of it to a partner</div></td><td class='mat'>the students' error logs</td></tr><tr><td class='min'>5–10′</td><td class='stage'><div class='nm'>Lesson frame · today collects, tomorrow measures</div><div class='zone'>board</div><div class='why'><b>Why:</b> Students revise differently when they know the revision is diagnostic and not assessed. Saying it out loud buys the honesty the next eighty minutes depend on.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> name what this lesson is, and what it is not</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Say it in two sentences and write the second on the board: <span class='en'>Today we put the whole unit in one place and find the holes. Tomorrow the paper measures it — a hundred points, all five skills, the whole lesson.</span></li><li>Set the standard for the revision half: <span class='en'>You explain the rules to each other. If you cannot say it in your own words, you do not own it yet — and today is the day to find that out.</span></li><li>Name the one thing that is NOT happening today: nothing is being marked. Say it now, because half the room has already assumed the opposite.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the sentence about tomorrow, written up and left there. <b>Backup:</b> none — board and voice.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> copy the shape of tomorrow's paper into the notebook</div></td><td class='mat'>board</td></tr><tr><td class='min'>10–22′</td><td class='stage'><div class='nm'>Check it · the three presents and the two perfects</div><div class='zone'>desks</div><div class='why'><b>Why:</b> A reference page that is read is forgotten; the same page answered from memory and then checked is revision that actually moves something.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> SB p.16: the reference page used as questions, not as reading</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Books at p.16. <span class='en'>Cover the page with your hand. I ask, you answer, then you uncover and check.</span></li><li>Six questions, fast: When do we use will for the present? (repeated or habitual behaviour) · Which verbs cannot take the continuous? · What does the present perfect continuous emphasise? (process and duration) · When can we NOT use the continuous? (a very short action: «I've broken the window», not «I've been breaking») · for or since with «last week»? · What does «I've painted my bedroom» tell us? (it's finished).</li><li>Then a two-minute pair drill, <span class='kagan'>RallyCoach</span>: A gives a time expression, B produces a full sentence with the right tense. Swap after a minute.</li><li>Board the three sentences from the reference that the test will echo: <span class='en'>I've been studying in this school for more than five months. I've seen that film three times. My sister and I are always fighting.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the SB p.16 reference on the board app if you have it — but covered, revealed one box at a time. <b>Backup:</b> the page is in their hands; use the cover-and-answer routine.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> answer six questions with the page covered, then drill tense choice in pairs</div></td><td class='mat'>SB p.16</td></tr><tr><td class='min'>22–32′</td><td class='stage'><div class='nm'>Check it · gerunds and infinitives</div><div class='zone'>desks</div><div class='why'><b>Why:</b> The hardest exercise in the paper is a technique as much as a grammar point, and the technique takes four minutes to teach.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> SB p.16 table + a fast transformation drill</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Same routine, page covered. Five questions: after a preposition? (-ing) · after «too», «enough», «the first»? (to) · after admit, avoid, consider, risk, suggest? (-ing) · after want, learn, agree, decide, expect, hope, promise? (to) · gerund or infinitive as the subject of a sentence? (gerund).</li><li>Then teach the transformation mechanism explicitly, because exercise 3 of the test is transformations and nobody has been taught how they work: <span class='en'>Read sentence one. Look at the word given. Decide the pattern that word needs. Then count: two to five words, and you never change the word given.</span></li><li>Model one on the board: <span class='en'>Don't do that because there's a chance you'll fail. (risk) → Don't do that, you risk failing.</span></li><li>Three more, done in pairs on paper: go riding · can't stand getting up · consider joining.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the transformation model written on the board and left there. <b>Backup:</b> not needed.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> answer five rule questions from memory, then do four transformations in pairs</div></td><td class='mat'>SB p.16 · board</td></tr><tr><td class='min'>32–40′</td><td class='stage'><div class='nm'>Vocabulary Showdown</div><div class='zone'>desks in fours</div><div class='why'><b>Why:</b> Showdown gives every student the same number of attempts as the fastest one in the group — which is the whole point of the structure and the opposite of a quiz.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the twenty-nine words of the unit, everybody writing at once</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>«SHOWDOWN» on the unit word list (SB p.16): each team has the twenty-nine words face down; the leader turns one over, everyone writes a definition or a collocation ALONE, then «Showdown!» and all four cards go up at once. One point for a correct definition, two for a correct sentence with it.</li><li>Two rounds of six words each. The leader rotates every round, so four different students run the game.</li><li>Board the six words the teams got wrong most often — those are the ones that will be in the paper twenty minutes later, and you say so.</li><li>Finish with sixty seconds of do/make: you call a noun, the whole class calls the verb. Twenty items, no thinking time.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the unit word list open at SB p.16. <b>Backup:</b> if there are no word cards, the leader simply reads a word from the list on p.16.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write a definition or a collocation alone, then show it simultaneously with the team</div><div class="nb">📓 <b>Interactive notebook</b> — <b>11_Unit_1_Review_Matching_1 + 12_Unit_1_Review_Matching_2 + 13_Unit_1_Review_Translate_1 + 14_Unit_1_Review_Translate_2 + 15_Unit_1_Review_Translate_3</b><div class="nbk">five A5 sheets — MATCHING 1/2 and 2/2 (Russian sentences joined to their English pairs: the chunks and structures of the whole unit) and TRANSLATE 1/3, 2/3, 3/3 (the same sentences written out in English in full, with a SELF-CHECK strip: whole chunks &middot; verb form &middot; tense)</div><ul><li>Glue MATCHING 1/2 and 2/2 in and join the pairs in pencil — alone first, then with a partner.</li><li>Glue TRANSLATE 1/3 in and write the English without looking back at the matching.</li><li>Self-check against the matched sheets; every mistake is rewritten as a full sentence.</li><li>TRANSLATE 2/3 and 3/3 are the homework half — same routine, same self-check.</li></ul><span class="nbp"><b>When:</b> ~12 min inside the “Vocabulary Showdown” stage</span><span class="nbp"><b>Prep:</b> 5 × A5 per student (Matching 1–2 + Translate 1–3). Glue sticks, pencils.</span></div></td><td class='mat'>word cards or SB p.16 · mini-whiteboards or paper</td></tr><tr class='bridge'><td class='min'>40–43′</td><td class='stage'><div class='nm'>Move break · shake it out</div><div class='zone'>open floor</div><div class='why'><b>Why:</b> Physical state before a test matters more than one more exercise: they arrive at the paper awake and not wound up.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> three minutes standing between two long sitting stages</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Stand, push the chairs in, two rounds of the do/make wall: left wall DO, right wall MAKE, ten nouns called fast.</li><li>Then thirty seconds of nothing: stand, shoulders down, look out of the window. Say it plainly: <span class='en'>Sit down when you are ready to write. Not before.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> two wall labels. <b>Backup:</b> hands up left / right.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> walk to a wall ten times, then stand still for thirty seconds</div></td><td class='mat'>wall labels</td></tr><tr><td class='min'>43–51′</td><td class='stage'><div class='nm'>Doubt clinic · their questions, not yours</div><div class='zone'>desks</div><div class='why'><b>Why:</b> The revision so far was ours. This eight minutes is theirs, and an anonymous slip is the only way the weakest student in the room asks the question that has been in the way for two weeks.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the last honest questions before the paper — asked by the students</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Hand every student a slip. <span class='en'>Write one question about this unit you still cannot answer. Anonymous. One sentence.</span> Ninety seconds, everybody writes — a student who has no question writes the hardest question they CAN answer, for the class.</li><li>Collect, shuffle, read aloud. Answer the first three yourself, fast. Then hand the rest to the class: <span class='kagan'>Numbered Heads Together</span> — the group agrees the answer, one number answers.</li><li>Anything nobody can answer goes on the board under the heading <span class='en'>ASK BEFORE THE TEST</span> and is answered in the first two minutes of the next lesson, before the papers go out.</li><li><b>Do not turn this into a new lesson.</b> If a question needs twelve minutes of teaching, say so honestly: it is not on the paper in that form, and here is the one line that covers what is.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the slips, then the board list ASK BEFORE THE TEST. <b>Backup:</b> none needed — paper and voice only.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write one anonymous question, then answer other people's questions in groups</div></td><td class='mat'>slips of paper, board</td></tr><tr><td class='min'>51–70′</td><td class='stage'><div class='nm'>🎯 Test yourself · against the clock, for practice</div><div class='zone'>desks</div><div class='why'><b>Why:</b> The first time they meet the unit under time pressure must not be the day of the real test. Everything that goes wrong here is still repairable — and it is repaired by them, tonight.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> SB p.17 — the book's own Test yourself page, done to the clock — done to time, but the mark belongs to nobody</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Say what this is, once, and mean it: <span class='en'>This is practice. I am not writing these marks down. What you find out in the next 19 minutes is what you revise tonight.</span></li><li>Clock it on the board. Same rule as the real paper: no book, no phone, no talking, and you may go back at the end if you have time.</li><li>Monitor with a notebook, not a pen over their shoulders. Write down which exercise the room slows on — that is the section you re-teach in the last minutes, not the one you had planned to.</li><li>Two minutes before the end, warn them once. Students who finish early do NOT sit and wait: they turn the page over and write three sentences of their own using the unit's grammar.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the timer on the board, big enough to see from the back. <b>Backup:</b> a phone stopwatch face up on your desk.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> work in silence to the clock, then stop when the time stops</div></td><td class='mat'>SB p.17 · pens · board (time) · timer</td></tr><tr><td class='min'>70–79′</td><td class='stage'><div class='nm'>Self-check and the error map</div><div class='zone'>desks → pairs</div><div class='why'><b>Why:</b> A score without a reason teaches nothing. Writing WHY the answer was wrong is the whole point of the practice run, and doing it while the paper is warm is worth three exercises done cold.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> keys go to the students; every wrong answer becomes a line to work on</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Answers on the board, or the key page open on the projector. <b>Students mark their own paper</b> — not a partner's. This is the one time where nobody else sees the score.</li><li>Every wrong answer gets one line in the error log: what the answer was, what the right one is, and <b>why</b> — in their own words. «Careless» is not a reason and does not count.</li><li><span class='kagan'>RallyCoach</span> in pairs: take one error each and explain it to your partner. If you cannot explain it, it goes on the ASK BEFORE THE TEST list on the board.</li><li>Take a show of hands by section — grammar, vocabulary, transformations — and write the three weakest on the board. That list IS tonight's homework, personalised, without you writing twelve different tasks.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the answer key, then the three weakest sections on the board. <b>Backup:</b> if the projector fails, read the key aloud twice, slowly, and let them mark as you read.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> mark their own paper, write the reason for every error, then explain one error to a partner</div></td><td class='mat'>answer key, error logs</td></tr><tr><td class='min'>79–86′</td><td class='stage'><div class='nm'>The test explained · format, level, camera</div><div class='zone'>board</div><div class='why'><b>Why:</b> Format panic costs more marks than gaps in the language. A student who knows the order, the totals and the camera walks in measuring the unit, not the room.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> exactly what happens next lesson, so nobody is surprised by the paper</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Put the shape of the test on the board and leave it there: <span class='en'>Listening 12 · Vocabulary 20 · Grammar 25 · Use of English 8 · Reading 15 · Writing 10 · Speaking 10 = 100.</span> Ninety minutes, the whole lesson.</li><li>Name the order and the reason: listening first, while the ears are fresh; writing last; and <b>speaking taken in pairs in the corner while the room writes</b> — the only honest way to fit five skills into one lesson.</li><li>Say the camera out loud now, not on the day: <span class='en'>Your speaking answer is filmed. The mark is for the test, the video is for December — so that you can hear for yourself how much better you have got.</span> Nobody watches it but you and me.</li><li><b>The choice of version.</b> Standard or Higher, same seven sections, same hundred points, harder wording. Ask them to decide tonight, not at the door: <span class='en'>Which version measures you honestly?</span> Anyone who cannot decide gets Standard and may swap in the first five minutes.</li><li>Last line, and say it plainly: <span class='en'>Bring a pen that works and the sleep of somebody who has already done the revision.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the seven sections and the totals, written up and left on the board. <b>Backup:</b> none — this is board and voice.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> copy the seven sections into the notebook and decide their version</div></td><td class='mat'>board</td></tr><tr><td class='min'>86–90′</td><td class='stage'><div class='nm'>Wrap-up + homework</div><div class='zone'>desks → door</div><div class='why'><b>Why:</b> Self-assessment against the aim they heard at the start, so the lesson closes the loop it opened. Homework comes from their own workbook, with page and exercise numbers.</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> self-check against today's aim, then the homework said once and written on the board</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>One line on the exit slip: the thing from this unit I still do not trust myself with.</span> These lines decide what the first ten minutes of Unit 2 look like.</li><li>Homework on the board: <b>Workbook p.11 ex.5–7</b> — the writing reference page, finishing with the 120–150 word reply checked against ex.8.</li><li>One sentence of forward motion: <span class='en'>Next lesson, Unit 2 — work. And the first text is about a woman who climbs buildings for a living.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the homework written out in full. <b>Backup:</b> photograph the board into the group chat.</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write the exit slip and hand it over at the door</div></td><td class='mat'>exit slips</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Your own three sections, from the error map.</b> Not the whole unit — the sections you marked wrong today. Redo them in the Language checkpoint pages of the workbook, and write out the ten words from the unit list you still spell wrongly, three times each, from memory and then checked.</p><p><b>And decide your version</b> — Standard or Higher. Come to the next lesson knowing which paper you want; you may still change your mind in the first five minutes.</p><p class='opt'><b>✳️ Optional — only for students who will sit the EGE exam:</b> EGE tasks 26–31 — three word-formation items in the unit's own field: a university's programmes, a teacher and his students, a scientist who studied abroad. Light work for a test day. <a href='https://speakandsmile.online/ege.html#/hw?lexis:10FE8E,17BE29,32D688'>https://speakandsmile.online/ege.html#/hw?lexis:10FE8E,17BE29,32D688</a><br>ten minutes, marked automatically; strictly optional. The link opens straight away — no password, no sign-up. Students who are not sitting the exam simply skip it; it does not affect any mark.</p></td><td class='mat'>Workbook — the Language checkpoint pages of this unit · the unit word list · the error log</td></tr>
+
+      <tr>
+        <td class="min">0–9′</td>
+        <td class="stage"><div class="nm">Lead-in · retrieval brain-dump</div><div class="zone">desks → pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Frame the lesson.</span> <span class="en">Books closed. This is our last lesson before the Unit 1 test — today we pull everything back out of your memory and find the gaps.</span></p>
+          <p><span class="ph">Free recall (books closed).</span> 90 sec, individually, on scrap paper: <span class="en">Write every Unit 1 word and grammar rule you can remember — school, university, do/make, tenses. Go.</span> Retrieval &gt; re-reading — struggling to recall is what fixes it.</p>
+          <p><span class="game">▶ RallyRobin</span> (pairs): take turns adding one item each until they dry up; then combine lists. <span class="ph">Whole-class board map:</span> harvest into four columns — <i>school life · higher education · do/make · grammar</i>. <span class="ph">ICQ:</span> <span class="en">Books open or closed for this part?</span> (→ closed).</p>
+        </td>
+        <td class="mat">scrap paper · board (4 columns) · timer</td>
+      </tr>
+
+      <tr>
+        <td class="min">9–24′</td>
+        <td class="stage"><div class="nm">Vocabulary consolidation</div><div class="zone">carpet space / standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Check &amp; fill.</span> Open <b>SB p.16 “Check it” — Vocabulary</b>. In pairs, tick what was on their brain-dump, <u>highlight</u> what they missed (school life · higher education · do/make). 3 min.</p>
+          <p><span class="game">▶ Quiz-Quiz-Trade</span> (Kagan, standing mingle): each student holds a card — one side an <b>English definition or a do/make gap</b> (“…… a decision”), the other the answer. <span class="en">Stand up, pair up.</span> A quizzes B, B quizzes A, they coach if needed, praise, <b>trade cards</b>, find a new partner. <b>Interleave the deck</b> — mix higher-ed nouns with do/make items so students switch categories every turn. 6–7 min, everyone speaking every round.</p>
+          <p>📓 <span class="ph">Interactive notebook — Review Matching (Match It).</span> Hand out the two Review Matching sheets (8 + 8): students draw lines <b>Russian ↔ English</b> for the whole-unit chunks. Pairs check each other. This is the recognition layer before the harder recall tasks.</p>
+        </td>
+        <td class="mat"><b>SB p.16</b> · Quiz-Quiz-Trade card deck (interleaved) · 📓 Review Matching 1–2</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–39′</td>
+        <td class="stage"><div class="nm">Grammar — systematise it</div><div class="zone">desks / teams of 3–4</div></td>
+        <td class="flow">
+          <p><span class="ph">Rules in their own words.</span> Split the three areas across teams: ① present habits · ② present perfect simple vs continuous · ③ gerunds &amp; infinitives. Using <b>SB p.16 Grammar reference</b>, each team writes a <b>2-line “rule + signal words + one example”</b> summary for its area, <u>not</u> copied verbatim — reformulating is the point.</p>
+          <p><span class="game">▶ Numbered Heads Together:</span> teams teach the class their area; you fire a check question at a random number: <span class="en">Number 3 — result or process: “I’ve painted my room”?</span> (→ result/simple).</p>
+          <p>📓 <span class="ph">Interactive notebook — Grammar cards.</span> Students complete the DECISION PATH + SIGNAL WORDS + EXAM TRAPS lines on their unit grammar cards (e.g. <i>for/since</i>; preposition → -ing; <i>want/decide</i> → to). Keep it tight — 4 min.</p>
+        </td>
+        <td class="mat"><b>SB p.16</b> Grammar reference · 📓 Grammar cards · team mini-whiteboards</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">39–45′</td>
+        <td class="stage"><div class="nm">▶ Vocabulary Showdown</div><div class="zone">teams, whiteboards</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Showdown</span> (Kagan — <b>everyone writes every item</b>). You call a prompt; <b>all</b> students write silently on personal whiteboards; on <span class="en">Show me!</span> boards go up together. Prompts interleave the whole unit, fast: <span class="en">a synonym for “grade”… “make” or “do” + progress?… a first-year student?… the word for a university teacher?… a scholarship pays for…?</span> Team point for a correct board. Retrieval, not competition-for-its-own-sake: the misses tell you what to reteach in the next block.</p>
+        </td>
+        <td class="mat">personal whiteboards + pens · prompt list · team score</td>
+      </tr>
+
+      <tr>
+        <td class="min">45–48′</td>
+        <td class="stage"><div class="nm">🧘 Brain-break</div><div class="zone">standing</div></td>
+        <td class="flow"><p><span class="ph">Reset (~mid-point).</span> 2-minute stretch + a quick <span class="game">▶ “Stand up if…”</span>: <span class="en">Stand up if you’ve studied abroad… if you do coursework you enjoy… if you’ve been learning English for more than five years.</span> (Sneaks present perfect + unit lexis into the break.) Sit, water, refocus.</p></td>
+        <td class="mat">—</td>
+      </tr>
+
+      <tr>
+        <td class="min">48–66′</td>
+        <td class="stage"><div class="nm">Test yourself — Grammar (timed, self-check)</div><div class="zone">desks, exam mode</div></td>
+        <td class="flow">
+          <p><span class="ph">Exam rehearsal.</span> <span class="en">This is exactly the test format — silent, timed, then you mark your own.</span> <b>SB p.17 Grammar test</b>: ① present simple/continuous &amp; habits (6) · ② present perfect simple vs continuous — choose the alternative (7) · ③ gerunds &amp; infinitives — key-word transformation, 2–5 words (7). <b>10–11 min</b>, individually.</p>
+          <p><span class="ph">Self-mark + traffic light.</span> Project the key; students mark, note their score, and flag 🟢/🟡/🔴 by area. <span class="ph">CCQ on the tricky one:</span> <span class="en">“I’ve been finishing my exam” — right or wrong?</span> (→ wrong; a one-off completed action → present perfect simple “I’ve finished”).</p>
+          <p>📓 <span class="ph">Interactive notebook — Review Translate (Translate It), part 1.</span> Students write the <b>full English translation</b> of the first Translate sheet (whole-unit chunks &amp; structures), then run the SELF-CHECK band: <i>whole chunks · verb form · tense</i>. Any 🔴 items go straight onto their “revise tonight” list.</p>
+        </td>
+        <td class="mat"><b>SB p.17</b> Grammar test · answer key (board) · 📓 Review Translate 1</td>
+      </tr>
+
+      <tr>
+        <td class="min">66–76′</td>
+        <td class="stage"><div class="nm">Test yourself — Vocabulary + fix errors</div><div class="zone">desks → pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Vocabulary test.</span> <b>SB p.17 Vocabulary test</b>: ① school life gap-fill (6) · ② higher education — <b>write simple definitions</b> (7) · ③ do &amp; make sort (7). 7 min; <span class="game">▶ RallyCoach</span> pairs to check — one explains, one records, then swap.</p>
+          <p><span class="ph">The two most expensive mistakes.</span> From what you saw on the Showdown + self-marks, put the <b>two costliest unit errors</b> on the board (e.g. <i>do/make</i> mix-ups; <i>for</i> vs <i>since</i>; gerund after a preposition). Students correct three wrong sentences on mini-whiteboards. <span class="en">Show me!</span> — instant formative read on whether it’s fixed.</p>
+        </td>
+        <td class="mat"><b>SB p.17</b> Vocabulary test · whiteboards · <span class="game">▶ RallyCoach</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">76–85′</td>
+        <td class="stage"><div class="nm">Speaking &amp; writing recall</div><div class="zone">pairs / desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Speaking mini (interleave the productive skills).</span> <span class="game">▶ Timed Pair Share</span> — 45 sec each: <span class="en">Would you rather study abroad or at home? Give a reason and an example.</span> Push them to use unit lexis + present perfect (“I’ve always wanted to…”).</p>
+          <p><span class="ph">Writing recall — informal email.</span> Books closed: pairs rebuild the <b>3-paragraph plan</b> for the informal email (greeting + intro → advice → ending) and list 4 informal chunks (<i>Hey…, By the way…, Anyway…, Write back soon</i>). Cross-check against <b>SB p.15 model</b>. This previews tonight’s exam-format homework.</p>
+          <p>📓 <span class="ph">Interactive notebook — Review Translate (Translate It), part 2.</span> If time, students start the second Translate sheet in class and finish it for homework (SELF-CHECK band).</p>
+        </td>
+        <td class="mat"><b>SB p.15</b> model email · 📓 Review Translate 2 · <span class="game">▶ Timed Pair Share</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">85–90′</td>
+        <td class="stage"><div class="nm">Test brief &amp; wrap-up</div><div class="zone">whole class</div></td>
+        <td class="flow">
+          <p><span class="ph">Announce the exam format.</span> <span class="en">Next lesson is the Unit 1 test — 100 points.</span> Parts &amp; order: listening 12 → vocab 20 → grammar 25 → Use of English 8 → reading 15 → writing 10 (informal email) → speaking 10 (in pairs, filmed). Offer the choice: <span class="en">Standard or Higher — decide with me now.</span></p>
+          <p><span class="ph">Exit reflection.</span> Each student says one 🟢 (“I’m confident with…”) and one 🔴 (“Tonight I’ll revise…”). Short Q&amp;A on anything still shaky. <span class="en">You’ve got this — revise your red items, do the email, and I’ll see you for the test.</span></p>
+        </td>
+        <td class="mat">test-format slide · students’ traffic-light lists</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Workbook — Unit 1, pp. 10–11 (Developing writing · An informal email 1), ex. 1–8:</b> analyse the model (ex. 1–4) → plan (ex. 5–6) → <b>write the informal email reply to Tony, 120–150 words</b> (ex. 7) → self-check (ex. 8). This is the exam writing task in full. <b>Plus:</b> finish 📓 <b>Review Translate 3</b> (write the translations + SELF-CHECK band) and <b>revise your 🔴 items</b> from today. <b>Digital:</b> On-the-Go Practice — Unit 1 vocabulary &amp; grammar set (5–7 min).</p></td>
+        <td class="mat">Workbook pp. 10–11, ex. 1–8 · 📓 Review Translate 3 · On-the-Go Practice</td>
+      </tr>
+
     </tbody>
   </table>
   </div>
 
-  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
-
-  <div class="grid2">
-    <div class="cardb"><ul class="a">
-      <li><span class="lb">Main aim.</span> By the end, students have <b>systematised the grammar and vocabulary of Unit 1</b> and each of them can name <b>the two or three sections they personally have to revise tonight</b>.</li>
-      <li><span class="lb">Subsidiary.</span> Explaining a rule to a partner in their own words; working to the clock; self-marking; writing the reason for an error rather than the correction alone.</li>
-      <li><span class="lb">Personal.</span> Read the error logs tonight — twenty minutes for the whole group. Two students will have written «careless» three times; those are the two you check on first thing in the test lesson.</li>
-    </ul></div>
-    <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
-      <ul class="a"><li>explain the grammar of the unit to another student without reading it from the page</li><li>produce the right form in a sentence that carries no label</li><li>work through a page of mixed exercises to a time limit</li><li>name their own two weakest sections before the test</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Shape of the lesson</div>
-      <div class="arc"><span>Opening</span><span>Lesson frame</span><span>Check it</span><span>Check it</span><span>Vocabulary Showdown</span><span>Move break</span><span>Doubt clinic</span><span>🎯 Test yourself</span><span>Self-check and the error map</span><span>The test explained</span><span>Wrap-up + homework</span></div>
-      <div class="eyebrow" style="margin:12px 0 6px">Kagan structures used today</div>
-      <div><span class='w'>Showdown</span><span class='w'>RallyCoach</span><span class='w'>Quiz-Quiz-Trade</span><span class='w'>Think-Pair-Share</span></div>
-    </div>
-  </div>
-
-  <div class="eyebrow">Target language</div>
-  <div class="grid2">
-    <div class="cardb tl">
-      <div class="r"><div class="k">Lexis</div><div><span class='w'>abroad</span><span class='w'>assignment</span><span class='w'>break (n)</span><span class='w'>continuous assessment</span><span class='w'>coursework</span><span class='w'>grade / mark</span><span class='w'>academic support</span><span class='w'>attend</span><span class='w'>campus</span><span class='w'>degree</span><span class='w'>extra-curricular activity</span><span class='w'>facilities</span><span class='w'>do a course</span><span class='w'>do a degree</span><span class='w'>do an assignment</span><span class='w'>do your best</span></div></div>
-      <div class="r"><div class="k">Structure</div><div>the whole unit: three presents · present perfect simple and continuous · gerunds and infinitives · do and make.</div></div>
-      <div class="r"><div class="k">Form</div><div>see the Grammar reference, SB p.16 — the page the students will use for the rest of the year when they revise this unit.</div></div>
-      <div class="r"><div class="k">Pron. watch</div><div>the ending <b>-ture</b> is /tʃə(r)/, never /tuːr/: lec<b>ture</b>, cul<b>ture</b>, fu<b>ture</b> · word stress moves and changes the word: <b>un</b>dergraduate vs under<b>grad</b>uate is wrong — under<b>grad</b>uate · qualifi<b>ca</b>tions · edu<b>ca</b>tion · weak forms in the perfect: I've been /aɪvbɪn/, not /aɪ hæv biːn/</div></div>
-    </div>
-    <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) &amp; ICQs · Assumptions</div>
-      <div class='ccq'>«I've lived here for ten years» and «I've been living here for ten years» — is one of them wrong? → no, both work; the second stresses the process. That honesty prevents panic in the test.</div><div class='ccq'>«He's been reading that book» — has he finished it? → probably not.</div><div class='ccq'>ICQ before the paper: how long? → thirty-five minutes. Can you go back to exercise 1 at the end? → yes, if you have time.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> The «Check it» spread of the unit, and the last lesson before the unit test. Everything on this page has been met at least twice; today it is collected, not taught. The Test yourself page is used <b>as practice only</b> — the photocopiable B2 Unit 1 Test (Standard and Higher, with audio and answer keys) is the real paper and comes next lesson. Students need their workbook homework of the unit done: that was the revision, and this lesson assumes it.</p>
-    </div>
-  </div>
-
-  <div class='eyebrow'>Answer keys for this lesson (Teacher's Book — checked page by page)</div><div class='cardb' style='padding:4px 8px'><table class='ap'><thead><tr><th>Task</th><th>Answer</th></tr></thead><tbody><tr><td>SB p.17 Grammar test ex.1</td><td>1 don't · 2 are · 3 start/begin · 4 are · 5 always/constantly/continually/forever · 6 asking</td></tr><tr><td>SB p.17 Grammar test ex.2</td><td>1 switched · 2 for · 3 been standing · 4 seen · 5 been staying · 6 been reading · 7 finished</td></tr><tr><td>SB p.17 Grammar test ex.3</td><td>1 risk failing · 2 go riding · 3 can't stand getting up · 4 having a valid passport · 5 consider joining · 6 the first to finish · 7 'd love to see</td></tr><tr><td>SB p.17 Vocabulary test ex.1</td><td>1 abroad · 2 subject · 3 terms · 4 higher education · 5 timetable · 6 continuous assessment</td></tr><tr><td>SB p.17 Vocabulary test ex.3</td><td>do: an assignment, a favour, the shopping · make: a decision, a plan, progress, the lunch</td></tr></tbody></table></div>
-  <div class='eyebrow'>Unit 1 test — exactly what is on the page (Student's Book «Test yourself», answers in the Teacher's Book)</div><div class='cardb' style='padding:4px 8px'><table class='ap'><thead><tr><th>Section</th><th>Content</th></tr></thead><tbody><tr><td>Grammar 1 — present tenses (6 points)</td><td>six gapped sentences: present simple, present continuous and will for present habits. Produce the word, spell it.</td></tr><tr><td>Grammar 2 — present perfect (7 points)</td><td>seven sentences, choose simple or continuous. This is the exercise where the marks are won or lost.</td></tr><tr><td>Grammar 3 — gerunds and infinitives (7 points)</td><td>seven key-word transformations (risk, go, can't stand, have, consider, first, love). Two to five words, no change to the word given.</td></tr><tr><td>Vocabulary 1 — school life (6 points)</td><td>a gapped set with six words from the box: abroad, continuous assessment, higher education, subject, term, timetable.</td></tr><tr><td>Vocabulary 2 — higher education (7 points)</td><td>write a simple definition of seven words: lecture hall, resources, student loan, lecturer, campus, undergraduate, tutorial.</td></tr><tr><td>Vocabulary 3 — do and make (7 points)</td><td>seven collocations sorted into two columns. One wrong verb, one lost point.</td></tr></tbody></table><p style='font-size:.85rem;color:var(--muted);margin:8px 4px'>Six exercises, <b>40 points in total</b> (20 grammar + 20 vocabulary), 35 minutes of writing time. Every format on the page has been done in class — name the lesson for any line a student doubts. Nothing to photocopy: the test is in every student's book (Student's Book p.17 — «Test yourself», nothing to photocopy). Spare photocopiable papers for absentees: тесты/progress Tests/B2_U1_Test_Standard.pdf (+ Higher, answer keys, audioscript and B2_U1_Test.mp3).</p></div>
-
-  <div class="grid2">
-    <div>
-      <div class="eyebrow">Anticipated problems &amp; solutions</div>
-      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>«We didn't revise» on the day of the test</td><td>Say it once, calmly: the revision was the homework, and the whole of today. Then hand out the error map — it names three sections each, which is a night's work, not a fortnight's.</td></tr><tr><td>A student treats the practice run as a real test and panics</td><td>Say the sentence before the timer starts and again at the halfway point: nobody is writing these marks down. If a student freezes anyway, let them work from the book for the second half — the diagnosis matters more than the conditions.</td></tr><tr><td>Fast finishers hand the practice paper in after eight minutes</td><td>Nobody hands anything in — it is their own page. The rule is announced beforehand: finish early, turn the page over and write three sentences of your own with the unit's grammar. Those get checked in the self-marking stage.</td></tr><tr><td>The doubt clinic turns into a full re-teach of one grammar point</td><td>Answer at the level of the paper, not of the grammar book: one line, one example, and the reference page number. Anything bigger goes on the ASK BEFORE THE TEST list and gets two minutes before the papers go out.</td></tr></tbody></table></div>
-    </div>
-    <div>
-      <div class="eyebrow">Classroom management — signals</div>
-      <div class="cardb"><div class="sig"><div class='sigc'><b>“Eyes up in 3-2-1”</b> — a calm countdown → on “1” every pair of eyes is on you. Never talk over the class.</div><div class='sigc'><b>Visible timer</b> — timer running = we work; timer stops = pens down. The timer is the boss, not you.</div><div class='sigc'><b>“Boards up!”</b> — a mini-whiteboard round: everyone answers at the same moment — nobody hides, nobody shouts out first.</div><div class='sigc'><b>Silent mode</b> — palm down = we work alone and in silence: listening or writing. Questions afterwards, not during.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, the class claps twice and freezes — an instant reset in the middle of a game.</div><div class='sigc'><b>English-first</b> — an idea may be started in Russian, but the POINT is only given for the English version: reformulate and repeat it.</div></div></div>
-    </div>
-  </div>
-
-  <div class="eyebrow" style="margin-top:22px">Where this goes next</div>
-  <div class='ogecard'><div class='mh'>🇷🇺 Where this lands in the EGE (Russian state exam, grades 10–11) — teacher's note, never taken into class</div><p><b>The same skill is tested by:</b> <b>Tasks 19–31</b> (grammar and vocabulary — thirteen marks of the written paper).</p><p>The unit test is built the way that exam block is built: produce the form, spell it correctly, choose the right partner word. A present perfect continuous written as a present perfect scores nothing; «make homework» scores nothing. The revision half of the lesson names both traps aloud before the paper is turned over.</p><p class='quiet'>Who needs this: not every student in the group will sit the EGE. Those who will get the trainer link in the homework as an <b>optional</b> extra. The rest are told nothing — the lesson works as language teaching without it.</p><p><b>Trainer set on this unit's topic:</b> <a href='https://speakandsmile.online/ege.html#/hw?lexis:10FE8E,17BE29,32D688'>https://speakandsmile.online/ege.html#/hw?lexis:10FE8E,17BE29,32D688</a><br><span class='quiet'>EGE tasks 26–31 — three word-formation items in the unit's own field: a university's programmes, a teacher and his students, a scientist who studied abroad. Light work for a test day · ten minutes, marked automatically; strictly optional</span></p></div>
-
   <div class="foot">
-    <span>Speak &amp; Smile · Gateway to the World B2 · Block 1: Unit 1 «Make the grade» — school life, higher education and the present · GatewayB2-U1-P6 — lesson plan &amp; staging</span>
-    <span>Unit 1 · revision before the test · Check it, a timed practice run, and the paper explained</span>
+    <span>Speak &amp; Smile · Gateway to the World B2 · Unit 1 “Make the grade” · Lesson 6 — Review (pp. 16–17) — lesson plan &amp; staging</span>
+    <span>Content verified against SB pp. 16–17 (Check it / Test yourself) + WB pp. 10–11 + КТП-2026-08-23 (урок 9) + placement.json (U1-P6 review).</span>
   </div>
 </div>
-<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button><style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>
