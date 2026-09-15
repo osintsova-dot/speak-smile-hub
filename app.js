@@ -10,7 +10,7 @@ const GROUPS_FALLBACK = [
   {name:"GMF 4B",  program:"GMF4",    room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"15:00"},{d:5,t:"15:00"}]},
   {name:"GMF 3B",  program:"GMF3",    room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"16:05"},{d:5,t:"16:05"}]},
   {name:"GMF 2B",  program:"GMF2",    room:"Discovery", teacher:"Ксения",    days:[{d:1,t:"16:05"},{d:5,t:"16:05"}]},
-  {name:"Get Involved 2B", program:"GIA2", room:"Adventure", teacher:"Ксения", days:[{d:1,t:"17:10"},{d:5,t:"17:10"}]},
+  {name:"Get Involved 2B", program:"GIA2", room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"17:10"},{d:5,t:"17:10"}]},
   {name:"Prepare 4A", program:"Prepare4", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"17:10"},{d:5,t:"17:10"}]},
   {name:"Prepare 5A", program:"Prepare5", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"18:45"},{d:5,t:"18:45"}]},
   {name:"Gateway B2", program:"Gateway", room:"Innovation", teacher:"Екатерина", days:[{d:1,t:"18:45"},{d:5,t:"18:45"}]},
@@ -26,7 +26,7 @@ const GROUPS_FALLBACK = [
   // Ср/Сб
   {name:"GMF 3C",  program:"GMF3",    room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"15:00"},{d:6,t:"12:40"}]},
   {name:"GMF 2C",  program:"GMF2zero",room:"Discovery", teacher:"Ксения",    days:[{d:3,t:"16:05"},{d:6,t:"13:50"}]},
-  {name:"Get Involved 2A", program:"GIA2", room:"Adventure", teacher:"Екатерина", days:[{d:3,t:"17:10"},{d:6,t:"11:00"}]},
+  {name:"Get Involved 2A", program:"GIA2", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"17:10"},{d:6,t:"11:00"}]},
   {name:"Get Involved 1B", program:"GIA1", room:"Innovation", teacher:"Екатерина", days:[{d:3,t:"18:30"},{d:6,t:"14:30"}]},
   {name:"GMF 1C",  program:"GMF1zero",room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"18:50"},{d:6,t:"15:00"}]},
   // с октября
