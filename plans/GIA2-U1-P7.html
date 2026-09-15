@@ -1,6 +1,5 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GIA2 · Unit 1 · Pair 7 (Lesson Plan &amp; Staging)</title>
+<title>Get Involved A2 · Unit 1 · Pair 7 — Project &amp; Unit Review (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
     --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -37,152 +34,248 @@
   .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
-  /* design card: why the lesson looks like this */
-  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
-    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
-  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
-    letter-spacing:.08em; margin-bottom:6px; }
-  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
-  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
-    padding:10px 13px; font-size:.95rem; }
-  .missioncard .pitch b{ color:var(--p-ink); }
-  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
-
-  /* lesson at a glance */
-  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
-  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
-  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
-  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
-  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
-  table.glance tr.bridge td{ background:var(--honey-soft); }
-  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
-
-  /* staging */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
-  .game{ color:var(--p); font-weight:800; }
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
-  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
-  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
-  /* three sub-blocks inside one stage */
-  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
-  .tsteps{ margin:7px 0; }
-  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
-  .tsteps li{ margin:3px 0; font-size:.92rem; }
-  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
-  .showb .sbh{ color:var(--zone); }
-  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
-  .kidsb .sbh{ color:var(--honey-ink); }
+  .slot{ color:var(--muted); font-weight:700; }
+  .nb{ background:var(--honey-soft); border:1px solid var(--honey); border-left:3px solid var(--honey); border-radius:8px; padding:9px 11px; margin:6px 0; font-size:.9rem; }
+  .nb ul{ margin:6px 0 0; padding-left:18px; } .nb li{ margin:2px 0; }
   .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
   table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
   table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
   table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
   td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
-  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
-  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
   td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
-  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
   .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
   tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
-    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">Get Involved! A2 · Unit 1 “School life” · Pair 7 — Mission «Dream School Inc.»: build the school, win the investment</div>
-    <div class="s">Teens 12–14 (grade 6–8) · <b>the 'ours' track 🚀 after A1+</b> · 90 min · mission-based: gate → base sprint → challenge → bonus → product with a bar · unit leaderboard</div>
-    <div class="meta"><span class='chip'>Lessons 21–22 (KTP pair 11) · October</span><span class='chip new'>🚀 ours · after A1+</span><span class='chip'>SB pp.22–23</span><span class='chip'>unit leaderboard · gold runs</span></div>
+    <div class="t">Get Involved! A2 · Unit 1 “School life” · Pair 7 — Project &amp; Unit Review</div>
+    <div class="s">A2 teens (~12–14 y.o., readers) · 90 min · Project + Revision cycle (THINK → PLAN → CREATE → PRESENT + Quick review) · desks / stations</div>
+    <div class="meta"><span class="chip">October · Lessons 21–22</span><span class="chip new">★ PROJECT + REVIEW</span><span class="chip">~12 pupils · pairs &amp; teams of 3–4</span><span class="chip">SB pp.22–23 · Quick review p.21 · Planner p.118</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u1-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
-  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
-  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: greeting + review</td><td>entry + collecting the homework posts about the ideal school (raw material for the project)</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>the Dream School Inc. mission + the WHY rule</td></tr><tr><td class='gmin'>8–20′</td><td class='gname'>THINK · advantages first</td><td>Super skill: a pros/cons table for 6 candidate subjects BEFORE choosing; the Key phrases of discussion</td></tr><tr><td class='gmin'>20–28′</td><td class='gname'>PLAN · the grid</td><td>a Monday–Friday grid through RoundTable: 4 time slots × subjects; every choice comes with one WHY line</td></tr><tr><td class='gmin'>28–48′</td><td class='gname'>Due diligence · Quick review as stations</td><td>4 stations, 5 min each: vocabulary (both sets) · grammar (tables + questions) · pronouns · spelling</td></tr><tr><td class='gmin'>48–50′</td><td class='gname'>Transition: stretch your legs</td><td>warm-up</td></tr><tr><td class='gmin'>50–62′</td><td class='gname'>CREATE · building the pitch</td><td>the visual of the grid + splitting the pitch blocks between the roles + one run-through</td></tr><tr class='bridge'><td class='gmin'>62–78′</td><td class='gname'>PITCH · the investment</td><td>90-second pitches + investor questions (the WHY cards) + a secret vote with investment chips</td></tr><tr><td class='gmin'>78–84′</td><td class='gname'>Leaderboard + gap list</td><td>the pair's points + the final unit leaderboard BEFORE the test + a personal preparation plan</td></tr><tr><td class='gmin'>84–90′</td><td class='gname'>Closing: reflection + homework</td><td>reflection + homework (preparation off the gap list) + the rules for the Pair 8 test</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
 
-  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> The coursebook's WDYT project is turned into a startup pitch: the crew builds a dream school (the timetable = the product) and defends it in front of 'investors' (the class). The unit's super skill — making logical decisions — works as the filter on the pitch: the judges hammer them with 'why' questions. The Quick review is sewn into the preparation: revising the unit = preparing for the Pair 8 test, but under the flag of 'investor due diligence'.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“Dream School Inc.</b> Your crew founds a school. Product: the perfect timetable. Investors: this class. They fund ONE school only. Your pitch: 90 seconds, the timetable, and answers to the hardest question in business — WHY? 'Because it's fun' is not an answer. Think like founders. Build!”<div class='pitchru'>In simpler words, if the class needs support: We found a dream school: the product is the perfect timetable, the investors are the class and they fund one school only. A 90-second pitch + answers to the 'why' questions.</div></div></div>
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will have <b>consolidated Unit 1 language</b> (daily routines · school subjects · present simple · object pronouns) by <b>designing, writing up and presenting a timetable for their ideal school</b> and justifying their choices.</li>
+      <li><span class="lb">Subsidiary.</span> Develop the critical-thinking sub-skill <b>“making logical decisions”</b>; practise negotiation Key phrases; retrieval &amp; interleaving of the whole unit; peer review; written accuracy (present simple + capital letters).</li>
+      <li><span class="lb">Personal.</span> Keep TTT low, hand the floor to pupils; give an ICQ before every task; run a stirrer→settler rhythm with a genuine brain-break at ~45′; make praise specific, not generic.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>talk about the importance of different school subjects;</li>
+        <li>make &amp; justify logical decisions using Key phrases;</li>
+        <li>use present simple &amp; object pronouns accurately across a whole unit;</li>
+        <li>present a project and give useful peer feedback.</li>
+      </ul>
+    </div>
+  </div>
 
-  <div class="eyebrow">Procedure — full staging</div>
-  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language <span style="font-weight:600;text-transform:none;letter-spacing:0;color:var(--muted);font-size:.8rem">— recycled &amp; consolidated (review pair)</span></div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">wake up</span><span class="w">get up</span><span class="w">have breakfast</span><span class="w">start school</span><span class="w">have a break</span><span class="w">finish school</span><span class="w">do homework</span><span class="w">go to bed</span><span class="w">maths</span><span class="w">science</span><span class="w">history</span><span class="w">PE</span><span class="w">ICT</span><span class="w">drama</span> + project subjects <span class="w">money management</span><span class="w">cyber-security</span><span class="w">public speaking</span><span class="w">inventing</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Present simple aff/neg · Yes/No + short answers · <b>object pronouns</b> (me, you, him, her, it, us, them). Project frames: “Our school day starts at… and finishes at… because…” · “Students learn (music) because we think…”</div></div>
+      <div class="r"><div class="k">Form</div><div>he/she/it + verb-<b>s/es/ies</b> · <b>doesn't/don't</b> + base verb · Do/Does…? · object pronoun goes <b>after</b> the verb: “I finish <b>it</b> at seven.”</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>3rd-person -s: /s/ <i>starts</i> · /z/ <i>goes</i> · /ɪz/ <i>teaches, studies</i>; weak “do you” /djə/; stress in Key phrases <i>“What about…?”</i></div></div>
+      <div class="r"><div class="k">Key phrases</div><div><i>Wait a moment. · Slow down. · What about…? · Yes, but don't forget… · I'd like to learn… · I'd prefer… · I think / don't think that's a good thing. · Me too. · Really?</i></div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“She <b>go</b> or she <b>goes</b> to school?” → goes. “And ‘I’?” → I go (no -s).</div>
+      <div class="ccq">“Is <i>him</i> a subject or an object?” → object → comes after the verb.</div>
+      <div class="ccq" style="margin-bottom:12px">“For a logical decision — decide first, or list advantages/disadvantages first?” → list first.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> daily routines, school subjects, present simple &amp; object pronouns were all taught across Unit 1 P1–P6 (this pair recycles &amp; applies them). Pupils are confident readers and can write short sentences. Pair/team routines are established. <b>Teams:</b> 3–4 max (12 = 3×4 · 10 = 3+3+4 · 9 = 3×3 · 8 = 2×4 · 7 = 3+4).</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Project drifts into L1 chat / off-task</td><td>Timebox each STEP with a countdown; require the Key phrases on a visible card; monitor &amp; nudge.</td></tr>
+        <tr><td>Drop the -s on he/she/it in write-up</td><td>Add “-s check” to the CHECK box; peer edits with a coloured pen.</td></tr>
+        <tr><td>Object pronoun errors (with he/it)</td><td>Quick board fix from the Match It sheet before the write-up.</td></tr>
+        <tr><td>One pupil dominates the pair</td><td>Assign roles (time-keeper · scribe · presenter · checker); rotate on STEP 4.</td></tr>
+        <tr><td>Presentations = reading aloud, no eye contact</td><td>How to… tips p.118: notes not sentences; one fact each; listeners have a peer-review task.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>Raised hand 🖐</b> — hand up + silence → pupils mirror &amp; finish the sentence.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>Countdown</b> — “Two minutes… 30 seconds… pens down.”</div>
+        <div class="sigc"><b>Timebox on board</b> — visible timer per STEP keeps the project moving.</div>
+        <div class="sigc"><b>“Freeze!”</b> — mid-movement reset for the mingle/challenge.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging (90 min)</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game / structure</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
 
   <div class="scroll">
   <table class="proc">
-    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
     <tbody>
-<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Into the lesson: greeting + review</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> entry + collecting the homework posts about the ideal school (raw material for the project)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Founders, your homework posts are your business plans. On the desks!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the homework posts</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they get out their raw material — the homework works for the project</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the Dream School Inc. mission + the WHY rule</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Investors fund ONE school. 'Because it's fun' is not an answer.</span></li><li><span class='ig'>🏆 <b>The bar for the product (judges' rubric):</b> Fluency — pauses ≤3 sec (1–3) · Accuracy — clean 3rd person (1–3) · Richness — details and comparisons (1–3). 9/9 = gold run, +5.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mission slide (Backup: the mission title and the bar go on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they take it on</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>8–20′</td><td class='stage'><div class='nm'>THINK · advantages first</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Super skill: a pros/cons table for 6 candidate subjects BEFORE choosing; the Key phrases of discussion</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Six candidate subjects. Advantages and disadvantages FIRST. Decide LAST.</span></li><li>Phrases for the table: <span class='en'>Wait a moment. · Yes, but don't forget… · I'd like to learn…</span> — I count how often they are used.</li><li>Kagan <b>RoundRobin</b>: round the circle — one advantage or disadvantage per turn.</li><li>The argument itself runs on Kagan <b>Talking Chips</b>: everyone has 3 phrase cards, and each time you speak you put a card in the middle; out of cards means you listen. The crew decides, not the loudest voice.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.22 Super skills box · the table · Key phrase cards, 3 per student</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they argue using the phrases and decide after the table. Expected: the logic changes the initial choice of 1–2 crews</div></td><td class='mat'>slide 5</td></tr><tr><td class='min'>20–28′</td><td class='stage'><div class='nm'>PLAN · the grid</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a Monday–Friday grid through RoundTable: 4 time slots × subjects; every choice comes with one WHY line</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>The grid: times and subjects. Next to each choice — one WHY line.</span></li><li>Kagan <b>RoundTable</b>: the grid sheet goes round the crew, each student writes their subject TOGETHER with its WHY line and passes it on — 'just agreeing' is not an option.</li><li>The start times come from the unit's arguments: <span class='en'>Finnish data: shorter days work. Our school starts at ten.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> grid sheet · Project planner p.118</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they build the grid with reasons. Expected: the arguments from Pairs 2 and 4 come up by themselves</div></td><td class='mat'>slide 6</td></tr><tr><td class='min'>28–48′</td><td class='stage'><div class='nm'>Due diligence · Quick review as stations</div><div class='zone'>stations</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 4 stations, 5 min each: vocabulary (both sets) · grammar (tables + questions) · pronouns · spelling</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Before investors trust you, they check the company. Four stations, five minutes each.</span></li><li>The stations: a routines+subjects blitz through Kagan <b>Quiz-Quiz-Trade</b> (ask with your card — answer — trade and move on to the next person) · Present simple tables + flips · object pronoun replacement · a spelling dictation.</li><li>A personal gap list: <span class='en'>Write down what YOU missed — that's your test prep list.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.21 Quick review · station cards · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they work the stations and log their gaps honestly. Expected: the gap lists all differ — that is the point</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit1_Translation_Match_It_2up_A4 + Get_Involved_A2_Unit1_Translation_Translate_It_2up_A4</b><div class="nbk">two 2-up sheets (one A4 = 2 pupils each): MATCH IT! — 12 Russian sentences to English A–L (daily routine, present simple in all three forms, school subjects, object pronouns, checking phrases), then TRANSLATE IT! — the same 12 from memory</div><ul><li>Glue MATCH IT! in and join the pairs in pencil — first alone, then check with a partner.</li><li>Glue TRANSLATE IT! on the next page and write the English without looking back.</li><li>Self-check against the matched sheet; every mistake is rewritten as a full sentence.</li><li>Write your score out of 12 in the margin — that is the unit's exit line.</li></ul><span class="nbp"><b>When:</b> ~8 min at the start of the “Due diligence · Quick review as stations” stage</span><span class="nbp"><b>Prep:</b> 1 × A4 = 2 pupils (pre-cut, one of each sheet per pair). Glue sticks, pencils.</span></div></td><td class='mat'>slides 7–8 · timer</td></tr><tr><td class='min'>48–50′</td><td class='stage'><div class='nm'>Transition: stretch your legs</div><div class='sub'>break · transition</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> warm-up</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Stretch like it's PE. Freeze like it's a test. Smile like it's drama!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> a breather before the build</div></td><td class='mat'>—</td></tr><tr><td class='min'>50–62′</td><td class='stage'><div class='nm'>CREATE · building the pitch</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the visual of the grid + splitting the pitch blocks between the roles + one run-through</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Ninety seconds, four voices: the school (10) · the grid (30) · the WHY (30) · the closer (20).</span></li><li>One run-through against the timer; I hand the judges the cards with the WHY questions.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> grid sheet · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they run it through in their roles. Expected: the timing doesn't fit on the first run — they cut it themselves</div></td><td class='mat'>slide 9</td></tr><tr class='True'><td class='min'>62–78′</td><td class='stage'><div class='nm'>PITCH · the investment</div><div class='zone'>stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 90-second pitches + investor questions (the WHY cards) + a secret vote with investment chips</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Pitch! Then investor questions: Why does your school start at ten? Why no maths on Friday?</span></li><li>The investment: 2 chips each, you cannot back your own school. One school wins — its grid goes up on the wall.</li><li>The judges hold the rubric: fluency · accuracy · logic.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> timer · chips · the rubric</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they pitch and hold up under questioning. Expected: the WHY questions expose the weak grids — the logic decides it</div></td><td class='mat'>slides 10–11 · timer</td></tr><tr><td class='min'>78–84′</td><td class='stage'><div class='nm'>Leaderboard + gap list</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the pair's points + the final unit leaderboard BEFORE the test + a personal preparation plan</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Points: the stations + the pitch + the investment. <span class='en'>Unit leaderboard — final standings before the test!</span></li><li>A gap list for everyone: <span class='en'>Your test prep = YOUR gaps, not everything.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> leaderboard</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they leave with a personal preparation list</div></td><td class='mat'>slide 12</td></tr><tr><td class='min'>84–90′</td><td class='stage'><div class='nm'>Closing: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> reflection + homework (preparation off the gap list) + the rules for the Pair 8 test</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>The 'I can…' slide.</li><li>Homework: WB p.11 'Look what you know' + your own gap list (20 min, not everything at once).</li><li><span class='en'>Thursday: the test. You know exactly what to bring. See you, founders.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> homework slide (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write down targeted preparation</div></td><td class='mat'>slide 13</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> WB p.11 'Look what you know!' (the unit self-check) + 20 minutes on your personal gap list from the stations (not 'everything at once'!).</p></td><td class='mat'>WB Unit 1 · gap list · the test next pair</td></tr>
+
+      <tr>
+        <td class="min">0–6′</td>
+        <td class="stage"><div class="nm">Lead-in · Retrieval warm-up</div><div class="zone">desks → pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Unit 1 brain dump.</span> <span class="en">Close your books. You've got 90 seconds — write everything you remember from Unit 1: daily routines, school subjects, one present-simple sentence about you.</span> Silent free recall (low-stakes, retrieval practice).</p>
+          <p><span class="game">▶ RallyRobin</span> in pairs — take turns reading out one item each, no repeats, keep going till the timer stops. <span class="en">Count them — how many between you?</span></p>
+          <p><span class="ph">Set the day:</span> <span class="en">Today you design your ideal school — and prove Unit 1 lives in your head. Let's go.</span></p>
+        </td>
+        <td class="mat">notebooks · timer · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">6–16′</td>
+        <td class="stage"><div class="nm">Interleaved review</div><div class="zone">whole room, standing</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Quiz-Quiz-Trade</span> (Kagan) — each pupil gets one review card (Q on front, A on back), mixing all four strands: vocab (“<i>the opposite of ‘start school’?</i>”), present simple (“<i>he / go → ?</i>”), object pronouns (“<i>I meet my friends and play with ___.</i>”), spelling rule (“<i>study → he ___</i>”).</p>
+          <p><span class="en">Stand up, hand up, pair up!</span> Quiz your partner → they quiz you → coach if needed → <b>trade cards</b> → new partner. 4–5 swaps. Everyone answers every round — no spectators.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do you keep your card or trade it?</span> (→ trade). Snapshot check of 2–3 tricky cards on the board.</p>
+        </td>
+        <td class="mat">QQT review cards (1/pupil) · U1 card set p.12–23</td>
+      </tr>
+
+      <tr>
+        <td class="min">16–25′</td>
+        <td class="stage"><div class="nm">Project STEP 1 · THINK</div><div class="zone">desks, open SB p.22</div></td>
+        <td class="flow">
+          <p><span class="en">Open your books at page 22 — WDYT? What is an ideal school? Your task: design the timetable for your ideal school.</span> Read the three Learning outcomes together.</p>
+          <p><span class="ph">Ex 1 (video) + Ex 2.</span> Watch the clip: <span class="en">Which school subjects do they mention?</span> Then in the Model project photos: <span class="en">What subjects can you see?</span></p>
+          <p><span class="ph">Ex 3 — match the unusual subjects.</span> <span class="game">▶ Numbered Heads Together</span> in teams: match 1–4 (money management · cyber-security · public speaking · inventing) with a–d. <span class="en">Heads together… number 3, stand and tell us.</span></p>
+          <p><span class="ph">Ex 4 — Critical thinking.</span> <span class="en">Are these subjects useful? Why / why not?</span> Quick open feedback — push for reasons, not just yes/no.</p>
+        </td>
+        <td class="mat">SB p.22 · video (Ex 1) · projector</td>
+      </tr>
+
+      <tr>
+        <td class="min">25–35′</td>
+        <td class="stage"><div class="nm">Project STEP 2 · PLAN</div><div class="zone">desks → pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Super skill — “Making logical decisions” (I do).</span> Think aloud with the Tips: <span class="en">Hmm, more art or more maths? I won't decide fast — let me list the advantages and disadvantages first… so, I think…</span> Model one negotiation using the Key phrases.</p>
+          <p><span class="ph">We do — Ex 5.</span> Pairs practise saying the Key phrases (<i>Wait a moment · Slow down · What about…? · I'd prefer… · Me too</i>) with <span class="game">▶ RallyCoach</span> — partner A proposes, partner B reacts with a Key phrase, swap.</p>
+          <p><span class="ph">You do — Ex 6.</span> In pairs make notes for the ideal timetable: <span class="en">Decide the start &amp; finish time, minutes per lesson, and which subjects — and be ready to say WHY.</span> Assign roles (time-keeper · scribe). Timebox 6 min.</p>
+        </td>
+        <td class="mat">SB p.22 Super skills box · Key phrases card (visible)</td>
+      </tr>
+
+      <tr>
+        <td class="min">35–44′</td>
+        <td class="stage"><div class="nm">Project STEP 3 · CREATE</div><div class="zone">desks / pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Ex 7 — build it.</span> <span class="en">In your notebook, draw a timetable grid for one week of classes.</span> Use the Model project on p.23 as a layout guide (days across, times down). Project planner p.118 if a pair needs the frame.</p>
+          <p><span class="ph">Ex 8 — justify it (writing accuracy).</span> Write 4–5 sentences with the frames: <span class="en">Our school day starts at… and finishes at… because… · Students learn (music) because we think…</span></p>
+          <p><span class="ph">CHECK before the break:</span> peer-edit with a coloured pen — <span class="en">-s on he/she/it? Object pronoun after the verb? Capital letters?</span></p>
+        </td>
+        <td class="mat">notebooks · SB p.23 model · Project planner p.118 · coloured pens</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">44–47′</td>
+        <td class="stage"><div class="nm">⚡ Brain-break</div><div class="zone">stand up</div></td>
+        <td class="flow"><p><span class="game">▶ Subject mime relay</span> — call a subject (<span class="en">PE! chemistry! drama!</span>), everyone mimes it fast; last to move is “out” for that round. 60–90 sec to reset energy, then: <span class="en">And… freeze. Sit down — showtime.</span></p></td>
+        <td class="mat">open space</td>
+      </tr>
+
+      <tr>
+        <td class="min">47–58′</td>
+        <td class="stage"><div class="nm">Project STEP 4 · PRESENT</div><div class="zone">pair → pair rotation</div></td>
+        <td class="flow">
+          <p><span class="ph">Ex 9 — present.</span> Read the How to… tips on p.118 (notes not sentences · one fact each · look up). Then each pair joins another pair: <span class="en">Tell them about your ideal school timetable — take turns, one lesson each.</span> Rotate so every pair presents to two others.</p>
+          <p><span class="ph">Ex 10 — Peer review.</span> Listeners have a task: <span class="en">Choose the timetable you think is most interesting and useful for all students — and say why.</span> Report one winner + reason to the class.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">While you listen — are you silent, or do you have a job?</span> (→ choose the best + reason).</p>
+        </td>
+        <td class="mat">notebook timetables · SB p.23 · How to… p.118</td>
+      </tr>
+
+      <tr>
+        <td class="min">58–70′</td>
+        <td class="stage"><div class="nm">★ Quick review challenge</div><div class="zone">teams of 3–4</div></td>
+        <td class="flow">
+          <p><span class="en">Now — the Unit 1 Champions Challenge!</span> Flagship team quiz (this is the review pair). Use <span class="game">▶ Showdown</span> (Kagan): read a question → all write on mini-whiteboards → <span class="en">Showdown!</span> → boards up together. Interleaved rounds off <b>Quick review p.21</b>: R1 vocab, R2 present simple (aff/neg/Yes-No), R3 object pronouns, R4 “fix the sentence”.</p>
+          <p>Every pupil writes every round (no hitch-hikers). Team point for a correct board; running score on the board. Winning team gets the reward (star stickers / homework pass 🌟).</p>
+          <p>Keep it fast and fair — recycle any error straight into the next round as a CCQ.</p>
+        </td>
+        <td class="mat">mini-whiteboards · SB p.21 Quick review · scoreboard · reward stickers</td>
+      </tr>
+
+      <tr>
+        <td class="min">70–80′</td>
+        <td class="stage"><div class="nm">📓 Interactive notebook · Match It</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="nb">📓 <b>Interactive notebook</b> — <i>Unit 1 Translation: MATCH IT! + TRANSLATE IT!</i> (2-up A4, 1 sheet per 2 pupils).
+            <ul>
+              <li><b>MATCH IT! (in class):</b> glue in the sheet — 12 Russian sentences → English A–L (daily routine · present simple in all three forms · school subjects · object pronouns · checking phrases). Join the pairs in pencil — first alone, then check with a partner.</li>
+              <li><b>TRANSLATE IT! (start now → finish for HW):</b> glue the second sheet on the next page; begin writing the English from memory, no looking back. Self-check against the matched sheet; every mistake rewritten as a full sentence; score out of 12 in the margin — the unit's exit line.</li>
+            </ul></span></p>
+          <p><span class="ph">Monitor:</span> spot-check 2–3 pairs' matches; put one recurring error on the board and drill it chorally.</p>
+        </td>
+        <td class="mat"><b>Match It</b> + <b>Translate It</b> 2-up A4 (notebooks.py · U1 transl) · glue · pencils</td>
+      </tr>
+
+      <tr>
+        <td class="min">80–87′</td>
+        <td class="stage"><div class="nm">Final reflection</div><div class="zone">desks → pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Final reflection (SB p.23).</span> <span class="game">▶ Timed Pair Share</span> (30 sec each) on the three prompts: <span class="en">How well can you describe your ideal timetable and explain your decisions? · Were your decisions logical — why? · Did you use language from the unit — give an example.</span></p>
+          <p><span class="ph">Self-evaluation (from Quick review / WB objectives).</span> Tick the “I can…” list for Unit 1 (talk about routines &amp; subjects · ask/answer in present simple · use object pronouns). <span class="en">Any tick with a question mark — that's tonight's focus.</span></p>
+        </td>
+        <td class="mat">SB p.23 Final reflection · “I can…” self-eval (notebook)</td>
+      </tr>
+
+      <tr>
+        <td class="min">87–90′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">door</div></td>
+        <td class="flow"><p>Praise specifics from today's projects. <span class="en">Great logical decisions today — Unit 1 is officially in your heads. Homework's on the board.</span> Exit ticket at the door: each pupil says <b>one</b> present-simple sentence about their ideal school. <span class="en">See you next lesson — that's the Unit 1 test.</span></p></td>
+        <td class="mat">reward stickers · board (HW)</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Workbook — p.11 “Look what you know! / Round-up” (Unit 1 review):</b> Round-up “Choose the correct option” (items 1–14) + <b>Grammar review – Present simple ex.1–2</b> + <b>Object pronouns ex.3</b> + <b>Self-evaluation</b>. Plus finish the <b>📓 TRANSLATE IT!</b> notebook sheet (all 12, score /12). <i>(Next pair = Unit 1 Test — Standard/Higher.)</i></p></td>
+        <td class="mat">Get Involved A2 Workbook p.11 · Translate It sheet</td>
+      </tr>
+
     </tbody>
   </table>
   </div>
 
-  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
-
-  <div class="grid2">
-    <div class="cardb"><ul class="a">
-      <li><span class="lb">Main aim.</span> By the end, crews can <b>design an ideal-school timetable, justify each choice logically</b> and pitch it in 90 seconds; the unit language is revised for the P8 test.</li>
-      <li><span class="lb">Subsidiary.</span> Super skill: making logical decisions (pros/cons BEFORE the decision); the project Key phrases (Wait a moment · Yes, but don't forget…); Quick review p.21 run as stations.</li>
-      <li><span class="lb">Personal.</span> The project is the weaker students' moment of glory: roles matched to their strengths (grid designer · voice · logic officer · defender). I never call the Quick review test preparation — it is 'investor due diligence'.</li>
-    </ul></div>
-    <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
-      <ul class="a"><li>list advantages and disadvantages before deciding</li><li>use project Key phrases in a group discussion</li><li>pitch a timetable with logical reasons in 90 seconds</li><li>pass all Quick-review stations of Unit 1</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
-      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Think</span><span>Plan</span><span>Review stations</span><span>Create</span><span>Pitch</span><span>Leaderboard</span></div>
-    </div>
-  </div>
-
-  <div class="eyebrow">Target language</div>
-  <div class="grid2">
-    <div class="cardb tl">
-      <div class="r"><div class="k">Lexis</div><div><span class='w'>art</span><span class='w'>biology</span><span class='w'>chemistry</span><span class='w'>citizenship</span><span class='w'>design and technology</span><span class='w'>drama</span><span class='w'>English language</span><span class='w'>English literature</span><span class='w'>French</span><span class='w'>geography</span><span class='w'>German</span><span class='w'>history</span><span class='w'>ICT</span><span class='w'>maths</span><span class='w'>music</span><span class='w'>PE</span><span class='w'>physics</span><span class='w'>wake up</span><span class='w'>get up</span><span class='w'>get dressed</span><span class='w'>have breakfast</span><span class='w'>pack my bag</span><span class='w'>go to school</span></div></div>
-      <div class="r"><div class="k">Structure</div><div>I'd like to learn… · Wait a moment — don't forget… · We chose drama because… · Our school day starts at ten because teens sleep badly.</div></div>
-      <div class="r"><div class="k">Form</div><div>because + the reason; the comparisons from the Pair 4 bonus level used in the arguments.</div></div>
-      <div class="r"><div class="k">Pron. watch</div><div>the stress of the pitch: We chose DRAMA because…</div></div>
-    </div>
-    <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-      <div class='ccq'>'Because it's fun' — is that an argument? → no: why does fun mean it is useful? Push them to the reason.</div><div class='ccq'>Do we write the pros and cons before or after the decision? → BEFORE. That is what a logical decision is.</div><div class='ccq'>Is the Quick review a test? → no, it is the check before the test: find your gaps today, not in Pair 8.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.21–23 (Quick review + Project), KTP pair 11. All the unit material has been covered; what is new is defending decisions logically.</p>
-    </div>
-  </div>
-
-  
-
-  <div class="grid2">
-    <div>
-      <div class="eyebrow">Anticipated problems &amp; solutions</div>
-      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>The project eats the revision</td><td>A firm frame: the revision stations take 20 min IN THE MIDDLE of the pair, before Create — they are the 'due diligence on the company'.</td></tr><tr><td>The timetable becomes a pile of 'fun stuff'</td><td>The logic filter: every subject on the grid has to answer WHY in one sentence, or the judges dock it.</td></tr><tr><td>Passengers in the crew</td><td>Roles: grid designer · logic officer · voice · defender; the pitch collapses if one of the blocks stays silent.</td></tr></tbody></table></div>
-    </div>
-    <div>
-      <div class="eyebrow">Classroom management — signals</div>
-      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
-    </div>
-  </div>
-
   <div class="foot">
-    <span>Speak &amp; Smile · Get Involved! A2 · Unit 1 “School life” (What is an ideal school?) · GIA2 — lesson plan &amp; staging</span>
-    <span>GIA2 · U1 'School life' · P7 · the 'ours' track 🚀</span>
+    <span>Speak &amp; Smile · Get Involved! A2 (GIA2, продолжающие) · Unit 1 · Pair 7 — Project &amp; Unit Review — lesson plan &amp; staging</span>
+    <span>Verified vs SB pp.21–23 + Project planner p.118, КТП U1 P7 (lessons 21–22), Workbook p.11, notebooks.py (U1 Match It/Translate It).</span>
   </div>
 </div>
-<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
-<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>
