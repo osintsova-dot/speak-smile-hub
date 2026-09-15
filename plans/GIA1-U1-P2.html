@@ -1,6 +1,5 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GIA1 · Unit 1 · Pair 2 (Lesson Plan &amp; Staging)</title>
+<title>Get Involved A1+ · Unit 1 · Pair 2 — Reading &amp; Critical thinking (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
     --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -37,139 +34,252 @@
   .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
-  /* lesson at a glance */
-  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
-  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
-  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
-  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
-  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
-  table.glance tr.bridge td{ background:var(--honey-soft); }
-  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
-
-  /* the staging */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
-  .game{ color:var(--p); font-weight:800; }
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
-  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
-  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
-  /* the three sub-blocks of a stage */
-  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
-  .tsteps{ margin:7px 0; }
-  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
-  .tsteps li{ margin:3px 0; font-size:.92rem; }
-  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
-  .showb .sbh{ color:var(--zone); }
-  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
-  .kidsb .sbh{ color:var(--honey-ink); }
+  .slot{ color:var(--muted); font-weight:700; }
   .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
   table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
   table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
   table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
   td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
-  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
-  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
   td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
-  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
   .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
   tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+  /* interactive notebook */
+  .nb{ background:var(--honey-soft); border:1px solid var(--honey); border-radius:9px; padding:9px 11px; margin:7px 0; font-size:.9rem; }
+  .nb .nbk{ font-style:italic; color:var(--muted); margin:3px 0 5px; }
+  .nb ul{ margin:4px 0 6px; padding-left:18px; } .nb li{ margin:2px 0; }
+  .nb .nbp{ display:block; font-size:.82rem; color:var(--muted); }
 
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
-    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">Get Involved! A1+ · Unit 1 “Our world” · Pair 2 — Mission «Country Detectives»: fact-check the №1 claim</div>
-    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>continuing line 🚀 after GMF4</b> · 90 min · mission-based: gate → base sprint → challenge levels → GMF4 bonus → product with a bar · unit leaderboard</div>
-    <div class="meta"><span class='chip'>Week 21.09–27.09 · lessons 11–12 (KTP pair 6)</span><span class='chip new'>🚀 continuing after GMF4</span><span class='chip'>SB pp.14–15</span><span class='chip'>unit leaderboard · streaks · gold runs</span></div>
+    <div class="t">🌍 Get Involved A1+ · Unit 1 “Our world” · Pair 2 (P2) — Reading &amp; Critical thinking</div>
+    <div class="s">A1+ teens (~11–13 y.o., readers) · 90 min · Reading skills + word work + critical thinking · Student's Book pp. 14–15</div>
+    <div class="meta"><span class="chip">Week 21.09–27.09 · Pair 6 / Lessons 11–12</span><span class="chip new">📖 Reading / CT</span><span class="chip">ACCELERATED line (after GMF4)</span><span class="chip">~12 teens · 3 teams of 4</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia1/games/u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia1/games/u1-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia1/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1qBX7PSo1Ueoq2fklkMkEJSfAVHEhi4of" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
-  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
-  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: greeting + rewind of the last pair</td><td>Showdown as a review: a word about the weekend + “battery level”; blitz-rewind of P1: 5 nationalities on mini-boards + a volunteer's micro-pitch</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>I announce the mission: verify the claim “the Netherlands is №1 for teenagers”; a verdict only with evidence</td></tr><tr class='bridge'><td class='gmin'>8–13′</td><td class='gname'>Gate: the lie detector</td><td>6 loud claims — T/F in writing BEFORE reading, slips face down; we'll verify with facts after the hunt</td></tr><tr><td class='gmin'>13–20′</td><td class='gname'>Sprint: text type by look</td><td>30 seconds WITHOUT reading: the type of each of 4 texts by look only + a photo match in 60 sec</td></tr><tr><td class='gmin'>20–33′</td><td class='gname'>Challenge: a raid for facts across 4 stations</td><td>everyone raids THEIR OWN station-text (3 facts, 4-min limit), reports under the 5-second rule; we open the lie detector</td></tr><tr><td class='gmin'>33–42′</td><td class='gname'>The word-work duel: six words from the text</td><td>Numbered Heads Together: partners split 6 definitions in half and drill each other under the 5-second rule; a sentence about Russia</td></tr><tr class='bridge'><td class='gmin'>42–51′</td><td class='gname'>Bonus level: interrogating Thomas (Have you ever…?)</td><td>role play: one is Thomas from the text, the other a detective with 3 “Have you ever…?” questions (GMF4 structures)</td></tr><tr><td class='gmin'>51–62′</td><td class='gname'>The happiness ranking — ammunition for the debate</td><td>crews rank 8 cards on “what matters most for happiness”; their top-3 becomes the line of argument in the debate</td></tr><tr><td class='gmin'>62–80′</td><td class='gname'>Product: trio debates — a verdict backed by facts</td><td>trios: prosecutor against defender (90 sec each), the judge expects 3 facts; we rotate roles 3 times</td></tr><tr><td class='gmin'>80–90′</td><td class='gname'>Leaderboard + debrief</td><td>final class vote — “is the claim confirmed?”, points, HW, and the broadcast teaser</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 — the exact pages and tasks for your line (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + a Research bonus); details at the bottom of the procedure</td></tr></tbody></table></div>
 
-  <div class="eyebrow">Procedure — full staging</div>
-  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>read an informational text for gist and detail</b> (“The Netherlands — a good place to be a teenager”), using the sub-skill <b>identifying different types of text</b> to predict content before reading.</li>
+      <li><span class="lb">Subsidiary.</span> Recycle <i>be</i> (affirmative/negative) in the reading context; build topic vocabulary + word-work items (<i>great, diet, bike, subjects, education, currency</i>); develop <b>critical thinking</b> (Remember → Evaluate: rank what makes a good place to live) with 3+ sentence arguments; fluency personalisation about their own country.</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk lean; set a clear time pressure on every reading task so teens skim/scan instead of reading every word; use a hinge question before moving on; English-only signal during discussion.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>predict what a text is about from its title, pictures &amp; layout;</li>
+        <li>find specific facts fast (match, true/false, correct);</li>
+        <li>define 6 word-work items and use them about their own country;</li>
+        <li>rank and justify what makes a place good to live (Evaluate).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis (topic)</div><div><span class="w">money</span><span class="w">city transport</span><span class="w">food</span><span class="w">a popular sport</span><span class="w">school / education</span></div></div>
+      <div class="r"><div class="k">Word work</div><div><span class="w">great = very good</span><span class="w">diet = the food people eat</span><span class="w">bike (informal = bicycle)</span><span class="w">subjects = things you study</span><span class="w">currency = money used in a country</span></div></div>
+      <div class="r"><div class="k">Structure (recycled)</div><div><i>be</i> in context: Amsterdam <b>is</b> the capital · Dutch teenagers <b>are</b> happy · It <b>isn't</b> difficult to talk to teachers · The Netherlands <b>aren't</b> a big country.</div></div>
+      <div class="r"><div class="k">Reading sub-skill</div><div><b>Identifying different types of text</b> — before you read, look at titles / pictures / whether you see full sentences or just words &amp; numbers, to guess what information the text gives.</div></div>
+      <div class="r"><div class="k">Thinking</div><div><b>Remember</b> (find one thing similar &amp; one different to your country) → <b>Evaluate</b> (order what matters for a happy life).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div><i>the Netherlands</i> /ˈneðələndz/, <i>Dutch</i> /dʌtʃ/ (not “Holland/Dutchland”); stress: <b>cu</b>rrency · edu<b>ca</b>tion.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq"><b>Hinge (text type):</b> “A box with <i>Name / Population / Capital / Currency</i> — is that a story, an opinion, or quick facts?” → quick facts (a fact file).</div>
+      <div class="ccq">“Do I read <b>every word</b> to find one number?” → No — I <b>scan</b> for it.</div>
+      <div class="ccq" style="margin-bottom:12px">“Dutch = the people / language of…?” → the Netherlands.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> countries &amp; nationality adjectives are fresh from P1; <i>be</i> aff/neg known from GMF4 (re-entry) — here it is only recognised in context, not taught. Teens read fluently. <b>Teams</b> — max 4; split by size (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4).</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Teens read every word &amp; run out of time</td><td>Set a visible timer + a hunt goal (“find 3 numbers”); stop on the buzzer, not when finished.</td></tr>
+        <tr><td>Netherlands / Dutch / Holland confusion</td><td>One board line: <i>country = the Netherlands · people/language = Dutch</i>.</td></tr>
+        <tr><td>Word work done passively (just matching)</td><td>Turn it into <span class="game">▶ Quiz-Quiz-Trade</span> — they say the definition aloud to a partner.</td></tr>
+        <tr><td>Ranking debate = one-word answers</td><td>Give sentence frames on the board; require <b>3+ sentences</b> and the word <i>because</i>.</td></tr>
+        <tr><td>L1 slips in during discussion</td><td>Assign roles (facilitator keeps English); “English only” hand signal.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → class stops &amp; echoes <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>Timer on screen</b> — every reading task is against the clock; eyes to the countdown.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower arm = louder/quieter for pair &amp; team talk.</div>
+        <div class="sigc"><b>“English only” 🖐</b> — raised hand = switch back to English.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pens down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — stop &amp; look up for a quick model / re-set.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = task / structure</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+    <span>📓 = interactive notebook</span>
+  </div>
 
   <div class="scroll">
   <table class="proc">
-    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
     <tbody>
-<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Into the lesson: greeting + rewind of the last pair</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Showdown as a review: a word about the weekend + “battery level”; blitz-rewind of P1: 5 nationalities on mini-boards + a volunteer's micro-pitch</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>At the door: <span class='en'>One word about your weekend!</span> “Battery” 0–100% on fingers.</li><li>I frame it as Kagan <b>Showdown</b>: EVERYONE writes at the same time, boards face down, on the command <span class='en'>No peeking… Boards up!</span> they lift them together — I see everyone's answer, no hiding.</li><li>Rewind of P1: 5 flash countries → nationality in writing on mini-boards (echo of the gate — spelling!), <span class='en'>Boards UP!</span> +1 for a clean one.</li><li>Volunteer: <span class='en'>Your №1 place — one sentence, twenty seconds, no pause!</span> +2.</li><li>Bridge: <span class='en'>Producers, promotion: today you're DETECTIVES. A magazine made a bold claim — somebody has to check it.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mini-boards · my list of 5 countries (Brazil · the Netherlands · Turkey · China · New Zealand) — this IS the TB warmer for the reading lesson (country→nationality, finishing on the Netherlands, TB p.20)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write nationalities and lift together, listen to the micro-pitch. Expected: spelling better than at gate P1. Typical error: Dutch forgotten — “the Netherlands → ?” in chorus.</div></td><td class='mat'>mini-boards</td></tr><tr class='bridge'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> I announce the mission: verify the claim “the Netherlands is №1 for teenagers”; a verdict only with evidence</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Slide <b>MISSION “COUNTRY DETECTIVES”</b>.</li><li>I say: <span class='en'>A magazine claims: the Netherlands is the №1 country to be a teenager. Your agency fact-checks it TODAY. Verdict at the end — with evidence, or you're fired.</span></li><li>Leaderboard in view, same crews.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mission slide (or “NL = №1 for teens??” on the board) · leaderboard <b>(Backup:</b> everything on the slide goes onto the board before the lesson (or onto printed cards, one per crew).<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> step into the role of agents. Expected: skepticism “come on, №1?” — the perfect mood for fact-checking.</div></td><td class='mat'>mission slide</td></tr><tr class='bridge'><td class='min'>8–13′</td><td class='stage'><div class='nm'>Gate: the lie detector</div><div class='sub'>🎯 GATE · lie detector</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 6 loud claims — T/F in writing BEFORE reading, slips face down; we'll verify with facts after the hunt</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I display 6 claims: Thomas is 12 · Dutch people cycle 1,000 km/year · 75% of NL is under the sea · Dutch food is bad for you · most Dutch teens are happy at school · Thomas is from Amsterdam.</li><li>I say: <span class='en'>Commit: T or F, in writing, NOW. You can't check yet — that's the point. A detective's guess is worthless without the file.</span> 2 min.</li><li>I command everyone to turn the slips face down until the hunt. (Key for myself: F/F/F/F/T/F.)</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> slide with the 6 claims (or in a column on the board) · answer slips <b>(Backup:</b> everything on the slide goes onto the board before the lesson (or onto printed cards, one per crew).<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> commit their guesses in writing and turn the slips over. Expected: 3–4 “caught” by plausible fakes. Typical error: peeking into the Student's Book — “Closed books! Guessing is the point!”</div></td><td class='mat'>gate slide · slips</td></tr><tr><td class='min'>13–20′</td><td class='stage'><div class='nm'>Sprint: text type by look</div><div class='sub'>⚡ Base sprint · type the texts</div><div class='zone'>desks · crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 30 seconds WITHOUT reading: the type of each of 4 texts by look only + a photo match in 60 sec</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I say: <span class='en'>Thirty seconds, DON'T read page 15 — match the four texts to a–d by LOOK only: numbers? photos? sentences?</span></li><li>I check with a justification: +2 for a match with a reason (<span class='en'>%-signs = fun facts panel!</span>).</li><li>I finish off ex.1: <span class='en'>Words 1–5 to photos A–E — sixty seconds!</span> Points in the bank.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the Student's Book pp.14–15 · board: 4 type icons (📊 · 🧑 · 📰 · 🎉)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> identify text types by look in seconds and explain the giveaway. Expected: instant — their speed. Typical error: starting to read — “Look, don't read! Detectives scan first”.</div><span class='diff'><span class='ext'>⭐ Fast finishers (TB p.20):</span> write down what you see in each photo (bicycles, a pancake…).</span></td><td class='mat'>SB pp.14–15</td></tr><tr><td class='min'>20–33′</td><td class='stage'><div class='nm'>Challenge: a raid for facts across 4 stations</div><div class='sub'>🔥 Challenge · timed fact raid (jigsaw)</div><div class='zone'>4 stations</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> everyone raids THEIR OWN station-text (3 facts, 4-min limit), reports under the 5-second rule; we open the lie detector</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>4 text-stations hung up before the lesson; I hand out hunt cards (3 facts per crew member).</li><li>ICQ: <span class='en'>Copy sentences? — No! Short answers: Amsterdam, euro, 17 million.</span></li><li>I start: <span class='en'>Four minutes cap — RAID!</span></li><li>Return: report to the crew under the 5-second rule (<span class='en'>What's the currency? — …five seconds!</span>), a team sheet for 12 facts.</li><li>We open the detector slips: <span class='en'>Verify your guesses — WITH the source: False! Text 2 says Thomas is 13.</span> +1 for a correction with a source.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> 4 stations · hunt cards · team sheets · timer · audio 10 as optional background <b>(Backup:</b> no track — I read the script aloud at listening speed.<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> raid stations solo, report against the timer, check their morning guesses against the facts and cite the source. Expected: “My guess was wrong — text 4 says 25%!”. Typical error: a fact without a source — no point given, the evidence rule.</div><span class='diff'><span class='ext'>⭐ For the fast ones:</span> the “Fact+” envelope — a number, a name, and a % nobody has used yet.</span></td><td class='mat'>stations · hunt cards · timer</td></tr><tr><td class='min'>33–42′</td><td class='stage'><div class='nm'>The word-work duel: six words from the text</div><div class='sub'>Word work duel</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Numbered Heads Together: partners split 6 definitions in half and drill each other under the 5-second rule; a sentence about Russia</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I split the roles: <span class='en'>Partner A owns definitions 1–3, B owns 4–6. Find your bold words in the text — two minutes.</span></li><li>I run the check as Kagan <b>Numbered Heads Together</b>: numbers 1–4 in the crew, <span class='en'>Heads together — make sure EVERYONE in your crew can answer!</span> → I call a number — exactly that person answers, no prompting from the floor.</li><li>Duel: <span class='en'>Test each other. Five-second rule! The money people use? — Currency!</span></li><li>Finale: every pair — a sentence about Russia with any word; the best from the crew read out loud (+1 richness for an adjective).</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the Student's Book p.14 ex.6 · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> own their trio of words and drill their partner at speed; compose a sentence about Russia. Expected: “Our education is free”. Typical error: an is/are slip — I note it silently: fuel for gate P3.</div><span class='diff'><span class='ext'>⭐ TB Challenge (p.21):</span> duel answers — FULL sentences ONLY: <span class='en'>The currency of the Netherlands is the euro.</span></span><span class='asr'>✔ Assess: are is/are slips still alive after P1 — 2 examples for gate P3.</span></td><td class='mat'>SB p.14</td></tr><tr class='bridge'><td class='min'>42–51′</td><td class='stage'><div class='nm'>Bonus level: interrogating Thomas (Have you ever…?)</div><div class='sub'>🚀 Bonus level · interview Thomas</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> role play: one is Thomas from the text, the other a detective with 3 “Have you ever…?” questions (GMF4 structures)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I raise the status: <span class='en'>Beginners ask Thomas: ‘Are you Dutch?’ You can time-travel his whole LIFE. Not in this book.</span></li><li>I write the frames: <b>Have you ever (lived in England / cycled to school in snow)? — Yes, I have. / No, never.</b></li><li>Role play: A = Thomas (facts from the text + imagination), B = detective with 3 questions. Swap.</li><li>The class's best question → +2 to the leaderboard.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> board: Have you ever…? frames · facts about Thomas on station №2 nearby</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> interrogate “Thomas” with the perfect, answer in character. Expected: “Have you ever eaten Dutch cheese? — Yes, I have!”. Typical error: “Did you ever…” — I accept it (also correct!), praise both versions.</div></td><td class='mat'>bonus frames</td></tr><tr><td class='min'>51–62′</td><td class='stage'><div class='nm'>The happiness ranking — ammunition for the debate</div><div class='sub'>Evaluate · happiness ranking (debate ammo)</div><div class='zone'>desks · crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> crews rank 8 cards on “what matters most for happiness”; their top-3 becomes the line of argument in the debate</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Remember step: <span class='en'>One similar + one different thing vs Russia — sixty seconds, huddle.</span></li><li>I hand out sets of 8 cards, launch Evaluate: <span class='en'>Order them 1–8 for happiness. Everyone touches at least two cards. Four minutes.</span></li><li>I charge them up for the debate: <span class='en'>Your top-3 = your ammunition: if NL wins on YOUR top-3 — the claim stands. If not — it falls.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> sets of 8 cards (education·family·free time·food·health·money·people·weather)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> rank the cards, knowing the ranking will become their argument. Expected: arguments over money/free time — already in frames. Typical error: arguing in Russian — the argument doesn't count (the rule's been announced).</div><span class='diff'><span class='ext'>⭐ TB Challenge (p.21):</span> explain your order with a partner, using the models: <span class='en'>(Health) is number 1 on my list — I'm not happy when I'm ill. For me, (money) isn't important, but people are.</span></span></td><td class='mat'>8-card sets</td></tr><tr><td class='min'>62–80′</td><td class='stage'><div class='nm'>Product: trio debates — a verdict backed by facts</div><div class='sub'>🏁 PRODUCT · verdict debates in trios</div><div class='zone'>trio circles</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> trios: prosecutor against defender (90 sec each), the judge expects 3 facts; we rotate roles 3 times</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I hand out roles and cards: Prosecutor (<span class='en'>NL isn't №1 because…</span>) · Defender (<span class='en'>It is — text 3 says…</span>) · Judge (card: ☐ 3 facts? ☐ answered the opponent? verdict).</li><li>Rules of order: 90 sec per side + 30 sec for the verdict. Facts — ONLY from the hunt sheets; a made-up fact = a point to the opponent.</li><li>I rotate roles ×3 — everyone gets to try all of them.</li><li>Judging points go to the leaderboard, gold-run debaters announced.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> role cards · judging cards · team fact sheets</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> debate by the rules, judge by the card, swap roles. Expected: quotes like “text 3 says 95%!”. Typical error: emotion instead of facts — the judge doesn't tick the box, the side loses quietly.</div><span class='ig'>🏆 <b>The bar for the product (the judges' rubric, every pair):</b> Fluency — pauses no longer than 3 sec (1–3) · Accuracy — clean forms (1–3) · Richness — adjectives, connectors, bonus structures (1–3). 9/9 = a “gold run”, +5 to the leaderboard.</span></td><td class='mat'>role cards · judge cards</td></tr><tr><td class='min'>80–90′</td><td class='stage'><div class='nm'>Leaderboard + debrief</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> final class vote — “is the claim confirmed?”, points, HW, and the broadcast teaser</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Vote: <span class='en'>Final verdict, whole class: is the claim CONFIRMED? Thumbs!</span></li><li>Points to the leaderboard, streaks updated.</li><li>Debrief: <span class='en'>What won debates today — loud voice or sourced facts?</span></li><li>HW + teaser: <span class='en'>Pair 3 — Zero-Mistake Broadcast: your be goes on air, and ONE error kills the show.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> leaderboard · HW slide <b>(Backup:</b> I write the homework on the board and they copy it into their diaries.<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> vote, compare with their gut feeling from the start of the lesson, put into words “facts beat volume”. Expected: both believers and sceptics — with arguments.</div></td><td class='mat'>leaderboard · HW slide</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>🚀 Workbook Unit 1 (mandatory ☆☆–☆☆☆):</b> Workbook p.8: ex.2–4 ☆☆ + ex.5 ☆☆☆ (which section the fact belongs to) + ex.6 ☆☆☆ (<i>What would you like to do in Peru? Why?</i> — in full, 2–3 sentences).</p><p>🔎 Research bonus (+5, TB Get online): find TWO kinds of Dutch cheese OR the name of the little Dutch pancakes — report with <i>be</i>: <i>Gouda is a Dutch cheese.</i></p><p><b>🚀 Bonus level (optional, +5):</b> write 2 «Have you ever…?» questions for a celebrity you like — we'll fire them in class.</p><p style='font-size:.85rem;color:var(--muted)'>WB audio is in the TRC; no track → skip the audio items. A photo of the HW slide is fine.</p></td><td class='mat'>Workbook U1 · notebook · leaderboard points logged next lesson</td></tr>
+
+      <tr>
+        <td class="min">0–6′</td>
+        <td class="stage"><div class="nm">Lead-in · WDYT hook</div><div class="zone">board → pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Hook.</span> On the board: <span class="en">Where is the best place in the world to be a teenager? Why?</span> Show 3 country photos (Netherlands, Norway, Japan) with no names.</p>
+          <p><span class="game">▶ Timed Pair Share</span> (30 sec each): partner A gives one place + one reason, then B. Frame on board: <span class="en">I think … is a good place to be a teenager because …</span></p>
+          <p>Quick hands-up vote; take 2–3 reasons. <span class="en">Today we read about the country teenagers voted number one — let's find out why.</span></p>
+        </td>
+        <td class="mat">3 country photos · board timer · <span class="game">▶ Timed Pair Share</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">6–15′</td>
+        <td class="stage"><div class="nm">Pre-reading · text types</div><div class="zone">seats, teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Sub-skill — identifying different types of text.</span> Open SB p.14. <span class="game">▶ Ex 1</span> teams match words 1–5 (<i>money · city transport · food · a popular sport · school</i>) to photos A–E — 60-sec race, first team to signal reads out.</p>
+          <p><span class="en">Look at the four texts on page 15, but don't read them yet. What TYPE is each one?</span> <span class="game">▶ Ex 2</span> (a general info / b unusual info / c one teenager's life / d teenage life in general). Point to clues: <span class="en">Title? Pictures? Full sentences, or just words and numbers?</span></p>
+          <p><span class="ph">Hinge check (all show fingers):</span> <span class="en">The box with Name, Population, Capital, Currency — is it (1) a story, (2) an opinion, or (3) quick facts?</span> → 3, a fact file. If a team is unsure, re-model before moving on.</p>
+        </td>
+        <td class="mat">SB pp. 14–15 · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">15–24′</td>
+        <td class="stage"><div class="nm">Reading 1 · gist race</div><div class="zone">seats → audio</div></td>
+        <td class="flow">
+          <p><span class="ph">Read for gist — against the clock.</span> <span class="game">▶ Ex 3</span>: <span class="en">Read the four texts QUICKLY — 90 seconds. Don't stop on hard words. Which piece of information from exercise 1 is NOT in the texts?</span> (→ <i>a popular sport</i>). Buzzer stops them.</p>
+          <p><span class="ph">Read &amp; listen — match.</span> <span class="game">▶ Ex 4 (audio 10)</span>: play the recording; learners match sentence halves 1–5 with a–e (Amsterdam is <b>d</b> · Dutch people love <b>c</b> · Thomas's parents are from <b>e</b> · Most Dutch teens are <b>b</b> · Life at home and school is good <b>a</b>). Pair-check, then whole-class.</p>
+          <p>Board line to fix the trap: <span class="en">country = the Netherlands · people &amp; language = Dutch.</span></p>
+        </td>
+        <td class="mat">SB p.14–15 · audio track 10 · timer</td>
+      </tr>
+
+      <tr>
+        <td class="min">24–36′</td>
+        <td class="stage"><div class="nm">Reading 2 · fact hunt</div><div class="zone">teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Read for detail.</span> <span class="game">▶ Ex 5 — Numbered Heads Together</span> (teams of 4, each pupil numbered 1–4): 7 true/false statements. <span class="en">Decide together — true or false — and CORRECT every false one with a full sentence. You have 5 minutes.</span> Key: 1&nbsp;F (13) · 2&nbsp;F (900 km) · 3&nbsp;T · 4&nbsp;T · 5&nbsp;F (Dutch food is good for you) · 6&nbsp;F (25% is under sea level) · 7&nbsp;F (it isn't difficult).</p>
+          <p><span class="ph">Check with accountability.</span> Call a random number: <span class="en">Number 3s — stand. Statement 5: true or false? Correct it.</span> That corrected sentence must use <i>is / isn't / are / aren't</i> — spotlight the recycled <i>be</i>.</p>
+          <div class="nb">📓 <b>Interactive notebook</b> — <b>Text-type detective + place word-bank</b> (hand-made note, no printed sheet this pair)
+            <div class="nbk">Reading pairs carry no catalog A5 takeaway (those are Voc/Gram/Speaking/Writing/Translation). Learners build a two-part notebook page they reuse in P3.</div>
+            <ul>
+              <li>Draw a 4-box grid: label each Netherlands text by TYPE (fact file · profile “Meet Thomas” · infographic · fun facts) + one clue that gave it away.</li>
+              <li>Start a PLACE WORD-BANK strip: copy the 6 bold/word-work items with a mini-definition — it feeds the “Describe a place” card in P3.</li>
+            </ul>
+            <span class="nbp"><b>When:</b> ~5 min woven into the fact-hunt check (seats).</span>
+            <span class="nbp"><b>Prep:</b> ordinary notebooks, pencils, coloured pen. No cutting.</span>
+          </div>
+        </td>
+        <td class="mat">SB p.15 · notebooks · <span class="game">▶ Numbered Heads</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">36–45′</td>
+        <td class="stage"><div class="nm">Word work · game round</div><div class="zone">stand up, mingle</div></td>
+        <td class="flow">
+          <p><span class="ph">Word work (SB Ex 6).</span> First, teams match the 6 definitions to the bold words in the text (<i>very good → great · everything about school &amp; learning → education/subjects · the food people eat → diet · informal word for bicycle → bike · things you study → subjects · money a country uses → currency</i>).</p>
+          <p><span class="game">▶ Quiz-Quiz-Trade</span> — one card each (definition on front, word on back). <span class="en">Stand up, hand up, pair up.</span> A reads the definition, B says the word, swap, then trade cards and find a new partner. 4–5 rounds.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do you read the WORD or the DEFINITION to your partner?</span> (→ the definition).</p>
+        </td>
+        <td class="mat">6 word-work cards ×3 sets · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">45–48′</td>
+        <td class="stage"><div class="nm">⚡ Brain break</div><div class="zone">standing</div></td>
+        <td class="flow"><p><span class="game">▶ Fact “Stand up if…”</span> — call quick statements, they stand if true for them: <span class="en">Stand up if… you ride a bike · you speak two languages · you'd like to visit the Netherlands · your city is quiet.</span> 30 sec of movement, then settle for the speaking block.</p></td>
+        <td class="mat">— (voice + movement)</td>
+      </tr>
+
+      <tr>
+        <td class="min">48–60′</td>
+        <td class="stage"><div class="nm">Speaking · your country</div><div class="zone">pairs → teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Personalisation (SB Ex 7).</span> <span class="game">▶ RallyRobin</span> in pairs — take turns asking &amp; answering the 6 questions about YOUR country: <span class="en">What's the currency? Name three things in a good diet. What's your favourite school subject? Are bikes popular? How old are children when they start school? What's a great place to go with friends in your city?</span></p>
+          <p>Push output: every answer is a full sentence with <i>is/are</i>. Monitor, collect 2 nice sentences &amp; 1 error for delayed feedback.</p>
+          <p><span class="ph">Report out.</span> New team of 4: each shares the most surprising answer their partner gave — <span class="en">Ivan says a great place in our city is …</span></p>
+        </td>
+        <td class="mat">SB p.14 Ex 7 · <span class="game">▶ RallyRobin</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">60–75′</td>
+        <td class="stage"><div class="nm">Critical thinking · Evaluate</div><div class="zone">teams → wall</div></td>
+        <td class="flow">
+          <p><span class="ph">Remember (SB CT 1).</span> Quick pair task: <span class="en">Find one thing in the text that is the SAME as life in your country, and one thing that is DIFFERENT.</span> Share one each.</p>
+          <p><span class="ph">Evaluate (SB CT 2) — Diamond ranking.</span> Teams order 8 cards for <span class="en">To be happy, what things are most important?</span>: <i>education · family · free time · food · health · money · people · the weather</i>. Arrange top-to-bottom; agree as a team.</p>
+          <p><span class="ph">Argue with frames</span> (on board, tiered): <span class="en">We think … is more important than … because …</span> · <span class="en">… matters most because without it you can't …</span> Rule: at least <b>3 sentences</b> and the word <i>because</i>. Talk move when checking: <span class="en">Why do you think that? Does everyone agree?</span></p>
+        </td>
+        <td class="mat">8 factor cards ×3 sets · sentence-frame strip on board</td>
+      </tr>
+
+      <tr>
+        <td class="min">75–85′</td>
+        <td class="stage"><div class="nm">Challenge · mini-debate</div><div class="zone">teams present</div></td>
+        <td class="flow">
+          <p><span class="ph">Challenge discussion — where would you live?</span> Each team takes a stance: <span class="en">Is the Netherlands really the best place to be a teenager, or is your city better? Give us 3 reasons.</span></p>
+          <p>Teams have 4 min to prepare, then 1 spokesperson presents (rotate the role). The listening teams must ask <b>one</b> follow-up question each: <span class="en">Why…? Is it …? What about …?</span></p>
+          <p>Vote for the most convincing case. Reinforce place adjectives + <i>be</i> in their reasons.</p>
+        </td>
+        <td class="mat">notebooks (team notes) · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">85–90′</td>
+        <td class="stage"><div class="nm">Feedback &amp; reflection</div><div class="zone">whole class → door</div></td>
+        <td class="flow">
+          <p><span class="ph">Delayed feedback.</span> Board the 2 good sentences (praise) + 1 error — class corrects it together (the <i>be</i> form).</p>
+          <p><span class="ph">Exit line.</span> Each learner says one thing to a partner: <span class="en">One new word I can use is … and it means …</span></p>
+          <p><span class="en">Great reading today. Here's your homework.</span> Set &amp; check the WB reference before they pack up.</p>
+        </td>
+        <td class="mat">board · learners' notebooks</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Workbook — p. 8 “Reading: A guidebook (Focus on … PERU)”, ex. 1–6</b>: №1 predict 3 true facts · №2 (before reading) which text types are included · №3 read &amp; listen (audio 3) to check · №4 answer 6 questions · №5 which section would you add each fact to · №6 short personal response (what would you most like to do in Peru &amp; why). Same sub-skill as class — <i>identifying different types of text</i>. + <b>Get Involved practice app</b> — a 5–7 min self-check set on today's word-work (great · diet · bike · subjects · education · currency).</p></td>
+        <td class="mat">Workbook p. 8 (ex 1–6) · audio track 3 · practice app</td>
+      </tr>
+
     </tbody>
   </table>
   </div>
 
-  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
-
-  <div class="grid2">
-    <div class="cardb"><ul class="a">
-      <li><span class="lb">Main aim.</span> By the end, learners can <b>verify claims against four informational texts and deliver a 60-sec verdict</b> supported by 3 facts.</li>
-      <li><span class="lb">Subsidiary.</span> Reading subskill (identifying types of text) applied at speed; Word work as a duel; Critical thinking Evaluate = ranked debate in trios; GMF4 bonus: interview Thomas with Have you ever…?</li>
-      <li><span class="lb">Personal.</span> Reading is where continuers actually stretch — texts are new even if grammar isn't. Keep hunts timed and competitive; verdicts get the full judging bar.</li>
-    </ul></div>
-    <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
-      <ul class="a"><li>commit predictions and verify them in texts</li><li>identify a text type in 10 seconds by look</li><li>define/use 6 Word-work items</li><li>argue a verdict with facts, win a trio debate</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
-      <div class="arc"><span>Check-in</span><span>Mission brief</span><span>Gate</span><span>Base sprint</span><span>Challenge</span><span>Bonus level</span><span>Product</span><span>Leaderboard</span></div>
-    </div>
-  </div>
-
-  <div class="eyebrow">Target language</div>
-  <div class="grid2">
-    <div class="cardb tl">
-      <div class="r"><div class="k">Lexis</div><div><span class='w'>great</span><span class='w'>education</span><span class='w'>diet</span><span class='w'>bike</span><span class='w'>subjects</span><span class='w'>currency</span><span class='w'>capital</span><span class='w'>population</span><span class='w'>fact file</span></div></div>
-      <div class="r"><div class="k">Structure</div><div>That's true/false — the text says… · Fact: 95% of Dutch teens are happy. · In my opinion it is/isn't №1 because… · 🚀 bonus: Have you ever cycled 900 km?</div></div>
-      <div class="r"><div class="k">Form</div><div>text types by look: fact file (words+numbers) · personal intro · article · fun-facts panel.</div></div>
-      <div class="r"><div class="k">Pron. watch</div><div>euro /ˈjʊərəʊ/ · diet /ˈdaɪət/ · per cent — stress on CENT.</div></div>
-    </div>
-    <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-      <div class='ccq'>“Detectives read every word?” → No — they scan for THE fact.</div><div class='ccq'>“A claim without a fact — does it win a debate?” → Never.</div><div class='ccq'>“Have you ever…? — which tense, GMF4 grads?” → Present perfect. Not in this book. In you — yes.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> be is fluent; the NL content and Word-work items are genuinely new. Debate format needs training wheels: frames + judge cards. Gate is diagnosis, not humiliation: the ceiling must be REAL (spelling/speed/writing), results are private tallies, the reveal is “so THIS is our growth zone”.</p>
-    </div>
-  </div>
-
-  
-
-  <div class="grid2">
-    <div>
-      <div class="eyebrow">Anticipated problems &amp; solutions</div>
-      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>“Reading is boring” resistance</td><td>Never ‘read the text’ — always ‘verify the claim in 90 seconds’. The stopwatch reframes everything.</td></tr><tr><td>Scanning = random shouting</td><td>Answers must include WHERE: “text 4 says…” — evidence rule, +1 only with the source.</td></tr><tr><td>Debate collapses into Russian</td><td>Frame strips + rule: only English sentences count as arguments.</td></tr><tr><td>Word work done by the strongest only</td><td>Duel format: definitions split between partners, each owns three.</td></tr><tr><td>Fast crews idle after hunts</td><td>Envelope «Fact+»: find a number, a name, a % not yet used by anyone.</td></tr></tbody></table></div>
-    </div>
-    <div>
-      <div class="eyebrow">Classroom management — signals</div>
-      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
-    </div>
-  </div>
-
   <div class="foot">
-    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 1 “Our world” (How are countries different?) · GIA1 — lesson plan &amp; staging</span>
-    <span>SB pp.14–15 (audio 10) · TB p.20–22 (warmer, Fast finishers, Challenge, Culture notes on the Netherlands — raw material for fact-pauses). KTP-Accelerated pair 6. Texts — stations only (copyright). Before the lesson: 4 stations, hunt cards, judge/role cards, 8 Evaluate cards, the “Fact+” envelope.</span>
+    <span>Speak &amp; Smile · Get Involved A1+ (ACCELERATED) · Unit 1 · Pair 2 (Reading &amp; Critical thinking) — lesson plan &amp; staging</span>
+    <span>Content verified against SB pp. 14–15 + WB p. 8 · КТП-GIA1-Accelerated pair 6 (lessons 11–12).</span>
   </div>
 </div>
-<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
-<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>

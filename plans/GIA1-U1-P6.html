@@ -1,6 +1,5 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GIA1 · Unit 1 · Pair 6 (Lesson Plan &amp; Staging)</title>
+<title>Get Involved! A1+ · Unit 1 · Pair 6 — Project &amp; Revision (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
     --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -37,139 +34,255 @@
   .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
-  /* lesson at a glance */
-  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
-  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
-  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
-  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
-  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
-  table.glance tr.bridge td{ background:var(--honey-soft); }
-  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
-
-  /* the staging */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
-  .game{ color:var(--p); font-weight:800; }
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
-  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
-  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
-  /* the three sub-blocks of a stage */
-  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
-  .tsteps{ margin:7px 0; }
-  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
-  .tsteps li{ margin:3px 0; font-size:.92rem; }
-  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
-  .showb .sbh{ color:var(--zone); }
-  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
-  .kidsb .sbh{ color:var(--honey-ink); }
+  .slot{ color:var(--muted); font-weight:700; }
   .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
   table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
   table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
   table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
   td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
-  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
-  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
   td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
-  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
   .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
   tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+  /* interactive notebook box */
+  .nb{ background:var(--honey-soft); border:1px solid var(--honey); border-left:3px solid var(--honey); border-radius:9px; padding:9px 12px; margin:8px 0 2px; font-size:.9rem; }
+  .nb .nbk{ color:var(--muted); font-size:.85rem; margin:3px 0 6px; }
+  .nb ul{ margin:4px 0 6px; padding-left:18px; } .nb li{ margin-bottom:3px; }
+  .nb .nbp{ display:block; font-size:.82rem; color:var(--p-ink); }
 
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
-    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">Get Involved! A1+ · Unit 1 “Our world” · Pair 6 — Mission «Found a Nation»: design, build and sell your own country</div>
-    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>continuing line 🚀 after GMF4</b> · 90 min · mission-based: gate → base sprint → challenge levels → GMF4 bonus → product with a bar · unit leaderboard</div>
-    <div class="meta"><span class='chip'>Week 05.10–11.10 · lessons 19–20 (KTP pair 10)</span><span class='chip new'>🚀 continuing after GMF4</span><span class='chip'>SB pp.22–23 (+ Project planner p.118)</span><span class='chip'>unit leaderboard · streaks · gold runs</span></div>
+    <div class="t">🌍 Get Involved! A1+ · Unit 1 “Our world” · Pair 6 (Lessons 19–20) — Project &amp; Revision</div>
+    <div class="s">A1+ teenagers (~11–13 y.o., readers &amp; writers) · 90 min · WDYT? project + Quick review · groups of three</div>
+    <div class="meta"><span class="chip">Week 05.10–11.10 · Pair 10</span><span class="chip new">🏁 Revision</span><span class="chip">Accelerated track (after GMF4)</span><span class="chip">~14 pupils · groups of 3</span><span class="chip">Next lesson = Unit 1 test</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia1/games/u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia1/games/u1-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia1/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1qBX7PSo1Ueoq2fklkMkEJSfAVHEhi4of" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
-  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
-  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: greeting + rewind of the last pair</td><td>Showdown as a review: high-five; blitz-rewind of P5: the 3 letter-moves in chorus + one capitals “crime” + a pre-flight echo</td></tr><tr class='bridge'><td class='gmin'>6–10′</td><td class='gname'>WDYT return + setting up the mission</td><td>TB warmer: 2 min in pairs with the Graphic organiser (p.118) “what I learned/what landed”; back to the unit question; I announce the mission and the trios</td></tr><tr><td class='gmin'>10–17′</td><td class='gname'>Video model: Calobia — steal a move</td><td>the model presentation with tasks: where's Calobia? steal a move + name one thing you'll do BETTER</td></tr><tr><td class='gmin'>17–26′</td><td class='gname'>Step 1: sections + the country-name auction</td><td>trios choose 5 sections using ONLY Student's Book phrases; the country name — a minimum of 3 options put to a vote</td></tr><tr><td class='gmin'>26–35′</td><td class='gname'>Step 2: roles and notes against the bar</td><td>roles (flag+facts / map+cities / language+currency; TB variant: 2×2 sections + 1×1 + artwork/layout/title); notes for 7 min; the bar card on the desk</td></tr><tr><td class='gmin'>35–56′</td><td class='gname'>Step 3: making the poster against the timer</td><td>section texts under the bar rules + visuals on A2; a mid-way sync bell; I collect 2 types of errors</td></tr><tr><td class='gmin'>56–71′</td><td class='gname'>Step 4: presentations, judges on 4 axes</td><td>Timed Pair Share: 3 min of rehearsal, then every trio member speaks their OWN 60 sec; judges score Layout/Content/Language/Visuals, 1–3</td></tr><tr><td class='gmin'>71–76′</td><td class='gname'>Smiley self-scoring + gallery</td><td>honest smiley self-scoring across 3 questions, posters go on the wall; a yellow/red smiley → “what I'll do differently”</td></tr><tr><td class='gmin'>76–87′</td><td class='gname'>Revision quiz: the last big points</td><td>the last big points of the unit: 5 rounds over everything covered + 2 disguised errors from CREATE</td></tr><tr><td class='gmin'>87–90′</td><td class='gname'>Leaderboard + HW + the finale teaser</td><td>pre-final positions; HW = WB p.11 (the test map); teaser: the test + the rematch of all three gates</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 — the exact pages and tasks for your line (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + a Research bonus); details at the bottom of the procedure</td></tr></tbody></table></div>
 
-  <div class="eyebrow">Procedure — full staging</div>
-  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners can <b>produce a short spoken &amp; written description of an invented country</b> (a poster + a 60-sec presentation) using the whole Unit 1 system — <b>be</b> in all forms, countries &amp; nationalities, and adjectives to describe places.</li>
+      <li><span class="lb">Subsidiary.</span> Consolidate the unit before the test (fluent retrieval of the target language); tighten written accuracy of <b>be</b> short answers and capital letters; practise collaboration key phrases and peer review against clear criteria.</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; give an ICQ + a timer before every group stage; make the audience active during presentations (no passive listeners); run a create → present → review rhythm.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
+      <ul class="a">
+        <li>design and present a poster about a country;</li>
+        <li>use <b>be</b> (aff./neg./questions/short answers) accurately;</li>
+        <li>describe a place with the unit adjectives (<i>a modern city / The city is modern</i>);</li>
+        <li>use collaboration key phrases and give criteria-based peer feedback.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language (Unit 1 round-up)</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis · countries</div><div><span class="w">China</span><span class="w">Mexico</span><span class="w">the USA</span><span class="w">Spain</span><span class="w">Japan</span><span class="w">New Zealand</span><span class="w">India</span><span class="w">Brazil</span><span class="w">Russia</span><span class="w">Australia</span><span class="w">the UK</span><span class="w">Turkey</span><span class="w">the Netherlands</span></div></div>
+      <div class="r"><div class="k">Lexis · nationalities</div><div><span class="w">Chinese</span><span class="w">Mexican</span><span class="w">American</span><span class="w">Spanish</span><span class="w">Japanese</span><span class="w">Indian</span><span class="w">Brazilian</span><span class="w">Russian</span><span class="w">Australian</span><span class="w">British</span><span class="w">Turkish</span><span class="w">Dutch</span></div></div>
+      <div class="r"><div class="k">Lexis · places</div><div><span class="w">beautiful/ugly</span><span class="w">clean/dirty</span><span class="w">empty/crowded</span><span class="w">hot/cold</span><span class="w">interesting/boring</span><span class="w">modern/old</span><span class="w">quiet/noisy</span><span class="w">safe/dangerous</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Where are you from? — I'm from Spain. I'm Spanish. &nbsp;·&nbsp; It's a modern city. / The city is modern.</div></div>
+      <div class="r"><div class="k">Form · be</div><div>Aff. I'm · he/she/it's · we/you/they're · Neg. 'm not · isn't · aren't · Q. <b>Am/Is/Are</b> + subject…? · Short ans. <b>Yes, I am</b> (full) / No, I'm not.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>weak <i>are you</i> /ə jə/; nationality stress — Japa<b>NESE</b>, Bra<b>ZIL</b>ian, <b>RUSS</b>ian; capital letters on countries/nationalities in writing.</div></div>
+      <div class="r"><div class="k">Project phrases</div><div>Creativity (Super skills): <i>What's a good name/flag/national sport?</i> · <i>I like your/Sara's idea.</i> · <i>What about…?</i> · <i>That's a good idea!</i> · <i>No, that's not very original.</i></div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“<i>Yes, I ___.</i> — can I say <b>Yes, I'm.</b>?” → No. Short answer = full form: <b>Yes, I am.</b></div>
+      <div class="ccq">“<i>a beautiful<b>s</b> city</i> — is that right?” → No. <b>Adjectives are never plural.</b></div>
+      <div class="ccq" style="margin-bottom:12px">“<i>Turkey → Turkey-ish?</i>” → No, <b>Turkish</b> — check the suffix route on the passport.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> countries, nationalities, place adjectives and all forms of <i>be</i> were met across Pairs 1–5 — this pair recycles &amp; produces, it does not present new language. Pupils read &amp; write; groups-of-three routine and roles are known. <b>Groups:</b> threes for the project; if numbers don't divide, one four with an extra “editor” role (14 = 4×3 + 1 pair; adjust to 3–4 per group).</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>“Yes, I'm.” / “Yes, it's.” in short answers</td><td>Red-pencil the two wrong forms on the notebook card; drill full form in the quiz.</td></tr>
+        <tr><td>Nationality suffix errors (<i>Turkey-ish</i>, <i>Netherland-ish</i>)</td><td>Send them to the OUR WORLD passport (Pair 1) — sorted by -an / -ian / -ese / -ish + irregulars.</td></tr>
+        <tr><td>Adjectives pluralised (<i>a modern cities</i>)</td><td>CCQ + the “adjectives are never plural” rule on the board.</td></tr>
+        <tr><td>One pupil dominates the group / others idle</td><td>Assign 3 named roles + a per-section owner; set visible timers.</td></tr>
+        <tr><td>Audience passive during presentations</td><td>Every listener holds the judging card + must ask the 2 set questions.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pens down.”</div>
+        <div class="sigc"><b>Timer on screen</b> — every group stage has a visible clock; chime = swap/stop.</div>
+        <div class="sigc"><b>Volume hand</b> — raise/lower your arm = louder/quieter for group talk.</div>
+        <div class="sigc"><b>“3–2–1, eyes on me”</b> — quick refocus between stages.</div>
+        <div class="sigc"><b>“Freeze!”</b> — instant stop mid-move to reset the gallery walk.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game / structure</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+    <span>📓 = interactive-notebook glue-in</span>
+  </div>
 
   <div class="scroll">
   <table class="proc">
-    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
     <tbody>
-<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Into the lesson: greeting + rewind of the last pair</div><div class='sub'>Opening · check-in + rewind</div><div class='zone'>desks → standing</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Showdown as a review: high-five; blitz-rewind of P5: the 3 letter-moves in chorus + one capitals “crime” + a pre-flight echo</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>At the door — a high-five + <span class='en'>one word: project mood?</span></li><li>I frame it as Kagan <b>Showdown</b>: EVERYONE writes at the same time, boards face down, on the command <span class='en'>No peeking… Boards up!</span> they lift them together — I see everyone's answer, no hiding.</li><li>Rewind of P5: <span class='en'>The three message moves? — Start! Why! Ask to write!</span> One “crime” on mini-boards: <i>i'm from tokyo</i> → <span class='en'>Boards UP!</span></li><li>Pre-flight echo: 3 flashes — nationality in writing · an opposite · a short answer. +1 for clean ones.</li><li>Bridge: <span class='en'>You've pitched, broadcast, interrogated, gone undercover and published. Final creative mission: FOUND YOUR OWN NATION.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mini-boards · the crime line on the board</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> give a high-five, answer in chorus, fix, warm up. Expected: warmed up within 6 minutes. Typical error: only half-fixing it — “TWO crimes!”</div></td><td class='mat'>mini-boards</td></tr><tr class='bridge'><td class='min'>6–10′</td><td class='stage'><div class='nm'>WDYT return + setting up the mission</div><div class='sub'>WDYT return + mission brief</div><div class='zone'>board · pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> TB warmer: 2 min in pairs with the Graphic organiser (p.118) “what I learned/what landed”; back to the unit question; I announce the mission and the trios</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>TB-warmer (p.29): <span class='en'>Pairs, two minutes, the Graphic organiser on p.118: what did you LEARN about countries this unit? What did you enjoy most?</span></li><li>WDYT return: <span class='en'>How are countries different? Same question as day one — hear how differently you answer now.</span> 2–3 answers.</li><li>Slide <b>MISSION “FOUND A NATION”</b>: <span class='en'>Today you CREATE a country: flag, laws, fame — and sell it to the world. Judges score Layout, Content, Language, Visuals — like real producers.</span></li><li>I announce the trios myself (for balance), leaderboard in view.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.118 · mission slide · list of trios · leaderboard <b>(Backup:</b> everything on the slide goes onto the board before the lesson (or onto printed cards, one per crew).<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> recall the unit in pairs, answer WDYT “in a new way”, sit down in trios. Expected: richer answers than in September — I note it out loud.</div></td><td class='mat'>mission slide · trio list</td></tr><tr><td class='min'>10–17′</td><td class='stage'><div class='nm'>Video model: Calobia — steal a move</div><div class='sub'>Model · Calobia + “I'll do it better”</div><div class='zone'>screen</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the model presentation with tasks: where's Calobia? steal a move + name one thing you'll do BETTER</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I play the video (pp.22–23): <span class='en'>Where is Calobia? How many sections?</span></li><li>Anti-boredom task: <span class='en'>Steal ONE move you'll copy — and name ONE thing you'll do BETTER than them.</span></li><li>No video → p.23 as a “frozen presentation”, I voice the intro myself (script TB p.138).</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the project video (Backup: SB p.23 + TB p.138)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> watch with a squint of “what to improve”. Expected: “their flag is boring — ours will have a dragon”. Typical error: criticism without a solution — “better HOW?”</div><span class='diff'><span class='ext'>⭐ Fast finishers (TB p.29):</span> name 2 pluses and 1 minus of life on Calobia.</span></td><td class='mat'>project video · SB p.23</td></tr><tr><td class='min'>17–26′</td><td class='stage'><div class='nm'>Step 1: sections + the country-name auction</div><div class='sub'>THINK · sections + the name auction</div><div class='zone'>desks · trios</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> trios choose 5 sections using ONLY Student's Book phrases; the country name — a minimum of 3 options put to a vote</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I hand out the Key phrases tent cards, announce the currency: <span class='en'>Decisions happen ONLY in Key phrases. A Russian decision doesn't count!</span></li><li>Task (ex.2–3, 5): choose 5 sections from the model's menu.</li><li>Name auction: <span class='en'>THREE name options minimum, then vote. First idea is a hostage, not a winner!</span> (TB: it's easier to invent a name AFTER decisions about the country.)</li><li>I pay out teamwork points for phrases heard.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> Key phrases tent cards · sections menu slide <b>(Backup:</b> everything on the slide goes onto the board before the lesson (or onto printed cards, one per crew).<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> haggle with phrases, vote for a name out of three. Expected: “No, that's not very original!” with relish. Typical error: a decision in Russian — we replay it in English within 20 sec, they laugh, it works.</div></td><td class='mat'>tents · menu slide</td></tr><tr><td class='min'>26–35′</td><td class='stage'><div class='nm'>Step 2: roles and notes against the bar</div><div class='sub'>PLAN · roles + the bar for the sections</div><div class='zone'>desks · trios</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> roles (flag+facts / map+cities / language+currency; TB variant: 2×2 sections + 1×1 + artwork/layout/title); notes for 7 min; the bar card on the desk</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I hand out roles (ex.7): S1 flag+fun facts · S2 map+cities · S3 language+currency+fact file. TB variant for trios with an artist: two take 2 sections each, the third — 1 section + artwork/layout/title.</li><li>I put down the bar card: <b>≥1 negative · ≥1 hook question · real adjectives (taboo on nice still alive) · 🚀 ≥1 bonus structure per trio</b> (<i>Nobody has ever… / You'll want to…</i>).</li><li>Notes in keywords, 7-min timer. ICQ: <span class='en'>Sentences in notes? — No! Keywords!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> role cards · bar cards · timer</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write section notes with the bar in their sights. Expected: keywords full of dragons and volcanoes. Typical error: forgetting the bar — I silently tap the card on the desk.</div></td><td class='mat'>role cards · bar cards</td></tr><tr><td class='min'>35–56′</td><td class='stage'><div class='nm'>Step 3: making the poster against the timer</div><div class='sub'>CREATE · the poster (21′)</div><div class='zone'>desks · trios</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> section texts under the bar rules + visuals on A2; a mid-way sync bell; I collect 2 types of errors</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>21-min countdown: <span class='en'>CREATE! Two-three sentences per section — bar rules live!</span> TB: draft first, read each other's sections, then the fair copy.</li><li>Minute 10 — the bell: <span class='en'>Sync! Fact file? Flag? Who's behind — help!</span></li><li>I circulate with a notebook: teamwork points + quietly collecting 2 types of errors for the revision quiz.</li><li>3 min left: <span class='en'>Draft beauty is enough — visuals are homework, TEXTS finish now!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> A2 sheets · markers · bar cards · bell</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write texts with negatives/hooks/bonuses, glue up the draft poster. Expected: “Is it real? No, it isn't — YET!” — the hooks land. Typical error: three easy sentences — the bar card demands an upgrade.</div><span class='diff'><span class='ext'>⭐ For the fast ones:</span> an “unusual information” section, Calobia-style.</span> <span class='asr'>✔ Assess: 2 types of errors — for the revision quiz.</span></td><td class='mat'>A2 sheets</td></tr><tr><td class='min'>56–71′</td><td class='stage'><div class='nm'>Step 4: presentations, judges on 4 axes</div><div class='sub'>🏁 PRODUCT · presentations on the 4 TB axes</div><div class='zone'>stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Timed Pair Share: 3 min of rehearsal, then every trio member speaks their OWN 60 sec; judges score Layout/Content/Language/Visuals, 1–3</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>3-min rehearsal: <span class='en'>Everyone speaks SIXTY seconds. Keywords only. Toes to the audience!</span> TB Challenge (p.30): in the video the presenters EXPANDED on what was written — do the same, don't read the poster.</li><li>Format — Kagan <b>Timed Pair Share</b>: A speaks for their timed turn, B is the active listener (counts pauses on their fingers, catches the best phrase), then <span class='en'>Switch roles!</span> The listener's response starts with <span class='en'>My favourite bit was…</span></li><li>Presentations: a stopwatch on everyone; judging trios with the TB card: <b>Layout · Content · Language · Visuals</b>, 1–3 + peer questions ex.10 (how is it different from a real country? would you want to visit — why?).</li><li>Judges defend one score out loud after every trio; a live bonus structure = +1.</li><li>Points to the leaderboard between presentations.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> posters · stopwatch · TB judging cards for the 4 axes · peer cards</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> hold their personal 60 seconds, judge across 4 professional axes. Expected: “Language 3 — negatives AND a perfect line!”. Typical error: reading off the poster — the Language axis suffers, a neighbour holds the poster.</div><span class='ig'>🏆 <b>The bar for the product (the judges' rubric, every pair):</b> Fluency — pauses no longer than 3 sec (1–3) · Accuracy — clean forms (1–3) · Richness — adjectives, connectors, bonus structures (1–3). 9/9 = a “gold run”, +5 to the leaderboard.</span></td><td class='mat'>posters · stopwatch · judge cards</td></tr><tr><td class='min'>71–76′</td><td class='stage'><div class='nm'>Smiley self-scoring + gallery</div><div class='sub'>Final reflection + gallery</div><div class='zone'>wall</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> honest smiley self-scoring across 3 questions, posters go on the wall; a yellow/red smiley → “what I'll do differently”</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I read the 3 Final reflection questions (p.23), the command: <span class='en'>Smileys — honest!</span></li><li>TB guide (p.30): I gently ask those who chose yellow/red: <span class='en'>What will you do differently next project?</span> — one phrase, no dissection.</li><li>We put up the posters: <span class='en'>Look at that wall. Pair 1 you spelled ‘Chinese’ wrong. Now you OWN countries.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the 3-question slide · the wall <b>(Backup:</b> everything on the slide goes onto the board before the lesson (or onto printed cards, one per crew).<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> score themselves, put “what differently” into words, hang up the posters, catch a moment of pride. Expected: 😊 for creativity from almost everyone.</div></td><td class='mat'>smiley slips · wall</td></tr><tr><td class='min'>76–87′</td><td class='stage'><div class='nm'>Revision quiz: the last big points</div><div class='sub'>🏁 Scored revision quiz</div><div class='zone'>desks · crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the last big points of the unit: 5 rounds over everything covered + 2 disguised errors from CREATE</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I announce: <span class='en'>The LAST big points before the test pair. Five rounds — everything you own now.</span></li><li>R1 nationality spelling (mini-boards) · R2 opposites · R3 be-flips · R4 question scrambles + short answer · R5 “fix the error” — 2 disguised errors from today's CREATE (anonymous!).</li><li>Streaks ×2, intercepts; live scoring.</li><li>Finale: <span class='en'>Your weakest round = tonight's WB page 11 focus. The test mirrors THESE five rounds. Come sharp.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> round slides · mini-boards · leaderboard <b>(Backup:</b> everything on the slide goes onto the board before the lesson (or onto printed cards, one per crew).<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> finish off the unit with the quiz, all crews at once, fix their own CREATE errors. Expected: excitement, catharsis — “errors → points”. Typical error: a single letter instead of a correction — a full move is required.</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A1_Unit1_Translation_Match_It_2up_A4 + Get_Involved_A1_Unit1_Translation_Translate_It_2up_A4</b><div class="nbk">two 2-up sheets (one A4 = 2 pupils each): MATCH IT! — 12 Russian sentences to English A–L (countries and nationalities, be in all three forms, place adjectives, the keypal message), then TRANSLATE IT! — the same 12 written out in English from memory</div><ul><li>Glue MATCH IT! in and join the pairs in pencil — first alone, then check with a partner.</li><li>Glue TRANSLATE IT! on the next page and write the English without looking back.</li><li>Self-check against the matched sheet; every mistake is rewritten as a full sentence.</li><li>Write your score out of 12 in the margin — that is the unit's exit line.</li></ul><span class="nbp"><b>When:</b> ~8 min inside the 76–87′ “Revision quiz: the last big points” stage (desks, pairs)</span><span class="nbp"><b>Prep:</b> 1 × A4 = 2 pupils (pre-cut, one of each sheet per pair). Glue sticks, pencils.</span></div></td><td class='mat'>slides · mini-boards · the unit translation sheet (handouts/GIA1-Translate-U1.pdf — all items, incl. ⭐/🚀)</td></tr><tr><td class='min'>87–90′</td><td class='stage'><div class='nm'>Leaderboard + HW + the finale teaser</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> pre-final positions; HW = WB p.11 (the test map); teaser: the test + the rematch of all three gates</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I show the positions: <span class='en'>Everything is still possible — the test pair gives the last points.</span></li><li>HW on the slide: WB p. 11 — Grammar review + Round-up + Self-evaluation: <span class='en'>Your smiley column = your revision plan.</span></li><li>Teaser: <span class='en'>Pair 7 — the test… and the REMATCH of all three gates. Your September-you is waiting.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> leaderboard · HW slide <b>(Backup:</b> I write the homework on the board and they copy it into their diaries.<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> weigh up their chances, take the prep map. Expected: the race's suspense stays alive till the finale.</div></td><td class='mat'>leaderboard</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>🚀 Workbook Unit 1 (mandatory ☆☆–☆☆☆):</b> Workbook p.11 in full: Grammar review ex.1–2 (text + Mimi/Beth dialogue) + Round-up + Self-evaluation; your own weak point — an evening review using Quick review SB p.21.</p><p>🔎 Research bonus (+5, TB Homework): 1 extra fun-fact candidate for your invented country + the final visual for your section of the poster (draft beauty → beauty).</p><p><b>🚀 Bonus level (optional, +5):</b> smuggle ONE «has never / you'll» line into your project section text — presented posters get it read aloud.</p><p style='font-size:.85rem;color:var(--muted)'>WB audio is in the TRC; no track → skip the audio items. A photo of the HW slide is fine.</p></td><td class='mat'>Workbook U1 · notebook · leaderboard points logged next lesson</td></tr>
+
+      <tr>
+        <td class="min">0–5′</td>
+        <td class="stage"><div class="nm">Lead-in · WDYT?</div><div class="zone">front, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Hook.</span> Unit question on the board: <span class="en">WDYT? How are countries different?</span> <span class="game">▶ RallyRobin</span> in pairs: <span class="en">Think of three ways two countries can be different. Take turns — thirty seconds.</span></p>
+          <p>Hear 3–4 ideas (language · food · flag · weather · size). Set the task: <span class="en">Today you design a brand-new country and present it — then we review the whole unit before the test.</span></p>
+        </td>
+        <td class="mat">board · timer</td>
+      </tr>
+
+      <tr>
+        <td class="min">5–14′</td>
+        <td class="stage"><div class="nm">Retrieval sprint</div><div class="zone">standing, mingle</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm the language up before using it.</span> <span class="game">▶ Quiz-Quiz-Trade</span> — each pupil gets one Q-card. <span class="en">Stand up, hand up, pair up. Quiz your partner, coach if needed, then swap cards and trade. New partner!</span></p>
+          <p>Card mix (all Unit 1): <span class="en">Where are you from? → I'm from […].</span> · <span class="en">China → ? (Chinese)</span> · <span class="en">He ___ from Brazil. (is)</span> · <span class="en">crowded ↔ ? (empty)</span> · <span class="en">Are you Russian? — No, ___ (I'm not).</span></p>
+          <p>The <b>OUR WORLD passport</b> (glued in Pair 1) stays open on the desk as the answer key. Refocus: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">Q-cards (1 per pupil) · notebook passport (Pair 1) · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">14–22′</td>
+        <td class="stage"><div class="nm">Model deconstruction</div><div class="zone">front, projector</div></td>
+        <td class="flow">
+          <p><span class="ph">STEP 1 — THINK.</span> Play the project video: students present “Calobia”. <span class="en">Where is Calobia? Which sections are on their poster?</span></p>
+          <p>Open <b>SB pp.22–23, Model project</b>. Ex 2 — <span class="en">What information does the poster include?</span> (elicit: language · currency · flag · description · important cities · food · famous people · fun facts). Ex 3 — <span class="en">How does the poster look?</span> (title · section headings · map · photos · fonts).</p>
+          <p><span class="ph">Spotlight the target language</span> in the model text: <span class="en">It's very beautiful and it's hot all year. The capital is a quiet place, but it isn't boring.</span> Underline every <b>be</b> + place adjective. CCQ: <span class="en">Can we write “a beautifuls place”? — No. Adjectives are never plural.</span></p>
+        </td>
+        <td class="mat">project video (Calobia) · SB pp.22–23 · projector</td>
+      </tr>
+
+      <tr>
+        <td class="min">22–26′</td>
+        <td class="stage"><div class="nm">Key phrases + roles</div><div class="zone">front → groups</div></td>
+        <td class="flow">
+          <p><span class="ph">Super skills — Creativity.</span> Drill the collaboration key phrases (chorus, then in pairs): <span class="en">What's a good name/flag/national sport?</span> · <span class="en">I like your idea.</span> · <span class="en">What about […]?</span> · <span class="en">That's a good idea!</span> · <span class="en">No, that's not very original.</span></p>
+          <p>Form <b>groups of three</b>; assign roles: <span class="en">Student 1 — flag &amp; fun facts · Student 2 — map &amp; important cities · Student 3 — language &amp; currency.</span> Sentence frames go on the board: <span class="en">[Name] is a […] country. · The capital is […]. · People are […]. · It's got […].</span></p>
+        </td>
+        <td class="mat">SB p.22 Super skills box · role cards · board frames</td>
+      </tr>
+
+      <tr>
+        <td class="min">26–45′</td>
+        <td class="stage"><div class="nm">PLAN &amp; CREATE the country</div><div class="zone">groups of 3, desks</div></td>
+        <td class="flow">
+          <p><span class="ph">STEP 2 — PLAN (ex 4–7).</span> <span class="en">In your group, choose FIVE sections for your poster. Use the Model and the Key phrases.</span> Discuss &amp; note each section (ex 6 model: <span class="en">FLAG: red – white – green (red = sun…)</span>). Then <span class="en">choose one person to prepare each section.</span> <span class="ph">ICQ:</span> <span class="en">How many sections? (5) In English or your language? (English!)</span> Timer: 5 min.</p>
+          <p><span class="ph">STEP 3 — CREATE (ex 8–9).</span> Prepare texts &amp; visuals and build the poster. Compulsory language: <b>be</b> + at least three place adjectives. Circulate, feed language, hold pupils to the board frames. Timer: 12 min. Countdown: <span class="en">Finishing in 5… 4… 3… 2… 1… pens down.</span></p>
+        </td>
+        <td class="mat">poster paper · markers · SB pp.22–23 · timer</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">45–48′</td>
+        <td class="stage"><div class="nm">🧘 Brain break + set-up</div><div class="zone">stand up</div></td>
+        <td class="flow"><p><span class="en">Pens down — stand up, shake it out.</span> 90-sec stretch / reset. Then pin the posters up as a gallery and decide who presents which section. <span class="en">In a moment your group meets another group: you present, they judge — then you swap.</span></p></td>
+        <td class="mat">wall space · tape · judging cards</td>
+      </tr>
+
+      <tr>
+        <td class="min">48–63′</td>
+        <td class="stage"><div class="nm">PRESENT · peer review</div><div class="zone">gallery, rotation</div></td>
+        <td class="flow">
+          <p><span class="ph">STEP 4 — PRESENT (ex 10).</span> Group A presents to Group B; then swap; then rotate once more. Presenters use the board frames; <b>every listener</b> holds the <span class="game">▶ judging card</span> — <b>Layout · Content · Language · Visuals</b> (1–3 each) — and must ask the two set questions:</p>
+          <p><span class="en">How is your new country different from your real country?</span> · <span class="en">Do you want to visit this country? Why / Why not?</span></p>
+          <p>Rotate so <b>every pupil</b> presents at least one section and judges at least one poster. Reset the walk with <span class="en">Freeze!</span> if it drifts.</p>
+        </td>
+        <td class="mat">posters · judging cards (Layout/Content/Language/Visuals) · SB p.23</td>
+      </tr>
+
+      <tr>
+        <td class="min">63–67′</td>
+        <td class="stage"><div class="nm">Final reflection</div><div class="zone">groups, desks</div></td>
+        <td class="flow">
+          <p><span class="ph">SB p.23 — Final reflection.</span> 😄 / 😐 / 🙁 self-rate on three points, each with one example: <span class="en">1 Do you have a clear, attractive poster? 2 Did you use your imagination? 3 Did you use language from the unit?</span> One volunteer per group names their best <b>be</b> + adjective sentence aloud.</p>
+        </td>
+        <td class="mat">SB p.23 reflection · notebook</td>
+      </tr>
+
+      <tr>
+        <td class="min">67–80′</td>
+        <td class="stage"><div class="nm">Revision quiz · Country Cup</div><div class="zone">teams</div></td>
+        <td class="flow">
+          <p><span class="ph">The last big points before the test.</span> <span class="game">▶ Numbered Heads Together</span> — teams confer, a numbered player answers on a mini-whiteboard (<span class="game">▶ Showdown</span>: reveal together). Points on the board.</p>
+          <p>Rounds (from <b>Quick review SB p.21</b>): ① country ↔ nationality · ② <b>be</b> gap-fill (aff./neg.) · ③ make a question + short answer (<span class="en">Are you from Japan? — No, I'm not.</span>) · ④ <span class="ph">catch the mistake</span> — <span class="en">Yes, I'm.</span> ✗ → <span class="en">Yes, I am.</span> · ⑤ describe a place with two adjectives.</p>
+          <p>Fast, points-driven, team applause for the winners — this is the one competitive review flagship of the unit.</p>
+        </td>
+        <td class="mat">SB p.21 Quick review · mini-whiteboards · scoreboard</td>
+      </tr>
+
+      <tr>
+        <td class="min">80–88′</td>
+        <td class="stage"><div class="nm">📓 Interactive notebook</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A1_Unit1_Translation_Match_It_2up_A4 + Get_Involved_A1_Unit1_Translation_Translate_It_2up_A4</b>
+            <div class="nbk">two 2-up sheets (one A4 = 2 pupils each): MATCH IT! — 12 Russian sentences to English A–L (countries and nationalities, be in all three forms, place adjectives, the keypal message), then TRANSLATE IT! — the same 12 written out in English from memory.</div>
+            <ul>
+              <li>Glue MATCH IT! in and join the pairs in pencil — first alone, then check with a partner.</li>
+              <li>Glue TRANSLATE IT! on the next page and write the English without looking back.</li>
+              <li>Self-check against the matched sheet; every mistake is rewritten as a full sentence.</li>
+              <li>Write your score out of 12 in the margin — that is the unit's exit line.</li>
+            </ul>
+            <span class="nbp"><b>When:</b> ~8 min inside the Revision-quiz stage (desks, pairs)</span>
+            <span class="nbp"><b>Prep:</b> 1 × A4 = 2 pupils (pre-cut, one of each sheet per pair). Glue sticks, pencils.</span>
+          </div>
+        </td>
+        <td class="mat">MATCH IT! + TRANSLATE IT! A4 sheets · glue · pencils</td>
+      </tr>
+
+      <tr>
+        <td class="min">88–90′</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">seats → door</div></td>
+        <td class="flow"><p>Round of applause for the Country Cup winners. <span class="en">Great work today. Next lesson is the Unit 1 test — countries, nationalities, place adjectives and be in all forms. Your homework gets you ready.</span> Set homework; collect the posters for display.</p></td>
+        <td class="mat">scoreboard · display board</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Workbook — p.10 “Vocabulary review”</b>: ex 1 (countries &amp; nationality table) · ex 2 (complete the missing place adjectives) · ex 3 (match 1–5 to a–e to make sentences). <b>p.11 “Look what you know!”</b>: Grammar review ex 1 (be — affirmative &amp; negative text) · ex 2 (be — questions &amp; short answers dialogue) · Round-up (Choose the correct option — <i>International English</i>) · Self-evaluation (tick 😄/😐/🙁). + <b>Digital Workbook</b> Unit 1 self-check (5–7 min).</p></td>
+        <td class="mat">Get Involved! A1+ Workbook pp.10–11 · Digital Workbook (Unit 1)</td>
+      </tr>
+
     </tbody>
   </table>
   </div>
 
-  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
-
-  <div class="grid2">
-    <div class="cardb"><ul class="a">
-      <li><span class="lb">Main aim.</span> By the end, trios <b>found, poster and present an invented country</b> (strict roles, timed steps, bar: everyone speaks 60 sec) — judged on the TB axes <b>Layout · Content · Language · Visuals</b> — and bank the last big revision points before the test.</li>
-      <li><span class="lb">Subsidiary.</span> Full project cycle with the Calobia model; Super skill Creativity + Key phrases as the only negotiation currency; Graphic-organiser warmer (p.118); Final reflection (TB: yellow/red smiley → “what I'll do differently”); a scored revision quiz closes the pair.</li>
-      <li><span class="lb">Personal.</span> Continuers' project trap = coasting on easy language. Bar: each section needs a negative, a question hook, one bonus structure. Keep time ruthlessly; creativity praise > correctness praise today.</li>
-    </ul></div>
-    <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
-      <ul class="a"><li>negotiate in English with the book's Key phrases</li><li>own a role and deliver against the clock</li><li>present 60 sec each and judge on Layout/Content/Language/Visuals</li><li>clear the unit revision quiz with their crew</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
-      <div class="arc"><span>Check-in</span><span>WDYT + brief</span><span>Model</span><span>Think</span><span>Plan</span><span>Create</span><span>Present</span><span>Reflect</span><span>Revision quiz</span><span>Leaderboard</span></div>
-    </div>
-  </div>
-
-  <div class="eyebrow">Target language</div>
-  <div class="grid2">
-    <div class="cardb tl">
-      <div class="r"><div class="k">Lexis</div><div><span class='w'>What's a good name/flag/national sport?</span><span class='w'>I like that/your/Sara's idea.</span><span class='w'>What about (Calobia)?</span><span class='w'>That's a good idea!</span><span class='w'>That's great!</span><span class='w'>No, that's not very original.</span></div></div>
-      <div class="r"><div class="k">Structure</div><div>Our country is… · The flag is… — (colour) is for… · It isn't a boring place! · 🚀 bonus: Nobody has ever seen it. · You'll want to live here.</div></div>
-      <div class="r"><div class="k">Form</div><div>poster sections (Calobia model): fact file · description · what's popular · flag · fun facts · map; TB judge axes: Layout / Content / Language / Visuals.</div></div>
-      <div class="r"><div class="k">Pron. watch</div><div>presentation projection; proud stress on the country name.</div></div>
-    </div>
-    <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-      <div class='ccq'>“Is the first idea usually the best?” → Book says no: three options, then choose.</div><div class='ccq'>“One member presents everything?” → No: 60 sec EACH — that's the bar.</div><div class='ccq'>“Is ‘No, that's not very original’ an insult?” → No — a legal Key phrase. Use it with a smile.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> All unit language live (pre-flight check done in P5); the stretch = sustained English negotiation + presentation stamina. Test pair next — revision quiz seeds it.</p>
-    </div>
-  </div>
-
-  
-
-  <div class="grid2">
-    <div>
-      <div class="eyebrow">Anticipated problems &amp; solutions</div>
-      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Negotiation flips to Russian</td><td>Key-phrases tents = the only currency: a Russian decision doesn't count (redo in English, 20 sec).</td></tr><tr><td>Coasting: three easy sentences per section</td><td>Section bar card: ≥1 negative · ≥1 question hook · adjectives from P3.</td></tr><tr><td>CREATE overruns</td><td>Countdown per step + ‘draft beauty’ rule; visuals = homework, texts finish in class.</td></tr><tr><td>Presenter reads the poster</td><td>Toes-to-audience rule; teammate holds the poster; TB Challenge: expand on the poster, don't read it.</td></tr><tr><td>No project video</td><td>SB p.23 Calobia page = frozen model; voice the opening yourself (script TB p.138).</td></tr></tbody></table></div>
-    </div>
-    <div>
-      <div class="eyebrow">Classroom management — signals</div>
-      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
-    </div>
-  </div>
-
   <div class="foot">
-    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 1 “Our world” (How are countries different?) · GIA1 — lesson plan &amp; staging</span>
-    <span>SB pp.22–23 · Project video (Calobia; script TB p.138) · Project planner p.118 · TB pp.29–30 (warmer-organiser, Fast finishers, Reinforcement, Challenge, going over the Model project by Layout/Content/Language/Visuals — our judging cards, the Final reflection guide). KTP-Accelerated pair 10: the project — a WHOLE pair; Quick review was already done in P5. Before the lesson: A2 sheets, role/bar cards, tent cards, smiley slips, TB judging cards.</span>
+    <span>Speak &amp; Smile · Get Involved! A1+ (GIA1 Accelerated) · Unit 1 “Our world” · Pair 6 (Lessons 19–20) — Project &amp; Revision · lesson plan &amp; staging</span>
+    <span>Content verified against SB pp.21–23 + WB pp.10–11 + КТП-GIA1-Accelerated (pair 10). Notebook: Unit 1 Translation Match It / Translate It.</span>
   </div>
 </div>
-<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
-<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>
