@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GMF3 · Unit 1 · Lesson 6 — Review (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -55,61 +52,59 @@
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 3 · Unit 1 “Time for school” · Lesson 6 — Review · Team Quiz</div>
-    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 28.09–04.10 · Lesson 9</span><span class="chip">🏆 Flagship Team Quiz + reward</span><span class="chip">~10 pupils · 2 teams</span><span class="chip">Activity Book p.14 (Review)</span></div>
+    <div class="t">Give Me Five! 3 · Unit 1 “Time for school” · Lesson 6 — Review</div>
+    <div class="s">A1 young learners (~9–10 y.o., readers) · 60 min · Review &amp; consolidation (retrieval + interleaving) · carpet + team tables</div>
+    <div class="meta"><span class="chip">Week 28.09–04.10 · Lesson 9</span><span class="chip new">🔁 REVIEW</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">🏆 Flagship quiz — reward day</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf3/games/school-memo.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🃏 Memory</a><a href="https://speakandsmile.ru/gmf3/games/school-ttt.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">❌⭕ Крестики</a><a href="https://speakandsmile.ru/gmf3/games/school-quiz.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🏆 Квиз</a><a href="https://speakandsmile.ru/gmf3/games/school-board.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎲 Ходилка</a><a href="https://speakandsmile.ru/gmf3/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1j_MYP-sxNwTK_n4-EmF1CIFDq7LmZoKA" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will have <b>consolidated Unit 1</b> — 12 places, school subjects, Wh-questions (Where/When/What do you…?), and “Are you good at…?” — and shown it in the flagship <b>Team Quiz with reward game</b>.</li><li><span class="lb">Subsidiary.</span> AB Review «Ready, Steady, Go!» (p.14): name places &amp; subjects, write Wh-questions, ability sentences, capital letters, break Luke's code (→ SCOTLAND, a bridge to Unit 2); spelling check; self-assessment — readiness for the L7 test.</li><li><span class="lb">Personal.</span> Quiz = every child answers (Showdown boards), not captains only; keep the reward game short and joyful — it's the cherry, not the cake. Both teams celebrate at the end.</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will have <b>consolidated all Unit 1 language</b> — <b>places in a school</b> + <b>school subjects</b> — and can <b>ask &amp; answer</b> with the unit's questions: “Where do you…?”, “Are you good at…?”, “What's your favourite subject?”</li>
+      <li><span class="lb">Subsidiary.</span> Retrieval practice (recall from memory, not re-teaching); interleave vocabulary + structures + capital-letter rule + phonics /dʒ/; cooperative fluency; end-of-unit self-assessment before the test.</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; make every response public (whiteboards / cards up) so <b>no one hides</b>; run the reward quiz on effort, not just speed.</li>
+    </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>name unit words from pictures AND spell key ones;</li><li>ask &amp; answer both question types (do / to be);</li><li>self-assess honestly with the traffic light.</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <ul class="a">
+        <li>name school places &amp; subjects from memory;</li>
+        <li>write the question for a given answer (When/Where/What… do you…?);</li>
+        <li>say what they are good / brilliant at + their favourite subject;</li>
+        <li>spell words that need a CAPITAL letter (days, subjects, names).</li>
+      </ul>
     </div>
   </div>
 
   <!-- TARGET LANGUAGE -->
-  <div class="eyebrow">Target language</div>
+  <div class="eyebrow">Target language <span style="font-weight:600;color:var(--muted);text-transform:none;letter-spacing:0">— recycled, not new</span></div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">all Unit 1: places in a school + school subjects</span></div></div><div class="r"><div class="k">Structure</div><div>Where/When/What do you…? &nbsp;·&nbsp; Are you good at…? — Yes, I am. / No, I'm not. &nbsp;·&nbsp; There's a … / I'm brilliant at …</div></div><div class="r"><div class="k">Form</div><div>do-questions vs to-be-questions recap; capital letters (days · names). Error harvest from the week feeds the quiz items.</div></div><div class="r"><div class="k">Pron. watch</div><div>gym /dʒ/, History /ˈhɪstri/, corridor — the week's watch-points, recycled in quiz items.</div></div>
+      <div class="r"><div class="k">Lexis · places</div><div><span class="w">classroom</span><span class="w">gym</span><span class="w">library</span><span class="w">playground</span><span class="w">music room</span><span class="w">computer room</span><span class="w">canteen</span><span class="w">science lab</span><span class="w">art room</span><span class="w">hall</span></div></div>
+      <div class="r"><div class="k">Lexis · subjects</div><div><span class="w">Maths</span><span class="w">English</span><span class="w">History</span><span class="w">Geography</span><span class="w">Science</span><span class="w">Music</span><span class="w">Art</span><span class="w">PE</span><span class="w">ICT</span><span class="w">Drama</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Where/When/What do you (play / eat lunch)? — I (play) in the (playground). &nbsp;·&nbsp; Are you good at (Maths)? — Yes, I am. / No, I'm not. &nbsp;·&nbsp; I'm (brilliant / good / not very good) at (History). &nbsp;·&nbsp; What's your favourite subject? — It's (Art).</div></div>
+      <div class="r"><div class="k">Form</div><div>Wh- + <b>do</b> + you + verb? → answer <b>drops “do”</b>. <i>be good at</i> + noun. Adverbs of degree: <i>not very good → good → brilliant at</i>.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>word stress: <i>com<b>PU</b>ter room</i>, <i>Ge<b>O</b>graphy</i>; connected “Where do you” /ˈweə dʒə/; /dʒ/ in <i>Geography, Drama-teacher's gym</i>.</div></div>
+      <div class="r"><div class="k">Phonics · spelling</div><div>revisit consonant <b>/dʒ/ j</b> (giraffes jumping judo gym); CAPITAL letters: <b>days, school subjects, names</b> (English, Monday, Josh) — small: <i>lunch, school</i>.</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“Is the quiz a test?” → no — it's training with fun; mistakes are how we learn.</div><div class="ccq" style="margin-bottom:10px">“Who answers in the quiz — the captain?” → EVERYONE writes/answers.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> All unit language introduced; today is consolidation before the test. Pupils know Showdown mechanics from earlier lessons and the alphabet code from the Starter.</p>
+      <div class="ccq">“I / you / we / they — do we use <b>do</b> or <b>does</b>?” → <b>do</b>. (he/she → does)</div>
+      <div class="ccq">“<i>brilliant at</i> — a little good or <b>very</b> good?” → very good.</div>
+      <div class="ccq" style="margin-bottom:12px">“<i>english</i> — small or BIG letter?” → BIG: subjects &amp; days always take a capital.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> all Unit 1 language met over Lessons 1–5 (places L1–2, subjects + <i>good at</i> L4, phonics /dʒ/ + capitals L5) — today is <b>retrieval, not first teaching</b>. Pupils read &amp; write short sentences. <b>Групповая математика:</b> команда — максимум 4 (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4).</p>
     </div>
   </div>
 
@@ -118,7 +113,11 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td>Quiz excitement → noise spiral</td><td>Fixed rules up front: answer only after “Show me!”; volume arm; one warning = minus point.</td></tr><tr><td>Weaker pupils hide in teams</td><td>Showdown: every child writes every answer on their own board; team point = majority correct.</td></tr><tr><td>Reward game drags</td><td>One roll/kick per win, 20 seconds, done; score big on the board.</td></tr><tr><td>Sore losers</td><td>Both teams get the «Well done!» cheer + stickers; “we beat the QUIZ together”.</td></tr><tr><td>Traffic light all-green (copying)</td><td>Eyes closed when showing colours — honest signal to you.</td></tr>
+        <tr><td>Answer with a bare word in the quiz</td><td>No point unless it's a <b>full sentence</b> — “Art.” → “My favourite subject is Art.”</td></tr>
+        <tr><td>Question word muddled (When/Where/What)</td><td>Point at the answer clue: place→Where, time/day→When, thing→What.</td></tr>
+        <tr><td>Forgets capital on subjects/days</td><td>“Big word for a big subject” — thumbs-up for capital, thumbs-down for small.</td></tr>
+        <tr><td>Fast teams shout, others switch off</td><td>Showdown: <b>everyone writes first, reveal together</b> — no calling out.</td></tr>
+        <tr><td>Loud on penalty kicks</td><td>“Freeze!” + only the named kicker moves; team cheers on my hand-drop.</td></tr>
       </tbody></table></div>
     </div>
     <div>
@@ -127,8 +126,8 @@
         <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
         <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
         <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
-        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
-        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>“Showdown!”</b> — all boards up together, reveal at once.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pens down.”</div>
         <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
       </div></div>
     </div>
@@ -139,8 +138,8 @@
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
     <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="ph">CAPS</span> = sub-phase</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
   <div class="scroll">
@@ -150,65 +149,104 @@
 
       <tr>
         <td class="min">0–3′</td>
-        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello, champions! Today — the BIG Unit 1 quiz!</span> Drum-roll on knees.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
-        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up ⚡.</span> Greet fast: <span class="en">Hello, team! Ready for the champions' review?</span> Straight up: <span class="game">▶ Disco Warm Up</span> — jump · spin · clap · sit · stand, trick them with <span class="en">Sit down!</span> when already up.</p>
+          <p>Set the day: <span class="en">Today is the big Unit 1 review — win points, win the trophy!</span> Bring energy down with your arm → <span class="en">And… freeze.</span></p>
+        </td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 (Genki #1) · space to move</td>
       </tr>
 
       <tr>
         <td class="min">3–10′</td>
-        <td class="stage"><div class="nm">Warm-up review circuit</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Fast rounds, all together:</span> ① flash 12 place cards — chorus + “There's a … in our school”; ② subjects — mime chain round the circle; ③ two-box drill: point to a Wh-card → ask with <b>do</b>; point to a “good at” card → ask with <b>are</b>.</p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if you're GOOD at this subject… Maths! …Art!</span> — instant whole-class check.</p></td>
-        <td class="mat">place + subject flashcards</td>
+        <td class="stage"><div class="nm">Retrieval warmer</div><div class="zone">standing, mingle</div></td>
+        <td class="flow">
+          <p><span class="ph">Brain dump (30 sec).</span> <span class="en">In your team — how many school places AND subjects can you say? Go!</span> Team scribe ticks them off fingers — pure recall, books closed.</p>
+          <p><span class="game">▶ Quiz-Quiz-Trade</span> (Kagan): each pupil holds one unit card (place or subject). <span class="en">Stand up, hand up, pair up!</span> A shows the picture: <span class="en">What's this? Where is it?</span> → B answers in a full sentence (<span class="en">It's the science lab. We do Science there.</span>), then swap, praise, <b>trade cards</b>, new partner. 3–4 rounds — <b>every child talks every round</b>.</p>
+          <p><span class="ph">Why now:</span> low-stakes recall from memory <span style="color:var(--muted)">(retrieval practice — Roediger &amp; Butler)</span> primes the whole unit before the written review.</p>
+        </td>
+        <td class="mat">unit picture cards — places + subjects (1 per pupil) · <span class="game">▶ Quiz-Quiz-Trade</span></td>
       </tr>
 
       <tr>
         <td class="min">10–20′</td>
-        <td class="stage"><div class="nm">AB Review p.14 · Ready, Steady, Go!</div><div class="zone">desks, pairs</div></td>
-        <td class="flow"><p><span class="ph">Beat the clock (Cooperative learning).</span> Pairs race the quiz: name six places, name three subjects, write the three Wh-questions, write ability sentences from the scores.</p><p><span class="ph">Capital letters + code.</span> Circle the words that need a capital (Saturday, Josh, English, Monday…). Then break Luke's code to find where he goes next: 76-12-60-80-48-4-56-16 → <span class="en">S-C-O-T-L-A-N-D!</span> <span class="en">That's Unit 2 — a Scottish island!</span></p><p><p><span class="asr">✔ <b>Assess:</b> circulate with the class list — tick who produces both question types unaided; the rest get support cards in the quiz.</span></p></p><div class="nb">📓 <b>Interactive notebook</b> — <b>GMF3_Unit1_Translation_2up_A5_A4</b><div class="nbk">2-up A5 pair — MATCH IT! (12 Russian sentences ↔ English A–L) and TRANSLATE IT! (the same 12 with blank lines)</div><ul><li>Pupils glue MATCH IT! into the notebook; TRANSLATE IT! is glued on the next page and left blank for homework.</li><li>Pairs match 1–12 to A–L. Rule: read the ENGLISH first, then check it against the Russian — not the other way round.</li><li>Whole-class check by number: <span class="en">Number one? — G. There's a gym in our school.</span></li><li>Everyone stars the ones they got wrong — those are exactly what to revise before the Unit test.</li></ul><span class="nbp"><b>When:</b> ~8 min inside the 10–20′ “AB Review p.14” stage (desks, pairs) — MATCH IT! in class, TRANSLATE IT! goes home</span><span class="nbp"><b>Prep:</b> 1 × A4 per pupil = both halves. Scissors, glue sticks. The TRANSLATE IT! half is the homework — say so out loud.</span></div></td>
-        <td class="mat">Activity Book p.14 · code key cards</td>
+        <td class="stage"><div class="nm">AB Review p.14 · Ready, Steady, Go!</div><div class="zone">team tables</div></td>
+        <td class="flow">
+          <p><span class="ph">Cooperative quiz ⚡🧘.</span> Open <b>Activity Book p.14</b>. <span class="en">Work with a friend — can you beat the clock?</span> <span class="game">▶ RallyCoach</span> in pairs: partner A does ex.1–2 (name 6 places / 3 subjects) while B coaches, then swap for ex.3 (write the question: <span class="en">When… ? Where… ? What… ?</span>) and ex.4 (<span class="en">I'm very good at Maths.</span>).</p>
+          <p><span class="ph">📓 Interactive notebook — MATCH IT!</span> Hand out <b>GMF3_Unit1_Translation</b> (2-up). Pupils cut &amp; glue the <b>MATCH IT!</b> half now: draw lines RU ↔ EN (12 sentences), <b>star</b> any they got wrong to fix. <span class="en">Match it, then check with your partner.</span> (<i>TRANSLATE IT! half = homework.</i>)</p>
+          <p>Quick class check ex.5: <span class="en">Which words need a CAPITAL letter?</span> Thumbs up = capital (<i>Saturday, Josh, English, Ravi, Monday</i>), thumbs down = small (<i>lunch, school, swimming pool</i>) — <b>all pupils vote at once</b>.</p>
+        </td>
+        <td class="mat"><b>Activity Book p.14</b> · <b>GMF3 Unit 1 Translation</b> insert · scissors · glue · pencils · <span class="game">▶ RallyCoach</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">20–22′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the carpet</div></td>
+        <td class="flow"><p><span class="en">Pens down — sing it out!</span> <span class="game">Genki #54 «What's your favourite subject?»</span> — sing &amp; point; on your cue each child shouts their own: <span class="en">My favourite subject is [Art]!</span> Re-energise before the game block.</p></td>
+        <td class="mat"><b>Genki #54</b> mp3 · subject cards on the ledge</td>
       </tr>
 
       <tr>
-        <td class="min">20–24′</td>
-        <td class="stage"><div class="nm">Spelling sprint</div><div class="zone">desks</div></td>
-        <td class="flow"><p><span class="ph">Look–copy–cover–write live.</span> 3 words (<i>library · gym · Geography</i>) on mini-whiteboards — look 5 sec, cover, write, <span class="en">Show me!</span> Self-check letter by letter (watch the soft g!).</p></td>
-        <td class="mat">mini-whiteboards</td>
+        <td class="min">22–32′</td>
+        <td class="stage"><div class="nm">▶ Team Memo</div><div class="zone">team tables</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Memory / Memo</span> (teams of 4): each set = 12 cards making <b>6 pairs</b> — a <b>picture</b> card + its <b>word/sentence</b> card (place ↔ “I eat lunch in the canteen”; subject ↔ “I'm good at Science”). Cards face-down in a grid.</p>
+          <p>In turn a player flips two. <span class="ph">Rule (drill hidden inside):</span> you keep the pair <b>only if you say the full sentence</b> — <span class="en">This is the library. I read books in the library.</span> Bare word = flip back, next player. <b>Numbered Heads</b> order keeps turns fair; whole team watches &amp; helps (English only).</p>
+          <p>Most pairs = team point on the scoreboard. Reset noise: <span class="en">Freeze — Class? — Yes!</span></p>
+        </td>
+        <td class="mat">3 Memo sets (12 cards each: picture + sentence) · team scoreboard</td>
       </tr>
 
       <tr>
-        <td class="min">24–49′</td>
-        <td class="stage"><div class="nm">🏆 TEAM QUIZ + reward</div><div class="zone">desks, 2 teams</div></td>
-        <td class="flow"><p><span class="ph">Flagship quiz (board or projector).</span> Grid of tiles: picture→place, subject→spelling, Where/When/What do you…?, Are you good at…?, capital-letter fix, break-the-code. Mechanics: tile opens → <b>Showdown</b>: EVERY child writes/says on their board → <span class="en">Show me!</span> → majority correct = team point → <span class="ph">reward:</span> one player takes a bowling / penalty shot (paper ball into a box). Rotate the shooter strictly.</p><p><div class="ig">🎮 <b>Offline setup:</b> card grid on the whiteboard + a real paper-ball penalty into a box/basket — one shot per win, 20 sec.</div></p><p><span class="ph">ICQ:</span> <span class="en">When do you show your board?</span> (→ only on “Show me!”)</p><p><span class="ph">Finale.</span> Count scores together in English; both teams: <span class="en">Give me five!</span></p></td>
-        <td class="mat">quiz grid (board) · mini-whiteboards · box + paper ball</td>
+        <td class="min">32–42′</td>
+        <td class="stage"><div class="nm">▶ Question Relay</div><div class="zone">open floor, board</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Card-Grab Relay ⚡</span> (interleaving vocab + grammar). Two answer-cards taped at the far wall per round (e.g. <span class="en">in the playground</span> / <span class="en">at the weekend</span>). Teams line up.</p>
+          <p>Read a question stem — <span class="en">Where do you play with your friends?</span> — first runner <b>races</b>, grabs the matching answer card, runs back and the team <b>chants the full exchange</b>: <span class="en">Where do you play? — I play in the playground!</span> Correct grab + full sentence = point. Rotate every runner; mix stems: Where / When / What / Are you good at…?</p>
+          <p>Keep it fair &amp; loud-safe: only the current runner moves — <span class="en">Freeze!</span> resets.</p>
+        </td>
+        <td class="mat">answer cards (places · days · subjects) · tape · question-stem list</td>
       </tr>
 
       <tr>
-        <td class="min">49–55′</td>
-        <td class="stage"><div class="nm">Well done! · self-assessment</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Cheer «Well done!»</span> Whole class + high-five choreography.</p><p><span class="ph">My progress (AB p.14).</span> Eyes closed; you read the can-do lines (<span class="en">I can name places in a school… I can ask Where/When/What do you…? … I can say Are you good at…?</span>); pupils show green/yellow/red. Open eyes; <span class="en">Yellow or red? Tell me after class — we'll fix it together before the test.</span></p></td>
-        <td class="mat">traffic-light cards · AB p.14</td>
+        <td class="min">42–55′</td>
+        <td class="stage"><div class="nm">🏆 Flagship quiz — Penalty Shoot-Out</div><div class="zone">teams + goal zone</div></td>
+        <td class="flow">
+          <p><span class="ph">Set up.</span> Draw a goal on the board; each team has a mini-whiteboard. <span class="en">Answer right — you earn a penalty kick. Score the goal — win the trophy!</span></p>
+          <p><span class="game">▶ Showdown quiz</span> (Kagan): read a mixed question — interleave all Unit 1 language:
+            ① <span class="en">Name the place: you do experiments here.</span> (science lab)
+            ② <span class="en">Make the question: “… I have PE on Wednesday.”</span> (When do you have PE?)
+            ③ <span class="en">Answer: “Are you brilliant at Maths?”</span>
+            ④ <span class="en">Fix the capital: “i love english.”</span>
+            ⑤ <span class="en">Which word has the /dʒ/ sound: garden, Geography, garage?</span></p>
+          <p>Every teammate writes <b>privately</b>, you call <span class="en">Showdown!</span> → all boards up together, team agrees. Correct → a chosen player takes a <b>penalty kick</b> (soft ball / paper ball at the goal) for a bonus point. <span style="color:var(--muted)">All-response check — no one spectates (Wiliam, formative).</span></p>
+          <p>Tally goals; the <b>winning team gets the reward</b> 🏆 (champion badge / stickers). Keep it warm — celebrate every team's best answer.</p>
+        </td>
+        <td class="mat">mini-whiteboards + pens · soft ball · board goal · quiz question bank · 🏆 reward badges/stickers</td>
       </tr>
 
       <tr>
-        <td class="min">55–57′</td>
-        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Well done — you beat the quiz! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Test next lesson — don't worry, it's what we practised. Finish the Activity Book review tonight!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+        <td class="min">55–58′</td>
+        <td class="stage"><div class="nm">Reflection · My progress</div><div class="zone">team tables</div></td>
+        <td class="flow">
+          <p><span class="ph">Self-assessment 🧘.</span> AB p.14 <b>My progress</b>: <span class="en">My work in Unit 1 is excellent / good / OK. Now I can… My favourite lesson is…</span> — circle &amp; write. Traffic-light it: <span class="en">Show me — green, yellow or red — how good are you at asking “Where do you…?”</span></p>
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner one thing you're brilliant at now.</span> (20 sec each) → tells you who's ready for the test next lesson.</p>
+        </td>
+        <td class="mat">Activity Book p.14 (My progress) · traffic-light cards</td>
       </tr>
 
       <tr>
-        <td class="min">57–60′</td>
-        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. At the door — one quiz-style question each (from the pile they found hardest). Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
-        <td class="mat">question cards · reward stickers</td>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Closing · Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Each pupil draws a card and answers to leave: <span class="en">Where do you eat lunch?</span> / <span class="en">Are you good at Art?</span> / <span class="en">What's your favourite subject?</span> Answered in a full sentence → out: <span class="en">Champion! See you for the test. Goodbye!</span></p></td>
+        <td class="mat">place/subject/question cards · reward stickers 🦝</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 14 (Review «Ready, Steady, Go!»):</b> finish the quiz — name places · name subjects · write the questions · ability sentences · capital letters · break the code + <i>My progress</i> self-check. Повторить слова и вопросы юнита в приложении перед тестом (5–7 min).</p></td>
-        <td class="mat">Activity Book p.14 · app (homework link)</td>
+        <td class="flow"><p><b>Activity Book — p. 14 (Review “Ready, Steady, Go!”), задания № 1–7</b> (finish any unfinished quiz items + № 6–7 “Where's Luke?” / break the code) <b>+ My progress</b> (self-assessment). <b>📓 Notebook:</b> the <b>TRANSLATE IT!</b> half of the Unit 1 Translation insert — write all 12 English sentences. <b>App:</b> «Повторить слова юнита перед тестом» — practice trainer, 5–7 min.</p></td>
+        <td class="mat">Activity Book p.14 · TRANSLATE IT! insert · app (unit-revision trainer)</td>
       </tr>
 
     </tbody>
@@ -216,7 +254,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 1 “Time for school” · Lesson 6 (Review · Team Quiz) — lesson plan &amp; staging (continuing line)</span>
-    <span>Activity Book p.14 (Review) · КТП урок 9. Флагман-квиз с наградой — только на Review. Genki: «Baby Monkey's School Song» (71) + «What's Your Favourite Subject?» (54).</span>
+    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 1 · Lesson 6 (Review) — lesson plan &amp; staging</span>
+    <span>Content verified against КТП-GMF3 (урок 9) + AB p.14 + notebook catalog (Unit 1 Translation). Flagship reward quiz — Review only.</span>
   </div>
 </div>

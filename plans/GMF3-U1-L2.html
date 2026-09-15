@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GMF3 · Unit 1 · Lesson 2 — Grammar (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -52,51 +49,42 @@
   td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
   .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
   tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .nb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:7px 10px; }
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 3 · Unit 1 “Time for school” · Lesson 2 — Grammar · Wh-questions</div>
-    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 5</span><span class="chip new">✨ NEW · Where / When / What do you…?</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.9 · AB p.7</span></div>
+    <div class="t">Give Me Five! 3 · Unit 1 “Time for school” · Lesson 2 — Grammar</div>
+    <div class="s">A1 young learners (~9–10 y.o., readers &amp; writers) · 60 min · Grammar: dialogue → controlled → freer → production · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 5</span><span class="chip new">✨ Grammar focus</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">🎯 Wh- questions with <i>do</i></span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf3/games/school-memo.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🃏 Memory</a><a href="https://speakandsmile.ru/gmf3/games/school-ttt.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">❌⭕ Крестики</a><a href="https://speakandsmile.ru/gmf3/games/school-quiz.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🏆 Квиз</a><a href="https://speakandsmile.ru/gmf3/games/school-board.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎲 Ходилка</a><a href="https://speakandsmile.ru/gmf3/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1j_MYP-sxNwTK_n4-EmF1CIFDq7LmZoKA" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>ask &amp; answer Wh-questions in the present</b>: “Where/When/What do you (study Maths)? — I (read books) in the (library).”</li><li><span class="lb">Subsidiary.</span> Understand Ravi &amp; Josh's dialogue about school (CD1 14); discover the rule — we use <b>do</b> in the question, NOT in the answer (Grammar clue); recycle the 12 places from L1; write questions and answers about our school (AB follow-up).</li><li><span class="lb">Personal.</span> Drill the <b>do</b>-question vs no-<b>do</b>-answer contrast until it's visible; keep the interview stage strictly timed; model the full answer, accept short answers and recast.</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>ask &amp; answer present-simple <i>Wh-</i> questions about school</b> using “Where / When / What + <b>do</b> + you + (verb)?” — and to answer <b>without</b> <i>do</i> (“I play football on the pitch.”).</li>
+      <li><span class="lb">Subsidiary.</span> Recycle Lesson 1 places-in-a-school lexis inside the new structure; read &amp; act out a model dialogue; write question–answer pairs; speak in a Talk-Partners survey.</li>
+      <li><span class="lb">Personal.</span> Model on the board first (I do → we do → you do); give an ICQ before every task; keep a stirrer→settler rhythm with signals; make the “<i>do</i>-rule” a picture, not a lecture.</li>
+    </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>ask “Where/When/What do you…?” correctly;</li><li>answer WITHOUT <i>do</i>: “I study Maths in the classroom.”;</li><li>complete a school timetable by asking &amp; answering.</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <ul class="a">
+        <li>build a correct <i>Wh-</i> question with <i>do</i> (word order right);</li>
+        <li>choose Where / When / What for place / time / thing;</li>
+        <li>answer a <i>Wh-</i> question <b>without</b> <i>do</i>, using a school place.</li>
+      </ul>
     </div>
   </div>
 
@@ -104,12 +92,18 @@
   <div class="eyebrow">Target language</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">places (revision)</span><span class="w">study · play · use · go online · hang your coat</span><span class="w">timetable · lesson · break</span></div></div><div class="r"><div class="k">Structure</div><div>Where do you (play with your friends)? — I play in the (playground). &nbsp;·&nbsp; When do you (have PE)? &nbsp;·&nbsp; What do you do in the (library)?</div></div><div class="r"><div class="k">Form</div><div>Wh-word + <b>do</b> + you + verb…? Answer: I + verb (<b>no</b> do): <i>When do you study Music? → I study Music on Friday.</i></div></div><div class="r"><div class="k">Pron. watch</div><div>weak <i>do you</i> /djə/ at speed; rising-then-falling Wh-intonation ↘; <i>library</i> /ˈlaɪbrəri/.</div></div>
+      <div class="r"><div class="k">Lexis (recycled)</div><div><span class="w">gym</span><span class="w">corridor</span><span class="w">computer room</span><span class="w">football pitch</span><span class="w">school hall</span><span class="w">playground</span><span class="w">library</span><span class="w">music room</span><span class="w">basketball court</span><span class="w">canteen</span> + verbs <span class="w">play</span><span class="w">study</span><span class="w">use</span><span class="w">read</span><span class="w">do</span><span class="w">have (PE)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div><b>Where / When / What</b> + do + you + (verb)? — “Where do you play football?” · “When do you have PE?” · “What do you do in the library?” → answer: “I read books in the library.”</div></div>
+      <div class="r"><div class="k">Form</div><div>WH-word + <b>do</b> + you + <b>base verb</b>? → Answer: I + base verb + place / time. <b>do</b> lives in the question, <b>not</b> in the answer.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>connected speech: “What do you” /ˈwɒdʒə/, “Where do you” /ˈweədʒə/ — one smooth chunk; falling intonation on <i>Wh-</i> questions.</div></div>
+      <div class="r"><div class="k">Note (phonics)</div><div>No new phonics today — the consonant sound <i>j</i> comes on Lesson 5 (L5 Phon+Cult+Lit). This lesson = grammar only.</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“Where DO you play…? — is <i>do</i> in the question or in the answer?” → in the question only.</div><div class="ccq" style="margin-bottom:10px">“<i>What do you do</i> — how many <i>do</i>s? Why two?” → two: one for the question, one is the verb “do”.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> 12 places are fresh from L1 (checked in warm-up). Wh-words met before, but the <b>do</b>-support pattern is the new focus. Pupils can read the dialogue speech bubbles &amp; the grammar table.</p>
+      <div class="ccq">“In <i>Where do you play?</i> — is <b>do</b> in the question?” → yes.</div>
+      <div class="ccq">“In the answer <i>I play football</i> — do we say <b>do</b>?” → no.</div>
+      <div class="ccq" style="margin-bottom:12px">“<i>Where…?</i> asks about a <b>place</b> or a <b>time</b>?” → place. “<i>When…?</i>” → time. “<i>What…?</i>” → thing / action.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> pupils know the present-simple affirmative (“I play…”), know the 10–12 school places from Lesson 1, and can read short sentences. <b>Teams:</b> max 4 per team — 12 = 3×4 · 10 = 3+3+4 · 9 = 3×3 · 8 = 2×4 · 7 = 3+4.</p>
     </div>
   </div>
 
@@ -118,7 +112,11 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td><i>do</i> repeated in the answer (“I do study…”)</td><td>Two-colour board: <b>do</b> lives in the question box only; cross it out of the answer with a gesture.</td></tr><tr><td>Wh-word dropped (“Do you play where?”)</td><td>Sentence-strip build: [Where][do][you][play]? — pupils physically order the strips.</td></tr><tr><td>Interview = same partner again</td><td>Trade info-gap cards after each exchange (new partner every time).</td></tr><tr><td>Answers too short (“playground”)</td><td>Recast to the full sentence with a “stretch it” gesture; frame on the board.</td></tr><tr><td>Timetable info-gap chaos</td><td>Model ONE row publicly first; ICQ: ask, listen, WRITE, then swap.</td></tr>
+        <tr><td>Keep <i>do</i> in the answer: “I <s>do</s> play football”</td><td>Colour-trace <b>do</b> in the question box, cross it out in the answer box (notebook map) — the rule is a picture.</td></tr>
+        <tr><td>Wrong <i>Wh-</i> word (Where ↔ When)</td><td>Colour-code: <b>Where</b> = place, <b>When</b> = time, <b>What</b> = thing/action. Show the key card each time.</td></tr>
+        <tr><td>Word order: “Where you do play?”</td><td>Sentence-builder strips / QUESTION BUILDER on the map: WHERE — DO — YOU — PLAY?</td></tr>
+        <tr><td>“What do you” said word-by-word</td><td>Back-chain &amp; chorus the chunk /ˈwɒdʒə/ before production.</td></tr>
+        <tr><td>Teams shout single words in Tic-Tac-Toe</td><td>A cell is won <b>only</b> by a full correct question; a word alone = no cell, other team's turn.</td></tr>
       </tbody></table></div>
     </div>
     <div>
@@ -128,7 +126,7 @@
         <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
         <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
         <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
-        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pens down.”</div>
         <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
       </div></div>
     </div>
@@ -139,8 +137,8 @@
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
     <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="ph">PHASE</span> = sub-stage</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
   <div class="scroll">
@@ -151,85 +149,107 @@
       <tr>
         <td class="min">0–3′</td>
         <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Quick — name a place in our school!</span> Whip round the circle, one each.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
-        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Come in, sit down.</span> Quick energiser to wake bodies up: <span class="game">▶ Genki Disco Warm Up</span> — call &amp; do the moves (jump · spin · clap · stretch · sit), trick them once with <span class="en">Sit down!</span> when they're already sitting.</p>
+          <p>Bring the energy down: <span class="en">And… freeze. Eyes on me.</span></p>
+        </td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · carpet</td>
       </tr>
 
       <tr>
-        <td class="min">3–9′</td>
-        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">L1 places back fast.</span> Flash 12 cards: chorus + “There's a … in our school” True/False. Then <span class="game">▶ Sticky Fingers:</span> two players at the board, you say a place, first to slap the right card wins the point — the REST chorus-SPELL the word while they race (everyone busy). 4 rounds, rotate players.</p><p><span class="diff"><span class="sup">💪 Support:</span> racing pair gets the icon side. <span class="ext">⭐ Extension:</span> spellers spell without looking.</span></p></td>
-        <td class="mat">place flashcards on board · <span class="game">▶ Sticky Fingers</span></td>
+        <td class="min">3–8′</td>
+        <td class="stage"><div class="nm">Review — places (woven in)</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieval (Rosenshine daily review).</span> Flash Lesson 1 place cards fast: <span class="en">What's this place?</span> Class chorus: <span class="en">The gym! · The library! · The music room!</span> These nouns are the <b>answers</b> we'll need today — so we recall them first.</p>
+          <p><span class="game">▶ RallyRobin</span> (Kagan, in pairs, take turns): <span class="en">Name a place in our school — and one thing you do there.</span> e.g. <span class="en">The library — I read books.</span> 30 sec, then swap. Attention: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">place flashcards (L1) · <span class="game">▶ RallyRobin</span></td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">9–10′</td>
-        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Ravi is showing Josh the school gym. Listen!</span> Set the scene of the dialogue (PB p.9).</p></td>
-        <td class="mat">Pupil's Book p.9</td>
+        <td class="min">8–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge — song</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Listen — a question song! Sing with me.</span> Sing <span class="game">Genki “Where Do You Live?”</span> Point out the pattern on the board: the question has <b>do</b> (“Where <b>do</b> you live?”), the answer has <b>no</b> <i>do</i> (“I live in…”). This is exactly today's rule → into the grammar.</p></td>
+        <td class="mat"><b>Genki “Where Do You Live?”</b> mp3</td>
       </tr>
 
       <tr>
-        <td class="min">10–19′</td>
-        <td class="stage"><div class="nm">Dialogue &amp; grammar clue</div><div class="zone">carpet → board</div></td>
-        <td class="flow"><p><span class="ph">Listen &amp; repeat, act out (act. 1, CD1 14).</span> Books open p.9. Play line by line; class echoes with feeling (Josh impressed, Ravi proud).</p><p><span class="ph">Read again (act. 2).</span> <span class="en">Which places does Ravi talk about? What does he do there?</span> — gym (gymnastics), football pitch (football). Pairs find them.</p><p><span class="ph">Grammar box (act. 3, CD1 15).</span> Board: <i>Where / When / What + do + you + …?</i> Circle <b>do</b>. Grammar clue: <span class="en">We use “do” to ASK. We DON'T use “do” in the answer!</span> Cross <i>do</i> out of a sample answer.</p><p><span class="ph">ICQ:</span> <span class="en">“When do you study Music?” — your answer: I study Music on Friday, or I DO study…?</span> (→ I study Music on Friday!)</p></td>
-        <td class="mat">Pupil's Book p.9 · CD1 14–15 · board grammar box</td>
+        <td class="min">10–18′</td>
+        <td class="stage"><div class="nm">Presentation · model (I do)</div><div class="zone">board → desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Model dialogue — Pupil's Book p.9, ex 1 (CD1 14).</span> <span class="en">Books open, page 9. Listen and read.</span> Play Ravi &amp; Josh at the gym. Then <span class="en">Listen and repeat.</span> In pairs <span class="en">act it out</span> (swap roles). Draw out the questions: <span class="en">What do you do in here? · When do you have PE? · Where do you play football?</span></p>
+          <p><span class="ph">Grammar box — ex 3 (CD1 15). Think-aloud.</span> Build one question on the board strip by strip: <span class="en">Where … do … you … play football?</span> Say your thinking aloud: <span class="en">First the Wh-word, then do, then you, then the verb.</span> <span class="ph">CCQ:</span> <span class="en">Is “do” in the question?</span> (yes) → answer it: <span class="en">I play football on the pitch — do we say “do” here?</span> (no). Cross out the ghost <i>do</i> in the answer. Colour-key: <b>Where</b>=place · <b>When</b>=time · <b>What</b>=thing.</p>
+          <p><span class="ph">Drill the chunk.</span> Back-chain the tricky connected form: <span class="en">…do you / What do you / What do you do?</span> Chorus ×3, then 2–3 pupils solo.</p>
+        </td>
+        <td class="mat">GMF3 Pupil's Book p.9 · CD1 14–15 · board sentence-strips · Where/When/What key cards</td>
       </tr>
 
       <tr>
-        <td class="min">19–27′</td>
-        <td class="stage"><div class="nm">Tic-Tac-Toe · Wh-questions</div><div class="zone">desks, 2 teams</div></td>
-        <td class="flow"><p><span class="game">▶ Noughts &amp; Crosses — school.</span> 3×3 grid of place pictures. To claim a cell, the team ASKS the other team a Wh-question about it — <span class="en">Where do you read books?</span> — and the other team answers in chorus WITHOUT <i>do</i>: <span class="en">We read books in the library!</span> Both sides speak every turn. Rotate the asker.</p><p><div class="ig">🎮 <b>Projector/board option:</b> draw the 3×3 grid on the whiteboard; a rotating child taps the winning cell as the WHOLE team says the question aloud.</div></p><p><span class="ph">ICQ:</span> <span class="en">Is “do” in the question or the answer?</span> (→ the question!)</p><div class="nb">📓 <b>Interactive notebook</b> — <b>GMF3_Unit1_Lesson2_WH_Questions_A5</b><div class="nbk">A5 glue-in grammar map — QUESTION BUILDER (WH-word + <b>do</b> + you + base verb) with WHAT/WHEN/WHERE keys and a “DO has two jobs” panel</div><ul><li>Pupils glue the map on the page facing their L1 school directory, so both open together.</li><li>Point at the QUESTION BUILDER; the class reads it as one chunk: <span class="en">WHERE — DO — YOU — PLAY?</span></li><li>Everyone traces <b>do</b> in the question box in colour, then crosses it out in the answer box — the rule becomes a picture.</li><li>The map stays open during Tic-Tac-Toe: a team may look, but the question must come out with no gaps.</li><li>Struggling team — read them the “DO has two jobs” panel before their turn instead of giving the answer.</li></ul><span class="nbp"><b>When:</b> ~4 min at the start of the 19–27′ “Tic-Tac-Toe · Wh-questions” stage (desks, 2 teams) — glue first, then play with the map open</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Glue sticks + one coloured pencil each (for tracing <b>do</b>).</span></div></td>
-        <td class="mat">3×3 place grid (board) · place cards</td>
+        <td class="min">18–27′</td>
+        <td class="stage"><div class="nm">Tic-Tac-Toe · Wh-questions (we do)</div><div class="zone">carpet, 2 teams</div></td>
+        <td class="flow">
+          <p class="nb"><span class="ph">📓 Interactive notebook</span> — glue in <b>GMF3_Unit1_Lesson2_WH_Questions_A5</b> (QUESTION BUILDER + “DO has two jobs” panel). Glue it facing the L1 school-directory so both open together. Class reads the builder as one chunk: <span class="en">WHERE — DO — YOU — PLAY?</span> Everyone <b>colour-traces “do” in the question box</b>, then <b>crosses it out in the answer box</b> — the rule becomes a picture. Map stays open during the game. <i>~4 min.</i></p>
+          <p><span class="game">▶ Tic-Tac-Toe (Оксана's format).</span> Nine A4 cards = a 3×3 grid on the carpet (each card = a place or a Wh-word prompt). Two teams, ✕ and ⭕ tokens laid <b>on top</b>. To claim a cell a player must say a <b>full correct <i>Wh-</i> question</b> using that card — e.g. <span class="en">Where do you play basketball?</span> A single word or silence = no cell, other team's turn. First to three in a row wins. Everyone in the team whispers the question together before the speaker says it (all rehearse).</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do we say one word, or the whole question?</span> (→ whole question!)</p>
+        </td>
+        <td class="mat">9 × A4 grid cards · ✕/⭕ tokens · <b>notebook A5</b> + glue + 1 coloured pencil each</td>
       </tr>
 
       <tr>
-        <td class="min">27–37′</td>
-        <td class="stage"><div class="nm">Timetable info-gap</div><div class="zone">desks, pairs</div></td>
-        <td class="flow"><p><span class="ph">Model first.</span> Show two half-timetables (A has Monday, B has Tuesday). Model publicly: <span class="en">When do we have Music? — We have Music on Monday. Where? — In the music room.</span></p><p><span class="game">▶ Talk Partners info-gap (act. 4-style).</span> Pairs ask &amp; answer to complete the missing cells — <span class="en">When do we have PE? Where do we have PE?</span> Both write. 5–6 exchanges.</p><p><p><span class="asr">✔ <b>Assess:</b> circulate with the class list — who keeps the <b>do</b> out of the answer? Recast, note names.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> question stems printed on the half-sheet. <span class="ext">⭐ Extension:</span> add: <i>What do you do in PE? — We play basketball.</i></span></p></td>
-        <td class="mat">half-timetables (info-gap) · <span class="game">▶ Talk Partners</span></td>
+        <td class="min">27–35′</td>
+        <td class="stage"><div class="nm">Quiz-Quiz-Trade (we do)</div><div class="zone">mingle, standing</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Quiz-Quiz-Trade</span> (Kagan — everyone active at once). Each pupil holds a card: a Wh-word + a place/verb picture (e.g. <i>When · PE</i> / <i>Where · football</i> / <i>What · library</i>). <span class="en">Stand up, hand up, pair up!</span></p>
+          <p>Partner A quizzes: <span class="en">When do you have PE?</span> Partner B answers <span class="en">I have PE on Monday.</span> — then B quizzes A. <span class="ph">Coach, don't tell:</span> if stuck, the card-holder points at the Wh-key and gives a starter, not the whole answer. Praise: <span class="en">Nice question!</span> → <b>trade cards</b> → new partner. 3–4 rounds.</p>
+          <p>Settle signal to stop: <span class="en">WiFi 🖐.</span></p>
+        </td>
+        <td class="mat">Wh-question mingle cards (1 per pupil) · music · <span class="game">▶ Quiz-Quiz-Trade</span></td>
       </tr>
 
       <tr>
-        <td class="min">37–46′</td>
-        <td class="stage"><div class="nm">Ask &amp; answer chain</div><div class="zone">carpet, circle</div></td>
-        <td class="flow"><p><span class="game">▶ Numbered Heads Q&amp;A.</span> Teams numbered 1–4. You (then a pupil) draw a place + Wh card: <span class="en">What do you do in the gym?</span> Teams huddle 10 sec; you call a number — that child answers the full sentence. Point per correct answer. The number is random — everyone must be ready.</p><p><span class="ph">ICQ:</span> <span class="en">Do you shout the answer or wait for your number?</span> (→ wait!)</p></td>
-        <td class="mat">place + Wh cards · <span class="game">▶ Numbered Heads</span></td>
+        <td class="min">35–43′</td>
+        <td class="stage"><div class="nm">Boat Race relay (freer)</div><div class="zone">carpet → wall, teams</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Boat Race</span> (Genki — team relay for speed). Two teams in lines, a paper “boat” each. On the wall a row of <b>answer cards</b> (“I read books in the library.” “I play football on the pitch.”). Runner 1 grabs an answer, <b>says the question that fits it</b> — <span class="en">What do you do in the library?</span> — correct → the boat moves one step forward; then runs back and tags Runner 2.</p>
+          <p>Wrong or missing <i>do</i> → the boat stays; try again next turn (peer help allowed). First boat to the finish line wins. Fast, everyone runs, grammar hides inside the race.</p>
+          <p><span class="ph">Reset if loud:</span> <span class="en">Freeze!</span></p>
+        </td>
+        <td class="mat">2 paper boats · answer cards on wall · finish line · <span class="game">▶ Boat Race</span></td>
       </tr>
 
       <tr>
-        <td class="min">46–52′</td>
-        <td class="stage"><div class="nm">My favourite place · write</div><div class="zone">desks</div></td>
-        <td class="flow"><p><span class="ph">Notebooks / AB p.7 format.</span> Board frame: <i>My favourite place is the ___. I ___ there. I go there on ___.</i> Each child writes about THEIR favourite school place (3 sentences).</p><p><span class="diff"><span class="sup">💪 Support:</span> gapped frame + word bank. <span class="ext">⭐ Extension:</span> add a “Where/When” question for a partner to answer.</span></p></td>
-        <td class="mat">notebooks · board frame</td>
+        <td class="min">43–53′</td>
+        <td class="stage"><div class="nm">My favourite place (you do)</div><div class="zone">desks, then pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Production — write, then speak (Talk Partners).</span> <span class="en">Think of your favourite place in our school.</span> Pupils write three Q&amp;A pairs in their notebooks with the sentence frames on the board (support for weaker pupils):</p>
+          <p><span class="slot">My favourite place is the [computer room].</span> · <span class="slot">— What do you do there? — I [play games and study].</span> · <span class="slot">— When do you go there? — I go there on [Tuesday].</span></p>
+          <p>Then <span class="game">▶ Talk Partners</span>: swap partners and interview each other with real <i>Wh-</i> questions; listener repeats one fact back (<span class="en">So you play games in the computer room!</span>). Monitor for the <b>do</b>-rule; note 2–3 nice questions to share.</p>
+        </td>
+        <td class="mat">notebooks · board sentence-frames · pens</td>
       </tr>
 
       <tr>
-        <td class="min">52–55′</td>
-        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Ask your partner one Wh-question about school — full answer, no <i>do</i>!</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">Colour your progress card — I can ask Where/When/What do you…?</span></p></td>
-        <td class="mat">“I can…” progress cards (notebook)</td>
-      </tr>
-
-      <tr>
-        <td class="min">55–57′</td>
-        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Well done, question masters! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+        <td class="min">53–57′</td>
+        <td class="stage"><div class="nm">Reflection / check</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Quick check (Take Off–Touch Down).</span> Read a sentence — if it's a <b>correct</b> question, <span class="en">stand up tall</span>; if it's <b>wrong</b>, <span class="en">crouch small</span> and fix it aloud. e.g. <span class="en">Where you play football?</span> (wrong → stand? no, crouch → “Where <b>do</b> you play football?”). 5–6 items, everyone moves every time.</p>
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner one Wh-question you can ask now.</span> (20 sec each)</p>
+        </td>
+        <td class="mat">6 sentence cards (some with errors)</td>
       </tr>
 
       <tr>
         <td class="min">57–60′</td>
-        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. At the door — one Wh-question each from the card deck: <span class="en">Where do you play football?</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
-        <td class="mat">place cards · reward stickers</td>
+        <td class="stage"><div class="nm">Closing · Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Each pupil draws a Wh-word + place card and asks <b>you</b> a correct question (<span class="en">Where do you have lunch?</span>) → out: <span class="en">Great question! See you next lesson!</span> <span class="en">Homework is on page 7 of your Activity Book.</span></p></td>
+        <td class="mat">Wh + place exit cards · <b>Goodbye</b> cue</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 7:</b> ex. 1 <i>Complete the sentences in the grammar table</i> (When/What/do/you/use) + ex. 2 <i>Order and write the questions. Match questions and answers</i> + ex. 3 <i>Write. Draw your favourite place. Ask and answer</i>. <b>+ app trainer</b> — Wh-questions, 5–7 min.</p></td>
-        <td class="mat">Activity Book p.7 · app (homework link)</td>
+        <td class="flow"><p><b>Activity Book — p. 7 (Lesson 2 Grammar), exercises № 1–3:</b> №1 complete the grammar table (word bank <i>you · use · What · do · When</i>) · №2 order &amp; write the questions and match them to the answers · №3 draw your favourite place, write &amp; answer <i>What do you do there? / When do you go there?</i> <b>+ app trainer (word/grammar practice) 5–7 min.</b></p></td>
+        <td class="mat">GMF3 Activity Book p.7 · app (homework link)</td>
       </tr>
 
     </tbody>
@@ -237,7 +257,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 1 “Time for school” · Lesson 2 (Grammar · Wh-questions) — lesson plan &amp; staging (continuing line)</span>
-    <span>Pupil's Book p.9 (CD1 14–15) · Activity Book p.7 · КТП урок 5. Genki: «Where Are You Going?» (56) — по КТП; на структуру Wh + present точнее ложится сама песня юнита «My school is cool».</span>
+    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 1 · Lesson 2 (Grammar) — lesson plan &amp; staging</span>
+    <span>Content verified vs Pupil's Book p.9 + Activity Book p.7 + КТП урок 5 + notebooks.py (GMF3-U1-L2).</span>
   </div>
 </div>

@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GMF3 · Unit 1 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -55,48 +52,38 @@
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 3 · Unit 1 “Time for school” · Lesson 1 — Vocabulary · Places in a school</div>
-    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 4</span><span class="chip new">✨ NEW · 12 places in a school</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.8 · AB p.6</span></div>
+    <div class="t">Give Me Five! 3 · Unit 1 “Time for school” · Lesson 1 — Vocabulary</div>
+    <div class="s">A1 young learners (~9–10 y.o., readers) · 60 min · PPP + TPR + team games · carpet + desks + board</div>
+    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 4</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">📖 Readers — work with printed words</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf3/games/school-memo.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🃏 Memory</a><a href="https://speakandsmile.ru/gmf3/games/school-ttt.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">❌⭕ Крестики</a><a href="https://speakandsmile.ru/gmf3/games/school-quiz.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🏆 Квиз</a><a href="https://speakandsmile.ru/gmf3/games/school-board.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎲 Ходилка</a><a href="https://speakandsmile.ru/gmf3/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1j_MYP-sxNwTK_n4-EmF1CIFDq7LmZoKA" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 12 places in a school</b> and <b>say what our school has</b>: “There's a (gym) in our school. / There isn't a (music room).”</li><li><span class="lb">Subsidiary.</span> Sing «My school is cool» (CD1 12) &amp; the vocabulary chant (CD1 11); brainstorm places (Learning to learn); preview the Wh-question “Where do you (play the drums)? — In the (music room)”; early literacy — read the place words and find them in a word-search (AB).</li><li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; stirrer→settler rhythm — place-mime is high-energy, plan the freezes. Insist on the article: <i>a</i> gym, <i>a</i> library.</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 12 places in a school</b> (match picture ↔ printed word) and <b>describe their own school</b> using “There's a (gym) / There isn't a (music room) in our school.”</li>
+      <li><span class="lb">Subsidiary.</span> Revise Starter language (alphabet, numbers, “How do you spell…?”) woven into the new topic; spelling &amp; word-recognition of the new lexis; listen for detail (vocabulary chant + song “My school is cool”); pre-writing (School Directory notebook insert).</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; give an ICQ before every task; run a stirrer→settler rhythm; hide the drilling inside games so every child is producing, not watching.</li>
+    </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>name the 12 places in a school;</li><li>say “There's a … / There isn't a …” about our school;</li><li>read the place words and match word ↔ picture.</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <ul class="a">
+        <li>name &amp; read the 12 school places;</li>
+        <li>say “There's a… / There isn't a…” about their school;</li>
+        <li>ask &amp; answer “Where do you (play the drums)? — In the (music room).”</li>
+      </ul>
     </div>
   </div>
 
@@ -104,12 +91,17 @@
   <div class="eyebrow">Target language</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">gym</span><span class="w">corridor</span><span class="w">computer room</span><span class="w">football pitch</span><span class="w">school hall</span><span class="w">playground</span><span class="w">library</span><span class="w">bike stand</span><span class="w">music room</span><span class="w">basketball court</span><span class="w">canteen</span><span class="w">vegetable garden</span></div></div><div class="r"><div class="k">Structure</div><div>There's a (gym) in our school. / There isn't a (music room). &nbsp;·&nbsp; <i>preview:</i> Where do you (play the drums)? — In the (music room).</div></div><div class="r"><div class="k">Form</div><div>There's = There is + <b>a</b> + place. Negative: There <b>isn't</b> a + place. Watch the article <i>a</i> before every place.</div></div><div class="r"><div class="k">Pron. watch</div><div>corridor /ˈkɒrɪdɔː/; gym /dʒɪm/ (soft g!); vegetable /ˈvedʒtəbl/ (3 syllables); silent letters — none, but stress on the first part of compounds (FOOT-ball pitch).</div></div>
+      <div class="r"><div class="k">Lexis</div><div><span class="w">gym</span><span class="w">corridor</span><span class="w">computer room</span><span class="w">football pitch</span><span class="w">school hall</span><span class="w">playground</span><span class="w">library</span><span class="w">bike stand</span><span class="w">music room</span><span class="w">basketball court</span><span class="w">canteen</span><span class="w">vegetable garden</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>There's a (gym) in our school. · There isn't a (music room). &nbsp;·&nbsp; Where do you (play the drums)? — I (play the drums) in the (music room).</div></div>
+      <div class="r"><div class="k">Form</div><div>There + <b>'s</b> (is) / <b>isn't</b> + a + place. Contrast affirmative ↔ negative. Connected “There's” /ðeəz/.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>/dʒ/ in <i>gym</i>; stress <i>can<b>teen</b></i>; <i>corridor</i> /ˈkɒrɪdɔː/; <i>vegetable</i> /ˈvedʒtəbl/ (3 syll.).</div></div>
+      <div class="r"><div class="k">Phonics / spelling</div><div>Unit's phonics (consonant sound <b>j</b>) is taught at <b>L5</b> — <u>not today</u>. Today's early-literacy slot = <b>spelling of the place-words</b> (word search + “How do you spell…?” from Starter).</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“There's a gym — does our school HAVE a gym or NOT?” → yes, it has one.</div><div class="ccq" style="margin-bottom:10px">“music room — one word or two words for the place?” → two words, one place.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Starter routines are back; pupils know some school things from GMF2 and <i>classroom</i>. The 12 places are largely NEW; <i>There's / There isn't</i> is known receptively — production is today's stretch. Readers — word cards work alongside pictures.</p>
+      <div class="ccq">“There's a gym.” → Do we have one? → <b>yes</b>. “There isn't a music room.” → Do we have one? → <b>no</b>.</div>
+      <div class="ccq" style="margin-bottom:12px">“Is <i>library</i> a <b>place</b> or a <b>subject</b>?” → a place.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> alphabet, numbers 1–100 &amp; “How do you spell…?” are known from the Starter (revision). Pupils are <b>readers</b> → can match &amp; read printed words. Talk Partners &amp; team routines are known. <b>Группы:</b> команда — максимум 4; делим по 3–4 (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4).</p>
     </div>
   </div>
 
@@ -118,7 +110,11 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td>Article dropped (“There's gym”)</td><td>Board frame keeps the <b>a</b> in a bright colour; echo-correct with a beat: <i>There's — A — gym</i>.</td></tr><tr><td>soft/hard g (gym vs garden)</td><td>Contrast pair with cards held apart; 🦷 mirror the /dʒ/ of gym.</td></tr><tr><td>Long compound words (basketball court)</td><td>Chunk &amp; clap: BAS-ket-ball · COURT; icon on every card.</td></tr><tr><td>Mime game gets wild</td><td>Slow-motion + Freeze!; places mimed on the spot, no travelling.</td></tr><tr><td>Some read word cards slowly</td><td>Icon on every card; pair a strong reader with a developing one in card games.</td></tr>
+        <tr><td>Confuse <i>school hall</i> / <i>corridor</i> / <i>playground</i></td><td>Present with one clear gesture each; contrast in pairs on the board.</td></tr>
+        <tr><td>Drop the contraction in <i>There isn't a…</i></td><td>Back-chain: <i>…a music room → isn't a music room → There isn't a music room.</i></td></tr>
+        <tr><td>Read a picture but can't find its printed word</td><td>Dual-code: card = picture on one side, word on the back; model the first match.</td></tr>
+        <tr><td><i>corridor / vegetable garden</i> mispronounced</td><td>Short exaggerated choral drill, clap the syllables.</td></tr>
+        <tr><td>Teams argue over cards in Memory / relay</td><td>Assign the 4 roles inside each team; rotate every round.</td></tr>
       </tbody></table></div>
     </div>
     <div>
@@ -128,7 +124,7 @@
         <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
         <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
         <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
-        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pens down.”</div>
         <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
       </div></div>
     </div>
@@ -139,8 +135,8 @@
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
     <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="ph">PHASE</span> = sub-phase</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
   <div class="scroll">
@@ -151,85 +147,108 @@
       <tr>
         <td class="min">0–3′</td>
         <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Welcome to a new unit — TIME FOR SCHOOL!</span> Mime writing on a board; kids guess “school”.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
-        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Welcome back!</span> On the carpet: <span class="en">Stand up — let's wake up!</span></p>
+          <p><span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · sit down · stand up); trick them by calling <span class="en">Sit down!</span> when they're already sitting. Bring energy down with your arm: <span class="en">And… freeze.</span></p>
+        </td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · carpet</td>
       </tr>
 
       <tr>
-        <td class="min">3–9′</td>
-        <td class="stage"><div class="nm">Retrieval mingle</div><div class="zone">carpet, standing</div></td>
-        <td class="flow"><p><span class="ph">Recycle Starter, on-topic.</span> <span class="game">▶ Mix–Pair–Share:</span> music → <span class="en">Stand up, hand up, pair up!</span></p><p>R1 <span class="ph">likes:</span> <span class="en">Do you like reading? Do you like PE?</span> R2 <span class="ph">personal info:</span> <span class="en">Where do you live?</span> R3 <span class="ph">brainstorm (act. 1):</span> <span class="en">Take turns — name places in a school you know! (Russian OK — we'll learn them in English today!)</span></p><p><p><span class="asr">✔ <b>Assess:</b> who still can't produce a full “Do you like…?” answer? Note names — recycle at Reflection.</span></p></p></td>
-        <td class="mat">music · <span class="game">▶ Mix-Pair-Share</span></td>
+        <td class="min">3–10′</td>
+        <td class="stage"><div class="nm">Spelling &amp; review sprint</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Revise Starter → bridge into topic.</span> Recycle known language (alphabet, numbers, spelling) and point it straight at today's theme.</p>
+          <p><span class="game">▶ Quiz-Quiz-Trade</span> (Kagan) — each child holds a card with a <b>school-place word</b> (gym, library, playground…). <span class="en">Stand up, hand up, pair up!</span> A asks <span class="en">How do you spell it?</span> B spells it aloud → swap roles → trade cards → new partner. Every child spelling every round.</p>
+          <p>Attention signal: <span class="en">Class? — Yes!</span> Collect cards.</p>
+        </td>
+        <td class="mat">place-word cards (1/pupil) · <span class="game">▶ Quiz-Quiz-Trade</span></td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">9–10′</td>
-        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Listen — MY SCHOOL IS COOL!</span> Play the song (PB p.8, CD1 12) once through; pupils clap the beat → into the topic.</p></td>
-        <td class="mat"><b>«My school is cool»</b> (CD1 12)</td>
+        <td class="min">10–12′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come to the board — where do we go at school?</span> Play the <b>vocabulary chant (CD1&nbsp;11)</b>, echo the rhythm → settle into the presentation.</p></td>
+        <td class="mat"><b>Vocabulary chant</b> CD1 11 · board</td>
       </tr>
 
       <tr>
-        <td class="min">10–20′</td>
-        <td class="stage"><div class="nm">Presentation · 12 places</div><div class="zone">carpet → board</div></td>
-        <td class="flow"><p><span class="ph">Present with flashcards + chant (act. 2, CD1 11).</span> Each card: <span class="en">What's this? It's… the gym!</span> Choral ×3 + one gesture (gym = lift weights, library = open book, canteen = eat). Contrast pair held together: <span class="en">GYM — GARDEN!</span></p><p><span class="ph">There's / There isn't (act. 4).</span> Board frame: <span class="en">There's a gym in our school. There isn't a swimming pool.</span> Hold each card — class says True/False for OUR school, then the full sentence.</p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if our school has this place… library!</span> — flash cards fast, everyone moves every time.</p><p><span class="diff"><span class="sup">💪 Support:</span> answer with the gesture + word. <span class="ext">⭐ Extension:</span> full sentence — <span class="en">There's a big library in our school.</span></span></p></td>
-        <td class="mat">12 place flashcards · board frame</td>
+        <td class="min">12–22′</td>
+        <td class="stage"><div class="nm">Presentation · Vocabulary</div><div class="zone">board → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Slow reveal (guess-by-a-piece).</span> <span class="game">▶ Slow Reveal</span> — cover each A4 photo; uncover it slice by slice: <span class="en">What's this place?</span> First correct guess wins the reveal. Model any unknown: <span class="en">It's the school hall. School hall.</span> Choral drill ×3, then 2–3 pupils individually.</p>
+          <p>Present all 12 (Pupil's Book p.8): gym · corridor · computer room · football pitch · school hall · playground · library · bike stand · music room · basketball court · canteen · vegetable garden.</p>
+          <p>Contrast the tricky trio (hold the cards): <span class="en">This is the corridor. This is the school hall. This is the playground.</span> One gesture each; pupils mirror.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Is “library” a place or a subject?</span> (→ a place.) <span class="en">Listen, point and say</span> — chant along (p.8, act 2).</p>
+        </td>
+        <td class="mat">12 A4 flashcards (photo/word) · cover sheet · Pupil's Book p.8 · <span class="game">▶ Slow Reveal</span></td>
       </tr>
 
       <tr>
-        <td class="min">20–28′</td>
-        <td class="stage"><div class="nm">Song · My school is cool</div><div class="zone">desks</div></td>
-        <td class="flow"><p><span class="en">To your tables! Open your books at page 8.</span> <span class="ph">Sing (act. 3, CD1 12).</span> Listen &amp; point to the places in the big picture; 2nd run — sing with gestures.</p><p><span class="ph">Where do you…? (preview).</span> Read the song lines: <span class="en">Where do you play the drums? — In the music room!</span> Choral — plants L2's Wh-question. Freeze between verses.</p><div class="nb">📓 <b>Interactive notebook</b> — <b>GMF3_Unit1_Lesson1_My_School_Is_Cool_A5</b><div class="nbk">A5 glue-in note — SCHOOL DIRECTORY (12 picture words) + a SONG ROUTE strip (play the drums · go online · hang your coat · throw a ball → in / on the ___) + a TALK PARTNERS frame</div><ul><li><span class="en">To your tables! Notebooks open — today's date at the top.</span> Pupils trim the A5 and glue it in.</li><li>Play CD1 12 once: pupils follow the SONG ROUTE with a finger and match each action to its place.</li><li>Second play — they write the place on each route line and circle <i>in</i> or <i>on</i>.</li><li>Choral check against the directory: <span class="en">Where do you play the drums? — In the music room!</span></li><li>Leave the TALK PARTNERS frame blank — it is the writing frame for the 44–52′ stage, so no second handout.</li></ul><span class="nbp"><b>When:</b> ~6 min inside the 20–28′ “Song · My school is cool” stage (desks) — glue, then complete while the song plays</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td>
-        <td class="mat">Pupil's Book p.8 · CD1 12</td>
+        <td class="min">22–30′</td>
+        <td class="stage"><div class="nm">▶ Memory · teams</div><div class="zone">teams, on the floor</div></td>
+        <td class="flow">
+          <p><span class="ph">Controlled practice — picture ↔ printed word (retrieval + dual coding).</span> Each team of 4 gets a set of 24 cards: 12 <b>photos</b> + 12 matching <b>printed words</b>, all face-down in a grid.</p>
+          <p><span class="game">▶ Memory (Pelmanism):</span> in turn a player flips two cards. A pair counts <b>only</b> if the player <b>reads the word AND says a full sentence</b>: <span class="en">It's the library.</span> Word-only / silence = flip back, next player. Match → keep the pair, go again. Roles rotate (dealer · reader · checker · scorer).</p>
+          <p><span class="ph">ICQ:</span> <span class="en">One word — or a whole sentence?</span> (→ a whole sentence!) Most pairs wins. Reset noise with <span class="en">Freeze!</span></p>
+        </td>
+        <td class="mat">3 team sets (12 photo + 12 word cards) · <span class="game">▶ Memory</span></td>
       </tr>
 
       <tr>
-        <td class="min">28–36′</td>
-        <td class="stage"><div class="nm">Word ↔ picture · Memory</div><div class="zone">carpet, pairs</div></td>
-        <td class="flow"><p><span class="game">▶ Memory · There's a … — in pairs.</span> Each pair: 6 picture cards + 6 WORD cards (readers!) face-down in two rows. Turn one of each; a match is claimed only with a sentence: <span class="en">There's a canteen!</span> Wrong/no article → cards go back. Most pairs wins.</p><p><span class="ph">ICQ:</span> <span class="en">Can you keep the cards if you forget the “a”?</span> (→ no — There's A canteen!)</p><p><p><span class="asr">✔ <b>Assess:</b> stand behind one pair at a time — is the article automatic yet?</span></p></p></td>
-        <td class="mat">6+6 cards per pair</td>
+        <td class="min">30–38′</td>
+        <td class="stage"><div class="nm">Song + 📓 Notebook</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">To your tables — let's sing about our school!</span> Play <span class="game">“My school is cool” (CD1 12)</span>; pupils point to each place as it's sung, then join the chorus: <span class="en">This is my school. My school is cool!</span></p>
+          <p><span class="ph">📓 Interactive notebook — “School Directory” (A5).</span> Hand out <b>GMF3_Unit1_Lesson1_My_School_Is_Cool_A5</b>: pupils cut &amp; glue it in, then, as the song replays, <b>match each action to its place</b> (play the drums → music room; hang your coat → corridor; throw a ball → basketball court), <b>write the place</b> on the line and <b>circle</b> <i>in</i> / <i>on</i>. Quick sticker step: find the Unit 1 stickers, <span class="en">listen and stick</span> the places.</p>
+          <p><span class="ph">Countdown.</span> <span class="en">Finishing in 5… 4… 3… 2… 1… pens down.</span></p>
+        </td>
+        <td class="mat"><b>“My school is cool”</b> CD1 12 · School Directory A5 insert · scissors/glue · Unit 1 stickers</td>
       </tr>
 
       <tr>
-        <td class="min">36–44′</td>
-        <td class="stage"><div class="nm">Mime &amp; guess</div><div class="zone">carpet, 2 teams</div></td>
-        <td class="flow"><p><span class="game">▶ Slow-motion place mime.</span> One player mimes what you DO in a place (reading = library); their team guesses the place together: <span class="en">It's the library!</span> Mimer confirms. Point per correct guess; rotate the mimer every round — everyone mimes once.</p><p>Whole team must guess together — no solo shouting: <span class="en">One voice, one team!</span></p></td>
-        <td class="mat">place flashcards (prompt deck)</td>
+        <td class="min">38–45′</td>
+        <td class="stage"><div class="nm">▶ Match &amp; Build relay</div><div class="zone">board, running</div></td>
+        <td class="flow">
+          <p><span class="ph">Active practice — every child moves.</span> Two/three team lines. Photos scattered on one table; printed-word cards stuck along the board.</p>
+          <p><span class="game">▶ Card-grab relay:</span> on <span class="en">Go!</span> the first runner grabs a photo, races to the board, sticks it under the correct word, and <b>shouts the sentence</b> — <span class="en">There's a gym in our school!</span> — then tags the next runner. Wrong match / no sentence = the next teammate fixes it. Fastest correct board wins.</p>
+          <p>Settle with <span class="en">Freeze!</span> and a group read-back of the finished board.</p>
+        </td>
+        <td class="mat">photo cards · word cards + tape · board · 2–3 team lines</td>
       </tr>
 
       <tr>
-        <td class="min">44–52′</td>
-        <td class="stage"><div class="nm">Our school · speak &amp; write</div><div class="zone">desks</div></td>
-        <td class="flow"><p><span class="ph">Speak.</span> <span class="game">▶ RallyRobin:</span> <span class="en">Take turns: There's a… / There isn't a… — about OUR school.</span></p><p><span class="ph">Write (notebooks / AB p.6 format).</span> Two frames from the board: <i>There's a ___. There isn't a ___.</i> Each child writes 3 true sentences about our school, copying place words. Fast finishers add <i>and</i>.</p><p><span class="diff"><span class="sup">💪 Support:</span> copy the frame + choose from 3 word cards. <span class="ext">⭐ Extension:</span> add an adjective: <i>There's a BIG playground.</i></span></p></td>
-        <td class="mat">notebooks · board frames</td>
+        <td class="min">45–53′</td>
+        <td class="stage"><div class="nm">Production · Talk Partners</div><div class="zone">desks, in pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Freer speaking (sentence frame).</span> Model on the board: <span class="en">There's a ___ in our school. There isn't a ___.</span> <span class="ph">RallyRobin</span> (take turns): partners describe <b>their own</b> school — one true sentence each, back and forth: <span class="en">There's a canteen in our school. — There isn't a vegetable garden in our school.</span></p>
+          <p>Round 2 — swap to <span class="en">Where do you (play football)? — I (play football) on the football pitch.</span> Monitor, feed pronunciation of <i>corridor / vegetable garden</i>. Quick round-up: 2–3 pairs share to the class.</p>
+        </td>
+        <td class="mat">board frame · School Directory insert (support)</td>
       </tr>
 
       <tr>
-        <td class="min">52–55′</td>
+        <td class="min">53–57′</td>
         <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner two places in our school — with “There's a…”.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">Colour your progress card — I can name 12 places! I can say There's a / There isn't a!</span></p></td>
-        <td class="mat">“I can…” progress cards (notebook)</td>
-      </tr>
-
-      <tr>
-        <td class="min">55–57′</td>
-        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Well done, explorers! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner two new places you can say and read.</span> (20 sec each.)</p>
+          <p>“I can…” line on the notebook insert: pupils tick <span class="en">I can name school places · I can say There's / There isn't.</span></p>
+        </td>
+        <td class="mat">notebook “I can…” line</td>
       </tr>
 
       <tr>
         <td class="min">57–60′</td>
-        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. Show a place card at the door: <span class="en">What's this? Is there one in our school?</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
+        <td class="stage"><div class="nm">Closing / Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Each pupil takes a place-card: read the word + say <span class="en">There's a ___ in our school.</span> Answered → out: <span class="en">Great work today! See you next lesson!</span> <span class="en">Your homework is in the Activity Book.</span></p></td>
         <td class="mat">place cards · reward stickers</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 6:</b> ex. 1 <i>Read and find. Circle and write</i> (places word-search) + ex. 2 <i>Write about your school. Use There is or There isn't</i>. <b>+ app trainer</b> — place words, 5–7 min.</p></td>
-        <td class="mat">Activity Book p.6 · app (homework link)</td>
+        <td class="flow"><p><b>Activity Book — стр. 6 (Unit 1, Lesson 1 Vocabulary), задания № 1–2</b>: №1 <i>Read and find — circle &amp; write</i> (word search + complete the sentences with places) · №2 <i>Write about your school — use There is / There isn't</i> (6 pictures). <b>+ приложение (тренажёр):</b> потренировать слова урока 5–7 мин (BigBen practice link).</p></td>
+        <td class="mat">Activity Book стр. 6 · app (homework link)</td>
       </tr>
 
     </tbody>
@@ -237,7 +256,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 1 “Time for school” · Lesson 1 (Vocabulary · places in a school) — lesson plan &amp; staging (continuing line)</span>
-    <span>Pupil's Book p.8 (CD1 11–12) · Activity Book p.6 · КТП урок 4. Genki: «Baby Monkey's School Song» (71) — тема школа.</span>
+    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 1 · Lesson 1 (Vocabulary) — lesson plan &amp; staging</span>
+    <span>Lexis verified vs Pupil's Book p.8 (12 places) · HW vs Activity Book p.6 + BigBen · notebook: School Directory A5.</span>
   </div>
 </div>

@@ -1,6 +1,5 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GMF3 · Unit 1 · Lesson 5 — Phonics · Culture · Literacy (Lesson Plan &amp; Staging)</title>
+<title>GMF3 · Unit 1 · Lesson 5 — Phonics + Culture + Literacy (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
     --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -52,51 +49,43 @@
   td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
   .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
   tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .nb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:7px 10px; margin:7px 0; font-size:.9rem; }
+  .nb b{ color:var(--zone); }
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,.nb,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 3 · Unit 1 “Time for school” · Lesson 5 — Phonics (j) · Ireland · a poster</div>
-    <div class="s">A1+ young learners (~9 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 28.09–04.10 · Lesson 8</span><span class="chip new">✨ Sound j (g says j) · Ireland · text type: a poster</span><span class="chip">~10 pupils · pairs + teams</span><span class="chip">Pupil's Book pp.13–16 · AB pp.10–13</span></div>
+    <div class="t">Give Me Five! 3 · Unit 1 “Time for school” · Lesson 5 — Phonics + Culture + Literacy</div>
+    <div class="s">A1 young learners (~9–10 y.o., readers &amp; writers) · 60 min · Phonics (recognise→blend→segment) + CLIL/Culture + Literacy (write a poster) · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 28.09–04.10 · Lesson 8</span><span class="chip new">✨ Phonics /dʒ/ + Ireland + poster</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">🔤 Sound j — “Sometimes ‘g’ says ‘j’.”</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf3/games/school-memo.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🃏 Memory</a><a href="https://speakandsmile.ru/gmf3/games/school-ttt.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">❌⭕ Крестики</a><a href="https://speakandsmile.ru/gmf3/games/school-quiz.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🏆 Квиз</a><a href="https://speakandsmile.ru/gmf3/games/school-board.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎲 Ходилка</a><a href="https://speakandsmile.ru/gmf3/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1j_MYP-sxNwTK_n4-EmF1CIFDq7LmZoKA" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>read &amp; say the /dʒ/ sound</b> (giraffes jumping judo gym — “sometimes g says j”), <b>talk about after-school activities in Ireland</b>, and <b>read &amp; plan a poster</b> — three mini-blocks, one “school &amp; free-time” thread.</li><li><span class="lb">Subsidiary.</span> Phonics: notice that <b>j</b> and soft <b>g</b> spell the same /dʒ/ sound (recognise → say → sort); culture — after-school activities in Ireland (Springhill School) + Channel 21 video, 21C: trying new things; literacy — text type <b>a poster</b>, capital letters, plan &amp; write a club poster.</li><li><span class="lb">Personal.</span> Three blocks — keep transitions crisp (chant/drum bridges); the j tongue-twister is play; cap each block hard so the literacy plan actually gets written.</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>recognise, blend &amp; segment the /dʒ/ sound</b> (spelled <i>j</i> and soft <i>g</i>) and to <b>read and write a short club poster</b> (question + information + instruction) about an after-school activity.</li>
+      <li><span class="lb">Subsidiary.</span> Culture/CLIL — read about after-school activities in Ireland (Gaelic football · Irish dancing · hurling · tin whistle); recycle school subjects &amp; <span class="en">Are you good at…?</span> (L1–L4); literacy genre features (catchy question, exciting words, capital letters); 21C — open-mindedness &amp; trying new things.</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; run a stirrer→settler rhythm; make sure <b>every</b> child answers/moves in the phonics &amp; culture games (mini-cards, whole-class movement), not just the pair at the board.</li>
+    </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>say the giraffe /dʒ/ tongue-twister and sort j / soft-g words;</li><li>name 2–3 Irish after-school activities and compare with ours;</li><li>find the key facts on a poster and plan one with a partner.</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <ul class="a">
+        <li>hear /dʒ/ and sort <i>j</i>- and soft-<i>g</i> words;</li>
+        <li>read a poster and find who / when / where / cost;</li>
+        <li>plan &amp; write a club poster with a question, an instruction &amp; capital letters.</li>
+      </ul>
     </div>
   </div>
 
@@ -104,12 +93,18 @@
   <div class="eyebrow">Target language</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">giraffes · jumping · judo · gym · juice · jeans · orange</span><span class="w">Gaelic football · Irish dancing · hurling · tin whistle</span><span class="w">poster · club · meet · cost · contact</span></div></div><div class="r"><div class="k">Structure</div><div>The (giraffes) are (jumping) and doing (judo) in the (gym). &nbsp;·&nbsp; I play (Gaelic football) every (Friday). &nbsp;·&nbsp; poster: Join the (club). We meet on (Wednesday).</div></div><div class="r"><div class="k">Form</div><div>/dʒ/ = <b>j</b> (juice, jump) AND soft <b>g</b> before e/i/y (giraffe, gym, orange). Poster: capital letters at the start of a sentence &amp; for days/names (Wednesday, Mr Smith).</div></div><div class="r"><div class="k">Pron. watch</div><div>/dʒ/ clean in giraffe/gym/judo; hurling /ˈhɜːlɪŋ/; Gaelic /ˈɡeɪlɪk/; contrast g /dʒ/ (gym) vs g /g/ (garden).</div></div>
+      <div class="r"><div class="k">Phonics</div><div><b>Consonant sound /dʒ/ (letter <i>j</i> &amp; soft <i>g</i>)</b> — “Sometimes ‘g’ says ‘j’.” Model line: <span class="en">The giraffes are jumping and doing judo in the gym.</span> Words: <span class="w">giraffe</span><span class="w">jumping</span><span class="w">judo</span><span class="w">gym</span><span class="w">juice</span><span class="w">jelly</span><span class="w">jeans</span><span class="w">orange</span><span class="w">geography</span> · PB p.13 · AB p.10.</div></div>
+      <div class="r"><div class="k">Culture lexis</div><div><span class="w">Gaelic football</span><span class="w">Irish dancing</span><span class="w">hurling</span><span class="w">tin whistle</span><span class="w">after-school activities</span><span class="w">Ireland</span> · PB p.16–17.</div></div>
+      <div class="r"><div class="k">Literacy</div><div>Text type — <b>a poster</b>: <span class="en">Do you love…?</span> / <span class="en">Join the … club.</span> / <span class="en">We meet on … in the …</span> / <span class="en">You need …</span> / <span class="en">The classes cost …</span> / <span class="en">For more information, contact …</span> / <span class="en">Come and have fun!</span> · PB p.14–15 · AB p.11–12.</div></div>
+      <div class="r"><div class="k">Recycled</div><div>School subjects &amp; places (L1–L4) · <span class="en">Are you good at (Music)?</span> · <span class="en">Where/When do you…?</span></div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>/dʒ/ (voiced, jaw drop) vs /tʃ/ (<i>ch</i>); hard <i>g</i> in <i>go, big, gate</i> ≠ soft <i>g</i> in <i>gym, giraffe, orange</i>.</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“<i>gym</i> and <i>juice</i> — same first SOUND? Same first LETTER?” → same sound /dʒ/, different letters!</div><div class="ccq" style="margin-bottom:10px">“A poster — is it for READING quickly or for a long story?” → reading quickly; it tells you about a club.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Subjects, places and “good at” are active (L1–L4). Sound–letter awareness from GMF2 phonics is enough to enjoy the j / soft-g noticing (по учебнику). Pupils can read the short poster texts with support.</p>
+      <div class="ccq">“In <i>gym</i>, is the g a hard /g/ or a j sound?” → <b>j sound /dʒ/.</b></div>
+      <div class="ccq">“Do you play Gaelic football with your feet only?” → no → <b>hands too.</b></div>
+      <div class="ccq" style="margin-bottom:12px">“Does a good poster tell you WHEN and WHERE?” → <b>yes.</b></div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> pupils know school subjects/places, days of the week, the alphabet and can read/write short texts (L1–L4 done). They can decode single sounds but over-generalise “g always says j” — needs contrast. <b>Teams:</b> max 4 per team (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4).</p>
     </div>
   </div>
 
@@ -118,7 +113,11 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td>Twister said too fast → mush</td><td>Speed ladder: slow → normal → fast → whisper-fast; quality before speed.</td></tr><tr><td>soft g not linked to /dʒ/</td><td>Two hoops on the floor: J-hoop &amp; “g-says-j”-hoop; pupils physically stand in the right hoop per word card.</td></tr><tr><td>Culture block = passive watching</td><td>Every photo/video clip gets a task: point, mime the activity, thumbs if you'd like to try it.</td></tr><tr><td>Poster reading = word-by-word</td><td>Scavenger hunt: race to FIND one fact (When? Where? Cost?) — reading with a purpose.</td></tr><tr><td>Three blocks overrun</td><td>Hard caps: 16′ + 14′ + 20′; visible timer; park extra AB pages for homework.</td></tr>
+        <tr><td>Over-generalising “g = j” (say <i>go, big</i> with /dʒ/)</td><td>Contrast a minimal set: <i>gym / giraffe</i> (soft) vs <i>go / big / gate</i> (hard). Sort into 2 hoops on the board.</td></tr>
+        <tr><td>/dʒ/ confused with /tʃ/ (<i>judo</i> → “chudo”)</td><td>Hand on throat: /dʒ/ is voiced &amp; buzzes; short exaggerated choral drill.</td></tr>
+        <tr><td>Culture text feels long / heavy</td><td>Pre-teach 4 words with the slow-reveal game first; read only the 3 name-boxes, one per row.</td></tr>
+        <tr><td>Poster written as loose notes, no full lines</td><td>Model one line on the board; the glue-in frame gives sentence starters — they finish the line.</td></tr>
+        <tr><td>Two race at the board, ten watch</td><td>Every child holds a <i>j</i>/<i>g</i> mini-card &amp; votes; racers rotate every 2 words.</td></tr>
       </tbody></table></div>
     </div>
     <div>
@@ -138,9 +137,9 @@
   <div class="eyebrow">Procedure — staging</div>
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky cameo</span>
     <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
   <div class="scroll">
@@ -151,78 +150,105 @@
       <tr>
         <td class="min">0–3′</td>
         <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Today — a funny sound, a trip to Ireland and a cool poster. Ready?</span></p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Come in!</span> <span class="en">Stand up — let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · reach up · sit down), trick them with <span class="en">Sit down!</span> when they're already sitting.</p>
+          <p>Bring the energy down: <span class="en">And… freeze. Sit on the carpet.</span></p>
+        </td>
         <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
       </tr>
 
       <tr>
-        <td class="min">3–7′</td>
-        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ RallyRobin:</span> <span class="en">Take turns: Are you good at…? — subjects, full answers!</span> Then a quick “There's a … in our school” chorus — warms up school language for the poster later.</p></td>
-        <td class="mat"><span class="game">▶ RallyRobin</span></td>
-      </tr>
-
-      <tr>
-        <td class="min">7–23′</td>
-        <td class="stage"><div class="nm">Block 1 · Phonics /dʒ/</div><div class="zone">carpet → desks</div></td>
-        <td class="flow"><p><span class="ph">Speak and spell (act. 1, CD1 21).</span> PB p.13: <span class="en">Sometimes “g” says “j”. The giraffes are jumping and doing judo in the gym!</span> Listen, then the speed ladder: slow → fast → whisper. Pairs test each other ×3.</p><p><span class="ph">Sort j / soft-g.</span> Two hoops/columns: <b>j</b> (juice, jump, jeans, judo) · <b>g-says-j</b> (giraffe, gym, orange, Geography). Hold up word cards — every child points/steps to the right hoop BEFORE you place each card.</p><p><span class="ph">Notice the rule.</span> <span class="en">When does g say j? Look — gym, giraffe, orange… g before e, i, y!</span> (notice, don't lecture).</p><p><span class="diff"><span class="sup">💪 Support:</span> say the word, teacher shows the hoop. <span class="ext">⭐ Extension:</span> add one more /dʒ/ word to a hoop (e.g. jacket, page).</span></p><p><p><span class="asr">✔ <b>Assess:</b> who still reads soft g as /g/? Note them — extra RallyRead next unit.</span></p></p></td>
-        <td class="mat">Pupil's Book p.13 · CD1 21 · word cards · 2 hoops</td>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Review · woven into theme</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieve last lessons, aim it at today.</span> Today = after-school clubs, so recycle school subjects + <span class="en">Are you good at…?</span> (L1–L4). <span class="game">▶ Quiz-Quiz-Trade</span> (Kagan): each child has a subject/place card. <span class="en">Stand up, hand up, pair up!</span></p>
+          <p>Partner A quizzes: <span class="en">Are you good at [Music]?</span> — B: <span class="en">Yes, I am. / No, I'm not.</span> Coach, praise, <b>trade cards</b>, find a new partner. 2–3 rounds.</p>
+          <p><span class="ph">Hook.</span> <span class="en">You're good at lots of things! After school you can join a club and try something NEW. Today — a NEW sound, a NEW country and your OWN club poster!</span> Attention signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">subject/place cards (1 per pupil) · music · <span class="game">▶ Quiz-Quiz-Trade</span></td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">23–24′</td>
-        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Now — fly to IRELAND! What do children do after school there?</span> Irish flag up (green-white-orange), drum-roll on knees.</p></td>
-        <td class="mat">flag/photo</td>
+        <td class="min">9–10′</td>
+        <td class="stage"><div class="nm">🎵 Bridge · RPS</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="game">▶ Rock–Paper–Scissors chain</span> to move everyone to the board: winners keep going, losers cheer. Quick, fun, resets focus → straight into phonics.</p></td>
+        <td class="mat">— (space at the board)</td>
       </tr>
 
       <tr>
-        <td class="min">24–38′</td>
-        <td class="stage"><div class="nm">Block 2 · Culture · Ireland</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Read Luke's questions (act. 1).</span> <span class="en">How do you play Gaelic football? What's hurling? What instrument do Irish children play?</span> Guesses.</p><p><span class="ph">Read &amp; listen (act. 2, CD1 25).</span> PB p.16 Springhill School page: Sheona — Gaelic football; Teresa — Irish dancing; Liam — hurling; Pat — tin whistle. Per activity: point, name, MIME it on the spot (10-sec bursts — built-in stirrers). Answer Luke's questions.</p><p><span class="ph">Channel 21 video + trying new things (PB p.17).</span> Watch/discuss the after-school clip: <span class="en">Which class do you want to try? Why? Don't be afraid to try new things!</span> — hands, recast.</p><p><span class="ph">Think about your culture.</span> <span class="en">What activities do YOU do after school in our town?</span> 3–4 hands.</p><p><p><span class="asr">✔ <b>Assess:</b> call an activity — pupils point to the right photo; who points late?</span></p></p></td>
-        <td class="mat">Pupil's Book pp.16–17 · CD1 25 · video</td>
+        <td class="min">10–24′</td>
+        <td class="stage"><div class="nm">Phonics /dʒ/ — “Sometimes ‘g’ says ‘j’”</div><div class="zone">board → desks</div></td>
+        <td class="flow">
+          <p><span class="ph">① Recognise (listen).</span> Show the giraffe picture (PB p.13). <span class="en">Listen: /dʒ/… /dʒ/… giraffe.</span> Hand on throat — <span class="en">Can you feel it buzz? That's a j sound.</span> Model the line, class repeats twice: <span class="en">The giraffes are jumping and doing judo in the gym.</span> <span class="sp">🦝 Speaky</span> whispers: <span class="en">Look — g in “gym” says j!</span></p>
+          <p><span class="ph">② Blend.</span> Segment then blend on fingers: <span class="en">/dʒ/–u–m–p → jump. /dʒ/–u–d–o → judo.</span> Contrast pair for the CCQ: <span class="en">gym (soft) … go (hard).</span> Sort 4 quick words into two hoops on the board: soft <i>g</i>/<i>j</i> vs hard <i>g</i>.</p>
+          <p><span class="game">▶ Flyswatter (мухобойки) — /dʒ/ hunt.</span> Board = ~10 word cards, half /dʒ/ (<i>giraffe, gym, orange, jelly, juice, jeans</i>), half distractors (<i>go, big, gate, chips</i>). <b>PIES:</b> every child holds a <b>J</b> card and a <b>G-hard</b> card. You say a word → whole class raises the right card → the two team racers swat the matching board card. Only a swat on a true /dʒ/ word wins a point; racers rotate every 2 words so all play.</p>
+          <div class="nb"><b>📓 Interactive notebook — write &amp; sort (desks, ~4 min).</b> AB p.10: ex.1 <b>Complete &amp; say</b> — fill the missing <i>j</i>/<i>g</i> in <i>The g_iraffes are _umping and doing _udo in the g_ym</i>; then ex.2 <b>Find &amp; circle the words, classify</b> — sort the word-search words into a <b>j</b> column and a <b>g</b> column (<i>juice, jelly, jeans, jump</i> / <i>giraffe, gym, orange, geography</i>). ICQ: <span class="en">Which column for “orange”?</span> → the g column, but it says j!</div>
+        </td>
+        <td class="mat">PB p.13 · <b>AB p.10</b> · word cards + hoops · 2 flyswatters · J / G-hard mini-cards (1 pair per pupil) · Speaky</td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">38–39′</td>
-        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">The Irish children put up a POSTER for their club. Let's read one!</span> Point to the Roller Hockey poster.</p></td>
-        <td class="mat">PB p.14</td>
+        <td class="min">24–26′</td>
+        <td class="stage"><div class="nm">🎵 Bridge · song</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Time to try new things — let's sing!</span> Sing <span class="game">Genki #36 “Can you speak English?”</span> with actions (swap in club actions: <span class="en">Can you play hurling? Can you dance?</span>) → carries the “try a new activity” idea into the Ireland culture page.</p></td>
+        <td class="mat"><b>Genki #36 “Can you speak English?”</b> mp3</td>
+      </tr>
+
+      <tr>
+        <td class="min">26–37′</td>
+        <td class="stage"><div class="nm">Culture · After-school in Ireland</div><div class="zone">carpet → board</div></td>
+        <td class="flow">
+          <p><span class="ph">Pre-teach with a game.</span> <span class="game">▶ Slow reveal (угадай-по-кусочку).</span> Cover an image of each Ireland activity (Gaelic football · Irish dancing · hurling · tin whistle); uncover a little at a time. Teams whisper a guess, hand up: <span class="en">It's hurling!</span> Reveal + drill the word. 4 images = 4 words pre-taught.</p>
+          <p><span class="ph">Read.</span> PB p.16 “Springhill School” web page — read the 3 name-boxes (Sheona · Teresa · Liam) + Pat, one per row: <span class="en">What is Sheona's favourite activity?</span> Point &amp; find. Answer Luke's 4 questions together.</p>
+          <p><span class="game">▶ Take Off–Touch Down (comprehension check).</span> Read a statement — TRUE → <b>stand up tall</b>, FALSE → <b>touch down / crouch</b>: <span class="en">You can carry the ball in Gaelic football. (true)</span> · <span class="en">Irish dancing is on Friday. (false — Monday &amp; Wednesday)</span> · <span class="en">A tin whistle is big and quiet. (false — small &amp; loud)</span> · <span class="en">Liam plays hurling in competitions. (true)</span>. Every child moves every time; correct the false ones aloud.</p>
+          <p><span class="ph">21C · Think about your culture.</span> <span class="en">What activities do children do after school in your country?</span> Quick hands. <span class="en">Don't be afraid to try new things!</span></p>
+        </td>
+        <td class="mat">PB p.16–17 · covered Ireland images (slow-reveal) · CD1 25 (video/audio)</td>
+      </tr>
+
+      <tr>
+        <td class="min">37–39′</td>
+        <td class="stage"><div class="nm">Literacy · read a model poster</div><div class="zone">to desks</div></td>
+        <td class="flow">
+          <p><span class="en">Come to your desks — let's be poster detectives!</span> Show PB p.14 “ROLLER HOCKEY HEROES” &amp; p.15 “DO YOU LOVE COMPUTERS?”. Race to spot the parts: <span class="en">Find the QUESTION… the exciting words… the instruction “Join the…”… the day… the cost.</span> Point, don't write yet.</p>
+          <p><span class="ph">Writing tip (PB p.15).</span> <span class="en">Capital letter at the start of a sentence — and for days &amp; names: Wednesday, Mr Smith.</span></p>
+        </td>
+        <td class="mat">PB p.14–15 (model posters)</td>
       </tr>
 
       <tr>
         <td class="min">39–52′</td>
-        <td class="stage"><div class="nm">Block 3 · Literacy · a poster</div><div class="zone">carpet → desks, pairs</div></td>
-        <td class="flow"><p><span class="ph">Before you read (act. 1–3, CD1 23).</span> PB p.14 «Roller Hockey Heroes»: <span class="en">What can you do at this club? Think of a question to ask.</span> Read/listen — does it answer your question?</p><p><span class="game">▶ Poster scavenger hunt.</span> Race in pairs to find on the poster: <span class="en">When do they meet? Where? How much does it cost?</span> First hands up read the answer aloud — everyone scans.</p><p><span class="ph">Investigate a text (PB p.15, CD1 24).</span> «Do you love computers?» poster: find a question · exciting words · an instruction. Writing tip: <span class="en">Capital letters at the start of a sentence AND for days and names — Wednesday, Mr Smith!</span></p><p><span class="game">▶ Plan a poster (Cooperative learning, AB p.12 format).</span> Pairs choose a club (sport / art / music) and make notes: <i>Club name · When? · Where? · What do you need? · How much? · Contact.</i> 2 pairs share one fact aloud.</p><p><span class="diff"><span class="sup">💪 Support:</span> fill the plan template with word support. <span class="ext">⭐ Extension:</span> write the full poster with a slogan: COME AND HAVE FUN!</span></p><div class="nb">📓 <b>Interactive notebook</b> — <b>GMF3_Unit1_Lesson5_Make_A_Club_Poster_A5</b><div class="nbk">A5 glue-in writing template — club-poster frame (Do you love…? / Join the … club. / We meet on … in the … / You need … / The classes cost …) with a CLUB LOGO box and a CHECK YOUR POSTER list</div><ul><li>Pupils glue the template in; pairs choose their club in 30 seconds — <span class="en">Quick! One club. Go!</span></li><li>They draft straight onto the template lines; you read the CHECK YOUR POSTER list aloud, one item at a time.</li><li>Everyone draws a logo in the box and puts CAPITAL LETTERS on the club name.</li><li>Notebooks stand open on the desks; 2-minute gallery walk — <span class="en">Which club do you want to join?</span></li></ul><span class="nbp"><b>When:</b> ~10 min inside the 39–52′ “Block 3 · Literacy · a poster” stage (carpet → desks, pairs)</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Glue sticks, coloured pencils or markers for the logo.</span></div></td>
-        <td class="mat">Pupil's Book pp.14–15 · CD1 23–24 · poster plan sheets</td>
+        <td class="stage"><div class="nm">Block 3 · Literacy · a poster</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Plan (pairs).</span> AB p.12 ex.1 <b>Plan your poster</b> — pick ONE club in 30 sec: <span class="en">Quick! One club. Go!</span> Make notes: club name · when · where · what you need · cost · contact.</p>
+          <div class="nb"><b>📓 Interactive notebook — MAKE A CLUB POSTER (glue-in, ~10 min).</b> Pupils glue the <b>A5 club-poster frame</b> into their notebooks and draft straight onto the lines using the sentence starters: <span class="en">Do you love …? · Join the … club. · We meet on … in the … · You need … · The classes cost … · Come and have fun!</span> Read the <b>CHECK YOUR POSTER</b> list aloud, one item at a time (I ask a question ✓ · I use exciting words ✓ · I give an instruction ✓ · I use CAPITAL LETTERS ✓). Everyone draws a club <b>logo</b> in the box and CAPITALISES the club name. <i>Sheet: GMF3_Unit1_Lesson5_Make_A_Club_Poster_A5 · glue sticks + coloured pencils.</i></div>
+          <p><span class="ph">▶ Gallery walk.</span> Notebooks stand open on the desks; 2-min walk-and-look: <span class="en">Which club do you want to join? Tell your partner why.</span> Every child reads at least 2 posters — no one just sits.</p>
+        </td>
+        <td class="mat"><b>AB p.12</b> · <b>club-poster glue-in (A5)</b> · glue · coloured pencils</td>
       </tr>
 
       <tr>
-        <td class="min">52–55′</td>
+        <td class="min">52–57′</td>
         <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Say the giraffe twister to your partner — fast! Then: which Irish activity would you try?</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">Colour your progress card — I can read the j sound! I know about Ireland! I can plan a poster!</span></p></td>
-        <td class="mat">“I can…” progress cards (notebook)</td>
-      </tr>
-
-      <tr>
-        <td class="min">55–57′</td>
-        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Well done, poster designers! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner one /dʒ/ word and one thing you learned about Ireland.</span> (20 sec each.)</p>
+          <p>“I can…” check: thumbs — <span class="en">I can hear the j sound · I can read a poster · I can write a poster.</span></p>
+        </td>
+        <td class="mat">— (pairs)</td>
       </tr>
 
       <tr>
         <td class="min">57–60′</td>
-        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. At the door: a /dʒ/ word (gym/juice/giraffe) OR <span class="en">name an Irish after-school activity!</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
-        <td class="mat">reward stickers</td>
+        <td class="stage"><div class="nm">Closing / Exit</div><div class="zone">door</div></td>
+        <td class="flow"><p><span class="en">Great work today! Homework is on the app.</span> Line up. Exit ticket — each child says <b>one /dʒ/ word</b> (giraffe · jump · judo · gym · juice…) → out: <span class="en">Well done! Take care! Goodbye!</span></p></td>
+        <td class="mat"><b>Goodbye</b> mp3 · reward stickers 🦝</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 10</b> (Phonics): ex. 1 <i>Complete and say</i> (giraffe sentence) + ex. 2 <i>Find and circle the words. Classify j / g</i> + ex. 3 <i>Talk Partners: test spelling</i>; <b>p. 11</b> (Reading): ex. 1 <i>Read and circle</i> + ex. 2 <i>Find the words on the poster. Write</i> + ex. 3 <i>Read and answer</i>; <b>p. 12</b> (Writing): <i>Plan and write your poster. Share and check</i>. По желанию: <b>p. 13</b> Ireland web quest (ICT, со взрослым). <b>+ app trainer</b> — 5–7 min.</p></td>
-        <td class="mat">Activity Book pp.10–12 (+13) · app (homework link)</td>
+        <td class="flow"><p><b>Activity Book — стр. 10–11, задания № 1–3 (Speaking &amp; Spelling: complete &amp; say · word-search sort j/g · spell-a-word · Reading the poster: read &amp; circle · find the words · your favourite after-school activity)</b> + приложение (тренажёр слов урока — <i>giraffes, jumping, judo, Ireland, tin whistle, Irish dancing, hurling, Gaelic football</i>) 5–7 мин.</p></td>
+        <td class="mat">Activity Book p.10–11 · BigBen app (words trainer)</td>
       </tr>
 
     </tbody>
@@ -230,7 +256,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 1 “Time for school” · Lesson 5 (Phonics /dʒ/ · Culture Ireland · Literacy poster) — lesson plan &amp; staging (continuing line)</span>
-    <span>Pupil's Book pp.13–17 (CD1 21–25) · Activity Book pp.10–13 · КТП урок 8. Фоника — материал учебника (j / soft g). Genki: «Can You Speak English?» (36) — по КТП (языки/культура).</span>
+    <span>Speak &amp; Smile · Give Me Five! 3 · Unit 1 · Lesson 5 (Phonics + Culture + Literacy) — lesson plan &amp; staging</span>
+    <span>Phonics /dʒ/ verified vs КТП урок 8 + PB p.13 · Culture PB p.16–17 · Literacy PB p.14–15 · HW = AB p.10–11 (BigBen).</span>
   </div>
 </div>
