@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GMF2 · Unit 1 · Lesson 2 — Grammar (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -51,49 +48,44 @@
   td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
   td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
   .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
+  .nb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:8px 11px; margin:7px 0; font-size:.9rem; }
+  .nb b{ color:var(--zone); }
   tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .nb b{ color:var(--honey-ink); }
-  .nb ul{ margin:4px 0 0; padding:0 0 0 17px; } .nb li{ margin:2px 0; }
-  .nb .prep{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); } .nb .prep b{ color:var(--muted); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.nb,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,.nb,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 2 · Unit 1 “Move your body” · Lesson 2 — Grammar · Do you play…?</div>
-    <div class="s">A1 young learners (~8–9 y.o., early readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 5</span><span class="chip new">✨ NEW · Do you…? — Yes, I do / No, I don't</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.9 · AB p.7</span></div>
+    <div class="t">🦝 Give Me Five! 2 · Unit 1 “Move your body” · Lesson 2 — Grammar</div>
+    <div class="s">A1 young learners (~8–9 y.o., early readers) · 60 min · Grammar (PB p.9): model → controlled → freer → production · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 5</span><span class="chip new">✨ NEW grammar</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">Line: продолжающие</span><span class="chip">🎯 Present Simple I / you · play &amp; go</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf2/games/u1-story-week.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📖 История</a><a href="https://speakandsmile.ru/gmf2/games/u1-speaky-says.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🖐 Speaky says</a><a href="https://speakandsmile.ru/gmf2/games/find-it-u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🔎 Find it</a><a href="https://speakandsmile.ru/gmf2/games/whats-this-spinner-u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎯 Spinner</a><a href="https://speakandsmile.ru/gmf2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1PSvgJcK-DEO97DIdDSlYxmtd1A2gmeN6" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>ask &amp; answer about sports</b>: “Do you play (volleyball)? / Do you go (skateboarding)? — Yes, I do. / No, I don't.”</li><li><span class="lb">Subsidiary.</span> Understand the dialogue (CD1 15, Molly's goggles); listen for detail — Listen &amp; tick (CD1 16); consolidate the play/go split from L1; write a mini-conversation (AB follow-up).</li><li><span class="lb">Personal.</span> Drill the short answers until they're automatic — full “Yes, I do”, never bare “yes”; keep the interview stage strictly timed.</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>ask &amp; answer about sports in Present Simple (I / you)</b> using “Do you play (tennis)? / Do you go (swimming)? — Yes, I do. / No, I don't.” and <b>choose <i>play</i> vs <i>go</i></b> correctly.</li>
+      <li><span class="lb">Subsidiary.</span> Reactivate Lesson 1 sports vocabulary (10 words) in context; act out a model dialogue; listen for detail (Listen &amp; tick, PB p.9); freer speaking through a mingle; writing at word/sentence level (notebook constructor).</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; run I Do → We Do → You Do; give an ICQ + a colour-coded model before every task; keep a stirrer→settler rhythm with signals.</li>
+    </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>ask “Do you play/go…?” with the right verb;</li><li>answer “Yes, I do. / No, I don't.” truthfully;</li><li>complete a listen-and-tick task on first listening.</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <ul class="a">
+        <li>ask “Do you play/go…?” and give the short answer “Yes, I do. / No, I don't.”;</li>
+        <li>say “I play (ball sport)” vs “I go (-ing activity)” with the right verb;</li>
+        <li>read &amp; act out the model dialogue and build a sentence in writing.</li>
+      </ul>
     </div>
   </div>
 
@@ -101,12 +93,18 @@
   <div class="eyebrow">Target language</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">sports (revision)</span><span class="w">goggles</span><span class="w">Saturday</span><span class="w">every week</span></div></div><div class="r"><div class="k">Structure</div><div>Do you play (volleyball)? — Yes, I do. / No, I don't. &nbsp;·&nbsp; Do you go (rollerblading)?</div></div><div class="r"><div class="k">Form</div><div>Do + you + play/go + sport? Short answers with <b>do/don't</b> — never “Yes, I play”. The -s appears only in L3 (he/she) — don't pre-teach.</div></div><div class="r"><div class="k">Pron. watch</div><div>weak <i>Do you</i> /djə/ at speed; <i>don't</i> with a clean /əʊ/; rising intonation on the question ↗.</div></div>
+      <div class="r"><div class="k">Lexis (revision)</div><div><span class="w">football</span><span class="w">basketball</span><span class="w">tennis</span><span class="w">baseball</span><span class="w">volleyball</span><span class="w">hockey</span><span class="w">skateboarding</span><span class="w">cycling</span><span class="w">rollerblading</span><span class="w">swimming</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Do you <b>play</b> (tennis)? · Do you <b>go</b> (swimming)? — Yes, I do. / No, I don't. &nbsp;·&nbsp; I play… and I go…</div></div>
+      <div class="r"><div class="k">Form</div><div><b>play</b> + ball sports (football, tennis…); <b>go</b> + activity ending in <b>-ing</b> (swimming, cycling…). Short answer echoes the auxiliary: <i>Yes, I <b>do</b></i> — not “Yes, I play”.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>connected <i>Do you</i> /dʒə/; falling tone on the short answer <i>Yes, I do.</i>; clear /-ɪŋ/ ending in <i>swimming, cycling, rollerblading</i>.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>No new phonics block today (grammar lesson). <b>ai / ay</b> comes in <b>Lesson 5</b>. Optional 30-sec spelling flash of a sport word as a settler.</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“Do you play tennis? — can I answer just ‘yes’?” → better: Yes, I do!</div><div class="ccq" style="margin-bottom:10px">“Is the question about me or about you?” → about YOU — so answer about yourself, truthfully.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> 10 sports + play/go are fresh from L1 (checked in warm-up). Yes/No questions with <i>do</i> existed receptively in GMF1; production is new. Pupils can read the dialogue speech bubbles.</p>
+      <div class="ccq">“Football — is it <b>play</b> or <b>go</b>?” → play (a ball sport).</div>
+      <div class="ccq">“Swimming — play or go?” → go (it ends in <b>-ing</b>).</div>
+      <div class="ccq" style="margin-bottom:12px">“<b>Do you play tennis?</b> — Yes, I ___?” → <b>do</b> (not “Yes, I play”).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> the 10 sports were met in Lesson 1 (Vocabulary, PB p.8) — this is grammar in context, so vocabulary is recycled, not re-taught. Pupils are early readers → short printed prompts are supported with pictures, colour-coding &amp; a spoken model. Carpet &amp; team routines are known. <b>Группы:</b> команда — максимум 4 (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4).</p>
     </div>
   </div>
 
@@ -115,7 +113,11 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td>“Yes, I play” instead of “Yes, I do”</td><td>Echo-correct with a beat: <i>Yes — I — DO</i> ✊✊✊; table of answers stays on the board.</td></tr><tr><td>Verb dropped: “Do you tennis?”</td><td>Gesture the two columns from L1; back-chain: <i>…play tennis? → Do you play tennis?</i></td></tr><tr><td>Interview = same partner again and again</td><td>Trade cards after each exchange (Quiz-Quiz-Trade mechanics force new partners).</td></tr><tr><td>Listen &amp; tick — some tick late</td><td>Play twice; first listen pencils down, second listen tick. Model item 1 together.</td></tr><tr><td>Early finishers idle in AB-style writing</td><td>Extension line ready: add “on Saturdays / every week”.</td></tr>
+        <tr><td>Wrong verb: “I go football / I play swimming”</td><td>Two colour columns: <b>play</b> = ball sports, <b>go</b> = -ing activities. Sort before speaking.</td></tr>
+        <tr><td>“Yes, I play” instead of “Yes, I do”</td><td>Drill the short answer alone: the answer echoes <b>do</b>, not the verb. Choral ×3.</td></tr>
+        <tr><td><i>Do</i> dropped in the question</td><td>Back-chain: <i>tennis? → play tennis? → Do you play tennis?</i></td></tr>
+        <tr><td>Reading load in the notebook / on cards</td><td>Model one item aloud first; colour-code the three sentence parts; pupils copy the pattern.</td></tr>
+        <tr><td>Over-excitement in games (tic-tac-toe / relay)</td><td>Settle signal; a cell/point counts <b>only</b> for a full correct sentence; follow every stirrer with a settler.</td></tr>
       </tbody></table></div>
     </div>
     <div>
@@ -135,10 +137,9 @@
   <div class="eyebrow">Procedure — staging</div>
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
     <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="nb" style="padding:1px 6px;display:inline">📓</span> = interactive notebook (glue-in)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
   <div class="scroll">
@@ -149,85 +150,118 @@
       <tr>
         <td class="min">0–3′</td>
         <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Quick — mime your sport!</span> All mime at once, 10 seconds.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="flow">
+          <p><span class="ph">Warm up ⚡.</span> Greet at the door: <span class="en">Hello! Come in!</span> Stand in a circle. <span class="en">Stand up! Let's move our body!</span> → <span class="game">▶ Disco Warm Up</span> — call sport-mimes with the moves: <span class="en">Play tennis! … Go swimming! … Play football! … Go cycling!</span> Pupils mime the action as you call it.</p>
+          <p>Bring the energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p>
+        </td>
         <td class="mat"><b>Disco Warm Up</b> mp3 · carpet</td>
       </tr>
 
       <tr>
         <td class="min">3–9′</td>
-        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">L1 words back fast.</span> Flash 10 cards: chorus + play/go column call. Then <span class="game">▶ Sticky Fingers:</span> two players at the board, you say a sport, first to slap the right card wins the point — the REST of the class chorus-spells the word while they race (everyone busy). 4 quick rounds, rotate players.</p><p><span class="diff"><span class="sup">💪 Support:</span> racing pair gets the icon side. <span class="ext">⭐ Extension:</span> spellers spell without looking at the card.</span></p></td>
-        <td class="mat">sport flashcards on board · <span class="game">▶ Sticky Fingers</span></td>
+        <td class="stage"><div class="nm">Review woven in</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Reactivate Lesson 1 sports ⚡.</span> Flash the 10 sport cards fast: <span class="en">What's this sport?</span> Class chants the word. Then split the board/floor into two homes: <b>PLAY</b> ⚽ and <b>GO</b> 🏊.</p>
+          <p><span class="game">▶ Play or Go? sort</span> — hold up a card: <span class="en">Play or go? Run to your home!</span> Pupils run to the PLAY side or the GO side and say the phrase: <span class="en">I play football! / I go swimming!</span> 8–10 cards, fast — every child moves &amp; speaks every time.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Ball sports — play or go?</span> (→ play) &nbsp; <span class="en">-ing sports — play or go?</span> (→ go)</p>
+        </td>
+        <td class="mat">10 sport flashcards · PLAY / GO home signs</td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">9–10′</td>
-        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Where are Molly's goggles? Listen!</span> Set the scene of the dialogue: messy room, swimming today.</p></td>
-        <td class="mat">Pupil's Book p.9</td>
+        <td class="min">9–11′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Come closer — let's sing our sports song!</span> Sing <span class="game">“Do you play any sports?”</span> (coursebook, CD1 12) — it drills today's exact question <span class="en">Do you play any sports?</span> Point to <i>I play…</i> / <i>I go…</i> lines. <span class="sp">🦝 Speaky</span> sways along. <span style="color:var(--muted)">(Fresh alt. energy option: Genki “What Sports Do You Play?” — same structure.)</span></p></td>
+        <td class="mat"><b>“Do you play any sports?”</b> mp3 (CD1 12)</td>
       </tr>
 
       <tr>
-        <td class="min">10–19′</td>
-        <td class="stage"><div class="nm">Dialogue &amp; grammar box</div><div class="zone">carpet → board</div></td>
-        <td class="flow"><p><span class="ph">Listen &amp; repeat (act. 1, CD1 15).</span> Books open p.9. Play line by line; class echoes with feeling (Molly worried, Jake calm).</p><p><span class="ph">Grammar box (act. 2).</span> Board: <i>Do you play…? / Do you go…? — Yes, I do. / No, I don't.</i> Circle <b>Do … ?</b> and the twins <b>do/don't</b>. <span class="en">Question starts with…? DO! Answer ends with…? DO or DON'T!</span></p><p><span class="ph">Choral → chain drill.</span> You ask the class; class answers truthfully; then chain: pupil 1 asks pupil 2, 2 asks 3… each with a different sport card drawn from the deck — all listening because the deck decides.</p><p><span class="ph">ICQ:</span> <span class="en">If you don't play hockey — what do you say?</span> (→ No, I don't!)</p></td>
-        <td class="mat">Pupil's Book p.9 · CD1 15 · board grammar box</td>
+        <td class="min">11–19′</td>
+        <td class="stage"><div class="nm">Presentation · I&nbsp;Do</div><div class="zone">board → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Model dialogue (PB p.9, ex.1) 🧘.</span> <span class="en">Open your books at page 9. Listen and read.</span> Play CD1 15 — Beth &amp; Molly: <span class="en">Do you play tennis and basketball? — Yes, I do. And I go rollerblading. — Do you go swimming, too? — Yes, I do.</span></p>
+          <p><span class="ph">Think-aloud (make the choice visible).</span> Point to the <b>Grammar box</b>: <span class="en">I go rollerblading. Do you play tennis? Yes, I do. No, I don't.</span> Say: <span class="en">Tennis is a ball sport — so I say PLAY. Rollerblading ends in -ing — so I say GO. And the answer copies “do”, not the verb: Yes, I DO.</span></p>
+          <p><span class="ph">Back-chain drill.</span> <span class="en">tennis? … play tennis? … Do you play tennis?</span> Choral ×3. Short answers alone: <span class="en">Yes, I do! / No, I don't!</span> (thumbs up / thumbs down).</p>
+          <p><span class="ph">Act out ⚡.</span> In pairs on the carpet, read the dialogue by roles (A = Beth, B = Molly), then swap. <span class="ph">ICQ:</span> <span class="en">Do you answer “Yes, I play” or “Yes, I do”?</span> (→ Yes, I do.)</p>
+        </td>
+        <td class="mat">GMF2 Pupil's Book p.9 · CD1 15 · Grammar box on board</td>
       </tr>
 
       <tr>
-        <td class="min">19–26′</td>
-        <td class="stage"><div class="nm">Listen &amp; tick</div><div class="zone">desks</div></td>
-        <td class="flow"><p><span class="ph">Act. 3 (CD1 16).</span> <span class="en">Pencils down. First — just listen: which sports do you hear?</span> Second listen — tick the sports (cycling · volleyball · rollerblading · hockey · swimming). Model item 1 together, check in pairs, then whole-class check with the card held up.</p><p><p><span class="asr">✔ <b>Assess:</b> collect a quick thumbs-check per item — who ticked late/wrong? They join your group in the interview stage.</span></p></p><div class="nb">📓 <b>Interactive notebook</b> · «Lesson 2 · Do you play any sports?» — <i>glue-in sentence builder with a 3-colour code</i> · <b>6 min</b><ul><li>T: pupils glue the sheet in; colour one model sentence at the board first.</li><li>Pupils colour the three parts of every sentence: green = <span class="en">you / I</span>, blue = <span class="en">play / go</span>, purple = <span class="en">do / don't</span></li><li>Read the colour pattern aloud together — green, blue, purple — so the shape of the question sticks.</li><li>Bottom box <span class="en">Your turn!</span> — write one question and both answers, then ask a partner.</li></ul><span class="prep">✂ <b>Prep:</b> 1 × A5 per pupil · glue stick · 3 colour pencils (green · blue · purple)</span></div></td>
-        <td class="mat">Pupil's Book p.9 · CD1 16</td>
+        <td class="min">19–27′</td>
+        <td class="stage"><div class="nm">We&nbsp;Do · build &amp; listen</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Listen &amp; tick (PB p.9, ex.2) 🧘.</span> <span class="en">Listen. Which sport? Tick the picture.</span> Play CD1 16 (cycling · volleyball · rollerblading · hockey · swimming). Check in pairs, then whole class: <span class="en">Number 1 — does she play or go?</span></p>
+          <div class="nb"><b>📓 Interactive notebook</b> · «Lesson 2» — <i>sentence constructor (colour code)</i> · <b>~5 min</b><br>
+          · Pupils glue the strip in. Colour the three sentence parts: <b>green</b> = you / I · <b>blue</b> = play / go · <b>purple</b> = do / don't.<br>
+          · Model one on the board: <span class="en">Do you play tennis? — Yes, I do.</span> (green–purple–blue–green–blue). Pupils trace &amp; read their strip aloud.<br>
+          · <b>“Your turn!”</b> — each child writes ONE own question + answer: <span class="en">Do you go swimming? — No, I don't.</span> Read it to a neighbour to check colours &amp; verb.<br>
+          ✂ <b>Prep:</b> constructor strip А5, 1 per pupil · green/blue/purple pencils · glue.</div>
+        </td>
+        <td class="mat">PB p.9 ex.2 · CD1 16 · notebook strip (A5) · coloured pencils · glue</td>
       </tr>
 
       <tr>
-        <td class="min">26–34′</td>
-        <td class="stage"><div class="nm">Tic-Tac-Toe · grammar</div><div class="zone">desks, 2 teams</div></td>
-        <td class="flow"><p><span class="game">▶ Noughts &amp; Crosses — sports.</span> 3×3 grid of sport pictures. Team claims a cell by asking the OTHER team the question — <span class="en">Do you play baseball?</span> — and the other team answering truthfully in chorus: <span class="en">Yes, we do! / No, we don't!</span> Both sides speak every turn. Rotate the asker.</p><p><div class="ig">🎮 <b>Interactive (projector): «Крестики-нолики» — sports.</b> Same game on screen, auto-checks the line. A rotating child taps the cell; the WHOLE team says the question aloud. · 🎮 <a href="https://speakandsmile.ru/gmf2/games/sports-ttt.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">sports-ttt</a></div></p><p><span class="ph">ICQ:</span> <span class="en">Who says the question — one player or the team?</span> (→ the team, together)</p></td>
-        <td class="mat">🎮 <a href="https://speakandsmile.ru/gmf2/games/sports-ttt.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">sports-ttt</a> · offline grid backup</td>
+        <td class="min">27–36′</td>
+        <td class="stage"><div class="nm">Controlled drill · game</div><div class="zone">carpet / desks</div></td>
+        <td class="flow">
+          <p><span class="ph">The one lesson with tic-tac-toe ⚡ (Оксана's format).</span> <span class="game">▶ Sports Tic-Tac-Toe</span> — lay <b>9 A4 sport cards</b> in a 3×3 grid on the carpet. Two teams: ✕ and ⭕ (paper chips). Teams take turns.</p>
+          <p>To claim a cell the team must say the <b>full target sentence</b> for that sport — <span class="en">I play basketball.</span> / <span class="en">I go cycling.</span> — <b>or</b> a full exchange <span class="en">Do you play hockey? — Yes, I do.</span> Correct → place your chip on the card. A single word or the wrong verb (“I go football”) = no cell, the turn passes. First team with 3 in a row wins the round; re-shuffle the grid and play again.</p>
+          <p><span class="ph">Everyone in ⚡:</span> the team decides together (whisper huddle), a rotating “speaker” says the sentence — a new speaker each turn, so all 4 get a go.</p>
+        </td>
+        <td class="mat">9 A4 sport cards · ✕/⭕ paper chips · <span class="game">▶ Tic-Tac-Toe</span></td>
       </tr>
 
       <tr>
-        <td class="min">34–44′</td>
-        <td class="stage"><div class="nm">Sports interview</div><div class="zone">mingle</div></td>
-        <td class="flow"><p><span class="game">▶ Quiz-Quiz-Trade.</span> Every child holds a sport card. Music → mingle; music off → pair: A <span class="en">Do you play tennis?</span> (their card) — B answers truthfully <span class="en">Yes, I do! / No, I don't.</span> B asks theirs. TRADE cards, new partner. 5–6 exchanges — everyone asks/answers ~6 times.</p><p><span class="ph">Tally twist.</span> Before starting: <span class="en">Count your YES answers!</span> Harvest at the end: <span class="en">Who got three yes? Four?</span></p><p><span class="diff"><span class="sup">💪 Support:</span> card shows the full question as text (readers' support). <span class="ext">⭐ Extension:</span> follow-up: <span class="en">When? — On Saturdays!</span></span></p></td>
-        <td class="mat">sport cards · music · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+        <td class="min">36–44′</td>
+        <td class="stage"><div class="nm">Freer · mingle</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Kagan ▶ Quiz-Quiz-Trade ⚡.</span> Every child gets ONE sport card. <span class="en">Stand up, hand up, pair up!</span></p>
+          <p>Pair routine: A asks about their card — <span class="en">Do you play/go [tennis]?</span> B answers <b>truthfully</b> <span class="en">Yes, I do. / No, I don't.</span> → B quizzes A → praise <span class="en">Nice one!</span> → <b>trade cards</b> → new partner. 3–4 rounds. Everyone speaks every round (PIES).</p>
+          <p>Attention signal to stop: <span class="en">Class? — Yes!</span> Two quick shares: <span class="en">Find someone who goes swimming — who is it?</span></p>
+        </td>
+        <td class="mat">1 sport card per pupil · music · <span class="game">▶ Quiz-Quiz-Trade</span></td>
       </tr>
 
       <tr>
-        <td class="min">44–52′</td>
-        <td class="stage"><div class="nm">Write a mini-dialogue</div><div class="zone">desks, pairs</div></td>
-        <td class="flow"><p><span class="ph">Talk Partners → notebooks.</span> Pairs write a 4-line dialogue from the board frame: <i>— Do you play/go…? — Yes, I do. — Do you play/go…? — No, I don't.</i> Both write; both sign. Then act it out to another pair (previews AB p.7 ex.2 format).</p><p><span class="diff"><span class="sup">💪 Support:</span> frame printed on a half-sheet — fill 2 gaps only. <span class="ext">⭐ Extension:</span> add a third exchange with a subject: <span class="en">Do you like PE?</span></span></p></td>
-        <td class="mat">notebooks · frame on board</td>
+        <td class="min">44–51′</td>
+        <td class="stage"><div class="nm">Production · sprint</div><div class="zone">carpet, teams</div></td>
+        <td class="flow">
+          <p><span class="ph">▶ Boat Race relay ⚡ (Genki).</span> Two teams line up. On <span class="en">Go!</span> the first runner runs to the card box, grabs a sport card, and produces a full sentence at speed — <span class="en">Do you go rollerblading? Yes, I do!</span> or <span class="en">I play volleyball!</span> — drops the card in the team's “boat” (hoop), tags the next runner. Wrong verb → run the card back, try again.</p>
+          <p>Fast rotation = every child runs &amp; speaks. First boat full &amp; correct wins. <span class="ph">Settler:</span> <span class="en">Freeze!</span> → back to the carpet.</p>
+        </td>
+        <td class="mat">2 sets of sport cards · 2 hoops/boxes · <span class="game">▶ Boat Race relay</span></td>
       </tr>
 
       <tr>
-        <td class="min">52–55′</td>
+        <td class="min">51–55′</td>
         <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Ask your partner one last question: “Do you…?” — truthful answer!</span> (20 sec each).</p><p>“I can…” badge: <span class="en">Colour your badge — I can ask and answer about sports!</span></p></td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner ONE sport you play and ONE you go.</span> (20 sec each) → <span class="en">I play… and I go…</span></p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can ask “Do you play/go…?” and answer “Yes, I do / No, I don't”!</span></p>
+        </td>
         <td class="mat">“I can…” badges (notebook)</td>
       </tr>
 
       <tr>
-        <td class="min">55–57′</td>
+        <td class="min">55–58′</td>
         <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Well done, interviewers! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+        <td class="flow"><p><span class="en">Great teamwork today! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is Activity Book page 7 — and the app!</span></p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker 🦝</td>
       </tr>
 
       <tr>
-        <td class="min">57–60′</td>
+        <td class="min">58–60′</td>
         <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. At the door — one question each from your card deck: <span class="en">Do you play basketball?</span> Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
-        <td class="mat">sport cards · reward stickers</td>
+        <td class="flow"><p>Line up at the door. Show each child a sport card: <span class="en">Do you play/go [this]?</span> Correct short answer → out: <span class="en">Well done! Take care! Goodbye!</span></p></td>
+        <td class="mat">sport cards · folder reward stickers</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 7:</b> ex. 1 <i>Read and write. Follow and circle</i> + ex. 2 <i>Talk Partners: Write a conversation. Act out</i> (act it for your family). <b>+ app trainer</b> — 5–7 min.</p><p>🎮 <b>Дома:</b> <a href="https://speakandsmile.ru/gmf2/games/sports-ttt.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">sports-ttt</a> — 🤖 «Против компьютера»: отвечай вслух — <span class="en">Yes, I do! / No, I don't!</span> — клетка твоя (5 мин).</p></td>
-        <td class="mat">Activity Book p.7 · app (homework link)</td>
+        <td class="flow"><p><b>Activity Book — p. 7, ex. 1</b> (Read and write. Follow and circle — write <i>play/go</i>, follow the line, circle <span class="en">Yes, I do.</span> / <span class="en">No, I don't.</span>) <b>+ ex. 2</b> (Talk Partners: write your own conversation <span class="en">Do you…? … And I… / Do you…, too?</span> and act it out) + app grammar trainer «Do you play/go…?» 5–7 min.</p></td>
+        <td class="mat">GMF2 Activity Book p.7 (ex.1–2) · app (homework link)</td>
       </tr>
 
     </tbody>
@@ -235,7 +269,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 2 · Unit 1 “Move your body” · Lesson 2 (Grammar · Do you…?) — lesson plan &amp; staging (continuing line)</span>
-    <span>Pupil's Book p.9 (CD1 15–16) · Activity Book p.7 · КТП урок 5. Genki option: «What Sports Do You Play?» (48).</span>
+    <span>Speak &amp; Smile · Give Me Five! 2 · Unit 1 · Lesson 2 (Grammar) — lesson plan &amp; staging</span>
+    <span>Content verified vs PB p.9 + AB p.7 + КТП урок 5 (продолжающие). I Do/We Do/You Do &amp; sentence frames per teaching library.</span>
   </div>
 </div>

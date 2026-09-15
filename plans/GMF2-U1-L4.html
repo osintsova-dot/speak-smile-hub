@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GMF2 · Unit 1 · Lesson 4 — Vocabulary &amp; Grammar (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -52,48 +49,43 @@
   td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
   .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
   tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .nb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:8px 11px; margin-top:7px; font-size:.9rem; }
+  .nb b{ color:var(--zone); }
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .nb b{ color:var(--honey-ink); }
-  .nb ul{ margin:4px 0 0; padding:0 0 0 17px; } .nb li{ margin:2px 0; }
-  .nb .prep{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); } .nb .prep b{ color:var(--muted); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.nb,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 2 · Unit 1 “Move your body” · Lesson 4 — Vocab &amp; Grammar · He throws the ball</div>
-    <div class="s">A1 young learners (~8–9 y.o., early readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 21.09–27.09 · Lesson 7</span><span class="chip new">✨ NEW · 6 actions + he/she + -s</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.12 · AB p.9</span></div>
+    <div class="t">Give Me Five! 2 · Unit 1 “Move your body” · Lesson 4 — Vocabulary &amp; Grammar</div>
+    <div class="s">A1 young learners (~8–9 y.o., early readers) · 60 min · Vocab + Grammar (PPP + TPR) · carpet + desks · line: продолжающие</div>
+    <div class="meta"><span class="chip">Week 21.09–27.09 · КТП урок 7</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">Present Simple 3rd person: He throws / She catches</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf2/games/u1-story-week.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📖 История</a><a href="https://speakandsmile.ru/gmf2/games/u1-speaky-says.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🖐 Speaky says</a><a href="https://speakandsmile.ru/gmf2/games/find-it-u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🔎 Find it</a><a href="https://speakandsmile.ru/gmf2/games/whats-this-spinner-u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎯 Spinner</a><a href="https://speakandsmile.ru/gmf2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1PSvgJcK-DEO97DIdDSlYxmtd1A2gmeN6" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 6 ball actions</b> (hit · jump · kick · bounce · throw · catch) and <b>describe what someone does</b>: “He throws the ball. / She catches the ball.”</li><li><span class="lb">Subsidiary.</span> Sing «He's a superstar!» (CD1 19); consolidate the 3rd-person <b>-s</b> noticed in L3 — now drilled properly; Talk Partners guessing game (CD1 20): action → sport; listening — circle the actions (AB follow-up).</li><li><span class="lb">Personal.</span> TPR-heavy lesson — plan the freezes; insist on the -s in THIS lesson (it was noticing before, now it's accuracy time).</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 6 ball actions</b> (hit · jump · kick · bounce · throw · catch) and <b>describe what a person does</b> using the 3rd-person <b>-s</b>: “He throws the ball. / She catches the ball.”</li>
+      <li><span class="lb">Subsidiary.</span> Recycle Unit 1 sports (football, basketball, tennis…) + “Do you play / go…?” from L1–L3 and stitch them onto the new actions (describe &amp; guess a sport); listen for detail (AB “Listen &amp; circle”); read &amp; write the target sentence; fine motor (cut &amp; make the action cards).</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; run a stirrer→settler rhythm; make new grammar visible with I&nbsp;Do → We&nbsp;Do → You&nbsp;Do.</li>
+    </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>name &amp; mime the 6 actions;</li><li>say “He/She + action-s + the ball” accurately;</li><li>guess a sport from an action clue: “She bounces the ball — basketball!”</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <ul class="a">
+        <li>name &amp; mime the 6 actions with a ball;</li>
+        <li>say &amp; write “He/She + verb-<b>s</b> the ball”;</li>
+        <li>describe an action and guess the sport (“She bounces the ball.” → “It's basketball!”).</li>
+      </ul>
     </div>
   </div>
 
@@ -101,12 +93,18 @@
   <div class="eyebrow">Target language</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">hit</span><span class="w">jump</span><span class="w">kick</span><span class="w">bounce</span><span class="w">throw</span><span class="w">catch</span></div></div><div class="r"><div class="k">Structure</div><div>He (throws) the ball. / She (catches) the ball. &nbsp;·&nbsp; <i>game chunk:</i> She bounces the ball. — It's basketball!</div></div><div class="r"><div class="k">Form</div><div>he/she + verb+<b>s</b>: throw<b>s</b>, kick<b>s</b>, catch<b>es</b> (extra syllable!), bounce<b>s</b>. “-s belongs to he/she.”</div></div><div class="r"><div class="k">Pron. watch</div><div>catch<b>es</b> /ɪz/ — two syllables; <i>throw</i> /θrəʊ/ with the tongue-out th; <i>hit</i> short /ɪ/ (not “heat”).</div></div>
+      <div class="r"><div class="k">Lexis</div><div><span class="w">hit</span><span class="w">jump</span><span class="w">kick</span><span class="w">bounce</span><span class="w">throw</span><span class="w">catch</span> <span style="font-size:.82rem;color:var(--muted)">(actions with a ball · PB p.12)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>He (throws) the ball. / She (catches) the ball. &nbsp;·&nbsp; “She bounces the ball.” — “It's basketball!”</div></div>
+      <div class="r"><div class="k">Form</div><div>He/She + verb + <b>-s</b> + the ball. Positive statement, Present Simple 3rd person singular. <i>throw → throw<b>s</b> · catch → catch<b>es</b></i>.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>the <b>-s</b> ending: voiceless /s/ in <i>hit<b>s</b>, kick<b>s</b>, jump<b>s</b></i> vs voiced /z/ in <i>throw<b>s</b>, bounce<b>s</b></i>; extra syllable /ɪz/ in <i>catch<b>es</b></i>.</div></div>
+      <div class="r"><div class="k">Recycled</div><div>Unit 1 sports (football · basketball · tennis · baseball · volleyball · hockey · swimming · cycling) + “Do you play/go…?” (L1–L2) + <i>plays / goes</i> from the story (L3) — reused to <b>describe &amp; guess a sport</b>.</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“I kick — he kick or kickS?” → kicks.</div><div class="ccq" style="margin-bottom:10px">“catches — one beat or two? Clap it!” → two: catch-es.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> -s was met in the story (L3); actions run/jump known from GMF1. <i>bounce/throw/catch</i> likely new. Pupils can read short action words on cards.</p>
+      <div class="ccq">“He <b>throws</b> — one boy or many?” → one → <b>“throws”</b> (I say -s for he/she).</div>
+      <div class="ccq">“Do I say ‘He <s>throw</s> the ball’?” → no → <b>“He throw<b>s</b> the ball.”</b></div>
+      <div class="ccq" style="margin-bottom:12px">“She bounces the ball — which sport?” → basketball.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> pupils know Unit 1 sports and “Do you play / go…?” from L1–L2, and met <i>plays / goes</i> in the L3 story — so the 3rd-person -s is <b>noticed before, focused today</b>. They are early readers → short printed sentences with picture support are fine. Carpet &amp; team routines are known. <b>Teams:</b> max 4; 12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4.</p>
     </div>
   </div>
 
@@ -115,7 +113,11 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td>-s still dropped in speech</td><td>The -s desk card from L3; “echo with a hiss” routine — class adds the missing /s/ chorally, friendly.</td></tr><tr><td>catch/kick confusion</td><td>One clear gesture each; drill as contrasting pair with cards held apart.</td></tr><tr><td>TPR chaos on the carpet</td><td>Slow-motion constraint + Freeze!; actions on the spot, no travelling.</td></tr><tr><td>th in throw → /f/ or /т/</td><td>Mirror moment: tongue peeks out; drill throw–three together.</td></tr><tr><td>Guessing game — same kids answer</td><td>Numbered Heads: number 1–4 in each team, you call the number who answers.</td></tr>
+        <tr><td>Drop the -s: “He throw the ball”</td><td>Robot-drill the ending: “throw… -s… throw<b>s</b>!”; gesture a big “s” in the air on every sentence.</td></tr>
+        <tr><td>Confuse <i>throw</i> / <i>catch</i> (opposite pair)</td><td>Present as a mimed pair: throw = push away, catch = pull in; drill back-to-back.</td></tr>
+        <tr><td>catch<b>es</b> said as “catchs”</td><td>Short choral drill on the extra syllable /ɪz/: “catch-<b>iz</b>”.</td></tr>
+        <tr><td>Over-excitement in ball games</td><td>Soft/foam ball only; “Freeze!” reset; every stirrer followed by a settler.</td></tr>
+        <tr><td>Teams argue over cards / turns</td><td>Assign 4 roles inside each team (dealer · asker · keeper · cheerleader); rotate.</td></tr>
       </tbody></table></div>
     </div>
     <div>
@@ -126,7 +128,7 @@
         <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
         <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
         <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
-        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset (used in ball games).</div>
       </div></div>
     </div>
   </div>
@@ -135,10 +137,9 @@
   <div class="eyebrow">Procedure — staging</div>
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
     <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="nb" style="padding:1px 6px;display:inline">📓</span> = interactive notebook (glue-in)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
   <div class="scroll">
@@ -149,85 +150,124 @@
       <tr>
         <td class="min">0–3′</td>
         <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Ready to move your body?</span> Quick TPR: jump, spin, freeze.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Come in!</span> To the carpet.</p>
+          <p><span class="en">Stand up! Let's move our body!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves fast (jump · spin · clap · run on the spot · freeze); trick them once by calling a move they're already doing.</p>
+          <p>Bring energy down with your arm: <span class="en">And… freeze. Sit down.</span></p>
+        </td>
         <td class="mat"><b>Disco Warm Up</b> mp3 · carpet</td>
       </tr>
 
       <tr>
         <td class="min">3–9′</td>
-        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Story + sports back.</span> Flash story frames: <span class="en">What does Molly play on Monday?</span> chorus. Then <span class="game">▶ Swat it!</span> — sport cards on the board, two flyswatters, you call the word, racers swat; the class chorus-SPELLS the word during each race (everyone busy). 4 rounds, rotate racers.</p></td>
-        <td class="mat">story frames · flyswatters · <span class="game">▶ Swat it!</span></td>
+        <td class="stage"><div class="nm">Review — sports mingle</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieval (cued recall — memory science).</span> Recycle Unit 1 sports + question form. <span class="game">▶ Quiz-Quiz-Trade</span> with sport picture-cards: <span class="en">Stand up, hand up, pair up!</span> A holds a card: <span class="en">Do you play tennis? / Do you go swimming?</span> B answers <span class="en">Yes, I do. / No, I don't.</span> then quizzes back; <b>trade cards</b> and find a new partner.</p>
+          <p>Round 2 <span class="ph">RallyRobin</span> (take turns, 30 sec): <span class="en">Tell your partner three sports with a ball!</span> (football, basketball, tennis, baseball, volleyball…) — this <b>primes today's topic</b>: sports need actions. Signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">sport picture-cards (1 per pupil) · music · <span class="game">▶ Quiz-Quiz-Trade</span></td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">9–10′</td>
-        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Listen — he's a SUPERSTAR!</span> Play «He's a superstar!» (CD1 19) hook once; air-guitar allowed → topic.</p></td>
-        <td class="mat"><b>«He's a superstar!»</b> (CD1 19)</td>
+        <td class="min">9–11′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Open your books at page 12. Listen and point — He's a superstar!</span> Play the song (CD1 19); pupils point to each action picture (hit · jump · kick · bounce · throw · catch). <span class="sp">🦝 Speaky</span>: <span class="en">Wow — what can they DO with the ball?</span> → into the actions.</p></td>
+        <td class="mat"><b>“He's a superstar!”</b> CD1 19 · PB p.12</td>
       </tr>
 
       <tr>
-        <td class="min">10–19′</td>
-        <td class="stage"><div class="nm">Presentation · 6 actions</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">TPR present (act. 1, CD1 18).</span> Each action: <span class="en">Throw! Catch! Kick!</span> — you model, all copy, choral ×3. Contrast pair catch/kick held together.</p><p><span class="ph">-s drill (the point of the lesson).</span> You mime, class describes: <span class="en">He throws the ball!</span> Boy mimes → “He…”; girl mimes → “She…”. Clap the two beats of <i>catch-es</i>.</p><p><span class="game">▶ Freeze-frame statues.</span> Music on — all mime an action; music off — FREEZE; you tap a statue, class says the sentence: <span class="en">She kicks the ball!</span> Everyone is a statue every round.</p><p><span class="diff"><span class="sup">💪 Support:</span> chorus only, no solo yet. <span class="ext">⭐ Extension:</span> statue chooses a hidden action — class guesses: <span class="en">He hits the ball!</span></span></p></td>
-        <td class="mat">action cards · music · CD1 18</td>
+        <td class="min">11–19′</td>
+        <td class="stage"><div class="nm">Presentation · Vocabulary (actions)</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Present with TPR.</span> Show each action + a big mime, class copies: <span class="en">Hit! Jump! Kick! Bounce! Throw! Catch!</span> Choral drill ×3, then point at 3–4 children individually. Contrast the tricky pair back-to-back: <span class="en">Throw (push away) — Catch (pull in).</span></p>
+          <p><span class="game">▶ Mime &amp; call:</span> you say an action → <b>every child</b> mimes it; then flip — you mime silently → whole class calls the word. Fast, 8–10 rounds, everyone moving.</p>
+          <p><span class="ph">Sing it.</span> Play the song again — this time <b>do the actions</b> on the chant line: <span class="en">Jump! Kick! Hit the ball! Throw! Catch! Bounce the ball!</span></p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do you say the word or do the mime?</span> (→ both!)</p>
+        </td>
+        <td class="mat">A4 action flashcards · “He's a superstar!” CD1 19 · carpet</td>
       </tr>
 
       <tr>
-        <td class="min">19–27′</td>
-        <td class="stage"><div class="nm">Song · He's a superstar!</div><div class="zone">carpet, standing</div></td>
-        <td class="flow"><p><span class="ph">Sing (act. 2, CD1 19).</span> PB p.12. First run: listen &amp; point to the actions in the pictures. Second: sing + mime each action line.</p><p>Third run boys/girls swap lines — keeps everyone singing. Freeze between verses.</p></td>
-        <td class="mat">Pupil's Book p.12 · CD1 19</td>
+        <td class="min">19–26′</td>
+        <td class="stage"><div class="nm">▶ Basketball toss</div><div class="zone">carpet → hoops</div></td>
+        <td class="flow">
+          <p><span class="ph">Controlled production — the ball games (stirrer).</span> 3 teams in 3 lines, a paper hoop / bin per team. <span class="game">▶ Basketball</span>: the front child flips an action card, says the <b>whole sentence</b> — <span class="en">He throws the ball!</span> / <span class="en">She kicks the ball!</span> — <b>then</b> shoots the soft ball at the hoop. Correct sentence = allowed to shoot; a full sentence in the hoop = 2 pts, sentence but miss = 1 pt.</p>
+          <p><b>Everyone engaged, not “2 play — 10 watch”:</b> while one shoots, their whole team <b>mimes the action + chants the sentence</b> together; then rotate to the back — fast turns so every child shoots at least once.</p>
+          <p>Rule (from Оксана): a point is only for a <b>full sentence</b> (He/She + verb-s + the ball), never a bare word. Reset if loud: <span class="en">Freeze!</span></p>
+        </td>
+        <td class="mat">soft/foam ball · 3 paper hoops or bins · action cards · team score on board</td>
       </tr>
 
       <tr>
-        <td class="min">27–36′</td>
-        <td class="stage"><div class="nm">Guess the sport</div><div class="zone">carpet, 2 teams</div></td>
-        <td class="flow"><p><span class="ph">Model (act. 3, CD1 20).</span> <span class="en">She bounces the ball… It's basketball!</span> — connect action → sport.</p><p><span class="game">▶ Numbered Heads guessing.</span> Teams numbered 1–4. You (then a pupil) give the clue: <span class="en">He hits the ball with a bat…</span> Teams huddle 10 sec, you call a number — that child answers: <span class="en">It's baseball!</span> Point per correct. Everyone must be ready — the number is random.</p><p><span class="ph">ICQ:</span> <span class="en">Do you shout the answer or wait for your number?</span> (→ wait!)</p></td>
-        <td class="mat">action+sport cards · <span class="game">▶ Numbered Heads</span></td>
+        <td class="min">26–35′</td>
+        <td class="stage"><div class="nm">Grammar focus · He/She + -s</div><div class="zone">board → pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">I Do (explicit instruction · think-aloud).</span> On the board, two columns <b>HE</b> / <b>SHE</b>. Point to the boy: <span class="en">This is a boy — HE. He throw… no! He throw-<b>s</b> the ball.</span> Draw a big <b>-s</b>. <span class="en">For he and she, I add -s. My little rule: he/she = + s.</span> Note <i>catch → catch<b>es</b></i> (say “catch-iz”).</p>
+          <p><span class="ph">We Do.</span> Flash an action card + point HE or SHE; class builds the sentence chorally: <span class="en">She bounces the ball!</span> Do 5–6 together; hold up a big cut-out “s” each time.</p>
+          <p><span class="ph">You Do — Talk Partners (PB p.12, ex.3 · describe &amp; guess).</span> <span class="game">▶ RallyRobin:</span> A describes — <span class="en">She bounces the ball.</span> B guesses the sport — <span class="en">It's basketball!</span> — then swap. Recycles sports vocabulary onto the new grammar.</p>
+          <p><span class="ph">CCQ:</span> <span class="en">Boy or girl — do I still add -s?</span> (→ yes, for both he &amp; she.)</p>
+        </td>
+        <td class="mat">board (HE/SHE) · big cut-out “s” · action cards · PB p.12 ex.3</td>
       </tr>
 
       <tr>
-        <td class="min">36–46′</td>
-        <td class="stage"><div class="nm">Board game · actions</div><div class="zone">desks, groups</div></td>
-        <td class="flow"><p><span class="game">▶ Board game — superstar path.</span> Dice + counters; land on an action cell → sentence with the pictured child: <span class="en">She throws the ball!</span> Landing on a star cell = mime it too. Group checks; first to FINISH wins.</p><p><div class="ig">🎮 <b>Interactive (projector): «Ходилка» — actions &amp; sports.</b> One shared class run after the table game; rotating roller, whole class says each sentence. · 🎮 <a href="https://speakandsmile.ru/gmf2/games/sports-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">sports-board</a></div></p><p><p><span class="asr">✔ <b>Assess:</b> walk the tables — tick your list: who says catch-es with two beats? Who still drops -s?</span></p></p></td>
-        <td class="mat">printed boards · dice · counters · 🎮 <a href="https://speakandsmile.ru/gmf2/games/sports-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">sports-board</a></td>
+        <td class="min">35–43′</td>
+        <td class="stage"><div class="nm">▶ Memory (memo)</div><div class="zone">teams of 4, tables</div></td>
+        <td class="flow">
+          <p><span class="ph">Controlled practice (settler).</span> <span class="game">▶ Memo</span> in teams of 4, each team its own set: <b>6 action-picture cards + 6 sentence cards</b> (“He throws the ball”, “She catches the ball”…), all face-down in a grid. On a turn a child flips two: reads/says both aloud. A <b>pair = picture + its matching sentence</b>; to keep it, the child must <b>read the full sentence correctly</b> — <span class="en">She bounces the ball.</span> Match → keep &amp; go again; no match → turn back, next player.</p>
+          <p><b>All engaged:</b> in teams of 4 everyone watches &amp; helps their own small set; roles rotate (dealer · reader · keeper · cheerleader). Most pairs wins.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do you keep the cards for a picture, or for a picture AND a sentence?</span> (→ both, said out loud.)</p>
+        </td>
+        <td class="mat">3 memo sets (6 picture + 6 sentence cards each) · tables</td>
       </tr>
 
       <tr>
-        <td class="min">46–52′</td>
+        <td class="min">43–48′</td>
+        <td class="stage"><div class="nm">▶ Action relay</div><div class="zone">carpet, teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Freer production (stirrer).</span> <span class="game">▶ Relay race:</span> a pile of action cards at the far wall per team. On “Go!” the runner races, grabs a card, races back, and only scores by <b>saying a correct sentence to the team</b> — <span class="en">He hits the ball!</span> — then the next child runs.</p>
+          <p><b>Everyone runs:</b> fast rotation, whole team chants &amp; mimes the sentence of the runner who's back. Most cards + correct sentences wins. Reset: <span class="en">Freeze!</span></p>
+        </td>
+        <td class="mat">2–3 card piles · space to run · timer</td>
+      </tr>
+
+      <tr>
+        <td class="min">48–56′</td>
         <td class="stage"><div class="nm">Write it</div><div class="zone">desks</div></td>
-        <td class="flow"><p><span class="ph">Notebooks.</span> Board pictures (boy/girl + action): write 3 sentences <i>He/She + action-s + the ball.</i> Self-check against the verb list on the board.</p><p><span class="diff"><span class="sup">💪 Support:</span> gapped frames: <i>She ___ the ball.</i> + word bank of 3. <span class="ext">⭐ Extension:</span> swap one for a sport guess line: <i>She bounces the ball — it's basketball!</i></span></p><div class="nb">📓 <b>Interactive notebook</b> · «Lesson 4 · Let's move and learn!» — <i>6 action cards to cut out and glue in</i> · <b>5 min</b><ul><li>T: pupils cut out the six cards — <span class="en">hit · kick · throw · catch · jump · bounce</span></li><li>For each card: do the action, say the verb, then glue the card into the notebook.</li><li>Under each card they write one sentence: <span class="en">He kicks the ball.</span></li><li>Fast finishers turn two cards face-down and test a partner: mime → name the verb.</li></ul><span class="prep">✂ <b>Prep:</b> 1 × A5 card sheet per pupil · scissors · glue stick</span></div></td>
-        <td class="mat">notebooks · board pictures</td>
+        <td class="flow">
+          <p><span class="en">To your tables. Let's write like superstars.</span> On the board model one sentence; pupils copy &amp; complete 2–3: <span class="en">He __ the ball. / She __ the ball.</span> (choose the action, add the -s). Check with a neighbour.</p>
+          <div class="nb"><b>📓 Interactive notebook</b> · «Lesson 4» — <i>6 cut-out action cards (Speak&amp;Smile «Let's move and learn!»)</i> · <b>~5 min</b><br>
+          · Teacher: <span class="en">Cut out your six action cards. Do the mime, say the verb!</span><br>
+          · Pupils cut the 6 cards (hit · kick · throw · catch · jump · bounce), mime + name each, then <b>glue them into the notebook</b> as a personal action reference under their written sentences.<br>
+          · Check: quick “show me &amp; say” — point to a card, child mimes + says <span class="en">He/She [verb-s] the ball.</span><br>
+          ✂ <b>Prep:</b> print the A5 card sheet (1 per pupil) · scissors + glue on tables.</div>
+          <p><span class="ph">Countdown.</span> <span class="en">Finishing in 5… 4… 3… 2… 1… pencils down.</span></p>
+        </td>
+        <td class="mat">notebooks · A5 action-card sheet · scissors · glue · pencils</td>
       </tr>
 
       <tr>
-        <td class="min">52–55′</td>
+        <td class="min">56–59′</td>
         <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Mime one action for your partner — partner says the sentence with -s.</span> (20 sec each).</p><p>“I can…” badge: <span class="en">Colour your badge — I can say he throws, she catches!</span></p></td>
-        <td class="mat">“I can…” badges (notebook)</td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner one new action and one sentence.</span> (20 sec each.)</p>
+          <p>“I can…” check: <span class="en">Colour it if you can — I can say the actions! I can say He throws / She catches!</span></p>
+        </td>
+        <td class="mat">“I can…” line (notebook)</td>
       </tr>
 
       <tr>
-        <td class="min">55–57′</td>
-        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Well done, superstars! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
-      </tr>
-
-      <tr>
-        <td class="min">57–60′</td>
+        <td class="min">59–60′</td>
         <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. At the door you mime: <span class="en">What do I do?</span> → <span class="en">You catch the ball!</span> Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
-        <td class="mat">reward stickers</td>
+        <td class="flow"><p>Line up. Show each child an action card: <span class="en">He or she?</span> Child answers with a full sentence — <span class="en">She throws the ball!</span> → out: <span class="en">Great job! Goodbye!</span></p></td>
+        <td class="mat">action cards · reward stickers 🦝</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 9:</b> ex. 1 <i>Listen and circle the actions</i> (CD1 21 — семейная версия: пусть взрослый прочитает предложения из ключа, или пропустить аудио и просто circle по картинкам) + ex. 2 <i>Look and write</i> (jumps · catches · hits · throws · bounces · kicks). <b>+ app trainer</b> — 5–7 min.</p><p>🎮 <b>Дома:</b> <a href="https://speakandsmile.ru/gmf2/games/sports-ttt.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">sports-ttt</a> — 🤖 повтори грамматику: отвечай вслух полным предложением (5 мин).</p></td>
-        <td class="mat">Activity Book p.9 · app (homework link)</td>
+        <td class="flow"><p><b>Activity Book — p. 9, ex. 1</b> (Listen &amp; circle the actions · CD1 21) <b>+ ex. 2</b> (Look and write: <i>He/She + verb-s the ball</i> — jumps · catches · hits · throws · bounces · kicks) <b>+ app trainer «Move your body» (Practice) 5–7 min</b> — self-checking picture↔sentence match on today's actions.</p></td>
+        <td class="mat">GMF2 Activity Book p.9 · app (homework link) · audio CD1 21</td>
       </tr>
 
     </tbody>
@@ -235,7 +275,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 2 · Unit 1 “Move your body” · Lesson 4 (Vocab &amp; Grammar · actions) — lesson plan &amp; staging (continuing line)</span>
-    <span>Pupil's Book p.12 (CD1 18–20) · Activity Book p.9 · КТП урок 7. Genki option: «Can You Kick?» (37e).</span>
+    <span>Speak &amp; Smile · Give Me Five! 2 · Unit 1 · Lesson 4 (Vocabulary &amp; Grammar) — lesson plan &amp; staging · line: продолжающие</span>
+    <span>Verified vs PB p.12 + AB p.9 + КТП урок 7. Note: КТП lists “pass”; PB actually teaches “jump” — book followed.</span>
   </div>
 </div>

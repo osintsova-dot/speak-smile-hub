@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GMF2 · Unit 1 · Lesson 7 — Test (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -55,58 +52,57 @@
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .nb b{ color:var(--honey-ink); }
-  .nb ul{ margin:4px 0 0; padding:0 0 0 17px; } .nb li{ margin:2px 0; }
-  .nb .prep{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); } .nb .prep b{ color:var(--muted); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.nb,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 2 · Unit 1 “Move your body” · Lesson 7 — Unit 1 Test</div>
-    <div class="s">A1 young learners (~8–9 y.o., early readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 05.10–11.10 · Lesson 10</span><span class="chip">📝 Unit 1 Test — calm &amp; kind</span><span class="chip">~10 pupils · solo desks</span><span class="chip">GMF2 Unit 1 Test (Standard)</span></div>
+    <div class="t">Give Me Five! 2 · Unit 1 “Move your body” · Lesson 7 — Test</div>
+    <div class="s">A1 young learners (~8–9 y.o., early readers) · 60 min · Summative test (Listening · Reading · Writing · Speaking) · calm, model-first · desks + quiet corner</div>
+    <div class="meta"><span class="chip">Week 05.10–11.10 · Lesson 10 (Test)</span><span class="chip new">📝 UNIT 1 TEST</span><span class="chip">~12 pupils · individual work</span><span class="chip">GMF2 “продолжающие” · early readers</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf2/games/u1-story-week.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📖 История</a><a href="https://speakandsmile.ru/gmf2/games/u1-speaky-says.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🖐 Speaky says</a><a href="https://speakandsmile.ru/gmf2/games/find-it-u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🔎 Find it</a><a href="https://speakandsmile.ru/gmf2/games/whats-this-spinner-u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎯 Spinner</a><a href="https://speakandsmile.ru/gmf2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1PSvgJcK-DEO97DIdDSlYxmtd1A2gmeN6" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> Pupils <b>show what they know</b> on the Unit 1 test (vocabulary · grammar · listening · reading) in a calm, supported format — model-first, no surprises.</li><li><span class="lb">Subsidiary.</span> Test-taking micro-skills: read the example first, skip &amp; return, check your name on the paper; quiet early-finisher tasks; positive close — effort praised, not only scores.</li><li><span class="lb">Personal.</span> Radiate calm; no competitive games today; help procedure, not answers (“read the example again”); note common errors for recycling in U2 warm-ups.</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> To <b>assess</b> what learners can do with Unit 1 language: <b>sports</b> &amp; <b>ball actions</b> vocabulary and the structures <b>I play / I go · Do you…? — Yes, I do / No, I don't · He/She plays / throws</b> — across listening, reading and writing.</li>
+      <li><span class="lb">Subsidiary.</span> A short <b>oral pairing check</b> (each child matches English ↔ Russian / picture ↔ word aloud, 1:1); calm test-taking behaviour; self-checking one's own paper before handing in.</li>
+      <li><span class="lb">Personal.</span> Keep the room <b>calm and low-stakes</b>; model one item of every section before pupils start; never announce marks; reassure — “you know all these words, we played them all week.”</li>
+    </ul></div>
     <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>follow test instructions independently;</li><li>complete all four test parts;</li><li>use “skip and come back” when stuck.</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <div class="eyebrow" style="margin-top:0">By the end, the teacher can…</div>
+      <ul class="a">
+        <li>see each child recognise &amp; write Unit 1 sports words;</li>
+        <li>see each child use <i>I play / I go · Do you…?</i> in writing;</li>
+        <li>hear each child match &amp; say Unit 1 pairs (EN↔RU / pic↔word).</li>
+      </ul>
     </div>
   </div>
 
   <!-- TARGET LANGUAGE -->
-  <div class="eyebrow">Target language</div>
+  <div class="eyebrow">Target language (under assessment)</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">Unit 1 material (sports · actions · days)</span></div></div><div class="r"><div class="k">Structure</div><div>All Unit 1 structures — assessed, not taught today.</div></div><div class="r"><div class="k">Form</div><div>—</div></div><div class="r"><div class="k">Pron. watch</div><div>—</div></div>
+      <div class="r"><div class="k">Lexis · sports</div><div><span class="w">football</span><span class="w">basketball</span><span class="w">tennis</span><span class="w">baseball</span><span class="w">volleyball</span><span class="w">hockey</span><span class="w">swimming</span><span class="w">cycling</span><span class="w">skateboarding</span><span class="w">rollerblading</span></div></div>
+      <div class="r"><div class="k">Lexis · actions</div><div><span class="w">throw</span><span class="w">catch</span><span class="w">kick</span><span class="w">hit</span><span class="w">bounce</span><span class="w">pass</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I play (tennis). / I go (swimming). · Do you play/go…? — Yes, I do. / No, I don't. · He/She plays / She throws the ball.</div></div>
+      <div class="r"><div class="k">Form</div><div>play + ball sports · go + <b>-ing</b> sports · <i>Do you…?</i> → short answer <i>Yes, I do / No, I don't</i> · 3rd person <b>-s</b>: throw<b>s</b>, catch<b>es</b>.</div></div>
+      <div class="r"><div class="k">Test parts</div><div>① Listen &amp; number ② Listen &amp; match ③ Read &amp; match ④ Write (Play/Go) ⑤ Read &amp; write (Do you…?) + <b>Speaking</b> (oral pairs).</div></div>
     </div>
     <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“If a task is hard — stop or skip and return?” → skip and return.</div><div class="ccq" style="margin-bottom:10px">“Is it OK to look at a friend's paper?” → no — I want to see what YOU know; that's how I help you.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Unit reviewed in L6 (quiz + AB review + spelling); pupils know the traffic-light self-check. First formal test of the year — extra reassurance needed.</p>
+      <div class="eyebrow" style="margin-top:0">Instruction checks (ICQs) · Assumptions</div>
+      <div class="ccq"><b>Ex 1</b> — “Do you write a <b>word</b> or a <b>number</b> in the circle?” → a number.</div>
+      <div class="ccq"><b>Ex 4</b> — “Where does <i>swimming</i> go — Play or Go?” → Go.</div>
+      <div class="ccq" style="margin-bottom:12px"><b>Ex 5</b> — “A tick ✓ in the picture — do you write <span class="en">Yes, I do</span> or <span class="en">No, I don't</span>?” → Yes, I do.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> pupils met all of this across L1–L6 (song, chant, stickers, story, review) — the test holds no <b>new</b> language. GMF2 are early readers → they can read short test items, but the teacher <b>reads every rubric aloud + models one item</b> so reading load never hides sports knowledge. <b>Validity note:</b> keep the task measuring <i>sports language</i>, not test-taking or handwriting — model first, read rubrics, mark meaning not neatness. <b>Groups:</b> individual work; oral pairs done 1:1 or in 2s while the rest self-check quietly.</p>
     </div>
   </div>
 
@@ -115,18 +111,23 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td>Test nerves</td><td>Normalise: “it's the same as our books, just quiet”; smile; breathing in-2-3-out-2-3 before starting.</td></tr><tr><td>Listening part — someone loses the place</td><td>Point-follow the item numbers on your copy held up; play each item twice.</td></tr><tr><td>Early finishers disturb others</td><td>Quiet menu ready ON desks before the test: colouring word-search + reading corner.</td></tr><tr><td>A child freezes completely</td><td>Kneel beside, whisper the example through, first item together — then step away.</td></tr><tr><td>Copy-glancing</td><td>Folder screens between desks, framed as “exam style, like big kids”.</td></tr>
+        <tr><td>“I can't do it!” · test nerves</td><td>Calm, private reassurance: <i>“You know these — we played them all week. Just show me what you know.”</i> Model one item together.</td></tr>
+        <tr><td>Child doesn't understand the rubric</td><td>Read it aloud + model the first item of that section on the board <b>before</b> they start. ICQ.</td></tr>
+        <tr><td>Reading slows a child down</td><td>Re-read the sentence for them; the test checks sports language, not reading speed.</td></tr>
+        <tr><td>Copies from a neighbour</td><td>Spread desks; quiet reminder <i>“Your own paper — your own ideas.”</i> No drama.</td></tr>
+        <tr><td>Finishes early &amp; disturbs others</td><td>Calm waiting task: colour the sports scene / quiet re-check of own answers.</td></tr>
+        <tr><td>Anxiety about the oral pairs</td><td>Do it 1:1, quietly; model <b>one pair together</b> first; never say a score aloud.</td></tr>
       </tbody></table></div>
     </div>
     <div>
-      <div class="eyebrow">Classroom management — signals</div>
+      <div class="eyebrow">Classroom management — signals (test day)</div>
       <div class="cardb"><div class="sig">
-        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
-        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
-        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
-        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
-        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
-        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+        <div class="sigc"><b>“Test voice” 🤫</b> — whisper only; point to ear = “quiet, please.”</div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — raise a spread hand → pupils stop &amp; look for the next instruction.</div>
+        <div class="sigc"><b>Volume down</b> — lower your arm slowly = settle back to silence.</div>
+        <div class="sigc"><b>“Give me five”</b> — eyes · ears · pencil · paper · quiet.</div>
+        <div class="sigc"><b>Countdown</b> — “Two more minutes on this page… pencils ready.”</div>
+        <div class="sigc"><b>Hand up 🙋</b> — a question? Raise your hand, I'll come to you (no calling out).</div>
       </div></div>
     </div>
   </div>
@@ -135,10 +136,9 @@
   <div class="eyebrow">Procedure — staging</div>
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
-    <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="nb" style="padding:1px 6px;display:inline">📓</span> = interactive notebook (glue-in)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="sp">🦝</span> = Speaky (light, calming only)</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+    <span>📝 = test section</span>
   </div>
 
   <div class="scroll">
@@ -147,66 +147,94 @@
     <tbody>
 
       <tr>
-        <td class="min">0–3′</td>
-        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Today is our show-what-you-know day. It's easy — it's what we practised!</span></p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
-        <td class="mat"><b>Disco Warm Up</b> mp3 · carpet</td>
+        <td class="min">0–5′</td>
+        <td class="stage"><div class="nm">Calm settle &amp; recall</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Settle.</span> Greet quietly, pupils sit at spaced desks. <span class="sp">🦝 Speaky</span> gives a calm thumbs-up: <span class="en">Today we show what we know. Take a big breath… you know all these sports!</span></p>
+          <p><span class="ph">Warm recall (no pressure, choral).</span> Flash 5–6 sports cards: <span class="en">What sport is this?</span> Class answers together: <span class="en">It's football! I play football. I go swimming.</span> Then 2–3 action mimes: <span class="en">Throw… catch… kick.</span> This wakes the words up — it is <b>not</b> graded.</p>
+        </td>
+        <td class="mat">sports flashcards · Speaky · calm music (low)</td>
       </tr>
 
       <tr>
-        <td class="min">3–8′</td>
-        <td class="stage"><div class="nm">Gentle warm-up</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Confidence loop (no games, low key).</span> Flash 6 easiest cards — chorus; sing one verse of «Do you play any sports?» quietly.</p><p><span class="ph">Test how-to.</span> Show the paper: <span class="en">Name here! Example first! Hard task? Skip it, come back later. Finished? Check, then quiet menu.</span> ICQ: <span class="en">What do you do if it's hard?</span> (→ skip &amp; return)</p></td>
-        <td class="mat">flashcards · test papers</td>
+        <td class="min">5–10′</td>
+        <td class="stage"><div class="nm">Test walkthrough · model-first</div><div class="zone">board → desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Hand out the test.</span> <span class="en">Write your name at the top. Don't start yet — let's look together.</span></p>
+          <p><span class="ph">Model ONE item of each section</span> on the board (self-efficacy: they see it is easy): Ex 1 — <span class="en">Listen… football is number 1. We write 1 in the circle.</span> Ex 4 — <span class="en">Football goes under “Play”. Swimming goes under “Go”.</span> Ex 5 — <span class="en">Do you play basketball? — Yes, I do.</span></p>
+          <p><span class="ph">Rules, kindly.</span> <span class="en">Your own paper. Hand up if you need me. Whisper voice. Take your time.</span> ICQ: <span class="en">Can we help our neighbour?</span> (→ No.) <span class="en">Can I put my hand up?</span> (→ Yes!)</p>
+        </td>
+        <td class="mat"><b>GMF2 Unit 1 Test</b> (Standard level, pp.1–3) · board · pencils</td>
       </tr>
 
       <tr>
-        <td class="min">8–38′</td>
-        <td class="stage"><div class="nm">Unit 1 Test</div><div class="zone">solo desks</div></td>
-        <td class="flow"><p><span class="ph">Parts in order:</span> ① Vocabulary (picture → word) ② Grammar (Do you…? / He plays…) ③ Listening (play each item twice, point-follow the numbers) ④ Reading. ~6–7′ per part; visible timer; whisper-help with procedure only.</p><p><span class="ph">Early finishers:</span> check your paper once, then the quiet menu (sports word-search · reading corner). No walking about.</p><p><p><span class="asr">✔ <b>Assess:</b> collect + skim while they're on the menu: mark the 2 most common errors → they open U2 L1 warm-up as retrieval.</span></p></p></td>
-        <td class="mat">GMF_L2_Units_1-9_Standard_Level_Tests — Unit 1 · CD listening track · folder screens · quiet menu</td>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">📝 Listening</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Ex 1 · Listen and number (Track 04).</span> <span class="en">Look at the six sports. Listen and write the number in the circle.</span> Play <b>twice</b>: first to listen, second to check. Sports pictured: rollerblading · football (example = 1) · skateboarding · hockey · baseball · swimming.</p>
+          <p><span class="ph">Ex 2 · Listen and match (Track 05).</span> <span class="en">Now — days of the week and sports. Listen and draw a line, like Monday → swimming.</span> Play twice. Pictures: volleyball · basketball · skateboarding · cycling · tennis · swimming.</p>
+          <p>Between plays: <span class="en">Pencils down, just listen the first time. Now check the second time.</span> Calm countdown into the next page.</p>
+        </td>
+        <td class="mat"><b>Test audio</b> Track 04 + 05 · test pp.1 · speaker</td>
       </tr>
 
       <tr>
-        <td class="min">38–46′</td>
-        <td class="stage"><div class="nm">Brain unwind</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Calm cooperative round (not competitive).</span> <span class="game">▶ Class chain:</span> build the longest sports sentence chain around the circle — <span class="en">I play tennis… she plays tennis and I go swimming…</span> — cooperative record attempt, class vs itself.</p><p>Stretch + breathe; praise the WORK: <span class="en">You worked like real students today.</span></p></td>
-        <td class="mat">—</td>
+        <td class="min">22–30′</td>
+        <td class="stage"><div class="nm">📝 Reading</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Ex 3 · Read and match.</span> <span class="en">Read the six sentences. Match each one to a picture, a–f.</span> Read the example aloud once: <span class="en">1 — She jumps.</span> Sentences: She jumps · She hits the ball · She kicks the ball · She bounces the ball · She throws the ball · She catches the ball.</p>
+          <p>Quiet monitoring — if a child stalls on reading, read the sentence <b>for</b> them (we're testing the action word, not decoding). Hand-up signal only.</p>
+        </td>
+        <td class="mat">test p.2 · pencils</td>
       </tr>
 
       <tr>
-        <td class="min">46–52′</td>
-        <td class="stage"><div class="nm">Fix-it fitness · no marks</div><div class="zone">carpet, standing</div></td>
-        <td class="flow"><p><span class="ph">Papers are in, no marks — we just fix the wobbles you spotted while skimming.</span> <span class="en">Stand up! I say a sentence. Good English — jump and shout YES! Broken English — crouch down!</span> Everyone reacts every time.</p><p><span class="ph">Today's sentences:</span> ① ✗ <span class="en">She go swimming on Monday.</span> → ✔ <span class="en">She goes swimming on Monday.</span> &nbsp;·&nbsp; ② ✗ <span class="en">Do you plays tennis?</span> → ✔ <span class="en">Do you play tennis?</span> &nbsp;·&nbsp; ③ ✗ <span class="en">Do you like football? — Yes, I am.</span> → ✔ <span class="en">Yes, I do.</span> After each broken one: class chorus the good version, then one pupil says it solo.</p><p><span class="ph">Last round — boards.</span> You say the broken sentence once more; <span class="en">Show me!</span> — everyone writes the fixed version and holds it up. Wipe, praise, sit down.</p><p><p><span class="asr">✔ <b>Assess:</b> who still wobbles here → straight into the warm-up of the next unit.</span></p></p></td>
-        <td class="mat">mini-whiteboards · board</td>
+        <td class="min">30–38′</td>
+        <td class="stage"><div class="nm">📝 Writing</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Ex 4 · Write (Play / Go table).</span> <span class="en">Read the word box. Write each sport in the right column — Play or Go. Football is done for you.</span> Word box: baseball · football (example) · cycling · hockey · skateboarding · swimming.</p>
+          <p>Reminder on the board: <b>play</b> + ball games · <b>go</b> + -ing sports. Mark <b>meaning</b>, not spelling perfection — a recognisable word counts.</p>
+        </td>
+        <td class="mat">test p.2 · board reminder</td>
       </tr>
 
       <tr>
-        <td class="min">52–55′</td>
-        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner: one test task that was easy, one that was tricky.</span> (20 sec each).</p><p>“I can…” badge: <span class="en">Colour your badge — I did my first test of the year!</span></p></td>
-        <td class="mat">“I can…” badges (notebook)</td>
+        <td class="min">38–44′</td>
+        <td class="stage"><div class="nm">📝 Reading &amp; Writing</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Ex 5 · Read and write (Do you…?).</span> <span class="en">Look at the picture. Answer: Yes, I do — or — No, I don't.</span> Model 1: <span class="en">Do you play basketball? — Yes, I do.</span> Six items (basketball · hockey · skateboarding · cycling · tennis · hockey).</p>
+          <p><span class="en">When you finish, check your own paper — read every answer once more.</span> Early finishers get the calm sports colouring picture (test scene, bottom of p.3). Then move quietly into the oral pairs.</p>
+        </td>
+        <td class="mat">test p.3 · sports colouring sheet</td>
       </tr>
 
       <tr>
-        <td class="min">55–57′</td>
-        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">I'm proud of you — really! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">No big homework today — just play your favourite unit game in the app!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+        <td class="min">44–56′</td>
+        <td class="stage"><div class="nm">📝 Speaking · oral pairs</div><div class="zone">quiet corner + desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Set the room.</span> The class self-checks quietly / colours; you call pupils to the quiet corner <b>one at a time (or in twos)</b>. Whisper voice everywhere.</p>
+          <p><span class="ph">The task — child makes the PAIRS aloud.</span> Spread a small set of Unit 1 pair cards: <b>English ↔ Russian</b> (football ↔ футбол, swimming ↔ плавание, throw ↔ бросать…) <b>and/or picture ↔ word</b>. <span class="en">Let's do one together: football… футбол. Now you — match and say.</span> The child slides each pair together and says it: <span class="en">Basketball — баскетбол. I play basketball.</span> GMF2 read the pair aloud too.</p>
+          <p><span class="ph">Warm feedback, no scores.</span> Nod, smile, quiet <span class="en">Well done — thank you!</span> Note the tick sheet privately; <b>never say a number out loud</b>. If a child hesitates, offer the first sound / do one more together (mastery, not failure).</p>
+        </td>
+        <td class="mat">EN↔RU + pic↔word pair cards (Unit 1) · private tick sheet · Speaky</td>
       </tr>
 
       <tr>
-        <td class="min">57–60′</td>
-        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. High-five line at the door — every child hears one personal praise word. Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
-        <td class="mat">reward stickers</td>
+        <td class="min">56–60′</td>
+        <td class="stage"><div class="nm">Reflection &amp; close</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Collect calmly.</span> <span class="en">Pencils down. Turn your test face-down. Thank you — you all worked so hard.</span></p>
+          <p><span class="ph">“I can…” reflect.</span> Thumbs-up self-check (private): <span class="en">I can name sports · I can say I play / I go · I can answer Do you…?</span> <span class="sp">🦝 Speaky</span>: <span class="en">You showed me a lot today. I'm proud of you!</span></p>
+          <p><span class="en">Homework is a little sports game on the app. See you next lesson — Unit 2!</span></p>
+        </td>
+        <td class="mat">Speaky reward sticker 🦝 · app link</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p>Потренировать слова юнита в приложении — закрепление после теста (5–7 мин). По желанию: <a href="https://speakandsmile.ru/gmf2/games/sports-memo.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">sports-memo</a> дома вслух.</p></td>
-        <td class="mat">app (homework link)</td>
+        <td class="flow"><p><b>No written homework — test day.</b> Just the app: <b>Unit 1 “Move your body” words trainer</b> (sports + actions), <b>5–7 min</b> — a light, self-checking replay to keep the words warm after the test (BigBen “продолжающие”, Урок 10). <i>No Activity Book page is set for the Test lesson.</i></p></td>
+        <td class="mat">app homework link (Unit 1 words) · no AB page</td>
       </tr>
 
     </tbody>
@@ -214,7 +242,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 2 · Unit 1 “Move your body” · Lesson 7 (Unit 1 Test) — lesson plan &amp; staging (continuing line)</span>
-    <span>GMF_L2_Units_1-9_Standard_Level_Tests (Unit 1) + Answer Key · КТП урок 10. Спокойный протокол, без соревнований.</span>
+    <span>Speak &amp; Smile · Give Me Five! 2 · Unit 1 “Move your body” · Lesson 7 (Test) — lesson plan &amp; staging</span>
+    <span>Content verified against GMF2 Standard Level Test Unit 1 (pp.1–3, Tracks 04–05) + КТП «продолжающие» урок 10. Calm · model-first · no games · no notebook insert.</span>
   </div>
 </div>

@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GMF2 · Unit 1 · Lesson 3 — Story (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,10 +35,12 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
+  .nb{ background:var(--honey-soft); border:1px solid var(--honey); border-radius:9px; padding:9px 11px; margin:7px 0; font-size:.9rem; }
+  .nb b{ color:var(--honey-ink); }
   .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
   table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
   table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
@@ -55,45 +54,39 @@
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .nb b{ color:var(--honey-ink); }
-  .nb ul{ margin:4px 0 0; padding:0 0 0 17px; } .nb li{ margin:2px 0; }
-  .nb .prep{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); } .nb .prep b{ color:var(--muted); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.nb,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,.nb,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 2 · Unit 1 “Move your body” · Lesson 3 — Story «The very busy week»</div>
-    <div class="s">A1 young learners (~8–9 y.o., early readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 21.09–27.09 · Lesson 6</span><span class="chip new">✨ NEW · he/she plays, she goes (3rd person)</span><span class="chip">~10 pupils · groups of 3–4</span><span class="chip">Pupil's Book pp.10–11 · AB p.8</span></div>
+    <div class="t">Give Me Five! 2 · Unit 1 “Move your body” · Lesson 3 — Story</div>
+    <div class="s">A1 young learners (~8–9 y.o., early readers) · 60 min · Story: predict → listen → read → act out · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 21.09–27.09 · Lesson 6</span><span class="chip new">📖 STORY</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">Line: продолжающие</span><span class="chip">“The very busy week” · CD1 17 · PB pp.10–11</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf2/games/u1-story-week.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📖 История</a><a href="https://speakandsmile.ru/gmf2/games/u1-speaky-says.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🖐 Speaky says</a><a href="https://speakandsmile.ru/gmf2/games/find-it-u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🔎 Find it</a><a href="https://speakandsmile.ru/gmf2/games/whats-this-spinner-u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎯 Spinner</a><a href="https://speakandsmile.ru/gmf2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1PSvgJcK-DEO97DIdDSlYxmtd1A2gmeN6" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>follow, read and act out</b> the story «The very busy week» and <b>talk about another person's sports</b>: “Molly plays tennis on Monday. / She goes swimming.”</li><li><span class="lb">Subsidiary.</span> Days of the week in context; value talk — <i>Remember to organise your things</i>; story skills: predict → listen → read along → sequence → act out; notice the 3rd-person <b>-s</b>.</li><li><span class="lb">Personal.</span> Let the story breathe — big voices, pauses, prediction; the -s is NOTICED today, drilled properly in L4 — don't over-correct.</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>read, listen to and understand the story “The very busy week”</b> and to <b>talk about a weekly sports routine in the 3rd person singular</b> — “Molly plays tennis on Monday. / She goes swimming on Friday.”</li>
+      <li><span class="lb">Subsidiary.</span> Reading comprehension cycle (predict → listen for gist → read the text → sequence → retell); recycle sports lexis + days of the week; notice the 3rd-person <b>-s</b> (plays / goes); act out story lines with expression; values — <i>organise your things</i>.</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; give an ICQ before every task; run a stirrer→settler rhythm; make the reading feel like <i>thinking</i>, not form-filling.</li>
+    </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>retell who does which sport on which day (2–3 facts);</li><li>read their role's lines from the book;</li><li>say “She plays/goes…” with the -s (emerging).</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <ul class="a">
+        <li>follow the story text with picture support;</li>
+        <li>say “She plays / goes (sport) on (day)” with the <b>-s</b>;</li>
+        <li>sequence the 8 story frames &amp; retell in order;</li>
+        <li>act out short story lines.</li>
+      </ul>
     </div>
   </div>
 
@@ -101,12 +94,18 @@
   <div class="eyebrow">Target language</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">busy</span><span class="w">week</span><span class="w">Monday–Sunday</span><span class="w">practice</span><span class="w">competition</span><span class="w">champion</span></div></div><div class="r"><div class="k">Structure</div><div>Molly plays (tennis) on (Monday). / She goes (swimming) on (Wednesday). &nbsp;·&nbsp; <i>recycle:</i> Do you play…? — Yes, I do.</div></div><div class="r"><div class="k">Form</div><div>he/she + verb + <b>-s</b>: play<b>s</b>, go<b>es</b>. “The -s jumps onto the verb when we talk ABOUT someone.” <i>on</i> + day.</div></div><div class="r"><div class="k">Pron. watch</div><div>3rd-person endings: plays /z/, goes /z/; days: Wednesday /ˈwenzdeɪ/ (silent d!), Tuesday–Thursday minimal pair.</div></div>
+      <div class="r"><div class="k">Lexis</div><div><span class="w">tennis</span><span class="w">football</span><span class="w">basketball</span><span class="w">rollerblading</span><span class="w">swimming</span><span class="w">baseball</span><span class="w">Monday–Saturday</span><span class="w">sports centre</span><span class="w">swimsuit</span><span class="w">football boots</span><span class="w">rollerblades</span><span class="w">tennis racket</span><span class="w">baseball bat</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Molly <b>plays</b> tennis <b>on</b> Monday. · She <b>goes</b> swimming on Friday. · I play baseball on Saturday. · <i>You can't play basketball in a swimsuit.</i></div></div>
+      <div class="r"><div class="k">Form</div><div>3rd person singular Present Simple: verb + <b>-s</b> (play→play<b>s</b>, go→goe<b>s</b>). <b>play</b> + ball sport · <b>go</b> + <i>-ing</i> sport. <b>on</b> + day.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>voiced <b>/z/</b> ending in <i>play<b>s</b></i>, <i>goe<b>s</b></i> (not /s/); linking “on&nbsp;Monday”; stress on the <b>sport</b> + <b>day</b>.</div></div>
+      <div class="r"><div class="k">Reading focus</div><div>Story lesson (no new phonics — <b>ai/ay</b> comes in L5). Read for meaning: recognise sports &amp; day words in print; notice the little <b>-s</b> on the verb as you read.</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“I play — Molly play or playS?” → plays. “Who does the -s belong to — me or she?” → he/she.</div><div class="ccq" style="margin-bottom:10px">“Busy week — is Molly bored or is she doing a lot?” → doing a LOT.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Do you…? and 10 sports are active from L1–L2. Days of the week are known from GMF1 but rusty — the story recycles them naturally. First full unit story of the year: act-out routine was modelled in Starter L3.</p>
+      <div class="ccq">“Does Molly play the same sport every day?” → No — <b>a different sport</b>.</div>
+      <div class="ccq">“It's Monday. Does she play tennis or basketball?” → tennis.</div>
+      <div class="ccq" style="margin-bottom:12px">“We say <b>play</b> tennis but <b>go</b> ___?” → swimming / rollerblading.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> sports lexis &amp; “I play / I go” are known from Unit 1 L1–L2; days of the week are known from Level 1; pupils are <b>early readers</b> — they can decode short sentences <i>with</i> picture support and a first listening. Carpet + team routines are known. <b>Teams:</b> max 4; 12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4.</p>
     </div>
   </div>
 
@@ -115,7 +114,11 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td>-s dropped (“she play”)</td><td>Notice-and-mark: -s card raised every time it sounds in the audio; echo-correct gently, no lecture.</td></tr><tr><td>Wednesday mangled</td><td>Break the spell: WED-NES-DAY on the board, then say /wenz-day/ — “буква прячется!”; clap-drill.</td></tr><tr><td>Days order shaky</td><td>Days ladder on the board stays up; point as the story moves through the week.</td></tr><tr><td>Acting groups off-task</td><td>Roles printed (Molly · Jake · narrator · Toby); narrator reads — strongest reader; rotate once only.</td></tr><tr><td>Story audio too fast for some</td><td>Second listening with pauses per frame; readers follow the text with a finger.</td></tr>
+        <tr><td>Drop the 3rd-person <b>-s</b> (“Molly play tennis”)</td><td>Exaggerate the ending in choral drill: “Molly play<b>sss</b> / goe<b>sss</b>”; point to the printed -s.</td></tr>
+        <tr><td>Mix <i>play</i> / <i>go</i> (“go tennis”)</td><td>Quick sort reminder: <b>play</b> + ball sports · <b>go</b> + <i>-ing</i> sports; keep two header cards on the board.</td></tr>
+        <tr><td>Read slowly &amp; lose the thread</td><td>Chunk the story frame-by-frame; keep books on the picture; mime each sport as you read.</td></tr>
+        <tr><td>Over-excitement in act-out / games</td><td>Assign roles first; use <span class="en">Freeze!</span>; follow each stirrer with a short settler.</td></tr>
+        <tr><td>Everyone grabs at once in Ask &amp; Grab</td><td>One runner per team; rotate the runner each round; the rest chorus the question.</td></tr>
       </tbody></table></div>
     </div>
     <div>
@@ -136,9 +139,8 @@
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
     <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="nb" style="padding:1px 6px;display:inline">📓</span> = interactive notebook (glue-in)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="nb" style="padding:1px 6px">📓</span> = interactive-notebook insert</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
   <div class="scroll">
@@ -149,77 +151,135 @@
       <tr>
         <td class="min">0–3′</td>
         <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! What day is it today?</span> Chorus the day; quick days-of-week chant with claps.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
-        <td class="mat"><b>Disco Warm Up</b> mp3 · carpet</td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Come in!</span> On the carpet: <span class="en">Stand up — let's move our bodies!</span></p>
+          <p><span class="game">▶ Sports TPR</span> — call &amp; mime, fast: <span class="en">Play tennis! Play football! Go swimming! Go rollerblading! Play basketball!</span> Trick them: call one, mime another. <span class="en">And… freeze. Sit down.</span></p>
+        </td>
+        <td class="mat">carpet · your energy · (Spiky sticker optional)</td>
       </tr>
 
       <tr>
         <td class="min">3–9′</td>
-        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Recycle L2 into the story frame.</span> <span class="game">▶ RallyRobin:</span> <span class="en">Take turns: Do you play…? Do you go…?</span> — 3 questions each, truthful answers.</p><p><span class="ph">Days ladder.</span> Build Monday→Sunday on the board with the class chorusing; <span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if today is… Tuesday!</span> — 4 fast calls.</p></td>
-        <td class="mat">days cards · <span class="game">▶ RallyRobin</span></td>
+        <td class="stage"><div class="nm">Review → into theme</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Recycle for the story.</span> The story needs two things they know — <b>sports</b> (L1–L2) and <b>days of the week</b> (Level 1).</p>
+          <p><span class="game">▶ Mix–Pair–Share:</span> music, then <span class="en">Stand up, hand up, pair up!</span> In pairs — <span class="ph">RallyRobin</span> (take turns): <span class="en">Tell your partner: I play… / I go…</span> Swap partners once.</p>
+          <p>Round 2 — chant the <b>7 days</b> in order with a clap on each; then point-and-say fast, out of order. Tie-in: <span class="en">Today Molly plays a sport on EVERY day! Let's find out.</span></p>
+        </td>
+        <td class="mat">music · sport mini-cards · days-of-week strip</td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">9–10′</td>
-        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Molly is SO busy this week… why? Let's find out!</span> Show the story title, trace the word <i>busy</i>.</p></td>
-        <td class="mat">Pupil's Book p.10</td>
+        <td class="min">9–11′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">to the board</div></td>
+        <td class="flow"><p><span class="en">Before the story — a days song!</span> Sing <span class="game">Genki “Days Of The Week” (71)</span> with actions → settles the class and pre-loads the day words the story turns on.</p></td>
+        <td class="mat"><b>Genki “Days Of The Week”</b> mp3</td>
       </tr>
 
       <tr>
-        <td class="min">10–20′</td>
-        <td class="stage"><div class="nm">Story · listen &amp; read</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Predict.</span> Books closed, first frame on screen/board: <span class="en">Look — what sport? What day?</span> 2–3 guesses.</p><p><span class="ph">Listen 1 — gist (CD1 17, books closed).</span> <span class="en">Listen: how many sports does Molly do?</span> Check: count on fingers together.</p><p><span class="ph">Listen 2 — read along (books open pp.10–11).</span> Finger under the text. Pause each frame: <span class="en">What does Molly play on Monday? — Tennis! She PLAYS tennis!</span> Raise the -s card each time it sounds.</p><p><span class="ph">Days check.</span> Point at the ladder: <span class="en">Monday — tennis! Wednesday — swimming!</span> — class matches day → sport from memory, thumbs vote to confirm.</p></td>
-        <td class="mat">Pupil's Book pp.10–11 · CD1 17 · -s card · days ladder</td>
+        <td class="min">11–15′</td>
+        <td class="stage"><div class="nm">Before you read · Predict</div><div class="zone">carpet, PB p.10–11</div></td>
+        <td class="flow">
+          <p><span class="ph">Picture walk (predicting).</span> Books open to the pictures only — no reading yet. Title: <span class="en">“The very busy week.” Look — who is this? This is Molly. What sports are in the story?</span> Take a few guesses; point to the pictures.</p>
+          <p><span class="ph">Teacher think-aloud (model the strategy).</span> <span class="en">In picture 4 I can see a basket and a ball — I think Molly plays basketball here. And she's wearing a swimsuit… oh! Maybe that's her problem!</span> — show them that reading = <i>predicting &amp; checking</i>, not just decoding.</p>
+        </td>
+        <td class="mat">Pupil's Book pp.10–11</td>
       </tr>
 
       <tr>
-        <td class="min">20–28′</td>
-        <td class="stage"><div class="nm">Comprehension &amp; -s noticing</div><div class="zone">carpet → desks</div></td>
-        <td class="flow"><p><span class="ph">True/false paddles.</span> Statements: <span class="en">Molly plays hockey on Monday… true or false?</span> Every child shows ✔/✘ paddle (or thumbs). 6 statements — all voting, no spectators.</p><p><span class="ph">Sentence build (Showdown).</span> Mini-whiteboards: you show [Molly 🎾 Monday] → all write <i>Molly plays tennis on Monday.</i> — <span class="en">Show me!</span> Reveal together, self-check against the board model. 3 rounds (incl. one <i>goes</i>).</p><p><p><span class="asr">✔ <b>Assess:</b> the boards are your -s check — who writes “play”? They get the -s card as a desk reminder in L4.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> copy-complete a gapped sentence: <i>Molly ___ tennis on ___.</i> <span class="ext">⭐ Extension:</span> add a second sentence with <i>and</i>.</span></p><div class="nb">📓 <b>Interactive notebook</b> · «Lesson 3 · The very busy week» — <i>story sequence (cut · order · glue) + match-and-say</i> · <b>7 min</b><ul><li>T: play the story once more; pupils lay the 8 pictures on the desk and number them — no glue yet.</li><li>Fast choral check of the order, THEN cut and glue the row into the notebook.</li><li>Under the row: match day ↔ sport and say it — <span class="en">Molly plays tennis on Monday.</span></li><li>Pairs retell the week from their own row, one day each.</li></ul><span class="prep">✂ <b>Prep:</b> 1 × A5 story strip per pupil · scissors · glue stick · pencil</span></div></td>
-        <td class="mat">paddles/thumbs · mini-whiteboards</td>
+        <td class="min">15–20′</td>
+        <td class="stage"><div class="nm">First listen · gist</div><div class="zone">carpet, books open</div></td>
+        <td class="flow">
+          <p><span class="ph">Listen &amp; follow the pictures</span> (don't read aloud yet). Set a gist task first — <span class="en">Listen! How many days? What does Molly always forget?</span></p>
+          <p>Play <b>CD1 17</b> right through. Check gist: <span class="en">How many days? (six) What's the problem every day? (she brings the wrong thing!)</span> Did our predictions come true? <span class="en">Were we right about picture 4?</span></p>
+        </td>
+        <td class="mat">CD1 track 17 · Pupil's Book</td>
       </tr>
 
       <tr>
-        <td class="min">28–40′</td>
-        <td class="stage"><div class="nm">Act out</div><div class="zone">carpet, groups of 3–4</div></td>
-        <td class="flow"><p><span class="ph">Model a frame.</span> You + 2 pupils play the competition frame with big drama: <span class="en">Go, Molly, go!</span></p><p><span class="ph">Groups (Molly · Jake · narrator · Toby).</span> Rehearse 2 frames with books as scripts; narrator reads captions, characters read bubbles. Rotate roles once.</p><p><span class="ph">Showtime.</span> Each group performs ONE frame (30–40 sec each — fast carousel, no long waits). Audience task: shout the day of the frame at the end.</p><p><span class="ph">Value.</span> <span class="en">Molly is busy AND organised. Are your school things organised? What helps?</span> 3–4 hands, Russian OK, recast key words.</p></td>
-        <td class="mat">Pupil's Book pp.10–11 · role badges</td>
+        <td class="min">20–29′</td>
+        <td class="stage"><div class="nm">Read the text · -s noticing</div><div class="zone">carpet → board</div></td>
+        <td class="flow">
+          <p><span class="ph">Chunked reading (readers!).</span> Go frame by frame. Play/read a frame, class does <b>echo reading</b> (you read → they read the same line), miming the sport. Keep it snappy — 1–2 lines per frame.</p>
+          <p><span class="ph">Notice the -s.</span> At each “Molly plays / goes…” line, tap the printed <b>-s</b>: <span class="en">Molly play<b>s</b> tennis. She goe<b>s</b> swimming.</span> Choral drill with the /z/ buzz. Sort on the board: <b>play</b> + ball · <b>go</b> + <i>-ing</i>.</p>
+          <p><span class="ph">Comprehension — quick hinge check (fingers).</span> <span class="en">Molly plays basketball on…?</span> Show fingers: <span class="en">1 = Monday · 2 = Wednesday · 3 = Friday.</span> (Answer: 2 — Wednesday.) 80%+ correct → move on; if split → re-read frame 4 together.</p>
+          <p><span class="ph">Values (30 sec).</span> <span class="en">Why does Molly bring the wrong thing? Because her room is a mess! Remember to organise your things.</span> (PB p.11 Values.)</p>
+        </td>
+        <td class="mat">Pupil's Book pp.10–11 · board · <b>play / go</b> header cards</td>
       </tr>
 
       <tr>
-        <td class="min">40–52′</td>
-        <td class="stage"><div class="nm">Board game · week race</div><div class="zone">desks, groups</div></td>
-        <td class="flow"><p><span class="game">▶ Board game — through the busy week.</span> Dice + counters: land on a day/sport cell → say the sentence: <span class="en">She goes swimming on Wednesday!</span> Group checks against the book. First to Sunday wins.</p><p><div class="ig">🎮 <b>Interactive (projector): «Ходилка» — sports week.</b> One shared run on screen after the table game: rotating child rolls, the WHOLE class says the sentence. · 🎮 <a href="https://speakandsmile.ru/gmf2/games/sports-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">sports-board</a></div></p><p><span class="ph">ICQ:</span> <span class="en">Do you move first or say the sentence first?</span> (→ say, then move)</p></td>
-        <td class="mat">printed boards · dice · counters · 🎮 <a href="https://speakandsmile.ru/gmf2/games/sports-board.html" target="_blank" style="color:var(--p);font-weight:800;text-decoration:underline">sports-board</a></td>
+        <td class="min">29–31′</td>
+        <td class="stage"><div class="nm">🎵 Micro-stir</div><div class="zone">carpet</div></td>
+        <td class="flow"><p>Break up the sitting before the desk task: quick reprise of the <b>days song</b> with big mimes, or “7 days” jumping chant. <span class="en">And… to your tables!</span></p></td>
+        <td class="mat">Genki “Days Of The Week” (reprise)</td>
       </tr>
 
       <tr>
-        <td class="min">52–55′</td>
+        <td class="min">31–38′</td>
+        <td class="stage"><div class="nm">Sequence &amp; match</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Rebuild the story.</span></p>
+          <div class="nb">📓 <b>Interactive notebook</b> · «The very busy week» — <i>story sequence + match-and-say</i> · <b>7 min</b><br>
+          · <b>Teacher:</b> hand out the A5 sheet (8 jumbled story pictures + a day↔sport match strip). Model with picture 1.<br>
+          · <b>Pupils:</b> cut out the 8 pictures → put them in <b>order</b> (peek at the PB if stuck) → glue the strip into the notebook; then <b>match</b> each day to its sport and say it — <span class="en">Molly plays football on Tuesday. She goes swimming on Friday.</span><br>
+          · <b>Check:</b> pair-check the order; 2–3 pupils read a matched line aloud with the <b>-s</b>.<br>
+          ✂ <b>Prep:</b> print the U1·L3 story-sequence sheet (А5) — 1 per pupil; scissors + glue per pupil.</div>
+        </td>
+        <td class="mat">A5 story-sequence sheet · scissors · glue · notebooks</td>
+      </tr>
+
+      <tr>
+        <td class="min">38–44′</td>
+        <td class="stage"><div class="nm">Retell race</div><div class="zone">board · teams</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Busy Week Relay</span> (active, all run). Board shows the day headers <b>Monday–Saturday</b>. Teams line up. First runner grabs a sport card, runs, sticks it under the right day, and says the full sentence — <span class="en">Molly plays football on Tuesday.</span> Then next runner. The team chants each sentence with their runner; wrong sport → the card comes back.</p>
+          <p>First team to build Molly's whole week (correct sport under every day + all six sentences said) wins. <span class="ph">ICQ:</span> <span class="en">Do you just stick it, or say the sentence too?</span> (→ say it!)</p>
+        </td>
+        <td class="mat">6 sport cards ×3 sets · day headers on board · sticky tack</td>
+      </tr>
+
+      <tr>
+        <td class="min">44–49′</td>
+        <td class="stage"><div class="nm">Ask &amp; Grab</div><div class="zone">carpet floor · teams</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Ask &amp; Grab</span> (story facts). Lay the 6 sport cards face-up on the floor. Teams sit round; <b>one runner</b> per team (rotate). The team asks <b>you</b> a yes/no story question — <span class="en">Does Molly play tennis on Monday?</span> You answer <span class="en">No.</span> (new question) or, when you choose the moment, <span class="en">Yes!</span> → runners grab that sport card; fastest hand keeps it.</p>
+          <p>Only full questions count: <span class="en">Does she go swimming on Friday? Does she play baseball on Saturday?</span> The rest of the team must chorus the question with the runner. Most cards wins. Reset with <span class="en">Freeze!</span> if it gets loud.</p>
+        </td>
+        <td class="mat">6 A4 sport cards · <b>Ask &amp; Grab</b> (игротека)</td>
+      </tr>
+
+      <tr>
+        <td class="min">49–55′</td>
+        <td class="stage"><div class="nm">Act it out · drama</div><div class="zone">carpet → “stage”</div></td>
+        <td class="flow">
+          <p><span class="ph">Whole-class first (everyone acts).</span> Replay 2–3 key frames; the <b>whole class</b> mimes and says the lines together — <span class="en">“Come on, Beth. Run!” · “Oh no! This is my swimsuit!” · “You can't go swimming today, Molly.”</span></p>
+          <p><span class="game">▶ Act out</span> — teams take a frame, choose roles (Molly / friend / narrator), rehearse 1 min, then perform. While one team acts, the audience has a job: <span class="en">Which day is this?</span> — they guess the day. Applause + a Spiky sticker for expression.</p>
+        </td>
+        <td class="mat">Pupil's Book (line prompts) · reward stickers</td>
+      </tr>
+
+      <tr>
+        <td class="min">55–58′</td>
         <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner one thing Molly does — “She plays… on…”.</span> (20 sec each).</p><p>“I can…” badge: <span class="en">Colour your badge — I can read our story! I can say “she plays”!</span></p></td>
-        <td class="mat">“I can…” badges (notebook)</td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share</span> (20 sec each): <span class="en">Tell your partner ONE thing Molly does. “Molly plays… / She goes…”</span></p>
+          <p>“I can…” badge: <span class="en">Colour your badge — I can read the story! I can say “She plays / goes… on…”!</span> Recap the value: <span class="en">Remember to organise your things!</span></p>
+        </td>
+        <td class="mat">“I can…” badge (notebook)</td>
       </tr>
 
       <tr>
-        <td class="min">55–57′</td>
-        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Well done, actors! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
-      </tr>
-
-      <tr>
-        <td class="min">57–60′</td>
+        <td class="min">58–60′</td>
         <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. At the door: <span class="en">What does Molly play on Monday?</span> (support: show the frame). Answered → out: <span class="en">Thank you! Take care! Goodbye!</span></p></td>
-        <td class="mat">story frames · reward stickers</td>
+        <td class="flow"><p>Line up. Each child takes a day card and says Molly's sport: <span class="en">Molly plays basketball on Wednesday.</span> Correct → out: <span class="en">Great job! See you next time. Goodbye!</span></p></td>
+        <td class="mat">day cards · folder reward stickers</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 8:</b> ex. 1 <i>Remember the story. Write and match</i> (sports ↔ days) + ex. 2 <i>What sports do you play? Write and draw</i>. <b>+ app trainer</b> — 5–7 min.</p></td>
+        <td class="flow"><p><b>Activity Book — p. 8, exercises 1–2 (Lesson 3 Story):</b> №1 <i>Remember the story. Write and match</i> — write the sport (swimming, football, tennis, rollerblading, baseball, basketball) and draw the line to the day; №2 <i>What sports do you play? Write and draw</i> — “I play… on… / I go… on…”. + <b>app / тренажёр</b> a self-checking micro-set on the story words (5–7 min).</p></td>
         <td class="mat">Activity Book p.8 · app (homework link)</td>
       </tr>
 
@@ -228,7 +288,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 2 · Unit 1 “Move your body” · Lesson 3 (Story «The very busy week») — lesson plan &amp; staging (continuing line)</span>
-    <span>Pupil's Book pp.10–11 (CD1 17) · Activity Book p.8 · КТП урок 6.</span>
+    <span>Speak &amp; Smile · Give Me Five! 2 · Unit 1 · Lesson 3 (Story) — lesson plan &amp; staging · line: продолжающие</span>
+    <span>Story “The very busy week” verified against PB pp.10–11 (CD1 17) + КТП урок 6. HW verified against Activity Book p.8.</span>
   </div>
 </div>
