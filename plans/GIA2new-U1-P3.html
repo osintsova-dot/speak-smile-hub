@@ -1,6 +1,5 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GIA2new · Unit 1 · Pair 3 (Lesson Plan &amp; Staging)</title>
+<title>Get Involved A2 · Unit 1 · P3 — Grammar 1: Present simple (affirmative &amp; negative)</title>
 <style>
   :root{
     --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -37,152 +34,253 @@
   .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
-  /* design card: why the lesson looks like this */
-  .missioncard{ background:linear-gradient(135deg,var(--p-soft),var(--card)); border:1.5px solid var(--p);
-    border-radius:12px; padding:14px 16px; margin:14px 0 4px; }
-  .missioncard .mh{ font-weight:800; color:var(--p-ink); font-size:.78rem; text-transform:uppercase;
-    letter-spacing:.08em; margin-bottom:6px; }
-  .missioncard .why{ font-size:.92rem; margin-bottom:10px; }
-  .missioncard .pitch{ background:var(--card); border-left:4px solid var(--honey); border-radius:8px;
-    padding:10px 13px; font-size:.95rem; }
-  .missioncard .pitch b{ color:var(--p-ink); }
-  .missioncard .pitchru{ color:var(--muted); font-size:.85rem; margin-top:6px; }
-
-  /* lesson at a glance */
-  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
-  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
-  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
-  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
-  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
-  table.glance tr.bridge td{ background:var(--honey-soft); }
-  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
-
-  /* staging */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
-  .game{ color:var(--p); font-weight:800; }
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
-  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
-  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
-  /* three sub-blocks inside one stage */
-  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
-  .tsteps{ margin:7px 0; }
-  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
-  .tsteps li{ margin:3px 0; font-size:.92rem; }
-  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
-  .showb .sbh{ color:var(--zone); }
-  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
-  .kidsb .sbh{ color:var(--honey-ink); }
+  .slot{ color:var(--muted); font-weight:700; }
   .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
   table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
   table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
   table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
   td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
-  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
-  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
   td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
-  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
   .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
   tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
+  /* interactive-notebook block (additive) */
+  .nb{ background:var(--honey-soft); border:1px solid var(--honey); border-left:3px solid var(--honey); border-radius:8px; padding:9px 11px; margin:8px 0; font-size:.9rem; }
+  .nb .nbk{ color:var(--muted); font-style:italic; margin:3px 0 6px; font-size:.85rem; }
+  .nb ul{ margin:4px 0 6px; padding-left:18px; } .nb li{ margin:2px 0; }
+  .nb .nbp{ display:inline-block; margin-right:14px; font-size:.8rem; color:var(--p-ink); }
 
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
-    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+    .cardb,.sigc,.ccq,table.ap,.scroll,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">Get Involved! A2 · Unit 1 “School life” · Pair 3 — Grammar: Present simple (affirmative and negative) — introduced from scratch</div>
-    <div class="s">Teens 12–14 (grade 6–8) · <b>the 🌱 new-students line, joining from outside</b> · 90 min · onboarding: model → word bank → draft in the crew → product with a prompt sheet · team score</div>
-    <div class="meta"><span class='chip'>Lessons 13–14 (KTP pair 7) · October</span><span class='chip new'>🌱 new students · onboarding into the format</span><span class='chip'>SB p.16</span><span class='chip'>team score · prompt sheets</span></div>
+    <div class="t">Get Involved A2 · Unit 1 “School life” · P3 — Grammar 1: Present simple (affirmative &amp; negative)</div>
+    <div class="s">A2 teens (~12–14, new-starters line 🌱) · 90 min · Grammar — guided discovery + I-Do/We-Do/You-Do · SB p.16 · desks &amp; pairs</div>
+    <div class="meta"><span class="chip">Unit 1 · Pair 7 (lessons 13–14) · October</span><span class="chip new">✨ NEW grammar</span><span class="chip">~10–12 students · pairs &amp; teams of 3–4</span><span class="chip">🌱 GIA2new — slow, scaffolded build</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia2/games/u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia2/games/u1-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia2/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1E2qW29QAVvVUAmhimd2Z71XpxQ-SPuTm" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
-  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
-  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Opening · entry + review</td><td>review of P2: the routines chain round the circle (RoundRobin) + 3 facts about Jack and Abi</td></tr><tr class='bridge'><td class='gmin'>6–8′</td><td class='gname'>Setting up the mission</td><td>the mission: the full map of the present simple, and we find the rule ourselves</td></tr><tr><td class='gmin'>8–22′</td><td class='gname'>Discovery · completing the table</td><td>examples from the text on the board → pairs sort them into the columns I/you/we/they vs he/she/it (RoundTable) → the table in ex.1</td></tr><tr><td class='gmin'>22–34′</td><td class='gname'>Spelling station · -s / -es / -ies</td><td>sorting 12 verbs into baskets by hand → the rule through Numbered Heads Together → a written run of 6 forms with self-check</td></tr><tr><td class='gmin'>34–45′</td><td class='gname'>Negatives · don't / doesn't</td><td>model → transformations from a frame → the game «a lie about me» through RallyRobin</td></tr><tr><td class='gmin'>45–47′</td><td class='gname'>Transition stirrer</td><td>a stirrer</td></tr><tr><td class='gmin'>47–58′</td><td class='gname'>Personalisation · ex.5</td><td>«make it true about you»: 4 lines from the model + reading to a partner (RallyCoach)</td></tr><tr class='bridge'><td class='gmin'>58–72′</td><td class='gname'>PRODUCT · a friend's day (6 lines)</td><td>an interview in pairs using prompt questions (Timed Pair Share) → 6 lines about the partner's day in the 3rd person → self-check → 2–3 read aloud</td></tr><tr><td class='gmin'>72–82′</td><td class='gname'>Mini-test with self-check + score</td><td>8 items covering everything (forms + negatives + spelling) → key → your own score, privately → points to the crews</td></tr><tr><td class='gmin'>82–90′</td><td class='gname'>Finish: reflection + homework</td><td>homework with a worked example + a teaser for P4</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 (exact pages and task numbers + a bonus — at the bottom of the procedure)</td></tr></tbody></table></div>
 
-  <div class='missioncard'><div class='mh'>🎯 Why this lesson looks like this — the design in one card</div><div class='why'><b>Why it is built this way (for the teacher):</b> With newcomers grammar CAN be announced as the topic — they need clarity, not camouflage. But it is delivered through discovery: the table is completed from familiar examples in the P2 text, and they word the rule themselves. Many short written runs with self-check — confidence grows out of «I managed it», not out of an explanation.</div><div class='pitch'><b>How to announce it (say this, 30–40 seconds):</b><br><b>“One small letter — s.</b> It changes everything in English. I wake up — but Jack wakeS up. Today you get the FULL map of the present simple: when -s, when -es, when don't and doesn't. By the end you'll write six sentences about a friend's day — and they'll all be correct. Let's find the rule — it's hiding in Jack and Abi's text.”<div class='pitchru'>In simpler words, if the class needs support: One letter, -s, changes everything: today we get the full map of the present simple — when -s, when -es, when don't/doesn't. The rule is hiding in the text about Jack and Abi — we will find it ourselves.</div></div></div>
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>form and use the present simple (affirmative &amp; negative)</b> — including 3rd-person spelling (<i>+s / +es / -ies, have → has</i>) and <i>don't / doesn't + base verb</i> — to talk about their own and other people's daily routines and school life.</li>
+      <li><span class="lb">Subsidiary.</span> Recycle daily-routines lexis (P1) and present simple met in context (P2 reading); read a short text for the target form (Hogwarts) and check by listening; write controlled &amp; personalised sentences; peer-check accuracy.</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; run a clean I-Do → We-Do → You-Do release with sentence frames; use thumbs-checks to see the whole class, not just the fast hands.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, learners can…</div>
+      <ul class="a">
+        <li>add the 3rd-person ending correctly (<i>gets · goes · studies · has</i>);</li>
+        <li>spell 3rd person by the four routes (+s · +es · -ies · irregular);</li>
+        <li>make present-simple negatives with <i>don't / doesn't + base verb</i>;</li>
+        <li>write true sentences about themselves and a family member.</li>
+      </ul>
+    </div>
+  </div>
 
-  <div class="eyebrow">Procedure — full staging</div>
-  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+  <!-- TARGET LANGUAGE -->
+  <div class="eyebrow">Target language</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div>daily routines in the 3rd person: <span class="w">gets up</span><span class="w">brushes</span><span class="w">watches</span><span class="w">goes</span><span class="w">studies</span><span class="w">finishes</span><span class="w">has</span><span class="w">does</span><span class="w">makes</span><span class="w">plays</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I/you/we/they + <b>base verb</b> &nbsp;·&nbsp; he/she/it + <b>verb-s</b> &nbsp;·&nbsp; <b>don't / doesn't</b> + base verb</div></div>
+      <div class="r"><div class="k">Form</div><div>Spelling routes: <b>+s</b> · <b>+es</b> after <i>-s -sh -ss -ch -x -o</i> · consonant + <b>y → ies</b> · <b>have → has</b>. Negative: <i>doesn't</i> already carries the -s → <b>base verb</b> next.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>3rd-person -s endings: /s/ <i>works</i> · /z/ <i>plays, goes</i> · /ɪz/ <i>watches, finishes</i>. <i>doesn't</i> /ˈdʌznt/.</div></div>
+      <div class="r"><div class="k">Meaning</div><div>routines / facts / habits — <b>every day, usually</b> — not <i>now, at the moment</i>.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
+      <div class="ccq">“<i>He gets up at seven</i> — one person or many?” → one → <b>verb + s</b>.</div>
+      <div class="ccq">“<i>She doesn't see her teachers</i> — do we say <i>doesn't sees</i>?” → No — <b>doesn't</b> has the -s already → base verb.</div>
+      <div class="ccq" style="margin-bottom:12px">“<i>study → he …?</i>” → <b>studies</b> (consonant + y → ies). “Is this <b>now</b> or <b>every day</b>?” → every day.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> daily-routines lexis is known from P1; present simple was <i>met in context</i> in the P2 reading — but this is the <b>first explicit grammar rule of the year</b>, so build it slowly and model everything. Learners are readers → work from printed examples and the notebook card. <b>Groups:</b> pairs for practice; teams of 3–4 for the sorting relay (10 = 3+3+4 · 12 = 3×4 · 9 = 3×3).</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Drops the 3rd-person -s (<i>He get up</i>)</td><td>Colour-code the -s on the card; choral drill with a “+s” gesture; thumbs-check.</td></tr>
+        <tr><td>Double marking (<i>He doesn't gets</i>)</td><td>Rule on the card: <i>doesn't</i> already carries the -s → <b>base verb</b>. Cross out the red example.</td></tr>
+        <tr><td>Spelling <i>studys / gos / watchs</i></td><td>The four spelling routes + the sorting relay; sort before you write.</td></tr>
+        <tr><td><i>have</i> forgotten (<i>he haves</i>)</td><td>Flag <i>have → has</i> as the ⭐ irregular; drill it separately.</td></tr>
+        <tr><td>Confuses with “now” / L1 transfer</td><td>CCQ “every day or now?”; anchor on time markers <i>every day, usually, on Mondays</i>.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals (teens)</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>“3–2–1, eyes here”</b> — countdown to refocus the whole class.</div>
+        <div class="sigc"><b>Thumbs check</b> — up / sideways / down = how sure you are (formative, whole-class).</div>
+        <div class="sigc"><b>“Pens down, look up”</b> — clean transition into whole-class feedback.</div>
+        <div class="sigc"><b>“Pair-check first”</b> — compare answers with your partner before we go public.</div>
+        <div class="sigc"><b>Timer on board</b> — visible countdown keeps tasks tight.</div>
+        <div class="sigc"><b>“Freeze &amp; swap”</b> — end the pair task, change roles / partner.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="game">▶</span> = game / structure</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+    <span>📓 = interactive-notebook glue-in</span>
+  </div>
 
   <div class="scroll">
   <table class="proc">
-    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
     <tbody>
-<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Opening · entry + review</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> review of P2: the routines chain round the circle (RoundRobin) + 3 facts about Jack and Abi</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Chain: wake up → …! Then: three facts about Jack and Abi — I start: Jack wakes up at seven…</span></li><li>First I do two links of the chain myself (<span class='en'>wake up → have breakfast</span>), then Kagan <b>RoundRobin</b>: clockwise inside the crew, each student adds ONE action of the day. If you cannot remember, say <span class='en'>pass</span> and the circle rolls on: no shame, no pauses.</li><li>I write wakeS on the board in big letters — <span class='en'>see that S? Today it's ours.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> slide (Backup: the same written on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they hear the -s inside familiar facts</div></td><td class='mat'>slide 3</td></tr><tr class='True'><td class='min'>6–8′</td><td class='stage'><div class='nm'>Setting up the mission</div><div class='sub'>Mission brief</div><div class='zone'>board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the mission: the full map of the present simple, and we find the rule ourselves</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>The rule is hiding in the text you read. We'll find it — then use it six times, correctly.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mission slide (Backup: the mission title and the bar go on the board before the lesson)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> the plan is clear</div></td><td class='mat'>slide 4</td></tr><tr><td class='min'>8–22′</td><td class='stage'><div class='nm'>Discovery · completing the table</div><div class='zone'>pairs → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> examples from the text on the board → pairs sort them into the columns I/you/we/they vs he/she/it (RoundTable) → the table in ex.1</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Example cards: I get up · Jack wakes up · They don't go · Abi doesn't see…</li><li>I place two cards myself and say out loud why I chose that column — that is the model turn. Then Kagan <b>RoundTable</b>: one pile per pair, you take the top card, put it in a column, say one word of reason («Jack — so the right one») and pass the pile to your neighbour.</li><li><span class='en'>Two columns. Sort the cards. What's different in the RIGHT column?</span></li><li>They word the rule themselves (Russian is allowed) → we check it against the table in ex.1 and fill in the gaps.</li><li>Chorally: <span class='en'>he wakes, she goes, it starts — sssss!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> example cards · SB p.14 ex.1</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they discover the rule with their hands. Expect: they say «after he/she/it — s!» themselves</div><div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit1_Grammar1_Present_Simple_Affirmative_Negative_Visual_Takeaway_A5</b><div class="nbk">A5 grammar card — PRESENT SIMPLE: affirmative (I/you/we/they + base verb · he/she/it + verb-s), negative (don't / doesn't + base verb) and the SPELLING SKETCH: +s · +es after -s, -sh, -ss, -ch, -x, -o · consonant+y → ies · have → has, with the warning “doesn't already carries the -s → base verb next”</div><ul><li>Glue the card in; highlight every third-person ending.</li><li>Read the spelling routes aloud — there are four and they are the test.</li><li>Write three sentences about a family member (he/she) and one negative.</li><li>The card stays open through the flips and the error clinic.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the “Discovery · completing the table” stage</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td><td class='mat'>slide 5</td></tr><tr><td class='min'>22–34′</td><td class='stage'><div class='nm'>Spelling station · -s / -es / -ies</div><div class='zone'>crews</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> sorting 12 verbs into baskets by hand → the rule through Numbered Heads Together → a written run of 6 forms with self-check</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Baskets: -s · -es · -ies. <span class='en'>Twelve verbs. Sort them. Why does STUDY go to -ies?</span></li><li>First I take STUDY apart on the board as a model of the reasoning, then Kagan <b>Numbered Heads Together</b>: everyone in the crew has a number 1–4, I ask a question («why does TEACH go to -es?»), the crew confers — heads together — and the number I call out answers. Which means everyone prepares to explain, not just the fastest.</li><li>The rule chorally: -s usually · -es after s/sh/ch/x/o · -ies after a consonant + y · has!</li><li>6 forms in writing → the key on the slide → I check my own: <span class='en'>circle your slips — nobody sees.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> verb cards · baskets · answer key</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they sort with their hands before writing. Expect: everybody gets studies on the second go</div></td><td class='mat'>slide 6</td></tr><tr><td class='min'>34–45′</td><td class='stage'><div class='nm'>Negatives · don't / doesn't</div><div class='zone'>pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> model → transformations from a frame → the game «a lie about me» through RallyRobin</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Model: <span class='en'>I don't get up at five. Jack doesn't go to school.</span> Who takes don't, who takes doesn't?</li><li>Transformation frame: (+) → (−) for 6 sentences, key on the slide.</li><li>Game: <span class='en'>Tell your partner a LIE about your day — partner fixes it: You don't…!</span></li><li>I play a couple of turns with a strong student in front of everybody — that is the model — then Kagan <b>RallyRobin</b>: A tells a lie, B fixes it with a negative, then they swap; three turns each, with the frame in front of their eyes.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.14 ex.3 · frame</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they turn sentences into negatives with support. Expect: doesn't + bare verb needs 2–3 repetitions</div></td><td class='mat'>slide 7 · timer</td></tr><tr><td class='min'>45–47′</td><td class='stage'><div class='nm'>Transition stirrer</div><div class='sub'>break — transition</div><div class='zone'>—</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> a stirrer</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>-es verbs — jump! -ies verbs — spin! (go! study! teach! tidy!)</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> —</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they move according to the rule</div></td><td class='mat'>—</td></tr><tr><td class='min'>47–58′</td><td class='stage'><div class='nm'>Personalisation · ex.5</div><div class='zone'>solo → pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> «make it true about you»: 4 lines from the model + reading to a partner (RallyCoach)</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>ex.5 with support: <span class='en'>I don't go to an online school. I go to…</span> — 4 lines about yourself.</li><li>We read to a partner; the partner catches one thing only: is there an -s where he/she/it is.</li><li>I show on the board what the coach sounds like («stop, that's she — so where is the -s?»), and launch Kagan <b>RallyCoach</b>: the author reads the line, the partner-coach checks ONE thing only — the letter -s — praises out loud, and on the next line they swap roles.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> SB p.15 ex.5 · frame</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they personalise from the frame. Expect: writing about yourself is easier — confidence grows</div></td><td class='mat'>slide 8</td></tr><tr class='True'><td class='min'>58–72′</td><td class='stage'><div class='nm'>PRODUCT · a friend's day (6 lines)</div><div class='zone'>pairs → stage</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> an interview in pairs using prompt questions (Timed Pair Share) → 6 lines about the partner's day in the 3rd person → self-check → 2–3 read aloud</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Prompt questions: <span class='en'>What time do you get up? Do you have breakfast?…</span> (on the slide).</li><li>First I interview one student in front of everybody — a model of the pace and of what the notes look like. Then Kagan <b>Timed Pair Share</b>: two minutes for A to ask and write, the bell, two minutes for B. Equal time, which means both collect enough raw material for six lines.</li><li>We write the 6 lines: <span class='en'>Dasha gets up at seven. She doesn't have breakfast…</span></li><li>Self-check against a checklist (3 points: -s? doesn't + bare verb? spelling?) → volunteers read to the class.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> prompt questions · checklist</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they go through the full cycle: asked → wrote → checked → read out. Expect: 6 lines from everybody</div></td><td class='mat'>slides 9–10</td></tr><tr><td class='min'>72–82′</td><td class='stage'><div class='nm'>Mini-test with self-check + score</div><div class='zone'>solo → board</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 8 items covering everything (forms + negatives + spelling) → key → your own score, privately → points to the crews</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li><span class='en'>Eight quick items. Then the key. Your score is YOURS — teams get points for finishing.</span></li><li>The 🟢🟡🔴 difficulty stickers; the 🔴 ones I note down for P5.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mini-test · answer key · leaderboard</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they check themselves with no fear of a mark. Expect: they see their progress within one pair</div></td><td class='mat'>slide 11</td></tr><tr><td class='min'>82–90′</td><td class='stage'><div class='nm'>Finish: reflection + homework</div><div class='sub'>Wrap-up + homework</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> homework with a worked example + a teaser for P4</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>Homework: WB p. 5, ex. 1–3 (Present simple) — a model of the first exercise is on the slide.</li><li>Teaser: <span class='en'>Next: seventeen school subjects — and a girl from Finland in a British school.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> homework slide with a worked example (Backup: I write the homework on the board and they copy it into their diaries)</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> they write it down</div></td><td class='mat'>slide 12</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>Workbook:</b> WB p. 5, ex. 1–3 (Present simple aff/neg) — the model was shown in class.</p><p>🌱 Optional: ex. 4.</p></td><td class='mat'>WB Unit 1 · the -s/-es/-ies cheat-sheet poster stays up in the classroom</td></tr>
+
+      <tr>
+        <td class="min">0–7′</td>
+        <td class="stage"><div class="nm">Lead-in · retrieval</div><div class="zone">desks → standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieve P1.</span> <span class="en">Welcome back! Let's warm up your day.</span> <span class="game">▶ Stand up if it's true for you</span> — read routine sentences in the 1st person: <span class="en">I get up before seven. I have breakfast every day. I don't do homework on Saturdays.</span> Students stand / stay seated — everyone reacts, every line.</p>
+          <p><span class="ph">RallyRobin.</span> In pairs, take turns: <span class="en">Tell your partner four things you do every morning.</span> Overhear and keep 2–3 lines on the board (<i>I get up… I don't have…</i>) — these become today's examples.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Are we talking about right now, or every day?</span> (→ every day).</p>
+        </td>
+        <td class="mat">board · routine prompt list · timer</td>
+      </tr>
+
+      <tr>
+        <td class="min">7–19′</td>
+        <td class="stage"><div class="nm">Discovery · completing the table</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">I Do — notice the pattern.</span> Put the SB p.16 ex.1 examples on the board: <span class="en">I get up at eight. They don't go to school. Jack wakes up at seven. Abi doesn't see her teachers. I don't sit at the computer all day.</span> Think aloud, underlining verbs: <span class="en">I / you / we / they → base verb. He / she / it → verb + s. Negative → don't / doesn't + base verb.</span></p>
+          <p><span class="ph">We Do — build the table.</span> Open SB p.16, <b>ex.1</b>: copy and complete the affirmative / negative table together (<i>get up · wakes up · doesn't see · don't sit · don't go</i>). Elicit each cell; students say why.</p>
+          <p><span class="ph">CCQ.</span> <span class="en">“He gets up” — one or many? Do we add -s to “see” after “doesn't”?</span></p>
+          <div class="nb">📓 <b>Interactive notebook</b> — <b>Get_Involved_A2_Unit1_Grammar1_Present_Simple_Affirmative_Negative_Visual_Takeaway_A5</b>
+            <div class="nbk">A5 grammar card — PRESENT SIMPLE: affirmative (I/you/we/they + base verb · he/she/it + verb-s), negative (don't / doesn't + base verb) and the SPELLING SKETCH: +s · +es after -s, -sh, -ss, -ch, -x, -o · consonant + y → ies · have → has, with the warning “doesn't already carries the -s → base verb next”.</div>
+            <ul>
+              <li>Glue the card in; highlight every third-person ending.</li>
+              <li>Read the spelling routes aloud — there are four and they are the test.</li>
+              <li>Write three sentences about a family member (he/she) and one negative.</li>
+              <li>The card stays open through the flips and the error clinic.</li>
+            </ul>
+            <span class="nbp"><b>When:</b> ~5 min at the start of “Discovery · completing the table”.</span>
+            <span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span>
+          </div>
+        </td>
+        <td class="mat">SB p.16 ex.1 · board · <b>Grammar 1 A5 card</b> · glue · highlighters</td>
+      </tr>
+
+      <tr>
+        <td class="min">19–29′</td>
+        <td class="stage"><div class="nm">Spelling lab</div><div class="zone">desks → teams, active</div></td>
+        <td class="flow">
+          <p><span class="ph">The four routes (SB Spelling rules, p.21).</span> Model one of each on the board: <span class="en">+s: read → reads. +es after -s -sh -ss -ch -x -o: go → goes, watch → watches, mix → mixes. Consonant + y → ies: study → studies. Irregular: have → has.</span></p>
+          <p><span class="ph">You Do — SB p.16 ex.3.</span> Write the 3rd person of <i>finish · get up · go · have · make · play · study · watch</i> → <i>finishes · gets up · goes · has · makes · plays · studies · watches</i>. Pair-check first.</p>
+          <p><span class="game">▶ Sorting relay</span> (teams of 3–4): four column headers on the wall — <b>+s · +es · -ies · irregular</b>. Each team gets a stack of verb cards; runners place each verb under the right route, fastest correct wall wins. Everyone holds cards — nobody watches.</p>
+          <p><span class="ph">Pron. watch.</span> <span class="game">▶ Take Off–Touch Down</span>: say verbs — /s/ ending <b>stand</b> (<i>works</i>), /z/ ending <b>touch down</b> (<i>plays, goes</i>), /ɪz/ ending <b>both hands up</b> (<i>watches, finishes</i>). Fast, 8–10 verbs.</p>
+        </td>
+        <td class="mat">SB p.16 ex.3 · p.21 spelling box · verb cards (4 routes) · wall headers</td>
+      </tr>
+
+      <tr>
+        <td class="min">29–40′</td>
+        <td class="stage"><div class="nm">Controlled practice</div><div class="zone">pairs, desks</div></td>
+        <td class="flow">
+          <p><span class="ph">We Do → You Do.</span> SB p.16 <b>ex.2</b> (choose the correct option, 6 items) and <b>ex.4</b> (complete the sentences with the correct verb, affirmative / negative, from the photos, 6 items).</p>
+          <p><span class="game">▶ RallyCoach</span> (Kagan, pairs): <b>A</b> says the answer aloud <i>and</i> the reason (<span class="en">“doesn't watch — he, one person, negative”</span>); <b>B</b> coaches and praises, then they <b>swap</b> for the next item. Same for ex.4.</p>
+          <p><span class="ph">Feedback.</span> <span class="en">Pens down, look up.</span> Nominate; whole class shows the answer on fingers (a / b). Thumbs-check confidence before moving on.</p>
+        </td>
+        <td class="mat">SB p.16 ex.2 &amp; ex.4 · <span class="game">▶ RallyCoach</span> · pencils</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">40–44′</td>
+        <td class="stage"><div class="nm">🧘 Brain break</div><div class="zone">standing</div></td>
+        <td class="flow"><p><span class="en">Everyone up — 90 seconds.</span> Quick non-language stir (stretch / “last one standing” follow-the-leader / cross-body reach). Reset focus, then <span class="en">3–2–1, eyes here.</span> Halfway point of a 90-minute lesson — this keeps the second half sharp.</p></td>
+        <td class="mat">—</td>
+      </tr>
+
+      <tr>
+        <td class="min">44–56′</td>
+        <td class="stage"><div class="nm">Negative focus · flip drill</div><div class="zone">standing, pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">I Do — the flip.</span> <span class="en">I don't go → He doesn't go.</span> Show the -s “jumping” onto <i>doesn't</i>, so the main verb goes <b>base</b>. Cross out the trap: <span class="en">He doesn't gets ✗.</span></p>
+          <p><span class="game">▶ Quiz-Quiz-Trade</span> (everyone moving): each learner holds a card with an <b>affirmative</b> sentence (<i>She watches TV. · My brother studies French.</i>). Pair up → read your card → partner <b>flips it to the negative</b> (<span class="en">She doesn't watch TV.</span>) → praise → <b>trade cards</b>, find a new partner. Keep going for the full time — every learner speaks every round.</p>
+          <p><span class="ph">Support (new-starters).</span> Frame on the board: <span class="slot">[He / She]</span> <b>doesn't</b> <span class="slot">[base verb]</span> … Weaker pairs keep the notebook card open.</p>
+        </td>
+        <td class="mat">affirmative sentence cards (1 per pupil) · board frame · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">56–67′</td>
+        <td class="stage"><div class="nm">Grammar in context · Hogwarts</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Predict, then read.</span> SB p.16 <b>ex.6</b> — <span class="en">Can you imagine going to a school like Hogwarts? Look at the title and photo — what happens on a normal day?</span> A couple of predictions.</p>
+          <p><span class="ph">You Do.</span> Complete the text with the correct present-simple form: <i>starts · rings · have · do · don't study · doesn't play · don't exist · teaches</i>. Watch the trap items (<i>they</i> vs <i>he</i>; the two negatives). Pair-check.</p>
+          <p><span class="ph">Listen &amp; check.</span> Play <b>audio 8</b>: <span class="en">Listen and check your answers.</span> Correct in a different colour; count how many the notebook card saved you.</p>
+        </td>
+        <td class="mat">SB p.16 ex.6 · audio 8 · coloured pen</td>
+      </tr>
+
+      <tr>
+        <td class="min">67–79′</td>
+        <td class="stage"><div class="nm">Personalisation · freer</div><div class="zone">desks → pair share</div></td>
+        <td class="flow">
+          <p><span class="ph">You Do — make it true.</span> SB p.16 <b>ex.5</b>: change the underlined words so the six sentences are true for you (<span class="en">I go to a … / My school day starts at … / My parents don't do my homework.</span>).</p>
+          <p><span class="ph">Write 3 (sentence frames).</span> On the notebook page write three true sentences: one about <b>you</b>, one about a <b>family member</b> (he/she + verb-s), one <b>negative</b>. Frames for support: <span class="slot">[My mum / My brother]</span> <b>______s</b> every day. · <span class="slot">[He / She]</span> <b>doesn't ______</b> … · <b>I don't ______</b> …</p>
+          <p><span class="game">▶ Timed Pair Share</span> (40 sec each): read your three sentences; the listener hunts for the <b>-s</b> and the <b>negative</b> and gives <b>one tick + one fix</b>. <span class="en">Freeze &amp; swap.</span></p>
+        </td>
+        <td class="mat">SB p.16 ex.5 · notebook · board frames · <span class="game">▶ Timed Pair Share</span></td>
+      </tr>
+
+      <tr>
+        <td class="min">79–86′</td>
+        <td class="stage"><div class="nm">Error clinic + challenge</div><div class="zone">whole class</div></td>
+        <td class="flow">
+          <p><span class="ph">Error clinic.</span> Four wrong sentences on the board: <span class="en">He get up early. · She don't like maths. · My dad studys English. · He doesn't goes to bed late.</span> Class corrects each and <b>names the rule</b> (+s · don't/doesn't · consonant+y→ies · base verb after doesn't). Everyone writes the fixed version.</p>
+          <p><span class="ph">Fast-finisher challenge.</span> SB p.16 <b>ex.7 Brain teaser</b> (Tom / Ana / Sara logic grid) — for pairs who finished early while others repair errors.</p>
+        </td>
+        <td class="mat">board (4 error sentences) · SB p.16 ex.7</td>
+      </tr>
+
+      <tr>
+        <td class="min">86–90′</td>
+        <td class="stage"><div class="nm">Reflection · exit</div><div class="zone">desks → door</div></td>
+        <td class="flow">
+          <p><span class="ph">Self-check.</span> Thumbs-check on three “I can” lines: <span class="en">add -s correctly · spell the 3rd person · make negatives with doesn't.</span></p>
+          <p><span class="ph">Exit ticket.</span> At the door, each student says (or writes on a slip) <b>one</b> 3rd-person sentence about a family member: <span class="en">My sister goes to a big school.</span> Correct → out. <span class="en">Great work today — see you next lesson!</span></p>
+        </td>
+        <td class="mat">exit slips · notebook “I can” lines</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>Workbook — p. 5, ex. 1–4</b> (Present simple: affirmative &amp; negative): ex.1 write the 3rd-person singular · ex.2 choose the correct option · ex.3 complete the Olivia text · ex.4 complete from the photos (affirmative / negative). <b>Optional stretch:</b> ex.5 (write sentences true for you). <b>+ app trainer 5–7 min</b> — self-checking present-simple set on today's verbs.</p></td>
+        <td class="mat">Get Involved A2 Workbook p.5 (ex.1–4, +ex.5 optional) · app (homework link)</td>
+      </tr>
+
     </tbody>
   </table>
   </div>
 
-  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
-
-  <div class="grid2">
-    <div class="cardb"><ul class="a">
-      <li><span class="lb">Main aim.</span> By the end, learners can <b>use present simple affirmative and negative</b> with correct 3rd-person spelling, checked by themselves against keys.</li>
-      <li><span class="lb">Subsidiary.</span> Guided discovery from the P2 text; sorting -s/-es/-ies; ex.5 personalisation; a mini-test with self-check (not a mark!).</li>
-      <li><span class="lb">Personal.</span> The pace is half that of «ours» — and that is normal. Every stage ends with a self-check against the key: the error is found privately, before anyone else sees it.</li>
-    </ul></div>
-    <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
-      <ul class="a"><li>complete the present simple table</li><li>spell 3rd person forms: -s, -es, -ies</li><li>make negative sentences with don't/doesn't</li><li>write 6 correct sentences about a friend's day</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
-      <div class="arc"><span>Welcome</span><span>Mission brief</span><span>Discover</span><span>Table</span><span>Spelling</span><span>Negatives</span><span>Product</span><span>Score</span></div>
-    </div>
-  </div>
-
-  <div class="eyebrow">Target language</div>
-  <div class="grid2">
-    <div class="cardb tl">
-      <div class="r"><div class="k">Lexis</div><div><span class='w'>wake up</span><span class='w'>get up</span><span class='w'>get dressed</span><span class='w'>have breakfast</span><span class='w'>pack my bag</span><span class='w'>go to school</span><span class='w'>start school</span><span class='w'>have a break</span><span class='w'>have lunch</span><span class='w'>finish school</span><span class='w'>go home</span><span class='w'>do homework</span><span class='w'>have dinner</span><span class='w'>go to bed</span><span class='w'>go to sleep</span></div></div>
-      <div class="r"><div class="k">Structure</div><div>I/You/We/They get up at eight. · He/She/It gets up at seven. · I/You/We/They don't go to school. · He/She/It doesn't see her teachers.</div></div>
-      <div class="r"><div class="k">Form</div><div>most verbs: + -s (read → reads, wake up → wakes up) · after -s, -sh, -ss, -ch, -x, -o: + -es (go → goes, teach → teaches, mix → mixes) · consonant + y: y → -ies (study → studies) · exception: have → has</div></div>
-      <div class="r"><div class="k">Pron. watch</div><div>goes /ɡəʊz/ · studies /ˈstʌdiz/ · watches /ˈwɒtʃɪz/ — voiced, not «-es» as in Russian</div></div>
-    </div>
-    <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-      <div class='ccq'>'He don't like maths' — what's wrong? → after he/she/it it is always doesn't.</div><div class='ccq'>'She studys' — is that right? → no: consonant + y → studies.</div><div class='ccq'>After doesn't, does the verb take -s? → no: doesn't see, not doesn't sees.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> SB pp.14–15, KTP pair 7. For some of them the 3rd person is genuinely new; I build it on examples from the text they have already read (a familiar context).</p>
-    </div>
-  </div>
-
-  
-
-  <div class="grid2">
-    <div>
-      <div class="eyebrow">Anticipated problems &amp; solutions</div>
-      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>They have heard the rule but do not apply it</td><td>I do not explain — they complete the table from the examples and word the rule themselves; I only confirm it.</td></tr><tr><td>Fear of making written mistakes</td><td>Every written run comes with a self-check against the key, before anyone else sees it.</td></tr><tr><td>-es/-ies spelling gets mixed up</td><td>Hands-on sorting (cards into baskets) before any writing; a cheat-sheet poster on the wall until the end of the unit.</td></tr></tbody></table></div>
-    </div>
-    <div>
-      <div class="eyebrow">Classroom management — signals</div>
-      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
-    </div>
-  </div>
-
   <div class="foot">
-    <span>Speak &amp; Smile · Get Involved! A2 · Unit 1 “School life” (What is an ideal school?) · GIA2new — lesson plan &amp; staging</span>
-    <span>GIA2new · U1 «School life» · P3 · the 🌱 new-students line</span>
+    <span>Speak &amp; Smile · Get Involved A2 (new-starters line) · Unit 1 · P3 (lessons 13–14) — Grammar 1: Present simple (affirmative &amp; negative)</span>
+    <span>Verified vs SB p.16 + Spelling rules p.21 · КТП pair 7 · notebook Grammar 1 card · HW Workbook p.5.</span>
   </div>
 </div>
-<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
-<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>
