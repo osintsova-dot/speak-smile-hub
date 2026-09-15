@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GMF4 · Unit 1 · Lesson 2 — Grammar (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -55,48 +52,38 @@
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 2 — Grammar · How much? How many?</div>
-    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 5</span><span class="chip new">✨ NEW · quantifiers + How much / How many</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.9 · AB p.7</span></div>
+    <div class="t">Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 2 — Grammar</div>
+    <div class="s">A2 young learners (~10–11 y.o., confident readers) · 60 min · Grammar cycle: model → controlled → freer → production · desks + carpet</div>
+    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 5</span><span class="chip new">✨ NEW structure</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">🎯 How many / How much + quantifiers</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf4/games/cooking-memo.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🃏 Memory</a><a href="https://speakandsmile.ru/gmf4/games/cooking-ttt.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">❌⭕ Крестики</a><a href="https://speakandsmile.ru/gmf4/games/cooking-quiz.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🏆 Квиз</a><a href="https://speakandsmile.ru/gmf4/games/cooking-board.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎲 Ходилка</a><a href="https://speakandsmile.ru/gmf4/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1EGrx5jc34c9SsBaYVuOJUyGQH94U-ZK3" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>ask about quantity</b>: “How much (sugar) do we need? / How many (nuts) do we need?” and <b>answer with quantifiers</b>: “We need a lot of / some / a few (nuts). / a lot of / some / a little (sugar).”</li><li><span class="lb">Subsidiary.</span> Understand Luke &amp; Lily's dialogue about the Burfi cake (CD1 13); discover the rule — <b>How many</b> for things we can count, <b>How much</b> for things we can't; use <b>a few</b> (countable) vs <b>a little</b> (uncountable); recycle the 12 ingredients from L1; write questions &amp; answers about a recipe (AB).</li><li><span class="lb">Personal.</span> Drill the How much / How many contrast until it's automatic; keep <b>a few</b> (count) vs <b>a little</b> (uncount) visible; model the full answer, accept short answers and recast.</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>ask &amp; answer about quantities of ingredients</b> — <span class="en">How many (nuts) do they need? — They need a few nuts.</span> / <span class="en">How much (sugar) does he need? — He needs a lot of sugar.</span> — choosing quantifiers by countable / uncountable.</li>
+      <li><span class="lb">Subsidiary.</span> Recycle Unit 1 ingredients (retrieval starter); sort countable vs uncountable nouns; listen for detail (dialogue → which ingredients); collaborative speaking (Talk Partners, mingle, team relay); handwrite the two question forms.</li>
+      <li><span class="lb">Personal.</span> Run <b>I Do → We Do → You Do</b> with one clear think-aloud; graduate the practice so the scaffold fades game by game; ask a CCQ before each task; keep teacher-talk low.</li>
+    </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>choose How much (uncount) vs How many (count) correctly;</li><li>answer with a lot of / some / a few / a little;</li><li>ask &amp; answer about the ingredients we need for a cake.</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <ul class="a">
+        <li>ask <span class="en">How many…?</span> for things they can count and <span class="en">How much…?</span> for things they can't;</li>
+        <li>pick <b>a few</b> for countable and <b>a little</b> for uncountable nouns;</li>
+        <li>answer with <b>a lot of / some / a few / a little</b> + ingredient.</li>
+      </ul>
     </div>
   </div>
 
@@ -104,12 +91,18 @@
   <div class="eyebrow">Target language</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">ingredients (revision)</span><span class="w">a lot of · some · a few · a little</span><span class="w">recipe · need · How much? · How many?</span></div></div><div class="r"><div class="k">Structure</div><div>How much (sugar) do we need? — We need a lot of sugar. &nbsp;·&nbsp; How many (nuts) do we need? — We need a few nuts. &nbsp;·&nbsp; He needs a little (cream).</div></div><div class="r"><div class="k">Form</div><div><b>How many</b> + plural countable? · <b>How much</b> + uncountable? Quantifiers: countable → a lot of / some / <b>a few</b> · uncountable → a lot of / some / <b>a little</b>. I/you/we/they <b>need</b> · he/she <b>needs</b>.</div></div><div class="r"><div class="k">Pron. watch</div><div>weak <i>do we</i> /djəwi/ at speed; a few /əˈfjuː/ vs a little /əˈlɪtl/; rising-then-falling How-question ↘.</div></div>
+      <div class="r"><div class="k">Lexis (revised)</div><div><b>Count it:</b> <span class="w">nuts</span><span class="w">biscuits</span><span class="w">chocolate chips</span><span class="w">raisins</span> · <b>Measure it:</b> <span class="w">flour</span><span class="w">oil</span><span class="w">sugar</span><span class="w">salt</span><span class="w">jam</span><span class="w">butter</span><span class="w">coconut</span><span class="w">cream</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>How many (nuts) do they need? — They need a few (nuts). &nbsp;·&nbsp; How much (sugar) does he need? — He needs a lot of (sugar).</div></div>
+      <div class="r"><div class="k">Form</div><div><b>How many</b> + plural countable + do/does + subj + need? &nbsp;·&nbsp; <b>How much</b> + uncountable + do/does…? &nbsp;·&nbsp; <b>a few</b> + count-plural / <b>a little</b> + uncount / <b>a lot of · some</b> + both. <b>need</b> (I/you/we/they) → <b>needs</b> (he/she).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>weak /ə/: <i>a lot of</i> /ə ˈlɒt əv/, <i>a few</i> /ə ˈfjuː/, <i>a little</i> /ə ˈlɪtl/; stress on <b>HOW</b> + the noun; the <i>-s</i> in <i>need<b>s</b></i>.</div></div>
+      <div class="r"><div class="k">Phonics tie-in</div><div>Light only (full <i>i_e–ie</i> set comes in L5): keep the <b>weak /ə/</b> of the quantifiers honest in every drill — “a lot OF sugar”, not “a lot OFF”.</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“<i>How ___ sugar?</i> — can I count sugar?” → no → How MUCH.</div><div class="ccq" style="margin-bottom:10px">“<i>a few</i> or <i>a little</i> nuts — which one?” → a FEW (I can count nuts).</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> 12 ingredients are fresh from L1 (checked in warm-up), sorted countable/uncountable. <i>How much/many</i> met before, but choosing correctly + a few/a little is the new focus. Pupils can read the dialogue speech bubbles &amp; the quantifiers table.</p>
+      <div class="ccq">“Can I count nuts? One nut, two nuts…” → yes → <b>How many</b> / <b>a few</b>.</div>
+      <div class="ccq">“Can I count sugar? One sugar, two sugars?” → no → <b>How much</b> / <b>a little</b>.</div>
+      <div class="ccq" style="margin-bottom:12px">“Is <i>a few</i> a lot or a little?” → not much / small amount.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> the 12 ingredients were met in Lesson 1; <i>some / a lot of</i> and <i>Is there any…?</i> are familiar from the L1 song; pupils read short sentences; Talk Partners &amp; team routines are known. <b>Группы:</b> команда — максимум 4; при другой численности делим по 3–4 (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4).</p>
     </div>
   </div>
 
@@ -118,18 +111,22 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td>How much / How many mixed up</td><td>Two-colour board: MANY ↔ things we count (pictures of piles) · MUCH ↔ things we can't; contrast-drill side by side.</td></tr><tr><td>a few / a little swapped</td><td>Anchor: <b>a few</b> = a few nuts (count) · <b>a little</b> = a little milk (pour gesture); sort ingredient cards.</td></tr><tr><td>Interview = same partner again</td><td>Trade recipe cards after each exchange (new partner every time).</td></tr><tr><td>Answers too short (“a lot”)</td><td>Recast to the full sentence with a “stretch it” gesture; frame on the board.</td></tr><tr><td>need / needs (3rd person)</td><td>Grammar clue box: I/you/we/they need · he/she needs; beat-drill the -s.</td></tr>
+        <tr><td>Mix up <i>How much</i> / <i>How many</i></td><td>The <b>“Can I count it?”</b> test every time: count it → <i>How many</i>; measure it → <i>How much</i>.</td></tr>
+        <tr><td>“a few sugar” / “a little nuts” ✗</td><td>Colour-code on the notebook card: <b>a few</b> lives with COUNT, <b>a little</b> with MEASURE.</td></tr>
+        <tr><td>Drops <i>-s</i> in <i>he needs</i></td><td>Back-chain with a gesture: <i>…need → he needs → How much does he need?</i></td></tr>
+        <tr><td>Over-stresses the weak forms</td><td>Quick choral squeeze-drill: “a-lot-OF”, “a-FEW”, keep /ə/ short.</td></tr>
+        <tr><td>Teams grab / argue over Tic-Tac-Toe cards</td><td>Rule up front: a cell is claimed <b>only with a full sentence</b>; assign 4 roles per team &amp; rotate.</td></tr>
       </tbody></table></div>
     </div>
     <div>
       <div class="eyebrow">Classroom management — signals</div>
       <div class="cardb"><div class="sig">
         <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
-        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
+        <div class="sigc"><b>“Track me” 👀</b> — hand to eyes → all eyes on the model on the board.</div>
         <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
-        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
-        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
-        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+        <div class="sigc"><b>“Full sentence, please”</b> — two fingers = say the whole question / answer.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pens down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset (for the relay).</div>
       </div></div>
     </div>
   </div>
@@ -138,9 +135,9 @@
   <div class="eyebrow">Procedure — staging</div>
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
-    <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="game">▶</span> = game / competitive challenge</span>
+    <span><span class="ph">I DO / WE DO / YOU DO</span> = gradual release</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
   <div class="scroll">
@@ -149,87 +146,121 @@
     <tbody>
 
       <tr>
-        <td class="min">0–3′</td>
-        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Quick — name an ingredient for a cake!</span> Whip round the circle, one each.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
-        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
-      </tr>
-
-      <tr>
-        <td class="min">3–9′</td>
-        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">L1 ingredients back fast.</span> Flash 12 cards: chorus + sort countable/uncountable with a hand signal (one finger vs open hand). Then <span class="game">▶ Sticky Fingers:</span> two players at the board, you say an ingredient, first to slap the right card wins — the REST chorus “Is/Are there any…?” while they race (everyone busy). 4 rounds, rotate players.</p><p><span class="diff"><span class="sup">💪 Support:</span> racing pair gets the icon side. <span class="ext">⭐ Extension:</span> the rest add is/are correctly.</span></p></td>
-        <td class="mat">ingredient flashcards on board · <span class="game">▶ Sticky Fingers</span></td>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Opening · retrieval</div><div class="zone">carpet, teams standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Do-now retrieval (Rosenshine daily review).</span> Greet, split into 3 teams. Flash the 12 ingredient cards fast: <span class="en">Team 1 — name it! Team 2 — next!</span> Quick-fire round the teams, ~15 sec each miss = pass.</p>
+          <p><span class="ph">Prime the concept — everyone moves.</span> Hold up a card: <span class="en">Can you count it? Nuts — hands UP! Sugar — hands DOWN!</span> Run 8 cards fast — every child shows count (up) vs measure (down) every time. This is today's grammar, already in their bodies.</p>
+        </td>
+        <td class="mat"><b>12 ingredient A4 cards</b> (from L1) · timer</td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">9–10′</td>
-        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Luke has a recipe for a Burfi cake from India. How much sugar? How many nuts? Listen!</span> Set the scene of the dialogue (PB p.9).</p></td>
-        <td class="mat">Pupil's Book p.9</td>
+        <td class="min">4–6′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet → board</div></td>
+        <td class="flow"><p><span class="en">Before we shop — how many? Let's sing!</span> Sing <span class="game">Genki “How Many?”</span> to prime the question word and counting rhythm, then settle to the board. <i>(mp3 from Oksana; readers — by ear, no lyric sheet.)</i></p></td>
+        <td class="mat"><b>Genki “How Many?”</b> mp3</td>
       </tr>
 
       <tr>
-        <td class="min">10–19′</td>
-        <td class="stage"><div class="nm">Dialogue &amp; grammar clue</div><div class="zone">carpet → board</div></td>
-        <td class="flow"><p><span class="ph">Listen &amp; repeat, act out (act. 1, CD1 13).</span> Books open p.9. Play line by line; class echoes with feeling (Lily keen, Luke the chef).</p><p><span class="ph">Read again (act. 2).</span> <span class="en">Which ingredients do Luke and Lily need?</span> — sugar, nuts, milk, coconut. Pairs find them.</p><p><span class="ph">Grammar box (act. 3, CD1 14).</span> Board table: I/you/we/they <b>need</b> + a lot of / some / a few + nuts, biscuits, raisins · he/she <b>needs</b> + a lot of / some / a little + butter, cream, flour. Grammar clue: <span class="en">How many for things we CAN count. How much for things we CAN'T count.</span></p><p><span class="ph">ICQ:</span> <span class="en">“___ sugar do we need?” — How much or How many?</span> (→ How much!)</p></td>
-        <td class="mat">Pupil's Book p.9 · CD1 13–14 · board grammar box</td>
+        <td class="min">6–12′</td>
+        <td class="stage"><div class="nm">Model · dialogue</div><div class="zone">board / desks</div></td>
+        <td class="flow">
+          <p><span class="ph">I DO — present in context.</span> <b>PB p.9, ex 1</b> — <span class="en">Listen and read. Listen and repeat. Act out.</span> (CD1 13) Luke &amp; Lily plan the Burfi cake. Play once, books open.</p>
+          <p><span class="ph">Think-aloud (mark the model).</span> Stop on two lines: <span class="en">Lily asks “How MUCH sugar…” — sugar, I can't count it, so “How much”. Then “How MANY nuts…” — nuts, I can count them, so “How many”.</span> Underline both on the board.</p>
+          <p><span class="ph">Check meaning — PB ex 2.</span> <span class="en">Read again. Which ingredients do Luke and Lily need?</span> (→ sugar, nuts, milk, coconut — <b>not</b> salt, oil). Choral repeat + 2–3 pairs act out 4 lines.</p>
+        </td>
+        <td class="mat">GMF4 Pupil's Book <b>p.9</b> ex 1–2 · CD1 13 · board</td>
       </tr>
 
       <tr>
-        <td class="min">19–27′</td>
-        <td class="stage"><div class="nm">Tic-Tac-Toe · quantity</div><div class="zone">desks, 2 teams</div></td>
-        <td class="flow"><p><span class="game">▶ Noughts &amp; Crosses — ingredients.</span> 3×3 grid of ingredient pictures. To claim a cell, the team ASKS the other team the right question — <span class="en">How many raisins do you need?</span> — and the other team answers with a quantifier: <span class="en">We need a few raisins!</span> Both sides speak every turn. Rotate the asker.</p><p><div class="ig">🎮 <b>Projector/board option:</b> draw the 3×3 grid on the whiteboard; a rotating child taps the winning cell as the WHOLE team says the question aloud.</div></p><p><span class="ph">ICQ:</span> <span class="en">For nuts — a few or a little?</span> (→ a few!)</p><div class="nb">📓 <b>Interactive notebook</b> — <b>GMF4_Unit1_Lesson2_How_Much_How_Many_Visual_Note_A5</b><div class="nbk">A5 grammar card — COUNT IT OR MEASURE IT? two columns: COUNT IT! → HOW MANY? (a lot of · some · a few) with the model How many nuts do they need? — They need a few nuts; MEASURE IT! → HOW MUCH? (a lot of · some · a little) with How much sugar does he need? — He needs a lot of sugar</div><ul><li>Glue the card in; pupils trace HOW MANY and HOW MUCH in two colours.</li><li>Sort five ingredient cards from Lesson 1 into COUNT IT / MEASURE IT on the card.</li><li>Say the two model sentences with a partner, swapping the ingredient each time.</li><li>Play Tic-Tac-Toe: the card stays open as the grammar reference.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the 19–27′ “Tic-Tac-Toe · quantity” stage (desks, pairs)</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Glue sticks, two coloured pencils.</span></div></td>
-        <td class="mat">3×3 ingredient grid (board) · ingredient cards</td>
+        <td class="min">12–18′</td>
+        <td class="stage"><div class="nm">Clarify · grammar box</div><div class="zone">board → carpet sort</div></td>
+        <td class="flow">
+          <p><span class="ph">WE DO — build the rule together.</span> <b>PB p.9, ex 3</b> Quantifiers table + <b>Grammar clue</b>: <span class="en">How many = things we CAN count. How much = things we CAN'T count.</span> Choral drill the table (I/you/we/they <b>need</b> · he/she <b>needs</b>).</p>
+          <p><span class="ph">CCQs.</span> <span class="en">Can I count biscuits? … So — how many or how much?</span> · <span class="en">Can I count flour? … So — a few or a little?</span></p>
+          <p><span class="game">▶ Board sort — COUNT IT / MEASURE IT.</span> Two columns on the board. Hold up an ingredient card: whole class points L or R and calls the pair — <span class="en">Biscuits — COUNT — a few!</span> / <span class="en">Butter — MEASURE — a little!</span> A rotating child sticks it in the right column. All 12, fast.</p>
+        </td>
+        <td class="mat">PB <b>p.9</b> ex 3 · 12 ingredient cards · board (2 columns) · tape</td>
       </tr>
 
       <tr>
-        <td class="min">27–37′</td>
-        <td class="stage"><div class="nm">Recipe info-gap</div><div class="zone">desks, pairs</div></td>
-        <td class="flow"><p><span class="ph">Model first.</span> Show two half-recipes (A knows the sugar &amp; nuts, B knows the flour &amp; raisins). Model publicly: <span class="en">How much flour do we need? — We need a lot of flour.</span></p><p><span class="game">▶ Talk Partners info-gap (act. 4-style).</span> Pairs ask &amp; answer to complete the missing amounts — <span class="en">How many nuts? How much cream?</span> Both write. 5–6 exchanges.</p><p><p><span class="asr">✔ <b>Assess:</b> circulate with the class list — who chooses much/many + a few/a little correctly? Recast, note names.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> question stems printed on the half-sheet. <span class="ext">⭐ Extension:</span> add: <span class="en">Do we need any biscuits? — No, we don't.</span></span></p></td>
-        <td class="mat">half-recipes (info-gap) · <span class="game">▶ Talk Partners</span></td>
+        <td class="min">18–23′</td>
+        <td class="stage"><div class="nm">📓 Interactive notebook</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">📓 Interactive notebook — “COUNT IT OR MEASURE IT?” card (A5).</span> Two columns: <b>COUNT IT → HOW MANY?</b> (a lot of · some · a few) with model <span class="en">How many nuts do they need? — They need a few nuts.</span> · <b>MEASURE IT → HOW MUCH?</b> (a lot of · some · a little) with <span class="en">How much sugar does he need? — He needs a lot of sugar.</span></p>
+          <p>Glue the card in; pupils <b>trace HOW MANY and HOW MUCH in two colours</b>. Sort 5 ingredient cards from Lesson 1 into COUNT / MEASURE on the card. Then say the two model sentences with a partner, swapping the ingredient each time.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do we write “a few” or “a little” with nuts?</span> (→ a few). The card stays open — it's the reference for the games.</p>
+        </td>
+        <td class="mat"><b>GMF4_Unit1_Lesson2 “Count it or Measure it” A5</b> (1 per pupil) · glue · 2 coloured pens · L1 mini-cards</td>
       </tr>
 
       <tr>
-        <td class="min">37–46′</td>
-        <td class="stage"><div class="nm">How much / How many chain</div><div class="zone">carpet, circle</div></td>
-        <td class="flow"><p><span class="game">▶ Numbered Heads Q&amp;A.</span> Teams numbered 1–4. You (then a pupil) draw an ingredient card: <span class="en">How much/many … do we need?</span> Teams huddle 10 sec; you call a number — that child answers the full sentence with a quantifier. Point per correct answer. The number is random — everyone must be ready.</p><p><span class="ph">ICQ:</span> <span class="en">Do you shout the answer or wait for your number?</span> (→ wait!)</p></td>
-        <td class="mat">ingredient cards · <span class="game">▶ Numbered Heads</span></td>
+        <td class="min">23–31′</td>
+        <td class="stage"><div class="nm">Controlled · game</div><div class="zone">carpet, teams</div></td>
+        <td class="flow">
+          <p><span class="ph">YOU DO (supported).</span> <span class="game">▶ Tic-Tac-Toe · quantity</span> — the L2 signature game. <b>9 A4 ingredient cards</b> laid 3×3 on the carpet (each card = one cell); teams play ✕ vs ⭕ with big chips on top.</p>
+          <p><b>Rule (Oksana's format):</b> you claim a cell <b>only by saying a full correct sentence</b> about that ingredient — <span class="en">We need a few chocolate chips.</span> or a question <span class="en">How much flour do we need?</span> A single word or a wrong quantifier = no cell, other team's turn.</p>
+          <p>Notebook card stays open as reference. First team to 3-in-a-row wins the round; re-deal &amp; play best of 3. <span class="en">Full sentence, please!</span> = your two-finger signal.</p>
+        </td>
+        <td class="mat">9 A4 ingredient cards · ✕/⭕ chips · notebook card (reference)</td>
       </tr>
 
       <tr>
-        <td class="min">46–52′</td>
-        <td class="stage"><div class="nm">My cake recipe · write</div><div class="zone">desks</div></td>
-        <td class="flow"><p><span class="ph">Notebooks / AB p.7 format.</span> Board frame: <i>For my cake I need a lot of ___. I need a few ___. I need a little ___.</i> Each child writes 3 recipe sentences.</p><p><span class="diff"><span class="sup">💪 Support:</span> gapped frame + ingredient word bank. <span class="ext">⭐ Extension:</span> add a How much/How many question for a partner.</span></p></td>
-        <td class="mat">notebooks · board frame</td>
+        <td class="min">31–39′</td>
+        <td class="stage"><div class="nm">Freer · mingle</div><div class="zone">open space, all standing</div></td>
+        <td class="flow">
+          <p><span class="ph">YOU DO (scaffold fades — card, no notebook).</span> <span class="game">▶ Quiz-Quiz-Trade (Kagan).</span> Every pupil holds one ingredient card. <span class="en">Stand up, hand up, pair up!</span></p>
+          <p>In each pair: A quizzes — <span class="en">How much / How many [coconut] do you need?</span> B answers with a quantifier — <span class="en">I need a little coconut.</span> Swap roles, praise, <b>trade cards</b>, find a new partner. Everyone talks at once — no one waits.</p>
+          <p>Monitor for the two errors (a few/a little · How much/How many); note names for quick whole-class correction after.</p>
+        </td>
+        <td class="mat">1 ingredient card per pupil · music (start/stop)</td>
       </tr>
 
       <tr>
-        <td class="min">52–55′</td>
+        <td class="min">39–49′</td>
+        <td class="stage"><div class="nm">Production · relay</div><div class="zone">carpet, teams in lines</div></td>
+        <td class="flow">
+          <p><span class="ph">YOU DO (production, no card).</span> <span class="game">▶ Boat Race — “The recipe relay”.</span> Teams in lines; a spread of ingredient mini-cards in front of each line; a “recipe list” sheet on the board per team.</p>
+          <p>Runner 1 dashes, grabs a card and <b>must produce a full exchange</b> to add it: <span class="en">How much butter do we need? — We need some butter!</span> Correct → card goes on the team list, tag next runner. Wrong quantifier → card back, try again next turn. First team with a complete 6-ingredient cake list wins.</p>
+          <p>Settle with <span class="en">Freeze!</span> then a quick whole-class fix of the errors you noted in the mingle.</p>
+        </td>
+        <td class="mat">3 sets of mini ingredient cards · 3 “recipe list” sheets · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">49–54′</td>
+        <td class="stage"><div class="nm">Talk Partners · write</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Consolidate — PB p.9, ex 4.</span> <span class="en">Talk Partners: ask and answer about the ingredients for the Burfi cake.</span> Then each pupil writes <b>their own 2 exchanges</b> in the notebook using tiered frames (choose your level):</p>
+          <p><span class="slot">Support:</span> <span class="en">How ____ ____ do we need? — We need ____ ____.</span> · <span class="slot">Core:</span> pick the ingredient + quantifier yourself · <span class="slot">Stretch:</span> one for <i>he/she needs</i>.</p>
+          <p>Sit-partner checks with a tick: countable? question word? quantifier match?</p>
+        </td>
+        <td class="mat">PB <b>p.9</b> ex 4 · notebooks · tiered frame strip</td>
+      </tr>
+
+      <tr>
+        <td class="min">54–58′</td>
         <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Ask your partner one How much / How many question about a cake — full answer with a quantifier!</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can ask How much? and How many?</span></p></td>
-        <td class="mat">“I can…” progress cards (notebook)</td>
+        <td class="flow">
+          <p><span class="ph">Retrieval whip-round.</span> Point at things round the room: <span class="en">Count or measure? How much or how many?</span> Fast, everyone answers on their fingers (1 = many, 2 = much).</p>
+          <p>Self-assessment strip: <span class="en">Tick — I can ask “How many…?” and “How much…?” · I can choose a few / a little.</span></p>
+        </td>
+        <td class="mat">“I can…” self-check strip (notebook)</td>
       </tr>
 
       <tr>
-        <td class="min">55–57′</td>
-        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Well done, recipe masters! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
-      </tr>
-
-      <tr>
-        <td class="min">57–60′</td>
+        <td class="min">58–60′</td>
         <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. At the door — one question each from the ingredient deck: <span class="en">How much/many … do we need?</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
-        <td class="mat">ingredient cards · reward stickers</td>
+        <td class="flow"><p>Line up. Each pupil draws an ingredient card and says one correct question about it — <span class="en">How much / How many … do we need?</span> Right → out: <span class="en">Great work — see you next lesson!</span></p></td>
+        <td class="mat">ingredient cards</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 7:</b> ex. 1 <i>Complete the sentences in the grammar table</i> (need/needs · a few/a little · butter) + ex. 2 <i>Write the questions with How much or How many. Answer with a lot, a little or a few</i> + ex. 3 <i>Talk Partners: Invent a conversation. Act it out</i> + <i>Code!</i> (→ BURFI CAKE). <b>+ app trainer</b> — How much/How many, 5–7 min.</p></td>
-        <td class="mat">Activity Book p.7 · app (homework link)</td>
+        <td class="flow"><p><b>Activity Book — стр. 7, задания № 1–2:</b> №1 complete the grammar table (word bank: <i>they · need · butter · needs · a little · a few</i>) · №2 write the four questions with <i>How much / How many</i> and answer with <i>a lot / a little / a few</i> (raisins · salt · biscuits · oil). Optional oral №3 «invent &amp; act out a conversation» + the CODE! puzzle. <b>+ Тренажёр:</b> GMF4 Grammar Practice (Standard / Higher) — Unit 1 quantifiers set, 5–7 мин.</p></td>
+        <td class="mat">Activity Book <b>p.7</b> ex 1–2 · GMF4 Grammar Practice (practice/ PDF)</td>
       </tr>
 
     </tbody>
@@ -237,10 +268,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 2 (Grammar · How much / How many · quantifiers) — lesson plan &amp; staging (continuing line)</span>
-    <span>Pupil's Book p.9 (CD1 13–14) · Activity Book p.7 · КТП урок 5. Genki: «Do You Like Food?» (12) / «What Would You Like For Breakfast?» (67) — по теме еда; на структуру How much/How many точнее ложится сам диалог юнита.</span>
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 1 · Lesson 2 (Grammar) — lesson plan &amp; staging</span>
+    <span>Content verified vs Pupil's Book p.9 + Activity Book p.7 + КТП-GMF4 урок 5. · Notebook: GMF4-U1-L2 “Count it / Measure it”.</span>
   </div>
 </div>
-<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
-<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
-

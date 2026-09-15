@@ -1,6 +1,5 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GMF4 · Unit 1 · Lesson 7 — Test (Lesson Plan &amp; Staging)</title>
+<title>GMF4 · Unit 1 · Lesson 7 — Unit 1 Test (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
     --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -55,61 +52,57 @@
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 7 — Unit 1 Test</div>
-    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 05.10–11.10 · Lesson 10</span><span class="chip">📝 Unit 1 Test — calm &amp; kind</span><span class="chip">~10 pupils · solo desks</span><span class="chip">GMF4 Unit 1 Test</span></div>
+    <div class="t">Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 7 — Unit 1 Test</div>
+    <div class="s">A1+ young learners (~10–11 y.o., confident readers) · 60 min · Summative test (Listening · Reading · Writing · Speaking) · model-first, low-stakes · desks + quiet side table</div>
+    <div class="meta"><span class="chip">Week 05.10–11.10 · Lesson 10</span><span class="chip new">📝 TEST</span><span class="chip">~12 pupils · individual work</span><span class="chip">Higher-level test · /80 marks</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf4/games/cooking-memo.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🃏 Memory</a><a href="https://speakandsmile.ru/gmf4/games/cooking-ttt.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">❌⭕ Крестики</a><a href="https://speakandsmile.ru/gmf4/games/cooking-quiz.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🏆 Квиз</a><a href="https://speakandsmile.ru/gmf4/games/cooking-board.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎲 Ходилка</a><a href="https://speakandsmile.ru/gmf4/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1EGrx5jc34c9SsBaYVuOJUyGQH94U-ZK3" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> Pupils <b>show what they know</b> on the Unit 1 test (vocabulary · grammar · listening · reading) in a calm, supported format — model-first, no surprises.</li><li><span class="lb">Subsidiary.</span> Test-taking micro-skills: read the example first, skip &amp; return, check your name on the paper; quiet early-finisher tasks; positive close — effort praised, not only scores.</li><li><span class="lb">Personal.</span> Radiate calm; no competitive games today; help procedure, not answers (“read the example again”); note common errors for recycling in Unit 2 warm-ups.</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> To <b>measure fairly</b> what each pupil has learnt in Unit 1 — <b>ingredients</b> &amp; <b>cooking verbs</b>, the quantifiers <b>a lot of / some / a few / a little</b>, and <b>need to (do)</b> — across listening, reading, writing and speaking.</li>
+      <li><span class="lb">Subsidiary.</span> Give a calm, well-modelled test so the score reflects <b>knowledge, not test-navigation or nerves</b>; run a short 1:1 oral (translation pairing) in parallel; close on a self-efficacy note.</li>
+      <li><span class="lb">Personal.</span> Keep instructions crystal-clear (ICQ each task before pupils start); protect the quiet; never announce marks aloud; normalise “this is just to see what you know”.</li>
+    </ul></div>
     <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>follow test instructions independently;</li><li>complete all four test parts;</li><li>use “skip and come back” when stuck.</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <div class="eyebrow" style="margin-top:0">By the end, the teacher can…</div>
+      <ul class="a">
+        <li>report each pupil's Unit 1 grasp of ingredients, cooking verbs, quantifiers &amp; <i>need to</i>;</li>
+        <li>hear each pupil read English↔Russian pairs aloud (oral check);</li>
+        <li>spot who needs a light re-teach before Unit 2 — with no child feeling “tested to failure”.</li>
+      </ul>
     </div>
   </div>
 
   <!-- TARGET LANGUAGE -->
-  <div class="eyebrow">Target language</div>
+  <div class="eyebrow">Target language (assessed)</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">Unit 1 material (ingredients · cooking verbs · quantifiers · need to)</span></div></div><div class="r"><div class="k">Structure</div><div>All Unit 1 structures — assessed, not taught today.</div></div><div class="r"><div class="k">Form</div><div>—</div></div><div class="r"><div class="k">Pron. watch</div><div>—</div></div>
+      <div class="r"><div class="k">Lexis 1</div><div><span class="w">flour</span><span class="w">oil</span><span class="w">nuts</span><span class="w">biscuits</span><span class="w">chocolate chips</span><span class="w">sugar</span><span class="w">salt</span><span class="w">raisins</span><span class="w">jam</span><span class="w">butter</span><span class="w">coconut</span><span class="w">cream</span></div></div>
+      <div class="r"><div class="k">Lexis 2</div><div><span class="w">stir</span><span class="w">mix</span><span class="w">chop</span><span class="w">heat</span><span class="w">pour</span><span class="w">add</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>I need <b>a lot of / some / a few</b> (nuts). · He needs <b>a lot of / some / a little</b> (cream). · What do we / does he <b>need to do</b>? — <b>need(s) to</b> (chop / heat / mix…).</div></div>
+      <div class="r"><div class="k">Form</div><div><b>a few</b> + countable plural (nuts) · <b>a little</b> + uncountable (cream, sugar) · <b>some / a lot of</b> both. <i>need to</i> + base verb.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>(oral check) /ʃ/ in <i>sugar</i>; final cluster in <i>biscuits</i>; <i>coconut</i> stress; <i>raisins</i> /ˈreɪznz/.</div></div>
+      <div class="r"><div class="k">Phonics</div><div>Not a separate test section this level — <i>i_e–ie</i> (L5) is not examined here. Spelling is checked inside Writing ex 5 (anagrams).</div></div>
     </div>
     <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“If a task is hard — stop or skip and return?” → skip and return.</div><div class="ccq" style="margin-bottom:10px">“Is it OK to look at a friend's paper?” → no — I want to see what YOU know; that's how I help you.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Unit reviewed in L6 (quiz + AB review + spelling); pupils know the traffic-light self-check. Early in the year — extra reassurance still helps.</p>
+      <div class="eyebrow" style="margin-top:0">Concept checks (before the test) · Assumptions</div>
+      <div class="ccq">“A few or a little for <b>sugar</b>?” → a little (you can't count it).</div>
+      <div class="ccq" style="margin-bottom:12px">“<b>Chop</b> — do we do it with a knife or a spoon?” → knife (verb = check meaning, not translate).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> pupils are confident readers &amp; writers; all six lessons of Unit 1 are done and the L6 Review is complete; pupils know the coursebook test icons (circle / tick / match). <b>Stakes are low</b> — this informs teaching, it is not a public ranking. <b>Groups:</b> whole class writes silently; the teacher pulls pupils one at a time (or pairs) to the side table for the oral pairing.</p>
     </div>
   </div>
 
@@ -118,18 +111,22 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td>Test nerves</td><td>Normalise: “it's the same as our books, just quiet”; smile; breathing in-2-3-out-2-3 before starting.</td></tr><tr><td>Listening part — someone loses the place</td><td>Point-follow the item numbers on your copy held up; play each item twice.</td></tr><tr><td>Early finishers disturb others</td><td>Quiet menu ready ON desks before the test: food word-search + reading corner.</td></tr><tr><td>A child freezes completely</td><td>Kneel beside, whisper the example through, first item together — then step away.</td></tr><tr><td>Copy-glancing</td><td>Folder screens between desks, framed as “exam style, like big kids”.</td></tr>
+        <tr><td>Test anxiety — a pupil freezes at “test”</td><td>Reframe: <span class="en">This just shows me what you already know. You've practised all of it.</span> Slow, calm voice; no timer race.</td></tr>
+        <tr><td>Pupil doesn't understand the <i>task</i>, not the language (construct-irrelevant)</td><td>Model each rubric first with a <b>throw-away example</b> (not a real answer); ICQ <span class="en">Do you circle one or two?</span></td></tr>
+        <tr><td>Missed the listening audio</td><td>Play each listening track <b>twice</b>; pause between items; nobody is penalised for one hearing.</td></tr>
+        <tr><td>Oral pairing feels like being “put on the spot”</td><td>Do it privately at the side table, quiet voice; start with an easy pair; never announce the score.</td></tr>
+        <tr><td>Fast finishers disturb the quiet</td><td>Silent challenge card: <span class="en">Write one more sentence — what do YOU need to make a cake?</span></td></tr>
       </tbody></table></div>
     </div>
     <div>
-      <div class="eyebrow">Classroom management — signals</div>
+      <div class="eyebrow">Classroom management — calm test signals</div>
       <div class="cardb"><div class="sig">
-        <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
-        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
-        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
-        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
-        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
-        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+        <div class="sigc"><b>“Eyes on your own paper”</b> — set once, warmly, at the start; not policing.</div>
+        <div class="sigc"><b>Silent hand-up</b> — a question? raise a hand, teacher comes over; no calling out.</div>
+        <div class="sigc"><b>“Traffic light”</b> — desk card green = fine · yellow = a question · nobody speaks.</div>
+        <div class="sigc"><b>Countdown (gentle)</b> — <span class="call">“Two minutes left — finish your sentence.”</span></div>
+        <div class="sigc"><b>Volume floor</b> — lower arm = quieter; the room stays at whisper for the oral corner.</div>
+        <div class="sigc"><b>“Pens down, thank you”</b> — clean, unhurried collection of papers.</div>
       </div></div>
     </div>
   </div>
@@ -138,9 +135,8 @@
   <div class="eyebrow">Procedure — staging</div>
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
-    <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+    <span>📝 = test section · marks in <b>[ /n ]</b></span>
   </div>
 
   <div class="scroll">
@@ -149,59 +145,93 @@
     <tbody>
 
       <tr>
-        <td class="min">0–3′</td>
-        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Today is our show-what-you-know day. It's easy — it's what we practised!</span></p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
-        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Settle &amp; reassure</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Calm entry.</span> Pupils sit at spaced desks, papers face-down. Greet warmly, unhurried: <span class="en">Good morning. Today's a quiet lesson — a little test on Unit 1. This just shows me what you know, and you've done all of it already.</span></p>
+          <p><span class="ph">Reset the body (physiological state).</span> <span class="en">Sit tall, shoulders down, one slow breath in… and out. Ready.</span> Point to the desk “traffic-light” cards: <span class="en">Green means you're fine. Yellow means you have a question — hand up, I'll come to you.</span></p>
+        </td>
+        <td class="mat">test papers (face-down) · traffic-light cards · spaced seating</td>
       </tr>
 
       <tr>
-        <td class="min">3–8′</td>
-        <td class="stage"><div class="nm">Gentle warm-up</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Confidence loop (no games, low key).</span> Flash 6 easiest ingredient/verb cards — chorus; sing one quiet verse of «Let's go shopping!».</p><p><span class="ph">Test how-to.</span> Show the paper: <span class="en">Name here! Example first! Hard task? Skip it, come back later. Finished? Check, then quiet menu.</span> ICQ: <span class="en">What do you do if it's hard?</span> (→ skip &amp; return)</p></td>
-        <td class="mat">flashcards · test papers</td>
+        <td class="min">4–10′</td>
+        <td class="stage"><div class="nm">Model-first walkthrough</div><div class="zone">board</div></td>
+        <td class="flow">
+          <p><span class="ph">Show HOW, not the answers.</span> On the board, one throw-away example per rubric so the mark measures knowledge, not test-reading:</p>
+          <p>① <span class="en">Listen and circle</span> — <span class="en">You circle ONE letter, a, b or c.</span> ICQ: <span class="en">How many do you circle?</span> (→ one) · ② <span class="en">Read and tick</span> — one box per item · ③ <span class="en">Read and write</span> (recipe gap-fill) — one word on each line · ④ <span class="en">Order, write and match</span> — un-jumble the letters, then match the picture (e.g. <span class="slot">iol → oil → d</span>) · ⑤ <span class="en">Write the questions, look and write the answers</span> — model item 1 only: <span class="en">What does Ben need to do? — He needs to heat the water.</span></p>
+          <p><span class="en">If you're not sure, do the ones you know first, then come back. Nobody talks — hand up if you need me.</span></p>
+        </td>
+        <td class="mat">board · one example per task (not real answers)</td>
       </tr>
 
       <tr>
-        <td class="min">8–42′</td>
-        <td class="stage"><div class="nm">Unit 1 Test</div><div class="zone">solo desks</div></td>
-        <td class="flow"><p><span class="ph">Parts in order:</span> ① Vocabulary (picture → word: ingredients &amp; cooking verbs) ② Grammar (How much/How many · a few/a little · need to) ③ Listening (play each item twice, point-follow) ④ Reading. ~6–7′ per part; visible timer; whisper-help with procedure only.</p><p><span class="ph">Early finishers:</span> check your paper once, then the quiet menu (food word-search · reading corner). No walking about.</p><p><p><span class="asr">✔ <b>Assess:</b> collect + skim while they're on the menu: mark the 2 most common errors → they open Unit 2 L1 warm-up as retrieval.</span></p></p></td>
-        <td class="mat">GMF_L4_Units_1-9_Tests — Unit 1 · CD listening track · folder screens · quiet menu</td>
+        <td class="min">10–22′</td>
+        <td class="stage"><div class="nm">📝 Listening [ /20 ]</div><div class="zone">desks, whole class</div></td>
+        <td class="flow">
+          <p><span class="en">Turn over your papers. Page 1 — Listening. Pencils ready.</span></p>
+          <p><span class="ph">Ex 1 — Listen and circle (Track 04) [ /10 ].</span> 6 questions (what to buy · what Richard's going to make · how much salt · what to do next · what they don't need · what to add). Play <b>twice</b>, a short pause between items. <span class="en">Circle one letter each time.</span></p>
+          <p><span class="ph">Ex 2 — Listen and match, 2 extra names (Track 05) [ /10 ].</span> Match 6 chefs in the picture to names (Fred · Peter · Mary · William · Helen · Robert · Emma · Sarah). Model given: <span class="slot">Robert = 3</span>. Play <b>twice</b>. <span class="en">Two names are extra — you won't use them.</span></p>
+          <p>Everyone listens together (audio is the one section that must be synchronised). <span class="en">Well done — page 1 finished. Turn to page 2.</span></p>
+        </td>
+        <td class="mat"><b>Unit 1 Test — Higher</b> p.1 · audio Track 04 &amp; 05 · speaker</td>
       </tr>
 
       <tr>
-        <td class="min">42–52′</td>
-        <td class="stage"><div class="nm">Brain unwind</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Calm cooperative round (not competitive).</span> <span class="game">▶ Class chain:</span> build the longest recipe chain around the circle — <span class="en">First we need to chop the nuts… then mix the butter… then add the sugar…</span> — cooperative record attempt, class vs itself.</p><p>Stretch + breathe; praise the WORK: <span class="en">You worked like real chefs today.</span></p></td>
-        <td class="mat">—</td>
+        <td class="min">22–45′</td>
+        <td class="stage"><div class="nm">📝 Reading + Writing [ /40 ]</div><div class="zone">desks, silent &amp; individual</div></td>
+        <td class="flow">
+          <p><span class="ph">Silent, at own pace.</span> Pupils work through pages 2–3; the teacher circulates quietly and, in parallel, runs the oral corner (row below).</p>
+          <p><span class="ph">Reading p.2.</span> <b>Ex 3 — Read and tick [ /10 ]</b>: 6 picture pairs, choose the one that matches (a little butter · some jam in the fridge · isn't any flour · a lot of milk · pass the salt · a few biscuits). <b>Ex 4 — Read and write [ /10 ]</b>: read the <i>Banana Split</i> recipe, fill 6 gaps (e.g. <span class="slot">fruit</span> given) with <i>fruit / banana / mix / sweet / two / straight away</i>-type words.</p>
+          <p><span class="ph">Writing p.3.</span> <b>Ex 5 — Order, write and match [ /10 ]</b>: un-jumble &amp; match to the fridge (<span class="slot">iol→oil (d)</span> · trubte→butter · usrag→sugar · remac→cream · nrsiias→raisins · tbcisisu→biscuits). <b>Ex 6 — Write the questions &amp; answers [ /10 ]</b>: cooking-verb pictures — <span class="en">What does Ben need to do? — He needs to heat…</span> (they/they/Sally/they/Jack → chop · mix · pour · add · stir).</p>
+          <p>Gentle checkpoint at 40′: <span class="en">Five minutes. Finish the question you're on.</span> Fast finishers get the silent challenge card.</p>
+        </td>
+        <td class="mat">Test p.2–3 · pencils · silent challenge card · red pen (teacher, later)</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">22–45′<br>(parallel)</td>
+        <td class="stage"><div class="nm">📝 Speaking — oral pairing [ /20 ]</div><div class="zone">quiet side table · 1:1 / small groups</div></td>
+        <td class="flow">
+          <p><span class="ph">Runs during the silent writing.</span> Call pupils one at a time (or in twos) to the side table, ~1.5–2 min each; the rest keep writing. Whisper voices only.</p>
+          <p><span class="ph">The task — match &amp; read the pair aloud.</span> Spread the Unit 1 word cards: English cards (<i>flour · oil · nuts · biscuits · sugar · salt · raisins · butter · coconut · cream · stir · mix · chop · heat · pour · add</i>) against Russian cards / picture cards. The pupil <b>makes the pairs</b> — English ↔ Russian (or picture ↔ word) — and <b>reads each pair aloud</b>: <span class="en">flour — мука · chop — резать…</span> ~6–8 pairs each, mixing ingredients &amp; verbs.</p>
+          <p><span class="ph">Model first, then let go.</span> Demonstrate one pair yourself, then the pupil works. Prompt, don't correct harshly: <span class="en">Good — try this one.</span> <b>Do not say the score aloud.</b> Quietly note ✓/half on your list. While waiting, the others simply carry on with the written test — nobody is idle.</p>
+        </td>
+        <td class="mat">English word cards · Russian / picture cards · teacher tally list (silent)</td>
       </tr>
 
       <tr>
-        <td class="min">52–55′</td>
-        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner: one test task that was easy, one that was tricky.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I finished the Unit 1 test!</span></p></td>
-        <td class="mat">“I can…” progress cards (notebook)</td>
+        <td class="min">45–52′</td>
+        <td class="stage"><div class="nm">Finish &amp; hand in</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="en">Two minutes — check your name is on the paper, then read your answers through once.</span> Encourage a quiet self-check (physiological calm, no rush).</p>
+          <p><span class="en">Pens down, thank you.</span> Collect papers unhurriedly, face-down, so no one sees anyone else's work. Confirm every pupil has done the oral corner; catch the last one or two now.</p>
+        </td>
+        <td class="mat">completed papers · teacher folder</td>
       </tr>
 
       <tr>
-        <td class="min">55–57′</td>
-        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">I'm proud of you — really! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">No big homework today — just play your favourite Unit 1 game in the app!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+        <td class="min">52–57′</td>
+        <td class="stage"><div class="nm">Low-stakes debrief</div><div class="zone">desks → circle</div></td>
+        <td class="flow">
+          <p><span class="ph">No answer-race, no marks.</span> Attribution-focused reflection (self-efficacy): <span class="en">Which task felt easiest today? Why?</span> — hands up, a few share. Name the <b>strategy</b>, not the ability: <span class="en">You did well on the recipe because you read the whole text first — that's a reader's trick.</span></p>
+          <p>Quick “I can” pulse (private, on fingers under the desk): <span class="en">Show me — 1 to 5 — how sure you feel about ‘a few / a little'.</span> This tells you who to re-touch in Unit 2, without any child feeling exposed.</p>
+        </td>
+        <td class="mat">— (talk only)</td>
       </tr>
 
       <tr>
         <td class="min">57–60′</td>
-        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. High-five line at the door — every child hears one personal praise word. Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
-        <td class="mat">reward stickers</td>
+        <td class="stage"><div class="nm">Closing</div><div class="zone">door</div></td>
+        <td class="flow"><p><span class="en">You've finished Unit 1 — great work. I'll bring your papers back next lesson so we can see what to practise together. See you next time!</span> Calm, warm send-off — no comparison, no ranking.</p></td>
+        <td class="mat">—</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p>Потренировать слова, квантификаторы и глаголы юнита в приложении — закрепление после теста (5–7 min). Отдыхаем — юнит сдан!</p></td>
-        <td class="mat">app (homework link)</td>
+        <td class="flow"><p><b>Light, reflective (post-test).</b> <b>Activity Book — p. 14, “My progress” box (Thinking skills):</b> read, circle and complete <span class="en">My work in Unit 1 is excellent / good / OK · Now I can… · My favourite lesson in Unit 1 is… because…</span> — a calm self-review, not new content. <i>(No BigBen trainer for GMF4; the rest of AB p.14 “Ready, Steady, Go!” was done in L6. Nothing heavy after a test.)</i></p></td>
+        <td class="mat">Give Me Five! 4 Activity Book · p.14 “My progress”</td>
       </tr>
 
     </tbody>
@@ -209,10 +239,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 7 (Unit 1 Test) — lesson plan &amp; staging (continuing line)</span>
-    <span>GMF_L4_Units_1-9_Tests (Unit 1) + Answer Key · КТП урок 10. Спокойный протокол, без соревнований.</span>
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 7 (Unit 1 Test) — lesson plan &amp; staging</span>
+    <span>Test verified against GMF4 Higher-level Unit 1 Test (Listening·Reading·Writing·Speaking) + КТП урок 10. Model-first, low-stakes; oral = translation pairing.</span>
   </div>
 </div>
-<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
-<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
-

@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GMF4 · Unit 1 · Lesson 1 — Vocabulary (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -52,51 +49,43 @@
   td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
   .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
   tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
+  .nb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:7px 10px; margin:7px 0; font-size:.9rem; }
+  .nb b{ color:var(--zone); }
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,.nb,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 1 — Vocabulary · Ingredients</div>
-    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 4</span><span class="chip new">✨ NEW · 12 ingredients</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.8 · AB p.6</span></div>
+    <div class="t">Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 1 — Vocabulary</div>
+    <div class="s">A1+ pre-teens (~10–11 y.o., confident readers &amp; writers) · 60 min · PPP + team challenges + song · carpet/board + desks</div>
+    <div class="meta"><span class="chip">Week 14.09–20.09 · Lesson 4</span><span class="chip new">✨ NEW UNIT</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">📖 Pupil's Book p. 8</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf4/games/cooking-memo.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🃏 Memory</a><a href="https://speakandsmile.ru/gmf4/games/cooking-ttt.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">❌⭕ Крестики</a><a href="https://speakandsmile.ru/gmf4/games/cooking-quiz.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🏆 Квиз</a><a href="https://speakandsmile.ru/gmf4/games/cooking-board.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎲 Ходилка</a><a href="https://speakandsmile.ru/gmf4/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1EGrx5jc34c9SsBaYVuOJUyGQH94U-ZK3" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 12 ingredients</b> and <b>ask if we have them</b>: “Is there any (flour) in the cupboard? / Are there any (nuts) in the fridge? — Yes, there is. / No, there aren't.”</li><li><span class="lb">Subsidiary.</span> Sing «Let's go shopping!» (CD1 11) &amp; the vocabulary chant (CD1 10); brainstorm cake ingredients (Learning to learn); notice countable (are there any + plural) vs uncountable (is there any); early literacy — read ingredient words and sort them fridge/cupboard (AB).</li><li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every task; stirrer→settler rhythm — the memory game is high-energy, plan the freezes. Insist on <i>any</i> in the question and the right verb (is/are, there is/there aren't).</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 12 baking ingredients</b> and <b>ask &amp; answer about what's in the kitchen</b> using “Is there any (flour)? — Yes, there is.” / “Are there any (nuts)? — No, there aren't.”</li>
+      <li><span class="lb">Subsidiary.</span> Distinguish <b>countable vs uncountable</b> nouns (any + <i>is</i> / any + <i>are</i>); listen for detail in the song; spell tricky ingredient words; retrieve Level 3 food language (fluency).</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk lean; give an ICQ before every task; run a stirrer→settler rhythm; hide every drill inside a team challenge (nobody just watches).</li>
+    </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>name the 12 ingredients;</li><li>ask “Is/Are there any…?” and answer “Yes, there is / No, there aren't”;</li><li>read ingredient words and sort them countable/uncountable.</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <ul class="a">
+        <li>name &amp; spell the 12 ingredients;</li>
+        <li>ask &amp; answer “Is there any…? / Are there any…?” with correct short answers;</li>
+        <li>sort ingredients into countable / uncountable and explain the choice.</li>
+      </ul>
     </div>
   </div>
 
@@ -104,12 +93,18 @@
   <div class="eyebrow">Target language</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">flour</span><span class="w">oil</span><span class="w">nuts</span><span class="w">biscuits</span><span class="w">chocolate chips</span><span class="w">sugar</span><span class="w">salt</span><span class="w">raisins</span><span class="w">jam</span><span class="w">butter</span><span class="w">coconut</span><span class="w">cream</span></div></div><div class="r"><div class="k">Structure</div><div>Is there any (sugar) in the cupboard? — Yes, there is. &nbsp;·&nbsp; Are there any (nuts) in the fridge? — No, there aren't. &nbsp;·&nbsp; <i>preview:</i> How much / How many … do we need?</div></div><div class="r"><div class="k">Form</div><div><b>Is there any</b> + uncountable (flour, sugar, oil) · <b>Are there any</b> + plural countable (nuts, biscuits, raisins). Short answers: Yes, there is / are · No, there isn't / aren't.</div></div><div class="r"><div class="k">Pron. watch</div><div>biscuits /ˈbɪskɪts/ (silent u); coconut /ˈkəʊkənʌt/ (3 syll.); raisins /ˈreɪzənz/; chocolate /ˈtʃɒklət/ (2 syll., not 3).</div></div>
+      <div class="r"><div class="k">Lexis</div><div><span class="w">flour</span><span class="w">oil</span><span class="w">nuts</span><span class="w">biscuits</span><span class="w">chocolate chips</span><span class="w">sugar</span><span class="w">salt</span><span class="w">raisins</span><span class="w">jam</span><span class="w">butter</span><span class="w">coconut</span><span class="w">cream</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Is there any (flour) in the cupboard? — Yes, there is. / No, there isn't. &nbsp;·&nbsp; Are there any (nuts) in the fridge? — Yes, there are. / No, there aren't.</div></div>
+      <div class="r"><div class="k">Form</div><div>any + <b>uncountable</b> (flour, sugar, oil…) → <i>Is there…? / there is</i>. &nbsp; any + <b>countable plural</b> (nuts, biscuits, raisins, chocolate chips) → <i>Are there…? / there are</i>.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div><i>biscuits</i> /ˈbɪskɪts/ (silent middle) · <i>chocolate</i> /ˈtʃɒklət/ (2 syll.) · <i>coconut</i> /ˈkəʊkənʌt/ · connected “Is there any…” /ɪzðərˈeni/.</div></div>
+      <div class="r"><div class="k">Phonics / spelling</div><div>Unit phonics <b>i_e–ie</b> (Spike likes rice, Mike, pies, tie) is taught in <b>L5</b> — today = <b>spelling awareness</b> of the new words: double <i>tt</i> in <i>butter</i>; <i>ai</i> in <i>raisins</i>; tricky <i>biscuits · chocolate · coconut</i>.</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“<i>flour</i> — one flour, two flours? Is/Are there any?” → can't count it → IS there any.</div><div class="ccq" style="margin-bottom:10px">“<i>nuts</i> — one nut, two nuts? Is/Are there any?” → count them → ARE there any.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Starter routines are back; pupils know some food from GMF3 (<i>food</i> category revised in the Starter). The 12 ingredients are largely NEW; <i>Is/Are there any</i> is known receptively — production is today's stretch. Readers — word cards work alongside pictures.</p>
+      <div class="ccq">“Can I count nuts? One, two, three…” → yes → <b>“Are there any nuts?”</b></div>
+      <div class="ccq">“Can I count flour? One flour, two flours?” → no → <b>“Is there any flour?”</b></div>
+      <div class="ccq" style="margin-bottom:12px">“Where do we keep butter — cupboard or fridge?” → fridge.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> pupils know some food words from Level 3 (Starter revised them) and can read/write short words. <i>There is / there are</i> is known; the new step is <b>any</b> + the countable/uncountable split. <b>Teams:</b> max 4 (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4).</p>
     </div>
   </div>
 
@@ -118,7 +113,11 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td><i>any</i> dropped (“Is there sugar?”)</td><td>Board frame keeps <b>any</b> in a bright colour; echo-correct with a beat: <i>Is there — ANY — sugar?</i></td></tr><tr><td>is/are chosen wrong (countable vs not)</td><td>Two board columns — a picture of ONE vs a PILE; sort each ingredient card before playing.</td></tr><tr><td>Long words (chocolate chips · coconut)</td><td>Chunk &amp; clap: CHOC-late CHIPS · CO-co-nut; icon on every card.</td></tr><tr><td>Memory game gets wild</td><td>Slow-motion turns + Freeze!; one pair speaks at a time in the demo.</td></tr><tr><td>Some read word cards slowly</td><td>Icon on every card; pair a strong reader with a developing one in card games.</td></tr>
+        <tr><td>“Are there any flour?” (wrong verb)</td><td>Colour-code on the word map: uncountables one colour → <i>Is</i>; countables another → <i>Are</i>. CCQ “Can we count it?”</td></tr>
+        <tr><td>Short answer dropped (“Yes.” only)</td><td>Insist on full form: <i>Yes, there is. / No, there aren't.</i> Model on the board strip.</td></tr>
+        <tr><td><i>biscuits / chocolate</i> mis-spelt</td><td>Spelling Showdown: syllable-clap + point to the silent/tricky letters.</td></tr>
+        <tr><td>Relay gets loud &amp; chaotic</td><td>One runner at a time; team must whisper the full sentence before the runner may go. “Freeze!” to reset.</td></tr>
+        <tr><td>Faster pupils finish first</td><td>Challenge card: “Add 2 ingredients we don't have — say them.”</td></tr>
       </tbody></table></div>
     </div>
     <div>
@@ -127,9 +126,9 @@
         <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
         <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
         <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
-        <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
-        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
-        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+        <div class="sigc"><b>Scoreboard</b> — team points on the board; keeps challenges fair &amp; fast.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pens down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset for relays.</div>
       </div></div>
     </div>
   </div>
@@ -138,9 +137,9 @@
   <div class="eyebrow">Procedure — staging</div>
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
-    <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="game">▶</span> = game / challenge</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+    <span>📓 = interactive-notebook glue-in</span>
   </div>
 
   <div class="scroll">
@@ -149,87 +148,101 @@
     <tbody>
 
       <tr>
-        <td class="min">0–3′</td>
-        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Welcome to a new unit — LET'S EAT! Yum! What's your favourite cake?</span> Rub tummy; kids call out cakes.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
-        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Lead-in · retrieval</div><div class="zone">carpet, teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> <span class="en">Welcome back! Today — a brand-new unit. Look… I'm making a cake!</span> Hold up a mixing bowl / spoon.</p>
+          <p><span class="game">▶ 60-second food dash</span> (retrieval — Level 3): teams race to write <b>every food word they already know</b> on one mini-whiteboard. <span class="en">Go!</span> Count aloud, award points. <span class="en">Nice — but which of these go INTO a cake? Circle them.</span> → funnels straight into today's topic.</p>
+        </td>
+        <td class="mat">mini-whiteboards + pens · bowl/spoon prop · scoreboard</td>
       </tr>
 
       <tr>
-        <td class="min">3–9′</td>
-        <td class="stage"><div class="nm">Retrieval + brainstorm</div><div class="zone">carpet, standing</div></td>
-        <td class="flow"><p><span class="ph">Recycle Starter, on-topic.</span> <span class="game">▶ Mix–Pair–Share:</span> music → <span class="en">Stand up, hand up, pair up!</span></p><p>R1 <span class="ph">descriptions:</span> <span class="en">Has your partner got curly hair?</span> R2 <span class="ph">brainstorm (act. 1):</span> <span class="en">Take turns — what ingredients do you need to make a cake? Make a list! (Russian OK — we'll learn them in English today!)</span></p><p><p><span class="asr">✔ <b>Assess:</b> who still can't produce a full “Has he got…?” answer? Note names — recycle at Reflection.</span></p></p></td>
-        <td class="mat">music · <span class="game">▶ Mix-Pair-Share</span></td>
-      </tr>
-
-      <tr class="bridge">
-        <td class="min">9–10′</td>
-        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Listen — LET'S GO SHOPPING! We need ingredients for a cake!</span> Play the song (PB p.8, CD1 11) once through; pupils mime shopping → into the topic.</p></td>
-        <td class="mat"><b>«Let's go shopping!»</b> (CD1 11)</td>
+        <td class="min">4–10′</td>
+        <td class="stage"><div class="nm">Meet the words · chant</div><div class="zone">board</div></td>
+        <td class="flow">
+          <p><span class="ph">Present (Pupil's Book p. 8, Act 2).</span> Play the <b>vocabulary chant (CD1 10)</b>: <span class="en">Listen, point and say.</span> Pupils point to each picture and echo the word.</p>
+          <p><span class="ph">Tier &amp; check.</span> Sort the 12 into <b>“I knew it”</b> (salt, sugar, oil, jam) vs <b>“brand-new”</b> (coconut, raisins, chocolate chips, biscuits…). Drill the new four extra: choral ×3, then 2–3 pupils. Contrast the tricky pair: <span class="en">raisins</span> (dried grapes) vs <span class="en">nuts</span>.</p>
+        </td>
+        <td class="mat">GMF4 PB p. 8 · <b>CD1 10</b> chant · A4 flashcards ×12</td>
       </tr>
 
       <tr>
         <td class="min">10–20′</td>
         <td class="stage"><div class="nm">Presentation · 12 ingredients</div><div class="zone">carpet → board</div></td>
-        <td class="flow"><p><span class="ph">Present with flashcards + chant (act. 2, CD1 10).</span> Each card: <span class="en">What's this? It's… flour! Oil! Nuts!</span> Choral ×3 + one gesture (flour = sprinkle, nuts = crack, cream = swirl).</p><p><span class="ph">Is/Are there any? (act. 4 language).</span> Board: two columns — <b>uncountable</b> (flour, oil, sugar, salt, jam, butter, coconut, cream) · <b>countable</b> (nuts, biscuits, chocolate chips, raisins). Hold each card — class chooses the column, then says: <span class="en">Is there any flour? / Are there any nuts?</span></p><p><span class="game">▶ Take Off–Touch Down:</span> <span class="en">Stand up if this is COUNTABLE… biscuits!</span> — flash cards fast, everyone reacts every time.</p><p><span class="diff"><span class="sup">💪 Support:</span> answer with the gesture + word. <span class="ext">⭐ Extension:</span> full sentence — <span class="en">Yes, there's some butter in the fridge.</span></span></p><div class="nb">📓 <b>Interactive notebook</b> — <b>GMF4_Unit1_Lesson1_What_Goes_Into_A_Cake_Visual_Note_A5</b><div class="nbk">A5 glue-in word map — WHAT GOES INTO A CAKE? with the 12 ingredients (flour · raisins · jam · butter · coconut · cream · oil · nuts · biscuits · chocolate chips · salt · sugar) and the shopping question strip BEFORE YOU SHOP, ASK: Is there any…? / Are there any…?</div><ul><li>Glue the map on a clean page — it stays open for the whole unit.</li><li>Present the flashcards; pupils point to the matching picture on their map.</li><li>Pupils colour the countables one colour and the uncountables another.</li><li>Drill the question strip: Is there any…? for one, Are there any…? for the other.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the 10–20′ “Presentation · 12 ingredients” stage (carpet → board)</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, two coloured pencils.</span></div></td>
-        <td class="mat">12 ingredient flashcards · board 2 columns · CD1 10</td>
+        <td class="flow">
+          <div class="nb">📓 <b>Interactive notebook — “What goes into a cake?” word map (A5).</b> Glue the map on a clean page (it stays open all unit). Pupils point to each picture as it's presented, then <b>colour countables one colour, uncountables another</b>. Drill the question strip <i>Before you shop, ask: Is there any…? / Are there any…?</i> (~5 min).</div>
+          <p><span class="ph">Establish the target question.</span> Point to a coloured word: <span class="en">Can we count it? No → Is there any flour? &nbsp; Yes → Are there any nuts?</span> Board strip with the two frames + four short answers.</p>
+          <p><span class="game">▶ Slow-Reveal Race</span> (teams, on the board): cover a flashcard, reveal it slice by slice. First team to call a <b>full sentence</b> — <span class="en">It's coconut! Are there any coconuts?</span> — wins the point (a bare word = no point, next team). <span class="ph">Kagan · Numbered Heads:</span> only the called number may answer for the team → everyone stays ready.</p>
+        </td>
+        <td class="mat"><b>📓 word-map A5</b> ×pupils · scissors · glue · 2 coloured pencils · flashcards · cover card</td>
       </tr>
 
-      <tr>
+      <tr class="bridge">
         <td class="min">20–28′</td>
-        <td class="stage"><div class="nm">Song · Let's go shopping!</div><div class="zone">desks</div></td>
-        <td class="flow"><p><span class="en">To your tables! Open your books at page 8.</span> <span class="ph">Sing (act. 3, CD1 11).</span> Listen &amp; point to the ingredients in the kitchen picture; 2nd run — sing with shopping gestures.</p><p><span class="ph">Cupboard vs fridge.</span> Read the song lines: <span class="en">Is there any flour in the cupboard? Is there any butter in the fridge?</span> Choral — plants the memory game. Freeze between verses.</p><div class="nb">📓 <b>Interactive notebook</b> — <b>GMF4_Unit1_Lesson1_Lets_Go_Shopping_Song_Takeaway_A5</b><div class="nbk">A5 song takeaway — LOOK (CUPBOARD: flour, oil, nuts, biscuits, chocolate chips, sugar, salt, raisins / FRIDGE: butter, coconut, cream, jam) → ASK (Is there any…? Are there any…?) → answers Yes, there is. / No, there isn't. · Yes, there are. / No, there aren't. → SHOP with a MAKE A LIST box</div><ul><li>Glue the takeaway opposite the word map.</li><li>Sing the song once; on the second run pupils point CUPBOARD / FRIDGE as they hear the words.</li><li>Pupils tick the items their own kitchen has and write three on the MAKE A LIST box.</li><li>Pairs ask and answer about each other's lists using the four answer forms.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the 20–28′ “Song · Let's go shopping!” stage (desks)</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Glue sticks, pencils.</span></div></td>
-        <td class="mat">Pupil's Book p.8 · CD1 11</td>
+        <td class="stage"><div class="nm">🎵 Song · Let's go shopping!</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <div class="nb">📓 <b>Interactive notebook — “Let's go shopping!” song takeaway (A5).</b> Glue it opposite the word map: <b>LOOK</b> (cupboard: flour, oil, nuts, biscuits, chocolate chips, sugar, salt, raisins / fridge: butter, coconut, cream, jam) → <b>ASK</b> (Is there any…? Are there any…?) → answers → <b>MAKE A LIST</b> box (~4 min).</div>
+          <p><span class="ph">Listen &amp; sing (PB p. 8, Act 3 · CD1 11).</span> First listen: <span class="en">Where does each word live — cupboard or fridge?</span> Second run: pupils point CUPBOARD / FRIDGE on their takeaway as they hear each word; join in the chorus <span class="en">Let's go shopping! Make a list!</span></p>
+          <p>Pupils tick what their own kitchen has and write <b>three</b> items in the MAKE A LIST box.</p>
+        </td>
+        <td class="mat"><b>📓 song-takeaway A5</b> · <b>CD1 11</b> “Let's go shopping!” · PB p. 8</td>
       </tr>
 
       <tr>
-        <td class="min">28–36′</td>
-        <td class="stage"><div class="nm">Kitchen memory game</div><div class="zone">carpet → desks, pairs</div></td>
-        <td class="flow"><p><span class="game">▶ Memory game (act. 4, Talk Partners).</span> Pairs study the PB p.8 kitchen picture for 30 sec, then close books. A asks: <span class="en">Is there any sugar in the cupboard? Are there any nuts in the fridge?</span> B answers from memory <span class="en">Yes, there is / No, there aren't.</span> Open to check. Swap. Point per correct memory.</p><p><span class="ph">ICQ:</span> <span class="en">Do you look at the picture while you ask?</span> (→ no — from memory!)</p><p><p><span class="asr">✔ <b>Assess:</b> stand behind one pair — is it <i>any</i> + the right is/are?</span></p></p></td>
-        <td class="mat">Pupil's Book p.8</td>
+        <td class="min">28–37′</td>
+        <td class="stage"><div class="nm">▶ Concentration</div><div class="zone">desks, teams</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Memory / Concentration</span> (teams of 4): a face-down grid of <b>picture cards</b> + <b>word cards</b>. On your turn flip two — if picture matches word, you must <b>ask &amp; answer the target question to keep the pair</b>: <span class="en">Is there any butter? — Yes, there is!</span> Wrong verb (is/are) → pair goes back. Most pairs wins.</p>
+          <p><span class="ph">Kagan · RallyCoach:</span> partners take turns, one flips &amp; speaks, the other checks the is/are choice &amp; praises <span class="en">Nice — it's countable!</span> Rotate every turn → all four active.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do you keep the pair for just a match, or for a match AND a correct question?</span> (→ both.)</p>
+        </td>
+        <td class="mat">3 memory sets (12 picture + 12 word cards each)</td>
       </tr>
 
       <tr>
-        <td class="min">36–44′</td>
-        <td class="stage"><div class="nm">Ingredient trade</div><div class="zone">mingle</div></td>
-        <td class="flow"><p><span class="game">▶ Quiz-Quiz-Trade.</span> Each child holds an ingredient card. Music → mingle; off → pair: A shows the card, <span class="en">Is there any…? / Are there any…?</span> B answers with the right verb, then swap, TRADE cards, new partner. 5–6 exchanges — everyone speaks many times.</p><p>Whole-class check: <span class="en">Hands up if you had a COUNTABLE ingredient!</span></p></td>
-        <td class="mat">ingredient cards · music · <span class="game">▶ Quiz-Quiz-Trade</span></td>
+        <td class="min">37–46′</td>
+        <td class="stage"><div class="nm">▶ Shopping-list relay</div><div class="zone">open floor, teams</div></td>
+        <td class="flow">
+          <p><span class="en">Stand up — team relay!</span> Two hoops/boxes on the floor: <b>CUPBOARD</b> and <b>FRIDGE</b>. Each team has a stack of ingredient cards.</p>
+          <p><span class="game">▶ Relay challenge:</span> the whole team <b>whispers the full sentence</b>, then the runner sprints, drops the card in the right hoop and says it out loud: <span class="en">Are there any biscuits in the cupboard? Yes, there are!</span> Correct place + correct is/are = point; then tag the next runner. <span class="ph">Freeze!</span> resets if it's too loud.</p>
+          <p>Fast finishers' challenge card: <span class="en">Name 2 ingredients we DON'T need for a cake.</span></p>
+        </td>
+        <td class="mat">2 hoops/boxes (CUPBOARD / FRIDGE labels) · 3 card stacks · scoreboard</td>
       </tr>
 
       <tr>
-        <td class="min">44–52′</td>
-        <td class="stage"><div class="nm">Fridge or cupboard · write</div><div class="zone">desks</div></td>
-        <td class="flow"><p><span class="ph">Speak.</span> <span class="game">▶ RallyRobin:</span> <span class="en">Take turns: There's some… / There are some… — ingredients you like.</span></p><p><span class="ph">Write (notebooks / AB p.6 format).</span> Two frames from the board: <i>There's some ___. There are some ___.</i> Each child writes 3 sentences, sorting ingredients fridge/cupboard. Fast finishers add <i>and</i>.</p><p><span class="diff"><span class="sup">💪 Support:</span> copy the frame + choose from 3 word cards. <span class="ext">⭐ Extension:</span> add an adjective: <i>There are some brown nuts.</i></span></p></td>
-        <td class="mat">notebooks · board frames</td>
+        <td class="min">46–53′</td>
+        <td class="stage"><div class="nm">▶ Spelling Showdown</div><div class="zone">desks, teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Settle &amp; spell (KTP “spelling activity”).</span> <span class="game">▶ Kagan Showdown:</span> you say a tricky word — <span class="en">biscuits… chocolate… coconut… raisins… butter</span> — teams write it on a mini-whiteboard, hide it; on <span class="en">Showdown!</span> all boards up at once.</p>
+          <p>Point out the trap letters: silent middle in <i>bis-cu-its</i>, double <b>tt</b> in <i>bu<b>tt</b>er</i>, <i>ai</i> in <i>r<b>ai</b>sins</i>, two syllables in <i>choc-late</i>. Syllable-clap each word.</p>
+        </td>
+        <td class="mat">mini-whiteboards + pens</td>
       </tr>
 
       <tr>
-        <td class="min">52–55′</td>
+        <td class="min">53–57′</td>
         <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner two ingredients — with “There's some…” or “There are some…”.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can name 12 ingredients! I can ask “Is/Are there any…?”</span></p></td>
-        <td class="mat">“I can…” progress cards (notebook)</td>
-      </tr>
-
-      <tr>
-        <td class="min">55–57′</td>
-        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Well done, chefs! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share</span> (20 sec each): <span class="en">Tell your partner one ingredient that's countable and one that's uncountable — and why.</span></p>
+          <p>Quick self-rate on the word map: <span class="en">Tick the words you can already ask about.</span> Team scoreboard total → winners' round of applause.</p>
+        </td>
+        <td class="mat">📓 word map (self-tick) · scoreboard</td>
       </tr>
 
       <tr>
         <td class="min">57–60′</td>
         <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. Show an ingredient card at the door: <span class="en">Is/Are there any …?</span> → truthful full answer. Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
-        <td class="mat">ingredient cards · reward stickers</td>
+        <td class="flow"><p>Line up. Show each pupil a flashcard: they ask &amp; answer their own way out — <span class="en">Is there any jam? — Yes, there is!</span> / <span class="en">Are there any raisins? — No, there aren't!</span> Correct is/are → <span class="en">See you next time!</span></p></td>
+        <td class="mat">flashcards ×12 at the door</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 6:</b> ex. 1 <i>Where do you keep these ingredients? Look and write</i> (sort fridge / cupboard) + ex. 2 <i>Talk Partners: Look at the picture and write questions. Ask and answer</i> (Is there any…? / Are there…?) + <i>Code!</i> (decode → PRESENTS). <b>+ app trainer</b> — ingredient words, 5–7 min.</p></td>
-        <td class="mat">Activity Book p.6 · app (homework link)</td>
+        <td class="flow"><p><b>Activity Book — p. 6, ex. 1–2:</b> №1 <i>“Where do you keep these ingredients? Look and write”</i> (sort into fridge / cupboard, spell the 12 words) · №2 <i>Talk Partners — write 5 “Is there any…? / Are there any…?” questions</i> about the kitchen picture &amp; answer them. + <b>practice trainer / app</b> — ingredient picture-word match (5–7 min).</p></td>
+        <td class="mat">GMF4 Activity Book p. 6 · practice trainer / app</td>
       </tr>
 
     </tbody>
@@ -237,10 +250,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 1 (Vocabulary · ingredients) — lesson plan &amp; staging (continuing line)</span>
-    <span>Pupil's Book p.8 (CD1 10–11) · Activity Book p.6 · КТП урок 4. Набор ингредиентов взят по учебнику (flour · oil · nuts · biscuits · chocolate chips · sugar · salt · raisins · jam · butter · coconut · cream) — отличается от списка КТП. Grammar-in-context на p.8 = «Is/Are there any…?» (квантификаторы a lot of/a few идут в L2). Genki: «Do You Like Food?» (12) — по теме еда.</span>
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 1 (Vocabulary) — lesson plan &amp; staging</span>
+    <span>Language verified vs Pupil's Book p. 8 · notebook glue-ins from GMF4 notebooks.py (U1-L1 + U1-L1-song) · HW vs Activity Book p. 6.</span>
   </div>
 </div>
-<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
-<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
-

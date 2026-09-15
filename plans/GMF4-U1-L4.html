@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GMF4 · Unit 1 · Lesson 4 — Vocabulary &amp; Grammar (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -55,48 +52,38 @@
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 4 — Vocab &amp; Grammar · Cooking verbs</div>
-    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 21.09–27.09 · Lesson 7</span><span class="chip new">✨ NEW · 6 cooking verbs + What do we need to do?</span><span class="chip">~10 pupils · pairs + 2 teams</span><span class="chip">Pupil's Book p.12 · AB p.9</span></div>
+    <div class="t">Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 4 — Vocabulary &amp; Grammar</div>
+    <div class="s">A1+ young learners (~10–11 y.o., confident readers) · 60 min · PPP + TPR + Kagan · desks + open floor</div>
+    <div class="meta"><span class="chip">Week 21.09–27.09 · Lesson 7 (Unit 1 · L4)</span><span class="chip new">✨ NEW</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">🥣 Cooking verbs + <i>need to</i></span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf4/games/cooking-memo.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🃏 Memory</a><a href="https://speakandsmile.ru/gmf4/games/cooking-ttt.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">❌⭕ Крестики</a><a href="https://speakandsmile.ru/gmf4/games/cooking-quiz.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🏆 Квиз</a><a href="https://speakandsmile.ru/gmf4/games/cooking-board.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎲 Ходилка</a><a href="https://speakandsmile.ru/gmf4/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1EGrx5jc34c9SsBaYVuOJUyGQH94U-ZK3" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name cooking verbs</b> and <b>ask &amp; answer what to do</b>: “What do (we) need to do? — We need to (chop) the carrots. / What does (he) need to do?”</li><li><span class="lb">Subsidiary.</span> Sing «Let's make soup!» (CD1 18); consolidate the “need to do” idea noticed in the story (L3) — now drilled properly; discover the rule — <b>do</b> with I/you/we/they, <b>does</b> with he/she (Grammar clue); a real cooking-steps communication game (AB follow-up).</li><li><span class="lb">Personal.</span> Insist on <b>need to</b> + verb (not just the verb); model each cooking verb with a big TPR action; keep the game moving — short turns, everyone acts.</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>name 6 cooking verbs</b> and <b>ask &amp; answer about requirements</b> using “What do/does (he) need to do? — We need to (chop) the carrots. / She needs to (pour) the water.”</li>
+      <li><span class="lb">Subsidiary.</span> Recycle Unit 1 ingredients + <i>a lot of / some / a few</i> and <i>How many/much…?</i> (L1–L2, woven into cooking); listen for sequence in the song; use time sequencers <i>First → Finally</i>; write a mini-recipe (interactive notebook).</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; give an ICQ before every task; run a stirrer→settler rhythm; hand grammar over fast (I Do → We Do → You Do).</li>
+    </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>name 6 cooking verbs (stir · mix · chop · heat · pour · add);</li><li>ask &amp; answer “What do/does … need to do?”;</li><li>put recipe steps in order with First / Next / Then / Finally.</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <ul class="a">
+        <li>say &amp; mime the 6 cooking verbs (<i>stir, mix, chop, heat, pour, add</i>);</li>
+        <li>ask &amp; answer “What do/does … need to do? — (We/She) need(s) to …”;</li>
+        <li>order recipe steps with <i>First · Next · Then · After that · Finally</i>.</li>
+      </ul>
     </div>
   </div>
 
@@ -104,12 +91,19 @@
   <div class="eyebrow">Target language</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">stir</span><span class="w">mix</span><span class="w">chop</span><span class="w">heat</span><span class="w">pour</span><span class="w">add</span><span class="w">(pan · carrots · ingredients)</span></div></div><div class="r"><div class="k">Structure</div><div>What do (we) need to do? — We need to (chop) the carrots. &nbsp;·&nbsp; What does (he) need to do? — He needs to (mix) the butter.</div></div><div class="r"><div class="k">Form</div><div><b>need to</b> + verb: What <b>do</b> I/you/we/they need to do? · What <b>does</b> he/she need to do? Answer: We <b>need to</b> chop… / He <b>needs to</b> mix…</div></div><div class="r"><div class="k">Pron. watch</div><div>stir /stɜː/; pour /pɔː/ (not “poor” vowel here — /pɔː/); heat /hiːt/; the -s in needs /niːdz/.</div></div>
+      <div class="r"><div class="k">Lexis (new)</div><div><span class="w">stir</span><span class="w">mix</span><span class="w">chop</span><span class="w">heat</span><span class="w">pour</span><span class="w">add</span></div></div>
+      <div class="r"><div class="k">Recycled</div><div><span class="w">nuts</span><span class="w">sugar</span><span class="w">salt</span><span class="w">raisins</span><span class="w">butter</span><span class="w">cream</span><span class="w">flour</span><span class="w">carrots</span><span class="w">onions</span><span class="w">water</span> · <i>a lot of / some / a few</i></div></div>
+      <div class="r"><div class="k">Structure</div><div>What do (I/you/we/they) need to do? · What does (he/she) need to do? — We need to <b>chop</b> the carrots. / She needs to <b>pour</b> the water.</div></div>
+      <div class="r"><div class="k">Form</div><div>What + <b>do</b> (I/you/we/they) / <b>does</b> (he/she) + need to + <b>base verb</b>? → subject + need(s) to + base verb. Base verb after <i>need to</i> (chop, <b>not</b> chops). Weak <i>to</i> /tə/.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>/tʃ/ in <i>chop</i>; consonant blend /st/ in <i>stir</i>; <i>need to</i> → “need-tə”; keep <b>base</b> verb after <i>does … need to</i>.</div></div>
+      <div class="r"><div class="k">Sequencers</div><div>First · Next · Then · After that · Finally (from the song &amp; recipe).</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“What ___ he need to do? — do or does?” → does (he/she!).</div><div class="ccq" style="margin-bottom:10px">“<i>We need to chop</i> — one action word or two? Which is the verb?” → chop is the action; need to shows we must do it.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> “need to do” was met in the story (L3); the 6 verbs are new but very picturable. The switch to <b>need to</b> + verb and choosing do/does is the key challenge. Readers can read short verb words. (Book teaches 6 verbs: stir · mix · chop · heat · pour · add — note КТП listed a longer set.)</p>
+      <div class="ccq">“He needs to stir — do I say <b>need</b> or <b>needs</b>?” → needs (he/she).</div>
+      <div class="ccq">“What <b>does</b> he need to do? — after <i>does</i>, is it <i>need</i> or <i>needs</i>?” → need (base). <b>Trap!</b></div>
+      <div class="ccq" style="margin-bottom:12px">“Is <i>chop</i> now, or the whole action?” → base verb (the action).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> ingredients &amp; <i>a lot of / some / a few</i> are known from L1–L3; present-simple <i>do/does</i> questions are known from Level 3 &amp; Starter; pupils read confidently → text &amp; grammar table support learning. Talk Partners routine is set. <b>Teams:</b> max 4 (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4 · 7=3+4).</p>
     </div>
   </div>
 
@@ -118,7 +112,11 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td><i>to</i> dropped (“We need chop”)</td><td>Board frame keeps <b>need TO</b> in bright colour; back-chain: <i>…chop → need to chop → We need to chop.</i></td></tr><tr><td>do / does chosen wrong</td><td>Grammar clue box: I/you/we/they → do · he/she → does; contrast-drill side by side.</td></tr><tr><td>Verbs mispronounced (stir/pour)</td><td>Big TPR action per verb; clap once, say the verb; mirror the mouth for /ɔː/ in pour.</td></tr><tr><td>Game gets wild (miming)</td><td>Slow-motion actions + Freeze!; one actor at a time in the demo, all copy on the spot.</td></tr><tr><td>Song lyrics too fast</td><td>First run listen &amp; do the actions; second run join in on the verbs only.</td></tr>
+        <tr><td>“Does he <i>needs</i>…” (over-adds -s)</td><td>Put the trap on the board: <i>does + need</i> (base). Choral fix, then re-ask 2 pupils.</td></tr>
+        <tr><td><i>do</i> vs <i>does</i> confused (we/they vs he/she)</td><td>Colour-code pronouns on the grammar table; point to the Grammar clue: do = I/you/we/they, does = he/she.</td></tr>
+        <tr><td>Drop the <i>to</i>: “need chop”</td><td>Back-chain: <i>…chop → need to chop → We need to chop.</i></td></tr>
+        <tr><td><i>stir</i> / <i>mix</i> mixed up</td><td>Present as a contrasting pair with one clear mime each; hold the mimes during drills.</td></tr>
+        <tr><td>Basketball / relay gets chaotic</td><td>One ball, team lines, “sentence first — then shoot”; ICQ before start; use <i>Freeze!</i>.</td></tr>
       </tbody></table></div>
     </div>
     <div>
@@ -128,7 +126,7 @@
         <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
         <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
         <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
-        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pens down.”</div>
         <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
       </div></div>
     </div>
@@ -139,8 +137,8 @@
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
     <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="ph">CAPS</span> = sub-phase</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
   <div class="scroll">
@@ -150,86 +148,121 @@
 
       <tr>
         <td class="min">0–3′</td>
-        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Ready to cook? Let's make soup!</span> Mime stirring a big pot; kids guess “cook / stir”.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
-        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">open floor</div></td>
+        <td class="flow">
+          <p><span class="ph">Energiser.</span> <span class="en">Welcome back, chefs! Stand up — let's warm up the kitchen!</span> Quick TPR call-and-move: you call an action, pupils mime it — <span class="en">Mix! … Pour! … Stir! … Chop!</span> (they don't know these yet — that's fine, they copy your mime; it plants the verbs).</p>
+          <p>Speed it up, trick them once (say <span class="en">Freeze!</span> mid-mime). Settle with your arm down: <span class="en">And… sit down. Aprons on!</span></p>
+        </td>
+        <td class="mat">open floor · your mimes</td>
       </tr>
 
       <tr>
-        <td class="min">3–9′</td>
-        <td class="stage"><div class="nm">Retrieval</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Story + ingredients back.</span> Flash story frames: <span class="en">What goes wrong in the story?</span> chorus. Then <span class="game">▶ Swat it!</span> — ingredient cards on the board, two flyswatters, you call the word, racers swat; the class chorus-says “Is/Are there any…?” during each race (everyone busy). 4 rounds, rotate racers.</p></td>
-        <td class="mat">story frames · flyswatters · <span class="game">▶ Swat it!</span></td>
+        <td class="min">3–10′</td>
+        <td class="stage"><div class="nm">Retrieval &amp; review — woven</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieval race (memory science).</span> Flash 6 ingredient cards from L1–L3 (nuts · sugar · raisins · butter · flour · cream): teams whisper-write all 6 in 60 sec on a mini-whiteboard. Reveal &amp; score. <span class="en">Class? — Yes!</span></p>
+          <p><span class="ph">Bridge to the theme (RallyRobin).</span> In pairs, take turns with last lesson's frame + an ingredient: <span class="en">We need a few nuts. · We need some sugar. · We need a lot of flour.</span></p>
+          <p>Hook the new lesson: hold up a bowl of “ingredients”. <span class="en">We've got the ingredients… but what do we DO with them? Chop? Stir? Let's find out!</span></p>
+        </td>
+        <td class="mat">ingredient flashcards (L1–L3) · mini-whiteboards · bowl of props</td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">9–10′</td>
-        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Listen — LET'S MAKE SOUP! What do we need to do?</span> Play «Let's make soup!» (PB p.12, CD1 18) hook once; do the stirring action → topic.</p></td>
-        <td class="mat"><b>«Let's make soup!»</b> (CD1 18)</td>
+        <td class="min">10–13′</td>
+        <td class="stage"><div class="nm">🎵 Song bridge</div><div class="zone">open floor</div></td>
+        <td class="flow"><p><span class="en">Let's make soup! Listen — and do the actions with me.</span> Play <b>“Let's make soup!”</b> (Pupil's Book p.12, CD1 18). First play — you mime each verb; second play — everyone joins the actions. <span class="en">What do we need to do to make delicious soup?</span></p></td>
+        <td class="mat"><b>“Let's make soup!”</b> CD1 18 · PB p.12</td>
       </tr>
 
       <tr>
-        <td class="min">10–19′</td>
-        <td class="stage"><div class="nm">Presentation · 6 cooking verbs</div><div class="zone">carpet → board</div></td>
-        <td class="flow"><p><span class="ph">Listen, point and say (act. 1, CD1 17).</span> Action cards: <span class="en">Stir! Mix! Chop! Heat! Pour! Add!</span> Choral ×3 + a big TPR action each. Speed rounds — you say, they DO.</p><p><span class="game">▶ Take Off–Touch Down / Simon Says.</span> <span class="en">Chop the nuts! Pour the milk! Stir the soup!</span> — everyone does the action; trick them with a fast one.</p><p><span class="ph">Notice need to.</span> Board: <span class="en">What do we need to do? — We need to chop the carrots.</span> Circle <b>need to</b> + the verb.</p><p><span class="diff"><span class="sup">💪 Support:</span> action carries the meaning. <span class="ext">⭐ Extension:</span> read the verb word without the picture.</span></p></td>
-        <td class="mat">6 cooking-verb cards · board · CD1 17</td>
+        <td class="min">13–20′</td>
+        <td class="stage"><div class="nm">Presentation · cooking verbs</div><div class="zone">board → desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Present with TPR (I Do).</span> Show each PB Act.1 photo, model + big mime: <span class="en">Stir. … Mix. … Chop. … Heat. … Pour. … Add.</span> Choral drill ×3, keep the mime for each.</p>
+          <p><span class="ph">Contrast the tricky pair.</span> Hold both mimes: <span class="en">This is stir (round and round). This is mix (fast!).</span></p>
+          <p><span class="ph">Check (We Do).</span> Book open, PB p.12 Act.1 <span class="en">Listen, point and say</span> (CD1 17). Then you mime silently → class names the verb. <span class="ph">ICQ:</span> <span class="en">Do you say the word, or just do it?</span> (→ say it!)</p>
+        </td>
+        <td class="mat">PB p.12 · CD1 17 · A4 verb flashcards</td>
       </tr>
 
       <tr>
-        <td class="min">19–27′</td>
-        <td class="stage"><div class="nm">Song + grammar box</div><div class="zone">carpet → board</div></td>
-        <td class="flow"><p><span class="ph">Sing (act. 2, CD1 18).</span> PB p.12 «Let's make soup!». First run listen &amp; do the actions; second sing with the cooking gestures (get a pan, chop carrots, mix beans, add water, heat, stir).</p><p><span class="ph">Grammar box (act. 3, CD1 19).</span> Board: <i>What do I/you/we/they need to do? What does he/she need to do?</i> Grammar clue: <span class="en">We use “do” with I, you, we and they. We use “does” with he and she.</span> Circle <b>do / does</b>.</p><p><span class="ph">ICQ:</span> <span class="en">“What ___ she need to do?” — do or does?</span> (→ does!)</p></td>
-        <td class="mat">Pupil's Book p.12 · CD1 18–19 · board</td>
+        <td class="min">20–27′</td>
+        <td class="stage"><div class="nm">▶ Memo — teams</div><div class="zone">floor, teams</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Memory (Memo) · in teams of 4.</span> Each team gets 12 face-down cards = 6 matching pairs: a <b>verb-picture</b> card ↔ a <b>sentence</b> card (<i>We need to stir. · We need to chop.</i> …). Turn over two; to <b>keep</b> the pair you must read the sentence aloud <b>and</b> mime the verb — <span class="en">We need to chop the carrots!</span> No sentence = cards go back.</p>
+          <p><span class="ph">Kagan roles inside the team:</span> ① turns cards · ② reads the sentence · ③ mimes · ④ keeps score — rotate every round so <b>everyone</b> takes each role. Most pairs wins.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Just a word, or the whole sentence?</span> (→ whole sentence!)</p>
+        </td>
+        <td class="mat">3 Memo sets (12 cards each: 6 verb-pics + 6 sentences)</td>
       </tr>
 
       <tr>
-        <td class="min">27–37′</td>
-        <td class="stage"><div class="nm">Recipe-steps game</div><div class="zone">desks, pairs → 2 teams</div></td>
-        <td class="flow"><p><span class="ph">Model first.</span> Show a jumbled recipe (get pan · chop · mix · add water · heat · stir). Ask 2 pupils publicly: <span class="en">What do we need to do first? — We need to get a pan.</span></p><p><span class="game">▶ Talk Partners (act. 4).</span> Pairs ask &amp; answer to order the steps: <span class="en">What do we need to chop? — We need to chop the carrots.</span> Then arrange step cards First → Finally.</p><p><span class="game">▶ Listen &amp; match (team relay).</span> You call a step — teams race to hold up the matching action card &amp; say the full sentence. Point per correct.</p><p><p><span class="asr">✔ <b>Assess:</b> circulate — is it “need to” + verb, and do/does correct? Recast, note names.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> step cards have the verb printed. <span class="ext">⭐ Extension:</span> add: <span class="en">After that, we need to add the water.</span></span></p></td>
-        <td class="mat">jumbled step cards · action cards · <span class="game">▶ Talk Partners</span></td>
+        <td class="min">27–36′</td>
+        <td class="stage"><div class="nm">Grammar focus · <i>need to</i></div><div class="zone">board → desks</div></td>
+        <td class="flow">
+          <p><span class="ph">I Do (model).</span> Build the question on the board from the PB p.12 Act.3 table: <span class="en">What do we need to do? — We need to chop the carrots.</span> Then switch subject: <span class="en">What does he need to do? — He needs to stir the soup.</span></p>
+          <p><span class="ph">Highlight form + trap.</span> Colour-code pronouns: <b>do</b> = I/you/we/they · <b>does</b> = he/she (Grammar clue). Big arrow to the trap: <span class="en">does he need — NOT needs!</span> CCQs: <span class="en">He needs or need? · After “does”, need or needs?</span></p>
+          <p><span class="ph">We Do (guided).</span> Substitution drill — you give a subject + verb card, class forms the Q&amp;A chorus, then 2–3 individuals: <span class="en">she / pour → What does she need to do? — She needs to pour the water.</span></p>
+          <p><span class="ph">You Do (RallyRobin).</span> PB p.12 Act.4 Talk Partners: A points at a verb card &amp; asks, B answers, then swap: <span class="en">What do we need to do? — We need to add the sugar.</span></p>
+        </td>
+        <td class="mat">PB p.12 Act.3–4 · board · subject/verb cards</td>
       </tr>
 
       <tr>
-        <td class="min">37–46′</td>
-        <td class="stage"><div class="nm">What does he need to do? · build</div><div class="zone">desks, 2 teams</div></td>
-        <td class="flow"><p><span class="ph">Make true sentences (Showdown).</span> Mini-whiteboards: you show a person (he/she/we) + an action card → all write <i>He needs to chop the nuts.</i> / <i>We need to stir the soup.</i> — <span class="en">Show me!</span> Reveal together, self-check do/does + to. 5 rounds.</p><p><span class="ph">ICQ:</span> <span class="en">With “he” — need or needs?</span> (→ needs!)</p><div class="nb">📓 <b>Interactive notebook</b> — <b>GMF4_Unit1_Lesson4_Lets_Make_Soup_Visual_Note_A5</b><div class="nbk">A5 glue-in note — LET'S MAKE SOUP! six cooking verbs (chop · mix · stir · pour · heat · add) plus the question builder WHAT DO + I/YOU/WE/THEY + NEED TO + BASE VERB? / WHAT DOES + HE/SHE + NEED TO + BASE VERB?, model answers (We need to chop the carrots. / She needs to pour the water.) and the sequence strip FIRST → NEXT → THEN → AFTER THAT → FINALLY</div><ul><li>Glue the note in; pupils mime each of the six verbs as they colour its picture.</li><li>Point out the trap: DOES → need, not needs, after the question word.</li><li>Build five sentences along the FIRST → FINALLY strip for a soup of their own.</li><li>Pairs ask and answer What do we need to do? using their own steps.</li></ul><span class="nbp"><b>When:</b> ~5 min at the start of the 37–46′ “What does he need to do? · build” stage (desks, pairs)</span><span class="nbp"><b>Prep:</b> 1 × A5 per pupil. Scissors, glue sticks, pencils.</span></div></td>
-        <td class="mat">mini-whiteboards · person + action cards · <span class="game">▶ Showdown</span></td>
+        <td class="min">36–43′</td>
+        <td class="stage"><div class="nm">▶ Basketball challenge</div><div class="zone">open floor, teams</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Basketball · sentence-then-shoot.</span> Two team lines, one bin/hoop, one soft ball. Flip a card (a subject + a verb, e.g. <i>he / heat</i>). Before shooting, the player must say a <b>correct full sentence</b>: <span class="en">What does he need to do? — He needs to heat the soup!</span> Correct sentence → take the shot; goal = 2 points, correct sentence alone = 1 point.</p>
+          <p>Wrong grammar (e.g. <span class="en">does he needs</span>) → no shot, next team's turn. Everyone in line prepares their sentence, so all are “on” every round.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Shoot first, or say the sentence first?</span> (→ sentence first!) Reset with <span class="en">Freeze!</span> if it gets loud.</p>
+        </td>
+        <td class="mat">soft ball · bin/hoop · subject+verb cards</td>
       </tr>
 
       <tr>
-        <td class="min">46–52′</td>
-        <td class="stage"><div class="nm">My recipe steps · write</div><div class="zone">desks</div></td>
-        <td class="flow"><p><span class="ph">Notebooks / AB p.9 format.</span> Board frame: <i>First, we need to ___. Next, we need to ___. Then, we need to ___. Finally, we need to ___.</i> Each child writes 4 steps for a simple dish.</p><p><span class="diff"><span class="sup">💪 Support:</span> gapped frame + verb word bank. <span class="ext">⭐ Extension:</span> add a What do/does…? question for a partner.</span></p></td>
-        <td class="mat">notebooks · board frame</td>
+        <td class="min">43–48′</td>
+        <td class="stage"><div class="nm">📓 Interactive notebook</div><div class="zone">desks, pairs</div></td>
+        <td class="flow">
+          <p><span class="ph">📓 Interactive notebook — “Let's make soup!” (A5 glue-in).</span> Hand out <i>GMF4_Unit1_Lesson4_Lets_Make_Soup_Visual_Note</i>. Pupils <b>cut &amp; glue</b> it in; mime each of the six verbs as they colour its picture.</p>
+          <p>Note the builder: <b>What do</b> (I/you/we/they) / <b>What does</b> (he/she) + <b>need to</b> + base verb? Circle the trap: <span class="en">does → need, not needs.</span></p>
+          <p>Along the strip <span class="en">First → Next → Then → After that → Finally</span> pupils write 5 steps of <b>their own</b> soup. <span class="ph">Then (pairs):</span> ask &amp; answer <span class="en">What do we need to do first?</span> using their own steps.</p>
+        </td>
+        <td class="mat">A5 note (1/pupil) · scissors · glue · pens</td>
       </tr>
 
       <tr>
-        <td class="min">52–55′</td>
-        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Ask your partner: “What do we need to do?” about making soup — full answer with need to!</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can name cooking verbs and say “need to do”!</span></p></td>
-        <td class="mat">“I can…” progress cards (notebook)</td>
+        <td class="min">48–55′</td>
+        <td class="stage"><div class="nm">▶ Recipe relay — production</div><div class="zone">open floor, teams</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Recipe relay.</span> Each team has 5 jumbled step-cards from the soup (get a pan · chop the carrots · mix the beans · add the water · heat it up). One runner at a time races to the board, pins the <b>next</b> step in order and calls it with a sequencer + full sentence: <span class="en">First, we need to get a pan! · Next, we need to chop the carrots!</span> Then the next runner goes.</p>
+          <p>First team with all 5 in the right order <b>and</b> read aloud correctly wins. Extra challenge round: change the chef — retell in <i>he</i>: <span class="en">He needs to chop the carrots.</span></p>
+          <p><span class="ph">ICQ:</span> <span class="en">One runner, or all at once?</span> (→ one at a time!)</p>
+        </td>
+        <td class="mat">3 sets of 5 step-cards · board / pins</td>
       </tr>
 
       <tr>
-        <td class="min">55–57′</td>
-        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Well done, chefs! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
+        <td class="min">55–58′</td>
+        <td class="stage"><div class="nm">Reflection</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Timed Pair Share (20 sec each):</span> <span class="en">Tell your partner two things a chef needs to do to make soup.</span></p>
+          <p>Self-check strip “I can…”: pupils tick — <span class="en">I can say the cooking verbs · I can ask &amp; answer “What do/does … need to do?”</span> Thumb-check: <span class="en">Show me a thumb — how sure are you?</span></p>
+        </td>
+        <td class="mat">“I can…” self-check strip (notebook)</td>
       </tr>
 
       <tr>
-        <td class="min">57–60′</td>
+        <td class="min">58–60′</td>
         <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. Show an action card at the door: <span class="en">What do we need to do?</span> → <span class="en">We need to (stir) the soup.</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
-        <td class="mat">action cards · reward stickers</td>
+        <td class="flow"><p>Line up. Each pupil draws a subject+verb card and says one correct sentence to leave: <span class="en">She needs to pour the water.</span> or answers <span class="en">What do we need to do?</span> <span class="en">Great work today — see you next lesson!</span></p></td>
+        <td class="mat">subject+verb cards</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 9:</b> ex. 1 <i>Look, read and write</i> (She needs to chop… pour… heat…) + ex. 2 <i>Order the words in the grammar table. Write the sentences</i> (What does he need to do?) + ex. 3 <i>Remember the song. Read and complete</i> (First/Next/Then/Finally + verbs) + <i>Code!</i> (→ BLONDE HAIR). <b>+ app trainer</b> — cooking verbs + need to, 5–7 min.</p></td>
-        <td class="mat">Activity Book p.9 · app (homework link)</td>
+        <td class="flow"><p><b>Activity Book — p. 9, tasks № 1–3</b>: №1 <i>Look, read and write</i> (6 cooking-verb sentences with <i>need to</i>) · №2 <i>Order the words in the grammar table &amp; write the sentences</i> (What do/does … need to …?) · №3 <i>Read and complete</i> the “Let's make soup!” song. Optional: crack the secret <b>CODE!</b> puzzle at the bottom of the page.</p></td>
+        <td class="mat">Activity Book p. 9 (tasks 1–3 + CODE)</td>
       </tr>
 
     </tbody>
@@ -237,10 +270,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 4 (Vocab &amp; Grammar · cooking verbs · need to) — lesson plan &amp; staging (continuing line)</span>
-    <span>Pupil's Book p.12 (CD1 17–19) · Activity Book p.9 · КТП урок 7. Учебник даёт 6 глаголов (stir · mix · chop · heat · pour · add) — взят книжный набор (КТП перечисляла больше: bake/weigh/melt/slice). Genki: «Eat! Drink! Dance!» (57) — еда + действия.</span>
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 1 · Lesson 4 (Vocabulary &amp; Grammar) — lesson plan &amp; staging</span>
+    <span>Content verified vs PB p.12 (Act.1–4, CD1 17–19) + AB p.9 + КТП урок 7. Notebook: GMF4-U1-L4 “Let's make soup!”.</span>
   </div>
 </div>
-<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
-<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
-

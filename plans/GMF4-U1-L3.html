@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GMF4 · Unit 1 · Lesson 3 — Story (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -55,48 +52,38 @@
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,.nb{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🖐 Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 3 — Story «The Burfi cake disaster»</div>
-    <div class="s">A2 young learners (~10 y.o., readers · <b>continuing line</b>) · 60 min · PPP + TPR + Talk Partners · carpet + desks</div>
-    <div class="meta"><span class="chip">Week 21.09–27.09 · Lesson 6</span><span class="chip new">✨ NEW · What do we need to do? · paying attention</span><span class="chip">~10 pupils · groups of 4</span><span class="chip">Pupil's Book pp.10–11 · AB p.8</span></div>
+    <div class="t">Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 3 — Story “The Burfi cake disaster”</div>
+    <div class="s">A1+ pre-teens (~10–11 y.o., confident readers) · 60 min · Story lesson (listen → sequence → read → act out) · carpet + desks</div>
+    <div class="meta"><span class="chip">Week 21.09–27.09 · Lesson 6</span><span class="chip new">📖 STORY</span><span class="chip">~12 pupils · 3 teams of 4</span><span class="chip">Grammar in context: quantifiers</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gmf4/games/cooking-memo.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🃏 Memory</a><a href="https://speakandsmile.ru/gmf4/games/cooking-ttt.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">❌⭕ Крестики</a><a href="https://speakandsmile.ru/gmf4/games/cooking-quiz.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🏆 Квиз</a><a href="https://speakandsmile.ru/gmf4/games/cooking-board.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎲 Ходилка</a><a href="https://speakandsmile.ru/gmf4/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1EGrx5jc34c9SsBaYVuOJUyGQH94U-ZK3" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, learners will be better able to <b>follow, read and act out</b> the story «The Burfi cake disaster» and <b>talk about steps in a recipe</b>: “What do we need to do now? — Put the butter in the pan and mix it.”</li><li><span class="lb">Subsidiary.</span> Value — <b>paying attention</b> (Ravi's mistake with the salt); break Luke's code (→ NEW YORK CITY — a bridge to the Culture lesson); recycle quantifiers &amp; How much/How many from L2; story skills — predict → listen → read along → Read &amp; answer → act out; prepare the cooking verbs for L4.</li><li><span class="lb">Personal.</span> Let the story breathe — big voices, pauses, prediction; the “need to do” idea is NOTICED today, drilled properly in L4 — don't over-correct. Give every child a story role.</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will have <b>understood and re-told a short story</b> (“The Burfi cake disaster”) and used its language — <b>quantifiers &amp; cooking steps</b> — to describe what a recipe needs and what goes wrong: <span class="en">How much sugar do we need? — We need a lot of.</span> / <span class="en">Add the sugar and stir.</span></li>
+      <li><span class="lb">Subsidiary.</span> Listen for gist &amp; sequence 8 story frames by ear; read the text with echo/chunked reading; recycle ingredients (L1) + How many/How much (L2) inside the new story; discuss the value <i>paying attention</i>; act out the story in groups.</li>
+      <li><span class="lb">Personal.</span> Keep books CLOSED until pupils have sequenced by ear (reading is a LATE step); give an ICQ before every task; press learners to justify predictions (“What makes you think that?”).</li>
+    </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>retell 2–3 things that happen in the story;</li><li>read their role's lines from the book;</li><li>answer comprehension questions: “Josh chops the nuts.”</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Bond</span><span>Curiosity</span><span>Challenge</span><span>Perform</span><span>Reflect</span><span>Positive finish</span></div>
+      <ul class="a">
+        <li>order the 8 story events and re-tell them with FIRST → THEN → FINALLY;</li>
+        <li>ask &amp; answer with quantifiers (a lot of / some / a few / a little);</li>
+        <li>say the cooking steps (chop · mix · stir · add · pour · put in the oven) and act out the story.</li>
+      </ul>
     </div>
   </div>
 
@@ -104,12 +91,19 @@
   <div class="eyebrow">Target language</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">ingredients (revision)</span><span class="w">chop · mix · add · stir (preview)</span><span class="w">pan · oven · a little milk · a lot of sugar · salt</span><span class="w">pay attention · by mistake · disaster</span></div></div><div class="r"><div class="k">Structure</div><div>What do we need to do now? — Put the butter in the pan and mix it. &nbsp;·&nbsp; Can you pass me the (sugar), please? &nbsp;·&nbsp; <i>answer:</i> Josh chops the nuts.</div></div><div class="r"><div class="k">Form</div><div><i>What do we need to do?</i> (recycled in L4); quantifiers in context (a few nuts · a lot of sugar · a little milk); polite request <i>Can you pass me…?</i></div></div><div class="r"><div class="k">Pron. watch</div><div>disaster /dɪˈzɑːstə/; salty /ˈsɔːlti/; oven /ˈʌvən/ (not “oh-ven”); Burfi /ˈbɜːfi/.</div></div>
+      <div class="r"><div class="k">Lexis</div><div><span class="w">flour</span><span class="w">sugar</span><span class="w">salt</span><span class="w">nuts</span><span class="w">butter</span><span class="w">raisins</span><span class="w">coconut</span><span class="w">milk</span> · <span class="w">chop</span><span class="w">mix</span><span class="w">stir</span><span class="w">add</span><span class="w">pour</span><span class="w">put in the oven</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>What do we need to do now? — <b>Add</b> the sugar and <b>stir</b>. · How <b>many</b> nuts do we need? — A few. · How <b>much</b> sugar? — A lot of. · Put the butter in the pan and mix it with… Then add <b>a little</b> milk.</div></div>
+      <div class="r"><div class="k">Story phrases</div><div><i>…by mistake · Here you are · Never mind · It's salty · Mmm! Let's try a piece · Are you ready for our next trip?</i></div></div>
+      <div class="r"><div class="k">Form</div><div>much + uncountable (sugar, milk, butter) · many + countable (nuts, raisins). Quantifiers: <b>a lot of</b> (both) · <b>a few</b> (count) · <b>a little</b> (uncount).</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>weak <i>do we</i> /dəwi/ in the question; /ʌ/ in <i>butter/nuts</i> vs /ɔː/ in <i>salt</i>; stress on <b>ma</b>ny / <b>much</b>.</div></div>
+      <div class="r"><div class="k">Value</div><div><b>Paying attention</b> — Ravi isn't paying attention → he passes the salt instead of the sugar → the cake is salty.</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“Ravi gives Josh the SALT not the sugar — is the cake sweet or salty?” → salty — a disaster!</div><div class="ccq" style="margin-bottom:10px">“Why does it go wrong? Was Ravi paying attention?” → no — he was playing a game.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Quantifiers &amp; How much/How many are active from L2; the alphabet-number code was learnt in the Starter (recycled in act 5). First full-unit story of the year — the act-out routine was modelled in the Starter. Readers follow the text with a finger.</p>
+      <div class="ccq">“Can we count nuts?” → yes → <b>How many? / a few.</b> &nbsp; “Can we count sugar?” → no → <b>How much? / a lot of / a little.</b></div>
+      <div class="ccq">“Did Ravi give the sugar or the salt?” → salt. “On purpose or by mistake?” → <b>by mistake.</b></div>
+      <div class="ccq" style="margin-bottom:12px">“Is the cake sweet or salty in the end?” → salty! “Whose fault? Why?” → Ravi — not paying attention.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> ingredients (L1) &amp; How many/How much + quantifiers (L2) are known — this story RECYCLES them. Pupils are confident readers, but per S&S method they meet the story <b>by ear first</b>, text last. Carpet/desk routines &amp; team roles known. <b>Teams:</b> max 4 (12=3×4 · 10=3+3+4 · 9=3×3 · 8=2×4).</p>
     </div>
   </div>
 
@@ -118,18 +112,22 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td>Story audio too fast for some</td><td>Second listening with pauses per frame; readers follow the text with a finger.</td></tr><tr><td>“need to do” + wrong form</td><td>Notice-and-mark when it sounds — no lecture; it's drilled properly in L4.</td></tr><tr><td>Read &amp; answer — one-word replies</td><td>Model the full answer: <i>Josh chops the nuts.</i>; sentence frame stays up.</td></tr><tr><td>Acting groups off-task</td><td>Roles printed (Luke · Lily · Josh · Ravi); strongest reader leads; rotate once only.</td></tr><tr><td>Code pre/post-reading too hard</td><td>Solve the first two letters together; give the A=153 key card — it's a warm hook, not a test.</td></tr>
+        <tr><td>much / many mixed up</td><td>CCQ “count it?” → colour-code: <span style="color:var(--p-ink)"><b>many</b>+count</span> / <span style="color:var(--honey-ink)"><b>much</b>+uncount</span> on the board.</td></tr>
+        <tr><td>Pupils open books &amp; read too early</td><td>Books stay CLOSED on the text until stage ⑥ — they must sequence by ear first.</td></tr>
+        <tr><td>a few vs a little confused</td><td>Pair gesture: <i>a few</i> = count on fingers; <i>a little</i> = pinch a pinch of sugar.</td></tr>
+        <tr><td>Act-out turns to chaos</td><td>Assign 5 roles + a director; rehearse a freeze-frame first, one line each.</td></tr>
+        <tr><td>Teams grab / argue in Ask &amp; Grab</td><td>One rotating runner per team; the rest must AGREE the question before it's asked.</td></tr>
       </tbody></table></div>
     </div>
     <div>
       <div class="eyebrow">Classroom management — signals</div>
       <div class="cardb"><div class="sig">
         <div class="sigc"><b>“Class? — Yes!”</b> — you: <span class="call">“Class!”</span> → pupils stop &amp; echo <span class="call">“Yes!”</span></div>
-        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
-        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
+        <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → silent, tune in.</div>
+        <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter.</div>
         <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
-        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
-        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pens down.”</div>
+        <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset (also cues freeze-frames).</div>
       </div></div>
     </div>
   </div>
@@ -139,8 +137,8 @@
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
     <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="ph">STAGE ①–⑦</span> = S&amp;S story order (ear first, text last)</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
   <div class="scroll">
@@ -149,80 +147,129 @@
     <tbody>
 
       <tr>
-        <td class="min">0–3′</td>
-        <td class="stage"><div class="nm">Opening / Warm-up</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door: <span class="en">Hello! Come in!</span> Sit on the carpet. <span class="en">Hello! Luke and the children are making a Burfi cake for the festival. What could go wrong? Let's find out!</span> Chef's-hat mime.</p><p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · stamp · sit down · stand up); trick them: say <span class="en">Sit down!</span> when they're already sitting.</p><p>Bring energy down with your arm: <span class="en">And… freeze. Sit on the carpet.</span></p></td>
-        <td class="mat"><b>Genki Disco Warm Up</b> mp3 · carpet</td>
+        <td class="min">0–4′</td>
+        <td class="stage"><div class="nm">Warm-up · review</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Retrieval, woven into today's story.</span> <span class="game">▶ Quiz-Quiz-Trade</span> (Kagan) — each pupil gets an ingredient card. <span class="en">Stand up, hand up, pair up!</span> Partner A holds up the card: <span class="en">How much / How many [flour / nuts] do we need?</span> Partner B answers with a quantifier: <span class="en">A lot of / a few / a little.</span> Quiz each other, praise, <b>trade cards</b>, find a new partner. 3–4 rounds, music on/off.</p>
+          <p>Settle: <span class="en">Class? — Yes! Bring your card and sit in your team.</span> (This pre-loads the exact ingredients &amp; quantifiers the story is built on.)</p>
+        </td>
+        <td class="mat">ingredient cards (1/pupil) · music · <span class="game">▶ Quiz-Quiz-Trade</span></td>
       </tr>
 
       <tr>
-        <td class="min">3–9′</td>
-        <td class="stage"><div class="nm">Retrieval + predict</div><div class="zone">carpet → board</div></td>
-        <td class="flow"><p><span class="ph">Recycle L2 quantifiers.</span> <span class="game">▶ RallyRobin:</span> <span class="en">Take turns: How much/many … do we need? — 3 questions each, full answers.</span></p><p><span class="ph">Before you read (act. 1–2).</span> <span class="en">Can you remember the ingredients for the Burfi cake? Read the title — “The Burfi cake disaster”. What do you think goes wrong?</span> — 2–3 guesses.</p></td>
-        <td class="mat">ingredient cards · board · <span class="game">▶ RallyRobin</span></td>
+        <td class="min">4–10′</td>
+        <td class="stage"><div class="nm">① Look &amp; predict</div><div class="zone">carpet · books CLOSED on text</div></td>
+        <td class="flow">
+          <p>Project the story pictures ONLY (or hold PB p.10–11 open at the pictures, text covered). Read the title: <span class="en">The Burfi cake disaster. What's a “disaster”? What do you think goes wrong?</span></p>
+          <p><span class="ph">Dialogic prediction (Talk Partners → whole class).</span> <span class="en">Look at frame 1. Who's cooking? What are they making? Who ISN'T helping?</span> Take answers, then <b>press &amp; build</b>: <span class="en">What makes you think that? · Do you agree with [Dima]? Why?</span> Collect 2–3 predictions on the board — we check them after listening.</p>
+          <p><span class="ph">Quick pre-teach (mime).</span> <span class="en">by mistake · Never mind · salty.</span> — mime tasting → <span class="en">Ugh! It's salty!</span></p>
+        </td>
+        <td class="mat">story pictures (projector / PB p.10–11, text covered) · board</td>
+      </tr>
+
+      <tr>
+        <td class="min">10–14′</td>
+        <td class="stage"><div class="nm">③ First listen · gist</div><div class="zone">carpet · books CLOSED</div></td>
+        <td class="flow">
+          <p><span class="en">Books stay closed — just listen. Was your prediction right?</span> Play <b>CD1 15</b> straight through.</p>
+          <p><span class="ph">Gist check — physical.</span> <span class="en">Stand up if the cake was DELICIOUS… sit down if it was a DISASTER!</span> Then quick whole-class: <span class="en">What went wrong? Whose fault was it — Luke, Lily, Josh or Ravi?</span> Tick/cross the predictions on the board.</p>
+        </td>
+        <td class="mat">Audio <b>CD1 15</b> · board (predictions)</td>
+      </tr>
+
+      <tr>
+        <td class="min">14–21′</td>
+        <td class="stage"><div class="nm">④ Order by ear</div><div class="zone">carpet · teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Sequence the SCRAMBLED frames on the second listen.</span> Give each team a shuffled set of the 8 picture cards. <span class="en">Listen again. Put the pictures IN ORDER. Books closed — use your ears!</span> Play <b>CD1 15</b> again, pausing after each frame.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Are you reading or listening?</span> (→ listening) <span class="en">Do we open our books?</span> (→ no!)</p>
+          <p>Check together — a spokesperson from each team places one card on the board line in order. Spotlight the turning point: <span class="en">Which picture shows the mistake? Salt or sugar?</span></p>
+        </td>
+        <td class="mat">8 shuffled story-frame cards ×3 sets · Audio <b>CD1 15</b> · board line</td>
+      </tr>
+
+      <tr>
+        <td class="min">21–28′</td>
+        <td class="stage"><div class="nm">⑤ Notebook · sequence</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">📓 Interactive notebook — “The Burfi cake disaster” Story Sequence (A4 cut-and-glue).</span> Header <b>UNIT 1 • LESSON 3</b>, chain <b>LISTEN • PUT IN ORDER • GLUE • RETELL</b>.</p>
+          <p>① Cut off the bottom strip, then cut out the 8 picture cards. ② Lay them in order (from stage ④) — <b>don't glue yet</b>. ③ Check in pairs — <span class="en">Who spots the salt-instead-of-sugar moment?</span> ④ Glue the row in. (Comprehension questions beside it are answered in stage ⑥.)</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do we glue first or check with a partner first?</span> (→ check first!)</p>
+        </td>
+        <td class="mat"><b>GMF4_Unit1_Lesson3_The_Burfi_Cake_Disaster_Story_Sequence_A4</b> (1/pupil) · scissors · glue</td>
       </tr>
 
       <tr class="bridge">
-        <td class="min">9–10′</td>
-        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Let's find out what really happens. Story time!</span> Show the story title «The Burfi cake disaster».</p></td>
-        <td class="mat">Pupil's Book p.10</td>
+        <td class="min">28–29′</td>
+        <td class="stage"><div class="nm">🎬 Bridge · TPR</div><div class="zone">at desks, standing</div></td>
+        <td class="flow"><p><span class="en">Stand up — let's cook!</span> Fast cooking-verb TPR: <span class="en">chop · mix · stir · pour · heat · add · put it in the oven!</span> — mime each. This wakes them up before we open the books to read.</p></td>
+        <td class="mat">cooking-verb gestures</td>
       </tr>
 
       <tr>
-        <td class="min">10–20′</td>
-        <td class="stage"><div class="nm">Story · listen &amp; read</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Listen 1 — gist (CD1 15, books closed).</span> <span class="en">Listen: what goes wrong with the cake?</span> → Ravi gives the salt, not the sugar!</p><p><span class="ph">Listen 2 — read along (books open pp.10–11).</span> Finger under the text. Pause per frame: <span class="en">What do we need to do now? — Put the butter in the pan and mix it. … Ravi, can you pass me the sugar? … Oh dear! I gave you the salt!</span></p><p><span class="ph">Values (act. 4, whole class).</span> <span class="en">Who isn't paying attention? Why? What happens because Ravi isn't paying attention? Do YOU pay attention when people talk to you?</span> 3–4 hands, recast key words.</p></td>
-        <td class="mat">Pupil's Book pp.10–11 · CD1 15</td>
+        <td class="min">29–37′</td>
+        <td class="stage"><div class="nm">⑥ NOW read the text</div><div class="zone">desks · books OPEN</div></td>
+        <td class="flow">
+          <p><span class="en">Now open your books — page 10. Follow with your finger.</span> <span class="ph">Chunked / echo reading.</span> Read a frame aloud → class echoes with expression → do the mime on the cooking lines (<span class="en">Add the sugar and stir!</span>). Rotate readers frame by frame.</p>
+          <p><span class="ph">Comprehension — “After you read” (PB p.11 ex.3), Numbered Heads.</span> <span class="en">1 Who chops the nuts? 2 Do they add a lot of milk? 3 How much sugar do they need? 4 What does Ravi give to Josh? 5 What does Luke's friend bring?</span> Teams confer → you call a number → that pupil answers in a full sentence (<span class="en">Josh chops the nuts.</span>).</p>
+          <p><span class="ph">Value discussion (dialogic).</span> <span class="en">Who isn't paying attention? What happens because of it? Do YOU pay attention when people talk to you?</span> Press for reasons.</p>
+        </td>
+        <td class="mat">PB p.10–11 · glued notebook row</td>
       </tr>
 
       <tr>
-        <td class="min">20–28′</td>
-        <td class="stage"><div class="nm">Read &amp; answer · comprehension</div><div class="zone">carpet → desks</div></td>
-        <td class="flow"><p><span class="ph">Read and answer (act. 3, Talk Partners).</span> Questions: <span class="en">Who chops the nuts? Do they add a lot of milk? How much sugar do they need? What does Ravi give to Josh? What does Luke's friend bring?</span> Pairs answer in full: <span class="en">Josh chops the nuts.</span> Every pair speaks.</p><p><span class="ph">Who said it? (Showdown).</span> Mini-whiteboards: you read a line — <span class="en">“Never mind. Let's put it in the oven.” Who says it?</span> — all write the name, <span class="en">Show me!</span> 4 rounds.</p><p><p><span class="asr">✔ <b>Assess:</b> the boards are your check — who follows the story? The rest sit with you in the board game.</span></p></p><p><span class="diff"><span class="sup">💪 Support:</span> point to the right frame in the book. <span class="ext">⭐ Extension:</span> add a second true fact about that moment.</span></p><div class="nb">📓 <b>Interactive notebook</b> — <b>GMF4_Unit1_Lesson3_The_Burfi_Cake_Disaster_Story_Sequence_A4</b><div class="nbk">A4 cut-and-glue picture set — 8 story cards for “The Burfi cake disaster” with LISTEN • PUT IN ORDER • GLUE • RETELL</div><ul><li>Cut off the bottom strip, then cut out the 8 picture cards.</li><li>Re-read the story and lay the cards in order without gluing.</li><li>Check in pairs — who spots the salt-instead-of-sugar moment?</li><li>Glue the row in and answer the comprehension questions beside it.</li></ul><span class="nbp"><b>When:</b> ~7 min inside the 20–28′ “Read &amp; answer · comprehension” stage (desks, pairs)</span><span class="nbp"><b>Prep:</b> 1 × A4 per pupil. Scissors, glue sticks.</span></div></td>
-        <td class="mat">mini-whiteboards · Pupil's Book pp.10–11</td>
+        <td class="min">37–43′</td>
+        <td class="stage"><div class="nm">⑦ Phrase focus + game</div><div class="zone">carpet · teams + runner</div></td>
+        <td class="flow">
+          <p><span class="ph">Drill the target phrases inside a game.</span> <span class="game">▶ Ask &amp; Grab</span> — big ingredient cards on the floor; you are the chef. Each team AGREES a quantifier question and asks YOU: <span class="en">Do we need a lot of sugar?</span> You say <span class="en">No…</span> (they ask again) or, when you choose, <span class="en">Yes!</span> → the team's runner grabs that ingredient card; first correct card + full sentence (<span class="en">We need a lot of sugar!</span>) scores. Rotate the runner every turn — <b>every child runs</b>.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do you grab first or ask first?</span> (→ ask first, wait for “Yes”!)</p>
+        </td>
+        <td class="mat">A4 ingredient cards on floor · <span class="game">▶ Ask &amp; Grab</span></td>
       </tr>
 
       <tr>
-        <td class="min">28–40′</td>
-        <td class="stage"><div class="nm">Act out</div><div class="zone">carpet, groups of 4</div></td>
-        <td class="flow"><p><span class="ph">Model a frame.</span> You + 3 pupils play the salty-cake-tasting frame with big drama: <span class="en">Mmm! Let's try a piece. — Ugh! It's salty!</span></p><p><span class="ph">Groups of 4 (Luke · Lily · Josh · Ravi).</span> Rehearse 2 frames with books as scripts. Rotate roles once.</p><p><span class="ph">Showtime.</span> Each group performs ONE frame (30–40 sec — fast carousel, no long waits). Audience task: shout what goes wrong (“Salt, not sugar!”) at the end.</p><p><span class="diff"><span class="sup">💪 Support:</span> shortest lines / the “Ugh!” reaction for the shyest child. <span class="ext">⭐ Extension:</span> add an extra line from the frame.</span></p></td>
-        <td class="mat">Pupil's Book pp.10–11 · role badges</td>
+        <td class="min">43–48′</td>
+        <td class="stage"><div class="nm">📓 Notebook · retell</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">📓 Interactive notebook — Retell strip (2-up A4).</span> Glue the strip under the picture row: <b>FIRST → THEN → NEXT → BUT → LATER → FINALLY</b> with clue words (<i>make a Burfi cake · Harbour Food Festival · chop a few nuts · butter, raisins, coconut + a little milk · add the sugar · salt by mistake · stir · the oven · it is salty · a sweet Burfi cake</i>) + pronoun helper (<i>Luke &amp; the children → they · Ravi → he · Luke's friend → she</i>).</p>
+          <p>Pupils write their OWN sentence for each connector (connectors printed, sentences theirs). Pairs re-tell with the pictures covered, using only the clue words. This becomes the script bank for the act-out.</p>
+        </td>
+        <td class="mat"><b>GMF4_Unit1_Lesson3_..._Retell_2up_A4</b> (1 = 2 pupils) · glue · pencils</td>
       </tr>
 
       <tr>
-        <td class="min">40–52′</td>
-        <td class="stage"><div class="nm">Break the code · where's Luke?</div><div class="zone">desks, groups</div></td>
-        <td class="flow"><p><span class="ph">Use the code (act. 5).</span> Luke's message: <span class="en">I'm going travelling again. Can you guess where I'm going?</span> Decode with the A=153 key: 585-245-871 947-637-715-457 195-389-783-947 → <span class="en">NEW YORK CITY!</span> <span class="en">That's our Culture lesson soon!</span></p><p><span class="game">▶ Code-breaker teams (RallyCoach).</span> Each group decodes a short food word (cake · nuts · jam) with the key; partner A reads a number, B finds the letter, then swap. Everyone reads the word aloud.</p><p><div class="ig">🎮 <b>Projector option:</b> show the code machine (PB p.7) on screen; a rotating child spins to a number, the WHOLE class calls the letter.</div></p><p><span class="ph">ICQ:</span> <span class="en">Number 585 — which letter?</span> (→ N!)</p><div class="nb">📓 <b>Interactive notebook</b> — <b>GMF4_Unit1_Lesson3_The_Burfi_Cake_Disaster_Retell_2up_A4</b><div class="nbk">2-up A4 retell strip (one A4 = 2 pupils) — FIRST → THEN → NEXT → BUT → LATER → FINALLY with clue words (make a Burfi cake · Harbour Food Festival · chop a few nuts · butter, raisins, coconut + a little milk · add the sugar · salt by mistake · stir · the oven · it is salty · a sweet Burfi cake) and the pronoun helper Luke and the children → they · Ravi → he · Luke's friend → she</div><ul><li>Glue the strip under the glued picture row.</li><li>Pupils make their own sentence for each clue — the connectors are printed, the sentences are theirs.</li><li>Pairs retell with the pictures covered, using only the clue words.</li><li>Then the code game starts; the strip stays open as a word bank.</li></ul><span class="nbp"><b>When:</b> ~6 min at the start of the 40–52′ “Break the code · where's Luke?” stage (desks, groups)</span><span class="nbp"><b>Prep:</b> 1 × A4 = 2 pupils (pre-cut). Glue sticks, pencils.</span></div></td>
-        <td class="mat">code key cards · Pupil's Book pp.7, 11</td>
+        <td class="min">48–54′</td>
+        <td class="stage"><div class="nm">▶ Act it out</div><div class="zone">carpet · groups</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Act out the story</span> (PB p.10 “Act out”). Groups of 5: <b>Luke · Lily · Josh · Ravi · Luke's friend</b> + a director. <span class="en">Rehearse ONE freeze-frame of the disaster first — Freeze!</span> Then run it with lines: the recipe steps (<span class="en">Add the sugar and stir.</span>), the mistake (<span class="en">Here you are.</span> → salt!), the ending (<span class="en">Ugh! It's salty!</span>). 1–2 groups perform to the class; audience says one thing that was great + the value in one word.</p>
+        </td>
+        <td class="mat">retell strips (scripts) · simple props (bowl, spoon)</td>
       </tr>
 
       <tr>
-        <td class="min">52–55′</td>
-        <td class="stage"><div class="nm">Reflection</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner one thing that happens in the story — and why paying attention matters.</span> (20 sec each).</p><p>“I can…” progress tick: <span class="en">“I can…” progress tick: I can read our story! I can answer questions about it!</span></p></td>
-        <td class="mat">“I can…” progress cards (notebook)</td>
+        <td class="min">54–58′</td>
+        <td class="stage"><div class="nm">▶ Break the code</div><div class="zone">desks · teams (relay)</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Break-the-code relay</span> (PB p.11 ex.5). Luke's secret message says where he's travelling next — written in a number code. Post the code key on the wall. One runner per team at a time races to the key, decodes ONE number → letter, runs back, hands over; next runner goes. First team to read Luke's destination shouts <span class="en">Luke is going to …!</span> — recycles Numbers 100–1000 (Starter) inside the story finale.</p>
+        </td>
+        <td class="mat">code key (wall) · Luke's coded message · team answer sheets</td>
       </tr>
 
       <tr>
-        <td class="min">55–57′</td>
-        <td class="stage"><div class="nm">Closing</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="en">Well done, actors! Let's sing Goodbye. Thank you for the lesson!</span> Sing Goodbye. <span class="en">Your homework is in your Activity Book and on the app!</span></p></td>
-        <td class="mat"><b>Goodbye song</b> mp3 · reward sticker</td>
-      </tr>
-
-      <tr>
-        <td class="min">57–60′</td>
-        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door. At the door: <span class="en">What goes wrong with the cake?</span> or <span class="en">Where is Luke going next?</span> Answered → out: <span class="en">Thank you! See you next time! Goodbye!</span></p></td>
-        <td class="mat">story frames · reward stickers</td>
+        <td class="min">58–60′</td>
+        <td class="stage"><div class="nm">Reflection · close</div><div class="zone">carpet → door</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner the story in 3 sentences: First… Then… Finally…</span> (30 sec each). Value check: <span class="en">One reason it's good to pay attention.</span></p>
+          <p>“I can…” strip: <span class="en">Tick — I can re-tell the story. I can use a lot of / a few / a little.</span> <span class="en">Great work today! See you next time!</span></p>
+        </td>
+        <td class="mat">“I can…” strip (notebook)</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Activity Book — p. 8:</b> ex. 1 <i>Read and answer</i> (What are the children making? ingredients? What's wrong? Why is it salty?) + ex. 2 <i>Listen and circle the eight mistakes in the blog. Write the correct words</i> (CD1 16 — можно по книге/картинкам без аудио) + ex. 3 <i>Thinking skills: Read and complete. What do you think?</i> (opinion) + <i>Code!</i> (→ BEACH). <b>+ app trainer</b> — 5–7 min.</p></td>
-        <td class="mat">Activity Book p.8 · app (homework link)</td>
+        <td class="flow"><p><b>Activity Book — p. 8 (Lesson 3 Story), ex. 1 “Read and answer”</b> (4 questions about the Burfi cake) <b>+ ex. 3 “Thinking skills”</b> (Read and complete: I like this story because… / my favourite frame / character / Would you like to make a Burfi cake?). Optional listening if the app is on: <b>ex. 2</b> “Listen and circle the eight mistakes” (CD1 16).</p></td>
+        <td class="mat">Give Me Five! 4 Activity Book p.8 · (audio CD1 16 via app, optional)</td>
       </tr>
 
     </tbody>
@@ -230,10 +277,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 3 (Story «The Burfi cake disaster») — lesson plan &amp; staging (continuing line)</span>
-    <span>Pupil's Book pp.10–11 (CD1 15) · Activity Book p.8 · КТП урок 6. Код на p.11 расшифровывается в NEW YORK CITY (мост к Culture-уроку L5). Genki: «Eat! Drink! Dance!» (57) — еда + действия.</span>
+    <span>Speak &amp; Smile · Give Me Five! 4 · Unit 1 “Let's eat!” · Lesson 3 (Story “The Burfi cake disaster”) — lesson plan &amp; staging</span>
+    <span>Story order ear-first (S&amp;S method) · verified vs PB p.10–11 + AB p.8 + КТП урок 6 · notebooks GMF4-U1-L3 (+retell).</span>
   </div>
 </div>
-<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button>
-<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
-
