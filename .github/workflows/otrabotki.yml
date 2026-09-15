@@ -1,0 +1,34 @@
+# Отработки Speak&Smile — утренний сбор пропустивших уроки.
+#
+# Зачем: собственный cron воркера ss-bb ненадёжно доходит до стадии otr
+# (она загорожена стадиями выручки/финансов). Этот внешний held-запрос
+# бьёт прямо в do=otr и не зависит ни от одного нашего сервера.
+#
+# Токен (код "awesome", он же код обновления калькулятора) лежит в секрете
+# репозитория SS_TICK_TOKEN — в логах GitHub маскирует его как ***.
+name: Отработки — утренний сбор
+
+on:
+  schedule:
+    # 05:30 UTC ≈ 12:30 по Норильску. GitHub может задержать старт на 5–15 мин — для сбора это не критично.
+    - cron: '30 5 * * *'
+  workflow_dispatch:   # ручной запуск кнопкой Run workflow
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Прогрев — логин в BigBen
+        run: |
+          curl -sS --max-time 150 \
+            "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=warm&t=${{ secrets.SS_TICK_TOKEN }}"
+          echo
+
+      - name: Пауза перед сбором
+        run: sleep 8
+
+      - name: Сбор пропустивших — отработки
+        run: |
+          curl -sS --max-time 290 \
+            "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=otr&t=${{ secrets.SS_TICK_TOKEN }}"
+          echo
