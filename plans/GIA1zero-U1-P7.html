@@ -1,6 +1,5 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GIA1zero · Unit 1 · Pair 7 (Lesson Plan &amp; Staging)</title>
+<title>Get Involved A1+ · GIA1zero Foundation · Unit 1 · P7 — Progress Test (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
     --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -37,139 +34,235 @@
   .sig{ display:grid; grid-template-columns:1fr 1fr; gap:8px; } .sigc{ background:var(--card); border:1px solid var(--line); border-radius:9px; padding:8px 11px; font-size:.85rem; }
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
-  /* lesson at a glance */
-  table.glance{ width:100%; border-collapse:collapse; background:var(--card); font-size:.9rem; }
-  table.glance th{ background:var(--p-soft); color:var(--p-ink); font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:8px 11px; }
-  table.glance td{ border-top:1px solid var(--line); padding:7px 11px; vertical-align:top; }
-  table.glance td.gmin{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:58px; font-variant-numeric:tabular-nums; }
-  table.glance td.gname{ font-weight:700; color:var(--p-ink); width:26%; }
-  table.glance tr.bridge td{ background:var(--honey-soft); }
-  .glancewrap{ border-radius:12px; overflow:hidden; border:1px solid var(--line); }
-
-  /* the staging */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
-  .game{ color:var(--p); font-weight:800; }
+  /* scenario table */
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
+  .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
-  .do{ background:var(--p-soft); border-left:3px solid var(--p); border-radius:7px; padding:7px 10px; font-size:.92rem; }
-  .do b{ color:var(--p-ink); font-size:.78em; letter-spacing:.05em; }
-  /* the three sub-blocks of a stage */
-  .sbh{ font-weight:800; color:var(--p-ink); font-size:.76em; text-transform:uppercase; letter-spacing:.05em; }
-  .tsteps{ margin:7px 0; }
-  .tsteps ol{ margin:4px 0 0 20px; padding:0; }
-  .tsteps li{ margin:3px 0; font-size:.92rem; }
-  .showb{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
-  .showb .sbh{ color:var(--zone); }
-  .kidsb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:6px 10px; font-size:.9rem; margin:7px 0; }
-  .kidsb .sbh{ color:var(--honey-ink); }
+  .slot{ color:var(--muted); font-weight:700; }
   .scroll{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
   table.proc{ width:100%; min-width:840px; border-collapse:collapse; background:var(--card); }
   table.proc thead th{ background:var(--p-soft); color:var(--p-ink); font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; text-align:left; padding:9px 11px; position:sticky; top:0; }
   table.proc td{ border-top:1px solid var(--line); padding:11px 12px; vertical-align:top; font-size:.92rem; }
   td.min{ white-space:nowrap; font-weight:800; color:var(--honey-ink); width:60px; font-variant-numeric:tabular-nums; }
-  td.stage{ width:150px; } td.stage .nm{ font-weight:800; color:var(--p); }
-  td.stage .sub{ font-size:.72rem; color:var(--muted); margin-top:2px; }
+  td.stage{ width:130px; } td.stage .nm{ font-weight:800; color:var(--p); }
   td.stage .zone{ display:inline-block; margin-top:5px; font-size:.72rem; font-weight:700; color:var(--zone); background:var(--zone-soft); border-radius:6px; padding:1px 6px; }
-  td.mat{ width:160px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
+  td.mat{ width:172px; font-size:.82rem; color:var(--muted); } td.mat b{ color:var(--ink); font-weight:600; }
   .flow p{ margin:0 0 7px; } .flow p:last-child{ margin-bottom:0; }
   tr.bridge td{ background:var(--honey-soft); } tr.bridge .nm{ color:var(--honey-ink); } tr.hw td{ background:var(--p-soft); }
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  /* interactive-notebook (вклейки в тетрадь) */
-  .nb{ background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; margin:8px 0 0; }
-  .nb>b{ color:var(--honey-ink); }
-  .nb .nbk{ font-size:.82rem; color:var(--muted); margin:3px 0 5px; }
-  .nb ul{ margin:0; padding-left:17px; } .nb li{ margin:3px 0; }
-  .nb .nbp{ display:block; margin-top:5px; font-size:.82rem; color:var(--muted); }
-  .nb .nbp b{ color:var(--p-ink); }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr,table.glance,.do{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
-    tr.bridge td,tr.hw td,table.proc thead th,table.glance th,table.glance tr.bridge td{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
+    tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">Get Involved! A1+ · Unit 1 “Our world” · Pair 7 — Unit 1 Test + calm feedback</div>
-    <div class="s">Pre-teens 11–12 (grade 5–6, Gen Alpha) · <b>beginners line 🐣</b> · 90 min · input → guided practice → speaking, in game shells · pairs + teams of 3 · points, no dry drills</div>
-    <div class="meta"><span class='chip'>Week 05.10–11.10 · lessons 21–22 (KTP pair 11)</span><span class='chip new'>🐣 beginners line</span><span class='chip'>spec from SB p.21 Quick review</span><span class='chip'>teams of 3 · unit points board</span></div>
+    <div class="t">Get Involved A1+ · GIA1zero <b>Foundation</b> · Unit 1 “Our world” · P7 — Progress Test (Standard)</div>
+    <div class="s">A1+ teens (~11–13 y.o., new-to-English / from zero) · 90 min · Summative test day — calm, model-first, supportive · desks + quiet corner</div>
+    <div class="meta"><span class="chip">Week 05.10–11.10 · Pair 11 (Unit 1 · P7)</span><span class="chip new">📝 TEST · Unit 1</span><span class="chip">~12 pupils · individual seats</span><span class="chip">Test = 100 marks · Standard variant</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/gia1/games/u1.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Игра юнита</a><a href="https://speakandsmile.ru/gia1/games/u1-bowling.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎳 Боулинг</a><a href="https://speakandsmile.ru/gia1/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a><a href="https://drive.google.com/drive/folders/1qBX7PSo1Ueoq2fklkMkEJSfAVHEhi4of" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">📓 Тетрадь курса</a></div>
-  <div class="eyebrow">⚡ Lesson at a glance — 90 minutes</div>
-  <div class='glancewrap'><table class='glance'><thead><tr><th>Time</th><th>Stage</th><th>What we do — in one line</th></tr></thead><tbody><tr><td class='gmin'>0–6′</td><td class='gname'>Into the lesson: calm check-in</td><td>Inside-Outside Circle as a rewind: quiet music, “one word about how you feel”, a look at the wall of countries — pride instead of fear</td></tr><tr class='bridge'><td class='gmin'>6–14′</td><td class='gname'>Lightning revision (first half of the pair)</td><td>5 lightning items from Quick review, solo on a draft + a self-check — “that was a mini-test, you just passed it”</td></tr><tr><td class='gmin'>14–20′</td><td class='gname'>Test strategy: going over it with an example</td><td>we go through the 4 test parts with one example each; a strategy card on the board</td></tr><tr><td class='gmin'>20–45′</td><td class='gname'>Test: vocabulary + grammar</td><td>parts 1–2 in writing, in silence; timings on the board</td></tr><tr><td class='gmin'>45–53′</td><td class='gname'>Test: listening (lesson B)</td><td>the second half of the pair opens with listening: 30 sec studying the grid, the country description twice: 4 true/false + 4 notes</td></tr><tr><td class='gmin'>53–63′</td><td class='gname'>Test: writing + handing in papers</td><td>6 sentences about yourself against the printed criteria; we hand in the papers, a warm-up break</td></tr><tr><td class='gmin'>63–72′</td><td class='gname'>Self-check against the key</td><td>we swap papers, check with a coloured pen against the key; I keep the writing part for myself</td></tr><tr><td class='gmin'>72–80′</td><td class='gname'>A gentle review of typical mistakes</td><td>Showdown: the unit's top-5 mistake types, anonymously; “doctor teams” treat a patient sentence</td></tr><tr><td class='gmin'>80–86′</td><td class='gname'>Personal error log + a line of pride</td><td>everyone writes their own “2 mistakes to kill in Unit 2” + a line of pride “I can now…”</td></tr><tr><td class='gmin'>86–90′</td><td class='gname'>Unit finale: two podiums</td><td>we award TWO teams (score and growth), close the unit, a teaser for “Family”</td></tr><tr><td class='gmin'>🏠</td><td class='gname'>Homework</td><td>Workbook Unit 1 — the exact pages and tasks for your line (🐣 ☆–☆☆ · 🚀 ☆☆–☆☆☆ + a Research bonus); details at the bottom of the procedure</td></tr></tbody></table></div>
 
-  <div class="eyebrow">Procedure — full staging</div>
-  <div class="legend"><span><span class='en'>in quotes</span> = the exact words you say</span><span><span class='game'>▶</span> = a game or game shell — name it out loud</span><span>🎮 = screen or audio — every such stage carries a Backup line for the board</span><span><span class='sup'>💪</span>/<span class='ext'>⭐</span> = support / stretch</span></div>
+  <!-- AIMS -->
+  <div class="eyebrow">Aims &amp; objectives</div>
+  <div class="grid2">
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> To fairly and calmly <b>measure what each pupil can already do</b> in Unit 1 across five skills — vocabulary, grammar (<i>be</i>), reading, listening and writing — plus a one-to-one <b>speaking</b> check, using the Macmillan <b>Unit 1 Progress test (Standard)</b>.</li>
+      <li><span class="lb">Subsidiary.</span> Lower test anxiety in first-year beginners: walk through every section format first (model-first), play the listening track <b>twice</b>, run speaking privately 1:1, keep the room quiet and unhurried.</li>
+      <li><span class="lb">Personal.</span> Give a clear ICQ before each section; keep marks private; protect a “you already did this on P6” mindset; monitor without hovering.</li>
+    </ul></div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">By the end, pupils will have…</div>
+      <ul class="a">
+        <li>completed all five written sections of the Standard test independently;</li>
+        <li>heard the listening track twice and answered all listening items;</li>
+        <li>shown speaking 1:1 (act-out dialogue + English↔Russian word pairs aloud);</li>
+        <li>left knowing marks come back individually, not read aloud.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- WHAT IS BEING TESTED -->
+  <div class="eyebrow">What is being tested (target language &amp; skills)</div>
+  <div class="grid2">
+    <div class="cardb tl">
+      <div class="r"><div class="k">Lexis</div><div><span class="w">countries</span><span class="w">nationality adjectives</span><span class="w">adjectives to describe places</span> <span style="color:var(--muted);font-size:.8rem">(amazing · busy · quiet · crowded · modern · safe …)</span></div></div>
+      <div class="r"><div class="k">Structure</div><div><i>be</i> — affirmative &amp; negative; questions &amp; short answers; contractions (’m / ’re / ’s / isn’t / aren’t).</div></div>
+      <div class="r"><div class="k">Writing subskill</div><div>a keypal message (60–80 words) — start/close a message, say why you want a keypal, <b>capital letters</b>.</div></div>
+      <div class="r"><div class="k">Speaking</div><div>Ex 17 act-out (“Meeting new people” prompts, Speaking task PDF) + our <b>EN↔RU word-pair</b> read-aloud, checked 1:1.</div></div>
+      <div class="r"><div class="k">Test map</div><div><b>Vocabulary /25 · Grammar /25 · Reading /15 · Listening /15 · Speaking /10 · Writing /10 = 100.</b> Listening track = radio programme about Mumbai. Speaking task PDF (Standard) printed separately.</div></div>
+    </div>
+    <div class="cardb">
+      <div class="eyebrow" style="margin-top:0">Marking &amp; what counts · Assumptions</div>
+      <div class="ccq">Objective sections (Vocab/Grammar/Reading/Listening) → <b>answer key</b> from Test Generator; one mark each, no half-marks unless the key allows.</div>
+      <div class="ccq">Writing /10 &amp; Speaking /10 → mark for <b>communication first</b> (message understood / dialogue completed), then accuracy — don’t let spelling sink a clear beginner message.</div>
+      <div class="ccq" style="margin-bottom:12px">Contractions accepted where natural; capital letters expected in Writing (it’s a named subskill).</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> pupils met every task <b>format</b> already (P1–P6: WDYT, reading, grammar drills, keypal writing, Quick review on P6) — today shows what they can do, it is not new content. These are true beginners → the format itself must not become the barrier; walk it through first. <b>Print in advance:</b> one Standard test per pupil + one Speaking task PDF (Standard) at the quiet corner + answer key for you.</p>
+    </div>
+  </div>
+
+  <!-- ANTICIPATED PROBLEMS + TOOLKIT -->
+  <div class="grid2">
+    <div>
+      <div class="eyebrow">Anticipated problems &amp; solutions</div>
+      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
+        <tr><td>Test nerves — “I can’t do this”</td><td>Reframe: <span class="en">You already did all of this on P6. Today just shows it.</span> Calm voice, no countdown pressure at the start.</td></tr>
+        <tr><td>Doesn’t understand an instruction / a format</td><td>You modelled each section first. During the test: hand up for an unclear <b>word</b>, not for an answer.</td></tr>
+        <tr><td>Misses the listening / panics on audio</td><td>Read the questions aloud first; play the track <b>twice</b>; whole class together, not self-paced.</td></tr>
+        <tr><td>Finishes early / finishes late</td><td>Early = check work silently (capitals, two-extra-words traps). Late = self-paced; only the listening is time-fixed.</td></tr>
+        <tr><td>Speaking anxiety in front of peers</td><td>Speaking is 1:1 in a quiet corner while others write — never public. Warm start, model one line.</td></tr>
+        <tr><td>Copying / eyes wandering</td><td>Spaced seats; calm reminder <span class="en">Eyes on your own paper, please.</span> Two Standard versions if seating is tight.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="eyebrow">Classroom management — signals</div>
+      <div class="cardb"><div class="sig">
+        <div class="sigc"><b>Attention</b> — raise a hand + <span class="call">“Pens down, look up.”</span> → pupils stop &amp; listen (used only between sections).</div>
+        <div class="sigc"><b>Ask for help</b> — hand up, wait; you come over. <span class="call">A word, not an answer.</span></div>
+        <div class="sigc"><b>Listening ×2</b> — <span class="call">“You’ll hear it TWICE.”</span> announced before playing; settles the panic.</div>
+        <div class="sigc"><b>Finished early</b> — turn paper face-down, check silently, wait. No leaving, no talking.</div>
+        <div class="sigc"><b>Quiet corner</b> — one chair, back to the room; speaking stays private.</div>
+        <div class="sigc"><b>Time cues</b> — gentle: <span class="call">“About 10 minutes left”</span> — never a loud countdown on a test.</div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- PROCEDURE -->
+  <div class="eyebrow">Procedure — staging (test administration)</div>
+  <div class="legend">
+    <span><span class="en">highlighted</span> = <b>exact words to say</b></span>
+    <span><b>Model-first</b> = show the format with your OWN example, never a test item</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
+  </div>
 
   <div class="scroll">
   <table class="proc">
-    <thead><tr><th>Time</th><th>Stage · where</th><th>Procedure</th><th>Materials</th></tr></thead>
+    <thead><tr><th>Time</th><th>Stage / where</th><th>Procedure</th><th>Materials</th></tr></thead>
     <tbody>
-<tr><td class='min'>0–6′</td><td class='stage'><div class='nm'>Into the lesson: calm check-in</div><div class='sub'>Opening · calm entry</div><div class='zone'>desks · calm</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Inside-Outside Circle as a rewind: quiet music, “one word about how you feel”, a look at the wall of countries — pride instead of fear</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I play quiet music before entry. At the door: <span class='en'>One word — how do you feel? Any word is fine.</span></li><li>I build Kagan <b>Inside-Outside Circle</b>: two circles facing each other, a question → both answer → <span class='en'>Outside circle, rotate two steps!</span> — a new partner, a new question; 3 rotations, everyone speaks.</li><li>I point at the poster wall: <span class='en'>Look at your countries. People who INVENT nations can handle a test.</span></li><li>I ask: <span class='en'>Show test-readiness 1–5 on fingers. Whatever you showed — first we warm up. Together.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> quiet music · the poster wall</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> settle into a calm mode, ground themselves in pride over the project. Expected: anxious students breathe out at the words “warm-up first”.</div></td><td class='mat'>music</td></tr><tr class='bridge'><td class='min'>6–14′</td><td class='stage'><div class='nm'>Lightning revision (first half of the pair)</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 5 lightning items from Quick review, solo on a draft + a self-check — “that was a mini-test, you just passed it”</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I display 5 lightning items: nationality spelling · an opposite · a be gap · a short answer · capitals — they solve them on a draft, solo, quietly.</li><li>I open the key, a self-check. I say: <span class='en'>That was a mini-test. You just passed it.</span></li><li>Fingers: <span class='en'>Which round was hardest — one to five?</span> — a 60-sec choral rewind of exactly that item (by the frame).</li><li>Bridge: <span class='en'>Same formats, bigger paper. Strategy first — then calmly.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> a slide with the 5 items → the key · drafts <b>(Backup:</b> everything on the slide goes onto the board before the lesson (or onto printed cards, one per crew).<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> solve the mini-review in silence, self-check, name their own hard round — the fear visibly drops. Expected: 4–5 out of 5 for most.</div></td><td class='mat'>drafts</td></tr><tr><td class='min'>14–20′</td><td class='stage'><div class='nm'>Test strategy: going over it with an example</div><div class='sub'>Strategy briefing</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> we go through the 4 test parts with one example each; a strategy card on the board</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I hand out the tests cover-up: <span class='en'>Don't open yet.</span></li><li>I go through one example from each part on the projector, the class answers in chorus.</li><li>I hang up a strategy card: 1) example first · 2) skip &amp; return · 3) final check = apostrophes + capitals.</li><li>A send-off BEFORE the start: <span class='en'>Remember: I amn't doesn't exist!</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> test papers · a slide with the examples · the strategy card on the board <b>(Backup:</b> everything on the slide goes onto the board before the lesson (or onto printed cards, one per crew).<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> look at the examples, say the strategy aloud, open the test only on command. Expected: the question “can I use a pencil?” — yes, you can.</div></td><td class='mat'>test papers · strategy card · the unit translation sheet (handouts/GIA1-Translate-U1.pdf — No.1–14, ⭐ optional)</td></tr><tr><td class='min'>20–45′</td><td class='stage'><div class='nm'>Test: vocabulary + grammar</div><div class='sub'>Test · Part 1 Vocabulary + Part 2 Grammar</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> parts 1–2 in writing, in silence; timings on the board</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I announce the timings: Part 1 — 10 min, Part 2 — 13 min; I write them on the board, give a 2-min warning before each ends.</li><li>I keep watch for silence; questions — with a raised hand, I answer in a whisper at the desk.</li><li>Content: P1 — 8× country→nationality + 6× opposites; P2 — 8 be gaps with contractions · 6 questions from words + a true short answer · 4 “fix the mistake”.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> a visible timer · timings on the board</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> work in silence following the strategy (example → skip and return). Expected: they finish with time to spare. Typical error: rushing and dropping apostrophes — the final sweep catches it.</div></td><td class='mat'>test pp.1–2 · timer</td></tr><tr><td class='min'>45–53′</td><td class='stage'><div class='nm'>Test: listening (lesson B)</div><div class='sub'>Test · Part 3 Listening (lesson B)</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> the second half of the pair opens with listening: 30 sec studying the grid, the country description twice: 4 true/false + 4 notes</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I command: <span class='en'>Thirty seconds — look at the grid. Photos, titles… clues! Don't write.</span></li><li>I play the track (or read the script from the test pack) — the 1st time.</li><li>A 30-sec pause, the second pass.</li><li>I gather attention: <span class='en'>Pens down. Part 4 next.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> audio or the teacher's script (in the test pack) · a notes grid printed IN the test <b>(Backup:</b> no track — I read the script aloud at listening speed.<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> apply the visual-clues move for 30 sec, listen twice, tick T/F and fill in 4 notes with one word. Expected: 6+ out of 8 — the format mirrors P3.</div></td><td class='mat'>audio/script · paper p.3</td></tr><tr><td class='min'>53–63′</td><td class='stage'><div class='nm'>Test: writing + handing in papers</div><div class='sub'>Test · Part 4 Writing + hand-in</div><div class='zone'>desks</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> 6 sentences about yourself against the printed criteria; we hand in the papers, a warm-up break</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I announce: <span class='en'>Part 4: six sentences about you. The criteria are ON the paper — use them as a checklist.</span></li><li>I silently give early finishers a bonus sheet (a word search + a puzzle).</li><li>I collect the papers calmly, with no “who's not finished”.</li><li>A 2-min break: the windows, water, a stretch.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> the test p.4 · quiet bonus sheets</div><div class='kidsb'><span class='sbh'>👦 Students do:</span> write 6 sentences, checking against the criteria on the sheet; finishers are busy with the bonus quietly. Expected: they follow the checklist. Typical error: a missing adjective — the criterion on the sheet reminds them.</div></td><td class='mat'>paper p.4 · bonus sheets</td></tr><tr><td class='min'>63–72′</td><td class='stage'><div class='nm'>Self-check against the key</div><div class='sub'>Self-mark objective parts</div><div class='zone'>desks · pairs</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> we swap papers, check with a coloured pen against the key; I keep the writing part for myself</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>A swap with a neighbour, I hand out coloured pens.</li><li>I open the key IN PARTS: <span class='en'>Part 1… say the correct answer quietly as you tick — marking is learning round two.</span></li><li>I keep Part 4 for my own marking: <span class='en'>Back next lesson — two stars and one wish each.</span></li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> key slides by part · coloured pens <b>(Backup:</b> everything on the slide goes onto the board before the lesson (or onto printed cards, one per crew).<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> check carefully, saying the correct answers in a whisper, count the points. Expected: an honest check (the coloured pen keeps them disciplined). Typical error: “fixing your own” — the swap with a neighbour solves it.</div></td><td class='mat'>key slides · pens</td></tr><tr><td class='min'>72–80′</td><td class='stage'><div class='nm'>A gentle review of typical mistakes</div><div class='sub'>Gentle error clinic</div><div class='zone'>desks · teams</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> Showdown: the unit's top-5 mistake types, anonymously; “doctor teams” treat a patient sentence</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I display type No.1 (“apostrophe drift”) + the “patient” sentence.</li><li>I run it as Kagan <b>Showdown</b>: everyone writes at the same time, boards face down, on the command <span class='en'>No peeking… Boards up!</span> they all lift them together — I see every answer, nobody can sit it out.</li><li>I command: <span class='en'>Doctor teams — what's the cure? Fix the patient on your mini-board!</span></li><li>I go through 5 types: apostrophe drift · Yes, I'm · adjective+s · lowercase countries · no inversion (the last two straight from TB Common errors and our own observations).</li><li>The pace is calm, with NO points — a conversation between experts, not a race.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> slides: the mistake type + the patient sentence (anonymous, from my notes over the unit) <b>(Backup:</b> everything on the slide goes onto the board before the lesson (or onto printed cards, one per crew).<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> diagnose in teams and write the cure on mini-boards. Expected: “It's Yes, I AM — affirmative never contracts!”. Typical error: looking for “whose is this” — the rule said aloud: mistakes on the board belong to the whole class.</div></td><td class='mat'>error slides · mini-boards</td></tr><tr><td class='min'>80–86′</td><td class='stage'><div class='nm'>Personal error log + a line of pride</div><div class='sub'>My error log + goal</div><div class='zone'>desks · solo</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> everyone writes their own “2 mistakes to kill in Unit 2” + a line of pride “I can now…”</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I ask them to open the last page of the exercise book — the “error log” (lives all year).</li><li>We write something personal: <b>“Top-2 to kill in Unit 2”</b> — from their OWN test.</li><li>We add a line of pride: <span class='en'>I can now… — finish it honestly.</span></li><li>Those who want to read ONLY the line of pride aloud.</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> a sample log on the slide: Top-2 + I can now… <b>(Backup:</b> everything on the slide goes onto the board before the lesson (or onto printed cards, one per crew).<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> pick 2 personal goals and one point of pride from their own test; share only the positive. Expected: “I can now ask questions in English!”.</div></td><td class='mat'>notebooks (log page)</td></tr><tr><td class='min'>86–90′</td><td class='stage'><div class='nm'>Unit finale: two podiums</div><div class='sub'>Close · Unit 2 teaser</div><div class='zone'>circle</div></td><td class='flow'><p class='do'><b>WHAT WE DO:</b> we award TWO teams (score and growth), close the unit, a teaser for “Family”</p><div class='tsteps'><span class='sbh'>👩‍🏫 Teacher does — step by step:</span><ol><li>I hand out mini-certificates: best score + best progress (TWO podiums, always).</li><li>I close the unit: <span class='en'>Unit 1 — closed. You can talk about the whole WORLD now.</span></li><li>Teaser: <span class='en'>Unit 2 is much closer to home: FAMILY. Bring ONE English word about yours.</span> Homework — a gentle one (the WB SEL spread).</li></ol></div><div class='showb'><span class='sbh'>📺 On screen:</span> mini-certificates · the final points board · the homework slide <b>(Backup:</b> I write the homework on the board and they copy it into their diaries.<b>)</b></div><div class='kidsb'><span class='sbh'>👦 Students do:</span> applaud both podiums, take away the mini-quest (a word about family). Expected: “so which team is it now?” — “New unit — new race”.</div></td><td class='mat'>certificates</td></tr><tr class='hw'><td class='min'>🏠</td><td class='stage'><div class='nm'>Homework</div></td><td class='flow'><p><b>🐣 Workbook Unit 1 (required ☆–☆☆; ☆☆☆ = bonus for points):</b> Soft homework after the test — Workbook pp.68–69 SEL “Making new people feel welcome”: read the stories and tick off the checklist “what to do when there's a newcomer in class”. No marks.</p><p style='font-size:.85rem;color:var(--muted)'>WB audio is in the TRC; no track → skip the audio items. A photo of the homework slide is fine.</p></td><td class='mat'>Workbook U1 · notebook</td></tr>
+
+      <tr>
+        <td class="min">0–6′</td>
+        <td class="stage"><div class="nm">Arrival &amp; calm-down</div><div class="zone">door → seats</div></td>
+        <td class="flow">
+          <p><span class="ph">Settle.</span> Greet each pupil at the door, quiet and warm: <span class="en">Hi — come in, find your seat.</span> Seats spaced out, bags away, one pen. Low lights of energy on purpose.</p>
+          <p><span class="ph">Self-efficacy frame (say it slowly).</span> <span class="en">Today is your Unit 1 test. Here’s the good news: everything on it, you have already done — countries, nationalities, the verb “be”, a keypal message. On P6 you did the Quick review. Today just shows what you can do. Nobody sees your marks but you and me.</span></p>
+          <p>Normalise: <span class="en">If a bit feels hard — that’s normal. A test is meant to make you think. Do what you can, in any order.</span></p>
+        </td>
+        <td class="mat">quiet room · spaced seats · one pen each</td>
+      </tr>
+
+      <tr>
+        <td class="min">6–18′</td>
+        <td class="stage"><div class="nm">Model-first walkthrough</div><div class="zone">board / projector</div></td>
+        <td class="flow">
+          <p><span class="ph">Show every section with YOUR OWN example (not a test item).</span> Keep each to ~1 minute:</p>
+          <p><b>Vocabulary.</b> Country → nationality (<span class="en">France → French; Japan → …?</span>). “Choose the option” &amp; the “two extra words in the box” trap — <span class="en">two words you will NOT use — that’s normal, don’t panic.</span></p>
+          <p><b>Grammar — <i>be</i>.</b> Positive / negative / question on the board: <span class="en">I’m … / She isn’t … / Are you …? — Yes, I am.</span> Remind: <span class="en">Use short forms — I’m, you’re, isn’t.</span></p>
+          <p><b>Reading.</b> <span class="en">First look at the little texts, then read the questions. Match, true/false, choose. It’s all IN the texts — you don’t need to know it from your head.</span></p>
+          <p><b>Listening.</b> <span class="en">You will hear it TWICE. First time — just get the idea. Second time — the details.</span> Read the tick/true-false questions with them <i>before</i> you play anything.</p>
+          <p><b>Writing.</b> A short message, <span class="en">60–80 words</span>. Point at the checklist: start it, say why, ask them to write back, <b>capital letters</b>.</p>
+          <p><b>Speaking.</b> <span class="en">I’ll call you one at a time to that quiet corner — a short talk, just you and me. Keep working while you wait.</span></p>
+          <p><span class="ph">ICQ:</span> <span class="en">How many times will you hear the listening?</span> (→ twice) · <span class="en">If you don’t understand a WORD, what do you do?</span> (→ hand up)</p>
+        </td>
+        <td class="mat">board / projector · your own model examples (NOT the test) · checklist for Writing</td>
+      </tr>
+
+      <tr>
+        <td class="min">18–20′</td>
+        <td class="stage"><div class="nm">Hand out &amp; settle</div><div class="zone">seats</div></td>
+        <td class="flow">
+          <p>Hand out one Standard test per pupil, face-down. <span class="en">Write your name on top. Don’t start yet.</span> Pens ready. <span class="en">You can do the sections in any order — but we do the LISTENING together, first.</span></p>
+        </td>
+        <td class="mat"><b>Unit 1 Progress test (Standard)</b> — 1 per pupil (pre-printed from Test Generator)</td>
+      </tr>
+
+      <tr>
+        <td class="min">20–34′</td>
+        <td class="stage"><div class="nm">① Listening (whole class)</div><div class="zone">seats</div></td>
+        <td class="flow">
+          <p><span class="ph">Guided, then twice.</span> Turn to the Listening page together. Read the three tasks aloud so everyone knows what to listen for: the tick-3-topics, the choose-the-option, the true/false — <span class="en">a radio programme about a city. Listen for the idea first.</span></p>
+          <p><span class="en">First listen — just the general idea.</span> Play the track once. Pause. <span class="en">Now the second listen — this time for the details. Fill in your answers.</span> Play the SAME track again.</p>
+          <p>Optional third play only if the room clearly needs it: <span class="en">One last time.</span> Then: <span class="en">Pens down for a second — listening done. Well done.</span></p>
+        </td>
+        <td class="mat"><b>Listening audio track</b> (Unit 1, Mumbai radio programme) · speakers · your device</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">34–36′</td>
+        <td class="stage"><div class="nm">Reset (settler)</div><div class="zone">at seats</div></td>
+        <td class="flow"><p><span class="en">Stand up by your chair. Roll your shoulders, take one slow breath… and sit.</span> A silent 60-second reset — not a game, just a breath before the self-paced part. <span class="en">Now — Vocabulary, Grammar, Reading and Writing, in any order you like. Take your time.</span></p></td>
+        <td class="mat">— (movement break, no materials)</td>
+      </tr>
+
+      <tr>
+        <td class="min">36–74′</td>
+        <td class="stage"><div class="nm">② Written test — self-paced</div><div class="zone">seats · silent</div></td>
+        <td class="flow">
+          <p><span class="ph">Vocabulary · Grammar · Reading · Writing.</span> Pupils work silently at their own pace. You monitor quietly — no hovering. Clarify only unclear <b>words</b>, never answers.</p>
+          <p><span class="ph">Writing support (allowed, it’s a beginner test).</span> Point a stuck pupil back to the on-page checklist and profile; don’t supply sentences. Quiet reminder near the end: <span class="en">Check your capital letters.</span></p>
+          <p>Gentle single time cue around 68′: <span class="en">About 10 minutes left — finish the section you’re on.</span></p>
+        </td>
+        <td class="mat">test papers · pupils’ pens · answer key (for you, out of sight)</td>
+      </tr>
+
+      <tr>
+        <td class="min">36–74′</td>
+        <td class="stage"><div class="nm">③ Speaking 1:1 (parallel)</div><div class="zone">quiet corner</div></td>
+        <td class="flow">
+          <p><span class="ph">Runs at the same time as the written test</span> — call pupils one by one in register order so everyone is assessed with no downtime. ~2–3 min each. Back to the room, private.</p>
+          <p><b>Part A — act-out (Ex 17 / Speaking task PDF, Standard).</b> Warm start, model one line: <span class="en">Hi, I’m [name]. What’s your name?</span> Pupil uses the printed “Meeting new people” prompts to complete the short dialogue (name · age · where from · big/small city).</p>
+          <p><b>Part B — EN↔RU word pairs aloud (our format).</b> Show a small set of Unit 1 words; pupil reads each English word and gives the Russian, or reads Russian and gives the English — <span class="en">country → страна, Spanish → испанский, crowded → …?</span> Mark for recognition + pronunciation, not perfection.</p>
+          <p>Close each pupil warmly: <span class="en">Nice job — back to your paper.</span> Record Speaking /10 privately.</p>
+        </td>
+        <td class="mat"><b>Speaking task PDF (Standard)</b> · Unit 1 EN↔RU word cards · private score sheet</td>
+      </tr>
+
+      <tr>
+        <td class="min">74–82′</td>
+        <td class="stage"><div class="nm">Finish &amp; collect</div><div class="zone">seats</div></td>
+        <td class="flow">
+          <p>Finish the last 1:1 speakers. <span class="en">Two minutes to check everything: your name on top, capital letters, did you skip any question?</span></p>
+          <p>Collect papers face-down, in order. <span class="en">Pens down. Papers to me — face-down, thank you.</span> Count them.</p>
+        </td>
+        <td class="mat">completed papers · folder</td>
+      </tr>
+
+      <tr>
+        <td class="min">82–88′</td>
+        <td class="stage"><div class="nm">Reflection (private, un-scored)</div><div class="zone">seats</div></td>
+        <td class="flow">
+          <p><span class="ph">“I can…” self-check.</span> Quick show-of-fingers or a slip pupils keep — <span class="en">Which can you do now? Name some countries and nationalities · use “be” · write a short message · say hello to a new person.</span> This is for them, not a mark.</p>
+          <p>Attribution + reassurance: <span class="en">You’ve finished your first English test. You could do it because you practised all through Unit 1 — that’s effort, not luck. I’ll mark these and give them back to each of you privately next lesson, with a short calm look at any tricky bits. No marks read out loud.</span></p>
+        </td>
+        <td class="mat">“I can…” slips (kept by pupils)</td>
+      </tr>
+
+      <tr>
+        <td class="min">88–90′</td>
+        <td class="stage"><div class="nm">Close</div><div class="zone">door</div></td>
+        <td class="flow"><p><span class="en">Well done today — that took focus. Rest your English tonight. See you next time.</span> Calm, unhurried exit.</p></td>
+        <td class="mat">—</td>
+      </tr>
+
+      <tr class="hw">
+        <td class="min">🏠</td>
+        <td class="stage"><div class="nm">Homework</div></td>
+        <td class="flow"><p><b>No new written homework — test day.</b> Papers are marked and returned <b>individually next lesson</b>, followed by a calm error review + reflection (“я уже умею”). Optional, only if a pupil asks: reread the Unit 1 wordlist for confidence — not required.</p></td>
+        <td class="mat">— (results returned 1:1 next lesson)</td>
+      </tr>
+
     </tbody>
   </table>
   </div>
 
-  <div class="eyebrow" style="margin-top:28px">📋 Preparation reference — read BEFORE the lesson, not in class</div>
-
-  <div class="grid2">
-    <div class="cardb"><ul class="a">
-      <li><span class="lb">Main aim.</span> Assess Unit 1: countries/nationalities, place adjectives, <i>be</i> (all forms), listening notes, a short writing task — in a calm, model-first format, with a <b>first-half revision block</b> (there's no separate revision pair in the grid).</li>
-      <li><span class="lb">Subsidiary.</span> The Quick-review lightning round as revision and taking the fear away; test-taking basics (example first, manage time, final apostrophe/capital sweep); self-marking of objective parts; gentle error clinic; error log + a line of pride.</li>
-      <li><span class="lb">Personal.</span> Low-stress protocol: quiet music before start, clear timings per part, no competitive games during the test. Feedback = kind, specific, forward-looking. Revision BEFORE the test — so everyone walks in feeling “I already did this today”.</li>
-    </ul></div>
-    <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">By the end, students can…</div>
-      <ul class="a"><li>work through a 4-part test with strategy</li><li>self-mark objective parts against a key</li><li>name their own top-2 error types</li><li>say one thing they're proud of from Unit 1</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Lesson arc</div>
-      <div class="arc"><span>Check-in</span><span>Revision lightning</span><span>Strategy</span><span>Test</span><span>Mark</span><span>Clinic</span><span>Log</span><span>Close</span></div>
-    </div>
-  </div>
-
-  <div class="eyebrow">Target language</div>
-  <div class="grid2">
-    <div class="cardb tl">
-      <div class="r"><div class="k">Lexis</div><div><span class='w'>(everything from Unit 1)</span></div></div>
-      <div class="r"><div class="k">Structure</div><div>everything from Quick review p.21 (be all forms · 13 nationalities · 8 adjective pairs · capital letters)</div></div>
-      <div class="r"><div class="k">Form</div><div>test spec below — DRAFT until the TRC pack (Progress tests standard/higher).</div></div>
-      <div class="r"><div class="k">Pron. watch</div><div>—</div></div>
-    </div>
-    <div class="cardb">
-      <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-      <div class='ccq'>“Do we start writing immediately?” → No: read the example of each part first.</div><div class='ccq'>“Test finished early?” → The two checks: apostrophes + capital letters.</div><div class='ccq'>“Is a mistake a catastrophe?” → No — it's a target for Unit 2.</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> Quick review done in P5, revision games in P6, WB p.11 self-evaluation at home — every test format has come up at least three times. Listening: if no track — the teacher reads the script twice (script in the test pack).</p>
-    </div>
-  </div>
-
-  <div class='eyebrow'>Unit 1 test — specification (DRAFT until the TRC pack: Progress tests standard/higher in the Teacher's Resource Centre, TB pp. 5, 30)</div><div class='cardb' style='padding:4px 8px'><table class='ap'><thead><tr><th>Part</th><th>Contents &amp; marking</th></tr></thead><tbody><tr><td>Part 1 · Vocabulary (14 pts)</td><td>A) 8 items: country → nationality adjective, spelling counts (China → Chinese; the Netherlands → Dutch). B) 6 items: opposite adjectives (crowded → empty; safe → dangerous).</td></tr><tr><td>Part 2 · Grammar be (18 pts)</td><td>A) 8 gaps aff/neg with contractions (My parents ___ from Moscow. It ___ (not) cold today.). B) 6 items: order the words to make questions + write a true short answer (from / you / Are / Russia ?). C) 4 items: correct the mistake (I is 11. → I'm 11.).</td></tr><tr><td>Part 3 · Listening (8 pts)</td><td>A short description of a country (script in the plan; teacher-read twice if no track): 4 true/false + 4 notes to complete (population / capital / weather / sport) — mirrors SB p.17 ex.6–7.</td></tr><tr><td>Part 4 · Writing (10 pts)</td><td>6 sentences about you (name, age, country, nationality, your city + one adjective). Marked for: be forms correct (4) · capital letters (3) · task complete (3) — mirrors keypal criteria SB p.21.</td></tr></tbody></table><p style='font-size:.85rem;color:var(--muted);margin:8px 4px'>Total 50 pts · pass focus: not the number but the personal error log. Built strictly from Quick review SB p.21 — every format was met in class during the unit. As soon as the TRC pack is downloaded, this is replaced by the official Progress test (🐣 standard / 🚀 higher).</p></div>
-
-  <div class="grid2">
-    <div>
-      <div class="eyebrow">Anticipated problems &amp; solutions</div>
-      <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody><tr><td>Test anxiety spikes</td><td>A lightning revision round for the first half + model-first + timings on board + “skip and return” taught.</td></tr><tr><td>Fast finishers disturb others</td><td>Silent bonus sheet: word-search + one Brain-teaser-style puzzle.</td></tr><tr><td>Listening part chaos</td><td>Notes grid printed ON the paper; 30-sec silent preview; two plays, fixed.</td></tr><tr><td>Marking eats the second lesson</td><td>Objective parts self-marked against a projected key; collect only Part 4.</td></tr><tr><td>Feedback feels like blame</td><td>Errors anonymised and grouped by TYPE; each student logs privately.</td></tr></tbody></table></div>
-    </div>
-    <div>
-      <div class="eyebrow">Classroom management — signals</div>
-      <div class="cardb"><div class="sig"><div class='sigc'><b>«Eyes up in 3-2-1»</b> — count down calmly → all eyes on you at «1». No shouting over noise, ever.</div><div class='sigc'><b>Visible timer</b> — timer on screen = we work; timer stops = pens/hands down. The timer is the boss, not you.</div><div class='sigc'><b>Volume dial</b> — arm up/down = louder/quieter; «radio whisper» for rehearsals.</div><div class='sigc'><b>«Boards up!»</b> — mini-whiteboard rounds: everyone commits, all boards up together — nobody hides, nobody shouts first.</div><div class='sigc'><b>One clap — two claps</b> — you clap once, class answers with two and freezes — instant reset mid-game.</div><div class='sigc'><b>English-first</b> — ideas in Russian are welcome, POINTS only for the English version — recast and repeat.</div></div></div>
-    </div>
-  </div>
-
   <div class="foot">
-    <span>Speak &amp; Smile · Get Involved! A1+ · Unit 1 “Our world” (How are countries different?) · GIA1zero — lesson plan &amp; staging</span>
-    <span>The test = the Quick review SB p.21 specification — a DRAFT until the TRC pack (Progress tests standard/higher + Test Generator — Teacher's Resource Centre, TB pp. 5, 30). 4 parts / 50 points; for 🐣 — standard-level focus (no bonus point). There's no separate revision pair in the grid — the lightning revision is the first half of this pair. Listening — the teacher's script in the test pack. KTP-Foundation pair 11.</span>
+    <span>Speak &amp; Smile · Get Involved A1+ · GIA1zero Foundation · Unit 1 · P7 — Progress Test (Standard) — lesson plan &amp; staging</span>
+    <span>Test printed from Macmillan Test Generator → Ready to go tests → Get Involved A1+ → Unit 1 Progress test (Standard) + Audio + Answer key + Speaking task PDF. Not reproduced here (©). · KTP GIA1zero, week 05.10–11.10.</span>
   </div>
 </div>
-<button class="ss-print" onclick="window.print()">🖨 Print / PDF</button>
-<style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{@page{size:A4;margin:9mm}.ss-print{display:none!important}}</style>

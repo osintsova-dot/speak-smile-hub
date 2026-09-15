@@ -5,7 +5,7 @@
 // обновлении один файл не докачался (data.js весит под мегабайт — на мобильной
 // сети это обычное дело), приложение оставалось с разъехавшимися версиями и
 // не рисовало ни фильтров, ни карточек.
-const CACHE = "ss-hub-v146";
+const CACHE = "ss-hub-v147";
 const ASSETS = ["./", "./index.html", "./app.js", "./data.js", "./plans.js",
                 "./journal.html", "./journal-data.js", "./access.html",
                 "./manifest.webmanifest", "./icon.svg"];
