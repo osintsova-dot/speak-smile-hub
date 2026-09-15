@@ -1,6 +1,5 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MW3 · Unit 1 · Lesson 8 — Project (Lesson Plan &amp; Staging)</title>
+<title>Mimi's Wheel 3 · Starter · Lesson 8 — Review (Lesson Plan &amp; Staging)</title>
 <style>
   :root{
     --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2;
@@ -8,9 +7,7 @@
     --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57;
     --f:"Trebuchet MS","Segoe UI",ui-sans-serif,system-ui,sans-serif;
   }
-  @media (prefers-color-scheme:dark){ :root{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; } }
-  :root[data-theme="dark"]{ --paper:#141019; --card:#1C1626; --ink:#ECE6F8; --muted:#A79FBD; --line:#2E2640; --p:#B49BF0; --p-ink:#CDB8FF; --p-soft:#241a3a; --honey-ink:#F0CE6A; --honey-soft:#2b2411; --zone:#7DCAD6; --zone-soft:#13282c; --good:#4FD08A; }
-  :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
+      :root[data-theme="light"]{ --paper:#FBFAFF; --card:#fff; --ink:#241B34; --muted:#6D6584; --line:#E7E1F2; --p:#6C3FC5; --p-ink:#4B278F; --p-soft:#F1EBFC; --honey-ink:#8A6400; --honey-soft:#FDF5DA; --zone:#3E8E9C; --zone-soft:#E4F3F5; --good:#1F9D57; }
   html,body{ margin:0; } body{ background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.5; -webkit-font-smoothing:antialiased; }
   .wrap{ max-width:1120px; margin:0 auto; padding:20px 16px 60px; }
 
@@ -38,7 +35,7 @@
   .sigc b{ color:var(--p-ink); } .call{ color:var(--p-ink); font-weight:700; }
 
   /* scenario table */
-  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"\201C"; } .en::after{ content:"\201D"; }
+  .en{ color:var(--p-ink); font-weight:700; } .en::before{ content:"“"; } .en::after{ content:"”"; }
   .sp{ color:var(--honey-ink); font-weight:800; } .game{ color:var(--p); font-weight:800; }
   .ph{ font-weight:800; color:var(--p-ink); text-transform:uppercase; font-size:.78em; letter-spacing:.04em; }
   .slot{ color:var(--muted); font-weight:700; }
@@ -55,41 +52,40 @@
   .legend{ display:flex; flex-wrap:wrap; gap:12px 18px; font-size:.82rem; color:var(--muted); margin:8px 2px 8px; align-items:center; }
   .legend .en{ font-weight:700; } .foot{ margin-top:14px; font-size:.8rem; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; }
 
-  /* interactive/projector + differentiation + assessment boxes (brand-safe) */
-  .ig{ background:var(--zone-soft); border-left:3px solid var(--zone); border-radius:7px; padding:6px 10px; font-size:.88rem; margin:6px 0; }
-  .ig b{ color:var(--zone); }
-  .sup{ color:var(--good); font-weight:800; } .ext{ color:var(--p); font-weight:800; }
-  .diff{ display:block; font-size:.86rem; margin-top:5px; padding-left:20px; position:relative; }
-  .asr{ display:block; background:var(--honey-soft); border-left:3px solid var(--honey); border-radius:7px; padding:8px 11px; font-size:.88rem; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
-  .arc{ display:flex; flex-wrap:wrap; gap:6px; font-size:.78rem; color:var(--muted); margin:4px 2px 0; align-items:center; }
-  .arc span{ background:var(--p-soft); color:var(--p-ink); border-radius:999px; padding:2px 9px; font-weight:700; }
-
-  @media (max-width:720px){ table.proc{ min-width:0; } .wrap{ padding:14px 10px 44px; } body{ -webkit-text-size-adjust:100%; }  .grid2,.sig{ grid-template-columns:1fr; } }
+  @media (max-width:720px){ .grid2,.sig{ grid-template-columns:1fr; } }
   @media print{
     @page{ size:A4; margin:9mm; } *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
     body{ background:#fff; } .wrap{ max-width:none; padding:0; }
     .hd{ background:#fff !important; color:#20182e; border:1.5px solid var(--p); } .chip{ background:#fff !important; border:1px solid #bbb; color:#333; } .chip.new{ background:#fff !important; border-color:var(--honey); color:var(--p-ink); }
-    .cardb,.sigc,.ccq,table.ap,.scroll,.ig,.asr{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; } .arc span{ background:#fff !important; border:1px solid #ddd; }
+    .cardb,.sigc,.ccq,table.ap,.scroll{ background:#fff !important; } .w{ background:#fff !important; border:1px solid #ddd; }
     tr.bridge td,tr.hw td,table.proc thead th{ background:#fff !important; } .scroll{ overflow:visible; } tr{ break-inside:avoid; } section,.grid2>*{ break-inside:avoid; }
   }
 </style>
 
 <div class="wrap">
   <div class="hd">
-    <div class="t">🎡 Mimi's Wheel 3 · Unit 1 “Hello” · Lesson 8 — Project · My favourite number</div>
-    <div class="s">Pre-primary / early years (~5–6 y.o., <b>pre-readers</b>) · 60 min · <b>Genki recipe</b> · Disco warm-up → phonics → curiosity input → Genki games → song → craft · TPR + puppet · <b>Phonics Hero 2.0</b> (reading: recognise → blend → speed-read) · carpet + tables</div>
-    <div class="meta"><span class="chip">Week 28.09–04.10 · Lesson 8</span><span class="chip">🎨 Project · My favourite number</span><span class="chip">~8 pupils · make + present</span><span class="chip">PH 12 (Part-1 finish + diploma · p.30–31) · Genki: Numbers(08)·Colours(52)</span></div>
+    <div class="t">🦝 Mimi's Wheel 3 · Starter block “Back to school!” · Lesson 8 — Review</div>
+    <div class="s">Pre-A1 young learners (~6–7 y.o., emergent readers) · 60 min · Review &amp; consolidation (games-first) · carpet + desks</div>
+    <div class="meta"><span class="chip">Starter · Lesson 8 of 8</span><span class="chip new">🏆 REVIEW + reward quiz</span><span class="chip">~10 pupils · 2–3 teams</span><span class="chip">🦸 Phonics: speed-reading review (JP Book 1 sounds)</span></div>
   </div>
-  <div data-res="1" style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 2px;padding:9px 11px;border:1px solid var(--line,#E7E1F2);border-radius:12px;background:var(--p-soft,#F1EBFC)"><span style="font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--p,#6C3FC5);margin-right:2px">Ресурсы урока</span><a href="https://speakandsmile.ru/mimi/games/hello-bigwheel.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎡 Big Wheel</a><a href="https://speakandsmile.ru/mimi/games/hello-memo.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🃏 Memory</a><a href="https://speakandsmile.ru/mimi/games/hello-ttt.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">❌⭕ Крестики</a><a href="https://speakandsmile.ru/mimi/games/hello-quiz.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🏆 Квиз</a><a href="https://speakandsmile.ru/mimi/games/hello-board.html" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎲 Ходилка</a><a href="https://speakandsmile.ru/mimi/games/" target="_blank" rel="noopener" style="text-decoration:none;background:var(--card,#fff);border:1px solid var(--line,#E7E1F2);color:var(--p-ink,#4B278F);border-radius:999px;padding:3px 10px;font-size:.82rem;font-weight:700">🎮 Все игры курса</a></div>
+
   <!-- AIMS -->
   <div class="eyebrow">Aims &amp; objectives</div>
   <div class="grid2">
-    <div class="cardb"><ul class="a"><li><span class="lb">Main aim.</span> By the end, children will have <b>made and presented a “My favourite number” Big Wheel pod</b> — choosing a number 1–6, colouring it, and saying: “My favourite number is (three). It's (red)!” in a mini gallery.</li><li><span class="lb">Subsidiary.</span> Recycle numbers · colours · greetings through a creative product; sing <b>Genki «Numbers»</b> (08) &amp; <b>«Colours»</b> (52); take turns presenting; <b>Phonics Hero</b> — Part-1 finish + diploma, speed-read p.30–31; happy end-of-unit gallery.</li><li><span class="lb">Personal.</span> Project = process &amp; pride, not perfection. Model the making &amp; the presenting sentence first. Keep making calm; keep presenting short (one sentence each) so no long waiting.</li></ul></div>
+    <div class="cardb"><ul class="a">
+      <li><span class="lb">Main aim.</span> By the end, learners will have <b>consolidated the “Classroom” topic</b> (from Mimi's Wheel 2, Unit 1): name 8 classroom objects and <b>ask &amp; answer about possession</b> — “Have you got your (school bag)? — Yes, I have / No, I haven't” · “Has Sam got…?”</li>
+      <li><span class="lb">Subsidiary.</span> Interleave known language — colours + numbers 1–10 with objects (“How many red crayons?”); phonics review (recognise → blend → segment learned sounds, speed reading); listen for detail (songs); build confidence &amp; “I can…” self-assessment before Unit 1.</li>
+      <li><span class="lb">Personal.</span> Keep teacher-talk low; ICQ before every game; run a stirrer→settler rhythm; make everyone answer at once (Showdown / whiteboards / fingers) — no “2 play, 10 watch”.</li>
+    </ul></div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">By the end, pupils can…</div>
-      <ul class="a"><li>choose &amp; colour a favourite number pod;</li><li>present it — “My favourite number is three. It's red!”;</li><li>say “Well done!” to a friend's work.</li></ul>
-      <div class="eyebrow" style="margin:12px 0 6px">Emotional arc</div>
-      <div class="arc"><span>Disco energy</span><span>Wonder</span><span>Play &amp; move</span><span>Sing</span><span>Show me</span><span>Happy goodbye</span></div>
+      <ul class="a">
+        <li>name the 8 classroom objects + their colours;</li>
+        <li>ask &amp; answer “Have you got your…? — Yes, I have / No, I haven't”;</li>
+        <li>answer “Has Sam got…?” and count objects 1–10;</li>
+        <li>respond to “Go to the…” / “Point to the…” (school places &amp; room parts);</li>
+        <li>read known sounds fast &amp; blend a short word.</li>
+      </ul>
     </div>
   </div>
 
@@ -97,12 +93,18 @@
   <div class="eyebrow">Target language</div>
   <div class="grid2">
     <div class="cardb tl">
-<div class="r"><div class="k">Lexis</div><div><span class="w">one</span><span class="w">two</span><span class="w">three</span><span class="w">four</span><span class="w">five</span><span class="w">six</span><span class="w">red</span><span class="w">blue</span><span class="w">green</span><span class="w">orange</span><span class="w">pink</span><span class="w">yellow</span><span class="w">favourite</span><span class="w">Hello</span><span class="w">Well done</span></div></div><div class="r"><div class="k">Structure</div><div>My favourite number is (three). It's (red)! &nbsp;·&nbsp; (audience) Well done!</div></div><div class="r"><div class="k">Form</div><div>My favourite number is + number. It's + colour. Simple, proud, whole-sentence output.</div></div><div class="r"><div class="k">Pron. watch</div><div>proud, clear <i>My favourite number is…</i>; happy <i>Well done!</i></div></div><div class="r"><div class="k">Phonics</div><div><b>Phonics Hero 2.0</b> — <b>Part-1 finish + diploma</b>: proud, fluent reading of the words learnt, then <b>speed-read p.30–31</b> and earn the Part-1 Phonics Hero stamp.</div></div>
+      <div class="r"><div class="k">Lexis</div><div><span class="w">crayons</span><span class="w">glue</span><span class="w">pencil</span><span class="w">pencil case</span><span class="w">school bag</span><span class="w">scissors</span><span class="w">paints</span><span class="w">paper</span><span class="w">+ colours · 1–10</span><span class="w">places: classroom · dining room · library · playground</span><span class="w">parts: door · window · floor · ceiling</span></div></div>
+      <div class="r"><div class="k">Structure</div><div>Have you got your (school bag)? — Yes, I have. / No, I haven't. &nbsp;·&nbsp; Have you got a (pencil)? — I've got (paper). &nbsp;·&nbsp; Has Sam got (scissors)? — Yes, he has. / No, he hasn't. &nbsp;·&nbsp; How many (crayons)? — (Five). &nbsp;·&nbsp; Go to the (playground). / Point to the (ceiling).</div></div>
+      <div class="r"><div class="k">Form</div><div>Have + you + got + your + noun? → short answer with <b>have / haven't</b>. Connected “Have you” /həvjə/, “haven't” /ˈhævnt/.</div></div>
+      <div class="r"><div class="k">Pron. watch</div><div>/z/ ending in <i>crayons · scissors · paints</i> (plural, not sung as /s/); /uː/ in <i>glue</i>; stress on <b>got</b> in the question.</div></div>
+      <div class="r"><div class="k">Phonics</div><div><b>Speed-reading review</b> of learned Jolly Phonics Book 1 sounds (s·a·t·i·p·n·c·k·e·h·r·m·d·g·o·u·l·f…): recognise → blend a short word (<i>bag · pen · red</i>) → segment. All-response cards, no new sound (Review lesson).</div></div>
     </div>
     <div class="cardb">
       <div class="eyebrow" style="margin-top:0">Concept checks (CCQs) · Assumptions</div>
-<div class="ccq">“How many pods will you make — one favourite, or all six?” → one favourite!</div><div class="ccq" style="margin-bottom:10px">“Your friend shows their work — what do we say?” → Well done!</div>
-      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> All Unit 1 language is consolidated (L7 review done). Children can count 1–6, name colours, and greet; reading has reached the Part-1 finish. They know classroom making routines.</p>
+      <div class="ccq">“Is the school bag YOURS?” → yes → <b>“Have you got YOUR school bag?”</b></div>
+      <div class="ccq">“I have it — do I say <i>have</i> or <i>haven't</i>?” → have.</div>
+      <div class="ccq" style="margin-bottom:12px">“Sam is a boy meerkat — <i>he has</i> or <i>she has</i>?” → he has.</div>
+      <p style="font-size:.9rem;color:var(--muted);margin:0"><b>Assumptions:</b> objects, colours &amp; numbers 1–10 were met over Starter L4–L7 (Mimi's Wheel 2, Unit 1 “Classroom”) → this is consolidation, not new input. Pupils are non-/emergent readers → rely on pictures &amp; audio, not printed text. <b>Characters:</b> Mimi, Dylan, Sam are <b>meerkats</b> (сурикаты), not puppies. <b>Teams:</b> max 4 per team; 10 = 3+3+4 · 12 = 3×4 · 8 = 2×4.</p>
     </div>
   </div>
 
@@ -111,7 +113,11 @@
     <div>
       <div class="eyebrow">Anticipated problems &amp; solutions</div>
       <div class="cardb" style="padding:4px 8px"><table class="ap"><thead><tr><th>Likely problem</th><th>What you do</th></tr></thead><tbody>
-<tr><td>Can't decide on a number</td><td>Offer a quick <i>eeny-meeny</i> or “point to your favourite pod” to choose.</td></tr><tr><td>Making takes over the lesson</td><td>Simple pod outline ready; time-cap with a visible timer + countdown.</td></tr><tr><td>Freezes when presenting</td><td>Say it together with the puppet first; a wave + showing the pod is enough.</td></tr><tr><td>Audience not listening</td><td>Give a job: everyone claps &amp; says <i>Well done!</i> after each child.</td></tr><tr><td>Long waiting to present</td><td>Present in a fast carousel, one sentence each; or in small groups at once.</td></tr>
+        <tr><td>“Yes, I have” → says “Yes, I do”</td><td>Model the pair on fingers: question <i>have you got</i> → answer <i>I have</i>. Choral back-chain.</td></tr>
+        <tr><td>Drops <i>your</i> (“Have you got school bag?”)</td><td>Tap chest on <i>your</i>; gesture “belongs to you”.</td></tr>
+        <tr><td>Mixes <i>scissors / crayons / paints</i> (all plural)</td><td>Present the plural /z/ ending, one clear hand-gesture each; contrast in memo.</td></tr>
+        <tr><td>Quiz over-excitement (reward game)</td><td>Whole-team <b>Showdown</b>: everyone answers on a mini-board first, reveal together, then reward kick.</td></tr>
+        <tr><td>“2 play, others watch”</td><td>Every child holds a card / mini-board / shows fingers — all respond every round.</td></tr>
       </tbody></table></div>
     </div>
     <div>
@@ -121,7 +127,7 @@
         <div class="sigc"><b>“WiFi” 🖐</b> — say “WiFi” + raise a spread hand → pupils silently mirror &amp; tune in.</div>
         <div class="sigc"><b>Volume control</b> — raise/lower your arm = louder/quieter → settler.</div>
         <div class="sigc"><b>“Give me five”</b> — eyes · ears · mouth · hands · feet.</div>
-        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… pencils down.”</div>
+        <div class="sigc"><b>Countdown</b> — “Finishing in 5…4…3…2…1… boards down.”</div>
         <div class="sigc"><b>“Freeze!”</b> — statue, mid-movement reset.</div>
       </div></div>
     </div>
@@ -131,9 +137,9 @@
   <div class="eyebrow">Procedure — staging</div>
   <div class="legend">
     <span><span class="en">highlighted</span> = <b>exact words to say</b> (teacher / class)</span>
+    <span><span class="sp">🦝</span> = Speaky lines</span>
     <span><span class="game">▶</span> = game</span>
-    <span><span class="ig" style="padding:1px 6px;display:inline">🎮</span> = interactive (projector)</span>
-    <span><span class="sup">💪</span> support · <span class="ext">⭐</span> extension</span>
+    <span><span class="slot">[…]</span> = fill-in slot</span>
   </div>
 
   <div class="scroll">
@@ -142,73 +148,127 @@
     <tbody>
 
       <tr>
-        <td class="min">0–4′</td>
-        <td class="stage"><div class="nm">Genki Disco Warm Up ⚡</div><div class="zone">door → carpet</div></td>
-        <td class="flow"><p>Greet each child at the door with <span class="sp">🦝 Speaky</span>: <span class="en">Hello! How are you?</span> — quick high-five, straight onto the carpet.</p><p><span class="ph">Dance it out.</span> <span class="game">▶ Genki Disco Warm Up (01)</span> — hands up/down, jump, clap, turn around, wiggle. <span class="sp">🦝 Speaky</span> bring the energy UP, then trick them: <span class="en">Speaky says… FREEZE!</span> while they're already moving, then <span class="en">And… sit down!</span></p><p><span class="ph">Today (kid-friendly).</span> Show today's picture: <span class="en">Hello, artists! Today we make something special — your FAVOURITE number!</span> Show a finished model pod, then dance.</p></td>
-        <td class="mat"><b>Genki Disco Warm Up</b> mp3 (01) · Speaky puppet · carpet</td>
+        <td class="min">0–3′</td>
+        <td class="stage"><div class="nm">Opening / Warm-up ⚡</div><div class="zone">door → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Warm up.</span> Greet at the door: <span class="en">Hello! Come in!</span> <span class="sp">🦝 Speaky</span> waves: <span class="en">Hello, superstars! Big day — the last Starter lesson!</span> Class: <span class="en">Hello!</span></p>
+          <p><span class="en">Stand up! Let's wake up!</span> → <span class="game">▶ Disco Warm Up</span> — call the moves (jump · spin · clap · touch your school bag · sit down · stand up); trick them with <span class="en">Sit down!</span> when already sitting.</p>
+          <p>Bring energy down: <span class="en">And… freeze. Sit on the carpet.</span></p>
+        </td>
+        <td class="mat"><b>Disco Warm Up</b> mp3 · Speaky · carpet</td>
       </tr>
 
       <tr>
-        <td class="min">4–9′</td>
-        <td class="stage"><div class="nm">Warm review · last time</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="game">▶ Numbers &amp; colours.</span> count &amp; jump 1→6 with <b>Genki «Numbers»</b> (08); flash colours and chorus <i>It's on…</i>.</p><p><span class="ph">Choose.</span> point to your favourite pod on the Big Wheel — <span class="en">Which number do you like? What colour is it?</span> (Russian OK for now).</p></td>
-        <td class="mat">Big Wheel mat · <b>Genki «Numbers»</b> (08)</td>
+        <td class="min">3–9′</td>
+        <td class="stage"><div class="nm">Retrieval warm-up ⚡</div><div class="zone">carpet, standing</div></td>
+        <td class="flow">
+          <p><span class="ph">Fast retrieval (memory science: warm the brain before you use it).</span> Numbers &amp; colours — everyone answers at once. Flash number cards 1–10: class <b>shows that many fingers</b> + says <span class="en">Five!</span> Then flash a colour: all touch something that colour + say <span class="en">It's red!</span></p>
+          <p><span class="game">▶ Go to the…!</span> Point to the room's 4 corners = 4 school places (classroom · dining room · library · playground picture-signs). Call <span class="en">Go to the playground!</span> — everyone runs to that corner. 4–5 fast calls, everyone moves every time.</p>
+          <p><span class="game">▶ RallyRobin</span> (in pairs): <span class="en">Take turns — say a colour, a number, a school thing.</span> 30 sec, then swap. Signal: <span class="en">Class? — Yes!</span></p>
+        </td>
+        <td class="mat">number cards 1–10 · colour cards · 4 place-signs (corners) · <span class="game">▶ RallyRobin</span></td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">9–11′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Now — our borrowing song!</span> Sing <span class="game">Genki «May I borrow your…?»</span>; hold up real objects (glue, scissors, crayons) as they come → straight into the classroom-things review.</p></td>
+        <td class="mat"><b>Genki «May I borrow your…?»</b> mp3 · real objects</td>
       </tr>
 
       <tr>
-        <td class="min">9–17′</td>
-        <td class="stage"><div class="nm">Phonics Hero 🔤 ⚡</div><div class="zone">carpet, moving</div></td>
-        <td class="flow"><p><span class="ph">① Recognise / review.</span> <b>Phonics Hero lesson 12 · Part-1 finish + diploma</b> — sounds <b>all sounds — proud reading</b>. <span class="sp">🦝 Speaky</span> shows each with its <b>Jolly action</b> (gesture technique); children do the action and NAME the sound — they already know all 26. We don't drill bare sounds: teacher voices, children gesture.</p><p><span class="ph">② Blend / build.</span> Read your favourite words from the page — proud, fluent reading before the diploma! <span class="game">▶ Diploma read — read a word to Speaky to earn your Part-1 Phonics Hero stamp.</span></p><p><span class="ph">③ Speed reading.</span> open <b>Phonics Hero 2.0</b> (our workbook) <b>p.30–31</b> — finger under each word, read the row FAST as a group (whole words, playful, celebrate speed — real reading from zero, GMF1-style).</p><p><span class="ph">Tricky words:</span> read review Red tricky words together as whole words (we don't sound tricky words out).</p></td>
-        <td class="mat"><b>Phonics Hero 2.0</b> workbook p.30–31 · sound-action cards · Speaky</td>
+        <td class="min">11–20′</td>
+        <td class="stage"><div class="nm">Phonics — speed-reading review ⚡</div><div class="zone">board → carpet</div></td>
+        <td class="flow">
+          <p><span class="ph">Speed reading (Review — no new sound).</span> Letter/sound strip of learned Jolly Phonics Book 1 sounds — <span class="en">Read with me — fast!</span> Whole class, choral, there and back. Twice, a little faster each time.</p>
+          <p><span class="ph">Blend it.</span> Show 3–4 short words tied to today's topic — <i>bag · pen · red · cut</i>: <span class="en">Sound it out… b-a-g… bag!</span> Class blends together, then segments back (say the word → tap each sound on fingers).</p>
+          <p><span class="game">▶ Take Off–Touch Down:</span> flash sound cards — if you can hear it in <b>bag</b> → <b>stand tall</b>; if not → <b>crouch small</b>. 8–10 cards, fast — every child moves every card.</p>
+        </td>
+        <td class="mat">sound strip · CVC word cards (<i>bag/pen/red/cut</i>) · board</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">20–22′</td>
+        <td class="stage"><div class="nm">🎵 Bridge</div><div class="zone">carpet</div></td>
+        <td class="flow"><p><span class="en">Get your paint hands ready — the paint song!</span> Sing <span class="game">Genki «The paint song»</span>; wave imaginary brushes, call the colours → into the objects + colours memo.</p></td>
+        <td class="mat"><b>Genki «The paint song»</b> mp3</td>
       </tr>
 
       <tr>
-        <td class="min">17–22′</td>
-        <td class="stage"><div class="nm">Model the product + sentence</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">Watch &amp; copy.</span> show how to make the pod &amp; say the sentence with the puppet: <span class="en">My favourite number is three. It's orange!</span> Everyone says it together once.</p></td>
-        <td class="mat">Big Wheel mat · model pod · Speaky</td>
+        <td class="min">22–29′</td>
+        <td class="stage"><div class="nm">▶ Memo — objects &amp; colours</div><div class="zone">carpet, teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Set up.</span> Each team spreads a memo set face-down: <b>picture cards</b> of the 8 objects (some in different colours). <span class="en">Turn two cards. Say what you see!</span></p>
+          <p><span class="game">▶ Memory (memo):</span> a child flips two cards and must <b>name them in a sentence</b> to keep a pair: <span class="en">It's a red pencil. It's blue glue.</span> Just a word = no pair, next player's turn. Match → keep it; most pairs wins.</p>
+          <p><span class="ph">ICQ:</span> <span class="en">Do I say “pencil” or “It's a red pencil”?</span> (→ full sentence!) Rotate turns clockwise so everyone plays.</p>
+        </td>
+        <td class="mat">2–3 memo sets (objects × colours) · Speaky</td>
       </tr>
 
       <tr>
-        <td class="min">22–38′</td>
-        <td class="stage"><div class="nm">Make · My favourite number pod 🧘</div><div class="zone">tables</div></td>
-        <td class="flow"><p><span class="ph">Make it.</span> Children write/trace their number BIG on the pod outline, colour it their chosen colour, and decorate (a happy face, stars).</p><p><span class="ph">Rehearse as they work.</span> go round: <span class="en">Tell me — my favourite number is…?</span> help each child rehearse the sentence quietly at the table.</p><p><span class="diff"><span class="sup">💪 Support:</span> trace the number, colour it, say it with the puppet. <span class="ext">⭐ Extension:</span> add <i>Hello! I'm (name)</i> before presenting.</span></p></td>
-        <td class="mat">pod outlines · crayons · stickers</td>
+        <td class="min">29–37′</td>
+        <td class="stage"><div class="nm">▶ “Have you got…?” relay ⚡</div><div class="zone">carpet → back wall</div></td>
+        <td class="flow">
+          <p><span class="ph">Model first (I do).</span> <span class="sp">🦝 Speaky</span> to a child: <span class="en">Have you got your school bag?</span> Child: <span class="en">Yes, I have!</span> / <span class="en">No, I haven't!</span> Choral back-chain: <i>…school bag? → got your school bag? → Have you got your school bag?</i></p>
+          <p><span class="game">▶ Card-grab relay (teams):</span> object cards spread on the far mat. You call <span class="en">Have you got a pencil?</span> — the first runner from each team races, grabs the <b>pencil</b> card, runs back and says <span class="en">I've got a pencil!</span> Correct card + full answer = 1 point. Teams cheer; rotate runners each round (everyone runs).</p>
+          <p>Add possession twist: hold Sam (meerkat puppet) with 2–3 cards — <span class="en">Has Sam got glue?</span> Class answers together: <span class="en">Yes, he has! / No, he hasn't!</span></p>
+          <p>Reset if loud: <span class="en">Freeze!</span></p>
+        </td>
+        <td class="mat">object cards (far mat) · <b>Sam</b> meerkat puppet + 2–3 cards · team point cards</td>
+      </tr>
+
+      <tr class="bridge">
+        <td class="min">37–39′</td>
+        <td class="stage"><div class="nm">🎵 TPR switcher</div><div class="zone">carpet, standing</div></td>
+        <td class="flow"><p><span class="en">Hands up — Wind the bobbin up!</span> Sing <span class="game">«Wind the bobbin up»</span> with the actions (a calm-down after the relay). Then <span class="game">▶ Point to the…!</span> — <span class="en">Point to the door / window / floor / ceiling!</span> Class parts of the room, everyone points, fast then slow to settle.</p></td>
+        <td class="mat"><b>«Wind the bobbin up»</b> mp3</td>
       </tr>
 
       <tr>
-        <td class="min">38–42′</td>
-        <td class="stage"><div class="nm">Wiggle break · sing &amp; move ⚡</div><div class="zone">carpet, standing</div></td>
-        <td class="flow"><p><span class="ph">Shake out.</span> A quick <b>Big Wheel song</b> (CD1 T17) + <b>Genki «Colours»</b> (52) with actions to shake out before the gallery — stand, sing, freeze.</p></td>
-        <td class="mat"><b>Big Wheel song</b> (CD1 T17) · <b>Genki «Colours»</b> (52)</td>
+        <td class="min">39–43′</td>
+        <td class="stage"><div class="nm">📓 Match It 🧘</div><div class="zone">desks</div></td>
+        <td class="flow">
+          <p><span class="ph">Interactive notebook — Match It (oral, no MW3 cut-out sheet in the catalogue → teacher-made strip).</span> Give each child a strip: 8 mini-pictures on the left, 8 words on the right (jumbled). <span class="en">Draw a line — picture to word. Say it as you match!</span></p>
+          <p>Check with a neighbour, then whole-class: point &amp; chorus each pair. Fast finishers colour the pictures in the right colours.</p>
+          <p><span class="ph">Countdown.</span> <span class="en">Finishing in 5… 4… 3… 2… 1… pencils down.</span></p>
+        </td>
+        <td class="mat">“Match It” strip (1 per pupil) · pencils / crayons</td>
       </tr>
 
       <tr>
-        <td class="min">42–53′</td>
-        <td class="stage"><div class="nm">Gallery · present &amp; celebrate</div><div class="zone">carpet, circle</div></td>
-        <td class="flow"><p><span class="game">▶ Show &amp; say.</span> In a fast carousel, each child holds up their pod: <span class="en">My favourite number is three. It's red!</span> The audience claps and says <span class="en">Well done!</span></p><p><span class="ph">Pairs → circle.</span> pairs first (say it to your partner), then a few to the whole circle — keeps waiting short, everyone speaks.</p><p><p><span class="asr">✔ <b>Assess:</b> who says the full sentence? who needs the puppet? — a lovely end-of-unit picture of progress.</span></p></p></td>
-        <td class="mat">finished pods · Speaky</td>
+        <td class="min">43–55′</td>
+        <td class="stage"><div class="nm">🏆 ▶ Review Quiz Showdown + Penalty</div><div class="zone">carpet, teams</div></td>
+        <td class="flow">
+          <p><span class="ph">Flagship reward quiz (Review only). Kagan Showdown — everyone answers, then reveal.</span> Teams sit together, each child with a mini-whiteboard/paper + marker. You ask; <b>everyone</b> draws/writes their answer face-down; on <span class="en">Showdown!</span> all flip up together. Team agrees the answer.</p>
+          <p><span class="ph">Interleaved questions (mix all the block's topics so they must choose which to use — not blocked):</span> ① object: <span class="en">Draw the scissors.</span> ② colour+object: <span class="en">What colour is Mimi's pencil case?</span> ③ number+object: <span class="en">How many crayons? (show a card)</span> ④ grammar: <span class="en">Sam has NO glue — answer: “Has Sam got glue?”</span> (No, he hasn't) ⑤ <span class="en">Have you got your school bag today? Yes/No!</span> ⑥ place: <span class="en">You read books here — which place? (library)</span> ⑦ room part: <span class="en">Point to the ceiling!</span></p>
+          <p><span class="game">▶ Reward — Penalty kick:</span> each correct team answer earns one soft-ball kick at the goal (or a bowling roll). Goal = ⚽ on the team scoreboard. Loud cheer — <span class="en">Goal! Well done, team!</span></p>
+          <p><span class="ph">Formative read (Wiliam):</span> the Showdown reveal shows you at a glance who still mixes <i>have/haven't</i> or <i>he has</i> → re-model once, quickly, before closing.</p>
+        </td>
+        <td class="mat">mini-whiteboards/paper + markers · question cards (mixed) · soft ball + toy goal / mini bowling · ⚽ scoreboard</td>
       </tr>
 
       <tr>
-        <td class="min">53–58′</td>
-        <td class="stage"><div class="nm">Cool-down · I can… + Goodbye 🧘</div><div class="zone">carpet</div></td>
-        <td class="flow"><p><span class="ph">How do you feel?</span> Eyes closed — <span class="en">Did you like it today?</span> show a happy or sad face (an honest signal, no copying).</p><p><span class="game">▶ Turn &amp; tell:</span> <span class="en">Show your partner your pod and say your number &amp; colour.</span> — tell your talk-partner / show me (no writing).</p><p>“I can…” badge: <span class="en">I made it! I can say my favourite number!</span> colour one star.</p><p>What amazing work — I'm so proud of you! <span class="ph">Goodbye song.</span> Sing the <b>Goodbye song</b> (CD1 T3) with <span class="sp">🦝 Speaky</span> — wave to every friend.</p></td>
-        <td class="mat">“I can…” badges · crayons · <b>Goodbye song</b> (CD1 T3) · Speaky</td>
+        <td class="min">55–58′</td>
+        <td class="stage"><div class="nm">Reflection 🧘</div><div class="zone">carpet</div></td>
+        <td class="flow">
+          <p><span class="game">▶ Timed Pair Share:</span> <span class="en">Tell your partner: one thing you can say now!</span> (15 sec each)</p>
+          <p>“I can…” badge: <span class="en">Colour your star — I can name school things! I can ask “Have you got…?”</span> <span class="sp">🦝 Speaky:</span> <span class="en">You're ready for Unit 1!</span></p>
+        </td>
+        <td class="mat">“I can…” badges (notebook) · Speaky</td>
       </tr>
 
       <tr>
         <td class="min">58–60′</td>
-        <td class="stage"><div class="nm">Exit ticket</div><div class="zone">door</div></td>
-        <td class="flow"><p>Line up at the door with <span class="sp">🦝 Speaky</span>. At the door, tell <span class="sp">🦝 Speaky</span>: <span class="en">My favourite number is…!</span> Answered / shown → high-five out: <span class="en">Bye-bye! See you next time!</span></p></td>
-        <td class="mat">pods to take home · reward stickers</td>
+        <td class="stage"><div class="nm">Closing / Exit ticket</div><div class="zone">door</div></td>
+        <td class="flow"><p>Line up. Each child gets an object card: answer <span class="en">Have you got your (pencil)?</span> → out with <span class="en">Thank you! Take care! Goodbye!</span> Sing Goodbye.</p></td>
+        <td class="mat"><b>Goodbye song</b> mp3 · object cards · reward stickers 🦝</td>
       </tr>
 
       <tr class="hw">
         <td class="min">🏠</td>
         <td class="stage"><div class="nm">Homework</div></td>
-        <td class="flow"><p><b>Приложение (тренажёр Mimi 3)</b> — numbers · colours · my favourite number, 5–7 мин (со взрослым). <b>Phonics Hero 2.0 (наша тетрадь) — стр. 30–31:</b> чтение Части 1 + диплом Фоникс-героя (speed reading — прочитать/показать, Jolly-жесты дома). + показать свой pod дома и сказать “My favourite number is…”.</p></td>
-        <td class="mat">Mimi 3 app · Phonics Hero 2.0 p.30–31</td>
+        <td class="flow"><p><b>Light — app trainer only.</b> A self-checking micro-set on today's words (picture–word match + <span class="en">Have you got…? — Yes/No</span> tap) with a “listen” button, 5–7 min. Plus the <b>Match It</b> strip: at home <b>TRANSLATE IT</b> — say each word to a grown-up in Russian &amp; English. <br><i>Note: Mimi's Wheel 2 Activity Book is not in Методбаза → no printed AB page for this Starter block; homework is the trainer + Match It only.</i></p></td>
+        <td class="mat">app (homework link) · “Match It” strip</td>
       </tr>
 
     </tbody>
@@ -216,8 +276,7 @@
   </div>
 
   <div class="foot">
-    <span>Speak &amp; Smile · Mimi's Wheel 3 · Unit 1 “Hello” · Lesson 8 (Project · My favourite number) — Genki-recipe plan (pre-primary)</span>
-    <span>КТП урок 8 · Phonics Hero 2.0 (PH ур.12 · итог + диплом Части 1 · стр.30–31). Проект «My favourite number» — рисунок + презентация. Genki songs: Numbers (08) · Colours (52).</span>
+    <span>Speak &amp; Smile · Mimi's Wheel 3 · Starter block · Lesson 8 (Review) — lesson plan &amp; staging</span>
+    <span>Consolidates Mimi's Wheel 2, Unit 1 “Classroom”. · Phonics = speed-reading review (JP Book 1) — КТП has no Starter block; JP review pattern followed.</span>
   </div>
 </div>
-<button class="ss-print" onclick="window.print()">🖨 Печать / PDF</button><style>.ss-print{position:fixed;right:16px;bottom:16px;z-index:99999;font-family:inherit;font-weight:800;border:none;border-radius:14px;padding:12px 18px;font-size:15px;background:#6C3FC5;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(108,63,197,.4)}.ss-print:active{transform:translateY(2px)}@media print{.ss-print{display:none!important}}</style>
