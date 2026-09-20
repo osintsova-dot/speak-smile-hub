@@ -63,3 +63,10 @@ jobs:
           curl -sS --max-time 120 \
             "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=otrmins&t=${{ secrets.SS_TICK_TOKEN }}"
           echo
+
+      - name: Картина месяца и архив недель
+        continue-on-error: true   # тяжёлый пересчёт; при сбое остаётся прошлый снимок
+        run: |
+          curl -sS --max-time 290 \
+            "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=backfill&t=${{ secrets.SS_TICK_TOKEN }}"
+          echo
