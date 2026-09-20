@@ -9,6 +9,7 @@
 #   pull — выручка по группам (снимок калькулятора ЗП, с ретраями от SPA-заглушки)
 #   fin  — «реально пришло / расходы» (отдельный медленный источник)
 #   otr  — отработки: очередь пропустивших + оплата Инге
+#   otrmins — фактическая длительность уроков отработок (Инге 25 ₽/мин)
 #
 # Токен (код "awesome", он же код обновления калькулятора) — в секрете репозитория
 # SS_TICK_TOKEN; в логах GitHub маскирует его как ***.
@@ -54,4 +55,11 @@ jobs:
         run: |
           curl -sS --max-time 290 \
             "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=otr&t=${{ secrets.SS_TICK_TOKEN }}"
+          echo
+
+      - name: Длительность отработок — оплата Инге по минутам
+        continue-on-error: true   # расписание иногда не отвечает: минуты останутся прежними, суммы не поедут
+        run: |
+          curl -sS --max-time 120 \
+            "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=otrmins&t=${{ secrets.SS_TICK_TOKEN }}"
           echo
