@@ -10,6 +10,7 @@
 #   fin  — «реально пришло / расходы» (отдельный медленный источник)
 #   otr  — отработки: очередь пропустивших + оплата Инге
 #   otrmins — фактическая длительность уроков отработок (Инге 25 ₽/мин)
+#   students part=1/2 — все ученики из platformapi (дата регистрации, группы) для «Новеньких»
 #
 # Токен (код "awesome", он же код обновления калькулятора) — в секрете репозитория
 # SS_TICK_TOKEN; в логах GitHub маскирует его как ***.
@@ -62,6 +63,20 @@ jobs:
         run: |
           curl -sS --max-time 120 \
             "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=otrmins&t=${{ secrets.SS_TICK_TOKEN }}"
+          echo
+
+      - name: Ученики из CRM, часть 1 — для страницы «Новенькие»
+        continue-on-error: true   # platformapi изредка виснет; тогда список останется вчерашним
+        run: |
+          curl -sS --max-time 250 \
+            "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=students&pp=25&part=1&t=${{ secrets.SS_TICK_TOKEN }}"
+          echo
+
+      - name: Ученики из CRM, часть 2 — склейка списка
+        continue-on-error: true
+        run: |
+          curl -sS --max-time 250 \
+            "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=students&pp=25&part=2&t=${{ secrets.SS_TICK_TOKEN }}"
           echo
 
       - name: Картина месяца и архив недель
