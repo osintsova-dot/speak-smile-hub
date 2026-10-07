@@ -68,14 +68,14 @@ jobs:
       - name: Ученики из CRM, часть 1 — для страницы «Новенькие»
         continue-on-error: true   # platformapi изредка виснет; тогда список останется вчерашним
         run: |
-          curl -sS --max-time 250 \
+          curl -sS --max-time 290 \
             "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=students&pp=25&part=1&t=${{ secrets.SS_TICK_TOKEN }}"
           echo
 
       - name: Ученики из CRM, часть 2 — склейка списка
         continue-on-error: true
         run: |
-          curl -sS --max-time 250 \
+          curl -sS --max-time 290 \
             "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=students&pp=25&part=2&t=${{ secrets.SS_TICK_TOKEN }}"
           echo
 
