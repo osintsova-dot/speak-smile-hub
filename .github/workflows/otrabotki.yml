@@ -11,6 +11,7 @@
 #   otr  — отработки: очередь пропустивших + оплата Инге
 #   otrmins — фактическая длительность уроков отработок (Инге 25 ₽/мин)
 #   students part=1/2 — все ученики из platformapi (дата регистрации, группы) для «Новеньких»
+#   zhsync — китайский: коды доступа семей к урокам по составу группы «КИТАЙСКИЙ»
 #
 # Токен (код "awesome", он же код обновления калькулятора) — в секрете репозитория
 # SS_TICK_TOKEN; в логах GitHub маскирует его как ***.
@@ -37,6 +38,13 @@ jobs:
         run: |
           curl -sS --max-time 150 \
             "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=warm&t=${{ secrets.SS_TICK_TOKEN }}"
+          echo
+
+      - name: Китайский — коды семей по составу группы в CRM
+        continue-on-error: true   # быстрый шаг (~1 с); выбывшим закрывает доступ к урокам, новым выдаёт код
+        run: |
+          curl -sS --max-time 90 \
+            "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=zhsync&t=${{ secrets.SS_TICK_TOKEN }}"
           echo
 
       - name: Выручка по группам (снимок калькулятора)
