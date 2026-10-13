@@ -35,10 +35,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Прогрев — логин в BigBen
+        # Сеть до воркера иногда рвётся («Connection reset by peer», 13.10.2026) — три попытки с паузой,
+        # иначе из-за одного обрыва падал весь утренний сбор.
         run: |
-          curl -sS --max-time 150 \
-            "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=warm&t=${{ secrets.SS_TICK_TOKEN }}"
-          echo
+          for i in 1 2 3; do
+            curl -sS --max-time 150 \
+              "https://ss-bb.o-sintsova.workers.dev/tick-7a3f9c2e51?do=warm&t=${{ secrets.SS_TICK_TOKEN }}" && { echo; exit 0; }
+            echo " — попытка $i не удалась, жду 40 с"; sleep 40
+          done
+          echo "вход в BigBen не удался за 3 попытки"; exit 1
 
       - name: Китайский — коды семей по составу группы в CRM
         continue-on-error: true   # быстрый шаг (~1 с); выбывшим закрывает доступ к урокам, новым выдаёт код
