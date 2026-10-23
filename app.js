@@ -164,10 +164,11 @@ function unitEdge(program, L){
   return {first: L.n===Math.min(...ns), last: L.n===Math.max(...ns), group:g};
 }
 function shortSec(g){ return String(g).split("·")[0].split("—")[0].trim().slice(0,40); }
-function reminderHtml(program, L){
+function reminderHtml(program, L, gname){
   const e = unitEdge(program, L); let out="";
   if (e.first){
-    const btn = LETTERS[program] ? ` <a class="rembtn" href="${LETTERS[program]}" target="_blank" rel="noopener">Открыть письма ↗</a>` : "";
+    const btn = (LETTERS[program] ? ` <a class="rembtn" href="${LETTERS[program]}" target="_blank" rel="noopener">Открыть письма ↗</a>` : "")
+      + (gname ? ` <a class="rembtn" href="https://speakandsmile.ru/pismo/?g=${encodeURIComponent(gname)}" target="_blank" rel="noopener">Отправить группе ↗</a>` : "");
     out += `<div class="remind letter">📩 Начало блока${e.group?" «"+esc(shortSec(e.group))+"»":""} — отправь родителям письмо «что будем учить»${btn}</div>`;
   }
   if (e.last && REPORTS[program]){
@@ -446,7 +447,7 @@ function render(){
       const fields = L.fields || [];
       const planKey = planKeyFor(g.program, L);
       const planBtn = planButtonsHtml(g.program, L) + slidesBtnHtml(g.program, planKey);
-      const remind = reminderHtml(g.program, L);
+      const remind = reminderHtml(g.program, L, g.name);
       body = `<div class="detail">` + remind + planBtn + fields.map(([lab,val])=>`
         <div class="field">
           <div class="flabel">${esc(lab)}</div>
