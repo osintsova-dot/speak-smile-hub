@@ -65,6 +65,9 @@ main{padding:14px 12px 50px;max-width:760px;margin:0 auto}
 .donebox input{width:18px;height:18px;accent-color:var(--ok)}
 .planbtn{display:block;width:100%;margin-top:12px;background:linear-gradient(180deg,#7d54d6,#6C3FC5);color:#fff;border:none;border-radius:10px;padding:12px;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 3px 10px rgba(108,63,197,.28)}
 .planbtn:active{transform:translateY(1px)}
+.zhbtn{flex:1 1 46%;display:block;text-align:center;text-decoration:none;background:linear-gradient(180deg,#7d54d6,#6C3FC5);color:#fff;border-radius:10px;padding:12px;font-size:14px;font-weight:800;box-shadow:0 3px 10px rgba(108,63,197,.28)}
+.zhbtn.alt{background:var(--card,#fff);color:var(--p-ink,#4B278F);border:1.5px solid var(--line,#E7E1F2);box-shadow:none}
+.zhbtn.wide{flex-basis:100%}
 .slidesbtn{display:block;width:100%;margin-top:8px;box-sizing:border-box;text-align:center;text-decoration:none;background:linear-gradient(93deg,#FF2E93,#FF7A2E 40%,#F5C842);color:#241B34;border-radius:10px;padding:12px;font-size:14px;font-weight:800;box-shadow:0 3px 10px rgba(255,122,46,.28)}
 .slidesbtn:active{transform:translateY(1px)}
 /* оверлей плана урока */
@@ -154,9 +157,9 @@ footer{text-align:center;color:var(--muted);font-size:11px;padding:0 12px 30px}
   <iframe id="planframe" src="about:blank" title="План урока"></iframe>
 </div>
 
-<script src="data.js?v=139"></script>
-<script src="plans.js?v=139"></script>
-<script src="app.js?v=139"></script>
+<script src="data.js?v=140"></script>
+<script src="plans.js?v=140"></script>
+<script src="app.js?v=140"></script>
 <script>
 document.getElementById("planclose").addEventListener("click", closePlan);
 document.getElementById("planopen").addEventListener("click", ()=>{
@@ -170,9 +173,9 @@ document.getElementById("progclose").addEventListener("click", ()=>{ document.ge
 </script>
 <script>
 // Регистрируем service worker только при работе через сервер (http/https), не через file://
-document.getElementById("jourbtn").addEventListener("click", () => { location.href = "journal.html?v=139"; });
+document.getElementById("jourbtn").addEventListener("click", () => { location.href = "journal.html?v=140"; });
 document.getElementById("otrbtn").addEventListener("click", () => { location.href = "https://osintsova-dot.github.io/Salary-calculator-/otrabotki.html"; });
-document.getElementById("accbtn").addEventListener("click", () => { location.href = "access.html?v=139"; });
+document.getElementById("accbtn").addEventListener("click", () => { location.href = "access.html?v=140"; });
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
   navigator.serviceWorker.register("sw.js").catch(()=>{});
 }

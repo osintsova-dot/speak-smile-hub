@@ -261,6 +261,11 @@ function pairedPrograms(program) {
 
 // Две кнопки, если у урока есть план и в сильной, и в слабой линии
 function planButtonsHtml(program, L) {
+  if (L.zh) return `<div class="planpair" style="margin-top:12px">
+      <a class="zhbtn" href="${ZH_BASE}${encodeURIComponent(L.zh)}/?t=laoshi2026" target="_blank" rel="noopener">🀄 Урок в приложении</a>
+      <a class="zhbtn alt" href="${ZH_BASE}slides/?l=${encodeURIComponent(L.zh)}&t=laoshi2026" target="_blank" rel="noopener">🖥 Слайды</a>
+      <a class="zhbtn alt wide" href="${ZH_BASE}codes/" target="_blank" rel="noopener">🔑 Коды доступа семей</a>
+    </div>`;
   const key = planKeyFor(program, L);
   const pair = pairedPrograms(program);
   if (!pair) return key ? `<button class="planbtn" data-plan="${esc(key)}">📋 Открыть план урока</button>` : "";
@@ -574,6 +579,18 @@ async function fetchCsv(url, ms){
   const ctl = window.AbortController ? new AbortController() : null; const tm = setTimeout(()=>ctl&&ctl.abort(), ms);
   try{ const r=await fetch(url,{cache:"no-store",signal:ctl&&ctl.signal}); if(!r.ok) throw 0; return await r.text(); } finally { clearTimeout(tm); }
 }
+// Китайский: уроки = приложение speakandsmile.ru/chinese (lessons.json, поле open = дата занятия)
+const ZH_BASE = "https://speakandsmile.ru/chinese/";
+async function loadChinese(){
+  try{
+    const j = JSON.parse(await fetchCsv(ZH_BASE + "lessons.json", 15000));
+    const dm = d => d.slice(8,10) + "." + d.slice(5,7);
+    window.PROGRAMS.Chinese = { lessons: (j.lessons||[]).map((l,i)=>({
+      n:i+1, week:dm(l.open)+"–"+dm(l.open), sec:"Китайский", type:"урок в приложении", zh:l.id,
+      title:(l.zh||"")+" · "+(l.ru||""), fields:[["Что на уроке", l.what||""], ["Пиньинь", l.py||""]] })) };
+    render();
+  }catch(e){ /* нет связи — китайский покажется без уроков */ }
+}
 async function loadSchedule(){
   const srcs = CRM_SCHEDULE_URLS.map(u=>[u,"🟢 расписание из CRM BigBen"]).concat([[SCHEDULE_URL,"🟡 расписание из Google Таблицы (CRM не ответила)"]]);
   for (const [u,label] of srcs){
@@ -658,3 +675,4 @@ function renderProgLessons(prog){
   }));
 }
 loadSchedule();
+loadChinese();
