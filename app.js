@@ -3,36 +3,32 @@
 // Дни недели: 1=Пн 2=Вт 3=Ср 4=Чт 5=Пт 6=Сб 0=Вс
 // Живой источник расписания (Google-таблица, gviz CSV). Если недоступен — берётся встроенное GROUPS_FALLBACK.
 const SCHEDULE_URL = "https://docs.google.com/spreadsheets/d/1_WRow7pefA4iF7SOQkkWIxjGU69TcpMjQv_wMS0Rb3A/gviz/tq?tqx=out:csv";
-// Синхронизировано с CRM 08.09.2026. Genki 1A/1B и GMF 2D стартуют с октября (since:"01.10").
+// Запасное расписание = CRM на 23.10.2026; живое приходит из CRM (loadSchedule).
 const GROUPS_FALLBACK = [
-  // Пн/Пт
-  {name:"GMF 4A",  program:"GMF4",    room:"Discovery", teacher:"Ксения",    days:[{d:1,t:"15:00"},{d:5,t:"15:00"}]},
-  {name:"GMF 4B",  program:"GMF4",    room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"15:00"},{d:5,t:"15:00"}]},
-  {name:"GMF 3B",  program:"GMF3",    room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"16:05"},{d:5,t:"16:05"}]},
-  {name:"GMF 2B",  program:"GMF2",    room:"Discovery", teacher:"Ксения",    days:[{d:1,t:"16:05"},{d:5,t:"16:05"}]},
-  {name:"Get Involved 2B", program:"GIA2", room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"17:10"},{d:5,t:"17:10"}]},
-  {name:"Prepare 4A", program:"Prepare4", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"17:10"},{d:5,t:"17:10"}]},
-  {name:"Prepare 5A", program:"Prepare5", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"18:45"},{d:5,t:"18:45"}]},
-  {name:"Gateway B2", program:"Gateway", room:"Innovation", teacher:"Екатерина", days:[{d:1,t:"18:45"},{d:5,t:"18:45"}]},
-  // Вт/Чт
+  // сверено с CRM BigBen 23.10.2026 (GMF 2D не запускали, Genki — одна группа)
+  {name:"Китайский", program:"Chinese", room:"Innovation", teacher:"Ксения", days:[{d:2,t:"19:40"},{d:4,t:"19:40"}]},
+  {name:"Gateway B2", program:"Gateway", room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"18:45"},{d:5,t:"18:45"}]},
+  {name:"Genki", program:"Genki", room:"Discovery", teacher:"Оксана", since:"03.10", days:[{d:3,t:"19:00"},{d:6,t:"13:20"}]},
   {name:"Get Involved 1A", program:"GIA1", room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"15:00"},{d:4,t:"15:00"}]},
-  {name:"Prepare 3A", program:"Prepare3", room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"16:35"},{d:4,t:"16:35"}]},
-  {name:"GMF 3D",  program:"GMF3",    room:"Discovery", teacher:"Ксения",    days:[{d:2,t:"17:10"},{d:4,t:"17:10"}]},
-  {name:"GMF 1B",  program:"GMF1zero",room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"18:10"},{d:4,t:"18:10"}]},
-  {name:"Mimi 3",  program:"MW3",     room:"Discovery", teacher:"Оксана",    days:[{d:2,t:"18:20"},{d:4,t:"18:20"}]},
-  {name:"GMF 3A",  program:"GMF3",    room:"Innovation",teacher:"Ксения",    days:[{d:2,t:"18:40"},{d:4,t:"18:40"}]},
-  {name:"GMF 2A",  program:"GMF2",    room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"19:15"},{d:4,t:"19:15"}]},
-  {name:"GMF 1A",  program:"GMF1",    room:"Discovery", teacher:"Оксана",    days:[{d:2,t:"19:30"},{d:4,t:"19:30"}]},
-  // Ср/Сб
-  {name:"GMF 3C",  program:"GMF3",    room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"15:00"},{d:6,t:"12:40"}]},
-  {name:"GMF 2C",  program:"GMF2zero",room:"Discovery", teacher:"Ксения",    days:[{d:3,t:"16:05"},{d:6,t:"13:50"}]},
-  {name:"Get Involved 2A", program:"GIA2", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"17:10"},{d:6,t:"11:00"}]},
   {name:"Get Involved 1B", program:"GIA1", room:"Innovation", teacher:"Екатерина", days:[{d:3,t:"18:30"},{d:6,t:"14:30"}]},
-  {name:"GMF 1C",  program:"GMF1zero",room:"Adventure", teacher:"Ксения",    days:[{d:3,t:"18:50"},{d:6,t:"15:00"}]},
-  // с октября
-  {name:"Genki 1A", program:"Genki",  room:"Discovery", teacher:"Оксана", since:"01.10", days:[{d:3,t:"18:20"},{d:6,t:"12:10"}]},
-  {name:"Genki 1B", program:"Genki",  room:"Discovery", teacher:"Оксана", since:"01.10", days:[{d:3,t:"19:30"},{d:6,t:"13:20"}]},
-  {name:"GMF 2D",  program:"GMF2zero",room:"Discovery", teacher:"Ксения", since:"01.10", days:[{d:3,t:"16:05"},{d:6,t:"13:20"}]},
+  {name:"Get Involved 2A", program:"GIA2", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"17:10"},{d:6,t:"11:00"}]},
+  {name:"Get Involved 2B", program:"GIA2", room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"17:10"},{d:5,t:"17:10"}]},
+  {name:"GMF 1A", program:"GMF1", room:"Discovery", teacher:"Оксана", days:[{d:2,t:"19:30"},{d:4,t:"19:30"}]},
+  {name:"GMF 1B", program:"GMF1zero", room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"18:10"},{d:4,t:"18:10"}]},
+  {name:"GMF 1C", program:"GMF1zero", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"18:50"},{d:6,t:"15:00"}]},
+  {name:"GMF 2A", program:"GMF2", room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"19:15"},{d:4,t:"19:15"}]},
+  {name:"GMF 2B", program:"GMF2", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"17:40"},{d:5,t:"17:40"}]},
+  {name:"GMF 2C", program:"GMF2zero", room:"Discovery", teacher:"Ксения", days:[{d:3,t:"16:05"},{d:6,t:"13:50"}]},
+  {name:"GMF 3A", program:"GMF3", room:"Innovation", teacher:"Ксения", days:[{d:2,t:"18:35"},{d:4,t:"18:35"}]},
+  {name:"GMF 3B", program:"GMF3", room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"16:05"},{d:5,t:"16:05"}]},
+  {name:"GMF 3C", program:"GMF3", room:"Adventure", teacher:"Ксения", days:[{d:3,t:"15:00"},{d:6,t:"12:40"}]},
+  {name:"GMF 3D", program:"GMF3", room:"Discovery", teacher:"Ксения", days:[{d:2,t:"17:10"},{d:4,t:"17:10"}]},
+  {name:"GMF 4A", program:"GMF4", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"15:00"},{d:5,t:"15:00"}]},
+  {name:"GMF 4B", program:"GMF4", room:"Adventure", teacher:"Екатерина", days:[{d:1,t:"15:00"},{d:5,t:"15:00"}]},
+  {name:"Mimi 3", program:"MW3", room:"Discovery", teacher:"Оксана", days:[{d:2,t:"18:20"},{d:4,t:"18:20"}]},
+  {name:"Prepare 3A", program:"Prepare3", room:"Adventure", teacher:"Екатерина", days:[{d:2,t:"16:35"},{d:4,t:"16:35"}]},
+  {name:"Prepare 4A", program:"Prepare4", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"19:00"},{d:5,t:"19:00"}]},
+  {name:"Prepare 5A", program:"Prepare5", room:"Discovery", teacher:"Ксения", days:[{d:1,t:"16:05"},{d:5,t:"16:05"}]},
 ];
 let GROUPS = GROUPS_FALLBACK;
 
@@ -82,6 +78,13 @@ function lessonForGroup(g, date){
   if (date < SCHOOL_START || date > YEAR_END) return {status:"offyear"};
   const prog = window.PROGRAMS[g.program];
   if (!prog) return {status:"noktp"};
+  if (g.since){ // группа стартовала позже: урок = номер занятия этой группы с даты старта (без каникул)
+    const s = mkDate(g.since); if (date < s) return {status:"nolesson"};
+    if (!g.days.some(x=>x.d===date.getDay())) return {status:"nolesson"};
+    let k=0; for (let d=new Date(s); d<=date; d.setDate(d.getDate()+1)) if (g.days.some(x=>x.d===d.getDay()) && !inHoliday(d)) k++;
+    const L = prog.lessons.find(x=>x.n===k);
+    return L ? {status:"ok", lesson:L, prog} : {status:"nolesson"};
+  }
   const matched = prog.lessons.filter(L=>{ const r=weekRange(L.week); return date>=r.start && date<=r.end; });
   if (!matched.length) return {status:"nolesson"};
   matched.sort((a,b)=>a.n-b.n);
@@ -561,13 +564,24 @@ function parseSchedule(csv){
   }
   return gs;
 }
+// Расписание берём прямо из CRM BigBen (бот школы собирает его раз в 6 ч): сначала российский адрес, потом запасной,
+// потом старая Google-таблица; если всё молчит — встроенное GROUPS_FALLBACK.
+const CRM_SCHEDULE_URLS = [
+  "https://d5d6o4mldv5m1nj5hvih.6brbn2wz.apigw.yandexcloud.net/nihao/hub/schedule.csv",
+  "https://nihao-bot.o-sintsova.workers.dev/hub/schedule.csv",
+];
+async function fetchCsv(url, ms){
+  const ctl = window.AbortController ? new AbortController() : null; const tm = setTimeout(()=>ctl&&ctl.abort(), ms);
+  try{ const r=await fetch(url,{cache:"no-store",signal:ctl&&ctl.signal}); if(!r.ok) throw 0; return await r.text(); } finally { clearTimeout(tm); }
+}
 async function loadSchedule(){
-  try{
-    const r=await fetch(SCHEDULE_URL,{cache:"no-store"});
-    if(!r.ok) throw 0;
-    const gs=parseSchedule(await r.text());
-    if(gs.length){ GROUPS=gs; render(); const n=document.getElementById("srcnote"); if(n) n.textContent="🟢 живое из Google Таблицы"; }
-  }catch(e){ /* нет связи / таблица закрыта → остаёмся на встроенном расписании */ }
+  const srcs = CRM_SCHEDULE_URLS.map(u=>[u,"🟢 расписание из CRM BigBen"]).concat([[SCHEDULE_URL,"🟡 расписание из Google Таблицы (CRM не ответила)"]]);
+  for (const [u,label] of srcs){
+    try{
+      const gs=parseSchedule(await fetchCsv(u, 15000));
+      if(gs.length){ GROUPS=gs; render(); const n=document.getElementById("srcnote"); if(n) n.textContent=label; return; }
+    }catch(e){ /* следующий источник */ }
+  }
 }
 
 render();
